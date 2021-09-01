@@ -56,7 +56,9 @@
 
 ## Meetings
 
-We meet every other Tuesday at 6:00 PM CET. Check out our [calendar](https://calendar.google.com/calendar?cid=dGJyYmZxNGRlNWJjbmd0OG9rdmV2NGxzdGtAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ) to see when we're meeting next or join [this](https://groups.google.com/forum/#!forum/asyncapi-users) mailing list go get an invite to the next meeting.
+We host and record community interest meetings bi-weekly on Tuesdays. Meetings rotate from 4:00pm UTC one Tuesday and then 8:00am UTC the next Tuesday. Rotating the time of our bi-community meetings allows us to meet with community members from APAC, Europe and Americas. 
+
+Check out our [calendar](https://calendar.google.com/calendar?cid=dGJyYmZxNGRlNWJjbmd0OG9rdmV2NGxzdGtAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ) to see when we're meeting next or join [this](https://groups.google.com/forum/#!forum/asyncapi-users) mailing list go get an invite to the next meeting. 
 
 Join from your favorite device: https://zoom.us/j/165106914
 
@@ -76,7 +78,7 @@ Meeting ID: 165 106 914
 * [+44 203 695 0088](tel:+442036950088)
 * [+44 203 051 2874](tel:+442030512874)
 
-Find the agenda for our past and future meetings [here](https://github.com/asyncapi/asyncapi/issues?utf8=%E2%9C%93&q=is%3Aissue+label%3Ameeting+sort%3Acreated-desc+) in the pinned issue.
+Find the agenda for our past and future meetings [here](https://github.com/asyncapi/community/issues?utf8=%E2%9C%93&q=is%3Aissue+label%3Ameeting+sort%3Acreated-desc+) in the pinned issue.
 
 ## Meeting recordings
 
