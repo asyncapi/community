@@ -78,7 +78,7 @@ Meeting ID: 165 106 914
 * [+44 203 695 0088](tel:+442036950088)
 * [+44 203 051 2874](tel:+442030512874)
 
-Find the agenda for our past and future meetings [here](https://github.com/asyncapi/asyncapi/issues?utf8=%E2%9C%93&q=is%3Aissue+label%3Ameeting+sort%3Acreated-desc+) in the pinned issue.
+Find the agenda for our past and future meetings [here](https://github.com/asyncapi/community/issues?utf8=%E2%9C%93&q=is%3Aissue+label%3Ameeting+sort%3Acreated-desc+) in the pinned issue.
 
 ## Meeting recordings
 
