@@ -15,6 +15,7 @@
         },
         "github": {
           "type": "string",
+          "minLength": 1,
           "description": "In must be a valid GitHub handle. It is used to provide a link to person's profile on GitHub and display profile picture on the AsyncAPI website",
           "examples": [
             "derberg"
@@ -52,6 +53,7 @@
         },
         "repos": {
           "type": "array",
+          "minItems": 1,
           "items": {
             "type": "string",
             "description": "List of repositories names that must match the GitHub name of the repository. It is used to provide a link to the repository in AsyncAPI website",
