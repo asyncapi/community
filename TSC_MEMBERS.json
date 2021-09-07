@@ -84,7 +84,7 @@
             "github": "KhudaDad414",
             "twitter": "KhudaDadNomani",
             "linkedin": "khudadadnomani",
-            "availableForHire": false,
+            "availableForHire": true,
             "repos": [
                 "optimizer"
             ]
@@ -130,6 +130,7 @@
                 "generator",
                 "html-template",
                 "markdown-template",
+                "modelina",
                 "parser-js",
                 "playground",
                 "website"
@@ -138,7 +139,7 @@
         {
             "github": "AceTheCreator",
             "twitter": "_acebuild",
-            "availableForHire": false,
+            "availableForHire": true,
             "repos": [
                 "chatbot"
             ]
