@@ -22,7 +22,6 @@ jobs:
           script: |
             const Ajv = require("ajv");
             const fs = require('fs').promises;
-            const core = require('@actions/core');
 
             const schema = await fs.readFile('.github/workflows/tsc_members_validator/schema.json', 'utf8');
             const members = await fs.readFile('TSC_MEMBERS.json', 'utf8');
