@@ -15,12 +15,30 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
+      - run: npm install ajv@6.12.6
       - name: Validate list with schema
-        uses: emagers/json-schema-validation@v1.0.0
+        uses: actions/github-script@v4
         with:
-          schema: .github/workflows/tsc_members_validator/schema.json
-          testFile: TSC_MEMBERS.json
-  
+          script: |
+            const Ajv = require("ajv");
+            const fs = require('fs').promises;
+            const core = require('@actions/core');
+
+            const schema = await fs.readFile('.github/workflows/tsc_members_validator/schema.json', 'utf8');
+            const members = await fs.readFile('TSC_MEMBERS.json', 'utf8');
+            
+            const ajv = new Ajv();
+            const validator = ajv.compile(schema);
+
+            const valid = validator(members);
+
+            if (!valid) {
+              core.error(`Validation of members file failed with the following errors:`);
+              core.error(validator.errors);
+            } else {
+              core.info(`TSC members file is valid`);
+            }
+
   # open governance model doesn't allow more than 1/4 TSC members affiliated with a single company
   calculate_companies:
     if: github.event.pull_request.draft == false
@@ -32,7 +50,6 @@ jobs:
       - name: Calculate
         uses: actions/github-script@v4
         with:
-          github-token: ${{ secrets.GH_TOKEN }}
           script: |
             const members = require('./TSC_MEMBERS.json');
             const allMembers = members.length;
