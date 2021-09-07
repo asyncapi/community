@@ -14,7 +14,7 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
-      - name: golangci-lint
+      - name: Validate list with schema
         uses: emagers/json-schema-validation@v1.0.0
         with:
           schema: .github/workflows/tsc_members_validator/schema.json

@@ -9,7 +9,7 @@ on:
       - 'TSC_MEMBERS.json'
 
 jobs:
-  Make-PR:
+  update-website:
     name: Make PR on website repository with updated tsc members list
     runs-on: ubuntu-latest
     env:
