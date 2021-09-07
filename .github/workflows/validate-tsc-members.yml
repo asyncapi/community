@@ -3,7 +3,8 @@ name: Validating the list of technical steering committee members
 on:
   pull_request:
     types: [opened, reopened, synchronize, ready_for_review]
-
+    paths:
+      - 'TSC_MEMBERS.json'
 jobs:
   # make sure that changes in the TSC_MEMBERS file is not breaking the schema
   # until we have TSC_MEMBERS.json updates automated we need to make sure we are not breaking things
