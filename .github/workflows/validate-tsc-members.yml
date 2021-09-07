@@ -27,9 +27,9 @@ jobs:
             const members = await fs.readFile('TSC_MEMBERS.json', 'utf8');
             
             const ajv = new Ajv();
-            const validator = ajv.compile(schema);
+            const validator = ajv.compile(JSON.parse(schema));
 
-            const valid = validator(members);
+            const valid = validator(JSON.parse(members));
 
             if (!valid) {
               core.error(`Validation of members file failed with the following errors:`);
