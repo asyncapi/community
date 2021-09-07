@@ -23,6 +23,7 @@
         {
             "name": "Emiliano Zublena",
             "github": "emilianozublena",
+            "linkedin": "emilianozublena",
             "availableForHire": false,
             "repos": [
                 "asyncapi-php-template"
