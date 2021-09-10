@@ -173,7 +173,7 @@
         },
         {
             "github": "NektariosFifes",
-            "availableForHire": false,
+            "availableForHire": true,
             "repos": [
                 "simulator"
             ]
