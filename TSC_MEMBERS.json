@@ -155,7 +155,9 @@
             ]
         },
         {
+            "name": "Pavel Bodiachevskii",
             "github": "Pakisan",
+            "twitter": "pbodiachevskii",
             "availableForHire": false,
             "repos": [
                 "jasyncapi"
