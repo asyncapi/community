@@ -62,6 +62,6 @@ jobs:
             }, new Map())
 
             numberOfMemByCompany.forEach((numberOfRepresentatives, companyName) => {
-              if (numberOfRepresentatives > allowedMemberPerCompany) core.error(`There are to many members affiliated with ${companyName} and it violate open governance model. ${numberOfRepresentatives} is more that 1/4 of ${allMembers}`)
+              if (numberOfRepresentatives > allowedMemberPerCompany) core.error(`There are to many members affiliated with ${companyName} and it violates open governance model. ${numberOfRepresentatives} is more that 1/4 of ${allMembers}`)
             })
  
