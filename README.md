@@ -55,7 +55,7 @@
 </p>
 
 ## 🤗 AsyncAPI community meetings
-AsyncAPI hosts and records community interest meetings bi-weekly on Tuesdays. We rotate the time at which we host these meetings; 4:00pm UTC one Tuesday and 8:00am UTC the next Tuesday. Rotating the time of our community meetings allows us to meet with community members from APAC, Europe, and Americas. 🌎 🌍 🌎
+AsyncAPI hosts and records community interest meetings bi-weekly on Tuesdays. We rotate the time at which we host these meetings; 4:00pm UTC one Tuesday and 8:00am UTC the next Tuesday. Rotating the time of our community meetings allows us to meet with community members from APAC, Europe, Africa, and Americas. 🌎 🌍 🌎
 
 ## 🗓️ Add AsyncAPI meetings to calendar
 There are two simple ways to join _any_ and _all_ AsyncAPI community meetings:
@@ -63,16 +63,9 @@ There are two simple ways to join _any_ and _all_ AsyncAPI community meetings:
 - **Join our [mailing list](https://groups.google.com/forum/#!forum/asyncapi-users):** receive an invite to our next meeting. 📨  
 
 ## 💻 Join AsyncAPI meetings
-Great news! You can join our community meetings with Zoom or from your phone. Follow the agenda for both past and future meetings [here](https://github.com/asyncapi/community/issues?utf8=%E2%9C%93&q=is%3Aissue+label%3Ameeting+sort%3Acreated-desc+), in our GitHub pinned issue 🐙.
+Great news! You can join our community meetings with Zoom or [from your phone](INTERNATIONAL_DIAL_IN.md). Follow the agenda for both past and future meetings [here](https://github.com/asyncapi/community/issues?utf8=%E2%9C%93&q=is%3Aissue+label%3Ameeting+sort%3Acreated-desc+), in our GitHub pinned issue 🐙.
 
-- Join our [Zoom call](https://zoom.us/j/165106914) from your favorite device. 
-- Dial in.
-
-| **Meeting ID: 165 106 914**   |                                         |
-|-------------------------------|-----------------------------------------|
-| :us: United States of America | +1 720 707 2699 </br>+1 646 558 8656    |
-| :es: Spain                    | +34 91 198 0188 </br> +34 84 368 5025   |
-| :gb: United Kingdom           | +44 203 695 0088 </br> +44 203 051 2874 |
+👉🏾 Join our [Zoom call](https://zoom.us/j/165106914) from your favorite device. 
 
 ## 🎥 Watch meeting recordings
 
