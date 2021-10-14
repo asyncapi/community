@@ -17,7 +17,7 @@ jobs:
         with:
           node-version: '14'
       - name: Create another copy of the tweet
-        run: TWEET_FILENAME=discuss-ideas.tweet node ./.github/scripts/createTweetFile.js # provide a file name of the reoccuring tweet that you created
+        run: TWEET_FILENAME=discuss-ideas.tweet node ./.github/scripts/createReoccuringTweetFile.js # provide a file name of the reoccuring tweet that you created
       - name: Create Pull Request with new tweet
         uses: peter-evans/create-pull-request@v3
         with:
