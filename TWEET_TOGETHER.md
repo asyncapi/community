@@ -37,7 +37,7 @@ You can also use subfolders (e.g. `tweets/2019-02/hello-world.tweet`) as long as
 ## Create a reoccurring tweet
 
 1. Create `*.tweet` file with your tweet content in the `.github/scripts/reocurring_tweets` directory.
-2. Create new GitHub Action workflow based on [this example](.github/workflows/twitter-ideas.yml). That example provides comments for sections that need to be modified in your version of the workflow. The name of the workflow should start with a `twitter-reoccuring-` prefix.
+2. Create new GitHub Action workflow based on [this example](.github/workflows/twitter-ideas.yml). That example provides comments for sections that need to be modified in your version of the workflow. The name of the workflow should start with a `twitter-recurring-` prefix.
 
 
 ## When is my tweet published to twitter?
