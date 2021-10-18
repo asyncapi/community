@@ -34,9 +34,9 @@ The content of that tweet file might look something like this:
 
 You can also use subfolders (e.g. `tweets/2019-02/hello-world.tweet`) as long as the file is in the `tweets/` folder and has the `.tweet` file extension.
 
-## Create a reoccurring tweet
+## Create a recurring tweet
 
-1. Create `*.tweet` file with your tweet content in the `.github/scripts/reocurring_tweets` directory.
+1. Create `*.tweet` file with your tweet content in the `.github/scripts/recurring_tweets` directory.
 2. Create new GitHub Action workflow based on [this example](.github/workflows/twitter-ideas.yml). That example provides comments for sections that need to be modified in your version of the workflow. The name of the workflow should start with a `twitter-recurring-` prefix.
 
 
