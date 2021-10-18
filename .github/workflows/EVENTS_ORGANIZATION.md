@@ -6,8 +6,6 @@ Every event must be created in [AsyncAPI Google Calendar](https://calendar.googl
 
 You need to be a member of [this](https://groups.google.com/u/1/g/asyncapi-users) user group to get an invitation.
 
-<iframe src="https://calendar.google.com/calendar/embed?src=tbrbfq4de5bcngt8okvev4lstk%40group.calendar.google.com&ctz=Europe%2FWarsaw" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
-
 ## Event-related GitHub issue
 
 Every event instance must have a corresponding GitHub issue with details on schedule and how to participate. Such an issue must be created in [the community repository](https://github.com/asyncapi/community/issues).
