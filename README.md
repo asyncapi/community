@@ -16,7 +16,7 @@
   |
   <a href="https://www.youtube.com/channel/UCIz9zGwDLbrYQcDKVXdOstQ">Youtube</a>
   |
-  <a href="https://opencollective.com/asyncapi">Donate :raised_hands:</a>
+  <a href="https://opencollective.com/asyncapi">Donate 🙌🏾</a>
 </p>
 
 ## 💰 Platinum sponsors
@@ -51,7 +51,7 @@
 </p>
 
 <p align="center">
-  :raised_hands: <a href="https://opencollective.com/asyncapi">Become a sponsor</a> :raised_hands:
+  🙌🏾 <a href="https://opencollective.com/asyncapi">Become a sponsor</a> 🙌🏾
 </p>
 
 ## 🤗 AsyncAPI community meetings
@@ -63,13 +63,13 @@ There are two simple ways to join _any_ and _all_ AsyncAPI community meetings:
 - **Join our [mailing list](https://groups.google.com/forum/#!forum/asyncapi-users):** receive an invite to our next meeting. 📨  
 
 ## 💻 Join AsyncAPI meetings
-Great news! You can join our community meetings with Zoom or [from your phone](INTERNATIONAL_DIAL_IN.md). Follow the agenda for both past and future meetings [here](https://github.com/asyncapi/community/issues?utf8=%E2%9C%93&q=is%3Aissue+label%3Ameeting+sort%3Acreated-desc+), in our GitHub pinned issue 🐙.
+Great news! You can join our community meetings with Zoom or [from your phone](https://zoom.us/zoomconference?u=KVQB7xXTBuFX2L-UkCopBrikvzkqiU314jvIVWrLieg&_x_zm_rtaid=0PMYw_lVTpm8tPIxhJ2vAA.1634191563246.6cc9c2f6cda6a2c1639ce2584cbeee6a&_x_zm_rhtaid=430) with our **Meeting ID: 165 106 914**. Follow the agenda for both past and future meetings [here](https://github.com/asyncapi/community/issues?utf8=%E2%9C%93&q=is%3Aissue+label%3Ameeting+sort%3Acreated-desc+), in our GitHub pinned issue 🐙.
 
 👉🏾 Join our [Zoom call](https://zoom.us/j/165106914) from your favorite device. 
 
 ## 🎥 Watch meeting recordings
 
-Head over to our [AsyncAPI Youtube playlist of SIG meetings](https://www.youtube.com/watch?v=S8gvf0XjO10&list=PLbi1gRlP7pijUwZJErzyYf_Rc-PWu4lXS) to watch them. 
+Head over to our [AsyncAPI YouTube playlist of SIG meetings](https://www.youtube.com/watch?v=S8gvf0XjO10&list=PLbi1gRlP7pijUwZJErzyYf_Rc-PWu4lXS) to watch them. 
 
-[![AsyncAPI Youtube playlist of SIG meetings](https://i.ytimg.com/vi/8ddwX0CyUeE/hqdefault.jpg)](https://www.youtube.com/watch?v=S8gvf0XjO10&list=PLbi1gRlP7pijUwZJErzyYf_Rc-PWu4lXS)
+[![AsyncAPI YouTube playlist of SIG meetings](assets/YT-SIG-channel.png)](https://www.youtube.com/playlist?list=PLbi1gRlP7pijUwZJErzyYf_Rc-PWu4lXS)
 
