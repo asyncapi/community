@@ -25,5 +25,5 @@ As a result, a new GitHub issue is created in the repository.
 
 ## New events registration
 
-* To get new issue registered in AsyncAPI Calendar, contact with the community in `#events` channel in [Slack](https://www.asyncapi.com/slack-invite),
+* To get a new issue registered in AsyncAPI Calendar, contact the community in the `#events` channel in [Slack](https://www.asyncapi.com/slack-invite),
 * To modify an issue creation workflow to support a new event, modify [this workflow](.github/workflows/create-event-issue.yml) and add a new script like [this one](.github/workflows/event_issue_templates/sig.js).
