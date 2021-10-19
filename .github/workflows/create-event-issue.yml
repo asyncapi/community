@@ -1,0 +1,63 @@
+name: Create community event issue
+
+on:
+  workflow_dispatch:
+    inputs:
+      time:
+        description: 'Info about meeting hour in UTC time zone, like: 8AM'
+        required: true
+      everytimezone:
+        description: 'Link that points to specific time when meeting happens so others can translate it to their time zones, like: https://everytimezone.com/s/182f3172'
+        required: true
+      date:
+        description: 'Date in a form like: Tuesday October 26 2021'
+        required: true
+      type:
+        description: 'Is it "sig" or "contributor_first" meeting'
+        required: true
+
+jobs:
+
+  setup-sig-meeting:
+    env:
+      GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+    name: Setup SIG meeting
+    runs-on: ubuntu-latest
+    if: github.event.inputs.type == 'sig'
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Create issue content
+        uses: actions/github-script@v4
+        with:
+          script: |
+            const { writeFileSync } = require('fs');
+            const { getMeetingIssueContent } = require('./.github/workflows/event_issue_templates/sig.js');
+
+            const issueContent =  getMeetingIssueContent('${{ github.event.inputs.time }}', '${{ github.event.inputs.everytimezone }}');
+
+            writeFileSync('content.md', issueContent, { encoding: 'utf8'});
+      - name: Create issue with meeting details
+        run: gh issue create -l meeting -t "AsyncAPI Contributor-first meeting, ${{ github.event.inputs.date }} ${{ github.event.inputs.time }} UTC" -F content.md
+
+  setup-contributor-first-meeting:
+    env:
+      GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+    name: Setup Community-first meeting
+    runs-on: ubuntu-latest
+    if: github.event.inputs.type == 'contributor_first'
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Create issue content
+        uses: actions/github-script@v4
+        with:
+          script: |
+            const { writeFileSync } = require('fs');
+            const { getMeetingIssueContent } = require('./.github/workflows/event_issue_templates/contributor-first.js');
+
+            const issueContent =  getMeetingIssueContent('${{ github.event.inputs.time }}', '${{ github.event.inputs.everytimezone }}');
+
+            writeFileSync('content.md', issueContent, { encoding: 'utf8'});
+      - name: Create issue with meeting details
+        run: gh issue create -l meeting -t "AsyncAPI Contributor-first meeting, ${{ github.event.inputs.date }} ${{ github.event.inputs.time }} UTC" -F content.md
