@@ -13,7 +13,7 @@ const date = new Date().toISOString().split('T')[0] // gives us YYYY-MM-DD that 
 const filenameNoExt = path.parse(tweetFilename).name; // gives us for example "discuss-ideas" from "discuss-ideas.tweet". It is needed for custom folder name
 const customDestinyDir = path.join(__dirname,`../../tweets/recurring-${filenameNoExt}`); //gives us for example "tweets/recurring-discuss-ideas"
 
-const copySrc = path.join(__dirname, `/reocurring_tweets/${tweetFilename}`); // gives us for example ".github/scripts/reocurring_tweets/discuss-ideas.tweet"
+const copySrc = path.join(__dirname, `/recurring_tweets/${tweetFilename}`); // gives us for example ".github/scripts/recurring_tweets/discuss-ideas.tweet"
 const copyDest = `${customDestinyDir}/${date}.tweet`; //gives us for example "tweets/recurring-discuss-ideas/2021-10-14.tweet"
 
 if (!existsSync(customDestinyDir)) mkdirSync(customDestinyDir); // we need to create new custom dir only if it doesn't exist yet, otherwise we would get an error

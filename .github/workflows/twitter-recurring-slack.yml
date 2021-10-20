@@ -1,0 +1,28 @@
+on:
+  schedule:
+    # Tweet at 10 every Saturday
+    - cron: "0 10 * * SAT"
+
+name: Create tweet about slack workspace
+jobs:
+  create-slack-tweet:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Setup node to execute script
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+      - name: Create another copy of the tweet
+        run: TWEET_FILENAME=slack-link.tweet node ./.github/scripts/createRecurringTweetFile.js
+      - name: Create Pull Request with new tweet
+        uses: peter-evans/create-pull-request@v3
+        with:
+          token: ${{ secrets.GH_TOKEN }}
+          commit-message: 'chore(tweet): recurring tweet about slack link'
+          committer: asyncapi-bot <info@asyncapi.io>
+          author: asyncapi-bot <info@asyncapi.io>
+          title: 'chore(tweet): recurring tweet about slack link'
+          body: 'This is a tweet that we want to share regularly to make sure all AsyncAPI followers know about our slack workspace'
+          branch: 'tweet/${{github.job}}'

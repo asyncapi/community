@@ -26,5 +26,5 @@ jobs:
           committer: asyncapi-bot <info@asyncapi.io>
           author: asyncapi-bot <info@asyncapi.io>
           title: 'chore(tweet): recurring tweet about discussion tools ideas in our discussions forum' # put some sort description
-          body: 'This is a tweet that we want to share regularly to make sure all AsyncAPI folowers know about discussions forum' # put some longer description
+          body: 'This is a tweet that we want to share regularly to make sure all AsyncAPI followers know about discussions forum' # put some longer description
           branch: 'tweet/${{github.job}}'
