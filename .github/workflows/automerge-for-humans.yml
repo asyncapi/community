@@ -1,0 +1,34 @@
+#This workflow is centrally managed in https://github.com/asyncapi/.github/
+#Don't make changes to this file in this repo as they will be overwritten with changes made to the same file in above mentioned repo
+
+#Purpose of this workflow is to allow people to merge PR without a need of maintainer doing it. If all checks are in place (including maintainers approval) - JUST MERGE IT!
+name: Automerge For Humans
+
+on:
+  pull_request_target:
+    types:
+      - labeled
+      - unlabeled
+      - synchronize
+      - opened
+      - edited
+      - ready_for_review
+      - reopened
+      - unlocked
+  
+jobs:
+
+  automerge-for-humans:
+    if: github.event.pull_request.draft == false
+    runs-on: ubuntu-latest
+    steps:
+      - name: Automerge PR
+        uses: pascalgn/automerge-action@v0.14.3
+        if: github.actor != 'asyncapi-bot' || github.actor != 'dependabot[bot]' || github.actor != 'dependabot-preview[bot]' #it runs only if PR actor is not a bot, at least not a bot that we know
+        env:
+          GITHUB_TOKEN: "${{ secrets.GH_TOKEN }}"
+          MERGE_LABELS: "ready-to-merge"
+          MERGE_METHOD: "squash"
+          MERGE_COMMIT_MESSAGE: "pull-request-title"
+          MERGE_RETRIES: "20"
+          MERGE_RETRY_SLEEP: "30000"
