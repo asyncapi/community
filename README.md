@@ -59,9 +59,8 @@ AsyncAPI hosts and records community interest meetings bi-weekly on Tuesdays. We
 
 ## 🗓️ Add AsyncAPI meetings to calendar
 There are two simple ways to join _any_ and _all_ AsyncAPI community meetings:
-- **Add our calendar:** check out when we meet next! 🗓️
-  - If you have a **google account**, use [this calendar](https://calendar.google.com/calendar/embed?src=tbrbfq4de5bcngt8okvev4lstk%40group.calendar.google.com&ctz=America%2FLos_Angeles)
-  - If you have a **non-google account**, use [this calendar](https://calendar.google.com/calendar?cid=dGJyYmZxNGRlNWJjbmd0OG9rdmV2NGxzdGtAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ).
+- **Add our calendar:** check out when we meet next with [this calendar](https://calendar.google.com/calendar/u/0/embed?src=tbrbfq4de5bcngt8okvev4lstk@group.calendar.google.com)! 🗓️
+  - If you have a **google account**, you can use [this calendar](https://calendar.google.com/calendar/embed?src=tbrbfq4de5bcngt8okvev4lstk%40group.calendar.google.com&ctz=America%2FLos_Angeles).
    - If you prefer to add the calendar with an **ICS file**, download it [here](https://calendar.google.com/calendar/ical/tbrbfq4de5bcngt8okvev4lstk%40group.calendar.google.com/public/basic.ics).
 
 - **Join our [mailing list](https://groups.google.com/forum/#!forum/asyncapi-users):** receive an invite to our next meeting. 📨  
@@ -75,5 +74,5 @@ Great news! You can join our community meetings with Zoom or [from your phone](h
 
 Head over to our [AsyncAPI YouTube playlist of SIG meetings](https://www.youtube.com/watch?v=S8gvf0XjO10&list=PLbi1gRlP7pijUwZJErzyYf_Rc-PWu4lXS) to watch them. 
 
-[![AsyncAPI YouTube playlist of SIG meetings](assets/YT-SIG-channel.png)](https://www.youtube.com/playlist?list=PLbi1gRlP7pijUwZJErzyYf_Rc-PWu4lXS)
+[![AsyncAPI YouTube playlist of SIG meetings](assets/SIG-meeting-YT.png)](https://www.youtube.com/playlist?list=PLbi1gRlP7pijUwZJErzyYf_Rc-PWu4lXS)
 
