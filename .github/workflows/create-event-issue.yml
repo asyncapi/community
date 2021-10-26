@@ -38,7 +38,7 @@ jobs:
 
             writeFileSync('content.md', issueContent, { encoding: 'utf8'});
       - name: Create issue with meeting details
-        run: gh issue create -l meeting -t "AsyncAPI Contributor-first meeting, ${{ github.event.inputs.date }} ${{ github.event.inputs.time }} UTC" -F content.md
+        run: gh issue create -l meeting -t "Contributor-first Meeting, ${{ github.event.inputs.time }} UTC ${{ github.event.inputs.date }}" -F content.md
 
   setup-contributor-first-meeting:
     env:
@@ -60,4 +60,4 @@ jobs:
 
             writeFileSync('content.md', issueContent, { encoding: 'utf8'});
       - name: Create issue with meeting details
-        run: gh issue create -l meeting -t "AsyncAPI Contributor-first meeting, ${{ github.event.inputs.date }} ${{ github.event.inputs.time }} UTC" -F content.md
+        run: gh issue create -l meeting -t "Community SIG Meeting, ${{ github.event.inputs.time }} UTC ${{ github.event.inputs.date }}" -F content.md
