@@ -60,7 +60,7 @@ AsyncAPI hosts and records community interest meetings bi-weekly on Tuesdays. We
 ## 🗓️ Add AsyncAPI meetings to calendar
 There are two simple ways to join _any_ and _all_ AsyncAPI community meetings:
 - **Add our calendar:** check out when we meet next with [this calendar](https://calendar.google.com/calendar/u/0/embed?src=tbrbfq4de5bcngt8okvev4lstk@group.calendar.google.com)! 🗓️
-  - If you have a **google account**, you can use [this link](https://calendar.google.com/calendar?cid=dGJyYmZxNGRlNWJjbmd0OG9rdmV2NGxzdGtAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ) to get AsyncAPI calendar added to your calendar.
+  - If you have a **google account**, you can use [this link](https://calendar.google.com/calendar?cid=dGJyYmZxNGRlNWJjbmd0OG9rdmV2NGxzdGtAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ) to get the AsyncAPI calendar added to your calendar.
    - If you prefer to add the calendar with an **ICS file**, download it [here](https://calendar.google.com/calendar/ical/tbrbfq4de5bcngt8okvev4lstk%40group.calendar.google.com/public/basic.ics).
 
 - **Join our [mailing list](https://groups.google.com/forum/#!forum/asyncapi-users):** receive an invite to our next meeting. 📨  
