@@ -1,0 +1,6 @@
+JS, Kafka, JSON Schema, Java, MQTT, React, NATS, Go; just a few technologies #AsyncAPI contributors deal with 👩🏾‍💻. 
+To top it off, we created Helm charts that deploy our Event-Gateway to #K8s. 
+
+Sounds familiar?
+
+🔍☸️ We are looking for experts to review https://github.com/asyncapi/event-gateway/pull/71
