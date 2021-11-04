@@ -86,7 +86,8 @@
         "linkedin": "khudadadnomani",
         "availableForHire": true,
         "repos": [
-            "optimizer"
+            "optimizer",
+            "bindings"
         ]
     },
     {
@@ -170,7 +171,8 @@
         "company": "Solace",
         "repos": [
             "java-spring-cloud-stream-template",
-            "python-paho-template"
+            "python-paho-template",
+            "bindings"
         ]
     },
     {
@@ -182,6 +184,7 @@
         ]
     },
     {
+        "name": "Anand Sunderraman",
         "github": "anandsunderraman",
         "linkedin": "anand-sunderraman-a6b7a131",
         "availableForHire": false,
@@ -196,7 +199,8 @@
         "company": "Solace",
         "repos": [
             "java-spring-cloud-stream-template",
-            "python-paho-template"
+            "python-paho-template",
+            "bindings"
         ]
     },
     {
@@ -207,7 +211,8 @@
         "availableForHire": false,
         "company": "IBM",
         "repos": [
-            "avro-schema-parser"
+            "avro-schema-parser",
+            "bindings"
         ]
     },
     {
@@ -232,6 +237,36 @@
             "event-gateway",
             "go-watermill-template",
             "parser-api"
+        ]
+    },
+    {
+        "name": "Laurent Broudoux",
+        "github": "lbroudoux",
+        "twitter": "lbroudoux",
+        "linkedin": "laurentbroudoux",
+        "availableForHire": false,
+        "repos": [
+            "bindings"
+        ]
+    },
+    {
+        "name": "Gerald Loeffler",
+        "github": "GeraldLoeffler",
+        "linkedin": "geraldloeffler",
+        "availableForHire": false,
+        "company": "Salesforce",
+        "repos": [
+            "bindings"
+        ]
+    },
+    {
+        "name": "Richard Coppen",
+        "github": "rcoppen",
+        "linkedin": "richard-coppen",
+        "availableForHire": false,
+        "company": "IBM",
+        "repos": [
+            "bindings"
         ]
     }
 ]
