@@ -200,6 +200,7 @@
 			"parser-js",
 			"parser-go",
 			"playground",
+                        "server-api",
 			"template-for-go-projects",
 			"website"
 		]
