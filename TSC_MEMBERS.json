@@ -190,13 +190,17 @@
 			"asyncapi-react",
 			"chatbot",
 			"cli",
+			"converter-go",
+			"event-gateway",
 			"generator-react-sdk",
 			"generator",
 			"html-template",
 			"markdown-template",
 			"modelina",
 			"parser-js",
+			"parser-go",
 			"playground",
+			"template-for-go-projects",
 			"website"
 		]
 	},
@@ -255,10 +259,13 @@
 		"availableForHire": false,
 		"company": "Postman",
 		"repos": [
+			"converter-go",
 			"event-gateway",
 			"go-watermill-template",
 			"infra",
-			"parser-api"
+			"parser-api",
+			"server-api",
+			"template-for-go-projects"
 		]
 	},
 	{
