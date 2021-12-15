@@ -265,6 +265,7 @@
 			"go-watermill-template",
 			"infra",
 			"parser-api",
+			"parser-go",
 			"server-api",
 			"template-for-go-projects"
 		]
