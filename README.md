@@ -1,8 +1,7 @@
 <h1 align="center">
   <br>
 
-  [![AsyncAPI Logo Light Mode](./assets/logo-black.svg#gh-light-mode-only)](https://asyncapi.org)
-  [![AsyncAPI Logo Dark Mode](./assets/logo-white.svg#gh-dark-mode-only)](https://asyncapi.org)
+  [![AsyncAPI Logo](./assets/logo-black.svg)](https://asyncapi.org)
 
 <h4 align="center">Building the future of event-driven architectures</h4>
 <h6 align="center">We're on a mission to standardize message-based communication and increase interoperability of the different systems out there.</h6>
