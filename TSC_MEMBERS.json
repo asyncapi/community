@@ -48,7 +48,8 @@
 		"company": "IBM",
 		"repos": [
 			"avro-schema-parser",
-			"bindings"
+			"bindings",
+			"java-template"
 		]
 	},
 	{
