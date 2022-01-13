@@ -10,8 +10,6 @@ You need to be a member of [this](https://groups.google.com/u/1/g/asyncapi-users
 
 Every event instance must have a corresponding GitHub issue with details on schedule and how to participate. Such an issue must be created in [the community repository](https://github.com/asyncapi/community/issues).
 
-The next meeting should be pinned to the list of all issues using `Pin issue` feature.
-
 The issue creation process for official AsyncAPI events is semi-automated. You do not have to create an issue on your own, but you can trigger a dedicated GitHub Action workflow to do it for you.
 
 1. Go to [**Actions** tab](https://github.com/asyncapi/community/actions)

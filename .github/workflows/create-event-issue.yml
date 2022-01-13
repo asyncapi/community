@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       time:
-        description: 'Info about meeting hour in UTC time zone, like: 8AM'
+        description: 'Info about meeting hour in UTC time zone, like: 8 or 16'
         required: true
       everytimezone:
         description: 'Link that points to specific time when meeting happens so others can translate it to their time zones, like: https://everytimezone.com/s/182f3172'
@@ -13,8 +13,12 @@ on:
         description: 'Date in a form like: Tuesday October 26 2021'
         required: true
       type:
-        description: 'Is it "sig" or "contributor_first" meeting'
+        description: 'Is it "sig" or "lets_talk_contrib" meeting'
         required: true
+      descSuffix:
+        description: 'You can specify additional text that appears at the end of generated event title, like: - Product Design'
+        required: false
+        default: ''
 
 jobs:
 
@@ -38,14 +42,14 @@ jobs:
 
             writeFileSync('content.md', issueContent, { encoding: 'utf8'});
       - name: Create issue with meeting details
-        run: gh issue create -l meeting -t "Community SIG Meeting, ${{ github.event.inputs.time }} UTC ${{ github.event.inputs.date }}" -F content.md
+        run: gh issue create -l meeting -t "Community SIG Meeting, ${{ github.event.inputs.time }} UTC ${{ github.event.inputs.date }} ${{ github.event.inputs.descSuffix }}" -F content.md
 
-  setup-contributor-first-meeting:
+  setup-lets-talk-about-contrib-stream:
     env:
       GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-    name: Setup Community-first meeting
+    name: Setup Lets talk about contributing live stream
     runs-on: ubuntu-latest
-    if: github.event.inputs.type == 'contributor_first'
+    if: github.event.inputs.type == 'lets_talk_contrib'
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
@@ -60,4 +64,26 @@ jobs:
 
             writeFileSync('content.md', issueContent, { encoding: 'utf8'});
       - name: Create issue with meeting details
-        run: gh issue create -l meeting -t "Contributor-first Meeting, ${{ github.event.inputs.time }} UTC ${{ github.event.inputs.date }}" -F content.md
+        run: gh issue create -l meeting -t "Let's talk about contributing, ${{ github.event.inputs.time }} UTC ${{ github.event.inputs.date }} ${{ github.event.inputs.descSuffix }}" -F content.md
+
+  setup-spec-3-0-meeting:
+    env:
+      GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+    name: Setup meeting about 3.0 spec work
+    runs-on: ubuntu-latest
+    if: github.event.inputs.type == 'sig'
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Create issue content
+        uses: actions/github-script@v4
+        with:
+          script: |
+            const { writeFileSync } = require('fs');
+            const { getMeetingIssueContent } = require('./.github/workflows/event_issue_templates/sig.js');
+
+            const issueContent =  getMeetingIssueContent('${{ github.event.inputs.time }}', '${{ github.event.inputs.everytimezone }}');
+
+            writeFileSync('content.md', issueContent, { encoding: 'utf8'});
+      - name: Create issue with meeting details
+        run: gh issue create -l meeting -t "Spec 3.0 Meeting, ${{ github.event.inputs.time }} UTC ${{ github.event.inputs.date }} ${{ github.event.inputs.descSuffix }}" -F content.md
