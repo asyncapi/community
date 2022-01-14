@@ -6,7 +6,7 @@ module.exports.getMeetingIssueContent = (time, everytimezone) => {
 
 **This time we meet at [${time} UTC](${everytimezone})**
 
-Join [this](https://groups.google.com/forum/#!forum/asyncapi-users) mailing list to get an always-up-to-date invite to the meeting in your calendar. You can also check [AsyncAPI Calendar](https://calendar.google.com/calendar/u/0/embed?src=tbrbfq4de5bcngt8okvev4lstk@group.calendar.google.com).
+Join [this mailing list](https://groups.google.com/forum/#!forum/asyncapi-users) to get an always-up-to-date invite to the meeting in your calendar. You can also check [AsyncAPI Calendar](https://calendar.google.com/calendar/u/0/embed?src=tbrbfq4de5bcngt8okvev4lstk@group.calendar.google.com).
 
 ## Agenda
 
