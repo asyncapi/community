@@ -12,14 +12,14 @@ Below sections explain things that are common for majority of contributor guides
 
 > Explanation of this section is also [available as a video](https://youtu.be/QhOv_W6LmrY).
 
-To get PR merged:
-- it needs to be approved by the maintainer (mentioned in the CODEOWNER file located in the root of the repository) of the repository,
-- required GitHub workflows passed successfully
+To get a PR merged:
+- it needs to be approved by the maintainer (mentioned in the CODEOWNER file located in the root of the repository) of the repository
+- pass required GitHub workflows successfully
 - it is not a **Draft** PR
 - it is not labeled as **do-not-merge**
 
-Once all above requirements are met, anyone can merge a PR asking AsyncAPI bot for help. You add a comment to PR like `/ready-to-merge` or `rtm` and bot adds `ready-to-merge` label and merge a PR for you. PR title is used as a commit message of squashed and merged PR.
+Once all above requirements are met, anyone can merge a PR asking the AsyncAPI bot for help. Simply add a comment to the PR such as `/ready-to-merge` or `rtm`. This prompts the bot  to add a `ready-to-merge` label and then proceeds to merge the PR for you. The PR title is used as a commit message of both squashed and merged PRa.
 
-If you are a maintainer and for some reason you prefer to merge PR on your own and you do not want contribuor to decide on it, add `/do-not-merge` or `/dnm` comment to the PR and bot adds `do-not-merge` label that only repository maintainer can remove.
+If you are a maintainer and for some reason, you prefer to merge the PR on your own and you do not want a contributor to decide on it, add a `/do-not-merge` or `/dnm` comment to the PR. The bot will then add a `do-not-merge` label that only the repository maintainer can remove.
 
 > Remember that you can always ask AsyncAPI bot on a PR level to remind you about available automation comments with `/help` comment
