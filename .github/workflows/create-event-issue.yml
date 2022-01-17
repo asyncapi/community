@@ -13,7 +13,7 @@ on:
         description: 'Date in a form like: Tuesday October 26 2021'
         required: true
       type:
-        description: 'Is it "sig" or "lets_talk_contrib" meeting'
+        description: 'Is it "sig", "spec3-0" or "lets_talk_contrib" meeting'
         required: true
       descSuffix:
         description: 'You can specify additional text that appears at the end of generated event title, like: - Product Design'
@@ -71,7 +71,7 @@ jobs:
       GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
     name: Setup meeting about 3.0 spec work
     runs-on: ubuntu-latest
-    if: github.event.inputs.type == 'sig'
+    if: github.event.inputs.type == 'spec3-0'
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
