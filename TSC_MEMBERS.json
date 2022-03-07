@@ -354,13 +354,23 @@
 		]
 	},
 	{
-		"name": "Debajyoti Halder",
+		"name": "Samridhi Agrawal",
+		"github": "Samridhi-98",
+		"linkedin": "samridhi-agrawal-1713201ab",
+		"availableForHire": false,
+		"company": "ThoughtWorks",
+		"repos": [
+			"modelina"
+		]
+	},
+  {
+    "name": "Debajyoti Halder",
 		"github": "ron-debajyoti",
 		"twitter": "rondebajyoti",
 		"linkedin": "rondebajyoti",
 		"availableForHire": true,
-		"repos": [
+    "repos": [
 			"modelina"
 		]
-	}
+  }
 ]
