@@ -8,6 +8,14 @@ module.exports.getMeetingIssueContent = (time, everytimezone) => {
 
 Join [this mailing list](https://groups.google.com/forum/#!forum/asyncapi-users) to get an always-up-to-date invite to the meeting in your calendar. You can also check [AsyncAPI Calendar](https://calendar.google.com/calendar/u/0/embed?src=tbrbfq4de5bcngt8okvev4lstk@group.calendar.google.com).
 
+This meeting is a live-stream that goes to the following social media:
+- [YouTube](https://www.youtube.com/asyncapi)
+- [Twitch](https://www.twitch.tv/asyncapi)
+- [Twitter](https://twitter.com/AsyncAPISpec)
+- [LinkedIn](https://www.linkedin.com/company/asyncapi)
+
+You can also join live the meeting on [Zoom](https://us02web.zoom.us/j/82566953769).
+
 ## Agenda
 
 > Don't wait for the meeting to discuss topics that already have issues. Feel free to comment on them earlier.
@@ -15,14 +23,6 @@ Join [this mailing list](https://groups.google.com/forum/#!forum/asyncapi-users)
 1. Q&A
 1. _Place for your topic_
 1. Q&A
-
-## Notes
-
-tbd
-
-## Chat
-
-tbd
 
 ## Recording
 
