@@ -1,7 +1,7 @@
 <h1 align="center">
   <br>
 
-   [![AsyncAPI Logo](./assets/github-repobanner-community.png)](https://asyncapi.org)
+   [![AsyncAPI Logo](./assets/github-repobanner-community.png)](https://www.asyncapi.com)
 
 <h4 align="center">Building the future of event-driven architectures</h4>
 <h6 align="center">We're on a mission to standardize message-based communication and increase interoperability of the different systems out there.</h6>
