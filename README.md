@@ -3,9 +3,9 @@
 
    [![AsyncAPI Logo](./assets/github-repobanner-community.png)](https://www.asyncapi.com)
 
-<h4 align="center">Building the future of event-driven architectures</h4>
-<h6 align="center">We're on a mission to standardize message-based communication and increase interoperability of the different systems out there.</h6>
-<p align="center">
+<h4 align="left">Building the future of event-driven architectures</h4>
+<h6 align="left">We're on a mission to standardize message-based communication and increase interoperability of the different systems out there.</h6>
+<p align="left">
   <a href="https://www.github.com/asyncapi/spec">Specification</a>
   |
   <a href="https://playground.asyncapi.io/">Playground</a>
