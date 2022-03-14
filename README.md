@@ -1,6 +1,8 @@
 <h1 align="center">
   <br>
-  <a href="https://asyncapi.org"><img src="./assets/logo.png" alt="AsyncAPI logo" height="80"></a>
+
+  [![AsyncAPI Logo](./assets/readme-banner-community.svg)](https://asyncapi.org)
+
 <h4 align="center">Building the future of event-driven architectures</h4>
 <h6 align="center">We're on a mission to standardize message-based communication and increase interoperability of the different systems out there.</h6>
 <p align="center">
