@@ -1,0 +1,37 @@
+name: Schedule Lets talk about contributing Meeting
+
+on:
+  workflow_dispatch:
+    inputs:
+      time:
+        description: 'Info about meeting hour in UTC time zone, like: 08 or 16. No PM or AM versions.'
+        required: true
+      date:
+        description: 'Date in a form like: 2022-04-05 where 04 is a month and 05 is a day number.'
+        required: true
+      descSuffix:
+        description: 'You can specify additional text that appears at the end of generated issue title, like: - Product Design'
+        required: false
+        default: ''
+
+jobs:
+
+  setup-lets-talk-about-contrib-stream:
+    env:
+      GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+    name: Setup Lets talk about contributing live stream
+    runs-on: ubuntu-latest
+    if: github.event.inputs.type == 'lets_talk_contrib'
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Create issue content
+        uses: actions/github-script@v4
+        id: date
+        with:
+          script: |
+            const { getMeetingIssueContent } = require('./.github/workflows/event_issue_templates/meetings/lets-talk-about-contrib.js.js');
+            const setupMeeting = require('./.github/workflows/event_issue_templates/index.js');
+            setupMeeting(${{ github.event.inputs.date }}, ${{ github.event.inputs.time }}, core, getMeetingIssueContent);
+      - name: Create issue with meeting details
+        run: gh issue create -l meeting -t "Let's talk about contributing, ${{steps.date.outputs.hour}} UTC ${{steps.date.outputs.fullDate}}" -F content.md

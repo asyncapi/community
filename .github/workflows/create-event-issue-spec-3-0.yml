@@ -1,0 +1,32 @@
+name: Schedule Spec 3.0 Meeting
+
+on:
+  workflow_dispatch:
+    inputs:
+      time:
+        description: 'Info about meeting hour in UTC time zone, like: 08 or 16. No PM or AM versions.'
+        required: true
+      date:
+        description: 'Date in a form like: 2022-04-05 where 04 is a month and 05 is a day number.'
+        required: true
+
+jobs:
+
+  setup-spec-3-0-meeting:
+    env:
+      GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+    name: Setup 3.0 spec meeting
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Create issue content
+        uses: actions/github-script@v4
+        id: date
+        with:
+          script: |
+            const { getMeetingIssueContent } = require('./.github/workflows/event_issue_templates/meetings/spec-3-0.js');
+            const setupMeeting = require('./.github/workflows/event_issue_templates/index.js');
+            setupMeeting(${{ github.event.inputs.date }}, ${{ github.event.inputs.time }}, core, getMeetingIssueContent);
+      - name: Create issue with meeting details
+        run: gh issue create -l meeting -t "Spec 3.0 Meeting, ${{steps.date.outputs.hour}} UTC ${{steps.date.outputs.fullDate}}" -F content.md
