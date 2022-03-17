@@ -13,7 +13,7 @@ Every event instance must have a corresponding GitHub issue with details on sche
 The issue creation process for official AsyncAPI events is semi-automated. You do not have to create an issue on your own, but you can trigger a dedicated GitHub Action workflow to do it for you.
 
 1. Go to [**Actions** tab](https://github.com/asyncapi/community/actions)
-2. Select **Create community event issue** workflow
+2. Select one of the workflows that starts with **Schedule**. Choose the one that represents the meeting that you are scheduling
 3. Click **Run workflow** button
 4. Provide data required by the form and click another **Run workflow** button visible in the form
 
@@ -24,4 +24,4 @@ As a result, a new GitHub issue is created in the repository.
 ## New events registration
 
 * To get a new issue registered in AsyncAPI Calendar, contact the community in the `#events` channel in [Slack](https://www.asyncapi.com/slack-invite),
-* To modify an issue creation workflow to support a new event, modify [this workflow](.github/workflows/create-event-issue.yml) and add a new script like [this one](.github/workflows/event_issue_templates/sig.js).
+* To modify an issue creation workflow to support a new event, add new workflow like [this one](.github/workflows/create-event-issue-community-meeting.yml) and add a new script like [this one](.github/workflows/event_issue_templates/meetings/community.js).
