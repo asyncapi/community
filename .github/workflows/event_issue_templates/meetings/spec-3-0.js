@@ -4,7 +4,7 @@ module.exports.getMeetingIssueContent = (time, date) => {
     
 **The meeting takes place bi-weekly on Wednesdays**. First and third week every month until release. Recordings from the previous meetings are available in [this](https://www.youtube.com/playlist?list=PLbi1gRlP7pihClJY-kXuTRRJ8n1awb0VV) playlist on YouTube.
 
-**This time we meet at ${time} UTC. Check what time is it in your time zone with [time zone converter](https://dateful.com/convert/coordinated-universal-time-utc?t=${time}&d=${date})**
+**This time we meet at ${time}:00 UTC. Check what time is it in your time zone with [time zone converter](https://dateful.com/convert/coordinated-universal-time-utc?t=${time}&d=${date})**
 
 Join [this mailing list](https://groups.google.com/forum/#!forum/asyncapi-users) to get an always-up-to-date invite to the meeting in your calendar. You can also check [AsyncAPI Calendar](https://calendar.google.com/calendar/u/0/embed?src=tbrbfq4de5bcngt8okvev4lstk@group.calendar.google.com).
 

@@ -29,4 +29,4 @@ jobs:
             const setupMeeting = require('./.github/workflows/event_issue_templates/index.js');
             setupMeeting('${{ github.event.inputs.date }}', '${{ github.event.inputs.time }}', core, getMeetingIssueContent);
       - name: Create issue with meeting details
-        run: gh issue create -l meeting -t "Community Meeting, ${{steps.date.outputs.hour}} UTC ${{steps.date.outputs.fullDate}}" -F content.md
+        run: gh issue create -l meeting -t "Community Meeting, ${{steps.date.outputs.hour}}:00 UTC ${{steps.date.outputs.fullDate}}" -F content.md
