@@ -18,7 +18,7 @@ on:
 
 jobs:
 
-  setup-community-meeting:
+  setup-ad-hoc:
     uses: ./.github/workflows/create-event-workflow-reusable.yml
     with:
       time: ${{ github.event.inputs.time }}
