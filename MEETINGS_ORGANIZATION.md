@@ -9,6 +9,7 @@ To schedule a meeting you need to be:
 - GitHub Action workflow for `Ad Hoc` meeting scheduling should be updated. New licensed user should be added as alternative host.
 - a member of [GitHub team called meetings-organizars](https://github.com/orgs/asyncapi/teams/meetings-organizers). It is required because only maintainers of given repository can manually trigger GitHub Actions workflows. This group has `Maintain` role in `community` repository where meeting automation is implemented.
 - a member of a team in AsyncAPI Restream account. It is required because hosts, before they start streaming the meeting from Zoom, must login to Restream and modify the title of the stream that will show up in social platforms.
+- a member of AsyncAPI YouTube account. It is required because hosts, after meeting is over, need to add live stream recording to proper YouTube Playlist to improve recording discoverability.
 
 ### What meetings do we have/
 
@@ -28,6 +29,21 @@ We have an automated workflow in place:
 1. It creates a GitHub issue with all details about the meeting
 1. It creates a new Google Calendar entry with special metadata containing the GitHub issue number
 1. It sends a tweet with information about newly scheduled event
+
+### What are my responsibilities as meeting host?
+
+In case your meeting is Zoom-first, this is what you need to do to kick it off:
+1. Start meeting by opening Zoom meeting. Make sure you are logged in to Zoom with your AsyncAPI licensed account.
+1. In Zoom, click `Live Transcript` button to start transcripting the meeting.
+1. Log into [Restream.io](https://app.restream.io/home) and select `Set up for OBS, Zoom, etc.` option.
+1. Click `Update Titles` and set proper title for the live stream that correcponds with the meeting that you just started.
+1. In Zoom, click `More` > `Live on Custom Live Stream Service` to start streaming to Restream, and therefore to official AsyncAPI social networks.
+
+> Some meetings like for example `Thinking Out Loud` live stream are not available on Zoom and community can only join live chat. Thus above instruncions do not apply to them.
+
+Once the meeting is over:
+1. Provide in related GitHub Issue meeting notes and then close the issue.
+1. Login to YouTube and add recorded live stream to respective YouTube Playlist.
 
 ### How do I get notified about upcomming meetings?
 
