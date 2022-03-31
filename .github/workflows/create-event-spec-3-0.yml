@@ -1,0 +1,35 @@
+name: Schedule Spec 3.0 Meeting
+
+on:
+  workflow_dispatch:
+    inputs:
+      time:
+        description: 'Info about meeting hour in UTC time zone, like: 08 or 16. No PM or AM versions.'
+        required: true
+      date:
+        description: 'Date in a form like: 2022-04-05 where 04 is a month and 05 is a day number.'
+        required: true
+
+jobs:
+
+  setup-spec-3-0-meeting:
+    uses: ./.github/workflows/create-event-workflow-reusable.yml
+    with:
+      time: ${{ github.event.inputs.time }}
+      date: ${{ github.event.inputs.date }}
+      meeting_name: Spec 3.0 Meeting
+      meeting_desc: This is the meeting for community member involved in works related to 3.0 release of AsyncAPI Specification.
+      host: jonas-lt@live.dk
+      alternative_host: fmvilas@gmail.com
+      issue_template_path: .github/workflows/create-event-helpers/issues_templates/spec-3-0.md
+      create_zoom: true
+    secrets:
+      GH_TOKEN: ${{ secrets.GH_TOKEN }}
+      ZOOM_API_KEY: ${{ secrets.ZOOM_API_KEY }}
+      ZOOM_API_SECRET: ${{ secrets.ZOOM_API_SECRET }}
+      STREAM_URL: ${{ secrets.STREAM_URL }}
+      STREAM_KEY: ${{ secrets.STREAM_KEY }}
+      CALENDAR_ID: ${{ secrets.CALENDAR_ID }}
+      CALENDAR_SERVICE_ACCOUNT: ${{ secrets.CALENDAR_SERVICE_ACCOUNT }}
+
+      

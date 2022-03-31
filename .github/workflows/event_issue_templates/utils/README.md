@@ -1,1 +1,0 @@
-Instead of using `package.json` and building complex build system for scripts that setup AsyncAPI meetings, we keep source code of minified [day.js](https://github.com/iamkun/dayjs) and its UTC-format plugin here in `utils` folder directly. This scripts run on CI, and are not vulerable so do not need `package.json` and regular security updates.

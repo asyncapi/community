@@ -1,0 +1,38 @@
+name: Schedule Lets talk about contributing Meeting
+
+on:
+  workflow_dispatch:
+    inputs:
+      time:
+        description: 'Info about meeting hour in UTC time zone, like: 08 or 16. No PM or AM versions.'
+        required: true
+      date:
+        description: 'Date in a form like: 2022-04-05 where 04 is a month and 05 is a day number.'
+        required: true
+      descSuffix:
+        description: 'You can specify additional text that appears at the end of generated issue title, like: - Product Design'
+        required: false
+        default: ''
+
+jobs:
+
+  setup-lets-talk-about-contrib-stream:
+    uses: ./.github/workflows/create-event-workflow-reusable.yml
+    with:
+      time: ${{ github.event.inputs.time }}
+      date: ${{ github.event.inputs.date }}
+      meeting_name: Let's talk about contributing
+      meeting_name_suffix: ${{ github.event.inputs.descSuffix }}
+      meeting_desc: The purpose of this meeting is to focus on contributors, focus on people that want to contribute to AsyncAPI Initiative but do not know how to do it.
+      host: lpgornicki@gmail.com
+      alternative_host: fmvilas@gmail.com
+      issue_template_path: .github/workflows/create-event-helpers/issues_templates/lets-talk-about-contrib.md
+      create_zoom: false
+    secrets:
+      GH_TOKEN: ${{ secrets.GH_TOKEN }}
+      ZOOM_API_KEY: ${{ secrets.ZOOM_API_KEY }}
+      ZOOM_API_SECRET: ${{ secrets.ZOOM_API_SECRET }}
+      STREAM_URL: ${{ secrets.STREAM_URL }}
+      STREAM_KEY: ${{ secrets.STREAM_KEY }}
+      CALENDAR_ID: ${{ secrets.CALENDAR_ID }}
+      CALENDAR_SERVICE_ACCOUNT: ${{ secrets.CALENDAR_SERVICE_ACCOUNT }}
