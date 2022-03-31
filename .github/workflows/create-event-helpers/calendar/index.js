@@ -124,17 +124,17 @@ async function listEvents() {
     let eventsItems;
 
     try {
-        //this runs always on thursday before midnight so folks can read email on friday
+        //this runs always on friday midnight
         const currentTime = new Date(Date.now()).toISOString();
         //we check moday
-        const timeIn3Days = new Date(Date.parse(currentTime) + 3 * 24 * 60 * 60 * 1000).toISOString();
+        const timeIn2Days = new Date(Date.parse(currentTime) + 2 * 24 * 60 * 60 * 1000).toISOString();
         //till friday
         const timeIn8Days = new Date(Date.parse(currentTime) + 8 * 24 * 60 * 60 * 1000).toISOString();
 
         const eventsList = await calendar.events.list({
             calendarId: process.env.CALENDAR_ID,
             timeMax: timeIn8Days,
-            timeMin: timeIn3Days
+            timeMin: timeIn2Days
         })
 
         eventsItems = eventsList.data.items.map((e) => {
