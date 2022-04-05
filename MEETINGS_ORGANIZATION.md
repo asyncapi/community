@@ -47,8 +47,7 @@ Once the meeting is over:
 
 ### How do I get notified about upcomming meetings?
 
-TODO: add missing link where folks can find subscription form
-Subscribe to AsyncAPI Newsletter to get information about upcomming meetings.
+Subscribe to [AsyncAPI Newsletter](https://asyncapi.com/newsletter) to get information about upcomming meetings.
 
 We have an automated workflow in place:
 1. Automation starts every Friday, midnight
