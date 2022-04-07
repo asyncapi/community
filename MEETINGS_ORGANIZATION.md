@@ -2,78 +2,79 @@ This document covers the aspect of different meetings organization at AsyncAPI.
 
 ## FAQ
 
-### What I need to schedule a meeting?
+### What do I need to schedule a meeting?
 
-To schedule a meeting you need to be:
-- one of licensed Zoom users associated with AsyncAPI Zoom account. It is required because only licensed users can start meeting, live transcripts and streaming.
-- GitHub Action workflow for `Ad Hoc` meeting scheduling should be updated. New licensed user should be added as alternative host.
-- a member of [GitHub team called meetings-organizars](https://github.com/orgs/asyncapi/teams/meetings-organizers). It is required because only maintainers of given repository can manually trigger GitHub Actions workflows. This group has `Maintain` role in `community` repository where meeting automation is implemented.
-- a member of a team in AsyncAPI Restream account. It is required because hosts, before they start streaming the meeting from Zoom, must login to Restream and modify the title of the stream that will show up in social platforms.
-- a member of AsyncAPI YouTube account. It is required because hosts, after meeting is over, need to add live stream recording to proper YouTube Playlist to improve recording discoverability.
+To schedule a meeting, you need to be:
+- one of the licensed Zoom users associated with the AsyncAPI Zoom account. It is required because only licensed users can start meeting, live transcripts, and streaming.
+- GitHub Action workflow for `Ad Hoc` meeting scheduling should be updated. Newly licensed users should be added as alternative hosts.
+- a member of [GitHub team called meetings-organizars](https://github.com/orgs/asyncapi/teams/meetings-organizers). It is required because only maintainers of the given repository can manually trigger GitHub Actions workflows. This group has a `Maintain` role in the `community` repository where meeting automation is implemented.
+- a member of a team in the AsyncAPI Restream account. It is required because hosts must log in to Restream before they start streaming the meeting from Zoom and modify the stream's title that will show up on social platforms.
+- a member of the AsyncAPI YouTube account. It is required because after the meeting is over, hosts need to add live their stream recording to the proper YouTube Playlist to improve recording discoverability.
 
-### What meetings do we have/
+### What meetings do we have?
 
-* `Regular` meetings: meetings like `Community Meeting` or `Thinking Out Loud` that happen regularly, have their dedicated area of interest and own brand.
-* `Ad Hoc` meetings: meetings for topic that do not match any `Regular` meeting and should be organized separately. Every official AsyncAPI Zoom licensed user should have right to schedule it.
+* `Regular` meetings: regular meetings with a dedicated area of interest and individual brand (Examples: `Community Meeting` or `Thinking Out Loud`) 
+* `Ad Hoc` meetings: meetings for topics that do not match any **regular** meetings and should be organized separately. Every official AsyncAPI Zoom licensed user should have the right to schedule it.
 
-### How to schedule new meeting?
+### How do I schedule a new meeting?
 
 1. Go to [**Actions** tab](https://github.com/asyncapi/community/actions)
-1. Select one of the workflows that starts with **Schedule**. Choose the one that represents the meeting that you want to schedule
-1. Click **Run workflow** button
-1. Provide data required by the form and click another **Run workflow** button visible in the form
+1. Select one of the workflows that start with **Schedule**. Choose one that represents the meeting you want to schedule.
+1. Click the **Run workflow** button.
+1. Provide data required by the form and click the **Run workflow** button within the form.
 
 We have an automated workflow in place:
-1. Automation starts after clicking **Run workflow**. Unless there is another GitHub Actions outage and proper events are not delivered to automation :smiley:
-1. It creates new meeting in Zoom. It is by default configured to support live streaming
+1. Automation starts after clicking **Run workflow**.  (Unless there is another GitHub Actions outage and proper events are not delivered to automation :smiley: )
+1. It creates a new meeting in Zoom. It is by default configured to support live streaming
 1. It creates a GitHub issue with all details about the meeting
 1. It creates a new Google Calendar entry with special metadata containing the GitHub issue number
-1. It sends a tweet with information about newly scheduled event
+1. It sends a tweet with information about a newly scheduled event
 
 ### What are my responsibilities as meeting host?
 
 In case your meeting is Zoom-first, this is what you need to do to kick it off:
-1. Start meeting by opening Zoom meeting. Make sure you are logged in to Zoom with your AsyncAPI licensed account.
-1. In Zoom, click `Live Transcript` button to start transcripting the meeting.
+1. Start your meeting by opening a Zoom meeting. Make sure you are logged into Zoom with your AsyncAPI licensed account.
+1. In Zoom, click the `Live Transcript` button to start transcribing the meeting.
 1. Log into [Restream.io](https://app.restream.io/home) and select `Set up for OBS, Zoom, etc.` option.
-1. Click `Update Titles` and set proper title for the live stream that correcponds with the meeting that you just started.
-1. In Zoom, click `More` > `Live on Custom Live Stream Service` to start streaming to Restream, and therefore to official AsyncAPI social networks.
+1. Click `Update Titles` and set the proper title for the live stream that corresponds with the meeting you just started.
+1. In Zoom, click `More` > `Live on Custom Live Stream Service` to start streaming to Restream and, therefore, to official AsyncAPI social networks.
 
-> Some meetings like for example `Thinking Out Loud` live stream are not available on Zoom and community can only join live chat. Thus above instruncions do not apply to them.
+> Some meetings, such as the `Thinking Out Loud` live stream, are unavailable on Zoom. This means the community can only join via live chat. Thus, the above instructions do not apply to them.
 
 Once the meeting is over:
-1. Provide in related GitHub Issue meeting notes and then close the issue.
-1. Login to YouTube and add recorded live stream to respective YouTube Playlist.
+1. Provide related GitHub Issue meeting notes and then close the issue.
+1. Login to YouTube and add the recorded live stream to the respective YouTube Playlist.
 
-### How do I get notified about upcomming meetings?
+### How can I get notified about upcoming meetings?
 
-Subscribe to [AsyncAPI Newsletter](https://asyncapi.com/newsletter) to get information about upcomming meetings.
+Subscribe to the [AsyncAPI Newsletter](https://asyncapi.com/newsletter) to get information about upcoming meetings.
 
 We have an automated workflow in place:
-1. Automation starts every Friday, midnight
-1. It gets from Google Calendar information about all the meetings scheduled for upcomming week
-1. It schedules a MailChipm campaign to send email with list of meetings. It is sent on Friday at 11AM in subscriber's time zone
+1. Automation starts every Friday at midnight
+1. It gets information from Google Calendar about all the meetings scheduled for the upcoming week
+1. It schedules a MailChimp campaign to send emails with a list of meetings. It's sent on Friday at 11AM in the subscriber's time zone
 
-### Where can I find AsyncAPI calendar?
+### Where can I find the AsyncAPI calendar?
 
 - [Main link to calendar](https://calendar.google.com/calendar/embed?src=c_q9tseiglomdsj6njuhvbpts11c%40group.calendar.google.com&ctz=UTC)
 - [iCal/ics file](https://calendar.google.com/calendar/ical/c_q9tseiglomdsj6njuhvbpts11c%40group.calendar.google.com/public/basic.ics)
 
-### How to cancel the meeting?
+### How do I cancel a meeting?
 
-If you scheduled a meeting but for some reason it needs to be canceled, just close the corresponding meeting issue.
+If you need to cancel a meeting, simply close the corresponding meeting issue.
+
 We have an automated workflow in place:
-1. Automation starts when GitHub issue is closed
-1. It checks if closed issue represents a future event
-1. It removes meeting from AsyncAPI Google Calendar
+1. Automation starts when the GitHub issue is closed
+1. It checks if a closed issue represents a future event
+1. It removes meetings from the AsyncAPI Google Calendar
 
-### How to register a new regular meeting?
+### How do I register a new regular meeting?
 
-Start [discussion in community repository](https://github.com/asyncapi/community/discussions). Explain the idea and justify why it requires separate meeting. At the moment we have [approval from Technical Steering Commitee](https://github.com/asyncapi/community/discussions/295) to pay for 8 Zoom licenses.
+Start [discussion in community repository](https://github.com/asyncapi/community/discussions). Explain the idea and justify why it requires a separate meeting. We currently have [approval from the Technical Steering Commitee](https://github.com/asyncapi/community/discussions/295) to pay for up to 8 Zoom licenses.
 
-Once new meeting is approved, add new workflow like [this one](.github/workflows/create-event-community-meeting.yml) and add a new GitHub issue template like [this one](.github/workflows/create-event-helpers/issues_templates/community.md).
+Once a new meeting is approved, add a [new workflow like this one](.github/workflows/create-event-community-meeting.yml) and a [new GitHub issue template like this one](.github/workflows/create-event-helpers/issues_templates/community.md).
 
 
-### How to become a host?
+### How can I become a host?
 
-Once your `Regular` meeting got approved contact `Fran Mendez` so he can give you access to all required tools.
+Once your `Regular` meeting gets approved, contact `Fran Mendez` so that he can give you access to all required tools.

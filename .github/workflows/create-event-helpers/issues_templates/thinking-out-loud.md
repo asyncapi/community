@@ -17,7 +17,7 @@ title: "{{ env.MEETING_NAME }}, {{ env.FULL_DATE | date('H:mm [UTC] dddd MMMM Do
 </tr>
 <tr>
 <td>Time</td>
-<td><strong>{{ env.FULL_DATE | date('H') }}:00 UTC</strong> | Translate to your time zone with <a href="https://dateful.com/convert/coordinated-universal-time-utc?t={{ env.FULL_DATE | date('kk') }}&d={{ env.DATE_ONLY }}">time zone converter</a>.</td>
+<td><strong>{{ env.FULL_DATE | date('H') }}:00 UTC</strong> | Translate to your time zone with the <a href="https://dateful.com/convert/coordinated-universal-time-utc?t={{ env.FULL_DATE | date('kk') }}&d={{ env.DATE_ONLY }}">time zone converter</a>.</td>
 </tr>
 <tr>
 <th>Meeting Place</th>
