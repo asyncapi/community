@@ -60,6 +60,14 @@ on:
         required: true
       CALENDAR_SERVICE_ACCOUNT:
         required: true
+      TWITTER_CONSUMER_KEY:
+        required: true
+      TWITTER_CONSUMER_SECRET:
+        required: true
+      TWITTER_ACCESS_TOKEN_KEY:
+        required: true
+      TWITTER_ACCESS_TOKEN_SECRET:
+        required: true
 
 jobs:
 
