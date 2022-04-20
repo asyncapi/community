@@ -1,0 +1,33 @@
+name: Cancel event when issue was closed before it took place
+
+on:
+  issues:
+    types:
+      - closed
+
+jobs:
+
+  cancel_event:
+    env:
+      CALENDAR_ID: ${{ secrets.CALENDAR_ID }}
+      CALENDAR_SERVICE_ACCOUNT: ${{ secrets.CALENDAR_SERVICE_ACCOUNT }}
+    name: Remove event from calendar
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 16
+          cache: 'npm'
+          cache-dependency-path: '**/package-lock.json'
+      - name: Install deps
+        run: npm install
+        working-directory: ./.github/workflows/create-event-helpers
+      - name: Remove Google Calendar entry
+        uses: actions/github-script@v4
+        with:
+          script: |
+            const { deleteEvent } = require('./.github/workflows/create-event-helpers/calendar/index.js');
+            deleteEvent('${{ github.event.issue.number }}', '${{ github.event.issue.closed_at }}');

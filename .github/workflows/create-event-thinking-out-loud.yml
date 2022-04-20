@@ -1,0 +1,41 @@
+name: Schedule Thinking Out Loud
+
+on:
+  workflow_dispatch:
+    inputs:
+      time:
+        description: 'Info about meeting hour in UTC time zone, like: 08 or 16. No PM or AM versions.'
+        required: true
+      date:
+        description: 'Date in a form like: 2022-04-05 where 04 is a month and 05 is a day number.'
+        required: true
+      desc:
+        description: 'Put short description what is this episode about. Is it about building community or JSON Schema or anything else.'
+        required: true
+      guest:
+        description: 'Provide the name of the guest.'
+        required: true
+
+jobs:
+
+  setup-thinking-out-loud:
+    uses: ./.github/workflows/create-event-workflow-reusable.yml
+    with:
+      time: ${{ github.event.inputs.time }}
+      date: ${{ github.event.inputs.date }}
+      meeting_name: Thinking Out Loud
+      meeting_desc: ${{ github.event.inputs.desc }}
+      guest: ${{ github.event.inputs.guest }}
+      host: fmvilas@gmail.com
+      issue_template_path: .github/workflows/create-event-helpers/issues_templates/thinking-out-loud.md
+      create_zoom: true
+    secrets:
+      GH_TOKEN: ${{ secrets.GH_TOKEN }}
+      ZOOM_API_KEY: ${{ secrets.ZOOM_API_KEY }}
+      ZOOM_API_SECRET: ${{ secrets.ZOOM_API_SECRET }}
+      STREAM_URL: ${{ secrets.STREAM_URL }}
+      STREAM_KEY: ${{ secrets.STREAM_KEY }}
+      CALENDAR_ID: ${{ secrets.CALENDAR_ID }}
+      CALENDAR_SERVICE_ACCOUNT: ${{ secrets.CALENDAR_SERVICE_ACCOUNT }}
+
+      
