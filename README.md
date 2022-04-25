@@ -58,8 +58,6 @@
 ## 🤗 AsyncAPI community meetings
 This is a community gathering where important topics related to the AsyncAPI Initiative will be discussed openly on a regular basis. Every two weeks, we hold it in various time zones. 🌎 🌍 🌎
 
-Other than community meetings, we also conduct 'Thinking Out Loud', 'Spec 3.0 Meetings', 'Let's Talk About Contributing' and 'Ad Hoc Meetings'.
-
 You can check out the official documentation [here](https://github.com/asyncapi/community/blob/master/MEETINGS_ORGANIZATION.md) and the meetings page [here](https://www.asyncapi.com/community/meetings).
 
 [Here](https://www.youtube.com/watch?v=S8gvf0XjO10&list=PLbi1gRlP7pijUwZJErzyYf_Rc-PWu4lXS) are the previous meeting recordings!
