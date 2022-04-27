@@ -55,7 +55,7 @@
   🙌🏾 <a href="https://opencollective.com/asyncapi">Become a sponsor</a> 🙌🏾
 </p>
 
-## 🤗 AsyncAPI community meetings
+## 🤗 AsyncAPI meetings
 This is a community gathering where important topics related to the AsyncAPI Initiative will be discussed openly on a regular basis. Every two weeks, we hold it in various time zones. 🌎 🌍 🌎
 
 You can check out the official documentation [here](https://github.com/asyncapi/community/blob/master/MEETINGS_ORGANIZATION.md) and the meetings page [here](https://www.asyncapi.com/community/meetings).
