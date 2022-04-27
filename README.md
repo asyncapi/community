@@ -56,7 +56,7 @@
 </p>
 
 ## 🤗 AsyncAPI meetings
-This is a community gathering where important topics related to the AsyncAPI Initiative will be discussed openly on a regular basis. Every two weeks, we hold it in various time zones. 🌎 🌍 🌎
+AsyncAPI hosts different meetings every week. They are focused on different topic, sometimes purely technical and sometimes about community building. Pick one and join us! [Learn more about our meetings.](https://www.asyncapi.com/community/meetings)
 
 You can check out the official documentation [here](https://github.com/asyncapi/community/blob/master/MEETINGS_ORGANIZATION.md) and the meetings page [here](https://www.asyncapi.com/community/meetings).
 
