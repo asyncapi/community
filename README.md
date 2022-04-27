@@ -7,7 +7,7 @@
 <p align="left">
   <a href="https://www.github.com/asyncapi/spec">Specification</a>
   |
-  <a href="https://studio.asyncapi.com/">Playground</a>
+  <a href="https://studio.asyncapi.com/">Studio</a>
   |
   <a href="https://www.asyncapi.com/roadmap">Roadmap</a>
   |
