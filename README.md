@@ -60,8 +60,6 @@ AsyncAPI hosts different meetings every week. They are focused on different topi
 
 To learn more about meetings setup and automation [read our FAQ](https://github.com/asyncapi/community/blob/master/MEETINGS_ORGANIZATION.md)
 
-[Here](https://www.youtube.com/watch?v=S8gvf0XjO10&list=PLbi1gRlP7pijUwZJErzyYf_Rc-PWu4lXS) are the previous meeting recordings!
-
 
 ## Contributors
 
