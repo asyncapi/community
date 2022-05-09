@@ -54,7 +54,8 @@ module.exports = async () => {
     * We schedule an email, we do not send it at midnight immediately but use schedule with `timewarp` to basically send email at the same time for anyone no matter what time zone they live in
     */
     try {
-        const scheduleDate = new Date(Date.now());
+        //next day 11:00
+        const scheduleDate = new Date(Date.parse(new Date(Date.now()).toISOString()) + 1 * 24 * 60 * 60 * 1000);
         scheduleDate.setUTCHours(11);
         scheduleDate.setUTCMinutes(00);
 
