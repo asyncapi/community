@@ -3,7 +3,7 @@ name: Send email to newsletter subscribers about upcomming meetings
 on:
   schedule:
     # Runs "At 00:00 on Sunday." (see https://crontab.guru)
-    - cron: '00 00 * * 7'
+    - cron: '00 00 * * 0'
 
 jobs:
 
