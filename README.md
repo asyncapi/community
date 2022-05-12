@@ -1,9 +1,10 @@
-<h1 align="center">
-  <br>
-  <a href="https://asyncapi.org"><img src="./assets/logo.png" alt="AsyncAPI logo" height="80"></a>
-<h4 align="center">Building the future of event-driven architectures</h4>
-<h6 align="center">We're on a mission to standardize message-based communication and increase interoperability of the different systems out there.</h6>
-<p align="center">
+ <br>
+ 
+ [![AsyncAPI Logo](./assets/github-repobanner-community.png)](https://www.asyncapi.com)
+
+<h4 align="left">Building the future of event-driven architectures</h4>
+<h6 align="left">We're on a mission to standardize message-based communication and increase interoperability of the different systems out there.</h6>
+<p align="left">
   <a href="https://www.github.com/asyncapi/spec">Specification</a>
   |
   <a href="https://playground.asyncapi.io/">Playground</a>
@@ -20,7 +21,7 @@
 </p>
 
 ## 💰 Platinum sponsors
-<p align="center">
+<p align="left">
   <a href="https://iqvia.com">
     <img src="./assets/iqvia.png" alt="IQVIA logo" height="40">
   </a>
@@ -50,7 +51,7 @@
   </a>
 </p>
 
-<p align="center">
+<p align="left">
   🙌🏾 <a href="https://opencollective.com/asyncapi">Become a sponsor</a> 🙌🏾
 </p>
 

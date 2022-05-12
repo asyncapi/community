@@ -1,0 +1,34 @@
+name: Send email to newsletter subscribers about upcomming meetings
+
+on:
+  schedule:
+    # Runs "At 00:00 on Sunday." (see https://crontab.guru)
+    - cron: '00 00 * * 0'
+
+jobs:
+
+  send_email:
+    name: Get list of events and send them to subscribers
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 16
+          cache: 'npm'
+          cache-dependency-path: '**/package-lock.json'
+      - name: Install deps
+        run: npm install
+        working-directory: ./.github/workflows/create-event-helpers
+      - name: Send email with MailChimp
+        uses: actions/github-script@v4
+        env:
+          CALENDAR_ID: ${{ secrets.CALENDAR_ID }}
+          CALENDAR_SERVICE_ACCOUNT: ${{ secrets.CALENDAR_SERVICE_ACCOUNT }}
+          MAILCHIMP_API_KEY: ${{ secrets.MAILCHIMP_API_KEY }}
+        with:
+          script: |
+            const sendEmail = require('./.github/workflows/create-event-helpers/mailchimp/index.js');
+            sendEmail();
