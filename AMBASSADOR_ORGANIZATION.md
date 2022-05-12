@@ -1,4 +1,4 @@
-This document covers the organizational and operational aspect of the AsyncAPI Ambassador Program.
+This document covers the organizational and operational aspects of the AsyncAPI Ambassador Program.
 
 ## FAQ
 
