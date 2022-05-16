@@ -30,8 +30,8 @@ module.exports = async () => {
                 list_id: '6e3e437abe'
             },
             settings: {
-                subject_line: 'AsyncAPI meetings scheduled for next week.',
-                preview_text: 'Check out what AsyncAPI meetings are scheduled for next week and learn how to join them.',
+                subject_line: 'AsyncAPI meetings scheduled for this week.',
+                preview_text: 'Check out what AsyncAPI meetings are scheduled for this week and learn how to join them.',
                 title: `Meetings info - ${ new Date(Date.now()).toUTCString()}`,
                 from_name: 'Fran Mendez',
                 reply_to: 'info@asyncapi.io',

@@ -33,11 +33,39 @@ We have an automated workflow in place:
 ### What are my responsibilities as meeting host?
 
 In case your meeting is Zoom-first, this is what you need to do to kick it off:
+
 1. Start your meeting by opening a Zoom meeting. Make sure you are logged into Zoom with your AsyncAPI licensed account.
+
 1. In Zoom, click the `Live Transcript` button to start transcribing the meeting.
+
+    ![](assets/meetings/zoom1.png)
+
+1. Confirm transcriptions with `Enable` button
+
+    ![](assets/meetings/zoom2.png)
+
 1. Log into [Restream.io](https://app.restream.io/home) and select `Set up for OBS, Zoom, etc.` option.
-1. Click `Update Titles` and set the proper title for the live stream that corresponds with the meeting you just started.
-1. In Zoom, click `More` > `Live on Custom Live Stream Service` to start streaming to Restream and, therefore, to official AsyncAPI social networks.
+
+    <img src="assets/meetings/restream1.png" width="50%">
+
+1. Click `Update Titles` card:
+
+    <img src="assets/meetings/restream2.png" width="50%">
+
+1. Provide title and description:
+
+    - Title for the live stream that corresponds with the meeting you just started,
+    - Meeting description must be provided even if the field is empty, otherwise the old one from other streams will be used.
+
+    <img src="assets/meetings/restream3.png" width="50%">
+
+1. In Zoom, click `More` 
+
+    ![](assets/meetings/zoom3.png)
+
+1. Select `Live on Custom Live Stream Service` option to start streaming to Restream and, therefore, to official AsyncAPI social networks.
+
+    ![](assets/meetings/zoom4.png)
 
 > Some meetings, such as the `Thinking Out Loud` live stream, are unavailable on Zoom. This means the community can only join via live chat. Thus, the above instructions do not apply to them.
 
