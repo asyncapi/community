@@ -23,7 +23,7 @@ The AsyncAPI Ambassador Program aims to bring AsyncAPI closer to the users and p
 To be an official AsyncAPI ambassador, there is no more important requirement than having the desire to work and spread the message about AsyncAPI specification and tools.
 
 - Be in tune with AsyncAPI's mission and values.
-- Always respect the code of conduct.
+- Always respect the [code of conduct](https://github.com/asyncapi/.github/blob/master/CODE_OF_CONDUCT.md).
 - Be active in your role as an ambassador.
 - **Guidelines** for AsyncAPI Ambassadors: 
     The participation will be determined and checked by quarters. Understood as a minimum contribution, one of the following requirements must be met each quarter: 
