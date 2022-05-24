@@ -27,7 +27,7 @@ To be an official AsyncAPI ambassador, there is no more important requirement th
 - Be active in your role as an ambassador.
 - **Guidelines** for AsyncAPI Ambassadors: 
     The participation will be determined and checked by quarters. Understood as a minimum contribution, one of the following requirements must be met each quarter: 
-    - One article on asyncapi.com or other domains. 
+    - One article on asyncapi.com/blog or other domains. 
     - One presentation at an event or workshop. Within it, AsyncAPI should appear at the core of the presentation. The presentation would never be used as a disguised marketing tool for other products/projects.
     
     **Note**: Candidates may accumulate events or items covering subsequent quarters.
