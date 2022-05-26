@@ -15,7 +15,7 @@ The AsyncAPI Ambassador Program aims to bring AsyncAPI closer to the users and p
 
 - The ambassador selection process will, as always, be as transparent as possible.
 - The model currently in place for adding members to the Technical Steering Committee through PR will be used.
-- The TSC or their designees will evaluate applications according to the compliance with the requirements.
+- The TSC or their designees will evaluate applications according to the compliance with the requirements, and it will be done through a PR flow.
 - All ambassador information will be added through PR to the list used to show people on the AsyncAPI website.
 
 ### Requirements to become an AsyncAPI Ambassador:
@@ -26,30 +26,36 @@ To be an official AsyncAPI ambassador, there is no more important requirement th
 - Always respect the [code of conduct](https://github.com/asyncapi/.github/blob/master/CODE_OF_CONDUCT.md).
 - Be active in your role as an ambassador.
 - **Guidelines** for AsyncAPI Ambassadors: 
-    The participation will be determined and checked by quarters. Understood as a minimum contribution, one of the following requirements must be met each quarter: 
-    - One article on asyncapi.com/blog or other domains. 
-    - One presentation at an event or workshop. Within it, AsyncAPI should appear at the core of the presentation. The presentation would never be used as a disguised marketing tool for other products/projects.
+    The participation will be determined and checked annually. The minimum requirements for being ambassador are: To make **4 contributions per year** in form of articles, talks, presentations, driving initiatives...
+
+    Some clarifications on the type of contributions:
     
-    **Note**: Candidates may accumulate events or items covering subsequent quarters.
+    - Articles can be published on asyncapi.com/blog or other domains. 
+    - Talks and presentations can be displayed at different events or workshops. Within it, AsyncAPI should appear at the core of the presentation. The presentation would never be used as a disguised marketing tool for other products/projects.
+    - Especial contributions should be driven to support the community or enhance its visibility (i.e. getting new sponsors or driving initiatives) 
+    - If we did not identify the contributions, just let us know what that was
          
      Examples: 
 
-    1. If an ambassador publishes three articles about AsyncAPI in eight months, they will be ambassadors for another quarter more.
-    2. If they do a presentation at an event or workshop and write one article about AsyncAPI in 4 months, they will be ambassadors for two more quarters. 
-      
-         The time as an ambassador is limited to one year, and it can be renewed. 
+    1. If contributors publishes 3 articles and propels 1 initiative about AsyncAPI in eight months, they will become ambassadors for the whole year.
+    2. If contributors make 1 presentation, write 2 articles and propels 1 initiative, they will become ambassadors for the whole year.
+    3. If you were accepted as ambassador on 5th of May 2022, it means you have already fulfilled the requirements. On 5th of May 2023 we will check if you did it again after 5th of May 2022.
+
+ The time as an ambassador can be renewed annually. 
 
 ### Benefits of being an ambassador:
 
-- Receiving special swag for Ambassadors.
-- Receiving swags for participants of the conference or workshops.
+- Receiving special swag for Ambassadors (valued at $200).
+- Receiving swags for participants of the conference or workshops (valued at $100).
 - Free entry to AsyncAPI conferences.
 - Community-wide recognition.
 - All our respects for your contribution!
 
 ### Are you interested in becoming an official AsyncAPI Ambassador?
 
-The process of becoming an ambassador is very simple. Just click on the APPLY button at the bottom of the ambassador program’s page, and TSC will evaluate your candidacy!
+The process of becoming an ambassador is very simple. Just go to the community repository and open a PR to edit the ambassadors.json file, and TSC will evaluate your candidacy!
+
+That PR can be created not only by the ambassador candidate, but any community member can open up a PR to submit someones application (case when community member is too shy to get on the list).
 
 Get on board and become an ambassador!
 
