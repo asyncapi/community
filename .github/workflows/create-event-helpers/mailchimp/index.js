@@ -27,7 +27,10 @@ module.exports = async () => {
         newCampaign = await mailchimp.campaigns.create({
             type: 'regular',
             recipients: {
-                list_id: '6e3e437abe'
+                list_id: '6e3e437abe',
+                segments_opts: {
+                    saved_segment_id: 'meetings-email'
+                }
             },
             settings: {
                 subject_line: 'AsyncAPI meetings scheduled for this week.',
