@@ -26,14 +26,14 @@ To be an official AsyncAPI ambassador, there is no more important requirement th
 - Always respect the [code of conduct](https://github.com/asyncapi/.github/blob/master/CODE_OF_CONDUCT.md).
 - Be active in your role as an ambassador.
 - **Guidelines** for AsyncAPI Ambassadors: 
-    The participation will be determined and checked annually. The minimum requirements for being ambassador are: To make **4 contributions per year** in form of articles, talks, presentations, driving initiatives...
+    The participation will be determined and checked annually. The minimum requirements for being ambassador are: To make **4 contributions per year** in form of articles, talks, videos, podcasts, presentations, driving initiatives...
 
     Some clarifications on the type of contributions:
     
-    - Articles can be published on asyncapi.com/blog or other domains. 
+    - Articles, videos, podcasts can be published on asyncapi.com/blog or other domains. 
     - Talks and presentations can be displayed at different events or workshops. Within it, AsyncAPI should appear at the core of the presentation. The presentation would never be used as a disguised marketing tool for other products/projects.
     - Especial contributions should be driven to support the community or enhance its visibility (i.e. getting new sponsors or driving initiatives) 
-    - If we did not identify the contributions, just let us know what that was
+    - If we did not identify the contributions, just let us know what that was.
          
      Examples: 
 
