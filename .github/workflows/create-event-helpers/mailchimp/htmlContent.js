@@ -390,7 +390,7 @@ module.exports = (list) => {
                         
                             Hey *|FNAME|*,<br>
 <br>
-I'm excited to share with you what meetings have been planned at AsyncAPI for to coming week:
+I'm excited to share with you what meetings have been planned at AsyncAPI for this week:
                         </td>
                     </tr>
                 </tbody></table>
