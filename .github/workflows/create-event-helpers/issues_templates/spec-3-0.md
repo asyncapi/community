@@ -1,5 +1,6 @@
 ---
 title: "{{ env.MEETING_NAME }}, {{ env.FULL_DATE | date('H:mm [UTC] dddd MMMM Do YYYY') }}"
+labels: meeting
 ---
 
 <table>
@@ -21,7 +22,7 @@ title: "{{ env.MEETING_NAME }}, {{ env.FULL_DATE | date('H:mm [UTC] dddd MMMM Do
 </tr>
 <tr>
 <td>Zoom</td>
-<td>Zoom link is not available. This is a live stream event. Watch and interact through one of below mentioned platforms.</td>
+<td><a href="{{ env.ZOOM_LINK }}">Join live</a>.</td>
 </tr>
 <tr>
 <td>YouTube</td>
