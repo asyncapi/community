@@ -32,7 +32,7 @@ To be an official AsyncAPI ambassador, there is no more important requirement th
     
     - Articles, videos, podcasts can be published on asyncapi.com/blog or other domains. 
     - Talks and presentations can be displayed at different events or workshops. Within it, AsyncAPI should appear at the core of the presentation. The presentation would never be used as a disguised marketing tool for other products/projects.
-    - Especial contributions should be driven to support the community or enhance its visibility (i.e. getting new sponsors or driving initiatives) 
+    - Special contributions should be driven to support the community or enhance its visibility (i.e. getting new sponsors or driving initiatives) 
     - If we did not identify the contributions, just let us know what that was.
          
      Examples: 
