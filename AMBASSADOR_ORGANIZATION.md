@@ -45,7 +45,7 @@ To be an official AsyncAPI ambassador, there is no more important requirement th
 
 ### Benefits of being an ambassador:
 
-- Receiving special swag for Ambassadors (valued at $200).
+- Receiving special swag pack for Ambassadors (valued at $200).
 - Receiving swags for participants of the conference or workshops (valued at $100).
 - Free entry to AsyncAPI conferences.
 - Community-wide recognition.
