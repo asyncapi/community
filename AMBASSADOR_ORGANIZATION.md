@@ -15,7 +15,7 @@ The AsyncAPI Ambassador Program aims to bring AsyncAPI closer to the users and p
 
 - The ambassador selection process will, as always, be as transparent as possible.
 - The model currently in place for adding members to the Technical Steering Committee through PR will be used.
-- The TSC or their designees will evaluate applications according to the compliance with the requirements, and it will be done through a PR flow.
+- The TSC or their delegates maintainers of the community repositories will evaluate applications according to compliance with the requirements, and it will be done through a PR flow.
 - All ambassador information will be added through PR to the list used to show people on the AsyncAPI website.
 
 ### Requirements to become an AsyncAPI Ambassador:
