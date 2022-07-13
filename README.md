@@ -58,7 +58,7 @@
 ## 🤗 AsyncAPI meetings
 AsyncAPI hosts different meetings every week. Each meeting focuses on different topics; sometimes purely technical, community building, and more. Pick one and join us! [Learn more about our meetings.](https://www.asyncapi.com/community/meetings)
 
-To learn more about meetings setup and automation [read our FAQ](https://github.com/asyncapi/community/blob/master/MEETINGS_ORGANIZATION.md)
+To learn more about meetings setup and automation, [read our FAQ](https://github.com/asyncapi/community/blob/master/MEETINGS_ORGANIZATION.md)
 
 
 ## Contributors
