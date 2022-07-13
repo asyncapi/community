@@ -22,7 +22,7 @@ labels: meeting
 </tr>
 <tr>
 <td>Zoom</td>
-<td>Zoom link is not available. This is a live stream event. Watch and interact through one of below mentioned platforms.</td>
+<td><a href="{{ env.ZOOM_LINK }}">Join live</a>.</td>
 </tr>
 <tr>
 <td>YouTube</td>

@@ -32,16 +32,104 @@ We have an automated workflow in place:
 
 ### What are my responsibilities as meeting host?
 
-In case your meeting is Zoom-first, this is what you need to do to kick it off:
+Technically there are two types of meetings:
+- Zoom-first: Meeting takes place on Zoom and through integration with Restream.io it is streamed to different channels. These meetings happen on Zoom to enable as many people as possible to join live conversation.
+- Restream-first: Meeting takes place on Restream and is is streamed to different channels. These meetings are focused on showing or explaining some topic without live audio conversation with the audience.
+
+#### Zoom-first
+
+This is what you need to do to kick it off:
+
 1. Start your meeting by opening a Zoom meeting. Make sure you are logged into Zoom with your AsyncAPI licensed account.
-1. In Zoom, click the `Live Transcript` button to start transcribing the meeting.
-1. Log into [Restream.io](https://app.restream.io/home) and select `Set up for OBS, Zoom, etc.` option.
-1. Click `Update Titles` and set the proper title for the live stream that corresponds with the meeting you just started.
-1. In Zoom, click `More` > `Live on Custom Live Stream Service` to start streaming to Restream and, therefore, to official AsyncAPI social networks.
 
-> Some meetings, such as the `Thinking Out Loud` live stream, are unavailable on Zoom. This means the community can only join via live chat. Thus, the above instructions do not apply to them.
+1. Log into [Restream.io](https://app.restream.io/home) and select `Set up for OBS, Zoom, etc.` option:
 
-Once the meeting is over:
+    <img src="assets/meetings/restream1.png" width="50%">
+
+1. Click `Update Titles` card:
+
+    <img src="assets/meetings/restream2.png" width="50%">
+
+1. Provide title and description:
+
+    - Title for the live stream that corresponds with the meeting you just started,
+    - Meeting description must be provided even if the field is empty, otherwise the old one from other streams will be used.
+
+    <img src="assets/meetings/restream3.png" width="50%">
+
+1. In Zoom, click the `Live Transcript` button to start transcribing the meeting:
+
+    ![](assets/meetings/zoom1.png)
+
+1. Confirm transcriptions with `Enable` button:
+
+    ![](assets/meetings/zoom2.png)
+
+1. Click `More`:
+
+    ![](assets/meetings/zoom3.png)
+
+1. Select `Live on Custom Live Stream Service` option to start streaming to Restream and, therefore, to official AsyncAPI social networks:
+
+    ![](assets/meetings/zoom4.png)
+
+#### Restream-first
+
+You need to first start with YouTube, even though Restream can directly stream there. It is because by 
+
+This is what you need to do to kick it off:
+
+1. In [YouTube](https://youtube.com) click on your profile picture and select `Switch account`:
+
+    <img src="assets/meetings/yt1.png" width="40%">
+
+1. Select `AsyncAPI`. If you do not see it on the list, means you did not have all access rights needed to setup a live stream:
+
+    <img src="assets/meetings/yt2.png" width="40%">
+
+1. Click on `Create` and select `Go live`:
+
+    <img src="assets/meetings/yt3.png" width="40%">
+
+1. Once new live stream is created, in the list of `Upcomming` streams, click `View in Live Control Room` <img src="assets/meetings/yt5.png" width="3%"> icon next to your live stream:
+
+    <img src="assets/meetings/yt4.png" width="50%">
+
+1. Enable `Closed captions`:
+
+    <img src="assets/meetings/yt6.png" width="50%">
+
+1. Log into [Restream.io](https://app.restream.io/home) and select `Start with Studio` option:
+
+    <img src="assets/meetings/restream1.png" width="50%">
+
+1. After enabling audio, video and providing name, you will see a Restream Studio. 
+
+1. `Edit` the title and description of the stream:
+
+    <img src="assets/meetings/restream4.png" width="50%">
+
+1. Provide title and description and click `Next`:
+
+    - Title for the live stream that corresponds with the meeting you just started,
+    - Meeting description must be provided even if the field is empty, otherwise the old one from other streams will be used.
+
+    <img src="assets/meetings/restream5.png" width="50%">
+
+1. `Edit` YouTube destination:
+
+    <img src="assets/meetings/restream6.png" width="40%">
+
+1. Make sure you do not create new event but you select the one you already created on YouTube, with closed captions on:
+
+    <img src="assets/meetings/restream7.png" width="40%">
+
+1. You are ready to `Go Live`
+
+#### Post meeting
+
+Once the meeting is over, if applicable:
+
 1. Provide related GitHub Issue meeting notes and then close the issue.
 1. Login to YouTube and add the recorded live stream to the respective YouTube Playlist.
 

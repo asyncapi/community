@@ -26,7 +26,7 @@ jobs:
       meeting_name: ${{ github.event.inputs.name }}
       meeting_desc: ${{ github.event.inputs.desc }}
       host: lpgornicki@gmail.com
-      alternative_host: fmvilas@gmail.com
+      alternative_host: "fmvilas@gmail.com,jonas-lt@live.dk"
       issue_template_path: .github/workflows/create-event-helpers/issues_templates/ad-hoc.md
       create_zoom: true
     secrets:
