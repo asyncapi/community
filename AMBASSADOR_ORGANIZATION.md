@@ -11,7 +11,7 @@ The AsyncAPI Ambassador Program aims to provide users and community members with
 - Promote user cooperation and disseminate the necessary tools to any specific user.
 - Engage with the project in some way, either as a contributor, blogger, speaker, etc.
 - Speak at community events or write technical content (i.e., blog posts) that solves community needs.
-- To ensure that with the community’s growth, we also grow a list of people in the community that are welcoming and help spread the knowledge about the project.
+- Nurture community growth and a welcoming environment to spread knowledge about the project.
 
 ### How does the program work?
 
