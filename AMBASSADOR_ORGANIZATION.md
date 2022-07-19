@@ -28,7 +28,7 @@ To become an official AsyncAPI ambassador, there is no more important requiremen
 - Always respect the [code of conduct](https://github.com/asyncapi/.github/blob/master/CODE_OF_CONDUCT.md).
 - Be active in your role as an ambassador.
 - **Guidelines** for AsyncAPI Ambassadors: 
-    The participation will be determined and checked annually. The minimum requirements for being ambassador are: To make **4 contributions per year** in form of articles, talks, videos, podcasts, presentations, driving initiatives...
+    The participation will be determined and checked annually. The minimum requirements for being an ambassador are as follows: make **4 contributions per year** in the form of articles, talks, videos, podcasts, presentations, driving initiatives, etc.
 
     Some clarifications on the type of contributions:
     
