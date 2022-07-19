@@ -22,7 +22,7 @@ The AsyncAPI Ambassador Program aims to provide users and community members with
 
 ### Requirements to become an AsyncAPI Ambassador:
 
-To be an official AsyncAPI ambassador, there is no more important requirement than having the desire to work and spread the message about AsyncAPI specification and tools.
+To become an official AsyncAPI ambassador, there is no more important requirement than having the desire to work and spread the message about the AsyncAPI specification and its tools.
 
 - Be in tune with AsyncAPI's mission and values.
 - Always respect the [code of conduct](https://github.com/asyncapi/.github/blob/master/CODE_OF_CONDUCT.md).
