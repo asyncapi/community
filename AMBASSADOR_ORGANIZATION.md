@@ -39,7 +39,7 @@ To become an official AsyncAPI ambassador, there is no more important requiremen
          
      Examples: 
 
-    1. If contributors publishes 3 articles and propels 1 initiative about AsyncAPI in eight months, they will become ambassadors for the whole year.
+    1. If contributors publish 3 articles and propel 1 initiative about AsyncAPI in eight months, they will become ambassadors for the whole year.
     2. If contributors make 1 presentation, write 2 articles and propels 1 initiative, they will become ambassadors for the whole year.
     3. If you were accepted as ambassador on 5th of May 2022, it means you have already fulfilled the requirements. On 5th of May 2023 we will check if you did it again after 5th of May 2022.
 
