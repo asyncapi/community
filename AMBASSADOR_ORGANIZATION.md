@@ -57,7 +57,7 @@ To become an official AsyncAPI ambassador, there is no more important requiremen
 
 The process of becoming an ambassador is very simple. Go to the **community** repository and open a PR to edit the `ambassadors.json` file. The TSC will then evaluate your candidacy!
 
-That PR can be created not only by the ambassador candidate, but any community member can open up a PR to submit someones application (case when community member is too shy to get on the list).
+That PR doesn't have to be created by the ambassador candidate; any community member may open a PR to submit someone's application to the AsyncAPI Ambassador Program. 
 
 Get on board and become an ambassador!
 
