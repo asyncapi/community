@@ -21,7 +21,7 @@ To create a new tweet, create a new `*.tweet` file in the `tweets/` folder. Once
 
 > Automation at a Pull Request level will validate if your tweet is valid and can be published to Twitter. 
 
-<kbd>[Create new tweet](../../../new/master/?filename=tweets/<your-tweet-name>.tweet)</kbd>
+<kbd>[Create new tweet](../../new/master/?filename=tweets/<your-tweet-name>.tweet)</kbd>
 
 > If it is your first time interacting with the **community** repo, you will be asked to fork it. If you plan to contribute more than once, then setup your fork with [these instructions](https://github.com/asyncapi/.github/blob/master/git-workflow.md).
 
