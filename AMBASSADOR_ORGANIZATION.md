@@ -36,7 +36,7 @@ Some clarifications on the type of contributions:
    3. If you were accepted as ambassador on the 5th of May 2022, you have already fulfilled the requirements. On the 5th of May 2023, we will check if you       did it again after the 5th of May 2022.
 
 
-### Duties of AsyncAPI Ambassador:
+### Duties of AsyncAPI Ambassadors:
 
 - Be in tune with AsyncAPI's mission and values.
 - Always respect the [code of conduct](https://github.com/asyncapi/.github/blob/master/CODE_OF_CONDUCT.md).
