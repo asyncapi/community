@@ -4,7 +4,7 @@ This document covers the organizational and operational aspects of the AsyncAPI 
 
 ### What is the AsyncAPI Ambassador Program?
 
-The AsyncAPI Ambassador Program aims to bring AsyncAPI closer to both users and potential users of the project. It also aims to provide users and community members with the necessary tools and resources to:
+The AsyncAPI Ambassador Program aims to bring AsyncAPI closer to both current users and potential new project users. It also aims to provide users and community members with the necessary tools and resources to:
 
 - Promote user cooperation and disseminate the necessary tools to any specific user.
 - Engage with the project in some way, either as a contributor, blogger, speaker, etc.
