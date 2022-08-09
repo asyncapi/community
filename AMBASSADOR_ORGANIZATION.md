@@ -35,7 +35,6 @@ Some clarifications on the type of contributions:
    2. If contributors make 1 presentation, write 2 articles, and propel 1 initiative, they will become ambassadors for the whole year.
    3. If you were accepted as ambassador on the 5th of May 2022, you have already fulfilled the requirements. On the 5th of May 2023, we will check if you       did it again after the 5th of May 2022.
 
- The time as an ambassador can be renewed annually. 
 
 ### Duties of AsyncAPI Ambassador:
 
