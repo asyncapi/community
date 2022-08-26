@@ -88,6 +88,7 @@ Become a TSC member and join other 24 members. You will enjoy the following priv
 * Review other PR's
 * Have voting rights
 * Invited to TSC meetings
+* 
 See other TSC members here [TSC members](https://www.asyncapi.com/community/tsc)
 
 ## Usefull links
