@@ -89,7 +89,7 @@ Become a TSC member and join other 24 members. You will enjoy the following priv
 * Have voting rights
 * Invited to TSC meetings
 
-See current[TSC members](https://www.asyncapi.com/community/tsc)
+See current [TSC members](https://www.asyncapi.com/community/tsc)
 
 ## Usefull links
 * https://www.asyncapi.com/community/tsc
