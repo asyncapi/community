@@ -22,7 +22,6 @@ TSC is a group of maintainers and Committers that contribute to the creation and
 AsyncAPI joined the Linux foundation in 2021 to guarantee a system of open governance that promotes ownership and neutrality of all participants in the initiative. 
  
 Some of the principles of the Linux foundation partnership include:
-
 * No founding members with special privileges
 * Equality among all contributors
 * Asynchronous decision making 
@@ -43,7 +42,7 @@ Anyone can be a TSC member. You however have to fulfill the following requiremen
 * Donate projects to the initiative
 * Support and commit to existing projects
 
-You can open issues on `bugs`,`docs`,`ideas`,and `reviews`. Pick a issue you would like to work on and follow the steps below to make your first contribution. 
+You can open issues on `bugs`,`docs`,`ideas`,and `reviews`. Pick an issue you would like to work on and follow the steps below to make your first contribution. 
 
 ## Make your first contribution
 We know you are nervous to make your first contribution. In this section we guide you on steps to becoming a TSC member:
@@ -57,12 +56,13 @@ We know you are nervous to make your first contribution. In this section we guid
 **Step 1: Pick an Issue**
 
 Here's how to select an issue to contribute to:
-* Join PR reviews
+* Join existing PR reviews
 * Look for issues with **good first issue label**
-* Join AsyncAPI slack community and join the #11_how-to- contribute channel
+* Join AsyncAPI slack community and join the `#11_how-to-contribute` channel
 * Join a contributor e.g to do a live stream
 
 **Step 2: Open a pull request**
+
 To open a pull request successfully, follow our [Git workflows](https://github.com/asyncapi/community/blob/master/git-workflow.md) contributors guide.
 
 Use the following steps to open your pull request:
@@ -72,24 +72,23 @@ Use the following steps to open your pull request:
 4. Test PR against Github checks-ensure they all pass
 
 **Step 3: Get it merged**
+
 After making a pull request,allow the maintainers/code owners to review your PR.Incase no one is alerted to review your PR,feel free to bring the issue to the maintainers attention by either pinging them on slack or Github. 
 
 Make sure all your PR checks pass(turn to green) to ensure your PR is merged quickly.   
-
 
 **Step 4: Invitation to become a code owner**
 
 After making several contributions to AsyncAPI,the code owners will recognize you. You will then receive an invitation to join the TSC.  
 
 **Step 5: Become a TSC member**
+
 Become a TSC member and join other 24 members. You will enjoy the following privileges:
 * Allowed to commit to regularly
 * Review other PR's
 * Have voting rights
 * Invited to TSC meetings
-
-See other TSC memmbers here![TSC members](https://www.asyncapi.com/community/tsc)
-
+See other TSC members here [TSC members](https://www.asyncapi.com/community/tsc)
 
 ## Usefull links
 * https://www.asyncapi.com/community/tsc
