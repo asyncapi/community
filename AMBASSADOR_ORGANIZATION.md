@@ -20,7 +20,7 @@ The AsyncAPI Ambassador Program aims to bring AsyncAPI closer to both current us
 
 ### Requirements to become an AsyncAPI Ambassador
 
-The participation will be determined and checked annually. The minimum requirements for being an ambassador are as follows: make **4 contributions per year** in the form of articles, talks, videos, podcasts, presentations, driving initiatives, etc.
+The participation will be determined and checked annually. The minimum requirement for being an ambassador is to make **4 contributions per year** in the form of articles, talks, videos, podcasts, presentations, driving initiatives, etc.
 
 Some clarifications on the type of contributions:
     
