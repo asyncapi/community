@@ -18,7 +18,7 @@ The AsyncAPI Ambassador Program aims to bring AsyncAPI closer to both current us
 - The TSC or delegated maintainers of community repositories will evaluate applications according to compliance requirements via a traditional PR flow.
 - All ambassador information will be displayed on the AsyncAPI website in a list after the PR is merged.
 
-### Requirements to become an AsyncAPI Ambassador:
+### Requirements to become an AsyncAPI Ambassador
 
 The participation will be determined and checked annually. The minimum requirements for being an ambassador are as follows: make **4 contributions per year** in the form of articles, talks, videos, podcasts, presentations, driving initiatives, etc.
 
