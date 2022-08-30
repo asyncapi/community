@@ -22,7 +22,8 @@ TSC is a group of maintainers and Committers that contribute to the creation and
 AsyncAPI joined the Linux Foundation in 2021 to guarantee a system of open governance that promotes ownership and neutrality of all participants in the initiative. 
 
  
-Some of the principles of the Linux foundation partnership include:
+Some of the principles of the Linux Foundation partnership include:
+
 * No founding members with special privileges
 * Equality among all contributors
 * Asynchronous decision making 
