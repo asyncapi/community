@@ -44,7 +44,7 @@ Any maintainer can be a TSC member. In other words, to become a TSC member, you 
 
 You can do it by doing at least one of below things in AsyncAPI Initiative GitHub organization:
 * Initiate a new repository/project and become its maintainer
-* Donate projects to the initiative
+* Donate existing repository/project and stay as its maintainer
 * Support and commit to existing projects
 
 You can open issues on `bugs`,`docs`,`ideas`,and `reviews`. Pick an issue you would like to work on and follow the steps below to make your first contribution. 
