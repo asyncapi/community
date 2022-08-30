@@ -35,9 +35,9 @@ As a TSC member you will enjoy the following benefits:
  
 * Recognition from AsyncAPI community
 * Exposure for your portfolio to employers and company
-* Involved in the voting process on topics concerning entire Initiative
-
+* Involved in the voting process on topics concerning the entire Initiative
 * Included in key decision-making for the Initiative. Especially related to finance. 
+
 
 ## How to become a TSC member
 Any maintainer can be a TSC member. In other words, to become a TSC member, you need to become a maintainer in one of the projects in the AsyncAPI Initiative. 
