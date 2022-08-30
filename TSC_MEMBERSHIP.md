@@ -80,7 +80,8 @@ Use the following steps to open your pull request:
 
 **Step 3: Get it merged**
 
-After making a pull request,allow the maintainers/code owners to review your PR.Incase no one is alerted to review your PR,feel free to bring the issue to the maintainers attention by either pinging them on slack or Github. 
+After making a pull request, allow the maintainers to review your PR. In case no one is alerted to review your PR, feel free to bring the issue to the maintainer's attention by either pinging them on Slack or GitHub. We are sometimes delayed in response for many different reasons, no one intention is to ignore you 🙏🏼 .
+
 
 Make sure all your PR checks pass(turn to green) to ensure your PR is merged quickly.   
 
