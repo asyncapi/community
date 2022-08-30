@@ -9,7 +9,7 @@ The following areas are covered:
 * Benefits of becoming a TSC member
 * How to become a TSC member?
 
-If you prefer video, watch our [Youtube video](https://www.youtube.com/watch?v=uG_aLF9Z1F0) on how to become a TSC member.
+If you prefer video, watch our [YouTube video](https://www.youtube.com/watch?v=uG_aLF9Z1F0) on how to become a TSC member.
 
 Definition of common terms in this document:
 * **Maintainers:** Maintainers are active and visible members of the community, and have maintain-level permissions on a repository. 
