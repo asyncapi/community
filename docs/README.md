@@ -1,1 +1,1 @@
-__docs__ folder is for all community related documentation. 
+__docs__ folder for community related documentation. 
