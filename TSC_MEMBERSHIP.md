@@ -74,7 +74,8 @@ To open a pull request successfully, follow our [Git workflows](https://github.c
 Use the following steps to open your pull request:
 1. Configure a fork
 2. Work on it locally 
-3. Write an appropriate PR title 
+3. Write an appropriate PR title using [conventional commits specification](https://github.com/asyncapi/.github/blob/master/CONTRIBUTING.md#conventional-commits)
+
 4. Test PR against Github checks-ensure they all pass
 
 **Step 3: Get it merged**
