@@ -37,7 +37,7 @@ Here are the benefits to becoming a  TSC member:
 * Exposure for your portfolio to employers and company
 * Involved in the voting process on topics concerning entire Initiative
 
-* Included in key decision making
+* Included in key decision-making for the Initiative. Especially related to finance. 
 
 ## How to become a TSC member
 Anyone can be a TSC member. You however have to fulfill the following requirements:
