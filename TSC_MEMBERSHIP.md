@@ -30,7 +30,7 @@ Some of the principles of the Linux foundation partnership include:
 
 ## Benefits of becoming a TSC member
 
-Here are the benefits to becoming a  TSC member: 
+As a TSC member you will enjoy the following benefits: 
  
 * Recognition from AsyncAPI community
 * Exposure for your portfolio to employers and company
