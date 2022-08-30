@@ -12,8 +12,8 @@ The following areas are covered:
 If you prefer video, watch our [YouTube video](https://www.youtube.com/watch?v=uG_aLF9Z1F0) on how to become a TSC member.
 
 Definition of common terms in this document:
-* **Maintainers:** Are Contributors who have earned the ability to modify (“commit”) source code, documentation, or other technical artifacts in a project’s repository (“Committers”); They are aslo reffered to as CODEOWNERS on [GitHub](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners)
-* **Contributers:** Include anyone in the community that contributes code, documentation, pull request reviews, or other technical artifacts to the Project (“Contributors”);
+* **Maintainers:** Are Contributors who have earned the ability to modify (“commit”) source code, documentation, or other technical artifacts in a project’s repository (“Committers”); They are also referred to as CODEOWNERS on [GitHub](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners)
+* **Contributors:** Include anyone in the community that contributes code, documentation, pull request reviews, or other technical artifacts to the Project (“Contributors”);
 
 ## What is the Technical Steering Committee?
 TSC is a group of maintainers and Committers that contribute to the creation and maintenance of AsyncAPI Initiative.
