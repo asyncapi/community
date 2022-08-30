@@ -81,7 +81,7 @@ Make sure all your PR checks pass(turn to green) to ensure your PR is merged qui
 
 **Step 4: Invitation to become a code owner**
 
-After making several contributions to AsyncAPI,the code owners will recognize you. You will then receive an invitation to join the TSC.  
+After making several contributions to AsyncAPI, maintainers will recognize you. You will then receive an invitation to join the TSC. Look at [this example from the website repository](https://github.com/asyncapi/website/pull/890).
 
 **Step 5: Become a TSC member**
 
