@@ -85,7 +85,8 @@ After making a pull request, allow the maintainers to review your PR. In case no
 
 Make sure all your PR checks pass(turn to green) to ensure your PR is merged quickly.   
 
-**Step 4: Invitation to become a code owner**
+**Step 4: Invitation to become a maintainer**
+
 
 After making several contributions to AsyncAPI, maintainers will recognize you. You will then receive an invitation to join the TSC. Look at [this example from the website repository](https://github.com/asyncapi/website/pull/890).
 
