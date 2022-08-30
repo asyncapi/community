@@ -34,7 +34,8 @@ Here are the benefits to becoming a  TSC member:
  
 * Recognition from AsyncAPI community
 * Exposure for your portfolio to employers and company
-* Involved in voting process
+* Involved in the voting process on topics concerning entire Initiative
+
 * Included in key decision making
 
 ## How to become a TSC member
