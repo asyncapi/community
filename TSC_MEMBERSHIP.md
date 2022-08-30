@@ -92,15 +92,11 @@ After making several contributions to AsyncAPI, maintainers will recognize you. 
 
 **Step 5: Become a TSC member**
 
-Become a TSC member and join other 24 members. You will enjoy the following privileges:
-* Allowed to commit to regularly
-* Review other PR's
-* Have voting rights
-* Invited to TSC meetings
+Once you become a maintainer in one of the repositories, you can apply to join a group of [TSC members](https://www.asyncapi.com/community/tsc).
+
+Open a PR in **community** repository to add your name to [the list of members](https://github.com/asyncapi/community/blob/master/TSC_MEMBERS.json). Specify your name, repositories that you maintain and if you are sponsored by some company. For example [see this PR that introduced one of new members](https://github.com/asyncapi/community/pull/277).
+
+Joining TSC is something that you are allowed to do as a maintainer by default, as described in [charter signed with Linux Foundation when AsyncAPI joined the foundation](https://github.com/asyncapi/community/blob/master/CHARTER.md). It is not a subject that other TSC members vote on. 
 
 See current [TSC members](https://www.asyncapi.com/community/tsc)
 
-## Usefull links
-* https://www.asyncapi.com/community/tsc
-* https://github.com/asyncapi/community/blob/master/CHARTER.md
-* https://www.youtube.com/watch?v=uG_aLF9Z1F0 
