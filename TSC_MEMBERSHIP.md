@@ -5,7 +5,7 @@ In this article, you will learn how to become a member of the AsyncAPI Technical
 
 The following areas are covered:
 * What is the TSC?
-* Why TSC was formed
+* Why TSC was formed?
 * Benefits of becoming a TSC member
 * How to become a TSC member
 
