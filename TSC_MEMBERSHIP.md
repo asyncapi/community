@@ -46,9 +46,6 @@ You can do it by doing at least one of below things in AsyncAPI Initiative GitHu
 * Donate existing repository/project and stay as its maintainer
 * Support and commit to existing projects and be invited by other maintainers to join them as a maintainer
 
-
-You can open issues on `bugs`,`docs`,`ideas`,and `reviews`. Pick an issue you would like to work on and follow the steps below to make your first contribution. 
-
 ## Make your first contribution
 We know you are nervous to make your first contribution. In this section we guide you on steps to becoming a TSC member:
 
@@ -85,7 +82,6 @@ After making a pull request, allow the maintainers to review your PR. In case no
 Make sure all your PR checks pass(turn to green) to ensure your PR is merged quickly.   
 
 **Step 4: Invitation to become a maintainer**
-
 
 After making several contributions to AsyncAPI, maintainers will recognize you. You will then receive an invitation to join the TSC. Look at [this example from the website repository](https://github.com/asyncapi/website/pull/890).
 
