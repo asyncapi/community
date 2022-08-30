@@ -7,7 +7,7 @@ The following areas are covered:
 * What is the TSC?
 * Why TSC was formed?
 * Benefits of becoming a TSC member
-* How to become a TSC member
+* How to become a TSC member?
 
 If you prefer video, watch our [Youtube video](https://www.youtube.com/watch?v=uG_aLF9Z1F0) on how to become a TSC member.
 
