@@ -2,7 +2,7 @@
 
 This document is not about creating a repository on GitHub. If this is what you were looking for, then [read GitHub guides on repository creation](https://docs.github.com/en/get-started/quickstart/create-a-repo).
 
-This docs is about creating a new project in [asyncapi](https://www.asyncapi.com/), it is the guide to how you can create a repository in [asyncapi organisation on Github](https://github.com/asyncapi), who you need to talk, and how you should configure the repository.
+This document is about creating a new repository at [AsyncAPI Initiative GitHub organization](https://github.com/asyncapi). This guide explains what is the approval process and default repository configuration options.
 
 This docs is also helpful if you are donating a project to [asyncapi](https://www.asyncapi.com/), which involves transfering a repository into [asyncapi organization](https://github.com/asyncapi) and become an onwer of that project.
 
