@@ -11,15 +11,9 @@ This docs is also helpful if you are donating a project to [asyncapi](https://ww
 
 1. Visit [asyncapi initaitive on Github](https://github.com/asyncapi) click on `Discussion tab` to start new discussion.
 
-![alt text](../assets/image-for-docs/discussion.PNG "New Disccusion on Github")
 
 2. Click on `New discussion`, select `Category` add a `title`, ping [Lukasz Gornick](https://github.com/derberg) or [Fran Méndez](https://github.com/fmvilas) in your discussion about the new project.
 
-
-![alt text](../assets/image-for-docs/Github-discussion.jpg "Start a new discussion")
-
-### Note: 
-There are 9 categories to every dicussion that been discuss here on asyncapi organization, each of these ctategories represent what you are proposing to the technical steering commitee.
 
 3. After starting a discussion about your new project for asyncapi, and successfully convienced other members of the community why your project ideas is necessary and you want to maintain the codebase.
 
