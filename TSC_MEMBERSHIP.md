@@ -96,5 +96,5 @@ Open a PR in **community** repository to add your name to [the list of members](
 
 Joining TSC is something that you are allowed to do as a maintainer by default, as described in [charter signed with Linux Foundation when AsyncAPI joined the foundation](https://github.com/asyncapi/community/blob/master/CHARTER.md). It is not a subject that other TSC members vote on. 
 
-See current [TSC members](https://www.asyncapi.com/community/tsc)
+See current [TSC members](https://www.asyncapi.com/community/tsc).
 
