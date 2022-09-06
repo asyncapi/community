@@ -22,7 +22,9 @@ This document is also helpful if you are donating a project to AsyncAPI Initiati
 ### Note: 
 There are 9 categories to every dicussion that been discuss here on asyncapi organization, each of these ctategories represent what you are proposing to the technical steering commitee.
 
-3. After starting a discussion about your new project for asyncapi, and successfully convienced other members of the community why your project ideas is necessary and you want to maintain the codebase.
+3. Additionally specify the initial maintainers of the project. At least 2 are needed to start
+
+4. Your proposal for a new repository must be approved by Technical Steering Committee (TSC). So make sure that at the end of proposal description you mention @asyncapi/tsc_members GitHub team to get TSC members notified.
 
 
 
