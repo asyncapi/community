@@ -8,7 +8,7 @@ This document is also helpful if you are donating a project to AsyncAPI Initiati
 
 ## Creating a repo for a new project
 
-1. Visit [asyncapi initaitive on Github](https://github.com/asyncapi) click on `Discussion tab` to start new discussion.
+1. Visit [AsyncAPI Initiative Discussions](https://github.com/orgs/asyncapi/discussions)
 
 ![alt text](../assets/image-for-docs/discussion.PNG "New Disccusion on Github")
 
