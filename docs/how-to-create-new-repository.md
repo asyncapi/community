@@ -12,7 +12,9 @@ This document is also helpful if you are donating a project to AsyncAPI Initiati
 
 ![alt text](../assets/image-for-docs/discussion.PNG "New Disccusion on Github")
 
-2. Click on `New discussion`, select `Category` add a `title`, ping [Lukasz Gornick](https://github.com/derberg) or [Fran Méndez](https://github.com/fmvilas) in your discussion about the new project.
+2. Start a new discussion by clicking on `New discussion` and selecting the `Idea` category.
+
+    Specify in the title that you want to create a new repository. In the description specify what is the purpose of the new repository, and why it should be created under the AsyncAPI organization. See also [example discussion from the past](https://github.com/orgs/asyncapi/discussions/300).
 
 
 ![alt text](../assets/image-for-docs/Github-discussion.jpg "Start a new discussion")
