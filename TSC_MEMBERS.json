@@ -207,9 +207,12 @@
 		]
 	},
 	{
+		"name": "Elegbede Azeez"
 		"github": "AceTheCreator",
+		"linkedin": "acebuild,
 		"twitter": "_acebuild",
-		"availableForHire": true,
+		"availableForHire": false,
+		"company": "Postman",
 		"repos": [
 			"chatbot"
 		]
