@@ -28,7 +28,7 @@ Some of the principles of the Linux Foundation partnership include:
 * No founding members with special privileges
 * Equality among all contributors
 * Asynchronous decision making 
-* Every committer is a TSC member
+* Every maintainer is allowed to automatically become a TSC member
 
 ## Benefits of becoming a TSC member
 
