@@ -6,7 +6,7 @@ This document is about creating a new repository at [AsyncAPI Initiative GitHub 
 
 This document is also helpful if you are donating a project to AsyncAPI Initiative, which involves transferring repository ownership, but still becoming its maintainer.
 
-## Creating a Repo for new project in Asyncapi
+## Creating a repo for a new project
 
 1. Visit [asyncapi initaitive on Github](https://github.com/asyncapi) click on `Discussion tab` to start new discussion.
 
