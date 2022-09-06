@@ -19,7 +19,8 @@ Definition of common terms in this document:
 TSC is a group of maintainers that contribute to the creation and maintenance of AsyncAPI Initiative.
 
 ## Why the TSC was formed
-AsyncAPI joined the Linux Foundation in 2021 to guarantee a system of open governance that promotes ownership and neutrality of all participants in the initiative. 
+The concept of TSC was formed when AsyncAPI joined the Linux Foundation in 2021 to guarantee a system of open governance that promotes ownership and neutrality of all participants in the initiative. 
+
 
  
 Some of the principles of the Linux Foundation partnership include:
