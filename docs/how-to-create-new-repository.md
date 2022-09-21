@@ -14,15 +14,15 @@ This document is also helpful if you donate a project to the AsyncAPI Initiative
 2. Start a new discussion by clicking on `New discussion` and selecting the `Idea` category. Specify in the title that you want to create a new repository. In the description specify what is the purpose of the new repository, and why it should be created under the AsyncAPI organization. See also [example discussion from the past](https://github.com/orgs/asyncapi/discussions/300).
 
 
-3. After starting a discussion about your new project for AsyncAPI, and successfully convinced other community members why your project ideas are necessary, and you want to maintain the codebase.
+3. After starting a discussion about your new project for AsyncAPI and successfully convinced other community members why your project ideas are necessary, and you want to maintain the codebase.
 
 
 4. Additionally, when creating a proposal, specify the initial maintainers of the project and whether you want to use AsyncAPI CI/CD workflows or not, so we don't need to ask you. At least 2 code maintainers are needed to start.
 
 5. Your proposal for a new repository must be approved by the Technical Steering Committee (TSC). Make sure that at the end of the proposal description you mention the `@asyncapi/tsc_members` GitHub team so as notify all TSC members.
 
-6. After getting approval from the TSC, the repo is created by either Lukasz or Fran, and the `CI/CD workflow` will be pushed to the repo. Next, we invite new maintainers as repo admins. 
- To learn more, watch this [AsyncAPI `CI/CD video](https://www.youtube.com/watch?v=DsQfmlc3Ubo)
+6. After getting approval from the TSC, the repo is created by either Lukasz or Fran, and the `CI/CD workflow` will be pushed to the repo. Next, we invite new maintainers as repo admins.
+To learn more, watch this [AsyncAPI CI/CD video](https://www.youtube.com/watch?v=DsQfmlc3Ubo)
 
 ## Github Actions CI/CD in new repo
 Using AsyncAPI `CI/CD` workflow saves you from a lot of work load, after including it in your Github discussion/proposal specifing that you want to use our `CI/CD` workflow, the following activities will be carried out by Lukasz or Fran.
