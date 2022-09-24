@@ -4,12 +4,12 @@ In this article, you will learn how to become a member of the AsyncAPI Technical
 
 
 The following areas are covered:
-* What is the Technical Steering Commitee?
-* Why the TSC was formed?
+* What is the Technical Steering Committee?
+* Why was the TSC formed?
 * Benefits of becoming a TSC member
 * How to become a TSC member
 
-If you prefer video, watch our [YouTube video :how to become a TSC member](https://www.youtube.com/watch?v=uG_aLF9Z1F0) .
+If you prefer video, watch our [YouTube video on how to become a TSC member](https://www.youtube.com/watch?v=uG_aLF9Z1F0).
 
 Definition of common terms in this document:
 * **Maintainers:** Are Contributors who have earned the ability to modify (“commit”) source code, documentation, or other technical artifacts in a project’s repository (“Committers”); They are also referred to as CODEOWNERS on [GitHub](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners)
@@ -18,8 +18,8 @@ Definition of common terms in this document:
 ## What is the Technical Steering Committee?
 The TSC is a group of maintainers that contribute to the creation and maintenance of the AsyncAPI Initiative.
 
-## Why the TSC was formed?
-The concept of the TSC was formed when AsyncAPI joined the Linux Foundation in 2021 to guarantee a system of open governance that promotes ownership and neutrality of all participants in the initiative. 
+## Why the TSC was formed
+The concept of the TSC was formed when AsyncAPI joined the Linux Foundation in 2021 to guarantee a system of open governance that promotes ownership and neutrality of all participants in the initiative.
  
 Some of the principles of the Linux Foundation partnership include:
 
@@ -50,7 +50,7 @@ We know you are nervous about making your first contribution. In this section, w
 
 1. Pick an issue
 2. Open a pull request
-3. Get the pull request merged
+3. Get pull request merged
 4. Receive an invitation to become a code owner
 5. Become a TSC member
 
@@ -59,7 +59,7 @@ We know you are nervous about making your first contribution. In this section, w
 Here's how to select an issue to contribute to:
 * Join existing PR reviews
 * Look for issues with a [**good first issue** label](https://github.com/issues?page=1&q=is%3Aopen+org%3Aasyncapi+sort%3Aupdated-desc+label%3A%22good+first+issue%22)
-* Join the [AsyncAPI Slack community workspace](https://asyncapi.com/slack-invite) and join the `#11_how-to-contribute` channel
+* Join the [AsyncAPI Slack community workspace](https://asyncapi.com/slack-invite) and the `#11_how-to-contribute` channel
 * Ask maintainers to do a public live stream called **Let's talk about contributing** where they can explain a specific part of the project where you want to contribute.
 
 **Step 2: Open a pull request**
@@ -70,7 +70,7 @@ Use the following steps to open your pull request:
 1. Configure a fork
 2. Work on it locally 
 3. Write an appropriate PR title using the [conventional commits specification](https://github.com/asyncapi/.github/blob/master/CONTRIBUTING.md#conventional-commits)
-4. Test your PR against Github checks to ensure they all pass
+4.Test your PR against Github checks to ensure they all pass
 
 **Step 3: Get pull request merged**
 
