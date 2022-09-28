@@ -37,7 +37,7 @@ We have a `workflow` that takes all the workflows from `.github` and allows you 
 
 The AsyncAPI bot creates a set of `pull requests` for a given repo. You need to `merge` them as a repo's maintainer.
 
-If you don't want to use the AsyncAPI global workflow, you will have to automate all the necessary `pull requests` that the bot would have made.
+If you don't want to use the AsyncAPI global workflow, you will have to manage project automation independently.
 
 We open a `pull request` in the `.github` repo, select `global_replicator.yml` and add the newly created repo to every single `Job` from the `global_replicator.yml` file. Add as **list of repos to be ignored** in `repos_to_ignore: name-of-repo`
 
