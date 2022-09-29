@@ -21,7 +21,10 @@ This document is also helpful if you donate a project to the AsyncAPI Initiative
 
 5. Your proposal for a new repository must be approved by the Technical Steering Committee (TSC). Make sure that at the end of the proposal description you mention the `@asyncapi/tsc_members` GitHub team so as notify all TSC members.
 
-6. After getting approval from the TSC, the repo is created by either Lukasz or Fran, and the `CI/CD workflow` will be pushed to the repo. Next, we invite new maintainers as repo admins.
+6. After getting approval from the TSC, the repo is created by either @derberg or @fmvilas. They:
+   - Configure the repo setting
+   - Push the AsyncaPI `CI/CD workflow`
+   - Invite new maintainers as repo admins.
 To learn more, watch this [AsyncAPI CI/CD video](https://www.youtube.com/watch?v=DsQfmlc3Ubo)
 
 ## Github Actions CI/CD in new repo
