@@ -21,28 +21,13 @@ To know more about asyncapi `CI/CD` watch this [video](https://www.youtube.com/w
 
 5. Your proposal for a new repository must be approved by Technical Steering Committee (TSC). So make sure that at the end of proposal description you mention `@asyncapi/tsc_members` GitHub team to notify all TSC members about voting
 
-6. After getting approval from the TSC, Repo is created by @derberg or @fmvilas, and the `CI/CD workflow` will be push to the Repo. Next, we invite new maintainers as admins of the repo. 
-
+6. After getting approval from the TSC, Repo is created by @derberg or @fmvilas, and the `CI/CD workflow` will be push to the Repo. Next, we invite new maintainers as admins of the repo.
+- Configure the repo setting
+- Push the AsyncaPI `CI/CD workflow`
+- Invite new maintainers as repo admins. 
 
 ## Github Actions CI/CD in new Repo
-Using asyncapi `CI/CD` workflow saves you from a lot of work load, after including it in your Github discussion/proposal specifing that you want to use our `CI/CD` workflow, the following activities will be carried out by @derberg or @fmvilas.
-
-3. After starting a discussion about your new project for AsyncAPI and successfully convinced other community members why your project ideas are necessary, and you want to maintain the codebase.
-
-
-4. Additionally, when creating a proposal, specify the initial maintainers of the project and whether you want to use AsyncAPI CI/CD workflows or not, so we don't need to ask you. At least 2 code maintainers are needed to start.
-
-5. Your proposal for a new repository must be approved by the Technical Steering Committee (TSC). Make sure that at the end of the proposal description you mention the `@asyncapi/tsc_members` GitHub team so as notify all TSC members.
-
-6. After getting approval from the TSC, the repo is created by either @derberg or @fmvilas. They:
-   - Configure the repo setting
-   - Push the AsyncaPI `CI/CD workflow`
-   - Invite new maintainers as repo admins.
-To learn more, watch this [AsyncAPI CI/CD video](https://www.youtube.com/watch?v=DsQfmlc3Ubo)
-
-## Github Actions CI/CD in new repo
-Using AsyncAPI `CI/CD` workflow saves you from a lot of work load, after including it in your Github discussion/proposal specifing that you want to use our `CI/CD` workflow, the following activities will be carried out by Lukasz or Fran.
->>>>>>> 22ae8aab2424449ba00fcc49460006e6ffb53389
+Using asyncapi `CI/CD` workflow saves you from a lot of work load, after including it in your Github discussion/proposal specifing that you want to use our `CI/CD` workflow, the following activities will be carried out by @derberg or @fmvilas:
 
 1. Go to Asyncapi `/.github` repo.
 2. Click on `Action` to view all workflows.
@@ -50,22 +35,14 @@ Using AsyncAPI `CI/CD` workflow saves you from a lot of work load, after includi
 4. Click on `run workflow` and paste the name of the new repo.
 5. `Run workflow`.
 
-<<<<<<< HEAD
 One `worklfow` that basically takes all the workflows from `.github` and can selectively be push to a specific repo.
-=======
-We have a `workflow` that takes all the workflows from `.github` and allows you to push to a specific repo selectively. One of the owners (which at the time of this writing is still Lukasz or Fran) executes these actions.
->>>>>>> 22ae8aab2424449ba00fcc49460006e6ffb53389
 
 The AsyncAPI bot creates a set of `pull requests` for a given repo. You need to `merge` them as a repo's maintainer.
 
 If you don't want to use the AsyncAPI global workflow, you will have to manage project automation independently.
 
-<<<<<<< HEAD
 what user have to do, to make sure their repo never gets CI/CD updates
 A `pull request` is open in `.github` repo, `global_replicator.yml` is selected and the newly created repo is added to every single `Job` from the `global_replicator.yml` file. Add as **list of repo to be ignore** in `repos_to_ignore: name-of-repo`
-=======
-We open a `pull request` in the `.github` repo, select `global_replicator.yml` and add the newly created repo to every single `Job` from the `global_replicator.yml` file. Add as **list of repos to be ignored** in `repos_to_ignore: name-of-repo`
->>>>>>> 22ae8aab2424449ba00fcc49460006e6ffb53389
 
 The previous action tells the AsyncAPI bot not constantly push `pull request` to the repo.
 
