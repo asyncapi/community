@@ -13,8 +13,6 @@ This document is also helpful if you donate a project to the AsyncAPI Initiative
 
 2. Start a new discussion by clicking on `New discussion` and selecting the `Idea` category. Specify in the title that you want to create a new repository. In the description specify what is the purpose of the new repository, and why it should be created under the AsyncAPI organization. See also [example discussion from the past](https://github.com/orgs/asyncapi/discussions/300).
 
-
-<<<<<<< HEAD
 3. Start a conversaction with community members to initialize a new project for AsyncAPI, discuss the project ideas and indicate that you want to be a maintainer of the codebase and at least 2 code maintainers are needed to start
 
 
@@ -28,7 +26,7 @@ To know more about asyncapi `CI/CD` watch this [video](https://www.youtube.com/w
 
 ## Github Actions CI/CD in new Repo
 Using asyncapi `CI/CD` workflow saves you from a lot of work load, after including it in your Github discussion/proposal specifing that you want to use our `CI/CD` workflow, the following activities will be carried out by @derberg or @fmvilas.
-=======
+
 3. After starting a discussion about your new project for AsyncAPI and successfully convinced other community members why your project ideas are necessary, and you want to maintain the codebase.
 
 
