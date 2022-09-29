@@ -1,20 +1,20 @@
-# How to create new repository
+# How to create a new repository
 
-This document is not about creating a repository on GitHub. If this is what you were looking for, then [read GitHub guides on repository creation](https://docs.github.com/en/get-started/quickstart/create-a-repo).
+This document is not about creating a repository on GitHub. If this is what you were looking for, then [read GitHub's guides on repository creation](https://docs.github.com/en/get-started/quickstart/create-a-repo).
 
-This document is about creating a new repository at [AsyncAPI Initiative GitHub organization](https://github.com/asyncapi). This guide explains what is the approval process and default repository configuration options.
+This document is about creating a new repository in the [AsyncAPI Initiative GitHub organization](https://github.com/asyncapi). This guide explains what is the approval process and default repository configuration options.
 
-This document is also helpful if you are donating a project to AsyncAPI Initiative, which involves transferring repository ownership, and still becomes its maintainer.
+This document is also helpful if you donate a project to the AsyncAPI Initiative, which involves transferring repository ownership and becoming its maintainer.
 
 ## Creating a repo for a new project
 
-1. Visit [AsyncAPI Initiative Discussions](https://github.com/orgs/asyncapi/discussions)
+1. Visit [AsyncAPI Initiative Discussions](https://github.com/orgs/asyncapi/discussions).
 
 
-2. Start a new discussion by clicking on `New discussion` and selecting the `Idea` category.
-Specify in the title that you want to create a new repository. In the description specify what is the purpose of the new repository, and why it should be created under the AsyncAPI organization. See also [example discussion from the past](https://github.com/orgs/asyncapi/discussions/300).
+2. Start a new discussion by clicking on `New discussion` and selecting the `Idea` category. Specify in the title that you want to create a new repository. In the description specify what is the purpose of the new repository, and why it should be created under the AsyncAPI organization. See also [example discussion from the past](https://github.com/orgs/asyncapi/discussions/300).
 
 
+<<<<<<< HEAD
 3. Start a conversaction with community members to initialize a new project for AsyncAPI, discuss the project ideas and indicate that you want to be a maintainer of the codebase and at least 2 code maintainers are needed to start
 
 
@@ -28,23 +28,48 @@ To know more about asyncapi `CI/CD` watch this [video](https://www.youtube.com/w
 
 ## Github Actions CI/CD in new Repo
 Using asyncapi `CI/CD` workflow saves you from a lot of work load, after including it in your Github discussion/proposal specifing that you want to use our `CI/CD` workflow, the following activities will be carried out by @derberg or @fmvilas.
+=======
+3. After starting a discussion about your new project for AsyncAPI and successfully convinced other community members why your project ideas are necessary, and you want to maintain the codebase.
 
-1. Go to asyncapi `/.github` repo
-2. Click on `Action` to view all workflows
-3. Select `Global workflow to rule then all`
+
+4. Additionally, when creating a proposal, specify the initial maintainers of the project and whether you want to use AsyncAPI CI/CD workflows or not, so we don't need to ask you. At least 2 code maintainers are needed to start.
+
+5. Your proposal for a new repository must be approved by the Technical Steering Committee (TSC). Make sure that at the end of the proposal description you mention the `@asyncapi/tsc_members` GitHub team so as notify all TSC members.
+
+6. After getting approval from the TSC, the repo is created by either @derberg or @fmvilas. They:
+   - Configure the repo setting
+   - Push the AsyncaPI `CI/CD workflow`
+   - Invite new maintainers as repo admins.
+To learn more, watch this [AsyncAPI CI/CD video](https://www.youtube.com/watch?v=DsQfmlc3Ubo)
+
+## Github Actions CI/CD in new repo
+Using AsyncAPI `CI/CD` workflow saves you from a lot of work load, after including it in your Github discussion/proposal specifing that you want to use our `CI/CD` workflow, the following activities will be carried out by Lukasz or Fran.
+>>>>>>> 22ae8aab2424449ba00fcc49460006e6ffb53389
+
+1. Go to Asyncapi `/.github` repo.
+2. Click on `Action` to view all workflows.
+3. Select `Global workflow to rule then all`.
 4. Click on `run workflow` and paste the name of the new repo.
 5. `Run workflow`.
 
+<<<<<<< HEAD
 One `worklfow` that basically takes all the workflows from `.github` and can selectively be push to a specific repo.
+=======
+We have a `workflow` that takes all the workflows from `.github` and allows you to push to a specific repo selectively. One of the owners (which at the time of this writing is still Lukasz or Fran) executes these actions.
+>>>>>>> 22ae8aab2424449ba00fcc49460006e6ffb53389
 
-A set of `pull request` is created by the asyncapi bot for a given repo, you need to `merge` them in as a maintainer of the repo.
+The AsyncAPI bot creates a set of `pull requests` for a given repo. You need to `merge` them as a repo's maintainer.
 
-If you don't want to use asyncapi global workflow, then you will have to automate all the necessary `pull request` that would have been made by bot.
+If you don't want to use the AsyncAPI global workflow, you will have to manage project automation independently.
 
+<<<<<<< HEAD
 what user have to do, to make sure their repo never gets CI/CD updates
 A `pull request` is open in `.github` repo, `global_replicator.yml` is selected and the newly created repo is added to every single `Job` from the `global_replicator.yml` file. Add as **list of repo to be ignore** in `repos_to_ignore: name-of-repo`
+=======
+We open a `pull request` in the `.github` repo, select `global_replicator.yml` and add the newly created repo to every single `Job` from the `global_replicator.yml` file. Add as **list of repos to be ignored** in `repos_to_ignore: name-of-repo`
+>>>>>>> 22ae8aab2424449ba00fcc49460006e6ffb53389
 
-This tells the asyncapi bot not to constantly push `pull request` to the repo.
+The previous action tells the AsyncAPI bot not constantly push `pull request` to the repo.
 
 ## Configuring the repository
 All repositories in `asyncapi` organizations should be similar in structure, settings, and restrictions. Follow these guidelines to adjust settings of a new repository created in one of these organizations.
