@@ -80,7 +80,7 @@ Make sure all your PR checks pass (turn to green) to ensure your PR is merged qu
 
 **Step 4: Invitation to become a maintainer**
 
-After making several contributions to AsyncAPI, maintainers will recognize you. You will then receive an invitation to join the TSC. Look at this [maintainer invitation example from the website repository](https://github.com/asyncapi/website/pull/890).
+After making several contributions to AsyncAPI, maintainers will recognize you. You will then receive an invitation to join the TSC. Look at this [maintainer invitation example from the website repository](https://github.com/asyncapi/website/pull/890). If you feel that you contributed enough to become a maintainer, but maintainers did not recognize it, please open a GitHub issue in a related repository and indicate what you contributed so far and ask what else is needed to become a maintainer.
 
 **Step 5: Become a TSC member**
 
