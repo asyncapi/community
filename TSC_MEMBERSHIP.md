@@ -16,7 +16,7 @@ Definition of common terms in this document:
 * **Contributors:** Include anyone in the community that contributes code, documentation, pull request reviews, designs, or other technical artifacts to the Project (“Contributors”);
 
 ## What is the Technical Steering Committee?
-The TSC is a group of maintainers that contribute to the creation and maintenance of the AsyncAPI Initiative.
+The TSC is a group of maintainers that contribute to the maintenance of the AsyncAPI Initiative. It is a group of people that helps make decisions that affect not a single project but the entire initiative. The TSC members commit to participate in voting process.
 
 ## Why the TSC was formed
 The concept of the TSC was formed when AsyncAPI joined the Linux Foundation in 2021 to guarantee a system of open governance that promotes ownership and neutrality of all participants in the initiative.
