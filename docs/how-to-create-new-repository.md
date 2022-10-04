@@ -1,114 +1,109 @@
-# How to create a new repository
+# Create new AsyncAPI repository
+This guide explains the _approval process_ and the _default repository configurations_ required for creating a new repository in the [AsyncAPI Initiative GitHub organization](https://github.com/asyncapi). We also cover how to _donate a project_ to the AsyncAPI Initiative by transferring repository ownership and becoming its maintainer. 
 
-This document is not about creating a repository on GitHub. If this is what you were looking for, then [read GitHub's guides on repository creation](https://docs.github.com/en/get-started/quickstart/create-a-repo).
-
-This document is about creating a new repository in the [AsyncAPI Initiative GitHub organization](https://github.com/asyncapi). This guide explains what is the approval process and default repository configuration options.
-
-This document is also helpful if you donate a project to the AsyncAPI Initiative, which involves transferring repository ownership and becoming its maintainer.
-
-## Creating a repo for a new project
-
+Let's create a new AsyncAPI repository:
 1. Visit [AsyncAPI Initiative Discussions](https://github.com/orgs/asyncapi/discussions).
+2. Create a new discussion by clicking on `New discussion` and selecting the `Idea` category. Specify in the _title_ that you want to create a new repository. In the _description_, specify the new repository's purpose and why it belongs under the AsyncAPI organization. [Sample new discussion example.](https://github.com/orgs/asyncapi/discussions/300).
+3. Start a discussion with community members to initialize a new project for AsyncAPI, discuss the project ideas, specify if you want to use AsyncAPI CI/CD workflows, and volunteer to become a maintainer for that project. (At least 2 code maintainers are needed to start.)
+To learn more about asyncapi `CI/CD`, watch this [video](https://www.youtube.com/watch?v=DsQfmlc3Ubo)
+4. The Technical Steering Committee (TSC) must approve the newly proposed repository. Make sure to tag them by adding `@asyncapi/tsc_members` at the end of the proposal description; this notifies all TSC members to vote on the proposed project.
+5. If the TSC approves the new repository, then either `@derberg` or `@fmvilas` will take over creating the actual new repository. Next, they'll run AsyncAPI `CI/CD workflows`. 
+6. Invite new maintainers as repo admins.
 
-
-2. Start a new discussion by clicking on `New discussion` and selecting the `Idea` category. Specify in the title that you want to create a new repository. In the description specify what is the purpose of the new repository, and why it should be created under the AsyncAPI organization. See also [example discussion from the past](https://github.com/orgs/asyncapi/discussions/300).
-
-3. Start a conversaction with community members to initialize a new project for AsyncAPI, discuss the project ideas and indicate that you want to be a maintainer of the codebase and at least 2 code maintainers are needed to start
-
-
-4. Specify if you want to use asyncapi CI/CD workflows or not during your discussion about the project, so we don't get to ask you.
-To know more about asyncapi `CI/CD` watch this [video](https://www.youtube.com/watch?v=DsQfmlc3Ubo)
-
-5. Your proposal for a new repository must be approved by Technical Steering Committee (TSC). So make sure that at the end of proposal description you mention `@asyncapi/tsc_members` GitHub team to notify all TSC members about voting
-
-6. After getting approval from the TSC, Repo is created by @derberg or @fmvilas, and the `CI/CD workflow` will be push to the Repo. Next, we invite new maintainers as admins of the repo.
-- Configure the repo setting
-- Push the AsyncaPI `CI/CD workflow`
-- Invite new maintainers as repo admins. 
-
-## Github Actions CI/CD in new Repo
-Using asyncapi `CI/CD` workflow saves you from a lot of work load, after including it in your Github discussion/proposal specifing that you want to use our `CI/CD` workflow, the following activities will be carried out by @derberg or @fmvilas:
-
+## GitHub Actions: CI/CD workflow
+Here are the steps `@derberg` or `@fmvilas` take when running AsyncAPI `CI/CD` workflows:
 1. Go to Asyncapi `/.github` repo.
-2. Click on `Action` to view all workflows.
-3. Select `Global workflow to rule then all`.
-4. Click on `run workflow` and paste the name of the new repo.
-5. `Run workflow`.
-
-One `worklfow` that basically takes all the workflows from `.github` and can selectively be push to a specific repo.
+2. Click `Action` to view all workflows.
+3. Select `Global workflow to rule them all`.
+4. Click `run workflow` and paste the name of the new repo. Running the workflow takes all the workflows from the AsyncAPI `.github` repo and runs those on the specified repo.
 
 The AsyncAPI bot creates a set of `pull requests` for a given repo. You need to `merge` them as a repo's maintainer.
 
-If you don't want to use the AsyncAPI global workflow, you will have to manage project automation independently.
+<Remember>
+ Manage project automation independently if you don't want to use the AsyncAPI global workflow.
+</Remember>
+<Remember>
+Repos that shouldn't get CI/CD updates must do the following:
+Open a `pull request` in the `.github` repo. 
+Edit the`global_replicator.yml` in the `.github` repo; add the newly created repo to every `Job` under **repos to ignore**. (Example: `repos_to_ignore: your-repo-name`) 
+</Remember>
 
-what user have to do, to make sure their repo never gets CI/CD updates
-A `pull request` is open in `.github` repo, `global_replicator.yml` is selected and the newly created repo is added to every single `Job` from the `global_replicator.yml` file. Add as **list of repo to be ignore** in `repos_to_ignore: name-of-repo`
-
-The previous action tells the AsyncAPI bot not constantly push `pull request` to the repo.
-
-## Configuring the repository
-All repositories in `asyncapi` organizations should be similar in structure, settings, and restrictions. Follow these guidelines to adjust settings of a new repository created in one of these organizations.
+## Configure repository
+All AsyncAPI repositories should be similar in structure, settings, and restrictions. 
 
 ## Adjust repository options
-
-Under the repository name, choose the **Settings** tab. Carry out the following actions:
-
-1. Scroll down to the **Features** section and disable these options:
+1. Under your repository name, click the **Settings** tab. 
+2. Scroll down to the **Features** section and disable these options:
     - Wikis
     - Projects
     - Discussions
-As an admin you can always enable **Discussions** when you want.
+You can always enable **Discussions** as an admin when you want.
 
-Make sure **Sponsorships** option is enable and `open_collective: asyncapi` is provided.
+3. Ensure the **Sponsorships** option is enabled and that `open_collective: asyncapi` is provided.
 
-2. Go to the **Merge button** section and disable these options:
+3. Go to the **Merge button** section and _disable_ the following:
     - Allow merge commits
     - Allow rebase merging
 
-enable only the **Allow squash merging** option. This option combines all commits into one before merging the changes into the `master` branch.
-
-3. Make sure option **Automatically delete head branches** is enable
+4. Stay on the **Merge button** section and _enable_ the following: 
+**Allow squash merging** option. This option combines all commits before merging changes into the `master` branch.
+Make sure the **Automatically delete head branches** option is enabled.
 
 ## SonarCloud scans
+Integrate each AsyncAPI repository with `https://sonarcloud.io/organizations/asyncapi/projects` for automated quality and security scans. 
 
-Each repository must be integrated with https://sonarcloud.io/organizations/asyncapi/projects for automated quality and security scans.
-If your project is not in the list, please add it via https://sonarcloud.io/projects/create.
+Add your project to the list via: `https://sonarcloud.io/projects/create`.
 
-Our **CI/CD** is very important so, if you create a repository named `main branch` you have to rename it to `master branch`. 
-In all our project we name the `master branch` as the `main branch`.
+<Remember>
+Our `CI/CD workflows` fail if your repository has a `main branch` because we currently support only `master branch` in our projects.
 
+Should you accidentally forget and create a repository with a `main branch`, remember to rename it to `master branch`. 
+</Remember>
+ 
 ## Branch protection rules
-Branch protection is be added by whoever creates the repository, here are the steps:
+Branch protection must be added by whoever creates the repository. 
 
-- Under the **Setting** tab, click `branches`
-- After that you can edith the branch name to `master` while adding branch protection
-
-Under the **Protect matching branch** you will enable the following:
-
-- enable `Require a pull request before merging`
-- enable `Request approvals`
-- enable `Dismiss stale pull request approvals when new commits are push`
-- enable `Require review from Code Owners`
-- enable `Restrict who can dismiss pull request reviews` this is done only by admin
-- enable `Require status check before merging` at this point you have to set your status check for Github action to check before merging pull request.
-- enable `Require branch to be up to date before merging`
-- enable `Do not allow bypassing the above settings`
-- enable `Restrict who can push to matching branches`
-- enable `Restrict pushes that create matching branches`
-
-This setting is required to done by who create the repository.
+Let's walk through the steps:
+1. Under the **Setting** tab, click `branches`.
+2. Change the branch name to `master`.
+3. **Enable** all of the following settings under **Protect matching branch**:
+- `Require a pull request before merging`
+- `Request approvals`
+- `Dismiss stale pull request approvals when new commits are pushed`
+- `Require review from Code Owners`
+- `Restrict who can dismiss pull request reviews` _(admin only)_
+- `Require status check before merging` _(This status check runs Github action workflows before merging pull requests.)_
+- `Require branch to be up to date before merging`
+- `Do not allow bypassing the above settings`
+- `Restrict who can push to matching branches`
+- `Restrict pushes that create matching branches`
 
 ## Collaborators and teams
-This is the point where you give admin role to individual that will be the maintainer of the project.
+The AsyncAPI Initiative grants admin roles to project maintainers.
 
-You have to invite the `bot` as a maintainer, it is very important you do.
+<Remember>
+Don't forget to add the `AsyncAPI bot` as a maintainer to each project.
+</Remember>
 
 ## Codeowners file
-This file contains name of the two code owners which are also the admin and also the asyncapi-bot-eve is also added.
+The Codeowners file contains the code owners' names; this includes both the admins and the `asyncapi-bot-eve`.
 
-Here is an example to `mcturo` and `magicmatatjahu` requesting to create a [`Design-system`](https://github.com/asyncapi/community/discussions/265) repository and [`An interface/project for describing errors/problems in tools in our organization`](https://github.com/asyncapi/community/discussions/300) repository
+Checkout the following [`Codeowners file` example from the `/website` repository](https://github.com/asyncapi/website/blob/master/CODEOWNERS):
+```
+# This file provides an overview of code owners in this repository.
+	 
+	# Each line is a file pattern followed by one or more owners.
+	# The last matching pattern has the most precedence.
+	# For more details, read the following article on GitHub: https://help.github.com/articles/about-codeowners/.
+	 
+	# The default owners are automatically added as reviewers when you open a pull request unless different owners are specified in the file.
+	* @fmvilas @derberg @mcturco @akshatnema @magicmatatjahu @asyncapi-bot-eve
+	 
+	# All .md files
+	*.md @alequetzalli @asyncapi-bot-eve
+	 
+	README.md @alequetzalli @fmvilas @derberg @mcturco @akshatnema @magicmatatjahu @asyncapi-bot-eve
+```
 
-## Donating a project to asyncapi
- For donating a project to asyncapi you can click [here](https://github.com/asyncapi/community/discussions/223) for an example.
-
- same repository setting is applicable to donated project.
+## Donate project to AsyncAPI
+To donate a project to AsyncAPI, copy the repository settings in the following [sample donated RabbitMQ template for .NET](https://github.com/mr-nuno/dotnet-rabbitmq-template).
