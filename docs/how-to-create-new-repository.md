@@ -39,7 +39,7 @@ All AsyncAPI repositories should be similar in structure, settings, and restrict
     - Discussions
 You can always enable **Discussions** as an admin when you want.
 
-3. Ensure the **Sponsorships** option is enabled and that `open_collective: asyncapi` is provided.
+3. Ensure the **Sponsorships** option is enabled.
 
 3. Go to the **Merge button** section and _disable_ the following:
     - Allow merge commits
