@@ -77,7 +77,6 @@ Let's walk through the steps:
 - `Require branch to be up to date before merging`
 - `Do not allow bypassing the above settings`
 - `Restrict who can push to matching branches`
-- `Restrict pushes that create matching branches`
 
 ## Collaborators and teams
 The AsyncAPI Initiative grants admin roles to project maintainers.
