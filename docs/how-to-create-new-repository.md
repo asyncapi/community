@@ -1,4 +1,3 @@
-# Create new AsyncAPI repository
 This guide explains the _approval process_ and the _default repository configurations_ required for creating a new repository in the [AsyncAPI Initiative GitHub organization](https://github.com/asyncapi). We also cover how to _donate a project_ to the AsyncAPI Initiative by transferring repository ownership and becoming its maintainer. 
 
 Let's create a new AsyncAPI repository:
