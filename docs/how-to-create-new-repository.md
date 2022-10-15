@@ -47,7 +47,8 @@ You can always enable **Discussions** as an admin when you want.
 
 4. Stay on the **Merge button** section and _enable_ the following: 
 **Allow squash merging** option. This option combines all commits before merging changes into the `master` branch.
-Make sure the **Automatically delete head branches** option is enabled.
+
+5. Make sure the **Automatically delete head branches** option is enabled.
 
 ## SonarCloud scans
 Integrate each AsyncAPI repository with `https://sonarcloud.io/organizations/asyncapi/projects` for automated quality and security scans. 
