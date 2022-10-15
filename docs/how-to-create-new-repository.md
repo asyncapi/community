@@ -83,7 +83,7 @@ Let's walk through the steps:
 The AsyncAPI Initiative grants admin roles to project maintainers.
 
 <Remember>
-Don't forget to add the `AsyncAPI bot` as a maintainer to each project.
+Don't forget to add the `[bots](https://github.com/orgs/asyncapi/teams/bots)` team as a maintainer to each project.
 </Remember>
 
 ## Codeowners file
