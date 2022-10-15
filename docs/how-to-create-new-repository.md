@@ -73,7 +73,7 @@ Let's walk through the steps:
 - `Dismiss stale pull request approvals when new commits are pushed`
 - `Require review from Code Owners`
 - `Restrict who can dismiss pull request reviews` _(admin only)_
-- `Require status check before merging` _(This status check runs Github action workflows before merging pull requests.)_
+- `Require status check before merging` _(This status check runs Github action workflows before merging pull requests.)_ and select `Lint PR title` and pull request testing related workflows
 - `Require branch to be up to date before merging`
 - `Do not allow bypassing the above settings`
 - `Restrict who can push to matching branches`
