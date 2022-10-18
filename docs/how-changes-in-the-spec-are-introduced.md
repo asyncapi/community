@@ -26,7 +26,7 @@ If you are interested in working on the implementation for an ‘active’ RFC, 
 ### Contributors/Maintainers engagement
 Modifications to active RFCs can be done by contributing to the discussion/commenting on it. We strive to write each RFC in a manner that will reflect the final design of the feature; but the nature of the process means that we cannot expect every accepted RFC to actually reflect what the end result will be at the time of the next major release; therefore we try to keep each RFC document somewhat in sync with the language feature as planned, tracking such changes via followup changes to the document.
 
-### Reviewing RFCs
+### Reviewing RFC
 Maintainers and contributors will attempt to review some set of open RFC discussions frequently and a group of maintainers and contributors come together bi-weekly before the next major release of the specification with a common goal/deliverables. Note that these meetings are not specifically for major versions, it basically comes down to what is needed, and what the release coordinator/other thinks.
 
 Every accepted feature should have a core team champion, who will represent the feature and its progress.
