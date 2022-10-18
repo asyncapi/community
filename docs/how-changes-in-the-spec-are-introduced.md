@@ -10,7 +10,7 @@ Some changes, however, are “substantial”, and we ask that these be put throu
 An RFC is a document that proposes an idea and serves as high-level documentation of the idea and the thinking behind it.
 
 AsyncAPI finds this RFC useful because it makes prototyping an idea with words easy and flexible rather than immediately diving into an idea, and RFCs forces champions to first explore the idea, document it, and create a proposal for bringing it to life.
-### Who is a champion? 
+### Who is an RFC champion? 
 A Champion is any AsyncAPI member that takes ownership of an idea and follows the proposed process to make the idea a reality.
 
 ## The spec changes lifecycle
