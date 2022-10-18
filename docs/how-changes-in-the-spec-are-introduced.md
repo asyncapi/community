@@ -15,7 +15,7 @@ A Champion is any AsyncAPI member that takes ownership of an idea and follows th
 
 ## The spec changes lifecycle
 Before the introduction of new spec changes, the changes have to go through various stages.
-### RFCs proposal
+### RFC proposal
 Many changes to the AsyncAPI specification have been proposed, and contributing to AsyncAPI requires a lot of dedicated work. So, in order to set clear expectations and provide accountability, and advance through the AsyncAPI specification review process, each proposed RFC (request for comments) must have a _champion_ who is responsible for addressing feedback and completing the next steps.
 ### Implementing RFC
 Once the RFC becomes active(by active I mean once an RFC starts getting engagement by fellow contributors), the authors may implement it and submit the feature as a pull request to the spec repo or start with an issue if the full details are not worked out.
