@@ -1,7 +1,7 @@
 # How changes in the spec are made
 AsyncAPI initiative always focus on the problems and not so much on the solution. The reason for this is that generally, you are rather single-minded when you already have a solution in mind to a problem. Instead of fully diving into the problem and seeing alternatives and finding the best solution. 
 
-## RFCs & Champions
+## RFC & Champions
 Many changes, including bug fixes and documentation improvements, can be implemented and reviewed via the normal GitHub pull request workflow.
 
 Some changes, however, are “substantial”, and we ask that these be put through a bit of a design process and produce a consensus among the AsyncAPI core team. The “RFC” (request for comments) process is intended to provide a consistent and controlled path for new features to enter the project.
