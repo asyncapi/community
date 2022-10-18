@@ -1,4 +1,4 @@
-# How changes in spec are introduced
+# How changes in the spec are introduced
 AsyncAPI initiative always focuses on the problems and not so much on the solution. The reason for this is that generally, you are rather single-minded when you already have a solution in mind to a problem. Instead of fully diving into the issue and seeing alternatives and finding the best solution. 
 
 ## RFC & Champions
