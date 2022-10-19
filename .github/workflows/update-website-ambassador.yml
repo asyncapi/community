@@ -1,16 +1,16 @@
-#This action update the list of TSC members in the website repository. List of all TSC members is later rendered in the asyncapi.com website.
-name: Update list of TSC members in the website repo
+#This action update the list of Ambassadors in the website repository. List of all Ambassadors is later rendered in the asyncapi.com website.
+name: Update list of Ambassadors in the website repo
 
 on:
   push:
     branches:
       - 'master'
     paths:
-      - 'TSC_MEMBERS.json'
+      - 'AMBASSADORS_MEMBERS.json'
 
 jobs:
   update-website:
-    name: Make PR on website repository with updated tsc members list
+    name: Make PR on website repository with updated ambassadors list
     runs-on: ubuntu-latest
     env:
       GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
@@ -32,18 +32,18 @@ jobs:
       - name: Create branch
         working-directory: ./website
         run: |
-          git checkout -b update-tscmembers-${{ github.head_ref }}
-      - name: Copy tsc members file from Current Repo to Another
+          git checkout -b update-ambassadors-${{ github.head_ref }}
+      - name: Copy ambassadors file from Current Repo to Another
         working-directory: ./website
         run: |
-          cp ../community/TSC_MEMBERS.json ./config/TSC_MEMBERS.json
+          cp ../community/AMBASSADORS_MEMBERS.json ./config/AMBASSADORS_MEMBERS.json
       - name: Commit and push
         working-directory: ./website
         run: |
           git add .
-          git commit -m "docs(community): update latest tsc members list"
+          git commit -m "docs(community): update latest ambassadors list"
           git push https://${{ env.GITHUB_TOKEN }}@github.com/asyncapi/website
       - name: Create PR
         working-directory: ./website
         run: |
-          gh pr create --title "docs(community): update latest tsc members list" --body "Updated TSC members list is available and this PR introduces changes with latest information about TSC members" --head "update-tscmembers-${{ github.head_ref }}"
+          gh pr create --title "docs(community): update latest tsc members list" --body "Updated Ambassadors list is available and this PR introduces changes with latest information about Ambassadors list" --head "update-ambassadors-${{ github.head_ref }}"
