@@ -30,7 +30,7 @@ Use the following steps to open your pull request:
 
 After making a pull request, allow the maintainers to review your PR. If no one is alerted to review your PR, feel free to bring the issue to the maintainer's attention by pinging them on Slack or GitHub. We sometimes delay in response for many reasons; no one intends to ignore you 🙏🏼 .
 
-Make sure all your PR checks pass (turn to green) to ensure your PR is merged quickly.   
+Make sure all your PR checks pass (turn green) to ensure your PR is merged quickly.   
 
 **Step 4: Invitation to Become a Maintainer**
 
