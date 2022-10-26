@@ -29,7 +29,7 @@ Edit the`global_replicator.yml` in the `.github` repo; add the newly created rep
 </Remember>
 
 ## Configure repository
-All AsyncAPI repositories should be similar in structure, settings, and restrictions. 
+All AsyncAPI repositories start with the same settings and restrictions. It is up to maintainers of given repository to modify settings if these disrupt maintenance. 
 
 ## Adjust repository options
 1. Under your repository name, click the **Settings** tab. 
