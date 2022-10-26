@@ -31,7 +31,7 @@ module.exports = async (link) => {
                 subject_line: 'AsyncAPI TSC members attention required',
                 preview_text: 'Check out the latest topic that TSC members have to be aware of',
                 title: `New topic info - ${ new Date(Date.now()).toUTCString()}`,
-                from_name: 'Fran Mendez',
+                from_name: 'AsyncAPI Initiative',
                 reply_to: 'info@asyncapi.io',
             }
         });
