@@ -1,3 +1,7 @@
+/**
+ * This code is centrally managed in https://github.com/asyncapi/.github/
+ * Don't make changes to this file in this repo as they will be overwritten with changes made to the same file in above mentioned repo
+ */
 module.exports = (link) => {
 
     return `<!doctype html>

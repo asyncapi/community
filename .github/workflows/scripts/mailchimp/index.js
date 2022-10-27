@@ -1,3 +1,7 @@
+/**
+ * This code is centrally managed in https://github.com/asyncapi/.github/
+ * Don't make changes to this file in this repo as they will be overwritten with changes made to the same file in above mentioned repo
+ */
 const mailchimp = require('@mailchimp/mailchimp_marketing');
 const core = require('@actions/core');
 const htmlContent = require('./htmlContent.js');
