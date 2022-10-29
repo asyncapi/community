@@ -438,5 +438,13 @@
 			"spec",
 			"spec-json-schemas"
 		]
-	}
+	},
+  {
+    "name": "Viacheslav Turovskyi",
+    "github": "aeworxet",
+    "availableForHire": false,
+    "repos": [
+      "bundler"
+    ]
+  }
 ]
