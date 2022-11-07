@@ -21,7 +21,7 @@ Before the introduction of new spec changes, the changes have to go through vari
 Many changes to the AsyncAPI specification have been proposed, and contributing to AsyncAPI requires a lot of dedicated work. So, to set clear expectations, provide accountability, and advance through the AsyncAPI specification review process, each proposed RFC (request for comments) must have a _champion_ who is responsible for addressing feedback and completing the next steps.
 
 ### Implementing RFC
-Once the RFC becomes active(by active I mean once an RFC starts getting engagement by fellow contributors), the authors may implement it and submit the feature as a pull request to the spec repo or start with an issue if the full details are not worked out.
+Once the RFC becomes active (by active we mean once an RFC starts getting engagement by fellow contributors), the authors may implement it and submit the feature as a pull request to the spec repo or start with an issue if the full details are not worked out.
 
 The author of an RFC is not obligated to implement it. The RFC author (like any other developer) is welcome to post implementations for review after the RFC has been accepted.
 
