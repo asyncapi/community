@@ -54,4 +54,19 @@ You can learn more about the release process [here](https://github.com/asyncapi/
 ### Bigger picture
 The image below visualizes the whole process of how changes are introduced to the spec in a single glance. 
 
-[![](https://mermaid.ink/img/pako:eNqVlE1v2zAMhv8K4esa7O5DLykK7NAhcK--MBIdE7MkTx_JjKL_vZRcp3GRAFkOgUyLD1--lPVWKaepqqtAfxNZRU-MB4-mtSC_rbPR8z5F5zePjz9eR1LcscLIztaw8250gaB53gIGQAscQqKfu2bOXm3fZMAFr4ZfliPjAJ6OTCdJ17IUESFC5zxsezSjJN6j5Dn52JMHteySKMTeu3ToQXPXkScbIUQ8UIDoLmKepAcWLFO4IXuzkr1zIfB-IDBpiDzK4rMBqWZ1uMs4F6V07p3N6N2RTFaSDVDOjAOjPMmbocRLzn3KyjyEikrRGFGmWaCj9Ei-JBVnLf3LfQ-Ega6BRXAzv5U-nNdssfCbi-ngAhDJ5y0w064kF7HfXGhm21wH42LpmSmyWWNcRnKD-P086cwmOPUo_gUwchzZHvK8ezySHAh5CucibEElXw6BmtRAt0tJpRdkGQVbyj5nqDkHAgQnbJoAvRh-yv_SlETWJn8hrrmxS_uBQ7_U_z8x0bkhrCTh3qUokz6tNVwBQiZKwJgkH-RUw28XuZu-ItdY1UNlyEtBLVfHW2a3lTRsqK1qWWr0f9qqte-yD2U6r5NVVR19oocqjXmwn9fMEiSdP8GX-SoqN9L7B8jSpeU?type=png)](https://mermaid.live/edit#pako:eNqVlE1v2zAMhv8K4esa7O5DLykK7NAhcK--MBIdE7MkTx_JjKL_vZRcp3GRAFkOgUyLD1--lPVWKaepqqtAfxNZRU-MB4-mtSC_rbPR8z5F5zePjz9eR1LcscLIztaw8250gaB53gIGQAscQqKfu2bOXm3fZMAFr4ZfliPjAJ6OTCdJ17IUESFC5zxsezSjJN6j5Dn52JMHteySKMTeu3ToQXPXkScbIUQ8UIDoLmKepAcWLFO4IXuzkr1zIfB-IDBpiDzK4rMBqWZ1uMs4F6V07p3N6N2RTFaSDVDOjAOjPMmbocRLzn3KyjyEikrRGFGmWaCj9Ei-JBVnLf3LfQ-Ega6BRXAzv5U-nNdssfCbi-ngAhDJ5y0w064kF7HfXGhm21wH42LpmSmyWWNcRnKD-P086cwmOPUo_gUwchzZHvK8ezySHAh5CucibEElXw6BmtRAt0tJpRdkGQVbyj5nqDkHAgQnbJoAvRh-yv_SlETWJn8hrrmxS_uBQ7_U_z8x0bkhrCTh3qUokz6tNVwBQiZKwJgkH-RUw28XuZu-ItdY1UNlyEtBLVfHW2a3lTRsqK1qWWr0f9qqte-yD2U6r5NVVR19oocqjXmwn9fMEiSdP8GX-SoqN9L7B8jSpeU)
+```mermaid
+sequenceDiagram
+    Contributor->>+Specification: Propose RFC as an issue/PR
+    Specification-->>+Contributor: Initial review and request for Champion
+    Contributor->>+Specification: Further contribution through different stages to different repositories
+    Specification-->>-Contributor: Possible multiple review rounds
+    Contributor->>+Specification: Potential improvement and compliant implementation
+    Specification-->>-Contributor: Proposal acceptance and preperation for next release
+    Specification->>+Release Coordinator: Request for a release coordinator 
+    Release Coordinator-->>-Specification: Review of possible release candidates
+    Release Coordinator-->>+Contributor: Indicate what is missing to have things release in current cycle
+    Release Coordinator->>+Maintainer: Ping maintainers so they are aware of the release
+    Maintainer-->>-Specification: Publish Release
+    Release Coordinator->>+Maintainer: Ping tools maintainers about new release
+    Release Coordinator ->>+ Community: Notify Community about new release
+```
