@@ -33,7 +33,7 @@ The motivation for the Changes process is to raise the visibility of planned cha
 
 ### Example of how changes are introduced in the spec
 
-#### feat: #added server variable object as a reusable object
+#### feat: added server variable object as a reusable object
 Let's see how Daniel Kocot proposed and championed a feature for the next spec release. 
 - He started a discussion on why his proposal was made.  [#707](https://github.com/asyncapi/spec/issues/707)
 - He opened a PR for his proposed change, which was reviewed by the contributors/maintainers. [#717](https://github.com/asyncapi/spec/pull/717)
