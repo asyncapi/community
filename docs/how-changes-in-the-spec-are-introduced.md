@@ -42,7 +42,7 @@ Let's see how Daniel Kocot proposed and championed a feature for the next spec r
 
 Check out our [how to contribute guide](https://github.com/asyncapi/spec/blob/master/CONTRIBUTING.md) to learn more.
 
-### The Release Process 
+### Release process 
 This part of the lifecycle aims to describe all details of the process so that any community member can jump in and help coordinate.
 
 - We have four cycles a year for release, and they have a single coordinator
