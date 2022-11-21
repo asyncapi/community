@@ -7,7 +7,7 @@ AsyncAPI initiative always concentrates on the problems rather than the solution
 Some changes, however, are "substantial," We ask that these be put through a bit of a design process and produce a consensus among the AsyncAPI contributors/maintainers. The "RFC" (request for comments) process is intended to provide a consistent and controlled path for new features to enter the project.
 
 #### What is RFC? 
-An RFC is a document that proposes an idea and serves as high-level documentation of the concept and its thinking.
+RFC is a document that proposes an idea and serves as high-level documentation of the concept and its thinking.
 
 AsyncAPI finds this valuable because it makes prototyping an idea with words easy and flexible rather than immediately diving into an idea. RFCs force champions to explore the idea, document it and create a proposal for bringing it to life.
 
