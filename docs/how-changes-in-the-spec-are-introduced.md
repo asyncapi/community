@@ -17,7 +17,7 @@ A Champion takes ownership of an idea and follows the proposed process to make t
 ## The spec changes lifecycle
 The motivation for the Changes process is to raise the visibility of planned changes and make coordination and planning efforts easier. It is nearly impossible to follow all changes in a big project such as AsyncAPI spec. By providing a mechanism for sharing changes, it is easier for contributors to know what is coming and to ensure that we can address the impacts of changes well before the release date. The spec changes lifecycle consist of 2 parts, as seen below.
 
-### The Change Process
+### Change process
 
 - The author submits the change proposal by creating a discussion about the proposed changes. The person or group proposing the change is responsible for providing the first draft of the changes. Ideally, it's preferable to make this draft available as a pull request before submitting the Change proposal so the community can evaluate the change. However, starting with an issue is also permitted if the full details are not worked out.
 
