@@ -19,8 +19,7 @@ The motivation for the Changes process is to raise the visibility of planned cha
 
 ### The Change Process
 
-- The author submits the change proposal by creating a discussion about the proposed changes. 
-    The person or group proposing the change is responsible for providing the first draft of the changes. Ideally, it's preferable to make this draft available as a pull request before submitting the Change proposal so the community can evaluate the change. However, starting with an issue is also permitted if the full details are not worked out.
+- The author submits the change proposal by creating a discussion about the proposed changes. The person or group proposing the change is responsible for providing the first draft of the changes. Ideally, it's preferable to make this draft available as a pull request before submitting the Change proposal so the community can evaluate the change. However, starting with an issue is also permitted if the full details are not worked out.
 
 - The contributors/maintainers reviews the proposed change request.
     The goal of this check is to prove or disprove a problem and guide the discussion toward either rejection or a preferred solution. 
