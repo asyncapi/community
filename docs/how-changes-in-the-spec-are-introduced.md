@@ -3,7 +3,7 @@
 # How spec changes are introduced
 AsyncAPI initiative always concentrates on the problems rather than the solution. This is because you are generally rather single-minded when you already have a solution in mind to a problem instead of fully diving into the issue, seeing alternatives, and finding the best solution. 
 
-### RFCs & Champions
+### RFCs & champions
 Some changes, however, are "substantial," We ask that these be put through a bit of a design process and produce a consensus among the AsyncAPI contributors/maintainers. The "RFC" (request for comments) process is intended to provide a consistent and controlled path for new features to enter the project.
 
 #### What is RFC? 
