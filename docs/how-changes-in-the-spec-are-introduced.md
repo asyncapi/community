@@ -31,7 +31,7 @@ The motivation for the Changes process is to raise the visibility of planned cha
 - Test implementation to gain confidence 
     When your change implementation is baked enough, and the solution seems desirable, there will be a compliant implementation with the AsyncAPI libraries and a test to gain confidence.
 
-### Example of how changes are introduced in the spec
+### How changes are introduced in spec: example
 
 #### feat: added server variable object as a reusable object
 Let's see how Daniel Kocot proposed and championed a feature for the next spec release. 
