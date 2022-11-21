@@ -45,11 +45,11 @@ Check out our [how to contribute guide](https://github.com/asyncapi/spec/blob/ma
 ### Release process 
 This part of the lifecycle aims to describe all details of the process so that any community member can jump in and help coordinate.
 
-- We have four cycles a year for release, and they have a single coordinator
--  Your contribution is made against the `next-spec` branch in 3 repositories
-- The coordinator at the beginning of the cycle checks if there are any release candidates. You know, like PRs that are in the advanced stage and have potential
-- The coordinator keeps a closed watch on what is merged, documents it in release notes, and engages contributors and maintainers of the spec to collaborate on a release
-- Maintainers trigger release when ready, release notes are published, and the world of open source won again
+- We have four cycles a year for release, and they have a single coordinator.
+-  Your contribution is made against the `next-spec` branch in 3 repositories.
+- The coordinator at the beginning of the cycle checks if there are any release candidates. You know, like PRs that are in the advanced stage and have potential.
+- The coordinator keeps a closed watch on what is merged, documents it in release notes, and engages contributors and maintainers of the spec to collaborate on a release.
+- Maintainers trigger release when ready, release notes are published, and the world of open source won again.
 
 You can learn more about the release process [here](https://github.com/asyncapi/spec/blob/master/RELEASE_PROCESS.md#what). 
 
