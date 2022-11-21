@@ -25,8 +25,7 @@ The motivation for the Changes process is to raise the visibility of planned cha
 
 - Implement the change. The author doesn't have to be the one to implement the change proposed but keep in mind that it might take a while before someone else does
 
-- Possibly iterate/refine as the community gets experience with your proposed changes
-    There may be some additional feedback about design choices that might be adjusted.
+- Possibly iterate/refine as the community gets experience with your proposed changes. There may be some additional feedback about design choices that might be adjusted.
 
 - Test implementation to gain confidence. When your change implementation is baked enough, and the solution seems desirable, there will be a compliant implementation with the AsyncAPI libraries and a test to gain confidence.
 
