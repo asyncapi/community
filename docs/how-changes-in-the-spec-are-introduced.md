@@ -23,8 +23,7 @@ The motivation for the Changes process is to raise the visibility of planned cha
 
 - The contributors/maintainers reviews the proposed change request. The goal of this check is to prove or disprove a problem and guide the discussion toward either rejection or a preferred solution. 
 
-- Implementing the change
-    The author doesn't have to be the one to implement the change proposed but keep in mind that it might take a while before someone else does
+- Implement the change. The author doesn't have to be the one to implement the change proposed but keep in mind that it might take a while before someone else does
 
 - Possibly iterate/refine as the community gets experience with your proposed changes
     There may be some additional feedback about design choices that might be adjusted.
