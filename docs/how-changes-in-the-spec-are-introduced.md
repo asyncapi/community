@@ -14,7 +14,7 @@ AsyncAPI finds this valuable because it makes prototyping an idea with words eas
 #### Who is a champion?
 A Champion takes ownership of an idea and follows the proposed process to make the idea a reality.
 
-## The spec changes lifecycle
+## Spec changes lifecycle
 The motivation for the Changes process is to raise the visibility of planned changes and make coordination and planning efforts easier. It is nearly impossible to follow all changes in a big project such as AsyncAPI spec. By providing a mechanism for sharing changes, it is easier for contributors to know what is coming and to ensure that we can address the impacts of changes well before the release date. The spec changes lifecycle consist of 2 parts, as seen below.
 
 ### Change process
