@@ -1,12 +1,12 @@
 **
 
 # How spec changes are introduced
-AsyncAPI initiative always concentrates on the problems rather than the solution. This is because you are generally rather single-minded when you already have a solution in mind to a problem instead of fully diving into the issue, seeing alternatives, and finding the best solution. 
+AsyncAPI Initiative always concentrates on the problems rather than the solution. This is because you are generally rather single-minded when you already have a solution in mind to a problem instead of fully diving into the issue, seeing alternatives, and finding the best solution. 
 
 ### RFCs & champions
 Some changes, however, are "substantial," We ask that these be put through a bit of a design process and produce a consensus among the AsyncAPI contributors/maintainers. The "RFC" (request for comments) process is intended to provide a consistent and controlled path for new features to enter the project.
 
-#### What is RFC? 
+#### What is an RFC? 
 RFC is a document that proposes an idea and serves as high-level documentation of the concept and its thinking.
 
 AsyncAPI finds this valuable because it makes prototyping an idea with words easy and flexible rather than immediately diving into an idea. RFCs force champions to explore the idea, document it and create a proposal for bringing it to life.
@@ -23,7 +23,7 @@ The motivation for the Changes process is to raise the visibility of planned cha
 
 - The contributors/maintainers reviews the proposed change request. The goal of this check is to prove or disprove a problem and guide the discussion toward either rejection or a preferred solution. 
 
-- Implement the change. The author doesn't have to be the one to implement the change proposed but keep in mind that it might take a while before someone else does
+- Implement the change. The author doesn't have to be the one to implement the change proposed but keep in mind that it might take a while before someone else does.
 
 - Possibly iterate/refine as the community gets experience with your proposed changes. There may be some additional feedback about design choices that might be adjusted.
 
@@ -35,7 +35,7 @@ The motivation for the Changes process is to raise the visibility of planned cha
 Let's see how Daniel Kocot proposed and championed a feature for the next spec release. 
 - He started a discussion on why his proposal was made.  [#707](https://github.com/asyncapi/spec/issues/707)
 - He opened a PR for his proposed change, which was reviewed by the contributors/maintainers. [#717](https://github.com/asyncapi/spec/pull/717)
-- After review and potential improvement, he did a compliant implementation of his feature with [AsyncAPI JS Parser](https://www.github.com/asyncapi/parser-js) and [spec-json-schemas](https://github.com/asyncapi/spec-json-schemas/pull/250) simply because it's a critical requirement since the feature requires it
+- After review and potential improvement, he did a compliant implementation of his feature with [AsyncAPI JS Parser](https://www.github.com/asyncapi/parser-js) and [spec-json-schemas](https://github.com/asyncapi/spec-json-schemas/pull/250) simply because it's a critical requirement.
 - Since the implementation was a success, his proposed change got approved and made it to the next release.
 
 Check out our [how to contribute guide](https://github.com/asyncapi/spec/blob/master/CONTRIBUTING.md) to learn more.
@@ -51,7 +51,7 @@ This part of the lifecycle aims to describe all details of the process so that a
 
 You can learn more about the release process [here](https://github.com/asyncapi/spec/blob/master/RELEASE_PROCESS.md#what). 
 
-### Bigger picture
+### Release process visual
 The image below visualizes the whole process of how changes are introduced to the spec in a single glance. 
 
 ```mermaid
