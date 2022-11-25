@@ -44,7 +44,10 @@ on:
         description: 'Boolean information if meeting.'
         required: true
         type: boolean
-
+      meeting_banner:
+        description: 'Banner used in promoting the meeting'
+        required: false
+        type: string
     secrets:
       GH_TOKEN: 
         required: true

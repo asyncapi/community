@@ -57,6 +57,10 @@ labels: meeting
 <td><a href="https://calendar.google.com/calendar/ical/c_q9tseiglomdsj6njuhvbpts11c%40group.calendar.google.com/public/basic.ics">Add to your calendar</a>.</td>
 </tr>
 <tr>
+<td>Meeting Banner</td>
+<td>{{ env.MEETING_BANNER }}</td>
+</tr>
+<tr>
 <td>Newsletter</td>
 <td><a href="https://www.asyncapi.com/newsletter">Subscribe to get weekly updates on upcoming meetings</a>.</td>
 </tr>
