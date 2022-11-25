@@ -13,7 +13,9 @@ on:
         description: 'You can specify additional text that appears at the end of generated issue title, like: - Product Design'
         required: false
         default: ''
-
+      meeting_banner: 
+        description: 'Banner you want to use in promoting the meeting'
+        required: false
 jobs:
 
   setup-lets-talk-about-contrib-stream:
@@ -23,6 +25,7 @@ jobs:
       date: ${{ github.event.inputs.date }}
       meeting_name: Let's talk about contributing
       meeting_name_suffix: ${{ github.event.inputs.descSuffix }}
+      meeting_banner: ${{ github.event.inputs.meeting_banner }}
       meeting_desc: The purpose of this meeting is to focus on contributors, focus on people that want to contribute to AsyncAPI Initiative but do not know how to do it.
       host: lpgornicki@gmail.com
       alternative_host: "fmvilas@gmail.com,devlopergene@gmail.com"

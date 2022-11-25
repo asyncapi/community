@@ -9,6 +9,9 @@ on:
       date:
         description: 'Date in a form like: 2022-04-05 where 04 is a month and 05 is a day number.'
         required: true
+      meeting_banner: 
+        description: 'Banner you want to use in promoting the meeting'
+        required: false
 
 jobs:
 
@@ -17,6 +20,7 @@ jobs:
     with:
       time: ${{ github.event.inputs.time }}
       date: ${{ github.event.inputs.date }}
+      meeting_banner: ${{ github.event.inputs.meeting_banner }}
       meeting_name: Community Meeting
       meeting_desc: This is a community meeting to regularly talk in open about important topics around AsyncAPI Initiative.
       host: lpgornicki@gmail.com

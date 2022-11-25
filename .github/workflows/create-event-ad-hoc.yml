@@ -15,6 +15,9 @@ on:
       desc:
         description: 'Provide description that explains the purpose of the meeting'
         required: true
+      meeting_banner: 
+        description: 'Banner you want to use in promoting the meeting'
+        required: false
 
 jobs:
 
@@ -25,6 +28,7 @@ jobs:
       date: ${{ github.event.inputs.date }}
       meeting_name: ${{ github.event.inputs.name }}
       meeting_desc: ${{ github.event.inputs.desc }}
+      meeting_banner: ${{ github.event.inputs.meeting_banner }}
       host: lpgornicki@gmail.com
       alternative_host: "fmvilas@gmail.com,jonas-lt@live.dk,devlopergene@gmail.com"
       issue_template_path: .github/workflows/create-event-helpers/issues_templates/ad-hoc.md
