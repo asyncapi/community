@@ -1,6 +1,6 @@
 # Add New AsyncAPI Tool to Website
 
-In this article, we will learn how to add your tool to AsyncAPI website using `.asyncapi-tool` file. You will come to know how you have to structure the above file and it's related content correctly, to render your tool in the website with customised tags and information.
+In this article, we will learn how to add your tool to AsyncAPI website using `.asyncapi-tool` file. You will come to know how you have to structure the above file and its related content correctly, to render your tool on the website with customized tags and information.
 
 The following areas will be covered:
  - Why should I read this article?
@@ -10,13 +10,13 @@ The following areas will be covered:
    - YAML Format File Structure
  - Manual Addition of Tool
  - JSON Tool Structure
- - Tool Card in website
+ - Tool Card in the website
 
 ## Why should I read this article?
 
-Quite interesting question 😀, but definitely you should know what this article targets about. We already know that the present list of tools used inside AsyncAPI is presented on [AsyncAPI Tools Overview](/docs/tools) and it is manually maintained inside the Github repository. All the tools are sorted according to the different categories in which they are used and maintained by the contributors. But we don't have, how to filter the tools according to our interest 🤔, like languages, technolgies used in it, open source tools, etc. Also, what if you want to add your tool in the list, what you will do 🤔? Will make a PR?
+Quite interesting question 😀, but definitely you should know what this article targets. We already know that the present list of tools used inside AsyncAPI is presented on [AsyncAPI Tools Overview](/docs/tools) and it is manually maintained inside the GitHub repository. All the tools are sorted according to the different categories in which they are used and maintained by the contributors. But we don't have, how to filter the tools according to our interest 🤔, like languages, technologies used in it, open source tools, etc. Also, what if you want to add your tool to the list, what you will do 🤔? Will make a PR?
 
-What if I say, you don't need to make a mess of PR now 😉. Yepp, we introduce you with something new to add tools in our website. For this, stay tuned in the article 👇.
+What if I say, you don't need to make a mess of PR now 😉. Yepp, we introduce you to something new to add tools in our website. For this, stay tuned in the article 👇.
 
 ## AsyncAPI Tool File
 
@@ -65,19 +65,18 @@ filters:
   hasCommercial: false
 ```
 
-This file structure should be used to insert your tool in website. The fields specified above are explained below:
+This file structure should be used to insert your tool into the website. The fields specified above are explained below:
 
-- **`title`** - Specifies the title or name of the Tool. Remember this name will be used as official name of your tool in website.
-- **`description`** - Specifies the description of the tool you want to add. Make sure it should be precise, upto 30 words only.
+- **`title`** - Specifies the title or name of the Tool. Remember this name will be used as the official name of your tool on the website.
+- **`description`** - Specifies the description of the tool you want to add. Make sure it should be precise, up to 30 words only.
 - **`links`** - Object which contains important links related to the tool.
-  - **`websiteUrl`** - This is an optional field which specifies URL of the website of the tool.
-  - **`docsUrl`** - This is an optional field which specifies URL of the documentation of the tool.
-- **`filters`** - Object which contains various fields like language, technologies, categories to provide information about the tool.
-  - **`language`** - Specifies primary Language in which the tool has been created. There are predefined languages listed in our documentation which are available right now and will be expanded to add new languages if needed.
-  - **`technology`** - Specifies the list of technologies which are used to create the tool. There are predefined technologies listed in our documentation which are available right now and will be expanded to add new languages if needed.
-  - **`categories`** - Specifies the list of categories which defines the type of tool. There are predefined categories listed in our documentation which can be used to list down your tool under proper category.
+  - **`websiteUrl`** - This is an optional field that specifies the URL of the website of the tool.
+  - **`docsUrl`** - This is an optional field that specifies the URL of the documentation of the tool.
+- **`filters`** - Object which contains various fields like language, technologies, and categories to provide information about the tool.
+  - **`language`** - Specifies the primary Language in which the tool has been created. There are predefined languages listed in our documentation that are available right now and will be expanded to add new languages if needed.
+  - **`technology`** - Specifies the list of technologies that are used to create the tool. There are predefined technologies listed in our documentation that are available right now and will be expanded to add new languages if needed.
+  - **`categories`** - Specifies the list of categories that defines the type of tool. There are predefined categories listed in our documentation that can be used to list down your tool under the proper category.
   - **`hasCommercial`** - Specifies whether the tool is a commercial product or is open source.
-
 **Note:** The predefined list of technologies can be found in our repository and are listed as:
 
 - [Languages and Technologies](https://github.com/asyncapi/website/blob/master/scripts/tools/tags-color.js)
