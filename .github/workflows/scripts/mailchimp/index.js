@@ -27,14 +27,8 @@ module.exports = async (link, title) => {
             type: 'regular',
             recipients: {
                 list_id: '6e3e437abe',
-                segment_opts: {
-                    match: 'any',
-                    conditions: [{
-                        condition_type: 'Interests',
-                        field: 'interests-2801e38b9f',
-                        op: 'interestcontains',
-                        value: ['f7204f9b90']
-                    }]
+                segments_opts: {
+                    saved_segment_id: 'tsc-voting-email'
                 }
             },
             settings: {
