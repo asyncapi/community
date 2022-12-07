@@ -7,17 +7,17 @@ description: Learn how to add your tool to the AsyncAPI website using the .async
 # Introduction 
 Learn how to add your tool to the AsyncAPI website using the `.asyncapi-tool` file. Make sure to structure your `.asyncapi-tool` file correctly to render your tool on the AsyncAPI website with customized tags and information for users to filter tools according to different categories.
 
-> The entire AsyncAPI Tools list is under the [AsyncAPI Docs tools overview](/docs/tools) page.
+> The entire AsyncAPI Tools list is under the [AsyncAPI Docs tools overview](https://www.asyncapi.com/docs/tools) page.
 
 ## AsyncAPI tool file
 
-The [`.asyncapi-tool` file](https://github.com/asyncapi/website/blob/master/scripts/tools/tools-schema.json) requires a specific schema to describe the type and details of your AsyncAPI tool; this file automatically adds your tool to our website's [Tools Dashboard](/tools) within a week. 
+The [`.asyncapi-tool` file](https://github.com/asyncapi/website/blob/master/scripts/tools/tools-schema.json) requires a specific schema to describe the type and details of your AsyncAPI tool; this file automatically adds your tool to our website's [Tools Dashboard](https://www.asyncapi.com/tools) within a week. 
 
 You must create and maintain your `.asyncapi-tool` file in your tool's repository, as it doesn't require AsyncAPI approval. 
 
 ## Tool file structure
 
-Let's look at a sample `.asyncapi-tool` file in `JSON` and `YAML` structures. You'll use these file structures to insert your tool into the website's [Tools Dashboard](/tools). 
+Let's look at a sample `.asyncapi-tool` file in `JSON` and `YAML` structures. You'll use these file structures to insert your tool into the website's [Tools Dashboard](https://www.asyncapi.com/tools). 
 
 ### JSON format file structure
 
