@@ -1,32 +1,25 @@
-# Add New AsyncAPI Tool to Website
+---
+title: Add new AsyncAPI tool to website
+description: Learn how to add your tool to the AsyncAPI website using the .asyncapi-tool file.
+	 
+---
 
-In this article, we will learn how to add your tool to AsyncAPI website using `.asyncapi-tool` file. You will come to know how you have to structure the above file and its related content correctly, to render your tool on the website with customized tags and information.
+# Introduction 
+Learn how to add your tool to the AsyncAPI website using the `.asyncapi-tool` file. Make sure to structure your `.asyncapi-tool` file correctly to render your tool on the AsyncAPI website with customized tags and information for users to filter tools according to different categories.
 
-The following areas will be covered:
- - Why should I read this article?
- - AsyncAPI Tool File
- - Tool File Structure
-   - JSON Format File Structure
-   - YAML Format File Structure
- - Manual Addition of Tool
- - JSON Tool Structure
- - Tool Card in the website
+> The entire AsyncAPI Tools list is under the [AsyncAPI Docs tools overview](/docs/tools) page.
 
-## Why should I read this article?
+## AsyncAPI tool file
 
-Quite interesting question 😀, but definitely you should know what this article targets. We already know that the present list of tools used inside AsyncAPI is presented on [AsyncAPI Tools Overview](/docs/tools) and it is manually maintained inside the GitHub repository. All the tools are sorted according to the different categories in which they are used and maintained by the contributors. But we don't have, how to filter the tools according to our interest 🤔, like languages, technologies used in it, open source tools, etc. Also, what if you want to add your tool to the list, what you will do 🤔? Will make a PR?
+The [`.asyncapi-tool` file](https://github.com/asyncapi/website/blob/master/scripts/tools/tools-schema.json) requires a specific schema to describe the type and details of your AsyncAPI tool; this file automatically adds your tool to our website's [Tools Dashboard](/tools) within a week. 
 
-What if I say, you don't need to make a mess of PR now 😉. Yepp, we introduce you to something new to add tools in our website. For this, stay tuned in the article 👇.
+You must create and maintain your `.asyncapi-tool` file in your tool's repository, as it doesn't require AsyncAPI approval. 
 
-## AsyncAPI Tool File
+## Tool file structure
 
-We have introduced a new concept of `.asyncapi-tool` file which describes the type and details of a tool related to AsyncAPI. This file will follow certain schema and fields to describe your tool appropriately according to the needs of a user and it will then automatically being added to our website within a week. But the question comes, where this file will exist? inside AsyncAPI repositories? Definitely not!. Here comes the twist, this file will be created and maintained in your Tool's repository, and it won't ask for our approval. This file will follow certain schema which you have to follow to successfully and appropriately add your tool to our brand new [Tools Dashboard](/tools). The proper schema of the file is described [here](https://github.com/asyncapi/website/blob/master/scripts/tools/tools-schema.json). You can use the tools like [Online JSON Validator](https://www.liquid-technologies.com/online-json-schema-validator) to validate your JSON data for Tool against the schema given above.
+Let's look at a sample `.asyncapi-tool` file in `JSON` and `YAML` structures. You'll use these file structures to insert your tool into the website's [Tools Dashboard](/tools). 
 
-## Tool File Structure
-
-Here's the sample `.asyncapi-tool` file structure, which can be used to structurise your tool configuration.
-
-### JSON Format File Structure
+### JSON format file structure
 
 ```JSON
 {
@@ -45,7 +38,7 @@ Here's the sample `.asyncapi-tool` file structure, which can be used to structur
 }
 ```
 
-### YAML Format File Structure
+### YAML format file structure
 
 ```YAML
 ---
@@ -65,30 +58,33 @@ filters:
   hasCommercial: false
 ```
 
-This file structure should be used to insert your tool into the website. The fields specified above are explained below:
+Let's break down each field of an `.asyncapi-tool` file:
 
-- **`title`** - Specifies the title or name of the Tool. Remember this name will be used as the official name of your tool on the website.
-- **`description`** - Specifies the description of the tool you want to add. Make sure it should be precise, up to 30 words only.
+- **`title`** - Specifies the title or name of the tool; the official name of your tool on the website.
+- **`description`** - Specifies the tool's description; 30 words limitation.
 - **`links`** - Object which contains important links related to the tool.
-  - **`websiteUrl`** - This is an optional field that specifies the URL of the website of the tool.
-  - **`docsUrl`** - This is an optional field that specifies the URL of the documentation of the tool.
+  - **`websiteUrl`** - This is an optional field specifying the tool's website URL.
+  - **`docsUrl`** - This is an optional field specifying the tool's documentation URL.
 - **`filters`** - Object which contains various fields like language, technologies, and categories to provide information about the tool.
-  - **`language`** - Specifies the primary Language in which the tool has been created. There are predefined languages listed in our documentation that are available right now and will be expanded to add new languages if needed.
-  - **`technology`** - Specifies the list of technologies that are used to create the tool. There are predefined technologies listed in our documentation that are available right now and will be expanded to add new languages if needed.
-  - **`categories`** - Specifies the list of categories that defines the type of tool. There are predefined categories listed in our documentation that can be used to list down your tool under the proper category.
-  - **`hasCommercial`** - Specifies whether the tool is a commercial product or is open source.
-**Note:** The predefined list of technologies can be found in our repository and are listed as:
+  - **`language`** - Specifies the primary language in which you created the tool. Our documentation lists predefined languages, and you can expand to add new languages if needed.
+  - **`technology`** - Specifies the technologies used to create the tool. Our documentation lists predefined technologies, and you can add new languages if needed.
+  - **`categories`** - Specifies the list of categories that defines the type of tool. There are predefined categories in our documentation that you can use to list your tool under the proper category.
+  - **`hasCommercial`** - Specifies whether the tool is a commercial product or open source.
 
-- [Languages and Technologies](https://github.com/asyncapi/website/blob/master/scripts/tools/tags-color.js)
-- [Categories](https://github.com/asyncapi/website/blob/master/scripts/tools/categorylist.js)
 
-## Manual Addition of Tools
+> You can find the predefined list of technologies in our repository under [Languages and Technologies](https://github.com/asyncapi/website/blob/master/scripts/tools/tags-color.js) and [Categories](https://github.com/asyncapi/website/blob/master/scripts/tools/categorylist.js).
 
-You don't want to create `.asyncapi-tool` file in repository or your tool's codebase doesn't exist in Github, no problem at all!. We have remedy for this problem also 😉. [AsyncAPI website repository](https://github.com/asyncapi/website) contains a file [`manual-tools.json`](https://github.com/asyncapi/website/blob/master/config/tools-manual.json) which will help you add your tool in the above specified format only. In this file, you have to choose desired category for your tool and under that particular category object, add the tool in the above specified JSON format only as a element inside object.
+## Manual addition of tools
 
-## JSON Tool Structure
+If you don't want to create the `.asyncapi-tool` file in your repository or your tool's codebase doesn't exist in Github, the [AsyncAPI website repository](https://github.com/asyncapi/website) contains a [`manual-tools.json`](https://github.com/asyncapi/website/blob/master/config/tools-manual.json) file that adds your tool to our website's [Tools Dashboard](/tools).
 
-After creation of the `.asyncapi-tool` file, you can surely check your tool configuration inside our database json file as [automated-tools.json](https://github.com/asyncapi/website/blob/master/config/tools-automated.json) in GitHub repository. The ideal JSON object for a Tool will look like like the following:
+Inside this [`manual-tools.json`](https://github.com/asyncapi/website/blob/master/config/tools-manual.json) file, you must choose the desired category for your tool and add your tool as an **element** inside that particular category **object**.
+
+## JSON tool structure
+
+Once you've created your `.asyncapi-tool` file, check your tool configuration inside our database on the [automated-tools.json](https://github.com/asyncapi/website/blob/master/config/tools-automated.json) file.
+
+Here's what a sample JSON object for an AsyncAPI tool should look like:
 
 ```JSON
 {
@@ -109,20 +105,20 @@ After creation of the `.asyncapi-tool` file, you can surely check your tool conf
 }
 ```
 
-If you don't get your tool properly presented in this file, kindly inform us by creating an [Issue on GitHub](https://github.com/asyncapi/website/issues/new/choose) or contact us at [Slack](https://asyncapi.com/slack-invite).
+> If your tool's information isn't showing up correctly in this file, please [create a new AsyncAPI GitHub issue](https://github.com/asyncapi/website/issues/new/choose) or contact us via [AsyncAPI Slack](https://asyncapi.com/slack-invite).
 
-## Tool Card in website
+## Tool card in website
 
-Taking the Tools Card in the website under consideration, you have following sections to detail about a Tool:
+Let's break down the details and sections found on tool cards in the website's [Tools Dashboard](/tools):
 
 ![Tools Card](/assets/tool-preview.webp)
 
 <ol>
-  <li> Specifies the Name of the Tool.</li>
-  <li> Specifies whether the Tool is Free to use or requires commercial access to use it.</li>
-  <li> Specifies the Description of the Tool. Clicking on the `Show More` button will open a small box to show full description of the Tool.</li>
-  <li> Specifies the Primary Language of the Tool in which it is built.</li>
-  <li> Specifies the list of Technologies used to create the Tool.</li>
-  <li> <b>View on Github</b> Button directs the user to the Github repository of the Tool.</li>
-  <li> <b>Visit Website</b> Button directs the user to the official website of the Tool.</li>
+  <li> Specifies the Tool Name.</li>
+  <li> Specifies whether the tool is FREE to use or requires commercial access.</li>
+  <li> Specifies the tool description. The `Show More` button opens a small box with the complete tool description.</li>
+  <li> Specifies the tool's primary language.</li>
+  <li> Specifies the list of technologies used to create the tool.</li>
+  <li> The <b>View on Github</b> button directs the user to the tool's GitHub repository.</li>
+  <li> The <b>Visit Website</b> button directs the user to the official tool's website.</li>
 </ol>
