@@ -1,7 +1,6 @@
 ---
 title: Add new AsyncAPI tool to website
 description: Learn how to add your tool to the AsyncAPI website using the .asyncapi-tool file.
-	 
 ---
 
 # Introduction 
@@ -15,7 +14,7 @@ The [`.asyncapi-tool` file](https://github.com/asyncapi/website/blob/master/scri
 
 You must create and maintain your `.asyncapi-tool` file in your tool's repository, as it doesn't require AsyncAPI approval. 
 
-## Tool file structure
+    ## Tool file structure
 
 Let's look at a sample `.asyncapi-tool` file in `JSON` and `YAML` structures. You'll use these file structures to insert your tool into the website's [Tools Dashboard](https://www.asyncapi.com/tools). 
 
@@ -26,14 +25,12 @@ Let's look at a sample `.asyncapi-tool` file in `JSON` and `YAML` structures. Yo
   "title": "Sample Tool",
   "description": "Tool for testing",
   "links": {
-    "websiteUrl": "https://akshatnema.netlify.app",
-    "docsUrl": ""
+    "websiteUrl": "https://akshatnema.netlify.app"
   },
   "filters": {
     "language": "javascript",
     "technology": ["react"],
-    "categories": ["code generator"],
-    "hasCommercial": false
+    "categories": ["code generator"]
   }
 }
 ```
@@ -44,8 +41,6 @@ Let's look at a sample `.asyncapi-tool` file in `JSON` and `YAML` structures. Yo
 ---
 title: Sample Tool
 description: Tool for testing
-maintainers:
-- akshatnema
 links:
   websiteUrl: https://akshatnema.netlify.app
   docsUrl: ''
@@ -55,7 +50,6 @@ filters:
   - react
   categories:
   - code generator
-  hasCommercial: false
 ```
 
 Let's break down each field of an `.asyncapi-tool` file:
@@ -66,13 +60,13 @@ Let's break down each field of an `.asyncapi-tool` file:
   - **`websiteUrl`** - This is an optional field specifying the tool's website URL.
   - **`docsUrl`** - This is an optional field specifying the tool's documentation URL.
 - **`filters`** - Object which contains various fields like language, technologies, and categories to provide information about the tool.
-  - **`language`** - Specifies the primary language in which you created the tool. Our documentation lists predefined languages, and you can expand to add new languages if needed.
-  - **`technology`** - Specifies the technologies used to create the tool. Our documentation lists predefined technologies, and you can add new languages if needed.
-  - **`categories`** - Specifies the list of categories that defines the type of tool. There are predefined categories in our documentation that you can use to list your tool under the proper category.
+  - **`language`** - Specifies the primary language in which you created the tool. Our documentation lists [predefined languages](https://github.com/asyncapi/website/blob/master/scripts/tools/tags-color.js), and you can expand this list to add new languages according to your need. To add a new language, you have to create a [new issue on GitHub repository](https://github.com/asyncapi/website/issues/new/choose) specifying the language you want to add.
+  - **`technology`** - Specifies the technologies used to create the tool. Our documentation lists [predefined technologies](https://github.com/asyncapi/website/blob/master/scripts/tools/tags-color.js), and you can expand this list to add new technologies according to your need. To add a new technology, you have to create a [new issue on GitHub repository](https://github.com/asyncapi/website/issues/new/choose) specifying the technology you want to add.
+  - **`categories`** - Specifies the list of categories that defines the type of tool. There are predefined categories in our documentation that you can use to list your tool under the proper category. If your tool doesn't matches with any categories specified in list, you can choose `others` option to list your tool. 
   - **`hasCommercial`** - Specifies whether the tool is a commercial product or open source.
 
 
-> You can find the predefined list of technologies in our repository under [Languages and Technologies](https://github.com/asyncapi/website/blob/master/scripts/tools/tags-color.js) and [Categories](https://github.com/asyncapi/website/blob/master/scripts/tools/categorylist.js).
+> You can find the predefined list of technologies in our repository under [Languages and Technologies](https://github.com/asyncapi/website/blob/master/scripts/tools/tags-color.js) and [Categories](https://github.com/asyncapi/website/blob/master/scripts/tools/categorylist.js). If you have any other technologies or languages we left in our list, or you want us to add them, feel free to [create a new AsyncAPI GitHub issue](https://github.com/asyncapi/website/issues/new/choose) specifying the languages or technologies.
 
 ## Manual addition of tools
 
