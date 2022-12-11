@@ -67,7 +67,20 @@ Let's break down each field of an `.asyncapi-tool` file:
 |  `categories` 	|  Specifies the list of categories that defines the type of tool. There are [predefined categories](https://github.com/asyncapi/website/blob/master/scripts/tools/categorylist.js) in our documentation that you can use to list your tool under the proper category. If your tool doesn't matches with any categories specified in list, you can choose `others` option to list your tool.  	|  Yes 	|
 |  `hasCommercial` 	|  Specifies whether the tool is a commercial product or open source. 	|  No (`false` by default) 	|
 
-* denotes that if you don't add description to the file, you should have proper repository description on Github. 
+\* denotes that if you don't add description to the file, you should have proper repository description on Github. 
+
+You can also follow a simple example of `.asyncapi-tool` file to render the tool in website. This is example of [AsyncAPI Bundler](https://github.com/asyncapi/bundler). `.asyncapi-tool` file in YAML format:
+
+```YAML
+title: AsyncAPI Bundler
+filters:
+    languages:
+        - TypeScript
+    technology:
+        - TypeScript
+    categories:
+        - bundler
+```
 
 > You can find the predefined list of technologies in our repository under [Languages and Technologies](https://github.com/asyncapi/website/blob/master/scripts/tools/tags-color.js) and [Categories](https://github.com/asyncapi/website/blob/master/scripts/tools/categorylist.js). If you have any other technologies or languages we left in our list, or you want us to add them, feel free to [create a new AsyncAPI GitHub issue](https://github.com/asyncapi/website/issues/new/choose) specifying the languages or technologies.
 
