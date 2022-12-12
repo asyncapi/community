@@ -1,4 +1,3 @@
-**
 
 ## How spec changes are introduced
 AsyncAPI Initiative always concentrates on the problems rather than the solution. This is because you are generally rather single-minded when you already have a solution in mind to a problem instead of fully diving into the issue, seeing alternatives, and finding the best solution. 
