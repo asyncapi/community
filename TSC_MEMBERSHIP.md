@@ -41,9 +41,9 @@ As a TSC member you will enjoy the following benefits:
 ## How to become a TSC member
 Any maintainer can become a TSC member. In other words, to become a TSC member, you need to become a maintainer of one of the projects in the AsyncAPI Initiative. 
 You can become a maintainer by doing at least one of the following items within the AsyncAPI Initiative GitHub organization:
-* Initiate a new repository/project and become its maintainer.Learn more in [Become a maintainer in an existing project](https://github.com/asyncapi/community/pull/449/files#diff-2ac814c110d5ccfbf064b21de6aa22f6a5a63f00eaf1107282c2c13a4a9562df)
-* Donate existing repository/project and stay as its maintainer. Learn more in [Become a maintainer in an existing project](https://github.com/asyncapi/community/pull/449/files#diff-2ac814c110d5ccfbf064b21de6aa22f6a5a63f00eaf1107282c2c13a4a9562df)
-* Support and commit to existing projects and be invited by other maintainers to join them as a maintainer
+* Initiate a new repository/project and become its maintainer.
+* Donate existing repository/project and stay as its maintainer. 
+* Support and commit to existing projects and be invited by other maintainers to join them as a maintainer. Learn more in [Become a maintainer in an existing project](https://github.com/asyncapi/community/blob/master/Become-maintainer-in-existing-project.md)
 
 Joining the TSC is something that you are allowed to do as a maintainer by default, as described in the [charter signed with the Linux Foundation when AsyncAPI joined the foundation](https://github.com/asyncapi/community/blob/master/CHARTER.md). It is not a subject that other TSC members vote on. 
 
