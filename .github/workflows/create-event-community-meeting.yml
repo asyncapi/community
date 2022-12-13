@@ -10,7 +10,7 @@ on:
         description: 'Date in a form like: 2022-04-05 where 04 is a month and 05 is a day number.'
         required: true
       meeting_banner: 
-        description: 'Banner you want to use in promoting the meeting'
+        description: 'Meeting banner(image) URL'
         required: false
 
 jobs:
