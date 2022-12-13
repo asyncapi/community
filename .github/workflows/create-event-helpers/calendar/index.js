@@ -69,8 +69,8 @@ async function addEvent(zoomUrl, startDate, startTime, issueNumber) {
             extendedProperties: {
               private: {
                 ISSUE_ID: `${issueNumber}`,
+                banner: banner,
               },
-              banner: banner,
             },
           },
         });
