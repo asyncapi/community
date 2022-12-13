@@ -28,15 +28,21 @@ module.exports = async () => {
             type: 'regular',
             recipients: {
                 list_id: '6e3e437abe',
-                segments_opts: {
-                    saved_segment_id: 'meetings-email'
+                segment_opts: {
+                    match: 'any',
+                    conditions: [{
+                        condition_type: 'Interests',
+                        field: 'interests-2801e38b9f',
+                        op: 'interestcontains',
+                        value: ['3505cd49d1']
+                    }]
                 }
             },
             settings: {
                 subject_line: 'AsyncAPI meetings scheduled for this week.',
                 preview_text: 'Check out what AsyncAPI meetings are scheduled for this week and learn how to join them.',
                 title: `Meetings info - ${ new Date(Date.now()).toUTCString()}`,
-                from_name: 'Fran Mendez',
+                from_name: 'AsyncAPI Initiative',
                 reply_to: 'info@asyncapi.io',
             }
         });
