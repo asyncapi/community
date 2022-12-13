@@ -24,6 +24,7 @@ async function addEvent(zoomUrl, startDate, startTime, issueNumber) {
     const title = process.env.MEETING_NAME;
     const suffix = process.env.MEETING_NAME_SUFFIX;
     const description = process.env.MEETING_DESC;
+    const banner = process.env.MEETING_BANNER;
     const guest = process.env.GUEST;
     const summary = suffix ? `${title} ${suffix}` : title;
 
@@ -63,7 +64,8 @@ async function addEvent(zoomUrl, startDate, startTime, issueNumber) {
                     private: {
                         'ISSUE_ID': `${issueNumber}`
                     }
-                }
+                },
+                banner
             }
         })
 
