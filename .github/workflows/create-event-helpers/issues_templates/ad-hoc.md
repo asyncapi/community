@@ -6,9 +6,11 @@ labels: meeting
 <table>
 <tr>
 <th>Meeting Info</th>
+<th>Details</th>
+</tr>
+<tr>
 <td>Meeting Banner</td>
 <td><img src="{{ env.MEETING_BANNER }}" alt="" /></td>
-<th>Details</th>
 </tr>
 <tr>
 <td>Purpose</td>
@@ -57,8 +59,6 @@ labels: meeting
 <tr>
 <td>iCal File</td>
 <td><a href="https://calendar.google.com/calendar/ical/c_q9tseiglomdsj6njuhvbpts11c%40group.calendar.google.com/public/basic.ics">Add to your calendar</a>.</td>
-</tr>
-<tr>
 </tr>
 <tr>
 <td>Newsletter</td>

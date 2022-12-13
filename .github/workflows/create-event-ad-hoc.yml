@@ -16,7 +16,7 @@ on:
         description: 'Provide description that explains the purpose of the meeting'
         required: true
       meeting_banner: 
-        description: 'Banner you want to use in promoting the meeting'
+        description: 'Meeting banner(image) URL'
         required: false
 
 jobs:
