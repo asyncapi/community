@@ -49,25 +49,31 @@ async function addEvent(zoomUrl, startDate, startTime, issueNumber) {
         };
 
         await calendar.events.insert({
-            calendarId: process.env.CALENDAR_ID,
-            requestBody: {
-                summary,
-                description: getDescription(description, communityIssuesUrl, issueNumber, zoomUrl, guest),
-                start: {
-                    dateTime: `${ startDate }T${ startTime }:00:00Z`
-                },
-                end: {
-                    dateTime: `${ startDate }T${ getEndTime(startTime) }:00:00Z`
-                },
-                location: zoomUrl,
-                extendedProperties: {
-                    private: {
-                        'ISSUE_ID': `${issueNumber}`
-                    }
-                },
-                banner
-            }
-        })
+          calendarId: process.env.CALENDAR_ID,
+          requestBody: {
+            summary,
+            description: getDescription(
+              description,
+              communityIssuesUrl,
+              issueNumber,
+              zoomUrl,
+              guest
+            ),
+            start: {
+              dateTime: `${startDate}T${startTime}:00:00Z`,
+            },
+            end: {
+              dateTime: `${startDate}T${getEndTime(startTime)}:00:00Z`,
+            },
+            location: zoomUrl,
+            extendedProperties: {
+              private: {
+                ISSUE_ID: `${issueNumber}`,
+              },
+              banner: banner,
+            },
+          },
+        });
 
         core.info('Event created')
     } catch (error) {

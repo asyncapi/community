@@ -45,7 +45,7 @@ on:
         required: true
         type: boolean
       meeting_banner:
-        description: 'Banner used in promoting the meeting'
+        description: 'Meeting banner(image) URL'
         required: false
         type: string
     secrets:
