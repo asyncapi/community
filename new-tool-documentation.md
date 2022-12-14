@@ -12,7 +12,7 @@ Learn how to add your tool to the AsyncAPI website using the `.asyncapi-tool` fi
 
 The [`.asyncapi-tool` file](https://github.com/asyncapi/website/blob/master/scripts/tools/tools-schema.json) requires a specific schema to describe the type and details of your AsyncAPI tool; this file automatically adds your tool to our website's [Tools Dashboard](https://www.asyncapi.com/tools) within a week. Every Monday, we run our workflow to add new tools or update existing tools in our website and thus, notifies us regarding the wrong format of the file used somewhere in Github using Slack notifications. You can even ask the maintainers to manually trigger workflow by [Creating a Github issue](https://github.com/asyncapi/website/issues/new/choose) or contact us via [AsyncAPI Slack](https://asyncapi.com/slack-invite).
 
-You must create and maintain your `.asyncapi-tool` file in your tool's repository, as it doesn't require AsyncAPI approval. 
+You must create and maintain your `.asyncapi-tool` file in your tool's repository, as it doesn't require AsyncAPI approval. There is no restriction on the directory in which the file has to be created. In case, you need to create 2 or more `.asyncapi-tool` files in same repository, you can do the same, just make sure you provide correct `repoUrl` for each of them. Same case applies for monorepo as well. 
 
 ## Tool file structure
 
@@ -23,14 +23,17 @@ Let's look at a sample `.asyncapi-tool` file in `JSON` and `YAML` structures. Yo
 ```JSON
 {
   "title": "Sample Tool",
-  "description": "Tool for testing",
+  "description": "Tool for testing purposes in AsyncAPI",
   "links": {
-    "websiteUrl": "https://akshatnema.netlify.app"
+    "websiteUrl": "https://akshatnema.netlify.app",
+    "docsUrl": "https://akshatnema.vercel.app",
+    "repoUrl": "https://github.com/akshatnema/Login-Registration-project/"
   },
   "filters": {
     "language": "javascript",
     "technology": ["react"],
-    "categories": ["code generator"]
+    "categories": ["code generator"],
+    "hasCommercial": true
   }
 }
 ```
@@ -43,31 +46,34 @@ title: Sample Tool
 description: Tool for testing
 links:
   websiteUrl: https://akshatnema.netlify.app
-  docsUrl: ''
+  docsUrl: https://akshatnema.vercel.app
+  repoUrl: https://github.com/akshatnema/Login-Registration-project/
 filters:
   language: javascript
   technology:
   - react
   categories:
   - code generator
+  hasCommercial: true
 ```
 
 Let's break down each field of an `.asyncapi-tool` file:
 
-|  Field Name 	|  Description 	|  Required 	|
-|---	|---	|---	|
-|  `title` 	|   Specifies the title or name of the tool; the official name of your tool on the website.  |  Yes 	|
-|   `description`	|  Specifies the tool's description; 30 words limitation. 	|  No* 	|
-|   `links`	|   Object which contains important links related to the tool.	|  No 	|
-|  `websiteUrl` 	|  This is an optional field specifying the tool's website URL. 	|  No 	|
-|  `docsUrl`	|  This is an optional field specifying the tool's documentation URL. 	|  No	|
-|  `filters` 	|  Object which contains various fields like language, technologies, and categories to provide information about the tool. 	|  Yes 	|
-|  `language` 	|  Specifies the primary language in which you created the tool. Our documentation lists [predefined languages](https://github.com/asyncapi/website/blob/master/scripts/tools/tags-color.js), and you can expand this list to add new languages according to your need. To add a new language, you have to create a [new issue on GitHub repository](https://github.com/asyncapi/website/issues/new/choose) specifying the language you want to add. 	|  No	|
-|  `technology` 	|  Specifies the technologies used to create the tool. Our documentation lists [predefined technologies](https://github.com/asyncapi/website/blob/master/scripts/tools/tags-color.js), and you can expand this list to add new technologies according to your need. To add a new technology, you have to create a [new issue on GitHub repository](https://github.com/asyncapi/website/issues/new/choose) specifying the technology you want to add. 	|  Yes 	|
-|  `categories` 	|  Specifies the list of categories that defines the type of tool. There are [predefined categories](https://github.com/asyncapi/website/blob/master/scripts/tools/categorylist.js) in our documentation that you can use to list your tool under the proper category. If your tool doesn't matches with any categories specified in list, you can choose `others` option to list your tool.  	|  Yes 	|
-|  `hasCommercial` 	|  Specifies whether the tool is a commercial product or open source. 	|  No (`false` by default) 	|
+|  Field Name 	| Type |  Description 	|  Required 	|
+|:---:| :---: |---	|:---:	|
+|  `title` 	| String |   Specifies the title or name of the tool; the official name of your tool on the website.  |  Yes 	|
+|   `description`	| String |  Specifies the tool's description; 30 words limitation. 	|  No* 	|
+|   `links`	| Object |   Object which contains important links related to the tool.	|  No 	|
+|  `websiteUrl` 	| String |  This is an optional field specifying the tool's website URL. 	|  No 	|
+|  `docsUrl`	| String |  This is an optional field specifying the tool's documentation URL. 	|  No	|
+|  `repoUrl`	| String |  This is an optional field specifying the tool's repository URL. 	|  No*	|
+|  `filters` 	| Object |  Object which contains various fields like language, technologies, and categories to provide information about the tool. 	|  Yes 	|
+|  `language` 	| String | Specifies the primary language in which you created the tool. Our documentation lists [predefined languages](https://github.com/asyncapi/website/blob/master/scripts/tools/tags-color.js), and you can expand this list to add new languages according to your need. To add a new language, you have to create a [new issue on GitHub repository](https://github.com/asyncapi/website/issues/new/choose) specifying the language you want to add. 	|  No	|
+|  `technology` 	| Array of strings | Specifies the technologies used to create the tool. Our documentation lists [predefined technologies](https://github.com/asyncapi/website/blob/master/scripts/tools/tags-color.js), and you can expand this list to add new technologies according to your need. To add a new technology, you have to create a [new issue on GitHub repository](https://github.com/asyncapi/website/issues/new/choose) specifying the technology you want to add. 	|  Yes 	|
+|  `categories` 	| Array of strings |  Specifies the list of categories that defines the type of tool. There are [predefined categories](https://github.com/asyncapi/website/blob/master/scripts/tools/categorylist.js) in our documentation that you can use to list your tool under the proper category. If your tool doesn't matches with any categories specified in list, you can choose `others` option to list your tool.  	|  Yes 	|
+|  `hasCommercial` 	| Boolean |  Specifies whether the tool is a commercial product or open source. 	|  No (`false` by default) 	|
 
-\* denotes that if you don't add description to the file, you should have proper repository description on Github. 
+\* denotes that if you don't add details to the respective, then you should have proper details on your Github repository. 
 
 You can also follow a simple example of `.asyncapi-tool` file to render the tool in website. This is example of [AsyncAPI Bundler](https://github.com/asyncapi/bundler). `.asyncapi-tool` file in YAML format:
 
