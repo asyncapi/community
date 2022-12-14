@@ -13,7 +13,7 @@ on:
         description: 'Provide short title for the meeting.'
         required: true
       desc:
-        description: 'Provide description that explains the purpose of the meeting'
+        description: 'Provide a description that explains meeting purpose'
         required: true
       meeting_banner: 
         description: 'Meeting banner(image) URL'
