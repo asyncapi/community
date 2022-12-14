@@ -3,6 +3,8 @@ title: "{{ env.MEETING_NAME }}, {{ env.FULL_DATE | date('H:mm [UTC] dddd MMMM Do
 labels: meeting
 ---
 
+<img src="{{ env.MEETING_BANNER }}" alt="" />
+
 <table>
 <tr>
 <th>Meeting Info</th>
@@ -59,10 +61,6 @@ labels: meeting
 <tr>
 <td>iCal File</td>
 <td><a href="https://calendar.google.com/calendar/ical/c_q9tseiglomdsj6njuhvbpts11c%40group.calendar.google.com/public/basic.ics">Add to your calendar</a>.</td>
-</tr>
-<tr>
-<td>Meeting Banner</td>
-<td>{{ env.MEETING_BANNER }}</td>
 </tr>
 <tr>
 <td>Newsletter</td>

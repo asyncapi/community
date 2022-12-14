@@ -3,16 +3,13 @@ title: "{{ env.MEETING_NAME }}, {{ env.FULL_DATE | date('H:mm [UTC] dddd MMMM Do
 labels: meeting
 ---
 
+<img src="{{ env.MEETING_BANNER }}" alt="" />
+
 <table>
 <tr>
 <th>Meeting Info</th>
 <th>Details</th>
 </tr>
-<tr>
-<td>Meeting Banner</td>
-<td><img src="{{ env.MEETING_BANNER }}" alt="" /></td>
-</tr>
-<tr>
 <td>Purpose</td>
 <td>{{ env.MEETING_DESC }}</td>
 </tr>
