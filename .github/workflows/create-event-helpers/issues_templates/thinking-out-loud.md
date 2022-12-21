@@ -64,6 +64,6 @@ labels: meeting
 </tr>
 <tr>
 <td>Newsletter</td>
-<td><a href="https://www.asyncapi.com/newsletter">Subscribe to get weekly updates on upcoming meetings</a>.</td>
+<td><a href="https://www.asyncapi.com/community/meetings">Subscribe to get weekly updates on upcoming meetings</a>.</td>
 </tr>
 </table>
