@@ -6,7 +6,7 @@ description: Learn how to add your tool to the AsyncAPI website using the .async
 ## Introduction 
 Learn how to add your tool to the AsyncAPI website using the `.asyncapi-tool` file. Make sure to structure your `.asyncapi-tool` file correctly to render your tool on the AsyncAPI website with customized tags and information for users to filter tools according to different categories.
 
-> The entire AsyncAPI Tools list is under the [AsyncAPI Docs tools overview](https://www.asyncapi.com/docs/tools) page.
+> The entire AsyncAPI Tools list is under the [AsyncAPI Tools Dashboard](https://www.asyncapi.com/tools) page.
 
 ## AsyncAPI tool file
 
@@ -62,18 +62,16 @@ Let's break down each field of an `.asyncapi-tool` file:
 |  Field Name 	| Type |  Description 	|  Required 	|
 |:---:| :---: |---	|:---:	|
 |  `title` 	| String |   Specifies the title or name of the tool; the official name of your tool on the website.  |  Yes 	|
-|   `description`	| String |  Specifies the tool's description; 30 words limitation. 	|  No* 	|
+|   `description`	| String |  Specifies the tool's description. * denotes that this field can be left blank/skipped if you wish to display Github repository description in the Tool Card	|  No* 	|
 |   `links`	| Object |   Object which contains important links related to the tool.	|  No 	|
 |  `websiteUrl` 	| String |  This is an optional field specifying the tool's website URL. 	|  No 	|
 |  `docsUrl`	| String |  This is an optional field specifying the tool's documentation URL. 	|  No	|
-|  `repoUrl`	| String |  This is an optional field specifying the tool's repository URL. 	|  No*	|
+|  `repoUrl`	| String |  This is an optional field specifying the tool's repository URL. By default, the URL matches the repo where .asyncapi-tool file is located. You can override default behaviour in cases when you have multiple .asyncapi-tool files in your repository.	|  No*	|
 |  `filters` 	| Object |  Object which contains various fields like language, technologies, and categories to provide information about the tool. 	|  Yes 	|
 |  `language` 	| String | Specifies the primary language in which you created the tool. Our documentation lists [predefined languages](https://github.com/asyncapi/website/blob/master/scripts/tools/tags-color.js), and you can expand this list to add new languages according to your need. To add a new language, you have to create a [new issue on GitHub repository](https://github.com/asyncapi/website/issues/new/choose) specifying the language you want to add. 	|  No	|
 |  `technology` 	| Array of strings | Specifies the technologies used to create the tool. Our documentation lists [predefined technologies](https://github.com/asyncapi/website/blob/master/scripts/tools/tags-color.js), and you can expand this list to add new technologies according to your need. To add a new technology, you have to create a [new issue on GitHub repository](https://github.com/asyncapi/website/issues/new/choose) specifying the technology you want to add. 	|  Yes 	|
 |  `categories` 	| Array of strings |  Specifies the list of categories that defines the type of tool. There are [predefined categories](https://github.com/asyncapi/website/blob/master/scripts/tools/categorylist.js) in our documentation that you can use to list your tool under the proper category. If your tool doesn't matches with any categories specified in list, you can choose `others` option to list your tool.  	|  Yes 	|
 |  `hasCommercial` 	| Boolean |  Specifies whether the tool is a commercial product or open source. 	|  No (`false` by default) 	|
-
-\* denotes that if you don't add details to the respective, then you should have proper details on your Github repository. 
 
 You can also follow a simple example of `.asyncapi-tool` file to render the tool in website. This is example of [AsyncAPI Bundler](https://github.com/asyncapi/bundler). `.asyncapi-tool` file in YAML format:
 
@@ -87,8 +85,6 @@ filters:
     categories:
         - bundler
 ```
-
-> You can find the predefined list of technologies in our repository under [Languages and Technologies](https://github.com/asyncapi/website/blob/master/scripts/tools/tags-color.js) and [Categories](https://github.com/asyncapi/website/blob/master/scripts/tools/categorylist.js). If you have any other technologies or languages we left in our list, or you want us to add them, feel free to [create a new AsyncAPI GitHub issue](https://github.com/asyncapi/website/issues/new/choose) specifying the languages or technologies.
 
 ## Manual addition of tools
 
@@ -122,19 +118,3 @@ Here's what a sample JSON object for an AsyncAPI tool should look like:
 ```
 
 > If your tool's information isn't showing up correctly in this file, please [create a new AsyncAPI GitHub issue](https://github.com/asyncapi/website/issues/new/choose) or contact us via [AsyncAPI Slack](https://asyncapi.com/slack-invite).
-
-## Tool card in website
-
-Let's break down the details and sections found on tool cards in the website's [Tools Dashboard](/tools):
-
-![Tools Card](/assets/tool-preview.webp)
-
-<ol>
-  <li> Specifies the Tool Name.</li>
-  <li> Specifies whether the tool is FREE to use or requires commercial access.</li>
-  <li> Specifies the tool description. The `Show More` button opens a small box with the complete tool description.</li>
-  <li> Specifies the tool's primary language.</li>
-  <li> Specifies the list of technologies used to create the tool.</li>
-  <li> The <b>View on Github</b> button directs the user to the tool's GitHub repository.</li>
-  <li> The <b>Visit Website</b> button directs the user to the official tool's website.</li>
-</ol>
