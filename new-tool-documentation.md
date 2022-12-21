@@ -32,7 +32,7 @@ Let's look at a sample `.asyncapi-tool` file in `JSON` and `YAML` structures. Yo
   "filters": {
     "language": "javascript",
     "technology": ["react"],
-    "categories": ["code generator"],
+    "categories": ["code-generator"],
     "hasCommercial": true
   }
 }
@@ -53,7 +53,7 @@ filters:
   technology:
   - react
   categories:
-  - code generator
+  - code-generator
   hasCommercial: true
 ```
 
@@ -64,14 +64,14 @@ Let's break down each field of an `.asyncapi-tool` file:
 |  `title` 	| String |   Specifies the title or name of the tool; the official name of your tool on the website.  |  Yes 	|
 |   `description`	| String |  Specifies the tool's description. * denotes that this field can be left blank/skipped if you wish to display Github repository description in the Tool Card	|  No* 	|
 |   `links`	| Object |   Object which contains important links related to the tool.	|  No 	|
-|  `websiteUrl` 	| String |  This is an optional field specifying the tool's website URL. 	|  No 	|
-|  `docsUrl`	| String |  This is an optional field specifying the tool's documentation URL. 	|  No	|
-|  `repoUrl`	| String |  This is an optional field specifying the tool's repository URL. By default, the URL matches the repo where .asyncapi-tool file is located. You can override default behaviour in cases when you have multiple .asyncapi-tool files in your repository.	|  No*	|
+|  `links.websiteUrl` 	| String |  This is an optional field specifying the tool's website URL. 	|  No 	|
+|  `links.docsUrl`	| String |  This is an optional field specifying the tool's documentation URL. 	|  No	|
+|  `links.repoUrl`	| String |  This is an optional field specifying the tool's repository URL. By default, the URL matches the repo where .asyncapi-tool file is located. You can override default behaviour in cases when you have multiple .asyncapi-tool files in your repository.	|  No*	|
 |  `filters` 	| Object |  Object which contains various fields like language, technologies, and categories to provide information about the tool. 	|  Yes 	|
-|  `language` 	| String | Specifies the primary language in which you created the tool. Our documentation lists [predefined languages](https://github.com/asyncapi/website/blob/master/scripts/tools/tags-color.js), and you can expand this list to add new languages according to your need. To add a new language, you have to create a [new issue on GitHub repository](https://github.com/asyncapi/website/issues/new/choose) specifying the language you want to add. 	|  No	|
-|  `technology` 	| Array of strings | Specifies the technologies used to create the tool. Our documentation lists [predefined technologies](https://github.com/asyncapi/website/blob/master/scripts/tools/tags-color.js), and you can expand this list to add new technologies according to your need. To add a new technology, you have to create a [new issue on GitHub repository](https://github.com/asyncapi/website/issues/new/choose) specifying the technology you want to add. 	|  Yes 	|
-|  `categories` 	| Array of strings |  Specifies the list of categories that defines the type of tool. There are [predefined categories](https://github.com/asyncapi/website/blob/master/scripts/tools/categorylist.js) in our documentation that you can use to list your tool under the proper category. If your tool doesn't matches with any categories specified in list, you can choose `others` option to list your tool.  	|  Yes 	|
-|  `hasCommercial` 	| Boolean |  Specifies whether the tool is a commercial product or open source. 	|  No (`false` by default) 	|
+|  `filters.language` 	| String | Specifies the primary language in which you created the tool. Our documentation lists [predefined languages](https://github.com/asyncapi/website/blob/master/scripts/tools/tags-color.js), and you can expand this list to add new languages according to your need. To add a new language, you have to create a [new issue on GitHub repository](https://github.com/asyncapi/website/issues/new/choose) specifying the language you want to add. 	|  No	|
+|  `filters.technology` 	| Array of strings | Specifies the technologies used to create the tool. Our documentation lists [predefined technologies](https://github.com/asyncapi/website/blob/master/scripts/tools/tags-color.js), and you can expand this list to add new technologies according to your need. To add a new technology, you have to create a [new issue on GitHub repository](https://github.com/asyncapi/website/issues/new/choose) specifying the technology you want to add. 	|  Yes 	|
+|  `filters.categories` 	| Array of strings |  Specifies the list of categories that defines the type of tool. There are [predefined categories](https://github.com/asyncapi/website/blob/master/scripts/tools/categorylist.js) in our documentation that you can use to list your tool under the proper category. If your tool doesn't matches with any categories specified in list, you can choose `others` option to list your tool.  	|  Yes 	|
+|  `filters.hasCommercial` 	| Boolean |  Specifies whether the tool is a commercial product or open source. 	|  No (`false` by default) 	|
 
 You can also follow a simple example of `.asyncapi-tool` file to render the tool in website. This is example of [AsyncAPI Bundler](https://github.com/asyncapi/bundler). `.asyncapi-tool` file in YAML format:
 
