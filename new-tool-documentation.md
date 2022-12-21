@@ -96,7 +96,7 @@ Inside this [`manual-tools.json`](https://github.com/asyncapi/website/blob/maste
 
 Once you've created your `.asyncapi-tool` file, check your tool configuration inside our database on the [automated-tools.json](https://github.com/asyncapi/website/blob/master/config/tools-automated.json) file.
 
-Here's what a sample JSON object for an AsyncAPI tool should look like:
+Here's what a sample JSON object for an AsyncAPI tool should look like after it is added to the final [tools.json](https://github.com/asyncapi/website/blob/master/config/tools.json) that keeps the information about all tools added manually and through `.asyncapi-tool` file:
 
 ```JSON
 {
