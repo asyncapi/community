@@ -110,7 +110,7 @@ Here's what a sample JSON object for an AsyncAPI tool should look like after it 
   "filters": {
     "language": "javascript",
     "technology": ["react"],
-    "categories": ["code generator"],
+    "categories": ["code-generator"],
     "hasCommercial": false,
     "isAsyncAPIOwner": false
   }
