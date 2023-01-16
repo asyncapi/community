@@ -9,6 +9,9 @@ on:
       date:
         description: 'Date in a form like: 2022-04-05 where 04 is a month and 05 is a day number.'
         required: true
+      meeting_banner: 
+        description: 'Meeting banner(image) URL'
+        required: false
 
 jobs:
 
@@ -17,6 +20,7 @@ jobs:
     with:
       time: ${{ github.event.inputs.time }}
       date: ${{ github.event.inputs.date }}
+      meeting_banner: ${{ github.event.inputs.meeting_banner }}
       meeting_name: Spec 3.0 Meeting
       meeting_desc: This is the meeting for community member involved in works related to 3.0 release of AsyncAPI Specification.
       host: jonas-lt@live.dk

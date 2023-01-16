@@ -44,7 +44,10 @@ on:
         description: 'Boolean information if meeting.'
         required: true
         type: boolean
-
+      meeting_banner:
+        description: 'Meeting banner(image) URL'
+        required: false
+        type: string
     secrets:
       GH_TOKEN: 
         required: true
@@ -114,6 +117,7 @@ jobs:
           MEETING_NAME: ${{ inputs.meeting_name }}
           MEETING_NAME_SUFFIX: ${{ inputs.meeting_name_suffix }}
           MEETING_DESC: ${{ inputs.meeting_desc }}
+          MEETING_BANNER: ${{ inputs.meeting_banner }}
           GUEST: ${{ inputs.guest }}
         with:
           filename: ${{ inputs.issue_template_path }}

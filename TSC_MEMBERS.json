@@ -10,6 +10,16 @@
 		]
 	},
 	{
+		"name": "Akshat Nema",
+		"github": "akshatnema",
+		"linkedin": "akshat-nema",
+		"twitter": "AksNema",
+		"availableForHire": true,
+		"repos": [
+			 "website"
+		]
+	},
+	{
 		"name": "Anand Sunderraman",
 		"github": "anandsunderraman",
 		"linkedin": "anand-sunderraman-a6b7a131",
@@ -116,7 +126,8 @@
 		"github": "KhudaDad414",
 		"twitter": "KhudaDadNomani",
 		"linkedin": "khudadadnomani",
-		"availableForHire": true,
+		"availableForHire": false,
+		"company": "Postman",
 		"repos": [
 			"optimizer",
 			"bindings"
@@ -191,15 +202,18 @@
 			"parser-js",
 			"parser-go",
 			"playground",
-                        "server-api",
+			"server-api",
 			"template-for-go-projects",
 			"website"
 		]
 	},
 	{
+		"name": "Azeez Elegbede",
+		"linkedin": "acebuild",
 		"github": "AceTheCreator",
 		"twitter": "_acebuild",
-		"availableForHire": true,
+		"company": "Postman",
+		"availableForHire": false,
 		"repos": [
 			"chatbot"
 		]
@@ -225,7 +239,8 @@
 		"repos": [
 			"brand",
 			"design-system",
-			"studio"
+			"studio",
+			"website"
 		]
 	},
 	{
@@ -264,6 +279,7 @@
 		"availableForHire": false,
 		"company": "Postman",
 		"repos": [
+			"bindings",
 			"converter-go",
 			"event-gateway",
 			"go-watermill-template",
@@ -271,6 +287,8 @@
 			"parser-api",
 			"parser-go",
 			"server-api",
+			"spec",
+			"spec-json-schemas",
 			"template-for-go-projects"
 		]
 	},
@@ -382,7 +400,8 @@
 		"github": "ron-debajyoti",
 		"twitter": "rondebajyoti",
 		"linkedin": "rondebajyoti",
-		"availableForHire": true,
+		"availableForHire": false,
+		"company": "Narvar",
 		"repos": [
 			"modelina"
 		]
@@ -395,6 +414,58 @@
 		"availableForHire": true,
 		"repos": [
 			"generator"
+      ]
+   },
+  {
+		"name": "Ivan Garcia Sainz-Aja",
+		"github": "ivangsa",
+		"linkedin": "ivangarciasainzaja",
+		"availableForHire": false,
+		"company": "SNGULAR",
+		"repos": [
+			"vs-asyncapi-preview"
+		]
+	},
+	{
+		"name": "Jeremy Whitlock",
+		"github": "whitlockjc",
+		"linkedin": "whitlockjc",
+		"twitter": "whitlockjc",
+		"availableForHire": false,
+		"company": "Google",
+		"repos": [
+			"bindings"
+		]
+	},
+	{
+		"name": "Vladimír Gorej",
+		"github": "char0n",
+		"linkedin": "vladimirgorej",
+		"twitter": "vladimirgorej",
+		"availableForHire": false,
+		"company": "SmartBear",
+		"repos": [
+			"bindings",
+			"spec",
+			"spec-json-schemas"
+		]
+	},
+	{
+		"name": "Viacheslav Turovskyi",
+		"github": "aeworxet",
+		"availableForHire": false,
+		"repos": [
+			"bundler"
+		]
+	},
+	{
+		"name": "Alexander Wichmann",
+		"github": "VisualBean",
+		"linkedin": "alexcarlsen",
+		"availableForHire": false,
+		"company": "The LEGO Group",
+		"repos": [
+			"bindings"
 		]
 	}
 ]
