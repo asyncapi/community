@@ -386,5 +386,15 @@
 		"repos": [
 			"modelina"
 		]
+	},
+	{
+		"name": "Florence Njeri",
+		"github": "Florence-Njeri",
+		"linkedin": "florencenjeri",
+		"twitter": "njericodes",
+		"availableForHire": true,
+		"repos": [
+			"generator"
+		]
 	}
 ]
