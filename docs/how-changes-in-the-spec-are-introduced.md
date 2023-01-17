@@ -57,16 +57,18 @@ The image below visualizes the whole process of how changes are introduced to th
 ```mermaid
 sequenceDiagram
     Contributor->>+Specification: Propose RFC as an issue/PR
-    Specification-->>+Contributor: Initial review and request for Champion
+    Maintainers-->>+Contributor: Initial review and request for Champion
+    Community-->>+Contributor: Initial review and request for Champion
     Contributor->>+Specification: Further contribution through different stages to different repositories
-    Specification-->>-Contributor: Possible multiple review rounds
+    Maintainers-->>+Contributor: Possible multiple review rounds
+    Community-->>+Contributor: Possible multiple review rounds
     Contributor->>+Specification: Potential improvement and compliant implementation
-    Specification-->>-Contributor: Proposal acceptance and preperation for next release
-    Specification->>+Release Coordinator: Request for a release coordinator 
-    Release Coordinator-->>-Specification: Review of possible release candidates
+    Maintainers-->>+Contributor: Proposal acceptance and preperation for next release
+    Maintainers->>+Community: Request for a release coordinator volunteer
+    Release Coordinator ->>+ Community: Notify Community that new release cycle starts
+    Release Coordinator-->>+Specification: Review of possible release candidates
     Release Coordinator-->>+Contributor: Indicate what is missing to have things release in current cycle
-    Release Coordinator->>+Maintainer: Ping maintainers so they are aware of the release
-    Maintainer-->>-Specification: Publish Release
-    Release Coordinator->>+Maintainer: Ping tools maintainers about new release
+    Release Coordinator->>+Maintainers: Ping maintainers so they are aware of the release candidates
+    Maintainers-->>+Specification: Publish Release
     Release Coordinator ->>+ Community: Notify Community about new release
 ```
