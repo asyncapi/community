@@ -1,6 +1,5 @@
-**
 
-# How spec changes are introduced
+## How spec changes are introduced
 AsyncAPI Initiative always concentrates on the problems rather than the solution. This is because you are generally rather single-minded when you already have a solution in mind to a problem instead of fully diving into the issue, seeing alternatives, and finding the best solution. 
 
 ### RFCs & champions
@@ -49,7 +48,7 @@ This part of the lifecycle aims to describe all details of the process so that a
 - The coordinator keeps a closed watch on what is merged, documents it in release notes, and engages contributors and maintainers of the spec to collaborate on a release.
 - Maintainers trigger release when ready, release notes are published, and the world of open source won again.
 
-You can learn more about the release process [here](https://github.com/asyncapi/spec/blob/master/RELEASE_PROCESS.md#what). 
+Learn more about the [release process](https://github.com/asyncapi/spec/blob/master/RELEASE_PROCESS.md#what). 
 
 ### Release process visual
 The image below visualizes the whole process of how changes are introduced to the spec in a single glance. 
