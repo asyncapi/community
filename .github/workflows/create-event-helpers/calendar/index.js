@@ -24,6 +24,7 @@ async function addEvent(zoomUrl, startDate, startTime, issueNumber) {
     const title = process.env.MEETING_NAME;
     const suffix = process.env.MEETING_NAME_SUFFIX;
     const description = process.env.MEETING_DESC;
+    const banner = process.env.MEETING_BANNER;
     const guest = process.env.GUEST;
     const summary = suffix ? `${title} ${suffix}` : title;
 
@@ -48,24 +49,31 @@ async function addEvent(zoomUrl, startDate, startTime, issueNumber) {
         };
 
         await calendar.events.insert({
-            calendarId: process.env.CALENDAR_ID,
-            requestBody: {
-                summary,
-                description: getDescription(description, communityIssuesUrl, issueNumber, zoomUrl, guest),
-                start: {
-                    dateTime: `${ startDate }T${ startTime }:00:00Z`
-                },
-                end: {
-                    dateTime: `${ startDate }T${ getEndTime(startTime) }:00:00Z`
-                },
-                location: zoomUrl,
-                extendedProperties: {
-                    private: {
-                        'ISSUE_ID': `${issueNumber}`
-                    }
-                }
-            }
-        })
+          calendarId: process.env.CALENDAR_ID,
+          requestBody: {
+            summary,
+            description: getDescription(
+              description,
+              communityIssuesUrl,
+              issueNumber,
+              zoomUrl,
+              guest
+            ),
+            start: {
+              dateTime: `${startDate}T${startTime}:00:00Z`,
+            },
+            end: {
+              dateTime: `${startDate}T${getEndTime(startTime)}:00:00Z`,
+            },
+            location: zoomUrl,
+            extendedProperties: {
+              private: {
+                ISSUE_ID: `${issueNumber}`,
+                BANNER: banner,
+              },
+            },
+          },
+        });
 
         core.info('Event created')
     } catch (error) {
