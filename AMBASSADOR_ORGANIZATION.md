@@ -17,10 +17,13 @@ The AsyncAPI Ambassador Program aims to bring AsyncAPI closer to both current us
 - The model currently in place for adding members to the Technical Steering Committee through PR will be used.
 - The TSC or delegated maintainers of community repositories will evaluate applications according to compliance requirements via a traditional PR flow.
 - All ambassador information will be displayed on the AsyncAPI website in a list after the PR is merged.
+- The program has the team tag `@asyncapi/ambassadors` to notify ambassadors on GitHub.
 
 ### Requirements to become an AsyncAPI Ambassador
 
 The participation will be determined and checked annually. The minimum requirement for being an ambassador is to make **4 contributions per year** in the form of articles, talks, videos, podcasts, presentations, driving initiatives, etc.
+
+Ambassadors can be invited to review content (articles, talks, videos...) related to the community. These reviews are optional and will be counted as an additional contribution.
 
 Some clarifications on the type of contributions:
     
@@ -34,9 +37,8 @@ Some clarifications on the type of contributions:
    1. If contributors publish 3 articles and propel 1 initiative about AsyncAPI in eight months, they will become ambassadors for the whole year.
    2. If contributors make 1 presentation, write 2 articles, and propel 1 initiative, they will become ambassadors for the whole year.
    3. If you were accepted as ambassador on the 5th of May 2022, you have already fulfilled the requirements. On the 5th of May 2023, we will check if you qualify again after the 5th of May 2022.
-
-
-### Duties of AsyncAPI Ambassadors:
+   
+   ### Duties of AsyncAPI Ambassadors:
 
 - Be in tune with AsyncAPI's mission and values.
 - Always respect the [code of conduct](https://github.com/asyncapi/.github/blob/master/CODE_OF_CONDUCT.md).
@@ -44,6 +46,7 @@ Some clarifications on the type of contributions:
 
 ### Benefits of being an AsyncAPI Ambassador:
 
+- Invitation to [AsyncAPI Initiative organization](https://github.com/orgs/asyncapi/people).
 - Receive a special swag pack for Ambassadors (valued at $150 approx., including shipping cost).
 - Receive swag for conference or workshop participants (valued at $70 approx., including shipping cost).
 - Free entry to AsyncAPI conferences.
