@@ -29,7 +29,7 @@ Some clarifications on the type of contributions:
 - Special contributions should be driven to support the community or enhance its visibility (i.e., getting new sponsors or driving initiatives) 
 - If we did not identify the contributions, just let us know.
          
-   Examples: 
+Examples: 
 
 1. If contributors publish 3 articles and propel 1 initiative about AsyncAPI in eight months, they will become ambassadors for the whole year.
 2. If contributors make 1 presentation, write 2 articles, and propel 1 initiative, they will become ambassadors for the whole year.
