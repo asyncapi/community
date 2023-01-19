@@ -41,7 +41,7 @@ Some clarifications on the type of contributions:
 - Always respect the [code of conduct](https://github.com/asyncapi/.github/blob/master/CODE_OF_CONDUCT.md).
 - Be active in your role as an ambassador.
 
-### Benefits of being an AsyncAPI Ambassador:
+### Ambassador benefits
 
 - Invitation to [AsyncAPI Initiative organization](https://github.com/orgs/asyncapi/people).
 - Receive a special swag pack for Ambassadors (valued at $150 approx., including shipping cost).
