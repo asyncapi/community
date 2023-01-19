@@ -24,10 +24,10 @@ Ambassadors can be invited to review content (articles, talks, videos...) relate
 
 Some clarifications on the type of contributions:
     
-   - Articles, videos, and podcasts can be published on [asyncapi.com/blog](https://www.asyncapi.com/blog) or other domains. 
-   - Talks and presentations can be displayed at different events or workshops. Within it, AsyncAPI should appear at the core of the presentation. The presentation would never be used as a disguised marketing tool for other products/projects.
-   - Special contributions should be driven to support the community or enhance its visibility (i.e., getting new sponsors or driving initiatives) 
-   - If we did not identify the contributions, just let us know.
+- Articles, videos, and podcasts can be published on [asyncapi.com/blog](https://www.asyncapi.com/blog) or other domains. 
+- Talks and presentations can be displayed at different events or workshops. Within it, AsyncAPI should appear at the core of the presentation. The presentation would never be used as a disguised marketing tool for other products/projects.
+- Special contributions should be driven to support the community or enhance its visibility (i.e., getting new sponsors or driving initiatives) 
+- If we did not identify the contributions, just let us know.
          
    Examples: 
 
