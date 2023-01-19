@@ -4,6 +4,10 @@
 
 Google [Season of Docs](https://developers.google.com/season-of-docs) gives technical writers an opportunity to work with open source projects.
 
+## Program Maintainers
+
+- Alejandra Quetzalli ([@alequetzalli](https://github.com/alequetzalli)\): <https://twitter.com/QuetzalliAle>
+- Lukasz Gornicki ([@derberg](https://github.com/derberg)\): <https://twitter.com/derberq>
 ## 2022 participation
 
 AsyncAPI has been [accepted as a mentoring organization](https://developers.google.com/season-of-docs/docs/2022/participants) in Season of Docs (GSoD) 2022!

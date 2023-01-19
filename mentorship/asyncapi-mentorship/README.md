@@ -14,7 +14,7 @@ The AsyncAPI Mentorship program current cycle is 2022 and more details are comin
 ## Program Maintainers
 
 - Azeez Elegbede ([@acethecreator](https://github.com/acethecreator)\): <https://twitter.com/_acebuild>
-- Lukasz Gornicki ([@acethecreator](https://github.com/derberg)\): <https://twitter.com/derberq>
+- Lukasz Gornicki ([@derberg](https://github.com/derberg)\): <https://twitter.com/derberq>
 
 The AsyncAPI mentorship program is hosted by the AsyncAPI initiative, the industry standard for defining asynchronous APIs.
 
