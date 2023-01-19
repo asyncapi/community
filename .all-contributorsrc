@@ -318,6 +318,15 @@
       "contributions": [
         "blog"
       ]
+    },
+    {
+      "login": "Dindihub",
+      "name": "Dindihub",
+      "avatar_url": "https://avatars.githubusercontent.com/u/100135497?v=4",
+      "profile": "https://github.com/Dindihub",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "commitConvention": "none"

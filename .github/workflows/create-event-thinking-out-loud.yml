@@ -15,6 +15,9 @@ on:
       guest:
         description: 'Provide the name of the guest.'
         required: true
+      meeting_banner: 
+        description: 'Meeting banner(image) URL'
+        required: false
 
 jobs:
 
@@ -23,6 +26,7 @@ jobs:
     with:
       time: ${{ github.event.inputs.time }}
       date: ${{ github.event.inputs.date }}
+      meeting_banner: ${{ github.event.inputs.meeting_banner }}
       meeting_name: Thinking Out Loud
       meeting_desc: ${{ github.event.inputs.desc }}
       guest: ${{ github.event.inputs.guest }}
