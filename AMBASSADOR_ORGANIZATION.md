@@ -50,7 +50,7 @@ Some clarifications on the type of contributions:
 - Community-wide recognition.
 - All our respects for your contribution!
 
-### Are you interested in becoming an official AsyncAPI Ambassador?
+### Become an AsyncAPI Ambassador
 
 The process of becoming an ambassador is very simple. Go to the **community** repository and open a PR to edit the `ambassadors.json` file. The TSC will then evaluate your candidacy!
 
