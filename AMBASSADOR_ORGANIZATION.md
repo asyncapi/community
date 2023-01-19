@@ -20,7 +20,7 @@ The AsyncAPI Ambassador Program aims to bring AsyncAPI closer to both current us
 
 The participation will be determined and checked annually. The minimum requirement for being an ambassador is to make **4 contributions per year** in the form of articles, talks, videos, podcasts, presentations, driving initiatives, etc.
 
-Ambassadors can be invited to review content (articles, talks, videos...) related to the community. These reviews are optional and will be counted as an additional contribution.
+Ambassadors can be invited to review content (i.e., articles, talks, videos) related to the community. These reviews are optional and will be counted as an additional contribution.
 
 Some clarifications on the type of contributions:
     
