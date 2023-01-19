@@ -16,7 +16,7 @@ The AsyncAPI Ambassador Program aims to bring AsyncAPI closer to both current us
 - All ambassador information will be displayed on the AsyncAPI website in a list after the PR is merged.
 - The program has the team tag `@asyncapi/ambassadors` to notify ambassadors on GitHub.
 
-### Requirements to become an AsyncAPI Ambassador
+### Ambassador requirements
 
 The participation will be determined and checked annually. The minimum requirement for being an ambassador is to make **4 contributions per year** in the form of articles, talks, videos, podcasts, presentations, driving initiatives, etc.
 
