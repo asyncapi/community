@@ -3,12 +3,13 @@ title: "{{ env.MEETING_NAME }}, {{ env.FULL_DATE | date('H:mm [UTC] dddd MMMM Do
 labels: meeting
 ---
 
+<img src="{{ env.MEETING_BANNER }}" alt="" />
+
 <table>
 <tr>
 <th>Meeting Info</th>
 <th>Details</th>
 </tr>
-<tr>
 <td>Purpose</td>
 <td>{{ env.MEETING_DESC }}</td>
 </tr>
@@ -58,7 +59,7 @@ labels: meeting
 </tr>
 <tr>
 <td>Newsletter</td>
-<td><a href="https://www.asyncapi.com/newsletter">Subscribe to get weekly updates on upcoming meetings</a>.</td>
+<td><a href="https://www.asyncapi.com/community/meetings">Subscribe to get weekly updates on upcoming meetings</a>.</td>
 </tr>
 </table>
   
