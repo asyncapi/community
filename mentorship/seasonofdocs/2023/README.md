@@ -6,4 +6,4 @@ Google [Season of Docs](https://developers.google.com/season-of-docs) gives tech
 
 ## 2023 participation
 
-AsyncAPI is currently applying phase of GSOD 2023
+AsyncAPI will apply to GSOD 2023 once applications open
