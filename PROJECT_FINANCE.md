@@ -9,7 +9,7 @@ In order to support AsyncAPI, the following options are available -
 - **Linux Foundation Crowdfunding**: Visit our [Linux Foundation Crowdfunding Page](https://crowdfunding.lfx.linuxfoundation.org/projects/445898e9-42a2-4965-9e0a-c2a714f381bc)
 
 
-# How do we manage expenses?
+## How do we manage expenses?
 
 1. AsyncAPI Initiative welcomes support in all 3 ways mentioned above.
 
