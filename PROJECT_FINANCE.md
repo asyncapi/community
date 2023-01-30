@@ -1,4 +1,4 @@
-# Support AsyncAPI Initiative
+## Support AsyncAPI Initiative
 
 Your support would be greatly appreciated for AsyncAPI, where we aim to improve the current state of Event-Driven Architectures (EDAs) and their tooling.
 
