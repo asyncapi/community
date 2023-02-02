@@ -20,4 +20,4 @@ In order to support AsyncAPI, the following options are available:
    
    - Open Collective & GitHub Sponsors fundings transfers to Open Collective
   
-   - Linux Foundation Crowdfunding on the same 
+   - Linux Foundation Crowdfunding 
