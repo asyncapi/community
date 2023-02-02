@@ -61,6 +61,37 @@ AsyncAPI hosts different meetings every week. Each meeting focuses on different 
 To learn more about meetings setup and automation, [read our FAQ](https://github.com/asyncapi/community/blob/master/MEETINGS_ORGANIZATION.md)
 
 
+# Run Locally
+
+1. Open Command Prompt in your local computer
+
+2. Clone the repository, 
+
+```bash
+git clone https://github.com/asyncapi/website/
+```
+
+3. Navigate to the website directory
+
+```bash
+cd website
+```
+
+4. Install all website dependencies 
+
+```bash
+npm install
+```
+
+5. Run the website locally
+
+```bash
+npm run dev
+```
+
+6. Access the live development server at [localhost:3000](http://localhost:3000).
+
+
 ## Contributors
 
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
