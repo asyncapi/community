@@ -18,6 +18,6 @@ In order to support AsyncAPI, the following options are available:
 3. Since Open Collective and Linux foundation Crowdfunding are totally disjoint, 
    thus we can conclude that we can conclude that we manage expensed in 2 platforms ->
    
-   - Open Collective & GitHub Sponsors fundings on Open Collective
+   - Open Collective & GitHub Sponsors fundings transfers to Open Collective
   
    - Linux Foundation Crowdfunding on the same 
