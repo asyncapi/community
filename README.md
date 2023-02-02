@@ -61,7 +61,7 @@ AsyncAPI hosts different meetings every week. Each meeting focuses on different 
 To learn more about meetings setup and automation, [read our FAQ](https://github.com/asyncapi/community/blob/master/MEETINGS_ORGANIZATION.md)
 
 
-# Run Locally
+## Run Locally
 
 1. Open Command Prompt in your local computer
 
