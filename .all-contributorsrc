@@ -336,6 +336,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "philCryoport",
+      "name": "Philip Schlesinger @ Cryoport",
+      "avatar_url": "https://avatars.githubusercontent.com/u/28901899?v=4",
+      "profile": "https://github.com/philCryoport",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "commitConvention": "angular"
