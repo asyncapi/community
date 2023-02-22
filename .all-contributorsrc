@@ -356,6 +356,17 @@
         "review",
         "ideas"
       ]
+    },
+    {
+      "login": "hguerrero",
+      "name": "Hugo Guerrero",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1001939?v=4",
+      "profile": "http://twitter.com/hguerreroo",
+      "contributions": [
+        "talk",
+        "review",
+        "ideas"
+      ]
     }
   ],
   "commitConvention": "angular"
