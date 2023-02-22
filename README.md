@@ -103,6 +103,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/Barbanio"><img src="https://avatars.githubusercontent.com/u/77982319?v=4?s=100" width="100px;" alt="Barbanio González"/><br /><sub><b>Barbanio González</b></sub></a><br /><a href="#blog-Barbanio" title="Blogposts">📝</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/Dindihub"><img src="https://avatars.githubusercontent.com/u/100135497?v=4?s=100" width="100px;" alt="Dindihub"/><br /><sub><b>Dindihub</b></sub></a><br /><a href="https://github.com/asyncapi/community/commits?author=Dindihub" title="Documentation">📖</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://bhaswatiroy.github.io/Bhaswati-Roy-Portfolio/"><img src="https://avatars.githubusercontent.com/u/78029145?v=4?s=100" width="100px;" alt="Bhaswati Roy "/><br /><sub><b>Bhaswati Roy </b></sub></a><br /><a href="https://github.com/asyncapi/community/commits?author=BhaswatiRoy" title="Documentation">📖</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/philCryoport"><img src="https://avatars.githubusercontent.com/u/28901899?v=4?s=100" width="100px;" alt="Philip Schlesinger @ Cryoport"/><br /><sub><b>Philip Schlesinger @ Cryoport</b></sub></a><br /><a href="https://github.com/asyncapi/community/commits?author=philCryoport" title="Documentation">📖</a></td>
     </tr>
   </tbody>
 </table>
