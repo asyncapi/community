@@ -345,6 +345,17 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "M3lkior",
+      "name": "Ludovic Dussart",
+      "avatar_url": "https://avatars.githubusercontent.com/u/5501911?v=4",
+      "profile": "http://blog.ineat-conseil.fr/",
+      "contributions": [
+        "talk",
+        "review",
+        "ideas"
+      ]
     }
   ],
   "commitConvention": "angular"
