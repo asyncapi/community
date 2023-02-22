@@ -106,6 +106,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/philCryoport"><img src="https://avatars.githubusercontent.com/u/28901899?v=4?s=100" width="100px;" alt="Philip Schlesinger @ Cryoport"/><br /><sub><b>Philip Schlesinger @ Cryoport</b></sub></a><br /><a href="https://github.com/asyncapi/community/commits?author=philCryoport" title="Documentation">📖</a></td>
       <td align="center" valign="top" width="14.28%"><a href="http://blog.ineat-conseil.fr/"><img src="https://avatars.githubusercontent.com/u/5501911?v=4?s=100" width="100px;" alt="Ludovic Dussart"/><br /><sub><b>Ludovic Dussart</b></sub></a><br /><a href="#talk-M3lkior" title="Talks">📢</a> <a href="https://github.com/asyncapi/community/pulls?q=is%3Apr+reviewed-by%3AM3lkior" title="Reviewed Pull Requests">👀</a> <a href="#ideas-M3lkior" title="Ideas, Planning, & Feedback">🤔</a></td>
     </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://danielkocot.github.io"><img src="https://avatars.githubusercontent.com/u/466609?v=4?s=100" width="100px;" alt="Daniel Kocot"/><br /><sub><b>Daniel Kocot</b></sub></a><br /><a href="#talk-danielkocot" title="Talks">📢</a> <a href="https://github.com/asyncapi/community/pulls?q=is%3Apr+reviewed-by%3Adanielkocot" title="Reviewed Pull Requests">👀</a> <a href="#ideas-danielkocot" title="Ideas, Planning, & Feedback">🤔</a></td>
+    </tr>
   </tbody>
 </table>
 
