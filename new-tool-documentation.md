@@ -88,13 +88,13 @@ filters:
 
 ## Manual addition of tools
 
-If you don't want to create the `.asyncapi-tool` file in your repository or your tool's codebase doesn't exist in Github, the [AsyncAPI website repository](https://github.com/asyncapi/website) contains a [`manual-tools.json`](https://github.com/asyncapi/website/blob/master/config/tools-manual.json) file that adds your tool to our website's [Tools Dashboard](/tools).
+If you don't want to create the `.asyncapi-tool` file in your repository or your tool's codebase doesn't exist in Github, the [AsyncAPI website repository](https://github.com/asyncapi/website) contains a [`tools-manual.json`](https://github.com/asyncapi/website/blob/master/config/tools-manual.json) file that adds your tool to our website's [Tools Dashboard](/tools).
 
-Inside this [`manual-tools.json`](https://github.com/asyncapi/website/blob/master/config/tools-manual.json) file, you must choose the desired category for your tool and add your tool as an **element** inside that particular category **object**.
+Inside this [`tools-manual.json`](https://github.com/asyncapi/website/blob/master/config/tools-manual.json) file, you must choose the desired category for your tool and add your tool as an **element** inside that particular category **object**.
 
 ## JSON tool structure
 
-Once you've created your `.asyncapi-tool` file, check your tool configuration inside our database on the [automated-tools.json](https://github.com/asyncapi/website/blob/master/config/tools-automated.json) file.
+Once you've created your `.asyncapi-tool` file, check your tool configuration inside our database on the [tools-automated.json](https://github.com/asyncapi/website/blob/master/config/tools-automated.json) file.
 
 Here's what a sample JSON object for an AsyncAPI tool should look like after it is added to the final [tools.json](https://github.com/asyncapi/website/blob/master/config/tools.json) that keeps the information about all tools added manually and through `.asyncapi-tool` file:
 
