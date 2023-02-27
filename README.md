@@ -108,6 +108,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     </tr>
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="http://twitter.com/hguerreroo"><img src="https://avatars.githubusercontent.com/u/1001939?v=4?s=100" width="100px;" alt="Hugo Guerrero"/><br /><sub><b>Hugo Guerrero</b></sub></a><br /><a href="#talk-hguerrero" title="Talks">📢</a> <a href="https://github.com/asyncapi/community/pulls?q=is%3Apr+reviewed-by%3Ahguerrero" title="Reviewed Pull Requests">👀</a> <a href="#ideas-hguerrero" title="Ideas, Planning, & Feedback">🤔</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="http://www.alejandraquetzalli.com"><img src="https://avatars.githubusercontent.com/u/19964402?v=4?s=100" width="100px;" alt="Alejandra Quetzalli "/><br /><sub><b>Alejandra Quetzalli </b></sub></a><br /><a href="#talk-alequetzalli" title="Talks">📢</a> <a href="https://github.com/asyncapi/community/pulls?q=is%3Apr+reviewed-by%3Aalequetzalli" title="Reviewed Pull Requests">👀</a> <a href="#ideas-alequetzalli" title="Ideas, Planning, & Feedback">🤔</a></td>
     </tr>
   </tbody>
 </table>
