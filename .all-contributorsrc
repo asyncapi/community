@@ -327,7 +327,69 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "BhaswatiRoy",
+      "name": "Bhaswati Roy ",
+      "avatar_url": "https://avatars.githubusercontent.com/u/78029145?v=4",
+      "profile": "https://bhaswatiroy.github.io/Bhaswati-Roy-Portfolio/",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "philCryoport",
+      "name": "Philip Schlesinger @ Cryoport",
+      "avatar_url": "https://avatars.githubusercontent.com/u/28901899?v=4",
+      "profile": "https://github.com/philCryoport",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "M3lkior",
+      "name": "Ludovic Dussart",
+      "avatar_url": "https://avatars.githubusercontent.com/u/5501911?v=4",
+      "profile": "http://blog.ineat-conseil.fr/",
+      "contributions": [
+        "talk",
+        "review",
+        "ideas"
+      ]
+    },
+    {
+      "login": "danielkocot",
+      "name": "Daniel Kocot",
+      "avatar_url": "https://avatars.githubusercontent.com/u/466609?v=4",
+      "profile": "https://danielkocot.github.io",
+      "contributions": [
+        "talk",
+        "review",
+        "ideas"
+      ]
+    },
+    {
+      "login": "hguerrero",
+      "name": "Hugo Guerrero",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1001939?v=4",
+      "profile": "http://twitter.com/hguerreroo",
+      "contributions": [
+        "talk",
+        "review",
+        "ideas"
+      ]
+    },
+    {
+      "login": "alequetzalli",
+      "name": "Alejandra Quetzalli ",
+      "avatar_url": "https://avatars.githubusercontent.com/u/19964402?v=4",
+      "profile": "http://www.alejandraquetzalli.com",
+      "contributions": [
+        "talk",
+        "review",
+        "ideas"
+      ]
     }
   ],
-  "commitConvention": "none"
+  "commitConvention": "angular"
 }
