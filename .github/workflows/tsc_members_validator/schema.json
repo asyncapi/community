@@ -76,7 +76,8 @@
       },
       "required": [
         "github",
-        "repos"
+        "repos",
+        "slack"
       ],
       "additionalProperties": false
     }
