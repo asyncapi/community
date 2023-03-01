@@ -28,7 +28,7 @@ jobs:
       meeting_banner: ${{ github.event.inputs.meeting_banner }}
       meeting_desc: The purpose of this meeting is to focus on contributors, focus on people that want to contribute to AsyncAPI Initiative but do not know how to do it.
       host: lpgornicki@gmail.com
-      alternative_host: "fmvilas@gmail.com,devlopergene@gmail.com"
+      alternative_host: "fmvilas@gmail.com,devlopergene@gmail.com,sibanda.thulie@gmail.com"
       issue_template_path: .github/workflows/create-event-helpers/issues_templates/lets-talk-about-contrib.md
       create_zoom: false
     secrets:
