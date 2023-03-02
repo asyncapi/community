@@ -358,7 +358,9 @@
 		"availableForHire": false,
 		"company": "Postman",
 		"repos": [
-			"website"
+			"website",
+			"training",
+			"community"
 		]
 	},
 	{
@@ -542,8 +544,15 @@
 	},
 	{
 		"name": "Barbaño González",
-		"github": "Barbanio",
-		"slack": "U01J42QDSLU",
-		"linkedin": "barbano-gonzalez-moreno"
+		"linkedin": "barbano-gonzalez-moreno",
+		"twitter": "BarbanoGonzalez",
+		"github":"Barbanio",
+		"slack":"U01J42QDSLU",
+		"availableForHire": false,
+		"company": "Postman",
+		"repos": [
+			 "training",
+			 "community"
+		]
 	}
 ]
