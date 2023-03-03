@@ -55,6 +55,13 @@
             "Postman"
           ]
         },
+        "slack":{
+          "type":"string",
+          "description": "It must be a valid slackID. It is the ID of the slack of the person 's profile",
+          "examples":[
+            "U01QPAP1QWE"
+          ]
+        },
         "repos": {
           "type": "array",
           "minItems": 1,
@@ -69,7 +76,8 @@
       },
       "required": [
         "github",
-        "repos"
+        "repos",
+        "slack"
       ],
       "additionalProperties": false
     }
