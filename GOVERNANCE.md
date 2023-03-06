@@ -20,5 +20,8 @@ Among others, the duties and responsibilities of the Executive Director are the 
 * Make sure AsyncAPI is economically viable, i.e., get more sponsors or other ways of funding.
 * Safely hold all the passwords of the services AsyncAPI uses.
 * Guarantee everyone who needs it (and has the right to) has access to the services AsyncAPI uses.
+* Make sure that regularly sucessions of the Executive Director are done through a transparent voting process.
+* Takes care of the funding management, e.g., Open Collective, Github Sponsors, etc.
+* Must be a servant leader and has no power other than the specified in the [charter](./CHARTER.md). Everything that is proposed should be voted by the TSC.
 
 Please note that the list above is not an exhaustive list and should not be treated as a legal document but just for reference.
