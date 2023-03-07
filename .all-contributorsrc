@@ -356,6 +356,39 @@
         "review",
         "ideas"
       ]
+    },
+    {
+      "login": "danielkocot",
+      "name": "Daniel Kocot",
+      "avatar_url": "https://avatars.githubusercontent.com/u/466609?v=4",
+      "profile": "https://danielkocot.github.io",
+      "contributions": [
+        "talk",
+        "review",
+        "ideas"
+      ]
+    },
+    {
+      "login": "hguerrero",
+      "name": "Hugo Guerrero",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1001939?v=4",
+      "profile": "http://twitter.com/hguerreroo",
+      "contributions": [
+        "talk",
+        "review",
+        "ideas"
+      ]
+    },
+    {
+      "login": "alequetzalli",
+      "name": "Alejandra Quetzalli ",
+      "avatar_url": "https://avatars.githubusercontent.com/u/19964402?v=4",
+      "profile": "http://www.alejandraquetzalli.com",
+      "contributions": [
+        "talk",
+        "review",
+        "ideas"
+      ]
     }
   ],
   "commitConvention": "angular"
