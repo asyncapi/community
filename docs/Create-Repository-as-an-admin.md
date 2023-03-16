@@ -94,6 +94,3 @@ Checkout the following [`Codeowners file` example from the `/website` repository
 	 
 README.md @alequetzalli @fmvilas @derberg @mcturco @akshatnema @magicmatatjahu @asyncapi-bot-eve
 ```
-
-## Donate project to AsyncAPI
-To donate a project to AsyncAPI, copy the repository settings in the following [sample donated RabbitMQ template for .NET](https://github.com/mr-nuno/dotnet-rabbitmq-template).
