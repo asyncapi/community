@@ -1,6 +1,7 @@
 This guide explains the _approval process_ and the _default repository configurations_ required for creating a new repository in the [AsyncAPI Initiative GitHub organization](https://github.com/asyncapi). We also cover how to _donate a project_ to the AsyncAPI Initiative by transferring repository ownership and becoming its maintainer. 
 
 ## Getting a new AsyncAPI repository approved
+## Getting a new AsyncAPI repository approved
 In case you want to donate existing project to AsyncAPI organization, or start a new project, follow below steps:
 1. Visit [AsyncAPI Initiative Discussions](https://github.com/orgs/asyncapi/discussions).
 2. Create a new discussion by clicking on `New discussion` and selecting the `Idea` category. Specify in the _title_ that you want to create a new repository. In the _description_, specify the new repository's purpose and why it belongs under the AsyncAPI organization. [Sample new discussion example.](https://github.com/orgs/asyncapi/discussions/300).
