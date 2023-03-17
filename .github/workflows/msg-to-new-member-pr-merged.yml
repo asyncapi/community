@@ -1,26 +1,42 @@
-name: PR Closed
+name: Welcome New Contributor
 on:
   pull_request:
-    types:
-      - closed
+    types: [closed]
+    paths:
+      - 'TSC_MEMBERS.json' 
 jobs:
-  tests:
+  welcome:
+    if: github.event.pull_request.merged 
     runs-on: ubuntu-latest
-    steps:
-      - name: Check if PR was merged
-        id: merged
-        run: |
-          if [[ "${{ github.event.pull_request.merged }}" = "true" ]]; then
-            echo "::set-output name=merged::true";
-          else
-            echo "::set-output name=merged::false";
-          fi;
-      - name: Add welcome comment
-        if: steps.merged.outputs.merged == 'true'
+    steps: 
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Checkout reference repo
+        uses: actions/checkout@v3
+        with:
+          repository: asyncapi/website
+          path: website
+      - name: Compare files
+        id: compare-files
         uses: actions/github-script@v4
         with:
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
-            const issue = context.issue;
-            const message = "Welcome";
-            github.issues.createComment({...issue, body: message}); 
+            const fs = require("fs");
+            const origMembers = JSON.parse(fs.readFileSync("website/config/TSC_MEMBERS.json"));
+            const newMembers = JSON.parse(fs.readFileSync("TSC_MEMBERS.json"));  
+            const added = newMembers.filter(
+              (newObj) => !origMembers.some((oldObj) => oldObj.name === newObj.name)
+            );
+            const removed = origMembers.filter(
+              (oldObj) => !newMembers.some((newObj) => newObj.name === oldObj.name)
+            );
+            if(added.length > 0)  console.log(`::set-output name=added::true`);
+            if(removed.length > 0) console.log(`::set-output name=removed::true`);
+            console.log("Added members:", added);
+            console.log("Removed members:", removed);
+      - name: Display welcome message
+        if: ${{ steps.compare-files.outputs.added == 'true' }}
+        run: echo "Welcome!"
+      - name: Display goodbye message
+        if: ${{ steps.compare-files.outputs.removed == 'true' }}
+        run: echo "Goodbye!"
