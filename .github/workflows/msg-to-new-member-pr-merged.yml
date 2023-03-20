@@ -36,7 +36,7 @@ jobs:
             console.log("Removed members:", removed);
       - name: Display welcome message
         if: ${{ steps.compare-files.outputs.added == 'true' }}
-        run: echo "Welcome!"
+        run: echo 'Welcome!'
       - name: Display goodbye message
         if: ${{ steps.compare-files.outputs.removed == 'true' }}
-        run: echo "Goodbye!"
+        run: echo 'Goodbye!''
