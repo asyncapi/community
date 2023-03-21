@@ -25,13 +25,13 @@ jobs:
             const origMembers = JSON.parse(fs.readFileSync("website/config/TSC_MEMBERS.json"));
             const newMembers = JSON.parse(fs.readFileSync("TSC_MEMBERS.json"));  
             const added = newMembers.filter(
-              (newObj) => !origMembers.some((oldObj) => oldObj.name === newObj.name)
+              (newObj) => !origMembers.some((oldObj) => oldObj.github === newObj.github)
             );
             const removed = origMembers.filter(
-              (oldObj) => !newMembers.some((newObj) => newObj.name === oldObj.name)
+              (oldObj) => !newMembers.some((newObj) => newObj.github === oldObj.github)
             );
-            if(added.length > 0)  console.log(`::set-output name=added::true`);
-            if(removed.length > 0) console.log(`::set-output name=removed::true`);
+            if(added.length > 0)  console.log(`::set-output github=added::true`);
+            if(removed.length > 0) console.log(`::set-output github=removed::true`);
             console.log("Added members:", added);
             console.log("Removed members:", removed);
       - name: Display welcome message
