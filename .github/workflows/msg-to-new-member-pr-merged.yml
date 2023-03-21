@@ -27,24 +27,24 @@ jobs:
             const origMembers = JSON.parse(fs.readFileSync("website/config/TSC_MEMBERS.json"));
             const newMembers = JSON.parse(fs.readFileSync("TSC_MEMBERS.json"));  
             const added = newMembers.filter(
-              (newObj) => !origMembers.some((oldObj) => oldObj.github === newObj.github)
+              (newObj) => !origMembers.some((oldObj) => oldObj.name === newObj.name)
             );
             const removed = origMembers.filter(
-              (oldObj) => !newMembers.some((newObj) => newObj.github === oldObj.github)
+              (oldObj) => !newMembers.some((newObj) => newObj.name === oldObj.name)
             );
-            if(added.length > 0)  console.log(`::set-output github=added::true`);
-            if(removed.length > 0) console.log(`::set-output github=removed::true`);
+            if(added.length > 0)  console.log(`::set-output name=added::true`);
+            if(removed.length > 0) console.log(`::set-output name=removed::true`);
             console.log("Added members:", added);
             console.log("Removed members:", removed);
       - name: Display welcome message
         if: ${{ steps.compare-files.outputs.added == 'true' }}
         runs-on: ubuntu-latest
         steps:
-        - uses: actions/github-script@v3
+        uses: actions/github-script@v3
         with:
             github-token: ${{ secrets.GITHUB_TOKEN }}
             script: |
-                const welcomeMessage = `Welcome to AsyncAPI. Thanks a lot for reporting your first issue. Please check out our [contributors guide](https://github.com/asyncapi/community/blob/master/CONTRIBUTING.md) and the instructions about a [basic recommended setup](https://github.com/asyncapi/community/blob/master/git-workflow.md) useful for opening a pull request.<br />Keep in mind there are also other channels you can use to interact with AsyncAPI community.`;
+                const welcomeMessage = `Welcome to AsyncAPI. Thanks a lot for creating your first pull request. Please check out our [contributors guide](https://github.com/asyncapi/community/blob/master/CONTRIBUTING.md) useful for opening a pull request.<br />Keep in mind there are also other channels you can use to interact with AsyncAPI community.`;
                 const { owner, repo } = context.repo;
                 const { number: issue_number } = context.issue;
                 return github.issues.createComment({ owner, repo, issue_number, body: welcomeMessage });
