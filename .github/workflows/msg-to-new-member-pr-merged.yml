@@ -1,50 +1,39 @@
 name: Welcome New Contributor
 on:
   pull_request:
-    types: [closed]
-    paths:
-      - 'TSC_MEMBERS.json' 
+    types: [opened]
+    paths: 
+      - 'TSC_MEMBERS.json'
 jobs:
   welcome:
-    if: github.event.pull_request.merged 
     runs-on: ubuntu-latest
     steps: 
-      - name: Checkout code
+      - name: Checkout main branch 
         uses: actions/checkout@v2
         with:
           ref: master
-      - name: Checkout reference repo
-        uses: actions/checkout@v3
-        with:
-          repository: asyncapi/website
-          path: website
+      - name: Save file from main branch 
+        run: cp TSC_MEMBERS.json $HOME
+      - name: Checkout other branch
+        uses: actions/checkout@v2
+        with: 
+          ref: ${{github.event.inputs.branch}}
       - name: Compare files
         id: compare-files
-        uses: actions/github-script@v4
-        with:
-          script: |
-            const fs = require("fs");
-            const origMembers = JSON.parse(fs.readFileSync("website/config/TSC_MEMBERS.json"));
-            const newMembers = JSON.parse(fs.readFileSync("TSC_MEMBERS.json"));  
-            const added = newMembers.filter(
-              (newObj) => !origMembers.some((oldObj) => oldObj.name === newObj.name)
-            );
-            const removed = origMembers.filter(
-              (oldObj) => !newMembers.some((newObj) => newObj.name === oldObj.name)
-            );
-            if(added.length > 0)  console.log(`::set-output name=added::true`);
-            if(removed.length > 0) console.log(`::set-output name=removed::true`);
-            console.log("Added members:", added);
-            console.log("Removed members:", removed);
+        run: |
+          # Read in the contents of both files
+          main_file=$(cat $HOME/TSC_MEMBERS.json)
+          other_file=$(cat TSC_MEMBERS.json)
+          if [[ "$main_file" != "$other_file" ]]; then
+            echo "::set-output name=modified::true"
+          fi
       - name: Display welcome message
-        if: ${{ steps.compare-files.outputs.added == 'true' }}
-        runs-on: ubuntu-latest
-        steps:
+        if: steps.compare-files.outputs.modified == 'true'
         uses: actions/github-script@v3
         with:
-            github-token: ${{ secrets.GITHUB_TOKEN }}
-            script: |
-                const welcomeMessage = `Welcome to AsyncAPI. Thanks a lot for creating your first pull request. Please check out our [contributors guide](https://github.com/asyncapi/community/blob/master/CONTRIBUTING.md) useful for opening a pull request.<br />Keep in mind there are also other channels you can use to interact with AsyncAPI community.`;
-                const { owner, repo } = context.repo;
-                const { number: issue_number } = context.issue;
-                return github.issues.createComment({ owner, repo, issue_number, body: welcomeMessage });
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const welcomeMessage = `Welcome to AsyncAPI. Thanks a lot for creating your first pull request. Please check out our [contributors guide](https://github.com/asyncapi/community/blob/master/CONTRIBUTING.md) useful for opening a pull request.<br />Keep in mind there are also other channels you can use to interact with AsyncAPI community.`;
+            const { owner, repo } = context.repo;
+            const { number: issue_number } = context.issue;
+            return github.issues.createComment({ owner, repo, issue_number, body: welcomeMessage });
