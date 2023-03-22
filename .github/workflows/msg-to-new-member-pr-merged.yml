@@ -1,9 +1,11 @@
 name: Welcome New Contributor
+
 on:
   pull_request:
     types: [opened]
     paths: 
       - 'TSC_MEMBERS.json'
+
 jobs:
   welcome:
     runs-on: ubuntu-latest
@@ -11,7 +13,7 @@ jobs:
       - name: Checkout main branch 
         uses: actions/checkout@v2
         with:
-          ref: master
+          ref: main
       - name: Save file from main branch 
         run: cp TSC_MEMBERS.json $HOME
       - name: Checkout other branch
@@ -20,20 +22,32 @@ jobs:
           ref: ${{github.event.inputs.branch}}
       - name: Compare files
         id: compare-files
-        run: |
-          # Read in the contents of both files
-          main_file=$(cat $HOME/TSC_MEMBERS.json)
-          other_file=$(cat TSC_MEMBERS.json)
-          if [[ "$main_file" != "$other_file" ]]; then
-            echo "::set-output name=modified::true"
-          fi
+        uses: actions/github-script@v4
+        with:
+          script: |
+            const fs = require("fs");
+            const main_file = JSON.parse(fs.readFileSync(`${process.env.HOME}/TSC_MEMBERS.json`));
+            const new_file = JSON.parse(fs.readFileSync('TSC_MEMBERS.json'));
+            const added = new_file.filter(
+              (newObj) => !main_file.some((oldObj) => oldObj.name === newObj.name)
+            );
+            const removed = main_file.filter(
+              (oldObj) => !new_file.some((newObj) => newObj.name === oldObj.name)
+            );
+            if(added.length > 0) {
+              console.log(`::set-output name=added::${added.map((obj) => obj.name).join(",")}`);
+            }
+            if(removed.length > 0) {
+              console.log(`::set-output name=removed::true`);
+            }           
       - name: Display welcome message
-        if: steps.compare-files.outputs.modified == 'true'
+        if: ${{steps.compare-files.outputs.added != ''}}
         uses: actions/github-script@v3
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          github-token: ${{ secrets.BOT_TOKEN }}
           script: |
-            const welcomeMessage = `Welcome to AsyncAPI. Thanks a lot for creating your first pull request. Please check out our [contributors guide](https://github.com/asyncapi/community/blob/master/CONTRIBUTING.md) useful for opening a pull request.<br />Keep in mind there are also other channels you can use to interact with AsyncAPI community.`;
+            const newContributors = `${{steps.compare-files.outputs.added}}`.split(",");
+            const welcomeMessage = `Welcome ${newContributors.map((contributor) => `@${contributor.trim().replace(/^@/, '')}`).join(", ")}!!`;
             const { owner, repo } = context.repo;
             const { number: issue_number } = context.issue;
-            return github.issues.createComment({ owner, repo, issue_number, body: welcomeMessage });
+            return github.issues.createComment({ owner, repo, issue_number, body: welcomeMessage });            
