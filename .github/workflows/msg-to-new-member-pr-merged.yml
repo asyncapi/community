@@ -35,6 +35,7 @@ jobs:
               (oldObj) => !new_file.some((newObj) => newObj.name === oldObj.name)
             );
             if(added.length > 0) {
+              core.info(`Added Contributers : ${added}`)
               core.setOutput("added_contributors", added.map((obj) => obj.name).join(","));
             }
             if(removed.length > 0) {
