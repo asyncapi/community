@@ -44,7 +44,7 @@ jobs:
         if: ${{steps.compare-files.outputs.added != ''}}
         uses: actions/github-script@v3
         with:
-          github-token: ${{ secrets.BOT_TOKEN }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
             const newContributors = `${{steps.compare-files.outputs.added}}`.split(",");
             const welcomeMessage = `Welcome ${newContributors.map((contributor) => `@${contributor.trim().replace(/^@/, '')}`).join(", ")}!!`;
