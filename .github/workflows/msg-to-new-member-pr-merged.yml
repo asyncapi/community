@@ -35,13 +35,13 @@ jobs:
               (oldObj) => !new_file.some((newObj) => newObj.name === oldObj.name)
             );
             if(added.length > 0) {
-              console.log(`::set-output name=added::${added.map((obj) => obj.name).join(",")}`);
+              core.setOutput("added_contributors", added.map((obj) => obj.name).join(","));
             }
             if(removed.length > 0) {
-              console.log(`::set-output name=removed::true`);
+              core.setOutput("removed", "true");
             }           
       - name: Display welcome message
-        if: ${{steps.compare-files.outputs.added != ''}}
+        if: ${{steps.compare-files.outputs.added_contributors != ''}}
         uses: actions/github-script@v3
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
