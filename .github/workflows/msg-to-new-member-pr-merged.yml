@@ -14,8 +14,7 @@ jobs:
         uses: actions/checkout@v2
         with:
           ref: main
-      - name: Save file from main branch 
-        run: cp TSC_MEMBERS.json $HOME
+          path: community-main
       - name: Checkout other branch
         uses: actions/checkout@v2
         with: 
@@ -26,7 +25,7 @@ jobs:
         with:
           script: |
             const fs = require("fs");
-            const main_file = JSON.parse(fs.readFileSync(`${process.env.HOME}/TSC_MEMBERS.json`));
+            const main_file = JSON.parse(fs.readFileSync(`community-main/TSC_MEMBERS.json`));
             const new_file = JSON.parse(fs.readFileSync('TSC_MEMBERS.json'));
             const added = new_file.filter(
               (newObj) => !main_file.some((oldObj) => oldObj.name === newObj.name)
