@@ -28,16 +28,17 @@ jobs:
             const main_file = JSON.parse(fs.readFileSync(`community-main/TSC_MEMBERS.json`));
             const new_file = JSON.parse(fs.readFileSync('TSC_MEMBERS.json'));
             const added = new_file.filter(
-              (newObj) => !main_file.some((oldObj) => oldObj.name === newObj.name)
+              (newObj) => !main_file.some((oldObj) => oldObj.github === newObj.github)
             );
             const removed = main_file.filter(
-              (oldObj) => !new_file.some((newObj) => newObj.name === oldObj.name)
+              (oldObj) => !new_file.some((newObj) => newObj.github === oldObj.github)
             );
             if(added.length > 0) {
               core.info(`Added Contributers : ${added}`)
-              core.setOutput("added_contributors", added.map((obj) => obj.name).join(","));
+              core.setOutput("added_contributors", added.map((obj) => obj.github).join(","));
             }
             if(removed.length > 0) {
+              core.info(`Removed Contributers : ${removed}`)
               core.setOutput("removed", "true");
             }           
       - name: Display welcome message
