@@ -19,7 +19,7 @@ jobs:
       - name: Checkout other branch
         uses: actions/checkout@v2
         with: 
-          ref: ${{github.event.inputs.branch}}
+          ref: ${{github.head_ref}}
       - name: Compare files
         id: compare-files
         uses: actions/github-script@v4
