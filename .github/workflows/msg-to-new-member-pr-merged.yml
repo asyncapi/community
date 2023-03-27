@@ -35,7 +35,7 @@ jobs:
               (oldObj) => !new_file.some((newObj) => newObj.github === oldObj.github)
             );
             if(added.length > 0) {
-              core.info(`Added Contributers : ${added}`)
+              core.info(`Added Contributers : ${JSON.stringify(added)`)
               core.setOutput("added_contributors", added.map((obj) => obj.github).join(","));
             }
             if(removed.length > 0) {
