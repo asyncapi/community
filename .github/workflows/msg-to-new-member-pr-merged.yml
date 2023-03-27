@@ -35,11 +35,11 @@ jobs:
               (oldObj) => !new_file.some((newObj) => newObj.github === oldObj.github)
             );
             if(added.length > 0) {
-              core.info(`Added Contributers : ${JSON.stringify(added)`)
+              core.info(`Added Contributers : ${JSON.stringify(added, null, 2)}`)
               core.setOutput("added_contributors", added.map((obj) => obj.github).join(","));
             }
             if(removed.length > 0) {
-              core.info(`Removed Contributers : ${removed}`)
+              core.info(`Removed Contributers : ${JSON.stringify(removed, null, 2)}`)
               core.setOutput("removed", "true");
             }           
       - name: Display welcome message
