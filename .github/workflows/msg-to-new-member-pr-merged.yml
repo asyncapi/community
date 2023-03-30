@@ -49,7 +49,7 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
             const newContributors = `${{steps.compare-files.outputs.added_contributors}}`.split(",");
-            const welcomeMessage = newContributors.map((contributor) => `@${contributor.trim().replace(/^@/, '')} I have invited you to join the AsyncAPI organization and you will soon be added to the team that lists all TSC members.
+            const welcomeMessage = newContributors.map((contributor) => `@${contributor.trim().replace(/^@/, '')} @derberg have invited you to join the AsyncAPI organization and you will soon be added to the team that lists all TSC members.
             
             We use this team to mention in different discussions in different places in GitHub where TSC opinion is needed or even voting on some topic. Once TSC is mentioned:
             
