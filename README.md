@@ -39,7 +39,7 @@
   </a>
   &nbsp;
   <a href="https://slack.com">
-    <img src="./assets/slack.svg" alt="Slack logo" height="40">
+    <img src="./assets/slack-white-bg.png" alt="Slack logo" height="40">
   </a>
   &nbsp;
   <a href="https://solace.com">
