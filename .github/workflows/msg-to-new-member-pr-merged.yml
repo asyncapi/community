@@ -61,5 +61,4 @@ jobs:
             
             const { owner, repo } = context.repo;
             const { number: issue_number } = context.issue;
-            return github.issues.createComment({ owner, repo, issue_number, body: welcomeMessage });
-            
+            return github.issues.createComment({ owner, repo, issue_number, body: welcomeMessage });           
