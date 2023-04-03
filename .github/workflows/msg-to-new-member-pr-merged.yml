@@ -34,6 +34,12 @@ jobs:
             const removed = main_file.filter(
               (oldObj) => !new_file.some((newObj) => newObj.github === oldObj.github)
             );
+            if (added.length == 0 || removed.length == 0) {
+              throw new Error("TSC_MEMBERS.json have not changed.");
+            }
+            else {
+              core.info(`TSC_MEMBERS.json have changed.`);
+            }
             if(added.length > 0) {
               core.info(`Added Contributers : ${JSON.stringify(added, null, 2)}`)
               core.setOutput("added_contributors", added.map((obj) => obj.github).join(","));
