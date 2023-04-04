@@ -39,7 +39,7 @@
   </a>
   &nbsp;
   <a href="https://slack.com">
-    <img src="./assets/slack.svg" alt="Slack logo" height="40">
+    <img src="./assets/slack-white-bg.png" alt="Slack logo" height="40">
   </a>
   &nbsp;
   <a href="https://solace.com">
@@ -110,6 +110,8 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://danielkocot.github.io"><img src="https://avatars.githubusercontent.com/u/466609?v=4?s=100" width="100px;" alt="Daniel Kocot"/><br /><sub><b>Daniel Kocot</b></sub></a><br /><a href="#talk-danielkocot" title="Talks">📢</a> <a href="https://github.com/asyncapi/community/pulls?q=is%3Apr+reviewed-by%3Adanielkocot" title="Reviewed Pull Requests">👀</a> <a href="#ideas-danielkocot" title="Ideas, Planning, & Feedback">🤔</a></td>
       <td align="center" valign="top" width="14.28%"><a href="http://twitter.com/hguerreroo"><img src="https://avatars.githubusercontent.com/u/1001939?v=4?s=100" width="100px;" alt="Hugo Guerrero"/><br /><sub><b>Hugo Guerrero</b></sub></a><br /><a href="#talk-hguerrero" title="Talks">📢</a> <a href="https://github.com/asyncapi/community/pulls?q=is%3Apr+reviewed-by%3Ahguerrero" title="Reviewed Pull Requests">👀</a> <a href="#ideas-hguerrero" title="Ideas, Planning, & Feedback">🤔</a></td>
       <td align="center" valign="top" width="14.28%"><a href="http://www.alejandraquetzalli.com"><img src="https://avatars.githubusercontent.com/u/19964402?v=4?s=100" width="100px;" alt="Alejandra Quetzalli "/><br /><sub><b>Alejandra Quetzalli </b></sub></a><br /><a href="#talk-alequetzalli" title="Talks">📢</a> <a href="https://github.com/asyncapi/community/pulls?q=is%3Apr+reviewed-by%3Aalequetzalli" title="Reviewed Pull Requests">👀</a> <a href="#ideas-alequetzalli" title="Ideas, Planning, & Feedback">🤔</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://www.behance.net/muibudeenaisha"><img src="https://avatars.githubusercontent.com/u/105395613?v=4?s=100" width="100px;" alt="AISHAT MUIBUDEEN"/><br /><sub><b>AISHAT MUIBUDEEN</b></sub></a><br /><a href="#design-Mayaleeeee" title="Design">🎨</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="http://14richa.github.io"><img src="https://avatars.githubusercontent.com/u/41283476?v=4?s=100" width="100px;" alt="Richa"/><br /><sub><b>Richa</b></sub></a><br /><a href="#infra-14Richa" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a></td>
     </tr>
   </tbody>
 </table>
