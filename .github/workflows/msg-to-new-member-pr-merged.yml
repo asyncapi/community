@@ -22,7 +22,7 @@ jobs:
           ref: ${{github.head_ref}}
       - name: Compare files
         id: compare-files
-        uses: actions/github-script@v4
+        uses: actions/github-script@v6
         with:
           script: |
             const fs = require("fs");
@@ -44,7 +44,7 @@ jobs:
             }          
       - name: Display welcome message
         if: ${{steps.compare-files.outputs.added_contributors != ''}}
-        uses: actions/github-script@v3
+        uses: actions/github-script@v6
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
@@ -61,7 +61,7 @@ jobs:
             
             const { owner, repo } = context.repo;
             const { number: issue_number } = context.issue;
-            return github.issues.createComment({ owner, repo, issue_number, body: welcomeMessage });
+            return github.rest.issues.createComment({ owner, repo, issue_number, body: welcomeMessage });
       - if: failure() # Only, on failure, send a message on the 94_bot-failing-ci slack channel
         name: Report workflow run status to Slack
         uses: 8398a7/action-slack@v3
