@@ -48,7 +48,7 @@ jobs:
         with:
           status: ${{ job.status }}
           fields: repo,action,workflow
-          text: 'Failed to run the job'
+          text: 'Failed to post a message to new TSC member'
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_CI_FAIL_NOTIFY }}           
       - name: Display welcome message
