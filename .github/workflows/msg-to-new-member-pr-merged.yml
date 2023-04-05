@@ -34,12 +34,6 @@ jobs:
             const removed = main_file.filter(
               (oldObj) => !new_file.some((newObj) => newObj.github === oldObj.github)
             );
-            if (added.length == 0 || removed.length == 0) {
-              throw new Error("TSC_MEMBERS.json have not changed.");
-            }
-            else {
-              core.info(`TSC_MEMBERS.json have changed.`);
-            }
             if(added.length > 0) {
               core.info(`Added Contributers : ${JSON.stringify(added, null, 2)}`)
               core.setOutput("added_contributors", added.map((obj) => obj.github).join(","));
@@ -47,7 +41,16 @@ jobs:
             if(removed.length > 0) {
               core.info(`Removed Contributers : ${JSON.stringify(removed, null, 2)}`)
               core.setOutput("removed", "true");
-            }           
+            }
+      - if: failure() # Only, on failure, send a message on the 94_bot-failing-ci slack channel
+        name: Report workflow run status to Slack
+        uses: 8398a7/action-slack@v3
+        with:
+          status: ${{ job.status }}
+          fields: repo,action,workflow
+          text: 'Failed to run the job'
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_CI_FAIL_NOTIFY }}           
       - name: Display welcome message
         if: ${{steps.compare-files.outputs.added_contributors != ''}}
         uses: actions/github-script@v3
