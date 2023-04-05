@@ -121,7 +121,7 @@ jobs:
           GUEST: ${{ inputs.guest }}
         with:
           filename: ${{ inputs.issue_template_path }}
-      - name: Create Google Calendar entry with zoom
+      - name: Create Google Calendar entry
         uses: actions/github-script@v4
         env:
           MEETING_NAME: ${{ inputs.meeting_name }}
