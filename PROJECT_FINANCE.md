@@ -1,81 +1,75 @@
-## Overview
+## Overview 
 
-Your financial support would be greatly appreciated for the AsyncAPI Initiative, where we aim to improve the current state of Event-Driven Architectures (EDAs) and their tooling.
+For the AsyncAPI Initiative, where we seek to enhance the status of Event-Driven Architectures (EDAs) and associated tooling, your financial support would be greatly appreciated.
 
-AsyncAPI Initiative is a growing project that oversights work not only on AsyncAPI specification but also a number of different tools supporting it. It has a large community with many contributors. Project sustainability requires financial support.
+The AsyncAPI Initiative is a developing initiative that oversees work on the AsyncAPI specification as well as a variety of tools that support it. It has a large community and a lot of contributions. For a initiative to be sustainable, funding is needed.
 
-AsyncAPI Initiative invests all the sponsor money back into community growth.
+The AsyncAPI Initiative reinvests all sponsor funds in the development of the community.
 
-## How to sponsor the initiative?
+# How can I support this initiative?
 
-The easiest way to sponsor the initiative is to become a financial sponsor. There are also other ways to sponsor with money, but they require more work.
+Becoming a financial sponsor is the simplest method to support the initiative. There are further financial sponsorship options as well, but they take more effort.
 
-### Financial sponsorship 
+### Contribution of funds 
 
-In order to financially support AsyncAPI, the following options are available:
+The following choices are available to contribute money to AsyncAPI:
 
-- **Open Collective**: Visit our [AsyncAPI Open Collective page](https://opencollective.com/asyncapi)
-- **GitHub Sponsors**: Visit our [AsyncAPI GitHub Sponsors page](https://github.com/sponsors/asyncapi)
-- **Linux Foundation Crowdfunding**: Visit our [AsyncAPI Linux Foundation Crowdfunding page](https://crowdfunding.lfx.linuxfoundation.org/projects/445898e9-42a2-4965-9e0a-c2a714f381bc)
+- **GitHub Sponsors**: Check out our [AsyncAPI GitHub Sponsors page](https://github.com/sponsors/asyncapi) 
+- **Open Collective**: Visit our [AsyncAPI Open Collective page](https://opencollective.com/asyncapi).
+- Visit our [AsyncAPI Linux Foundation Crowdfunding page](https://crowdfunding.lfx.linuxfoundation.org/projects/445898e9-42a2-4965-9e0a-c2a714f381bc).
 
-### Other ways of financial sponsorship
+## Additional forms of financial support
 
 #### Employment
 
-You can delegate employees to regularly contribute to projects hosted under AsyncAPI Initiative. We are always happy to onboard new maintainers.
+Your employees can be assigned to projects run under the AsyncAPI Initiative and routinely contribute. New maintainers are welcomed with open arms.
 
-You can also directly support one of the members of the [Technical Steering Committee](https://www.asyncapi.com/community/tsc) that are available for hire. You can offer employment or a contract for specific work on the project.
+Additionally, you can provide a member of the [Technical Steering Committee](https://www.asyncapi.com/community/tsc) your direct assistance. For particular work on the project, you can provide a contract or employment.
 
 #### Events organization
 
-Every year we organize different AsyncAPI Conferences. You can help us to run AsyncAPI-branded events in any location you offer as long as you can sponsor it and help organize it.
+We host various AsyncAPI conferences each year. As long as you can sponsor it and help arrange it, you can assist us in running events with the AsyncAPI logo in any venue you provide.
 
 #### Services
 
-AsyncAPI Initiative maintains a lot of different tools. There are a lot of costs to cover to get different platform services that we are unable to cover at the moment. Your company can offer services like hosting platforms and storege.
+The AsyncAPI Initiative maintains a wide variety of tools. There are numerous expenses to pay for in order to obtain various platform services, which we are currently unable to do. Your business may provide services like hosting or storage.
 
 ## How do we manage expenses?
 
-1. AsyncAPI Initiative welcomes support in all 3 ways mentioned above.
+The money from GitHub Sponsors is transferred straight to our AsyncAPI Open Collective.
 
-2. In the case of GitHub Sponsors, the fund is directly transferred to our AsyncAPI Open Collective.
+We handle expenses on two platforms because Open Collective and Linux Foundation Crowdfunding are separate.
 
-3. Since Open Collective and Linux foundation Crowdfunding are disjointed, we manage expenses in 2 platforms:
-   
-   - Open Collective & GitHub Sponsors fundings transfers to Open Collective
-  
-   - Linux Foundation Crowdfunding 
+Transparency is practiced in all expenditures. Technical Steering Committee is consulted before every new anticipated expense.
 
-All spendings are done transparently. Every new planned expense is consulted with Technical Steering Committee.
+## Spendings
 
-## Our expenses
-
-AsyncAPI Initiative is a community-first project that requires a variety of different investments:
+The AsyncAPI Initiative is a community-driven project that needs a range of financial expenses:
 
 ### Mentorship
 
-We run a dedicated AsyncAPI Mentorship program to enable inexperienced community members to implement meaningful features in AsyncAPI projects through paid mentorship. This way we assure that donated money goes back to the community through investment in new tools and new highly motivated community members that bring a fresh look into the project.
+Through a specific AsyncAPI Mentorship program, we offer paid mentoring to community members who lack expertise so they can add valuable features to AsyncAPI projects. By investing in new tools and newly recruited, highly driven community members who bring a fresh perspective to the project, we can ensure that donations are returned to the community.
 
 ### Hiring
 
-We are a large and growing community that requires a full-time commitment. With the support of Open Collective, we are able to sign contracts with people to work on AsyncAPI Initiative. This year we hired [Thulie](https://www.linkedin.com/in/v-thulisile-sibanda/) as Community Manager for AsyncAPI Initiative. Long term we would like to hire more people.
+Our huge and expanding community necessitates a full-time dedication. We are able to sign contracts with people to work on the AsyncAPI Initiative thanks to the assistance of Open Collective. This year, [Thulie] (https://www.linkedin.com/in/v-thulisile-sibanda/) was hired as the initiative's community manager. In the long run, we would like to expand our staff.
 
 ### Swags Store
 
-We need our own swag store that enables us to efficiently ​distribute swags with contributors, mentees, ambassadors and other community members. Swag store enables us to also sell some of the swags and invest potential revenue to cover costs of swags that we give away.
+To effectively share swag with contributors, mentees, ambassadors, and other community members, we require our very own swag store. We can sell part of the stuff through the swag store and put potential earnings toward paying for the swags we give for free.
 
 ### Bounty
 
-We want to assure the community of contributors is not based only on company-sponsored or volunteer-based work. We want to make sure we do not exploit voluntary work.
+We want to make sure that the community of contributors and maintainers is not solely comprised of company-sponsored employees or volunteers. Making sure we don't take advantage of volunteer labor is important.
 
-People that are new in tech and open source are not paid for their work. In exchange, we offer them free mentorship and enable them to build contributor portfolio that makes it easier to get a first or better job in tech. 
+Newcomers to technology and open source are not compensated for their work. In return, we provide them with free mentoring and help them develop contributor portfolios that make it simpler for them to land their first or better tech job. 
 
-The bounty program goal is to recognize and gratify regular and experienced contributors and maintainers.
+The bounty program's objective is to reward and acknowledge consistent, seasoned contributors and maintainers.
 
 ### Services
 
-Some of the services necessary for running the AsyncAPI Initiative are not available through dedicated open-source support programs, so we sometimes have to pay for tools like Zoom or Descript.
+Since some of the services necessary for running the AsyncAPI Initiative are not accessible through specific open-source support programs, we periodically have to pay for tools like Zoom or Descript.
 
 ### Events
 
-We organize AsyncAPI conferences that require investment in different conference-related services or travel expenses.
+We host AsyncAPI conferences, which entail spending money on various conference-related services or travel costs.
