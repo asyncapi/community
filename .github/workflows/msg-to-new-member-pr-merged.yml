@@ -18,8 +18,6 @@ jobs:
           path: community-main
       - name: Checkout PR branch
         uses: actions/checkout@v3
-        with: 
-          ref: ${{github.head_ref}}
       - name: Compare files
         id: compare-files
         uses: actions/github-script@v6
