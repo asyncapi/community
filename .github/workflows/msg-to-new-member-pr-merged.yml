@@ -16,7 +16,7 @@ jobs:
         with:
           ref: master
           path: community-main
-      - name: Checkout other branch
+      - name: Checkout PR branch
         uses: actions/checkout@v3
         with: 
           ref: ${{github.head_ref}}
@@ -64,10 +64,9 @@ jobs:
             return github.rest.issues.createComment({ owner, repo, issue_number, body: welcomeMessage });
       - if: failure() # Only, on failure, send a message on the 94_bot-failing-ci slack channel
         name: Report workflow run status to Slack
-        uses: 8398a7/action-slack@v3
-        with:
-          status: ${{ job.status }}
-          fields: repo,action,workflow
-          text: 'Failed to post a message to new TSC member'
+        uses: rtCamp/action-slack-notify@v2
         env:
-          SLACK_WEBHOOK: ${{secrets.SLACK_CI_FAIL_NOTIFY}}        
+          SLACK_WEBHOOK: ${{secrets.SLACK_CI_FAIL_NOTIFY}}
+          SLACK_TITLE: 🚨 Welcome new contributor action failed 🚨
+          SLACK_MESSAGE: Failed to post a message to new TSC member
+          MSG_MINIMAL: true     
