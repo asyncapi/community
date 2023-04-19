@@ -52,7 +52,7 @@ Through a specific AsyncAPI Mentorship program, we offer paid mentoring to commu
 
 ### Hiring
 
-Our huge and expanding community necessitates a full-time dedication. We are able to sign contracts with people to work on the AsyncAPI Initiative thanks to the assistance of Open Collective. This year, [Thulie] (https://www.linkedin.com/in/v-thulisile-sibanda/) was hired as the initiative's community manager. In the long run, we would like to expand our staff.
+Our huge and expanding community necessitates a full-time dedication. We are able to sign contracts with people to work on the AsyncAPI Initiative thanks to the assistance of Open Collective. This year, [Thulie](https://www.linkedin.com/in/v-thulisile-sibanda/) was hired as the initiative's community manager. In the long run, we would like to expand our staff.
 
 ### Swags Store
 
