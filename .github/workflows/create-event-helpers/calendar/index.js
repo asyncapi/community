@@ -33,7 +33,7 @@ async function addEvent(zoomUrl, startDate, startTime, issueNumber) {
         //helper to create end time which is always 1h later
         const getEndTime = (startTime) => {
             const time = Number(startTime);
-            if (time < 10) return '0' + (time + 1)
+            if (time < 9) return '0' + (time + 1)
 
             return (time + 1) + ''
         }
