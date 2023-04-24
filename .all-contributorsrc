@@ -389,6 +389,24 @@
         "review",
         "ideas"
       ]
+    },
+    {
+      "login": "Mayaleeeee",
+      "name": "AISHAT MUIBUDEEN",
+      "avatar_url": "https://avatars.githubusercontent.com/u/105395613?v=4",
+      "profile": "https://www.behance.net/muibudeenaisha",
+      "contributions": [
+        "design"
+      ]
+    },
+    {
+      "login": "14Richa",
+      "name": "Richa",
+      "avatar_url": "https://avatars.githubusercontent.com/u/41283476?v=4",
+      "profile": "http://14richa.github.io",
+      "contributions": [
+        "infra"
+      ]
     }
   ],
   "commitConvention": "angular"
