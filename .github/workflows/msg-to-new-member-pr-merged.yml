@@ -16,7 +16,7 @@ jobs:
         with:
           ref: master
           path: community-main
-      - name: Checkout main branch
+      - name: Checkout PR branch
         uses: actions/checkout@v3
         with:
           path: community
