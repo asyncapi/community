@@ -100,7 +100,7 @@ Every year we organize a conference that attracts many participants. Only last y
 
 
 <a href="https://opencollective.com/asyncapi/contribute/platinum-sponsors-8119/checkout?interval=month&amount=2000" target="_blank">
-  <img src="https://opencollective.com/asyncapi/donate/button@2x.png?color=blue" width=100 />
+  <img src="https://opencollective.com/asyncapi/donate/button@2x.png?color=blue" width=300 />
 </a>
 
 ### Contact
