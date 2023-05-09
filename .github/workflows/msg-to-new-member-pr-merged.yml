@@ -12,22 +12,22 @@ jobs:
     runs-on: ubuntu-latest
     steps: 
       - name: Checkout main branch 
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           ref: master
           path: community-main
-      - name: Checkout other branch
-        uses: actions/checkout@v2
-        with: 
-          ref: ${{github.head_ref}}
+      - name: Checkout PR branch
+        uses: actions/checkout@v3
+        with:
+          path: community
       - name: Compare files
         id: compare-files
-        uses: actions/github-script@v4
+        uses: actions/github-script@v6
         with:
           script: |
             const fs = require("fs");
-            const main_file = JSON.parse(fs.readFileSync(`community-main/TSC_MEMBERS.json`));
-            const new_file = JSON.parse(fs.readFileSync('TSC_MEMBERS.json'));
+            const main_file = require('./community-main/TSC_MEMBERS.json');
+            const new_file = require('./community/TSC_MEMBERS.json');
             const added = new_file.filter(
               (newObj) => !main_file.some((oldObj) => oldObj.github === newObj.github)
             );
@@ -41,10 +41,10 @@ jobs:
             if(removed.length > 0) {
               core.info(`Removed Contributers : ${JSON.stringify(removed, null, 2)}`)
               core.setOutput("removed", "true");
-            }           
+            }          
       - name: Display welcome message
         if: ${{steps.compare-files.outputs.added_contributors != ''}}
-        uses: actions/github-script@v3
+        uses: actions/github-script@v6
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
@@ -61,4 +61,12 @@ jobs:
             
             const { owner, repo } = context.repo;
             const { number: issue_number } = context.issue;
-            return github.issues.createComment({ owner, repo, issue_number, body: welcomeMessage });           
+            return github.rest.issues.createComment({ owner, repo, issue_number, body: welcomeMessage });
+      - if: failure() # Only, on failure, send a message on the 94_bot-failing-ci slack channel
+        name: Report workflow run status to Slack
+        uses: rtCamp/action-slack-notify@v2
+        env:
+          SLACK_WEBHOOK: ${{secrets.SLACK_CI_FAIL_NOTIFY}}
+          SLACK_TITLE: 🚨 Welcome new contributor action failed 🚨
+          SLACK_MESSAGE: Failed to post a message to new TSC member
+          MSG_MINIMAL: true     
