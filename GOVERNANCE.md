@@ -2,14 +2,14 @@
 
 ### Current appointed person
 
-The current Executive Director is Fran Mendez.
+The current Executive Director is Lukasz Gornicki.
 
 |||
 |---|---|
-|Email|fmvilas@gmail.com|
-|AsyncAPI Slack|Fran Méndez (User ID: `U34F2JRRS`)|
-|GitHub|https://github.com/fmvilas|
-|Mastodon|https://social.fmvilas.me/@fran|
+|Email|lpgornicki@gmail.com|
+|AsyncAPI Slack|Lukasz Gornicki (User ID: `UD698Q5LM`)|
+|GitHub|https://github.com/derberg|
+|Twitter|https://twitter.com/derberq|
 
 ### Duties and Responsibilities
 
@@ -25,3 +25,14 @@ Among others, the duties and responsibilities of the Executive Director are the 
 * Must be a servant leader and has no power other than the specified in the [charter](./CHARTER.md). Everything that is proposed should be voted by the TSC.
 
 Please note that the list above is not an exhaustive list and should not be treated as a legal document but just for reference.
+
+### Past directors
+
+#### Fran Mendez
+
+|||
+|---|---|
+|Email|fmvilas@gmail.com|
+|AsyncAPI Slack|Fran Méndez (User ID: `U34F2JRRS`)|
+|GitHub|https://github.com/fmvilas|
+|Mastodon|https://social.fmvilas.me/@fran|
