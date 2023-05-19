@@ -152,7 +152,9 @@
 		"company": "Postman",
 		"repos": [
 			"optimizer",
-			"bindings"
+			"bindings",
+			"glee",
+			".github"
 		]
 	},
 	{
@@ -356,7 +358,8 @@
 		"company": "Postman",
 		"repos": [
 			"cli",
-			"bundler"
+			"bundler",
+			"glee"
 		]
 	},
 	{
