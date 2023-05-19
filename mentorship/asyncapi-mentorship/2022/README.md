@@ -2,9 +2,9 @@
 
 ## Timeline
 
-- project proposals applications open: April 1st - June 6th
-- mentees applications open: June 6th - June 28th
-- application review by the mentors/admission decisions: June 6th - June 28th
+- Project proposals applications open: April 1st - June 6th
+- Mentees applications open: June 6th - June 28th
+- Application review by the mentors/admission decisions: June 6th - June 28th
 
 Mentorship duration - seven months \(full-time schedule\)
 

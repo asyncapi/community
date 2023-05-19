@@ -1,6 +1,6 @@
 # AsyncAPI Mentorship Program
 
-The AsyncAPI Mentorship makes it easy to sponsor and help train the next generation of open source developers by serving key needs of the community. Invest in building a stronger and more diverse community of qualified developers and engineers.
+The AsyncAPI Mentorship makes it easy to sponsor and help train the next generation of open-source developers by serving the community's key needs. Invest in building a stronger, more diverse community of qualified contributors. 
 
 ## Program Cycles and Archive data
 | Year | Term   | Status    | Announcement                                                                                                                                                         | Details                                 |
@@ -47,7 +47,7 @@ In addition to any terms regarding removal from the Program stated in these Prog
        - Stressing the Mentor by not being responsive or not keeping the Mentor in the loop during the program period
        - Threatening or harassing AsyncAPI or other Participants, including Organizations' employees and representatives
        - Tampering or interfering with the administration of the Program or with the ability of other Participants to participate in the Program
-       - Submitting contents that are not original/violate the rights of a third party/lewd, obscene, pornographic, racist, sexist, or otherwise inappropriate to the Program.
+       - Submitting content that is not original/violates the rights of a third party/lewd, obscene, pornographic, racist, sexist, or otherwise inappropriate to the Program.
        - Suppose a Participant is removed from the Program for any reason. In that case, the Participant will no longer be eligible to receive stipends from AsyncAPI and may be prohibited from participating in any future programs run by the AsyncAPI Initiative. 
 
 #### Communication

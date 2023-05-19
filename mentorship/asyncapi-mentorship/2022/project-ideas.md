@@ -1,5 +1,5 @@
 # Projects ideas
-> we have 7 mentors from TSC and I think 2 mentees from TSC which gives us 23 remaining TSC members that can vote. 
+> We have 7 mentors from TSC and 2 mentees from the TSC, giving us 23 remaining TSC members able to vote. 
 
 ### Ideas list
 
