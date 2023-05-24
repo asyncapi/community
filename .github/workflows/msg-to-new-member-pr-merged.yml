@@ -16,10 +16,20 @@ jobs:
         with:
           ref: master
           path: community-main
+      - name: Print TSC members in main branch
+        run: |
+          echo "TSC members in master branch:"
+          cat ./community-main/TSC_MEMBERS.json
+          ls -l ./community-main/TSC_MEMBERS.json
       - name: Checkout PR branch
         uses: actions/checkout@v3
         with:
           path: community
+      - name: Print TSC members in PR branch
+        run: |
+          echo "TSC members in PR branch:"
+          cat ./community/TSC_MEMBERS.json
+          ls -l ./community/TSC_MEMBERS.json
       - name: Compare files
         id: compare-files
         uses: actions/github-script@v6
