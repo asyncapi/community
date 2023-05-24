@@ -45,20 +45,29 @@ jobs:
               (oldObj) => !new_file.some((newObj) => newObj.github === oldObj.github)
             );
             if(added.length > 0) {
-              core.info(`Added Contributers : ${JSON.stringify(added, null, 2)}`)
-              core.setOutput("added_contributors", added.map((obj) => obj.github).join(","));
+              core.info(`Added Contributors : ${JSON.stringify(added, null, 2)}`)
+              core.setOutput("newContributors", added.map((obj) => obj.github).join(","));
             }
             if(removed.length > 0) {
-              core.info(`Removed Contributers : ${JSON.stringify(removed, null, 2)}`)
+              core.info(`Removed Contributors : ${JSON.stringify(removed, null, 2)}`)
               core.setOutput("removed", "true");
-            }          
+            }
+            core.info('TSC members in main branch:');
+            core.info(JSON.stringify(main_file, null, 2));
+            core.info('Location of TSC members in main branch:');
+            core.info(fs.realpathSync('./community-main/TSC_MEMBERS.json'));
+            core.info('TSC members in PR branch:');
+            core.info(JSON.stringify(new_file, null, 2));
+            core.info('Location of TSC members in PR branch:');
+            core.info(fs.realpathSync('./community/TSC_MEMBERS.json'));
+
       - name: Display welcome message
-        if: ${{steps.compare-files.outputs.added_contributors != ''}}
+        if: ${{steps.compare-files.outputs.newContributors != ''}}
         uses: actions/github-script@v6
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
-            const newContributors = `${{steps.compare-files.outputs.added_contributors}}`.split(",");
+            const newContributors = `${{steps.compare-files.outputs.newContributors}}`.split(",");
             const welcomeMessage = newContributors.map((contributor) => `@${contributor.trim().replace(/^@/, '')} Soon you will be invited to join the AsyncAPI GitHub organization and you will be added to the team that lists all TSC members.
             
             We use this team to mention in different discussions in different places in GitHub where TSC opinion is needed or even voting on some topic. Once TSC is mentioned:
