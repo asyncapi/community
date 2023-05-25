@@ -49,8 +49,7 @@ Overall, these subgraphs represent a comprehensive approach to maintaining and u
 
 
 
-### Create validation workflow 
-
+### Validation Workflow 
 
 
 ```mermaid
