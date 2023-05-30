@@ -5,7 +5,7 @@
 
 The flowchart describes three subgraphs related to the maintenance of Maintainers.yaml, onboarding of new maintainers, and updates to Emeritus.yaml file.
 
-The first subgraph outlines the steps to automate the updating of Maintainers.yaml. This involves migrating to YAML, updating the website code to handle the new format, automating the updating of Maintainers.yaml, creating a validation workflow to block pull requests if records are added/removed by humans, creating a CODEOWNERS update workflow, allowing humans to update social info and TSC member property, and creating an aggregation workflow to provide information on the number of TSC members, per company information, and the number of members that can be added by each company.
+The first subgraph outlines the steps to automate the updating of Maintainers.yaml. This involves migrating to YAML, updating the website code to handle YAML format, automating the updation of Maintainers.yaml, creating a validation workflow to block pull requests if records are added/removed by humans, creating a CODEOWNERS update workflow, allowing humans to update social info and TSC member property, and creating an aggregation workflow to provide information on the number of TSC members, per company information, and the number of members that can be added by each company.
 
 
 ```mermaid
@@ -45,7 +45,7 @@ graph LR;
 ```
 
 
-Overall, these subgraphs represent a comprehensive approach to maintaining and updating the YAML files related to maintainers and TSC members, ensuring that new maintainers are onboarded effectively, and keeping the Emeritus.yaml file up to date. This approach involves a range of workflows and automated processes to streamline these tasks and ensure they are completed efficiently andaccurately. By implementing this approach, the team can manage these tasks more effectively and focus on other important aspects of software development and website maintenance.
+Overall, these subgraphs represent a comprehensive approach to maintaining and updating the YAML files related to maintainers and TSC members, ensuring that new maintainers are onboarded effectively, and keeping the Emeritus.yaml file up to date. This approach involves a range of workflows and automated processes to streamline these tasks.
 
 
 ### Workflows 
