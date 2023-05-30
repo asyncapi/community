@@ -12,12 +12,12 @@ The first subgraph outlines the steps to automate the updating of Maintainers.ya
 graph LR;
  subgraph Automate the updation of Maintainers.yaml
 
-    A[Migrate to YAML] --> B[Update website code];
-    B --> C[Automate Maintainers.yaml updation];
-    C --> D[Create validation workflow];
-    C --> E[Create CODEOWNERS update workflow];
+    A[Migrate TSC_MEMBERS.JSON to TSC_MEMBERS.YAML] --> B[Update website code to handle YAML format];
+    B --> C[Automate Maintainers.yaml update];
+    C --> D[Validation workflow];
+    C --> E[CODEOWNERS update workflow];
     C --> F[Allow humans to update social info and TSC member property];
-    C --> G[Create aggregation workflow];
+    C --> G[Aggregation workflow];
     D --> H[Block PR if record added/removed by human];
     E --> I[Update Maintainers.yaml];
     G --> I;
