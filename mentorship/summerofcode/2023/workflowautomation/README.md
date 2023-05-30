@@ -48,20 +48,111 @@ graph LR;
 Overall, these subgraphs represent a comprehensive approach to maintaining and updating the YAML files related to maintainers and TSC members, ensuring that new maintainers are onboarded effectively, and keeping the Emeritus.yaml file up to date. This approach involves a range of workflows and automated processes to streamline these tasks and ensure they are completed efficiently andaccurately. By implementing this approach, the team can manage these tasks more effectively and focus on other important aspects of software development and website maintenance.
 
 
+### Workflows 
 
-### Validation Workflow 
+### validate-maintainers.yaml
 
+This workflow listens for changes to the Maintainers.yaml file and validates whether the changes were made by the bot or a human. If a human made the changes, the workflow blocks the pull request and notifies the user with a proper message.
 
 ```mermaid
 graph LR;
-    A[Create validation workflow] --> B[Parse Maintainers.yaml file];
-    B --> C[Check for new records];
-    C -- Yes --> D[Check for removal of records];
-    C -- No --> E[Check for removal of records];
-    D --> F[Fail if removals detected];
-    E --> G[Check for bot authorship];
-    G -- Yes --> H[Check for record validity];
-    G -- No --> I[Warn if not authored by bot];
-    H --> J[Fail if record is invalid];
-    I --> J;
+A[New record added to Maintainers.yaml?] --> |Yes| B[Validate record and block if added by human];
+B --> C[Notify user with proper message];
+C --> D[End];
+A --> |No| D[End];
+```
+
+### update-maintainers.yaml
+
+This workflow listens for changes to the CODEOWNERS file and updates the Maintainers.yaml file accordingly. It also picks up the GitHub username, Twitter handle, and the name of the maintained repository from the API and notifies the affected users.
+
+```mermaid
+graph TD;
+A[Changes made to CODEOWNERS file?] --> |Yes| B[Update Maintainers.yaml];
+B --> C[Pick up GitHub username, Twitter handle, and repository name from API];
+C --> D[Notify affected users];
+D --> E[End];
+A --> |No| E[End];
+```
+
+### allow-updates.yaml
+
+This workflow allows humans to update social info or the tsc_member property in the Maintainers.yaml file.
+
+```mermaid
+graph TD;
+A[User updates social info or tsc_member value?] --> |Yes| B[Allow update];
+B --> C[End];
+A --> |No| D[Block update and notify user];
+D --> E[End];
+```
+
+### invite-maintainers.yaml
+
+This workflow is triggered when a new maintainer is added. It calls the GitHub API to invite the maintainer to the AsyncAPI organization and creates a new team for the maintainers. The workflow also adds the newmaintainer to the Maintainers GitHub team.
+
+```mermaid
+graph TD;
+A[New maintainer added?] --> |Yes| B[Call GitHub API to invite maintainer];
+B --> C[Create new team and add maintainer to it];
+C --> D[Update Maintainers.yaml];
+D --> E[End];
+A --> |No| E[End];
+```
+
+### update-tsc-team.yaml
+
+This workflow is triggered when there is a change to the tsc_member property. It adds or removes the member from the TSC team based on the value of the property.
+
+```mermaid
+graph TD;
+A[tsc_member value change?] --> |Yes| B[Add or remove member from tsc team];
+B --> C[Notify affected users];
+C --> D[End];
+A --> |No| D[End];
+```
+
+### notify-tsc-members.yaml
+
+This workflow is triggered when a new member is added to the TSC. It notifies the new member about ways to get notified when TSC members are called out and notifies other TSC members by mentioning the GitHub team.
+
+```mermaid
+graph TD;
+A[PR modifies tsc_member to true?] --> |Yes| B[Notify new member about ways to get notified];
+B --> C[Notify TSC members about new member];
+C --> D[End];
+A --> |No| D[End];
+```
+
+### update-emeritus.yaml
+
+This workflow is triggered when someone is removed from the Maintainers.yaml file because they no longer maintain any repository. It updates the Emeritus.yaml file with the list of people that left the project.
+
+```mermaid
+graph TD;
+A[Someone removed from Maintainers.yaml?] --> |Yes| B[Update Emeritus.yaml];
+B --> C[End];
+A --> |No| C[End];
+```
+
+### remove-from-organization.yaml
+
+This workflow is triggered when someone is removed from the Maintainers.yaml file. It removes the person from the AsyncAPI organization and the proper teams.
+
+```mermaid
+graph TD;
+A[Someone removed from Maintainers.yaml?] --> |Yes| B[Remove person from organization and teams];
+B --> C[End];
+A --> |No| C[End];
+```
+
+#### review-emeritus-pr.yaml
+
+This workflow is triggered when a PR modifies the `Emeritus.yamlfile. It reviews and merges the PR only after it has been reviewed by a human.
+
+```mermaid 
+graph TD;
+A[PR modifies Emeritus.yaml file?] --> |Yes| B[Review and merge PR];
+B --> C[End];
+A --> |No| C[End];
 ```
