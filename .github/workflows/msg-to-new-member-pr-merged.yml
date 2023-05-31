@@ -19,7 +19,7 @@ jobs:
       - name: List of directory
         run: ls -la
       - name: Checkout one commit before last one
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           fetch-depth: 2
           ref: master
