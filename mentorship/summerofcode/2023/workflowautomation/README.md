@@ -48,9 +48,11 @@ Overall, these subgraphs represent a comprehensive approach to maintaining and u
 
 ### Workflows 
 
-### validate-maintainers.yaml
+### `validate-maintainers.yaml`
 
 This workflow listens for changes to the Maintainers.yaml file and validates whether the changes were made by the bot or a human. If a human made the changes, the workflow blocks the pull request and notifies the user with a proper message.
+
+> Note: This workflow should be located in every repository.
 
 ```mermaid
 graph LR;
@@ -60,9 +62,11 @@ C --> D[End];
 A --> |No| D[End];
 ```
 
-### update-maintainers.yaml
+### `update-maintainers.yaml`
 
 This workflow listens for changes to the CODEOWNERS file and updates the Maintainers.yaml file accordingly. It also picks up the GitHub username, Twitter handle, and the name of the maintained repository from the API and notifies the affected users.
+
+> Note: This workflow should be located in every repository.
 
 ```mermaid
 graph TD;
@@ -73,9 +77,11 @@ D --> E[End];
 A --> |No| E[End];
 ```
 
-### allow-updates.yaml
+### `allow-updates.yaml`
 
 This workflow allows humans to update social info or the tsc_member property in the Maintainers.yaml file.
+
+> Note: This workflow should be located in every repository.
 
 ```mermaid
 graph TD;
@@ -85,9 +91,11 @@ A --> |No| D[Block update and notify user];
 D --> E[End];
 ```
 
-### invite-maintainers.yaml
+### `invite-maintainers.yaml`
 
 This workflow is triggered when a new maintainer is added. It calls the GitHub API to invite the maintainer to the AsyncAPI organization and creates a new team for the maintainers. The workflow also adds the newmaintainer to the Maintainers GitHub team.
+
+> Note: This workflow should be located in the community repository.
 
 ```mermaid
 graph TD;
@@ -98,9 +106,11 @@ D --> E[End];
 A --> |No| E[End];
 ```
 
-### update-tsc-team.yaml
+### `update-tsc-team.yaml`
 
 This workflow is triggered when there is a change to the tsc_member property. It adds or removes the member from the TSC team based on the value of the property.
+
+> Note: This workflow should be located in every repository.
 
 ```mermaid
 graph TD;
@@ -110,9 +120,11 @@ C --> D[End];
 A --> |No| D[End];
 ```
 
-### notify-tsc-members.yaml
+### `notify-tsc-members.yaml`
 
 This workflow is triggered when a new member is added to the TSC. It notifies the new member about ways to get notified when TSC members are called out and notifies other TSC members by mentioning the GitHub team.
+
+> Note: This workflow should be located in the community repository.
 
 ```mermaid
 graph TD;
@@ -122,9 +134,11 @@ C --> D[End];
 A --> |No| D[End];
 ```
 
-### update-emeritus.yaml
+### `update-emeritus.yaml`
 
 This workflow is triggered when someone is removed from the Maintainers.yaml file because they no longer maintain any repository. It updates the Emeritus.yaml file with the list of people that left the project.
+
+> Note: This workflow should be located in the community repository.
 
 ```mermaid
 graph TD;
@@ -133,9 +147,11 @@ B --> C[End];
 A --> |No| C[End];
 ```
 
-### remove-from-organization.yaml
+### `remove-from-organization.yaml`
 
 This workflow is triggered when someone is removed from the Maintainers.yaml file. It removes the person from the AsyncAPI organization and the proper teams.
+
+> Note: This workflow should be located in the community repository.
 
 ```mermaid
 graph TD;
@@ -144,9 +160,11 @@ B --> C[End];
 A --> |No| C[End];
 ```
 
-#### review-emeritus-pr.yaml
+#### `review-emeritus-pr.yaml`
 
 This workflow is triggered when a PR modifies the `Emeritus.yamlfile. It reviews and merges the PR only after it has been reviewed by a human.
+
+> Note: This workflow should be located in the community repository.
 
 ```mermaid 
 graph TD;
