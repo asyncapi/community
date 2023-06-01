@@ -22,6 +22,8 @@ graph LR;
     end;
 ```
 
+> Note: Please remember to set this workflow as required in the repository settings to prevent merging PRs if the workflow fails.
+
 
 The second graph outlines the steps for onboarding new maintainers. This involves creating an invitation workflow, creating a TSC member change workflow, and creating a notification workflow to inform existing members about the new addition.
 
