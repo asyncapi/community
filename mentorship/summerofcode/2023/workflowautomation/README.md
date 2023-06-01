@@ -92,7 +92,7 @@ This workflow is triggered when a new maintainer is added. It calls the GitHub A
 ```mermaid
 graph TD;
 A[New maintainer added?] --> |Yes| B[Call GitHub API to invite maintainer];
-B --> C[Create new team and add maintainer to it];
+B --> C[Add maintainer to existing team];
 C --> D[Update Maintainers.yaml];
 D --> E[End];
 A --> |No| E[End];
