@@ -73,11 +73,16 @@ This workflow listens for changes to the CODEOWNERS file and updates the Maintai
 
 ```mermaid
 graph TD;
-A[Changes made to CODEOWNERS file?] --> |Yes| B[Update Maintainers.yaml];
+A[Changes made to CODEOWNERS file?] --> |New maintainer added| B[Update Maintainers.yaml];
+A --> |Maintainer removed| F[Check if maintainer has other repositories];
 B --> C[Pick up GitHub username, Twitter handle, and repository name from API];
 C --> D[Notify affected users];
 D --> E[End];
-A --> |No| E[End];
+F --> |Maintainer has other repositories| G[Do not remove from Maintainers.yaml];
+F --> |Maintainer has no other repositories| H[Remove from Maintainers.yaml];
+H --> I[Notify affected users];
+I --> E;
+
 ```
 
 ### `allow-updates.yaml`
