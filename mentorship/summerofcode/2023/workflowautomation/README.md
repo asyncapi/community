@@ -22,8 +22,6 @@ graph LR;
     end;
 ```
 
-> Note: Please remember to set this workflow as required in the repository settings to prevent merging PRs if the workflow fails.
-
 
 The second graph outlines the steps for onboarding new maintainers. This involves creating an invitation workflow, creating a TSC member change workflow, and creating a notification workflow to inform existing members about the new addition.
 
@@ -54,7 +52,7 @@ Overall, these subgraphs represent a comprehensive approach to maintaining and u
 
 This workflow listens for changes to the Maintainers.yaml file and validates whether the changes were made by the bot or a human. If a human made the changes, the workflow blocks the pull request and notifies the user with a proper message.
 
-> Note: This workflow should be located in every repository.
+> Note: This workflow should be located in every repository and should be made a required status check in the repository settings, so if it fails, PR cannot be merged.
 
 ```mermaid
 graph LR;
