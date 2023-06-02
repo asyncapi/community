@@ -3,23 +3,32 @@
  This project aims to automate maintaining the Maintainers.yaml file which contains the list of maintainers and TSC members of AsyncAPI. The tasks involve implementing workflows to automatically update the member's list based on changes in other files, inviting new maintainers and TSC members, updating the Emeritus.yaml file when someone is removed, and aggregating helpful information in the Maintainers.yaml file. These automation and improvements will make it easier to manage the maintainers and TSC members of AsyncAPI.
 
 
-The first graph outlines the steps to automate the updating of Maintainers.yaml. This involves migrating to YAML, updating the website code to handle YAML format, automating the updation of Maintainers.yaml, creating a validation workflow to block pull requests if records are added/removed by humans, creating a update-maintainers workflow, allowing humans to update social info and TSC member property, and creating an aggregation workflow to provide information on the number of TSC members, per company information, and the number of members that can be added by each company.
+The first graph outlines the steps to automate the updating of Maintainers.yaml. This involves migrating to YAML, updating the website code to handle YAML format, automating the updation of Maintainers.yaml, creating a validation workflow to block pull requests if records are added/removed by humans, creating an update-maintainers workflow, and allowing humans to update social info and TSC member property.
 
 
 ```mermaid
 graph LR;
- subgraph Automate the updation of Maintainers.yaml
 
-    A[Migrate TSC_MEMBERS.JSON to TSC_MEMBERS.YAML] --> B[Update website code to handle YAML format];
-    B --> C[Automate Maintainers.yaml update];
-    C --> D[Validation workflow];
-    C --> E[update-maintainers workflow];
-    C --> F[Allow humans to update social info and TSC member property];
-    C --> G[Aggregation workflow];
-    D --> H[Block PR if record added/removed by human];
-    E --> I[Update Maintainers.yaml];
-    G --> I;
-    end;
+subgraph Migrate TSC_MEMBERS.JSON to TSC_MEMBERS.YAML
+    A[Convert TSC_MEMBERS.JSON to TSC_MEMBERS.YAML]
+end
+
+subgraph Update website code to handle YAML format
+    B[Update website code to handle YAML format]
+end
+
+subgraph Automate Maintainers.yaml update
+    C[Automate Maintainers.yaml update]
+    D[Validation workflow]
+    E[update-maintainers workflow]
+    F[Allow humans to update social info and TSC member property]
+end
+
+A --> B
+B --> C
+C --> D
+C --> E
+C --> F
 ```
 
 
