@@ -101,7 +101,7 @@ D --> E[End];
 
 ### `invite-maintainers.yaml`
 
-This workflow is triggered when a new maintainer is added. It calls the GitHub API to invite the maintainer to the AsyncAPI organization and creates a new team for the maintainers. The workflow also adds the newmaintainer to the Maintainers GitHub team.
+This workflow is triggered when a new maintainer is added. It calls the GitHub API to invite the maintainer to the AsyncAPI organization and adds to a existing team for the maintainers. The workflow also adds the new maintainer to the Maintainers GitHub team.
 
 > Note: This workflow should be located in the community repository.
 
