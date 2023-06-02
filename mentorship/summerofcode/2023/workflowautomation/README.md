@@ -58,10 +58,11 @@ This workflow listens for changes to the Maintainers.yaml file and validates whe
 
 ```mermaid
 graph LR;
-A[New record added to Maintainers.yaml?] --> |Yes| B[Validate record and block if added by human];
-B --> C[Notify user with proper message];
-C --> D[End];
-A --> |No| D[End];
+A[New record added to Maintainers.yaml?] --> |Yes| B[Validate record];
+B --> |Validation failed| C[Block pull request];
+B --> |Validation passed| D[Continue with pull request];
+A --> |No| D[Continue with pull request];
+
 ```
 
 ### `update-maintainers.yaml`
