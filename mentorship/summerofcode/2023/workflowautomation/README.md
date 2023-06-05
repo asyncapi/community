@@ -100,15 +100,14 @@ This workflow allows humans to update social info or the tsc_member property in 
 
 ```mermaid
 graph TD;
-subgraph Maintainers.yaml update workflow
-    A[User updates social info or tsc_member value?] --> |Yes| B[Allow update];
+    A[Is the user updating social info or the tsc_member property?] --> |Yes| B[Allow update];
     B --> C[Update Maintainers.yaml];
-    C --> D[Validate record];
-    D --> |Validation failed| E[Block update and notify user];
-    D --> |Validation passed| F[Notify affected users];
+    C --> D[Validate the updated record];
+    D --> |Record is invalid| E[Block update and notify the user];
+    D --> |Record is valid| F[Notify affected users of the update];
     E --> G[End];
     F --> G[End];
-end
+
 ```
 
 ### `invite-maintainers.yaml`
@@ -119,11 +118,13 @@ This workflow is triggered when a new maintainer is added. It calls the GitHub A
 
 ```mermaid
 graph TD;
-A[New maintainer added?] --> |Yes| B[Call GitHub API to invite maintainer];
-B --> C[Add maintainer to existing team];
-C --> D[Update Maintainers.yaml];
-D --> E[End];
-A --> |No| E[End];
+    A[Is a new maintainer added to the AsyncAPI community?] --> |Yes| B[Call GitHub API to invite maintainer to the organization];
+    B --> C[Add maintainer to an existing team for maintainers];
+    C --> D[Update Maintainers.yaml];
+    D --> E[Add maintainer to the Maintainers GitHub team];
+    E --> F[End];
+    A --> |No| F[End];
+
 ```
 
 ### `update-tsc-team.yaml`
