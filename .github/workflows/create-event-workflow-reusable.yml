@@ -83,6 +83,14 @@ jobs:
     name: Setup meeting
     runs-on: ubuntu-latest
     steps:
+      - name: Validate inputs
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const time = '${{inputs.time}}'
+            const [HH, MM] = time.split(':')
+            if(Number(HH) > 23 || Number(HH) < 0 || Number(MM) !== 0 || Number(MM) !== 30)
+              core.setFailed(`invalid time input. Time should be in UTC time zone in "HH:MM"(MM can be 00 or 30), like: 08:30 or 16:00. No PM or AM versions.`);
       - name: Checkout repository
         uses: actions/checkout@v2
       - name: Setup Node.js
@@ -94,14 +102,6 @@ jobs:
       - name: Install deps
         run: npm install
         working-directory: ./.github/workflows/create-event-helpers
-      - name: Validate inputs
-        uses: actions/github-script@v6
-        with:
-          script: |
-            const time = '${{inputs.time}}'
-            const [HH, MM] = time.split(':')
-            if(Number(HH) > 23 || Number(HH) < 0 || Number(MM) !== 0 || Number(MM) !== 30)
-              core.setFailed(`invalid time input. Time should be in UTC time zone in "HH:MM"(MM can be 00 or 30), like: 08:30 or 16:00. No PM or AM versions.`);
       - if: inputs.create_zoom == true
         name: Create zoom meeting
         uses: actions/github-script@v6
