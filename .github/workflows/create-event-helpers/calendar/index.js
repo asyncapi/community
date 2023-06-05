@@ -32,12 +32,10 @@ async function addEvent(zoomUrl, startDate, startTime, issueNumber) {
 
         //helper to create end time which is always 1h later
         const getEndTime = (startTime) => {
-            const [hour, min] = startTime.split(':')
-            let nextHour = Number(hour) +1;
-            nextHour = nextHour > 23 ? 0 : nextHour
-            if (nextHour < 9) return `0${nextHour}:${min}`
-            return `${(nextHour)}:${min}`
-          }
+            const [hour, min] = startTime.split(':').map(Number);
+            let nextHour = (hour + 1) % 24;
+            return `${nextHour.toString().padStart(2, '0')}:${min.toString().padStart(2, '0')}`;
+        }
 
         //helper to build meeting description
         //there is a use case that meeting has no connection over zoom available as it is pure live stream
