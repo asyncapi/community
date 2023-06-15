@@ -1,12 +1,11 @@
 #This action update the list of TSC members in the website repository. List of all TSC members is later rendered in the asyncapi.com website.
 name: Update list of TSC members in the website repo
-
 on:
   push:
     branches:
-      - 'master'
+      - "master"
     paths:
-      - 'TSC_MEMBERS.json'
+      - "Maintainers.yaml"
 
 jobs:
   update-website:
@@ -29,10 +28,10 @@ jobs:
         run: |
           git config --global user.name asyncapi-bot
           git config --global user.email info@asyncapi.io
-      - name: Create branch
-        working-directory: ./website
+      - name: Convert YAML to JSON
+        working-directory: ./community
         run: |
-          git checkout -b update-tscmembers-${{ github.head_ref }}
+          cat Maintainers.yaml | yaml2json > TSC_MEMBERS.json
       - name: Copy tsc members file from Current Repo to Another
         working-directory: ./website
         run: |
