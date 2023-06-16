@@ -92,6 +92,16 @@ jobs:
             if(Number(HH) > 23 || Number(HH) < 0 || !(Number(MM) === 0 || Number(MM) === 30)){
               core.setFailed(`${time} is an invalid input. Time should be in UTC time zone in "HH:MM"(MM can be 00 or 30), like: 08:30 or 16:00. No PM or AM versions.`);
             }
+      # New step to validate if the event is in the future
+      - name: Validate if the event is in the future
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const eventDate = new Date('${{ inputs.date }}T${{ inputs.time }}:00Z');
+            const currentDate = new Date();
+            if (eventDate <= currentDate) {
+              core.setFailed('The event cannot be scheduled in the past.');
+            }
       - name: Checkout repository
         uses: actions/checkout@v2
       - name: Setup Node.js
