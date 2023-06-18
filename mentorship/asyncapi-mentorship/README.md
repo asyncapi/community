@@ -9,7 +9,7 @@ The AsyncAPI Mentorship makes it easy to sponsor and help train the next generat
 | 2022 | Jan-Nov | Completed   |       | [Jan-Nov](2022/README.md) |
 
 ## Current cycle
-The AsyncAPI Mentorship program current cycle is 2022 and more details are coming in Q1 of 2023. The next cycle will kick off Q1 of 2023
+The AsyncAPI Mentorship program current cycle is 2023 and more details are coming in Q3 of 2023. The next cycle will kick off Q1 of 2024
 
 ## Program Maintainers
 
