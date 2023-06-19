@@ -71,7 +71,7 @@ A --> |No| D[Continue with pull request];
 
 This workflow listens for changes to the CODEOWNERS file and updates the Maintainers.yaml file accordingly. It also picks up the GitHub username, Twitter handle, and the name of the maintained repository from the API and notifies the affected users.
 
-> Note: This workflow should be located in every repository.
+> Note: This workflow should be located in every repository. It should be configured with permissions to update the Maintainers.yaml file in the community repository.
 
 ```mermaid
 graph TD;
