@@ -152,18 +152,24 @@ graph TD;
 
 ```
 
-### `notify-tsc-members.yaml`
+### `tsc-and-maintainers-update.yaml`
 
-This workflow is triggered when a new member is added to the TSC. It notifies the new member about ways to get notified when TSC members are called out and notifies other TSC members by mentioning the GitHub team.
+This workflow manages changes to the TSC team and the Maintainers list of a project. The workflow is triggered when someone is either added to or removed from the TSC team or when someone is removed from the "Maintainers.yaml" file.
 
-> Note: This workflow should be located in the community repository.
+If a new member is added to the TSC, the workflow notifies the new member about ways to get notified when TSC members are called out and notifies other TSC members by mentioning the GitHub team.
+
+If a maintainer is removed from the "Maintainers.yaml" file, the workflow removes that person from the AsyncAPI organization and teams.
 
 ```mermaid
 graph TD;
-A[PR modifies tsc_member to true?] --> |Yes| B[Notify new member about ways to get notified];
-B --> C[Notify TSC members about new member];
-C --> D[End];
-A --> |No| D[End];
+A[PR modifies tsc_member to true or someone removed from Maintainers.yaml?] --> |Maintainer removed| B[Remove person from organization and teams];
+B --> C[End];
+
+A --> |TSC member added| D[Notify new member about ways to get notified];
+D --> E[Notify TSC members about new member];
+E --> F[End];
+
+A --> |No TSC member added or Maintainer removed| F[End];
 ```
 
 ### `update-emeritus.yaml`
@@ -175,19 +181,6 @@ This workflow is triggered when someone is removed from the Maintainers.yaml fil
 ```mermaid
 graph TD;
 A[Someone removed from Maintainers.yaml?] --> |Yes| B[Update Emeritus.yaml];
-B --> C[End];
-A --> |No| C[End];
-```
-
-### `remove-from-organization.yaml`
-
-This workflow is triggered when someone is removed from the Maintainers.yaml file. It removes the person from the AsyncAPI organization and the proper teams.
-
-> Note: This workflow should be located in the community repository.
-
-```mermaid
-graph TD;
-A[Someone removed from Maintainers.yaml?] --> |Yes| B[Remove person from organization and teams];
 B --> C[End];
 A --> |No| C[End];
 ```
