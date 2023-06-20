@@ -2,7 +2,7 @@ name: Validate Maintainers
 on:
   pull_request:
     paths:
-      - "Maintainers.yml"
+      - "MAINTAINERS.yml"
     types:
       - opened
       - reopened
@@ -19,9 +19,10 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           REPO: ${{ github.repository }}
           PR_NUMBER: ${{ github.event.pull_request.number }}
+          PATH: ${{ github.event.inputs.path }}
         run: |
-          if [ "$(git log -1 --pretty=format:'%an' ${{ github.event.inputs.path }})" != "asyncapi-bot" ]; then
-            echo "Error: Changes to ${{ github.event.inputs.path }} file must be made by the bot."
+          if [ "$(git log -1 --pretty=format:'%an' $PATH)" != "asyncapi-bot" ]; then
+            echo "Error: Changes to $PATH file must be made by the bot."
 
             # Add a comment to the PR explaining why it was blocked
             curl -s -X POST -H "Authorization: Bearer ${{ env.GITHUB_TOKEN }}" \
