@@ -56,6 +56,10 @@ Overall, these subgraphs represent a comprehensive approach to maintaining and u
 
 This workflow listens for changes to the Maintainers.yaml file and validates whether the changes were made by the bot or a human. If a human made the changes, the workflow blocks the pull request and notifies the user with a proper message.
 
+The validation passes if:
+
+- The changes are made by the approved bot account.
+
 > Note: This workflow should be located only in the community repository and should be made a required status check in the repository settings, so if it fails, PR cannot be merged.
 
 ```mermaid
