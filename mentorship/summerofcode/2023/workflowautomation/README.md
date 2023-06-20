@@ -7,8 +7,8 @@ The first graph outlines the steps to automate the updating of Maintainers.yaml.
 ```mermaid
 graph LR;
 
-subgraph Migrate TSC_MEMBERS.JSON to TSC_MEMBERS.YAML
-    A[Convert TSC_MEMBERS.JSON to TSC_MEMBERS.YAML]
+subgraph Migrate TSC_MEMBERS.JSON to MAINTAINERS.yml
+    A[Convert TSC_MEMBERS.JSON to MAINTAINERS.yml]
 end
 
 subgraph Update website code to handle YAML format
