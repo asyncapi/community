@@ -133,43 +133,44 @@ graph TD;
 
 ```
 
-### `update-tsc-team.yaml`
-
-This workflow is triggered when there is a change to the tsc_member property. It adds or removes the member from the TSC team based on the value of the property.
-
-> Note: This workflow should be located only in the community repository.
-
-```mermaid
-graph TD;
-    A[tsc_member value change?] --> |Yes| B[Add or remove member from TSC team?];
-    B --> |Add| C[Add member to TSC team];
-    B --> |Remove| D[Remove member from TSC team];
-    C --> E[Update TSC team membership];
-    D --> E[Update TSC team membership];
-    E --> F[Notify affected users];
-    F --> G[End];
-    A --> |No| G[End];
-
-```
-
 ### `tsc-and-maintainers-update.yaml`
 
-This workflow manages changes to the TSC team and the Maintainers list of a project. The workflow is triggered when someone is either added to or removed from the TSC team or when someone is removed from the "Maintainers.yaml" file.
+This workflow manages changes to the TSC team and the Maintainers list of a project. The workflow is triggered when there is a change to either the "tsc_member" property or the "Maintainers.yaml" file.
 
-If a new member is added to the TSC, the workflow notifies the new member about ways to get notified when TSC members are called out and notifies other TSC members by mentioning the GitHub team.
+If a maintainer is removed from the Maintainers list, the workflow removes that person from the organization and teams.
 
-If a maintainer is removed from the "Maintainers.yaml" file, the workflow removes that person from the AsyncAPI organization and teams.
+If there is a change to the "tsc_member" property, the workflow adds or removes the member from the TSC team based on the value of the property. If a member is added to the TSC team, the workflow notifies affected users.
+
+If there are no changes made to the TSC team or the Maintainers list, the workflow ends.
 
 ```mermaid
 graph TD;
-A[PR modifies tsc_member to true or someone removed from Maintainers.yaml?] --> |Maintainer removed| B[Remove person from organization and teams];
-B --> C[End];
+A[Change to tsc_member property or Maintainers.yaml?] --> |Maintainer removed| B[Remove person from organization and teams];
+A --> |No| D[End];
 
-A --> |TSC member added| D[Notify new member about ways to get notified];
-D --> E[Notify TSC members about new member];
-E --> F[End];
+B --> E[End];
 
-A --> |No TSC member added or Maintainer removed| F[End];
+A --> |tsc_member value change| F[Add or remove member from TSC team?];
+F --> |Add| G[Add member to TSC team];
+G --> H[Update TSC team membership];
+H --> I[Notify affected users];
+I --> J[End];
+F --> |Remove| K[Remove member from TSC team];
+K --> H;
+```
+
+### `notify-tsc-members.yaml`
+
+This workflow is triggered when a new member is added to the TSC. It notifies the new member about ways to get notified when TSC members are called out and notifies other TSC members by mentioning the GitHub team.
+
+> Note: This workflow should be located in the community repository.
+
+```mermaid
+graph TD;
+A[PR modifies tsc_member to true?] --> |Yes| B[Notify new member about ways to get notified];
+B --> C[Notify TSC members about new member];
+C --> D[End];
+A --> |No| D[End];
 ```
 
 ### `update-emeritus.yaml`
