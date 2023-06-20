@@ -192,31 +192,48 @@ A --> |No| C[End];
 
 The following charts showcases the interconnections between different workflows that collectively automate the process of maintaining and updating the Maintainers.yaml file.
 
-First flowchart represents a process for handling changes to the CODEOWNERS file. If a new maintainer is added, the system updates the maintainers' information, allows further updates, and validates the changes. If the validation passes, the pull request is merged, and the new maintainer is invited to the TSC team. In case the validation fails, the pull request is blocked, and the user is notified of the error.
+This flowchart illustrates the sequence of actions taken when changes are detected in the CODEOWNERS file. It depicts how the system responds to the addition or removal of a maintainer. When a change is detected, the Maintainers.yaml file is updated and additional updates to social info and TSC member properties are allowed. The validation workflow ensures the integrity of the changes. In case of validation failure, the pull request is blocked. If validation passes, the workflow diverges based on whether it’s an addition or removal. For additions, the new maintainer is invited, and TSC members are notified. For removals, the Emeritus.yaml file is updated and the maintainer is removed from the organization and teams.
 
 ```mermaid
 graph TD;
-A[Changes made to CODEOWNERS file?] --> |New maintainer added| B[update-maintainers.yaml]
-B --> C[allow-updates.yaml]
-C --> D[validate-maintainers.yaml]
-D --> |Validation passed| E[PR gets merged]
-E --> F[invite-maintainers.yaml]
-F --> G[notify-tsc-members.yaml]
-D --> |Validation failed| H[Block pull request]
-H --> I[Notify user with error message]
-```
+    A[CODEOWNERS file changes detected]
+    B{Is it an addition or removal of a maintainer?}
 
-Second flowchart manages the removal of a maintainer from the CODEOWNERS file. It updates the maintainers' information, validates the changes, and either blocks or merges the pull request accordingly. If the pull request is merged, the TSC team is updated and notified. If the removed maintainer no longer maintains any repository, they are added to the Emeritus list and removed from the organization and relevant teams.
+    C1[Retrieve new maintainer information]
+    C2[Update Maintainers.yaml with new maintainer]
+    C3[Allow maintainer to update their social info and TSC member property]
 
-```mermaid
-graph TD;
-A[Changes made to CODEOWNERS file?] --> |Maintainer removed| H[update-maintainers.yaml]
-H --> I[allow-updates.yaml]
-I --> J[validate-maintainers.yaml]
-J --> |Validation failed| K[Block pull request]
-J --> |Validation passed| L[PR gets merged]
-L --> M[update-tsc-team.yaml]
-M --> N[notify-tsc-members.yaml]
-N --> O[update-emeritus.yaml]
-O --> P[remove-from-organization.yaml]
+    D1[Retrieve removed maintainer information]
+    D2[Update Maintainers.yaml to remove maintainer]
+
+    E[Validate changes to Maintainers.yaml]
+    F[Notify user and block Pull Request]
+    G[Pull Request continues]
+
+    H[Send invitation to new maintainer]
+    I[Notify TSC Members of new addition]
+
+    J1[Update Emeritus.yaml with removed maintainer's info]
+    J2[Remove maintainer from organization and teams]
+    J3[Notify TSC Members of removal]
+
+    A --> B
+    B --> |Addition| C1
+    C1 --> C2
+    C2 --> C3
+    C3 --> E
+
+    B --> |Removal| D1
+    D1 --> D2
+    D2 --> E
+
+    E --> |Validation failed| F
+    E --> |Validation passed| G
+
+    G --> |Addition| H
+    H --> I
+
+    G --> |Removal| J1
+    J1 --> J2
+    J2 --> J3
 ```
