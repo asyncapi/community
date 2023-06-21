@@ -179,15 +179,17 @@ A --> |No| D[End];
 
 ### `update-emeritus.yaml`
 
-This workflow is triggered when someone is removed from the Maintainers.yaml file because they no longer maintain any repository. It updates the Emeritus.yaml file with the list of people that left the project.
+This workflow is triggered when a person is either removed from the Maintainers.yaml file or if their TSC member status is changed. It updates the Emeritus.yaml file with the information of ex-TSC members who left the project. Additionally, it should also be able to handle changes in TSC membership status.
 
 > Note: This workflow should be located in the community repository.
 
 ```mermaid
 graph TD;
-A[Someone removed from Maintainers.yaml?] --> |Yes| B[Update Emeritus.yaml];
-B --> C[End];
-A --> |No| C[End];
+A[Change in Maintainers.yaml?] --> |Removal or TSC flag changed| B[Check if TSC member];
+B --> |Yes| C[Update Emeritus.yaml];
+C --> D[End];
+B --> |No| D[End];
+A --> |No change| D[End];
 ```
 
 #### Workflow Diagram: Interconnections between Workflows
