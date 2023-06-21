@@ -225,11 +225,44 @@ Below flowchart also depicts an independent process for maintainers who wish to 
 
 ```mermaid
 graph TD;
-L[PR raised where maintainer is modified] --> M{Allow maintainer to update their social info and TSC member property?}
-M -->|Yes| N[Update Maintainers.yaml with maintainer changes];
-M -->|No| P[PR Ends];
-N --> O[Validate changes to Maintainers.yaml];
-O --> |Validation passed| P[PR Ends];
-O --> |Validation failed| Q[Notify user and block Pull Request];
-Q --> P;
+    A[PR raised where Maintainers.yaml is modified] --> B{Are changes made by bot or human?};
+    B -->|Bot| J[PR Ends];
+    B -->|Human| C{Are social info and TSC membership being updated?};
+    C -->|No| D[Validate Maintainers.yaml changes];
+    D -->|Validation passed| E[PR Ends];
+    D -->|Validation failed| F[Notify user and block Pull Request];
+    C -->|Yes| G[Update Maintainers.yaml with maintainer changes];
+    G --> H{Is the maintainer updating their TSC membership status?};
+    H -->|No| I[Validate Maintainers.yaml changes];
+    I -->|Validation passed| K[PR Ends];
+    I -->|Validation failed| L[Notify user and block Pull Request];
+    H -->|Yes| M{Is the maintainer listed in TSC team?};
+    M -->|Yes| N[Update TSC team membership];
+    M -->|No| O{Is the maintainer already an Emeritus?};
+    O -->|Yes| P[Update Emeritus.yaml with maintainer info];
+    P --> Q[Remove maintainer from organization and teams];
+    Q --> R[Notify TSC Members of removal];
+    R --> K;
+    O -->|No| S[Retrieve new maintainer information];
+    S --> T[Update Maintainers.yaml with new maintainer information];
+    T --> U{Are social info and TSC membership being updated?};
+    U -->|No| V[Validate Maintainers.yaml changes];
+    V -->|Validation passed| W[Send invitation to new maintainer];
+    W --> X[Notify TSC Members of new addition];
+    V -->|Validation failed| Y[Notify user and block Pull Request];
+    U -->|Yes| Z[Update Maintainers.yaml with maintainer changes];
+    Z --> AA{Is the maintainer updating their TSC membership status?};
+    AA -->|No| AB[Validate Maintainers.yaml changes];
+    AB -->|Validation passed| AC[PR Ends];
+    AB -->|Validation failed| AD[Notify user and block Pull Request];
+    AA -->|Yes| AE{Is the maintainer listed in TSC team?};
+    AE -->|Yes| AF[Update TSC team membership];
+    AE -->|No| AG[Retrieve new maintainer information];
+    AG --> AH[Update Maintainers.yaml with new maintainer information];
+    AH --> BI{Are social info and TSC membership being updated?};
+    BI -->|No| BJ[Validate Maintainers.yaml changes];
+    BJ -->|Validation passed| BK[Send invitation to new maintainer];
+    BK --> BL[Notify TSC Members of new addition];
+    BJ -->|Validation failed| BM[Notify user and block Pull Request];
+    BM --> AC;
 ```
