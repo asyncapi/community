@@ -219,7 +219,6 @@ J2 --> J3[Notify TSC Members of removal];
 F --> K[End];
 J3 --> K;
 I --> K;
-
 ```
 
 Below flowchart also depicts an independent process for maintainers who wish to update their information through a separate pull request. It involves validating the changes and either updating the Maintainers.yaml file or blocking the pull request if validation fails.
