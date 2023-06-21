@@ -162,11 +162,12 @@ F --> |Remove| K[Remove member from TSC team];
 K --> H;
 ```
 
-### `notify-tsc-members.yaml`
+### `msg-to-new-member-pr-merged.yml`
 
 This workflow is triggered when a new member is added to the TSC. It notifies the new member about ways to get notified when TSC members are called out and notifies other TSC members by mentioning the GitHub team.
 
 > Note: This workflow should be located in the community repository.
+> This one is already present.
 
 ```mermaid
 graph TD;
