@@ -153,7 +153,7 @@ A --> |No| D[End];
 
 B --> E[End];
 
-A --> |tsc_member value change| F[Add or remove member from TSC team?];
+A --> |tsc_member value change| F{Add or remove member from TSC team?};
 F --> |Add| G[Add member to TSC team];
 G --> H[Update TSC team membership];
 H --> I[Notify affected users];
