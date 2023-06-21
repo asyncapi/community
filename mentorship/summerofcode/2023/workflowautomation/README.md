@@ -190,48 +190,41 @@ A --> |No| C[End];
 
 The following charts showcases the interconnections between different workflows that collectively automate the process of maintaining and updating the Maintainers.yaml file.
 
-This flowchart illustrates the sequence of actions taken when changes are detected in the CODEOWNERS file. It depicts how the system responds to the addition or removal of a maintainer. When a change is detected, the Maintainers.yaml file is updated and additional updates to social info and TSC member properties are allowed. The validation workflow ensures the integrity of the changes. In case of validation failure, the pull request is blocked. If validation passes, the workflow diverges based on whether it’s an addition or removal. For additions, the new maintainer is invited, and TSC members are notified. For removals, the Emeritus.yaml file is updated and the maintainer is removed from the organization and teams.
+#### CODEOWNER Add/Remove
+
+This flowchart illustrates the streamlined process for managing changes to a CODEOWNERS file. When changes are detected, the flowchart outlines steps for adding or removing a maintainer. For additions, it retrieves the new maintainer's information, updates Maintainers.yaml, validates changes, sends an invitation to the new maintainer, and notifies TSC members. For removals, it retrieves the removed maintainer's information, updates Maintainers.yaml, moves the removed maintainer's information to Emeritus.yaml, removes them from the organization, and notifies TSC members.
 
 ```mermaid
 graph TD;
-    A[CODEOWNERS file changes detected]
-    B{Is it an addition or removal of a maintainer?}
+A[CODEOWNERS file changes detected] --> B{Is it an addition or removal of a maintainer?};
+B --> |Addition| C1[Retrieve new maintainer information];
+B --> |Removal| D1[Retrieve removed maintainer information];
+C1 --> C2[Update Maintainers.yaml with new maintainer];
+C2 --> E[Validate changes to Maintainers.yaml];
+D1 --> D2[Update Maintainers.yaml to remove maintainer];
+D2 --> E;
+E --> |Validation failed| F[Notify user and block Pull Request];
+E --> |Validation passed| G{Addition or Removal?};
+G --> |Addition| H[Send invitation to new maintainer];
+H --> I[Notify TSC Members of new addition];
+G --> |Removal| J1[Update Emeritus.yaml with removed maintainer's info];
+J1 --> J2[Remove maintainer from organization and teams];
+J2 --> J3[Notify TSC Members of removal];
+F --> K[End];
+J3 --> K;
+I --> K;
 
-    C1[Retrieve new maintainer information]
-    C2[Update Maintainers.yaml with new maintainer]
-    C3[Allow maintainer to update their social info and TSC member property]
+```
 
-    D1[Retrieve removed maintainer information]
-    D2[Update Maintainers.yaml to remove maintainer]
+Below flowchart also depicts an independent process for maintainers who wish to update their information through a separate pull request. It involves validating the changes and either updating the Maintainers.yaml file or blocking the pull request if validation fails.
 
-    E[Validate changes to Maintainers.yaml]
-    F[Notify user and block Pull Request]
-    G[Pull Request continues]
-
-    H[Send invitation to new maintainer]
-    I[Notify TSC Members of new addition]
-
-    J1[Update Emeritus.yaml with removed maintainer's info]
-    J2[Remove maintainer from organization and teams]
-    J3[Notify TSC Members of removal]
-
-    A --> B
-    B --> |Addition| C1
-    C1 --> C2
-    C2 --> C3
-    C3 --> E
-
-    B --> |Removal| D1
-    D1 --> D2
-    D2 --> E
-
-    E --> |Validation failed| F
-    E --> |Validation passed| G
-
-    G --> |Addition| H
-    H --> I
-
-    G --> |Removal| J1
-    J1 --> J2
-    J2 --> J3
+```mermaid
+graph TD;
+L[PR raised where maintainer is modified] --> M{Allow maintainer to update their social info and TSC member property?}
+M -->|Yes| N[Update Maintainers.yaml with maintainer changes];
+M -->|No| P[PR Ends];
+N --> O[Validate changes to Maintainers.yaml];
+O --> |Validation passed| P[PR Ends];
+O --> |Validation failed| Q[Notify user and block Pull Request];
+Q --> P;
 ```
