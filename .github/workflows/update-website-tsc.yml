@@ -5,7 +5,7 @@ on:
     branches:
       - "master"
     paths:
-      - "Maintainers.yaml"
+      - "MAINTAINERS.yaml"
 
 jobs:
   update-website:
@@ -31,11 +31,11 @@ jobs:
       - name: Convert YAML to JSON
         working-directory: ./community
         run: |
-          cat Maintainers.yaml | yaml2json > TSC_MEMBERS.json
+          cat Maintainers.yaml | yaml2json > MAINTAINERS.json
       - name: Copy tsc members file from Current Repo to Another
         working-directory: ./website
         run: |
-          cp ../community/TSC_MEMBERS.json ./config/TSC_MEMBERS.json
+          cp ../community/MAINTAINERS.json ./config/MAINTAINERS.json
       - name: Commit and push
         working-directory: ./website
         run: |
