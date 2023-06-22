@@ -52,22 +52,35 @@ Overall, these subgraphs represent a comprehensive approach to maintaining and u
 
 ### Workflows
 
-### `validate-maintainers.yaml`
+### `verify-maintainers.yaml`
 
-This workflow listens for changes to the Maintainers.yaml file and validates whether the changes were made by the bot or a human. If a human made the changes, the workflow blocks the pull request and notifies the user with a proper message.
+This workflow listens for changes to the Maintainers.yaml file and verifies the legitimacy of the changes. It discerns between changes made by a bot and those made by a human. If a human has made changes that involve critical attributes, which include modifying fields such as the GitHub username, repository keys, or removing an entire maintainer object, the workflow blocks the pull request and notifies the user with an appropriate message.
 
-The validation passes if:
+The workflow allows the pull request to continue if:
 
 - The changes are made by the approved bot account.
+- The changes made by a human do not involve the removal or modification of critical attributes.
 
 > Note: This workflow should be located only in the community repository and should be made a required status check in the repository settings, so if it fails, PR cannot be merged.
 
 ```mermaid
 graph TD;
-A[New record added to Maintainers.yaml?] --> |Yes| B[Validate record];
-B --> |Validation failed| C[Block pull request];
-B --> |Validation passed| D[Continue with pull request];
-A --> |No| D[Continue with pull request];
+A[Maintainers.yaml file changes detected] --> B{Changes made by bot or human?};
+
+B --> |Bot| E[Continue with pull request];
+B --> |Human| C{Do changes involve critical attributes?};
+
+C --> |Yes| D[Block pull request with message];
+C --> |No| E[Continue with pull request];
+
+D --> F[End];
+E --> F;
+
+subgraph Critical Attributes
+CA1[GitHub Username];
+CA2[Repository Keys];
+CA3[Removal of any maintainer object];
+end
 
 ```
 
