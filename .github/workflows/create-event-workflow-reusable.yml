@@ -96,7 +96,8 @@ jobs:
             const eventDate = new Date('${{ inputs.date }}T${{ inputs.time }}:00Z');
             const currentDate = new Date();
             if (eventDate <= currentDate) {
-              core.setFailed('The event cannot be scheduled in the past.');
+              let errorMessage = `The event cannot be scheduled in the past. You attempted to schedule the event on ${eventDate.toLocaleString()}, but the current date and time is ${currentDate.toLocaleString()}. Please specify a future date and time for the event.`;
+              core.setFailed(errorMessage);
             }
       - name: Checkout repository
         uses: actions/checkout@v2
