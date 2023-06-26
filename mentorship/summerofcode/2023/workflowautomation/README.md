@@ -78,8 +78,8 @@ E --> F;
 
 subgraph Critical Attributes
 CA1[GitHub Username];
-CA2[Repository Keys];
-CA3[Removal of any maintainer object];
+CA2[Maintainer's repositories list];
+CA3[Addition or removal of any maintainer object];
 end
 
 ```
