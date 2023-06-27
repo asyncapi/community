@@ -1,4 +1,4 @@
-name: Schedule Community Meeting
+name: Schedule Spec 3.0 Docs Meeting
 
 on:
   workflow_dispatch:
@@ -14,17 +14,17 @@ on:
         required: false
 
 jobs:
-  setup-community-meeting:
+  setup-spec-3-docs-meeting:
     uses: ./.github/workflows/create-event-workflow-reusable.yml
     with:
       time: ${{ github.event.inputs.time }}
       date: ${{ github.event.inputs.date }}
       meeting_banner: ${{ github.event.inputs.meeting_banner }}
-      meeting_name: Community Meeting
-      meeting_desc: This is a community meeting to regularly talk in open about important topics around AsyncAPI Initiative.
-      host: lpgornicki@gmail.com
-      alternative_host: 'fmvilas@gmail.com,devlopergene@gmail.com,sibanda.thulie@gmail.com'
-      issue_template_path: .github/workflows/create-event-helpers/issues_templates/community.md
+      meeting_name: Spec 3.0 Docs Meeting
+      meeting_desc: This is a open meeting to plan and write Spec 3.0 Docs.
+      host: alejandra.olvera.novack@gmail.com
+      alternative_host: 'fmvilas@gmail.com,devlopergene@gmail.com,sibanda.thulie@gmail.com,jonas-lt@live.dk,lpgornicki@gmail.com'
+      issue_template_path: .github/workflows/create-event-helpers/issues_templates/spec-3-docs.md
       create_zoom: true
     secrets:
       GH_TOKEN: ${{ secrets.GH_TOKEN }}

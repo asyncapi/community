@@ -4,7 +4,7 @@ const core = require('@actions/core');
 
 /**
  * @param {string} date Date as YYYY-MM-DD
- * @param {string} time Number that represents hour, 2-digit format
+ * @param {string} time String representing the time in "HH:MM" format. MM can be 00 or 30.
  * @param {string} host email address of meeting host
  * @param {string} cohost coma-separated list of email addresses of alternative hosts
  */
@@ -23,7 +23,7 @@ module.exports = async(date, time, host, cohost) => {
     const zoomSettings = JSON.stringify({
         topic: meetingTitle,
         type: '2',
-        start_time: `${ date }T${ time }:00:00`,
+        start_time: `${ date }T${ time }:00`,
         duration: '60',
         timezone: 'UTC',
         settings: {
