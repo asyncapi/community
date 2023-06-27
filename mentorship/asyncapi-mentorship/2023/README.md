@@ -21,4 +21,3 @@ Mentorship duration - Six months \(full-time schedule\)
 | 8 | [Add support for translations](https://github.com/asyncapi/website/issues/267) | [Maciej Urbańczyk](https://github.com/magicmatatjahu) | Engineering | To be announced(TBA) |
 | 9 | [Prepare CLI for v1.0.0 release](https://github.com/asyncapi/cli/issues/599) | [Souvik](https://github.com/Souvikns) | Engineering | To be announced(TBA) |
 | 10 | [DocsUI: Messages Object output](https://github.com/asyncapi/asyncapi-react/issues/618) | [Missy Turco](https://github.com/mcturco) & [Fran Méndez](https://github.com/fmvilas) | Design | To be announced(TBA) |
-| 11 | [DocsUI: UX/UI updates](https://github.com/asyncapi/asyncapi-react/issues/617) | [Missy Turco](https://github.com/mcturco) & [Fran Méndez](https://github.com/fmvilas) | Design | To be announced(TBA) |
