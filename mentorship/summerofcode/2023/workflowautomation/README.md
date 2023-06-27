@@ -218,31 +218,20 @@ graph TD;
 A[CODEOWNERS file changes detected] --> B{Is it an addition, removal, or configuration update?};
 
 B --> |Addition| C{Is maintainer already listed in Maintainers.yaml?};
-B --> |Removal| D1[Retrieve removed maintainer information];
+B --> |Removal| R{Is Maintainer still owning some other repositories?};
 B --> |Configuration Update| X[End];
 
-C --> |No| C1[Retrieve new maintainer information];
-C --> |Yes| C2[Skip retrieval];
+C --> |Yes| C1[Add repo to existing maintainer];
+C --> |No| C2[Retrieve new maintainer information and add to maintainers list];
 
-C1 --> E[Validate changes to Maintainers.yaml are done by bot];
-C2 --> E;
+C1 --> PR2[Create PR in Community Repo to Update Maintainer];
+C2 --> PR3[Create PR in Community Repo with New Maintainer Info];
 
-D1 --> D2[Update Maintainers.yaml to remove maintainer];
-D2 --> E;
+R --> |Yes| R1[Remove repository from list];
+R --> |No| R2[Remove maintainer from list];
 
-E --> |Validation failed| F[Notify user and block Pull Request];
-E --> |Validation passed| G{Was it an Addition or Removal?};
-
-G --> |Addition| H[Send invitation to new maintainer];
-H --> I[Notify TSC Members of new addition];
-
-G --> |Removal| J1[Update Emeritus.yaml with removed maintainer's info];
-J1 --> J2[Remove maintainer from organization and teams];
-J2 --> J3[Notify TSC Members of removal];
-
-F --> K[End];
-J3 --> K;
-I --> K;
+R1 --> PR4[Create PR in Community Repo for Removal from Repo];
+R2 --> PR5[Create PR in Community Repo for Total Removal];
 ```
 
 Below flowchart also depicts an independent process for maintainers who wish to update their information through a separate pull request. It involves validating the changes and either updating the Maintainers.yaml file or blocking the pull request if validation fails.
