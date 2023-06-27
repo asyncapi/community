@@ -3,9 +3,9 @@ name: Update list of TSC members in the website repo
 on:
   push:
     branches:
-      - "master"
+      - 'master'
     paths:
-      - "MAINTAINERS.yaml"
+      - 'MAINTAINERS.yaml'
 
 jobs:
   update-website:
