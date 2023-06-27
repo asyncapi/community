@@ -1,0 +1,28 @@
+name: Verify Maintainers Changes
+
+on:
+  pull_request:
+    paths:
+      - "Maintainers.yaml"
+
+jobs:
+  verify-changes:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Fetch all branches
+        run: git fetch --no-tags --prune --depth=1 origin +refs/heads/*:refs/remotes/origin/*
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: "14"
+
+      - name: Install dependencies
+        run: npm install yaml
+
+      - name: Verify changes
+        run: node .github/workflows/verify-maintainers-changes.js ${{ github.event.pull_request.user.login }}
