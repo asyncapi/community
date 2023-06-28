@@ -3,7 +3,7 @@ name: Verify Maintainers Changes
 on:
   pull_request:
     paths:
-      - "Maintainers.yaml"
+      - "MAINTAINERS.yaml"
 
 jobs:
   verify-changes:
