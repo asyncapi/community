@@ -25,4 +25,28 @@ jobs:
         run: npm install yaml
 
       - name: Verify changes
+        id: verify
         run: node .github/scripts/verify-maintainers-changes.js ${{ github.event.pull_request.user.login }}
+        env:
+          PULL_REQUEST_NUMBER: ${{ github.event.pull_request.number }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Close PR and Comment
+        if: steps.verify.outputs.isCriticalChange == 'true'
+        uses: actions/github-script@v5
+        with:
+          github-token: ${{secrets.GITHUB_TOKEN}}
+          script: |
+            github.rest.pulls.update({
+              owner: 'asyncapi',
+              repo: 'community',
+              pull_number: ${{ github.event.pull_request.number }},
+              state: 'closed'
+            });
+
+            github.rest.issues.createComment({
+              owner: 'asyncapi',
+              repo: 'community',
+              issue_number: ${{ github.event.pull_request.number }},
+              body: 'Critical changes have been made. This PR needs to be reviewed.'
+            });
