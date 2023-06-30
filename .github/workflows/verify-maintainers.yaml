@@ -4,7 +4,7 @@ on:
   pull_request:
     types: [synchronize, opened]
     paths:
-      - "Maintainers.yaml"
+      - "MAINTAINERS.yaml"
 
 jobs:
   verify-changes:
@@ -25,17 +25,17 @@ jobs:
       - name: Install Dependencies
         run: npm install yaml
 
-      - name: Verify changes in Maintainers.yaml
+      - name: Verify changes in MAINTAINERS.yaml
         id: verify-changes
         uses: actions/github-script@v5
         with:
-          github-token: ${{ secrets.BOT_TOKEN }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
             const yaml = require("yaml");
             const fs = require("fs");
 
-            const mainFile = yaml.parse(fs.readFileSync("./community-main/Maintainers.yaml", "utf8"));
-            const prFile = yaml.parse(fs.readFileSync("./pr-branch/Maintainers.yaml", "utf8"));
+            const mainFile = yaml.parse(fs.readFileSync("./community-main/MAINTAINERS.yaml", "utf8"));
+            const prFile = yaml.parse(fs.readFileSync("./pr-branch/MAINTAINERS.yaml", "utf8"));
 
             const beforeMaintainers = new Map(mainFile.map((maintainer) => [maintainer.name, {github: maintainer.github, repos: maintainer.repos || []}]));
             let isCriticalChangeDetected = false;
