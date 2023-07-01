@@ -3,7 +3,7 @@
 
 ### Ideas list
 
-Number | Idea | Area | Lead mentor | Why should it be picked?
+Number | Idea | Area | Lead Mentor | Scope
 :---:|---|:---:|:---:|---
 1 | [Add help/{command} endpoint](https://github.com/asyncapi/server-api/issues/144) | [server-api](https://github.com/asyncapi/server-api) | [BOLT04](https://github.com/BOLT04) | By adding a new endpoint to the AsyncAPI server API that provides detailed information and usage instructions for the CLI tool, we can help users overcome challenges and achieve greater success in their API development efforts.
 2 | [Website UI Kit design/dev project](https://github.com/asyncapi-archived-repos/design-system/issues/4) | [design-system](https://github.com/asyncapi-archived-repos/design-system) | [AceTheCreator](https://github.com/AceTheCreator) | There are a lot of places where components need to be created for even the smallest of elements that repeat on the website.
