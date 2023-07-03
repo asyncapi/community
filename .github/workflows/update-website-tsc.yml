@@ -45,3 +45,12 @@ jobs:
         working-directory: ./website
         run: |
           gh pr create --title "docs(community): update latest maintainers list" --body "Updated Maintainers list is available and this PR introduces changes with latest information about Maintainers" --head "update-tscmembers-${{ github.head_ref }}"
+
+      - name: Report workflow run status to Slack
+        if: failure() # Only, on failure, send a message on the slack channel
+        uses: rtCamp/action-slack-notify@v2
+        env:
+          SLACK_WEBHOOK: ${{ secrets.SLACK_CI_FAIL_NOTIFY }}
+          SLACK_TITLE: 🚨 Update maintainers list action failed 🚨
+          SLACK_MESSAGE: Failed to update the maintainers list in the website repository.
+          MSG_MINIMAL: true
