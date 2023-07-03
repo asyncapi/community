@@ -1,5 +1,5 @@
-#This action update the list of TSC members in the website repository. List of all TSC members is later rendered in the asyncapi.com website.
-name: Update list of TSC members in the website repo
+#This action update the list of TSC members in the website repository. List of all Maintainers is later rendered in the asyncapi.com website.
+name: Update list of Maintainers in the website repo
 on:
   push:
     branches:
@@ -8,7 +8,7 @@ on:
       - "MAINTAINERS.yaml"
 jobs:
   update-website:
-    name: Make PR on website repository with updated tsc members list
+    name: Make PR on website repository with updated maintainers list
     runs-on: ubuntu-latest
     env:
       GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
@@ -31,7 +31,7 @@ jobs:
         working-directory: ./community
         run: |
           python -c 'import sys, yaml, json; json.dump(yaml.safe_load(sys.stdin), sys.stdout, indent=4)' < MAINTAINERS.yaml > MAINTAINERS.json
-      - name: Copy tsc members file from Current Repo to Another
+      - name: Copy maintainers file from Current Repo to Another
         working-directory: ./website
         run: |
           cp ../community/MAINTAINERS.json ./config/MAINTAINERS.json
@@ -39,9 +39,9 @@ jobs:
         working-directory: ./website
         run: |
           git add .
-          git commit -m "docs(community): update latest tsc members list"
+          git commit -m "docs(community): update latest maintainers list"
           git push https://${{ env.GITHUB_TOKEN }}@github.com/asyncapi/website
       - name: Create PR
         working-directory: ./website
         run: |
-          gh pr create --title "docs(community): update latest tsc members list" --body "Updated TSC members list is available and this PR introduces changes with latest information about TSC members" --head "update-tscmembers-${{ github.head_ref }}"
+          gh pr create --title "docs(community): update latest maintainers list" --body "Updated Maintainers list is available and this PR introduces changes with latest information about Maintainers" --head "update-tscmembers-${{ github.head_ref }}"
