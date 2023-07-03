@@ -1,16 +1,17 @@
-name: Validating the list of technical steering committee members
+name: Validating the list of maintainers
 
 on:
   pull_request:
     types: [opened, reopened, synchronize, ready_for_review]
     paths:
-      - 'TSC_MEMBERS.json'
+      - 'MAINTAINERS.yaml'
+
 jobs:
-  # make sure that changes in the TSC_MEMBERS file is not breaking the schema
-  # until we have TSC_MEMBERS.json updates automated we need to make sure we are not breaking things
+  # Make sure that changes in the MAINTAINERS.yaml file do not break the schema
+  # Until we have MAINTAINERS.yaml updates automated, we need to ensure we are not breaking things
   validate_schema:
     if: github.event.pull_request.draft == false
-    name: Validate JSON Schema for TSC_MEMBERS list
+    name: Validate JSON Schema for MAINTAINERS list
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -24,24 +25,24 @@ jobs:
             const fs = require('fs').promises;
 
             const schema = await fs.readFile('.github/workflows/tsc_members_validator/schema.json', 'utf8');
-            const members = await fs.readFile('TSC_MEMBERS.json', 'utf8');
+            const members = await fs.readFile('MAINTAINERS.yaml', 'utf8');
             
             const ajv = new Ajv();
             const validator = ajv.compile(JSON.parse(schema));
 
-            const valid = validator(JSON.parse(members));
+            const valid = validator(yaml.load(members));
 
             if (!valid) {
-              core.error(`Validation of members file failed with the following errors:`);
+              core.error(`Validation of maintainers file failed with the following errors:`);
               core.error(validator.errors);
             } else {
-              core.info(`TSC members file is valid`);
+              core.info(`MAINTAINERS file is valid`);
             }
 
-  # open governance model doesn't allow more than 1/4 TSC members affiliated with a single company
+  # Open governance model doesn't allow more than 1/4 maintainers affiliated with a single company
   calculate_companies:
     if: github.event.pull_request.draft == false
-    name: Calculate TSC members affiliation
+    name: Calculate maintainers affiliation
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -50,18 +51,17 @@ jobs:
         uses: actions/github-script@v4
         with:
           script: |
-            const members = require('./TSC_MEMBERS.json');
+            const members = yaml.load(fs.readFileSync('./MAINTAINERS.yaml', 'utf8'));
             const allMembers = members.length;
             
-            const allowedMemberPerCompany = (allMembers/4).toFixed(0)
+            const allowedMemberPerCompany = (allMembers/4).toFixed(0);
             const numberOfMemByCompany = members.reduce((acc, m) => {
               const company = m.company && m.company.toLowerCase();
             
-              if (company) acc.has(company) ? acc.set(company,acc.get(company)+1) : acc.set(company,1);
+              if (company) acc.has(company) ? acc.set(company, acc.get(company) + 1) : acc.set(company, 1);
               return acc;
-            }, new Map())
+            }, new Map());
 
             numberOfMemByCompany.forEach((numberOfRepresentatives, companyName) => {
-              if (numberOfRepresentatives > allowedMemberPerCompany) core.setFailed(`There are to many members affiliated with ${companyName} and it violates open governance model. ${numberOfRepresentatives} is more that 1/4 of ${allMembers}`)
+              if (numberOfRepresentatives > allowedMemberPerCompany) core.setFailed(`There are too many members affiliated with ${companyName} and it violates the open governance model. ${numberOfRepresentatives} is more than 1/4 of ${allMembers}`);
             })
- 
