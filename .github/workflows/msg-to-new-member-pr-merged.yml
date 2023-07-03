@@ -4,7 +4,7 @@ on:
   pull_request:
     types: [closed]
     paths: 
-      - 'TSC_MEMBERS.json'
+      - 'MAINTAINERS.yaml'
 
 jobs:
   welcome:
@@ -27,14 +27,18 @@ jobs:
       - name: List of directory 
         run: ls -la
       - run: cd community && git checkout HEAD^
+      - name: Install dependencies
+        run: npm install js-yaml
       - name: Compare files
         id: compare-files
         uses: actions/github-script@v6
         with:
           script: |
             const fs = require("fs");
-            const main_file = require('./community-main/TSC_MEMBERS.json');
-            const pr_file = require('./community/TSC_MEMBERS.json');
+            const yaml = require('js-yaml');
+
+            const main_file = yaml.load('./community-main/MAINTAINERS.yaml', 'utf8');
+            const pr_file = yaml.load('./community/MAINTAINERS.yaml', 'utf8');
             const removed = pr_file.filter(
               (newObj) => !main_file.some((oldObj) => oldObj.github === newObj.github)
             );
@@ -42,36 +46,37 @@ jobs:
               (oldObj) => !pr_file.some((newObj) => newObj.github === oldObj.github)
             );
             if(added.length > 0) {
-              core.info(`Added Contributors : ${JSON.stringify(added, null, 2)}`)
+              core.info(`Added Contributors:\n${yaml.dump(added)}`);
               core.setOutput("newContributors", added.map((obj) => obj.github).join(","));
             }
             if(removed.length > 0) {
-              core.info(`Removed Contributors : ${JSON.stringify(removed, null, 2)}`)
+              core.info(`Removed Contributors:\n${yaml.dump(removed)}`);
               core.setOutput("removed", "true");
             }
-            core.info('TSC members in main branch:');
-            core.info(JSON.stringify(main_file, null, 2));
-            core.info('Location of TSC members in main branch:');
-            core.info(fs.realpathSync('./community-main/TSC_MEMBERS.json'));
-            core.info('TSC members in PR branch:');
-            core.info(JSON.stringify(pr_file, null, 2));
-            core.info('Location of TSC members in PR branch:');
-            core.info(fs.realpathSync('./community/TSC_MEMBERS.json'));
+            core.info('Maintainers in main branch:\n' + yaml.dump(main_file));
+            core.info('Location of Maintainers in main branch:');
+            core.info(fs.realpathSync('./community-main/MAINTAINERS.yaml'));
+            core.info('Maintainers in PR branch:\n' + yaml.dump(pr_file));
+            core.info('Location of Maintainers in PR branch:');
+            core.info(fs.realpathSync('./community/MAINTAINERS.yaml'));
+      - name: Debug newMaintainers output
+        run: |
+          echo "newMaintainers = ${{ steps.compare-files.outputs.newMaintainers }}"
 
       - name: Display welcome message
-        if: ${{steps.compare-files.outputs.newContributors != ''}}
+        if: steps.compare-files.outputs.newMaintainers != ''
         uses: actions/github-script@v6
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          github-token: ${{ secrets.BOT_TOKEN }}
           script: |
-            const newContributors = `${{steps.compare-files.outputs.newContributors}}`.split(",");
-            const welcomeMessage = newContributors.map((contributor) => `@${contributor.trim().replace(/^@/, '')} Soon you will be invited to join the AsyncAPI GitHub organization and you will be added to the team that lists all TSC members.
+            const newMaintainers = "${{ steps.compare-files.outputs.newMaintainers }}".split(",");
+            const welcomeMessage = newMaintainers.map((maintainer) => `@${maintainer.trim().replace(/^@/, '')} I have invited you to join the AsyncAPI organization and you will soon be added to the team that lists all Maintainers.
             
-            We use this team to mention in different discussions in different places in GitHub where TSC opinion is needed or even voting on some topic. Once TSC is mentioned:
+            We use this team to mention in different discussions in different places in GitHub where Maintainer's opinion is needed or even voting on some topic. Once Maintainers are mentioned:
             
             - You get GitHub notification
-            - We also drop notification in our slack in #95_bot-tsc-members-mentioned channel
-            - We drop an email to people that subscribed to TSC news here https://www.asyncapi.com/community/tsc
+            - We also drop notification in our slack in #95_bot-maintainers-mentioned channel
+            - We drop an email to people that subscribed to Maintainer news here https://www.asyncapi.com/community/maintainers
             
             Pick the channel for notifications that you prefer. Welcome aboard! We are excited to have you as part of the team.`).join("\n");
             
@@ -84,5 +89,5 @@ jobs:
         env:
           SLACK_WEBHOOK: ${{secrets.SLACK_CI_FAIL_NOTIFY}}
           SLACK_TITLE: 🚨 Welcome new contributor action failed 🚨
-          SLACK_MESSAGE: Failed to post a message to new TSC member
+          SLACK_MESSAGE: Failed to post a message to new Maintainer
           MSG_MINIMAL: true     
