@@ -17,12 +17,15 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
       - run: npm install ajv@6.12.6
+      - name: Install dependencies
+        run: npm install js-yaml
       - name: Validate list with schema
         uses: actions/github-script@v4
         with:
           script: |
             const Ajv = require("ajv");
             const fs = require('fs').promises;
+            const yaml = require('js-yaml');
 
             const schema = await fs.readFile('.github/workflows/tsc_members_validator/schema.json', 'utf8');
             const members = await fs.readFile('MAINTAINERS.yaml', 'utf8');
@@ -47,10 +50,15 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
+      - name: Install dependencies
+        run: npm install js-yaml
       - name: Calculate
         uses: actions/github-script@v4
         with:
           script: |
+            const fs = require('fs');
+            const yaml = require('js-yaml');
+
             const members = yaml.load(fs.readFileSync('./MAINTAINERS.yaml', 'utf8'));
             const allMembers = members.length;
             
@@ -63,5 +71,7 @@ jobs:
             }, new Map());
 
             numberOfMemByCompany.forEach((numberOfRepresentatives, companyName) => {
-              if (numberOfRepresentatives > allowedMemberPerCompany) core.setFailed(`There are too many members affiliated with ${companyName} and it violates the open governance model. ${numberOfRepresentatives} is more than 1/4 of ${allMembers}`);
+              if (numberOfRepresentatives > allowedMemberPerCompany) {
+                core.setFailed(`There are too many members affiliated with ${companyName} and it violates the open governance model. ${numberOfRepresentatives} is more than 1/4 of ${allMembers}`);
+              }
             })
