@@ -58,20 +58,21 @@ jobs:
           script: |
             const fs = require('fs');
             const yaml = require('js-yaml');
-
             const members = yaml.load(fs.readFileSync('./MAINTAINERS.yaml', 'utf8'));
-            const allMembers = members.length;
-            
-            const allowedMemberPerCompany = (allMembers/4).toFixed(0);
-            const numberOfMemByCompany = members.reduce((acc, m) => {
+            // Filter in the members who are part of the TSC
+            const tscMembers = members.filter(member => member.isTscMember);
+
+            const allTscMembers = tscMembers.length;
+
+            const allowedMemberPerCompany = Math.floor(allTscMembers / 4);
+            const numberOfMemByCompany = tscMembers.reduce((acc, m) => {
               const company = m.company && m.company.toLowerCase();
-            
               if (company) acc.has(company) ? acc.set(company, acc.get(company) + 1) : acc.set(company, 1);
               return acc;
             }, new Map());
 
             numberOfMemByCompany.forEach((numberOfRepresentatives, companyName) => {
               if (numberOfRepresentatives > allowedMemberPerCompany) {
-                core.setFailed(`There are too many members affiliated with ${companyName} and it violates the open governance model. ${numberOfRepresentatives} is more than 1/4 of ${allMembers}`);
+                core.setFailed(`There are too many TSC members affiliated with ${companyName} and it violates the open governance model. ${numberOfRepresentatives} is more than 1/4 of ${allTscMembers}`);
               }
-            })
+            });
