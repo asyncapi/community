@@ -58,11 +58,14 @@ jobs:
             }
 
             for (const maintainer of prFile) {
+              // retrieve the previous data of the maintainer from the main file
               const previousData = beforeMaintainers.get(maintainer.name);
+              // if the maintainer is not found in the previous data, it is a new maintainer 
               if (!previousData) {
                 errorMessages.push(`A new maintainer, ${maintainer.name}, has been added to MAINTAINERS.yaml. 
                 Only `asyncapi-bot` can make such changes. Maintainers are added to the file in an automated way only if they are mentioned in the `CODEOWNERS` file in any repository.`);
               } else {
+                // retrieve the previous GitHub key and repositories of the maintainer
                 const previousGithub = previousData.github;
                 const previousRepos = previousData.repos;
                 // check if the GitHub key for the maintainer has been modified
@@ -70,6 +73,7 @@ jobs:
                   errorMessages.push(`GitHub key for ${maintainer.name} has been modified in MAINTAINERS.yaml. 
                   Only `asyncapi-bot` can make such changes. This information is derived from the `CODEOWNERS` file.`);
                 }
+                // check if the repositories list for the maintainer has been modified
                 if (previousRepos.toString() !== (maintainer.repos || []).toString()) ) {
                   errorMessages.push(`Repos list for ${maintainer.name} has been modified in MAINTAINERS.yaml. 
                   Only `asyncapi-bot` can make such changes. This information is derived from the `CODEOWNERS` file.`);
