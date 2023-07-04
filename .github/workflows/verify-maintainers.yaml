@@ -47,7 +47,7 @@ jobs:
 
             // If the PR is made by the bot, don't do anything.
             if (author === 'asyncapi-bot') {
-              console.log('Changes made by async-bot, skipping verification.');
+              console.log('Changes made by asyncapi-bot, skipping verification.');
               return;
             }
 
