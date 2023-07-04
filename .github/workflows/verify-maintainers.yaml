@@ -69,7 +69,7 @@ jobs:
               } else {
                 const previousGithub = previousData.github;
                 const previousRepos = previousData.repos;
-
+                // check if the GitHub key for the maintainer has been modified
                 if (previousGithub !== maintainer.github) {
                   errorMessages.push(`GitHub key for ${maintainer.name} has been modified in MAINTAINERS.yaml. 
                   Only `asyncapi-bot` can make such changes. This information is derived from the `CODEOWNERS` file.`);
@@ -84,7 +84,6 @@ jobs:
             // If there are any error messages, create a comment on the PR
             if (errorMessages.length > 0) {
                 createComment(errorMessages);
-
                 // Close the PR
                 github.rest.pulls.update({
                     owner,
