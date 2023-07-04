@@ -234,48 +234,55 @@ R1 --> PR4[Create PR in Community Repo for Removal from Repo];
 R2 --> PR5[Create PR in Community Repo for Total Removal];
 ```
 
-Below flowchart also depicts an independent process for maintainers who wish to update their information through a separate pull request. It involves validating the changes and either updating the Maintainers.yaml file or blocking the pull request if validation fails.
+Below flowchart illustrates the process of verifying changes detected in the Maintainers.yaml file. It helps determine the type of changes, whether they are made by a bot or a human, and takes appropriate actions based on the nature of the changes.
+
+Critical Attributes:
+- GitHub Username
+- Maintainer's repositories list
+- Addition or removal of any maintainer object
+
+The flowchart guides the verification process and actions to be taken, including merging pull requests, sending invitations, updating organization and repository settings, and notifying TSC members.
+
+Please refer to the flowchart for a visual representation of the steps involved in verifying Maintainers.yaml changes.
+
 
 ```mermaid
 graph TD;
-    A[PR raised where Maintainers.yaml is modified] --> B{Are changes made by bot or human?};
-    B -->|Bot| J[PR Ends];
-    B -->|Human| C{Are social info and TSC membership being updated?};
-    C -->|No| D[Validate Maintainers.yaml changes];
-    D -->|Validation passed| E[PR Ends];
-    D -->|Validation failed| F[Notify user and block Pull Request];
-    C -->|Yes| G[Update Maintainers.yaml with maintainer changes];
-    G --> H{Is the maintainer updating their TSC membership status?};
-    H -->|No| I[Validate Maintainers.yaml changes];
-    I -->|Validation passed| K[PR Ends];
-    I -->|Validation failed| L[Notify user and block Pull Request];
-    H -->|Yes| M{Is the maintainer listed in TSC team?};
-    M -->|Yes| N[Update TSC team membership];
-    M -->|No| O{Is the maintainer already an Emeritus?};
-    O -->|Yes| P[Update Emeritus.yaml with maintainer info];
-    P --> Q[Remove maintainer from organization and teams];
-    Q --> R[Notify TSC Members of removal];
-    R --> K;
-    O -->|No| S[Retrieve new maintainer information];
-    S --> T[Update Maintainers.yaml with new maintainer information];
-    T --> U{Are social info and TSC membership being updated?};
-    U -->|No| V[Validate Maintainers.yaml changes];
-    V -->|Validation passed| W[Send invitation to new maintainer];
-    W --> X[Notify TSC Members of new addition];
-    V -->|Validation failed| Y[Notify user and block Pull Request];
-    U -->|Yes| Z[Update Maintainers.yaml with maintainer changes];
-    Z --> AA{Is the maintainer updating their TSC membership status?};
-    AA -->|No| AB[Validate Maintainers.yaml changes];
-    AB -->|Validation passed| AC[PR Ends];
-    AB -->|Validation failed| AD[Notify user and block Pull Request];
-    AA -->|Yes| AE{Is the maintainer listed in TSC team?};
-    AE -->|Yes| AF[Update TSC team membership];
-    AE -->|No| AG[Retrieve new maintainer information];
-    AG --> AH[Update Maintainers.yaml with new maintainer information];
-    AH --> BI{Are social info and TSC membership being updated?};
-    BI -->|No| BJ[Validate Maintainers.yaml changes];
-    BJ -->|Validation passed| BK[Send invitation to new maintainer];
-    BK --> BL[Notify TSC Members of new addition];
-    BJ -->|Validation failed| BM[Notify user and block Pull Request];
-    BM --> AC;
+A[Maintainers.yaml file changes detected] --> B{Is it by bot or human?};
+
+B --> |Bot| D1{What kind of changes?};
+B --> |Human| H1{What kind of changes?};
+
+D1 --> |Maintainer Changes| C1{Is it an addition or removal?};
+D1 --> |Maintainer's repositories list| S1[Merge PR];
+
+C1 --> |Addition| G1[Merge PR];
+C1 --> |Removal| E1{Maintainer being removed};
+
+G1 --> Z1[Send invitation to new maintainer and notify TSC Members Add new maintainer to organization, repository, and team Post welcome comment to pull request];
+
+E1 --> |Yes| F1[Human verification required before removal];
+
+F1 --> |Human verification successful| L2[Merge PR, Remove maintainer from organization and teams, update Emeritus.yaml, and notify TSC Members];
+
+H1 --> |isTscMember Change| TSC1{True or False};
+H1 --> |Critical Changes| P[Close PR with clear message and no action];
+H1 --> |Simple Change| N[Merge PR];
+
+TSC1 --> |True| T1[Handle TSC member addition];
+TSC1 --> |False| T2[Handle TSC member removal];
+
+Z1 --> M[End];
+L2 --> M;
+T1 --> M;
+T2 --> M;
+P --> M;
+N --> M;
+S1 --> M;
+
+subgraph Critical Attributes
+CA1[GitHub Username];
+CA2[Maintainer's repositories list];
+CA3[Addition or removal of any maintainer object];
+end
 ```
