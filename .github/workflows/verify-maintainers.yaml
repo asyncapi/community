@@ -46,7 +46,7 @@ jobs:
             const author = "${{ github.event.pull_request.user.login }}";
 
             // If the PR is made by the bot, don't do anything.
-            if (author === 'async-bot') {
+            if (author === 'asyncapi-bot') {
               console.log('Changes made by async-bot, skipping verification.');
               return;
             }
