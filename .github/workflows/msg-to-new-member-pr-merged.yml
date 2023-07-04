@@ -59,27 +59,25 @@ jobs:
             core.info('Maintainers in PR branch:\n' + yaml.dump(pr_file));
             core.info('Location of Maintainers in PR branch:');
             core.info(fs.realpathSync('./community/MAINTAINERS.yaml'));
+
+      - name: Set newMaintainers as environment variable
+        run: echo "newMaintainers=${{ steps.compare-files.outputs.newMaintainers }}" >> $GITHUB_ENV
       - name: Debug newMaintainers output
         run: |
-          echo "newMaintainers = ${{ steps.compare-files.outputs.newMaintainers }}"
-
+          echo "newMaintainers = $newMaintainers"
       - name: Display welcome message
-        if: steps.compare-files.outputs.newMaintainers != ''
+        if: env.newMaintainers != ''
         uses: actions/github-script@v6
         with:
-          github-token: ${{ secrets.BOT_TOKEN }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
-            const newMaintainers = "${{ steps.compare-files.outputs.newMaintainers }}".split(",");
+            const newMaintainers = process.env.newMaintainers.split(",");
             const welcomeMessage = newMaintainers.map((maintainer) => `@${maintainer.trim().replace(/^@/, '')} I have invited you to join the AsyncAPI organization and you will soon be added to the team that lists all Maintainers.
-            
             We use this team to mention in different discussions in different places in GitHub where Maintainer's opinion is needed or even voting on some topic. Once Maintainers are mentioned:
-            
             - You get GitHub notification
             - We also drop notification in our slack in #95_bot-maintainers-mentioned channel
             - We drop an email to people that subscribed to Maintainer news here https://www.asyncapi.com/community/maintainers
-            
             Pick the channel for notifications that you prefer. Welcome aboard! We are excited to have you as part of the team.`).join("\n");
-            
             const { owner, repo } = context.repo;
             const { number: issue_number } = context.issue;
             return github.rest.issues.createComment({ owner, repo, issue_number, body: welcomeMessage });
