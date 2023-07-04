@@ -55,7 +55,7 @@ jobs:
                 const commentBody = messages.join('\n');
                 github.rest.issues.createComment({ owner, repo, issue_number: pull_number, body: commentBody });
             }
-
+            // detecting if changes in the PR contain removal of maintainer object 
             if (prFile.length < mainFile.length) {
               errorMessages.push('A maintainer has been removed from `MAINTAINERS.yaml` file. Only `asyncapi-bot` can make such changes. Maintainers are removed from the file in automated way only if they are no longer mentioned in `CODEOWNERS' file in any repo');
             }
