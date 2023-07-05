@@ -489,14 +489,6 @@
   isTscMember: false
   repos:
     - dotnet-rabbitmq-template
-- name: mr-nuno
-  github: mr-nuno
-  slack: U03A5345
-  availableForHire: false
-  company: GmbH
-  isTscMember: false
-  repos:
-    - dotnet-rabbitmq-template
 - name: Thulisile Sibanda
   github: thulieblack
   linkedin: v-thulisile-sibanda
