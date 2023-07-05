@@ -28,7 +28,7 @@ jobs:
         run: ls -la
       - run: cd community && git checkout HEAD^
       - name: Install dependencies
-        run: npm install js-yaml
+        run: npm install js-yaml@4.1.0
       - name: Compare files
         id: compare-files
         uses: actions/github-script@v6
