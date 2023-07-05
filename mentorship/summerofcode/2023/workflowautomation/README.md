@@ -86,7 +86,7 @@ end
 
 ### `update-maintainers.yaml`
 
-This workflow listens for changes to the CODEOWNERS file and updates the Maintainers.yaml file accordingly. It also picks up the GitHub username, Twitter handle, and the name of the maintained repository from the API and notifies the affected users.
+This workflow listens for changes to the CODEOWNERS file and updates the Maintainers.yaml file accordingly. It also picks up the GitHub username, Twitter handle, and the name of the maintained repository from the API and notifies the affected users. If bot accounts are removed or added in CODEOWNERS file then it should ignore this workflow.
 
 > Note: This workflow should be located in every repository. It should be configured with permissions to update the Maintainers.yaml file in the community repository.
 
