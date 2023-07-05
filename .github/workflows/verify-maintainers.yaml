@@ -8,6 +8,8 @@ on:
 
 jobs:
   verify-changes:
+    # if statement to check if the PR is open.
+    if: github.event.pull_request.state == 'open'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout main branch
