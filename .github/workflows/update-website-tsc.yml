@@ -30,7 +30,7 @@ jobs:
       - name: Create branch
         working-directory: ./website
         run: |
-          git checkout -b update-tscmembers-${{ github.run_id }}
+          git checkout -b update-tscmembers-${{ github.head_ref }}
       - name: Convert YAML to JSON using Python
         working-directory: ./community
         run: |
