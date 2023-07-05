@@ -45,7 +45,7 @@ jobs:
   # Open governance model doesn't allow more than 1/4 maintainers affiliated with a single company
   calculate_companies:
     if: github.event.pull_request.draft == false
-    name: Calculate maintainers affiliation
+    name: Calculate TSC members affiliation
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
