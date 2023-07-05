@@ -40,10 +40,10 @@ jobs:
             const beforeMaintainers = new Map(mainFile.map((maintainer) => [maintainer.name, {github: maintainer.github, repos: maintainer.repos || []}]));
             let errorMessages = [];
 
-            const owner = "${{ github.repository_owner }}";
-            const repo = "${{ github.event.repository.name }}";
-            const pull_number = "${{ github.event.pull_request.number }}";
-            const author = "${{ github.event.pull_request.user.login }}";
+            const owner = context.repo.owner;
+            const repo = context.repo.repo;
+            const pull_number = context.issue.number;
+            const author = context.payload.pull_request.user.login;
 
             // If the PR is made by the bot, don't do anything.
             if (author === 'asyncapi-bot') {
