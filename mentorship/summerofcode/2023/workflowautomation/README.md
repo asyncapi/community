@@ -272,14 +272,6 @@ H1 --> |Simple Change| N[Merge PR];
 TSC1 --> |True| T1[Handle TSC member addition];
 TSC1 --> |False| T2[Handle TSC member removal];
 
-Z1 --> M[End];
-L2 --> M;
-T1 --> M;
-T2 --> M;
-P --> M;
-N --> M;
-S1 --> M;
-
 subgraph Critical Attributes
 CA1[GitHub Username];
 CA2[Maintainer's repositories list];
