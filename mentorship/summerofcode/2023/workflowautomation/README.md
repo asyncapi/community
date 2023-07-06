@@ -11,8 +11,10 @@ subgraph Migrate TSC_MEMBERS.JSON to MAINTAINERS.yml
     A[Convert TSC_MEMBERS.JSON to MAINTAINERS.yml]
 end
 
-subgraph Update website code to handle YAML format
-    B[Update website code to handle YAML format]
+subgraph Read File & Filter TSC Members
+    B1[Read new file name]
+    B2[Filter objects with TSC member flag]
+    B1 --> B2
 end
 
 subgraph Automate Maintainers.yaml update
@@ -22,8 +24,8 @@ subgraph Automate Maintainers.yaml update
     F[Allow humans to update social info and TSC member property]
 end
 
-A --> B
-B --> C
+A --> B1
+B2 --> C
 C --> D
 C --> E
 C --> F
