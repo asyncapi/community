@@ -55,7 +55,7 @@ jobs:
 
             // detecting if changes in the PR contain removal of maintainer object 
             if (prFile.length < mainFile.length) {
-              errorMessages.push(`A maintainer has been removed from `MAINTAINERS.yaml` file. Only `asyncapi-bot` can make such changes. Maintainers are removed from the file in an automated way only if they are no longer mentioned in `CODEOWNERS` file in any repo.`);
+              errorMessages.push('A maintainer has been removed from `MAINTAINERS.yaml` file. Only `asyncapi-bot` can make such changes. Maintainers are removed from the file in an automated way only if they are no longer mentioned in `CODEOWNERS` file in any repo.');
             }
 
             for (const maintainer of prFile) {
@@ -63,18 +63,24 @@ jobs:
               const previousData = beforeMaintainers.get(maintainer.name);
               // if the maintainer is not found in the previous data, it is a new maintainer 
               if (!previousData) {
-                errorMessages.push(`A new maintainer, ${maintainer.name}, has been added to MAINTAINERS.yaml. Only `asyncapi-bot` can make such changes. Maintainers are added to the file in an automated way only if they are mentioned in the `CODEOWNERS` file in any repository.`);
+                errorMessages.push(`A new maintainer, ${maintainer.name}, has been added to MAINTAINERS.yaml. Only asyncapi-bot can make such changes. Maintainers are added to the file in an automated way only if they are mentioned in the CODEOWNERS file in any repository.`);
               } else {
                 // retrieve the previous GitHub key and repositories of the maintainer
                 const previousGithub = previousData.github;
                 const previousRepos = previousData.repos;
                 // check if the GitHub key for the maintainer has been modified
                 if (previousGithub !== maintainer.github) {
-                  errorMessages.push(`GitHub key for ${maintainer.name} has been modified in MAINTAINERS.yaml. Only `asyncapi-bot` can make such changes. This information is derived from the `CODEOWNERS` file.`);
+                  errorMessages.push(`GitHub key for ${maintainer.name} has been modified in MAINTAINERS.yaml. Only asyncapi-bot can make such changes. This information is derived from the CODEOWNERS file.`);
                 }
                 // check if the repositories list for the maintainer has been modified
-                if (previousRepos.toString() !== (maintainer.repos || []).toString()) ) {
-                  errorMessages.push(`Repos list for ${maintainer.name} has been modified in MAINTAINERS.yaml. Only `asyncapi-bot` can make such changes. This information is derived from the `CODEOWNERS` file.`);
+                if (previousRepos.toString() !== (maintainer.repos || []).toString()) {
+                  // Check if a human added a repo to the maintainer's repository list
+                  const previousReposLength = previousData.repos.length;
+                  const currentReposLength = (maintainer.repos || []).length;
+                  if (currentReposLength > previousReposLength) {
+                    const addedRepos = (maintainer.repos || []).slice(previousReposLength);
+                    errorMessages.push(`New repositories (${addedRepos.join(', ')}) have been added to ${maintainer.name}'s repository list in MAINTAINERS.yaml. Only asyncapi-bot can make such changes. This information is derived from the CODEOWNERS file.`);
+                  }
                 }
               }
             }
