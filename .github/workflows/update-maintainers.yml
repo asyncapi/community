@@ -7,7 +7,7 @@ on:
       - 'CODEOWNERS'
 
 jobs:
-  compare-codeowners:
+  update-maintainers:
     if: github.event.pull_request.merged
     runs-on: ubuntu-latest
 
