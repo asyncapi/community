@@ -1,0 +1,59 @@
+name: Update MAINTAINERS.yaml
+
+on:
+  pull_request:
+    types: [closed]
+    paths:
+      - 'CODEOWNERS'
+
+jobs:
+  compare-codeowners:
+    if: github.event.pull_request.merged
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout main branch
+        uses: actions/checkout@v2
+        with:
+          ref: master
+          path: community-main
+
+      - name: Checkout one commit before last one
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 2
+          ref: master
+          path: community
+
+      - run: cd community && git checkout HEAD^
+
+      - name: Compare CODEOWNERS
+        id: compare-codeowners
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const fs = require('fs');      
+            function extractGitHubUsernames(content) {
+              const regex = /@([a-zA-Z0-9_-]+)/g;
+              const matches = content.match(regex);
+              if (!matches) {
+                return [];
+              }
+              return matches.map(match => match.substr(1));
+            }
+      
+            const oldCodeowners = fs.readFileSync('./community-main/CODEOWNERS', 'utf8');
+            const prCodeowners = fs.readFileSync('./community/CODEOWNERS', 'utf8');
+      
+            const oldUsernames = extractGitHubUsernames(oldCodeowners);
+            const prUsernames = extractGitHubUsernames(prCodeowners);
+      
+            const addedUsernames = oldUsernames.filter(username => !prUsernames.includes(username));
+            const removedUsernames = prUsernames.filter(username => !oldUsernames.includes(username));
+
+      
+            console.log('Added Usernames:', addedUsernames);
+            console.log('Removed Usernames:', removedUsernames);
+      
+            console.log(`ADDED_USERNAMES=${addedUsernames.join(', ')}`);
+            console.log(`REMOVED_USERNAMES=${removedUsernames.join(', ')}`);
