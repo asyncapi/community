@@ -27,12 +27,31 @@ jobs:
 
       - run: cd community && git checkout HEAD^
 
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+
+      - name: Install js-yaml
+        run: npm install js-yaml@3.14.1
+
+      - name: Get repository name
+        run: |
+          REPO_NAME=$(basename ${{ github.repository }})
+          echo "REPO_NAME=$REPO_NAME" >> $GITHUB_ENV
+          echo "Repository Name: $REPO_NAME"
+
       - name: Compare CODEOWNERS
         id: compare-codeowners
         uses: actions/github-script@v6
         with:
           script: |
-            const fs = require('fs');      
+            const fs = require('fs');
+            const yaml = require('js-yaml');
+
+            // Get repository name
+            const repoName = process.env.REPO_NAME;
+
             function extractGitHubUsernames(content) {
               const regex = /@([a-zA-Z0-9_-]+)/g;
               const matches = content.match(regex);
@@ -42,18 +61,50 @@ jobs:
               return matches.map(match => match.substr(1));
             }
       
-            const oldCodeowners = fs.readFileSync('./community-main/CODEOWNERS', 'utf8');
+            const mainCodeowners = fs.readFileSync('./community-main/CODEOWNERS', 'utf8');
             const prCodeowners = fs.readFileSync('./community/CODEOWNERS', 'utf8');
       
-            const oldUsernames = extractGitHubUsernames(oldCodeowners);
+            const mainUsernames = extractGitHubUsernames(mainCodeowners);
             const prUsernames = extractGitHubUsernames(prCodeowners);
-      
-            const addedUsernames = oldUsernames.filter(username => !prUsernames.includes(username));
-            const removedUsernames = prUsernames.filter(username => !oldUsernames.includes(username));
 
-      
+            const addedUsernames = mainUsernames.filter(username => !prUsernames.includes(username));
+            const removedUsernames = prUsernames.filter(username => !mainUsernames.includes(username));
             console.log('Added Usernames:', addedUsernames);
             console.log('Removed Usernames:', removedUsernames);
-      
             console.log(`ADDED_USERNAMES=${addedUsernames.join(', ')}`);
             console.log(`REMOVED_USERNAMES=${removedUsernames.join(', ')}`);
+
+            // Update MAINTAINERS.yaml
+            const maintainersFile = './community-main/MAINTAINERS.yaml';
+            const maintainers = yaml.safeLoad(fs.readFileSync(maintainersFile, 'utf8'));
+
+            // Update for added usernames
+            addedUsernames.forEach(username => {
+              const existingMaintainer = maintainers.find(maintainer => maintainer.github === username);
+              if (!existingMaintainer) {
+                maintainers.push({
+                  github: username,
+                  isTscMember: false,
+                  repos: [repoName]
+                });
+                console.log('Added maintainer:', username);
+              } else {
+                console.log('Maintainer', username, 'already exists. Skipping addition.');
+              }
+            });
+
+            // Update for removed usernames
+            removedUsernames.forEach(username => {
+              const index = maintainers.findIndex(maintainer => maintainer.github === username);
+              if (index !== -1) {
+                maintainers.splice(index, 1);
+                console.log('Removed maintainer:', username);
+              } else {
+                console.log('Maintainer', username, 'does not exist. Skipping removal.');
+              }
+            });
+
+            // Write updated MAINTAINERS.yaml file
+            const updatedMaintainers = yaml.safeDump(maintainers);
+            fs.writeFileSync(maintainersFile, updatedMaintainers);
+            console.log('Updated MAINTAINERS.yaml:', updatedMaintainers);
