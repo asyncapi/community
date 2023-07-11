@@ -70,7 +70,7 @@ jobs:
                 const previousRepos = previousData.repos;
                 // check if the GitHub key for the maintainer has been modified
                 if (previousGithub !== maintainer.github) {
-                  errorMessages.push(`GitHub key for ${maintainer.name} has been modified in MAINTAINERS.yaml. Only asyncapi-bot can make such changes. This information is derived from the CODEOWNERS file.`);
+                  errorMessages.push(`GitHub key for ${maintainer.name} has been modified in MAINTAINERS.yaml. Only asyncapi-bot can make such changes. This information is derived from the CODEOWNERS file located in any repository under AsyncAPI GitHub organization.`);
                 }
                 // check if the repositories list for the maintainer has been modified
                 if (previousRepos.toString() !== (maintainer.repos || []).toString()) {
