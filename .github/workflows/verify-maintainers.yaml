@@ -2,7 +2,7 @@ name: Verify if human changes in PR are allowed
 
 on:
   pull_request:
-    types: [synchronize, opened]
+    types: [synchronize, opened, reopened]
     paths:
       - "MAINTAINERS.yaml"
 
