@@ -79,7 +79,7 @@ jobs:
                   const currentReposLength = (maintainer.repos || []).length;
                   if (currentReposLength > previousReposLength) {
                     const addedRepos = (maintainer.repos || []).slice(previousReposLength);
-                    errorMessages.push(`New repositories (${addedRepos.join(', ')}) have been added to ${maintainer.name}'s repository list in MAINTAINERS.yaml. Only asyncapi-bot can make such changes. This information is derived from the CODEOWNERS file.`);
+                    errorMessages.push(`New repositories (${addedRepos.join(', ')}) have been added to ${maintainer.name}'s repository list in MAINTAINERS.yaml. Only asyncapi-bot can make such changes. This information is derived from the CODEOWNERS file located in any repository under AsyncAPI GitHub organization.`);
                   }
                 }
               }
