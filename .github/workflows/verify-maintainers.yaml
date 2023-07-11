@@ -1,4 +1,4 @@
-name: Verify Maintainers Changes
+name: Verify if human changes in PR are allowed
 
 on:
   pull_request:
