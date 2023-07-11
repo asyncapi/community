@@ -76,10 +76,16 @@ jobs:
                 if (previousRepos.toString() !== (maintainer.repos || []).toString()) {
                   // Check if a human added a repo to the maintainer's repository list
                   const previousReposLength = previousData.repos.length;
-                  const currentReposLength = (maintainer.repos || []).length;
+                  const currentReposLength = (maintainer.repos || []).length;                
+                  // Check if a repository is added by a human
                   if (currentReposLength > previousReposLength) {
                     const addedRepos = (maintainer.repos || []).slice(previousReposLength);
                     errorMessages.push(`New repositories (${addedRepos.join(', ')}) have been added to ${maintainer.name}'s repository list in MAINTAINERS.yaml. Only asyncapi-bot can make such changes. This information is derived from the CODEOWNERS file located in any repository under AsyncAPI GitHub organization.`);
+                  }
+                  // Check if a repository is removed by a human
+                  if (currentReposLength < previousReposLength) {
+                    const removedRepos = previousData.repos.slice(currentReposLength);
+                    errorMessages.push(`Repositories (${removedRepos.join(', ')}) have been removed from ${maintainer.name}'s repository list in MAINTAINERS.yaml. Only asyncapi-bot can make such changes.`);
                   }
                 }
               }
