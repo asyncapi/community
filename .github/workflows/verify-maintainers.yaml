@@ -63,7 +63,7 @@ jobs:
               const previousData = beforeMaintainers.get(maintainer.name);
               // if the maintainer is not found in the previous data, it is a new maintainer 
               if (!previousData) {
-                errorMessages.push(`A new maintainer, ${maintainer.name}, has been added to MAINTAINERS.yaml. Only asyncapi-bot can make such changes. Maintainers are added to the file in an automated way only if they are mentioned in the CODEOWNERS file in any repository.`);
+                errorMessages.push(`A new maintainer, ${maintainer.name}, has been added to MAINTAINERS.yaml. Only asyncapi-bot can make such changes. Maintainers are added to the file in an automated way only if they are mentioned in the CODEOWNERS file in any repository under AsyncAPI GitHub organization.`);
               } else {
                 // retrieve the previous GitHub key and repositories of the maintainer
                 const previousGithub = previousData.github;
