@@ -80,6 +80,11 @@ jobs:
 
             // Update for added usernames
             addedUsernames.forEach(username => {
+              // Exclude bot accounts
+              if (username === 'asyncapi-bot' || username === 'asyncapi-bot-eve') {
+                console.log('Skipping bot account:', username);
+                return; // Skip the iteration for bot accounts
+              }
               const existingMaintainer = maintainers.find(maintainer => maintainer.github === username);
               if (!existingMaintainer) {
                 maintainers.push({
