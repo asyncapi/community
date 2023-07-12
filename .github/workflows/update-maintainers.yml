@@ -125,3 +125,9 @@ jobs:
             const updatedMaintainers = yaml.safeDump(maintainers);
             fs.writeFileSync(maintainersFile, updatedMaintainers);
             console.log('Updated MAINTAINERS.yaml:', updatedMaintainers);
+      - name: Commit and push
+        working-directory: ./community-main
+        run: |
+          git add .
+          git commit -m "Update MAINTAINERS.yaml"
+          git push https://${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }} master
