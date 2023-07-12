@@ -102,10 +102,22 @@ jobs:
             removedUsernames.forEach(username => {
               const index = maintainers.findIndex(maintainer => maintainer.github === username);
               if (index !== -1) {
-                maintainers.splice(index, 1);
-                console.log('Removed maintainer:', username);
+                const maintainer = maintainers[index];
+                const repoIndex = maintainer.repos.indexOf(repoName);
+            
+                if (repoIndex !== -1) {
+                  maintainer.repos.splice(repoIndex, 1);
+                  console.log(`Removed repository ${repoName} from maintainer ${username}`);
+            
+                  if (maintainer.repos.length === 0) {
+                    maintainers.splice(index, 1);
+                    console.log(`Removed maintainer ${username} as they have no other repositories`);
+                  }
+                } else {
+                  console.log(`Repository ${repoName} not found for maintainer ${username}`);
+                }
               } else {
-                console.log('Maintainer', username, 'does not exist. Skipping removal.');
+                console.log(`Maintainer ${username} does not exist. Skipping removal.`);
               }
             });
 
