@@ -109,24 +109,6 @@ J --> E;
 
 ```
 
-### `allow-updates.yaml`
-
-This workflow allows humans to update social info or the tsc_member property in the Maintainers.yaml file.
-
-> Note: This workflow should be located only in the community repository.
-
-```mermaid
-graph TD;
-    A[Is the user updating social info or the tsc_member property?] --> |Yes| B[Allow update];
-    B --> C[Update Maintainers.yaml];
-    C --> D[Validate the updated record];
-    D --> |Record is invalid| E[Block update and notify the user];
-    D --> |Record is valid| F[Notify affected users of the update];
-    E --> G[End];
-    F --> G[End];
-
-```
-
 ### `invite-maintainers.yaml`
 
 This workflow is triggered when a new maintainer is added. It calls the GitHub API to invite the maintainer to the AsyncAPI organization and adds to an existing team for the maintainers. The workflow also adds the new maintainer to the Maintainers GitHub team.
