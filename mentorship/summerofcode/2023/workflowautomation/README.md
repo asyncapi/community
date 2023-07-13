@@ -119,19 +119,13 @@ This workflow is triggered when a new maintainer is added. It calls the GitHub A
 ```mermaid
 graph TD;
     A[Is a new maintainer added to the AsyncAPI community?] --> |Yes| B[Call GitHub API to invite maintainer to the organization];
-    B --> C[Add maintainer to an existing team for maintainers];
-    C --> D[Update Maintainers.yaml];
-    D --> E[Add maintainer to the Maintainers GitHub team];
-    E --> F[End];
+    B --> C[Add maintainer to the Maintainers GitHub team];
+    C --> F[End];
     A --> |No| G[Is a maintainer removed from the AsyncAPI community?];
     G --> |Yes| H[Call GitHub API to remove maintainer from the organization];
-    H --> I[Remove maintainer from the existing team for maintainers];
-    I --> J[Update Maintainers.yaml];
-    J --> K[Remove maintainer from the Maintainers GitHub team];
-    K --> F[End];
-    G --> |No| F[End];
-
-
+    H --> I[Remove maintainer from the Maintainers GitHub team];
+    I --> F[End];
+    G --> |No| F[End]; 
 ```
 
 ### `tsc-and-maintainers-update.yaml`
