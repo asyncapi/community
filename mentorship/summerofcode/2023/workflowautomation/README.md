@@ -1,6 +1,7 @@
-### Automate paper work around project governance
+### Automate Listing of Members of the Technical Steering Committee - GSoC 2023 Project
 
-This project aims to automate maintaining the Maintainers.yaml file which contains the list of maintainers and TSC members of AsyncAPI. The tasks involve implementing workflows to automatically update the member's list based on changes in other files, inviting new maintainers and TSC members, updating the Emeritus.yaml file when someone is removed, and aggregating helpful information in the Maintainers.yaml file. These automation and improvements will make it easier to manage the maintainers and TSC members of AsyncAPI.
+This project, titled "Automate listing of members of the Technical Steering Committee", is part of the Google Summer of Code (GSoC) 2023. The goal is to automate the process of managing and maintaining the Maintainers.yaml file, which contains the list of maintainers and TSC members of AsyncAPI. Through a series of workflows, we aim to automatically update the member's list based on changes in other files, invite new maintainers and TSC members, update the Emeritus.yaml file when someone is removed, and aggregate helpful information in the Maintainers.yaml file. These automation and improvements will make it easier to manage the maintainers and TSC members of AsyncAPI.
+
 
 The first graph outlines the steps to automate the updating of Maintainers.yaml. This involves migrating to YAML, updating the website code to handle YAML format, automating the updation of Maintainers.yaml, creating a verification workflow to block pull requests if records are added/removed by humans, creating an update-maintainers workflow, and allowing humans to update social info and TSC member property.
 
