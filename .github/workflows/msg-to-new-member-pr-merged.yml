@@ -37,14 +37,16 @@ jobs:
             const fs = require("fs");
             const yaml = require('js-yaml');
 
-            const main_file = yaml.load('./community-main/MAINTAINERS.yaml', 'utf8');
-            const pr_file = yaml.load('./community/MAINTAINERS.yaml', 'utf8');
+            const main_file = yaml.load(fs.readFileSync('./community-main/MAINTAINERS.yaml', 'utf8'));
+            const main_file = yaml.load(fs.readFileSync('./community/MAINTAINERS.yaml', 'utf8'));
+
             const removed = pr_file.filter(
               (newObj) => !main_file.some((oldObj) => oldObj.github === newObj.github)
             );
             const added = main_file.filter(
               (oldObj) => !pr_file.some((newObj) => newObj.github === oldObj.github)
             );
+
             if(added.length > 0) {
               core.info(`Added Contributors:\n${yaml.dump(added)}`);
               core.setOutput("newContributors", added.map((obj) => obj.github).join(","));
@@ -53,6 +55,7 @@ jobs:
               core.info(`Removed Contributors:\n${yaml.dump(removed)}`);
               core.setOutput("removed", "true");
             }
+
             core.info('Maintainers in main branch:\n' + yaml.dump(main_file));
             core.info('Location of Maintainers in main branch:');
             core.info(fs.realpathSync('./community-main/MAINTAINERS.yaml'));
@@ -65,8 +68,38 @@ jobs:
       - name: Debug newMaintainers output
         run: |
           echo "newMaintainers = $newMaintainers"
+    outputs:
+      newMaintainers: ${{ steps.compare-files.outputs.newMaintainers }}
+
+  add_maintainer:
+    needs: welcome
+    if: needs.welcome.outputs.newMaintainers != ''
+    runs-on: ubuntu-latest
+    steps:
+      - name: Invite new maintainers to the organization
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          IFS=',' read -ra MAINTAINERS <<< "${{ needs.welcome.outputs.newMaintainers }}"
+          for MAINTAINER in "${MAINTAINERS[@]}"; do
+            gh api -X PUT /orgs/asyncapi/memberships/$MAINTAINER -H "Authorization: token $GH_TOKEN"
+          done
+
+      - name: Add new maintainers to the team
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          IFS=',' read -ra MAINTAINERS <<< "${{ needs.welcome.outputs.newMaintainers }}"
+          for MAINTAINER in "${MAINTAINERS[@]}"; do
+            gh api orgs/asyncapi/teams/maintainers/memberships/$MAINTAINER -H "Authorization: token $GH_TOKEN" -X PUT
+          done
+
+  display_message:
+    needs: add_maintainer
+    if: needs.welcome.outputs.newMaintainers != ''
+    runs-on: ubuntu-latest
+    steps:
       - name: Display welcome message
-        if: env.newMaintainers != ''
         uses: actions/github-script@v6
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
