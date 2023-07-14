@@ -18,7 +18,7 @@ To get a PR merged:
 - it is not a **Draft** PR
 - it is not labeled as **do-not-merge**
 
-Once all above requirements are met, anyone can merge a PR asking the AsyncAPI bot for help. Simply add a comment to the PR such as `/ready-to-merge` or `rtm`. This prompts the bot  to add a `ready-to-merge` label and then proceeds to merge the PR for you. The PR title is used as a commit message of both squashed and merged PRa.
+Once all above requirements are met, anyone can merge a PR asking the AsyncAPI bot for help. Simply add a comment to the PR such as `/ready-to-merge` or `rtm`. This prompts the bot  to add a `ready-to-merge` label and then proceeds to merge the PR for you. The PR title is used as a commit message of both squashed and merged PRs.
 
 If you are a maintainer and for some reason, you prefer to merge the PR on your own and you do not want a contributor to decide on it, add a `/do-not-merge` or `/dnm` comment to the PR. The bot will then add a `do-not-merge` label that only the repository maintainer can remove.
 
