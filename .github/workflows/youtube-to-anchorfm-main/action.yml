@@ -19,3 +19,4 @@ jobs:
           EPISODE_PATH: /github/workspace
           URL_IN_DESCRIPTION: true
           POSTPROCESSOR_ARGS: 'ffmpeg:-ac 1'
+          SAVE_AS_DRAFT: true
