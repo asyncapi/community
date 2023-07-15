@@ -107,7 +107,7 @@ async function postEpisode(youtubeVideoInfo) {
 
     console.log('Waiting for upload to finish');
     await new Promise((r) => {
-      setTimeout(r, 35 * 1000);
+      setTimeout(r, 35 * 10000);
     });
 
     await clickXpath(
@@ -121,7 +121,7 @@ async function postEpisode(youtubeVideoInfo) {
     await page.waitForSelector('#title', { visible: true });
     // Wait some time so any field refresh doesn't mess up with our input
     await new Promise((r) => {
-      setTimeout(r, 20000);
+      setTimeout(r, 200000);
     });
     await page.type('#title', youtubeVideoInfo.title);
 
