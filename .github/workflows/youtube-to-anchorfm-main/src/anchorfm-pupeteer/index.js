@@ -80,7 +80,7 @@ async function postEpisode(youtubeVideoInfo) {
 
     const navigationPromise = page.waitForNavigation();
 
-    await page.goto('https://podcasters.spotify.com/pod/dashboard/episode/new/record/');
+    await page.goto('https://podcasters.spotify.com/pod/dashboard/episode/new/wizard/');
 
     await page.setViewport({ width: 1600, height: 789 });
 
