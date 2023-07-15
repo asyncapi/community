@@ -134,7 +134,7 @@ jobs:
         run: |
           IFS=',' read -ra MAINTAINERS <<< "${{ needs.welcome.outputs.removedMaintainers }}"
           for MAINTAINER in "${MAINTAINERS[@]}"; do
-            gh api -X DELETE /orgs/richaOrg/memberships/$MAINTAINER -H "Authorization: token $GH_TOKEN"
+            gh api -X DELETE /orgs/asyncapi/memberships/$MAINTAINER -H "Authorization: token $GH_TOKEN"
           done
 
       - name: Remove maintainers from the team
@@ -143,5 +143,5 @@ jobs:
         run: |
           IFS=',' read -ra MAINTAINERS <<< "${{ needs.welcome.outputs.removedMaintainers }}"
           for MAINTAINER in "${MAINTAINERS[@]}"; do
-            gh api orgs/richaOrg/teams/maintainers/memberships/$MAINTAINER -H "Authorization: token $GH_TOKEN" -X DELETE
+            gh api orgs/asyncapi/teams/maintainers/memberships/$MAINTAINER -H "Authorization: token $GH_TOKEN" -X DELETE
           done   
