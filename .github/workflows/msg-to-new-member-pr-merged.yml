@@ -38,7 +38,7 @@ jobs:
             const yaml = require('js-yaml');
 
             const main_file = yaml.load(fs.readFileSync('./community-main/MAINTAINERS.yaml', 'utf8'));
-            const main_file = yaml.load(fs.readFileSync('./community/MAINTAINERS.yaml', 'utf8'));
+            const pr_file = yaml.load(fs.readFileSync('./community/MAINTAINERS.yaml', 'utf8'));
 
             const removed = pr_file.filter(
               (newObj) => !main_file.some((oldObj) => oldObj.github === newObj.github)
