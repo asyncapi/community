@@ -93,6 +93,8 @@ jobs:
           for MAINTAINER in "${MAINTAINERS[@]}"; do
             gh api orgs/asyncapi/teams/maintainers/memberships/$MAINTAINER -H "Authorization: token $GH_TOKEN" -X PUT
           done
+    outputs:
+      newMaintainers: ${{needs.welcome.outputs.newMaintainers }}
 
   display_message:
     needs: add_maintainer
@@ -104,7 +106,7 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
-            const newMaintainers = process.env.newMaintainers.split(",");
+            const newMaintainers = "${{ needs.add_maintainer.outputs.newMaintainers }}".split(",");
             const welcomeMessage = newMaintainers.map((maintainer) => `@${maintainer.trim().replace(/^@/, '')} I have invited you to join the AsyncAPI organization and you will soon be added to the team that lists all Maintainers.
             We use this team to mention in different discussions in different places in GitHub where Maintainer's opinion is needed or even voting on some topic. Once Maintainers are mentioned:
             - You get GitHub notification
