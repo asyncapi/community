@@ -37,28 +37,28 @@ jobs:
             const fs = require("fs");
             const yaml = require('js-yaml');
 
-            const main_file = yaml.load(fs.readFileSync('./community-main/MAINTAINERS.yaml', 'utf8'));
-            const pr_file = yaml.load(fs.readFileSync('./community/MAINTAINERS.yaml', 'utf8'));
+            const currentMaintainers = yaml.load(fs.readFileSync('./community-main/MAINTAINERS.yaml', 'utf8'));
+            const previousMaintainers = yaml.load(fs.readFileSync('./community/MAINTAINERS.yaml', 'utf8'));
 
-            const removed = pr_file.filter(
-              (newObj) => !main_file.some((oldObj) => oldObj.github === newObj.github)
+            const removed = previousMaintainers.filter(
+              (newObj) => !currentMaintainers.some((oldObj) => oldObj.github === newObj.github)
             );
-            const added = main_file.filter(
-              (oldObj) => !pr_file.some((newObj) => newObj.github === oldObj.github)
+            const added = currentMaintainers.filter(
+              (oldObj) => !previousMaintainers.some((newObj) => newObj.github === oldObj.github)
             );
 
             if(added.length > 0) {
               core.info(`Added Contributors:\n${yaml.dump(added)}`);
               core.setOutput("newContributors", added.map((obj) => obj.github).join(","));
             }
-             if (removed.length > 0) {
+            if (removed.length > 0) {
               core.setOutput("removedMaintainers", removed.map((obj) => obj.github).join(","));
             }
 
-            core.info('Maintainers in main branch:\n' + yaml.dump(main_file));
+            core.info('Maintainers in main branch:\n' + yaml.dump(currentMaintainers));
             core.info('Location of Maintainers in main branch:');
             core.info(fs.realpathSync('./community-main/MAINTAINERS.yaml'));
-            core.info('Maintainers in PR branch:\n' + yaml.dump(pr_file));
+            core.info('Maintainers in PR branch:\n' + yaml.dump(previousMaintainers));
             core.info('Location of Maintainers in PR branch:');
             core.info(fs.realpathSync('./community/MAINTAINERS.yaml'));
 
