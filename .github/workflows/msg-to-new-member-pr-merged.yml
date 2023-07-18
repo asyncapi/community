@@ -48,8 +48,8 @@ jobs:
             );
 
             if(added.length > 0) {
-              core.info(`Added Contributors:\n${yaml.dump(added)}`);
-              core.setOutput("newContributors", added.map((obj) => obj.github).join(","));
+              core.info(`Added Maintainer:\n${yaml.dump(added)}`);
+              core.setOutput("newMaintainers", added.map((obj) => obj.github).join(","));
             }
             if (removed.length > 0) {
               core.setOutput("removedMaintainers", removed.map((obj) => obj.github).join(","));
@@ -62,8 +62,6 @@ jobs:
             core.info('Location of Maintainers in PR branch:');
             core.info(fs.realpathSync('./community/MAINTAINERS.yaml'));
 
-      - name: Set newMaintainers as environment variable
-        run: echo "newMaintainers=${{ steps.compare-files.outputs.newMaintainers }}" >> $GITHUB_ENV
       - name: Debug newMaintainers output
         run: |
           echo "newMaintainers = $newMaintainers"
@@ -78,7 +76,7 @@ jobs:
     steps:
       - name: Invite new maintainers to the organization
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
           IFS=',' read -ra MAINTAINERS <<< "${{ needs.detect_maintainer_changes.outputs.newMaintainers }}"
           for MAINTAINER in "${MAINTAINERS[@]}"; do
@@ -87,7 +85,7 @@ jobs:
 
       - name: Add new maintainers to the team
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
           IFS=',' read -ra MAINTAINERS <<< "${{ needs.detect_maintainer_changes.outputs.newMaintainers }}"
           for MAINTAINER in "${MAINTAINERS[@]}"; do
@@ -98,13 +96,13 @@ jobs:
 
   display_message:
     needs: add_maintainer
-    if: needs.detect_maintainer_changes.outputs.newMaintainers != ''
+    if: needs.add_maintainer.outputs.newMaintainers != ''
     runs-on: ubuntu-latest
     steps:
       - name: Display welcome message
         uses: actions/github-script@v6
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          github-token: ${{ secrets.GH_TOKEN }}
           script: |
             const newMaintainers = "${{ needs.add_maintainer.outputs.newMaintainers }}".split(",");
             const welcomeMessage = newMaintainers.map((maintainer) => `@${maintainer.trim().replace(/^@/, '')} I have invited you to join the AsyncAPI organization and you will soon be added to the team that lists all Maintainers.
@@ -132,7 +130,7 @@ jobs:
     steps:
       - name: Remove maintainers from the organization
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
           IFS=',' read -ra MAINTAINERS <<< "${{ needs.detect_maintainer_changes.outputs.removedMaintainers }}"
           for MAINTAINER in "${MAINTAINERS[@]}"; do
@@ -141,7 +139,7 @@ jobs:
 
       - name: Remove maintainers from the team
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
           IFS=',' read -ra MAINTAINERS <<< "${{ needs.detect_maintainer_changes.outputs.removedMaintainers }}"
           for MAINTAINER in "${MAINTAINERS[@]}"; do
