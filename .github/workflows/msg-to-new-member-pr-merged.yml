@@ -7,7 +7,7 @@ on:
       - 'MAINTAINERS.yaml'
 
 jobs:
-  welcome:
+  detect_maintainer_changes:
     if: github.event.pull_request.merged 
     runs-on: ubuntu-latest
     steps: 
@@ -72,15 +72,15 @@ jobs:
       removedMaintainers: ${{ steps.compare-files.outputs.removedMaintainers }}
 
   add_maintainer:
-    needs: welcome
-    if: needs.welcome.outputs.newMaintainers != ''
+    needs: detect_maintainer_changes
+    if: needs.detect_maintainer_changes.outputs.newMaintainers != ''
     runs-on: ubuntu-latest
     steps:
       - name: Invite new maintainers to the organization
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          IFS=',' read -ra MAINTAINERS <<< "${{ needs.welcome.outputs.newMaintainers }}"
+          IFS=',' read -ra MAINTAINERS <<< "${{ needs.detect_maintainer_changes.outputs.newMaintainers }}"
           for MAINTAINER in "${MAINTAINERS[@]}"; do
             gh api -X PUT /orgs/asyncapi/memberships/$MAINTAINER -H "Authorization: token $GH_TOKEN"
           done
@@ -89,16 +89,16 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          IFS=',' read -ra MAINTAINERS <<< "${{ needs.welcome.outputs.newMaintainers }}"
+          IFS=',' read -ra MAINTAINERS <<< "${{ needs.detect_maintainer_changes.outputs.newMaintainers }}"
           for MAINTAINER in "${MAINTAINERS[@]}"; do
             gh api orgs/asyncapi/teams/maintainers/memberships/$MAINTAINER -H "Authorization: token $GH_TOKEN" -X PUT
           done
     outputs:
-      newMaintainers: ${{needs.welcome.outputs.newMaintainers }}
+      newMaintainers: ${{needs.detect_maintainer_changes.outputs.newMaintainers }}
 
   display_message:
     needs: add_maintainer
-    if: needs.welcome.outputs.newMaintainers != ''
+    if: needs.detect_maintainer_changes.outputs.newMaintainers != ''
     runs-on: ubuntu-latest
     steps:
       - name: Display welcome message
@@ -126,15 +126,15 @@ jobs:
           MSG_MINIMAL: true
 
   remove_maintainer:
-    needs: welcome
-    if: needs.welcome.outputs.removedMaintainers != ''
+    needs: detect_maintainer_changes
+    if: needs.detect_maintainer_changes.outputs.removedMaintainers != ''
     runs-on: ubuntu-latest
     steps:
       - name: Remove maintainers from the organization
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          IFS=',' read -ra MAINTAINERS <<< "${{ needs.welcome.outputs.removedMaintainers }}"
+          IFS=',' read -ra MAINTAINERS <<< "${{ needs.detect_maintainer_changes.outputs.removedMaintainers }}"
           for MAINTAINER in "${MAINTAINERS[@]}"; do
             gh api -X DELETE /orgs/asyncapi/memberships/$MAINTAINER -H "Authorization: token $GH_TOKEN"
           done
@@ -143,7 +143,7 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          IFS=',' read -ra MAINTAINERS <<< "${{ needs.welcome.outputs.removedMaintainers }}"
+          IFS=',' read -ra MAINTAINERS <<< "${{ needs.detect_maintainer_changes.outputs.removedMaintainers }}"
           for MAINTAINER in "${MAINTAINERS[@]}"; do
             gh api orgs/asyncapi/teams/maintainers/memberships/$MAINTAINER -H "Authorization: token $GH_TOKEN" -X DELETE
           done   
