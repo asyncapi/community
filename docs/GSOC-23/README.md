@@ -141,7 +141,7 @@ If there are no changes made to the TSC team or the Maintainers list, the workfl
 ```mermaid
 graph TD;
 A[Change to tsc_member property or Maintainers.yaml?] --> |Maintainer removed| B[Remove person from organization and teams];
-A --> |No| D[End];
+A --> |No| E[End];
 
 B --> E[End];
 
@@ -149,7 +149,7 @@ A --> |tsc_member value change| F{Add or remove member from TSC team?};
 F --> |Add| G[Add member to TSC team];
 G --> H[Update TSC team membership];
 H --> I[Notify affected users];
-I --> J[End];
+I --> E[End];
 F --> |Remove| K[Remove member from TSC team];
 K --> H;
 ```
