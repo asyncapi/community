@@ -5,6 +5,8 @@ on:
     types: [closed]
     paths: 
       - 'MAINTAINERS.yaml'
+env:
+  GH_TOKEN: ${{ secrets.GH_TOKEN }}
 
 jobs:
   detect_maintainer_changes:
@@ -75,8 +77,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Invite new maintainers to the organization
-        env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
           IFS=',' read -ra MAINTAINERS <<< "${{ needs.detect_maintainer_changes.outputs.newMaintainers }}"
           for MAINTAINER in "${MAINTAINERS[@]}"; do
@@ -84,8 +84,6 @@ jobs:
           done
 
       - name: Add new maintainers to the team
-        env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
           IFS=',' read -ra MAINTAINERS <<< "${{ needs.detect_maintainer_changes.outputs.newMaintainers }}"
           for MAINTAINER in "${MAINTAINERS[@]}"; do
@@ -129,8 +127,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Remove maintainers from the organization
-        env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
           IFS=',' read -ra MAINTAINERS <<< "${{ needs.detect_maintainer_changes.outputs.removedMaintainers }}"
           for MAINTAINER in "${MAINTAINERS[@]}"; do
@@ -138,8 +134,6 @@ jobs:
           done
 
       - name: Remove maintainers from the team
-        env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
           IFS=',' read -ra MAINTAINERS <<< "${{ needs.detect_maintainer_changes.outputs.removedMaintainers }}"
           for MAINTAINER in "${MAINTAINERS[@]}"; do
