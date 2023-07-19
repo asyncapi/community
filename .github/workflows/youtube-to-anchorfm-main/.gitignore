@@ -1,6 +1,0 @@
-node_modules
-*.mp4
-*.m4a
-*.webm
-dist/episode*
-.env
