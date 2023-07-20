@@ -77,18 +77,28 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Invite new maintainers to the organization
-        run: |
-          IFS=',' read -ra MAINTAINERS <<< "${{ needs.detect_maintainer_changes.outputs.newMaintainers }}"
-          for MAINTAINER in "${MAINTAINERS[@]}"; do
-            gh api -X PUT /orgs/asyncapi/memberships/$MAINTAINER -H "Authorization: token $GH_TOKEN"
-          done
+        uses: actions/github-script@v6
+        with: 
+          script: |
+            const { execSync } = require('child_process');
+            const newMaintainers = '${{ needs.welcome.outputs.newMaintainers }}'.split(',');
+            const token = process.env.GH_TOKEN;
+  
+            for (const maintainer of newMaintainers) {
+              execSync(`gh api -X PUT /orgs/asyncapi/memberships/${maintainer} -H "Authorization: token ${token}"`);
+            }
 
       - name: Add new maintainers to the team
-        run: |
-          IFS=',' read -ra MAINTAINERS <<< "${{ needs.detect_maintainer_changes.outputs.newMaintainers }}"
-          for MAINTAINER in "${MAINTAINERS[@]}"; do
-            gh api orgs/asyncapi/teams/maintainers/memberships/$MAINTAINER -H "Authorization: token $GH_TOKEN" -X PUT
-          done
+        uses: actions/github-script@v6
+        with: 
+          script: |
+            const { execSync } = require('child_process');
+            const newMaintainers = '${{ needs.welcome.outputs.newMaintainers }}'.split(',');
+            const token = process.env.GH_TOKEN;
+
+            for (const maintainer of newMaintainers) {
+              execSync(`gh api -X PUT orgs/asyncapi/teams/maintainers/memberships/${maintainer} -H "Authorization: token ${token}"`);
+            }
     outputs:
       newMaintainers: ${{needs.detect_maintainer_changes.outputs.newMaintainers }}
 
