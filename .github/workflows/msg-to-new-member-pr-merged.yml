@@ -78,27 +78,39 @@ jobs:
     steps:
       - name: Invite new maintainers to the organization
         uses: actions/github-script@v6
-        with: 
+        with:
+          github-token: ${{ env.GH_TOKEN }}
           script: |
-            const { execSync } = require('child_process');
             const newMaintainers = '${{ needs.detect_maintainer_changes.outputs.newMaintainers }}'.split(',');
-            const token = process.env.GH_TOKEN;
-  
             for (const maintainer of newMaintainers) {
-              execSync(`gh api -X PUT /orgs/asyncapi/memberships/${maintainer} -H "Authorization: token ${token}"`);
+              try {
+                await github.request('PUT /orgs/{org}/memberships/{username}', {
+                  org: 'asyncapi',
+                  username: maintainer
+                });
+              } catch (error) {
+                console.error(`Failed to add ${maintainer} to the organization:`, error);
+              }
             }
 
       - name: Add new maintainers to the team
         uses: actions/github-script@v6
-        with: 
+        with:
+          github-token: ${{ env.GH_TOKEN }}
           script: |
-            const { execSync } = require('child_process');
             const newMaintainers = '${{ needs.detect_maintainer_changes.outputs.newMaintainers }}'.split(',');
-            const token = process.env.GH_TOKEN;
-
             for (const maintainer of newMaintainers) {
-              execSync(`gh api -X PUT orgs/asyncapi/teams/maintainers/memberships/${maintainer} -H "Authorization: token ${token}"`);
+              try {
+                await github.request('PUT /orgs/{org}/teams/{team_slug}/memberships/{username}', {
+                  org: 'asyncapi',
+                  team_slug: 'maintainers',
+                  username: maintainer
+                });
+              } catch (error) {
+                console.error(`Failed to add ${maintainer} to the team:`, error);
+              }
             }
+
     outputs:
       newMaintainers: ${{needs.detect_maintainer_changes.outputs.newMaintainers }}
 
