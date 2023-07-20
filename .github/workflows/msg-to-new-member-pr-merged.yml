@@ -81,7 +81,7 @@ jobs:
         with: 
           script: |
             const { execSync } = require('child_process');
-            const newMaintainers = '${{ needs.welcome.outputs.newMaintainers }}'.split(',');
+            const newMaintainers = '${{ needs.detect_maintainer_changes.outputs.newMaintainers }}'.split(',');
             const token = process.env.GH_TOKEN;
   
             for (const maintainer of newMaintainers) {
@@ -93,7 +93,7 @@ jobs:
         with: 
           script: |
             const { execSync } = require('child_process');
-            const newMaintainers = '${{ needs.welcome.outputs.newMaintainers }}'.split(',');
+            const newMaintainers = '${{ needs.detect_maintainer_changes.outputs.newMaintainers }}'.split(',');
             const token = process.env.GH_TOKEN;
 
             for (const maintainer of newMaintainers) {
@@ -137,15 +137,25 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Remove maintainers from the organization
-        run: |
-          IFS=',' read -ra MAINTAINERS <<< "${{ needs.detect_maintainer_changes.outputs.removedMaintainers }}"
-          for MAINTAINER in "${MAINTAINERS[@]}"; do
-            gh api -X DELETE /orgs/asyncapi/memberships/$MAINTAINER -H "Authorization: token $GH_TOKEN"
-          done
+        uses: actions/github-script@v6
+        with: 
+          script: |
+            const { execSync } = require('child_process');
+            const removedMaintainers = '${{ needs.detect_maintainer_changes.outputs.removedMaintainers }}'.split(',');
+            const token = process.env.GH_TOKEN;
+
+            for (const maintainer of removedMaintainers) {
+              execSync(`gh api -X DELETE /orgs/asyncapi/memberships/${maintainer} -H "Authorization: token ${token}"`);
+            }
 
       - name: Remove maintainers from the team
-        run: |
-          IFS=',' read -ra MAINTAINERS <<< "${{ needs.detect_maintainer_changes.outputs.removedMaintainers }}"
-          for MAINTAINER in "${MAINTAINERS[@]}"; do
-            gh api orgs/asyncapi/teams/maintainers/memberships/$MAINTAINER -H "Authorization: token $GH_TOKEN" -X DELETE
-          done   
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const { execSync } = require('child_process');
+            const removedMaintainers = '${{ needs.detect_maintainer_changes.outputs.removedMaintainers }}'.split(',');
+            const token = process.env.GH_TOKEN;
+
+            for (const maintainer of removedMaintainers) {
+              execSync(`gh api -X DELETE orgs/asyncapi/teams/maintainers/memberships/${maintainer} -H "Authorization: token ${token}"`);
+            }
