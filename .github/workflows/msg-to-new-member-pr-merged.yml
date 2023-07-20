@@ -150,24 +150,34 @@ jobs:
     steps:
       - name: Remove maintainers from the organization
         uses: actions/github-script@v6
-        with: 
+        with:
+          github-token: ${{ env.GH_TOKEN }}
           script: |
-            const { execSync } = require('child_process');
             const removedMaintainers = '${{ needs.detect_maintainer_changes.outputs.removedMaintainers }}'.split(',');
-            const token = process.env.GH_TOKEN;
-
             for (const maintainer of removedMaintainers) {
-              execSync(`gh api -X DELETE /orgs/asyncapi/memberships/${maintainer} -H "Authorization: token ${token}"`);
+              try {
+                await github.request('DELETE /orgs/asyncapi/memberships/{username}', {
+                  username: maintainer
+                });
+                console.log(`Successfully removed ${maintainer} from the organization.`);
+              } catch (error) {
+                console.error(`Failed to remove ${maintainer} from the organization:`, error);
+              }
             }
 
       - name: Remove maintainers from the team
         uses: actions/github-script@v6
         with:
+          github-token: ${{ env.GH_TOKEN }}
           script: |
-            const { execSync } = require('child_process');
             const removedMaintainers = '${{ needs.detect_maintainer_changes.outputs.removedMaintainers }}'.split(',');
-            const token = process.env.GH_TOKEN;
-
             for (const maintainer of removedMaintainers) {
-              execSync(`gh api -X DELETE orgs/asyncapi/teams/maintainers/memberships/${maintainer} -H "Authorization: token ${token}"`);
+              try {
+                await github.request('DELETE /orgs/asyncapi/teams/maintainers/memberships/{username}', {
+                  username: maintainer
+                });
+                console.log(`Successfully removed ${maintainer} from the team.`);
+              } catch (error) {
+                console.error(`Failed to remove ${maintainer} from the team:`, error);
+              }
             }
