@@ -181,3 +181,36 @@ jobs:
                 console.error(`Failed to remove ${maintainer} from the team:`, error);
               }
             }
+    outputs:
+      removedMaintainers: ${{ needs.welcome.outputs.removedMaintainers }}
+
+  update_emeritus:
+    needs: remove_maintainer
+    if: needs.detect_maintainer_changes.outputs.removedMaintainers != ''
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v2
+
+      - name: Add maintainers to Emeritus.yaml and print
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{ env.GH_TOKEN }}
+          script: |
+            const fs = require('fs');
+            const path = './Emeritus.yaml';
+  
+            // Read the current content of the file
+            let content = fs.readFileSync(path, 'utf8').trim(); // remove any trailing whitespaces
+  
+            // Split the removed maintainers and prepare them for the yaml format
+            const removedMaintainers = "${{ needs.remove_maintainer.outputs.removedMaintainers }}".split(',').map(maintainer => `  - ${maintainer.trim()}`).join('\n');
+  
+            // Append the removed maintainers to the file content
+            content = content + '\n' + removedMaintainers;
+  
+            // Write the updated content back to the file
+            fs.writeFileSync(path, content);
+  
+            // Log the updated content to the console
+            console.log('Updated Emeritus.yaml:\n', content);
