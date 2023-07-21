@@ -1,14 +1,20 @@
 name: 'Upload Episode from YouTube To Anchor.Fm'
 
 on:
-  push:
-    paths:
-      - episode.json
-    branches:
-      - master
-      - youtube-to-anchor-workflow
-      - folder-deletion-test
-
+  workflow_dispatch:
+    inputs:
+      video_id:
+        description: |
+          Enter the youtube video ID that you want to upload on Spotify Podcast.
+        required: true
+      
+  # push:
+  #   paths:
+  #     - episode.json
+  #   branches:
+  #     - master
+  #     - youtube-to-anchor-workflow
+  #     - folder-deletion-test
 jobs:
   upload_episode:
     runs-on: ubuntu-latest
@@ -24,3 +30,17 @@ jobs:
           LOAD_THUMBNAIL: true
           POSTPROCESSOR_ARGS: 'ffmpeg:-ac 1'
           SAVE_AS_DRAFT: true
+      - name: Create episode.json file
+        run: |
+          # Get the video ID from the workflow_dispatch input.
+          video_id="${{ inputs.video_id }}"
+          
+          # Create episodes.json content with the video ID
+          json_content="{\"id\": \"${video_id}\"}"
+          
+          # Write the content to episodes.json
+          echo "${json_content}" > episodes.json
+          
+          # Verify the content was written successfully
+          cat episodes.json
+
