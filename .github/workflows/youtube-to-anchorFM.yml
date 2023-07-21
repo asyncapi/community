@@ -3,7 +3,7 @@ name: 'Upload Episode from YouTube To Anchor.Fm'
 on:
   workflow_dispatch:
     inputs:
-      video-id:
+      video_id:
         description: 'Enter the youtube video ID that want to upload on Spotify Podcast.'
         required: true
       
@@ -32,10 +32,10 @@ jobs:
         # - name: Create episode.json file
         #   run: |
         #     # Get the video ID from the workflow_dispatch input.
-        #     video-id="${{ github.event.inputs.video-id }}"
+        #     video_id="${{ github.event.inputs.video_id }}"
             
         #     # Create episodes.json content with the video ID
-        #     json_content="{\"id\": \"${video-id}\"}"
+        #     json_content="{\"id\": \"${video_id}\"}"
             
         #     # Write the content to episodes.json
         #     echo "${json_content}" > episodes.json
