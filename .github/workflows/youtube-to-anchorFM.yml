@@ -31,7 +31,7 @@ jobs:
           echo "${json_content}" > episode.json
 
           # Verify the content was written successfully
-          cat ${{ github.workspace }}/episodes.json
+          cat episodes.json
       - name: Upload Episode from YouTube To Anchor.Fm
         uses: Schrodinger-Hat/youtube-to-anchorfm@v2.0.0
         env:
