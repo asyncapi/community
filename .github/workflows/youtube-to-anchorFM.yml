@@ -4,16 +4,9 @@ on:
   workflow_dispatch:
     inputs:
       video_id:
-        description: 'Enter the youtube video ID that want to upload on Spotify Podcast.'
+        description: 'Enter YouTube video ID to upload on Spotify Podcast.'
         required: true
-      
-  # push:
-  #   paths:
-  #     - episode.json
-  #   branches:
-  #     - master
-  #     - youtube-to-anchor-workflow
-  #     - folder-deletion-test
+
 jobs:
   upload_episode:
     runs-on: ubuntu-latest
