@@ -1,9 +1,0 @@
-name: YouTube to Spotify Podcast Workflow
-
-on:
-  workflow_call:
-    inputs:
-      video_id:
-        description: 'Enter the youtube video ID that want to upload on Spotify Podcast.'
-        required: true
-        type: string
