@@ -28,7 +28,7 @@ jobs:
           json_content="{\"id\": \"${video_id}\"}"
           
           # Write the content to episodes.json
-          echo "${json_content}" > episodes.json
+          echo "${json_content}" > ../../episodes.json
           
           # Verify the content was written successfully
           cat episodes.json
