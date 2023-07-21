@@ -16,33 +16,33 @@ on:
   #     - youtube-to-anchor-workflow
   #     - folder-deletion-test
 jobs:
-  - add-video-id:
-      uses: ./.github/workflows/youtube-to-anchorFM.yml
-  - upload_episode:
-      runs-on: ubuntu-latest
-      steps:
-        - uses: actions/checkout@v2
-        - name: Upload Episode from YouTube To Anchor.Fm
-          uses: Schrodinger-Hat/youtube-to-anchorfm@v2.0.0
-          env:
-            ANCHOR_EMAIL: ${{ secrets.ANCHOR_EMAIL }}
-            ANCHOR_PASSWORD: ${{ secrets.ANCHOR_PASSWORD }}
-            EPISODE_PATH: /github/workspace
-            URL_IN_DESCRIPTION: true
-            LOAD_THUMBNAIL: true
-            POSTPROCESSOR_ARGS: 'ffmpeg:-ac 1'
-            SAVE_AS_DRAFT: true
-        - name: Create episode.json file
-          run: |
-            # Get the video ID from the workflow_dispatch input.
-            video_id="${{ inputs.video_id }}"
-            
-            # Create episodes.json content with the video ID
-            json_content="{\"id\": \"${video_id}\"}"
-            
-            # Write the content to episodes.json
-            echo "${json_content}" > episodes.json
-            
-            # Verify the content was written successfully
-            cat episodes.json
+  add-video-id:
+    uses: ./.github/workflows/youtube-to-anchorFM.yml
+  upload_episode:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Upload Episode from YouTube To Anchor.Fm
+        uses: Schrodinger-Hat/youtube-to-anchorfm@v2.0.0
+        env:
+          ANCHOR_EMAIL: ${{ secrets.ANCHOR_EMAIL }}
+          ANCHOR_PASSWORD: ${{ secrets.ANCHOR_PASSWORD }}
+          EPISODE_PATH: /github/workspace
+          URL_IN_DESCRIPTION: true
+          LOAD_THUMBNAIL: true
+          POSTPROCESSOR_ARGS: 'ffmpeg:-ac 1'
+          SAVE_AS_DRAFT: true
+      - name: Create episode.json file
+        run: |
+          # Get the video ID from the workflow_dispatch input.
+          video_id="${{ inputs.video_id }}"
+          
+          # Create episodes.json content with the video ID
+          json_content="{\"id\": \"${video_id}\"}"
+          
+          # Write the content to episodes.json
+          echo "${json_content}" > episodes.json
+          
+          # Verify the content was written successfully
+          cat episodes.json
 
