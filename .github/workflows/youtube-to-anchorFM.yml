@@ -24,20 +24,20 @@ jobs:
           # Get the video ID from the workflow_dispatch input.
           video_id="${{ github.event.inputs.video_id }}"
           
-          # Create episodes.json content with the video ID
+          # Create episode.json content with the video ID
           json_content="{\"id\": \"${video_id}\"}"
           
-          # Write the content to episodes.json in the workspace directory
+          # Write the content to episode.json in the workspace directory
           echo "${json_content}" > episode.json
 
           # Verify the content was written successfully
-          cat episodes.json
+          cat episode.json
       - name: Upload Episode from YouTube To Anchor.Fm
         uses: Schrodinger-Hat/youtube-to-anchorfm@v2.0.0
         env:
           ANCHOR_EMAIL: ${{ secrets.ANCHOR_EMAIL }}
           ANCHOR_PASSWORD: ${{ secrets.ANCHOR_PASSWORD }}
-          EPISODE_PATH: ${{ github.workspace }}/episodes.json
+          EPISODE_PATH: ${{ github.workspace }}/episode.json
           URL_IN_DESCRIPTION: true
           LOAD_THUMBNAIL: true
           POSTPROCESSOR_ARGS: 'ffmpeg:-ac 1'
