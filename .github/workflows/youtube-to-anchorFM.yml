@@ -37,7 +37,7 @@ jobs:
         env:
           ANCHOR_EMAIL: ${{ secrets.ANCHOR_EMAIL }}
           ANCHOR_PASSWORD: ${{ secrets.ANCHOR_PASSWORD }}
-          EPISODE_PATH: ${{ github.workspace }}/episode.json
+          EPISODE_PATH: /github/workspace
           URL_IN_DESCRIPTION: true
           LOAD_THUMBNAIL: true
           POSTPROCESSOR_ARGS: 'ffmpeg:-ac 1'
