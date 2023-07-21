@@ -1,0 +1,69 @@
+name: TSC Member Update
+
+on:
+  pull_request:
+    types: [closed]
+
+jobs:
+  update_tsc_member:
+    if: github.event.pull_request.merged
+    name: Update TSC Member
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout main branch
+        uses: actions/checkout@v2
+        with:
+          ref: master
+          path: community-main
+
+      - name: Checkout one commit before last one
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 2
+          ref: master
+          path: community
+
+      - run: cd community && git checkout HEAD^
+
+      - name: Install js-yaml
+        run: npm install js-yaml@4.1.0
+
+      - name: Compare files
+        id: compare-files
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const fs = require('fs');
+            const yaml = require('js-yaml');
+
+            const mainFile = yaml.load(fs.readFileSync('./community-main/MAINTAINERS.yaml', 'utf8'));
+            const prFile = yaml.load(fs.readFileSync('./community/MAINTAINERS.yaml', 'utf8')); 
+
+            // Variables to store the updated value and GitHub user
+            let updatedMaintainers = [];
+            let updatedValue;
+
+            // Function to check if isTscMember value has changed
+            function hasIsTscMemberChanged(maintainerGithub) {
+              const mainMaintainer = mainFile.find(m => m.github === maintainerGithub);
+              const prMaintainer = prFile.find(m => m.github === maintainerGithub);
+
+              if (!mainMaintainer || !prMaintainer) {
+                console.error('Maintainer not found:', maintainerGithub);
+                return;
+              }
+
+              if (mainMaintainer.isTscMember !== prMaintainer.isTscMember) {
+                console.log(`isTscMember value changed for ${maintainerGithub}`);
+                updatedMaintainers.push({ githubUser: maintainerGithub, updatedValue: prMaintainer.isTscMember });
+                updatedValue = prMaintainer.isTscMember;
+              }
+            }
+
+            // Loop over all maintainers and find the changes
+            mainFile.forEach(maintainer => hasIsTscMemberChanged(maintainer.github));
+
+            // Set outputs
+            core.setOutput("updatedValue", updatedValue);
+            core.setOutput("updatedMaintainers", JSON.stringify(updatedMaintainers));
