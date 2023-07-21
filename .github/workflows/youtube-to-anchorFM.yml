@@ -18,20 +18,20 @@ jobs:
   add-video-id:
     uses: ./.github/workflows/youtube-to-anchorFM.yml
     with:
-      upload_episode:
-      runs-on: ubuntu-latest
-      steps:
-        - uses: actions/checkout@v2
-        - name: Upload Episode from YouTube To Anchor.Fm
-          uses: Schrodinger-Hat/youtube-to-anchorfm@v2.0.0
-          env:
-            ANCHOR_EMAIL: ${{ secrets.ANCHOR_EMAIL }}
-            ANCHOR_PASSWORD: ${{ secrets.ANCHOR_PASSWORD }}
-            EPISODE_PATH: /github/workspace
-            URL_IN_DESCRIPTION: true
-            LOAD_THUMBNAIL: true
-            POSTPROCESSOR_ARGS: 'ffmpeg:-ac 1'
-            SAVE_AS_DRAFT: true
+  upload_episode:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Upload Episode from YouTube To Anchor.Fm
+        uses: Schrodinger-Hat/youtube-to-anchorfm@v2.0.0
+        env:
+          ANCHOR_EMAIL: ${{ secrets.ANCHOR_EMAIL }}
+          ANCHOR_PASSWORD: ${{ secrets.ANCHOR_PASSWORD }}
+          EPISODE_PATH: /github/workspace
+          URL_IN_DESCRIPTION: true
+          LOAD_THUMBNAIL: true
+          POSTPROCESSOR_ARGS: 'ffmpeg:-ac 1'
+          SAVE_AS_DRAFT: true
         # - name: Create episode.json file
         #   run: |
         #     # Get the video ID from the workflow_dispatch input.
