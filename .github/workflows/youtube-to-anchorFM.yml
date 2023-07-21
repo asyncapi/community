@@ -28,15 +28,10 @@ jobs:
           json_content="{\"id\": \"${video_id}\"}"
           
           # Write the content to episodes.json in the workspace directory
-          echo "${json_content}" > ${{ github.workspace }}/episodes.json
+          echo "${json_content}" > episode.json
 
           # Verify the content was written successfully
           cat ${{ github.workspace }}/episodes.json
-      - name: Upload episode.json artifact
-        uses: actions/upload-artifact@v2
-        with:
-          name: episode-json
-          path: ${{ github.workspace }}/episodes.json
       - name: Upload Episode from YouTube To Anchor.Fm
         uses: Schrodinger-Hat/youtube-to-anchorfm@v2.0.0
         env:
