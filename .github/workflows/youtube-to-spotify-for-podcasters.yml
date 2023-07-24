@@ -1,4 +1,4 @@
-name: 'Upload Episode from YouTube To Anchor.Fm'
+name: 'Upload Episode from YouTube To Spotify for Podcasters'
 
 on:
   workflow_dispatch:
