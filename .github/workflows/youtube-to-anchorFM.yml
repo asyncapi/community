@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       video_id:
-        description: 'Enter YouTube video ID to upload on Spotify Podcast.'
+        description: 'Enter YouTube video ID to upload on Spotify for Podcasters.'
         required: true
 
 jobs:
