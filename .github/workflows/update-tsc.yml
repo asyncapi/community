@@ -3,6 +3,8 @@ name: TSC Member Update
 on:
   pull_request:
     types: [closed]
+    paths:
+      - 'MAINTAINERS.yaml'
 
 jobs:
   update_tsc_member:
