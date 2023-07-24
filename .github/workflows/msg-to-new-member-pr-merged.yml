@@ -1,4 +1,4 @@
-name: Welcome New Contributor
+name: Welcome New Maintainer
 
 on:
   pull_request:
