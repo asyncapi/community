@@ -67,6 +67,11 @@ jobs:
       - name: Debug newMaintainers output
         run: |
           echo "newMaintainers = $newMaintainers"
+
+      - name: Debug removedMaintainers output
+        run: |
+          echo "removedMaintainers = $removedMaintainers"
+
     outputs:
       newMaintainers: ${{ steps.compare-files.outputs.newMaintainers }}
       removedMaintainers: ${{ steps.compare-files.outputs.removedMaintainers }}
