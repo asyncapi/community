@@ -1,0 +1,38 @@
+name: 'Upload Episode from YouTube To Spotify for Podcasters'
+
+on:
+  workflow_dispatch:
+    inputs:
+      video_id:
+        description: 'Enter YouTube video ID to upload on Spotify for Podcasters.'
+        required: true
+
+jobs:
+  upload_episode:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Create episode.json file
+        run: |
+          # Get the video ID from the workflow_dispatch input.
+          video_id="${{ github.event.inputs.video_id }}"
+          
+          # Create episode.json content with the video ID
+          json_content="{\"id\": \"${video_id}\"}"
+          
+          # Write the content to episode.json in the workspace directory
+          echo "${json_content}" > episode.json
+
+          # Verify the content was written successfully
+          cat episode.json
+      - name: Upload Episode from YouTube To Anchor.Fm
+        uses: Schrodinger-Hat/youtube-to-anchorfm@v2.0.0
+        env:
+          ANCHOR_EMAIL: ${{ secrets.ANCHOR_EMAIL }}
+          ANCHOR_PASSWORD: ${{ secrets.ANCHOR_PASSWORD }}
+          EPISODE_PATH: /github/workspace
+          URL_IN_DESCRIPTION: true
+          LOAD_THUMBNAIL: true
+          POSTPROCESSOR_ARGS: 'ffmpeg:-ac 1'
+          SAVE_AS_DRAFT: true
+
