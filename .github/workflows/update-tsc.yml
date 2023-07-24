@@ -46,24 +46,61 @@ jobs:
 
             // Function to check if isTscMember value has changed
             function hasIsTscMemberChanged(maintainerGithub) {
-              const mainMaintainer = mainFile.find(m => m.github === maintainerGithub);
-              const prMaintainer = prFile.find(m => m.github === maintainerGithub);
-
-              if (!mainMaintainer || !prMaintainer) {
-                console.error('Maintainer not found:', maintainerGithub);
-                return;
-              }
-
-              if (mainMaintainer.isTscMember !== prMaintainer.isTscMember) {
-                console.log(`isTscMember value changed for ${maintainerGithub}`);
-                updatedMaintainers.push({ githubUser: maintainerGithub, updatedValue: prMaintainer.isTscMember });
-                updatedValue = prMaintainer.isTscMember;
-              }
+                const mainMaintainer = mainFile.find(m => m.github === maintainerGithub);
+                const prMaintainer = prFile.find(m => m.github === maintainerGithub);
+            
+                console.log(`Checking for ${maintainerGithub}`);
+            
+                if (!mainMaintainer || !prMaintainer) {
+                    console.error('Maintainer not found:', maintainerGithub);
+                    return;
+                }
+            
+                console.log(`${maintainerGithub} in mainFile has isTscMember as:`, mainMaintainer.isTscMember);
+                console.log(`${maintainerGithub} in prFile has isTscMember as:`, prMaintainer.isTscMember);
+            
+                if (mainMaintainer.isTscMember !== prMaintainer.isTscMember) {
+                    console.log(`isTscMember value changed for ${maintainerGithub}`);
+                    updatedMaintainers.push({ githubUser: maintainerGithub, updatedValue: mainMaintainer.isTscMember });
+                    updatedValue = mainMaintainer.isTscMember;
+                }
             }
 
             // Loop over all maintainers and find the changes
             mainFile.forEach(maintainer => hasIsTscMemberChanged(maintainer.github));
-
+            
+            // Log final results
+            console.log("Final updatedValue:", updatedValue);
+            console.log("Final updatedMaintainers:", JSON.stringify(updatedMaintainers));
+            
             // Set outputs
             core.setOutput("updatedValue", updatedValue);
             core.setOutput("updatedMaintainers", JSON.stringify(updatedMaintainers));
+    outputs: 
+      updatedValue: ${{ steps.compare-files.outputs.updatedValue }}
+      updatedMaintainers: ${{ steps.compare-files.outputs.updatedMaintainers }}
+
+   add_to_tsc_members_team:
+    needs: update_tsc_member
+    if: needs.update_tsc_member.outputs.updatedValue
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Add new maintainers to the team
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{ secrets.BOT_TOKEN }}
+          script: |
+            const updatedMaintainers = JSON.parse('${{ needs.update_tsc_member.outputs.updatedMaintainers }}');
+            for (const maintainerObj of updatedMaintainers) {
+              const maintainer = maintainerObj.githubUser;
+              try {
+                await github.request('PUT /orgs/{org}/teams/{team_slug}/memberships/{username}', {
+                  org: 'asyncapi',
+                  team_slug: 'tsc_members',
+                  username: tsc_members
+                });
+              } catch (error) {
+                console.error(`Failed to add ${maintainer} to the team:`, error);
+              }
+            }
