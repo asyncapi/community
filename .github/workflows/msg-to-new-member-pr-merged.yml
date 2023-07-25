@@ -94,7 +94,7 @@ jobs:
                   username: maintainer
                 });
               } catch (error) {
-                console.error(`Failed to add ${maintainer} to the organization:`, error);
+                core.setFailed(`Failed to add ${maintainer} to the organization: ${error.message}`);
               }
             }
 
@@ -112,7 +112,7 @@ jobs:
                   username: maintainer
                 });
               } catch (error) {
-                console.error(`Failed to add ${maintainer} to the team:`, error);
+                core.setFailed(`Failed to add ${maintainer} to the team: ${error.message}`);
               }
             }
 
@@ -156,9 +156,9 @@ jobs:
                 await github.request('DELETE /orgs/asyncapi/memberships/{username}', {
                   username: maintainer
                 });
-                console.log(`Successfully removed ${maintainer} from the organization.`);
+                core.info(`Successfully removed ${maintainer} from the organization.`);
               } catch (error) {
-                console.error(`Failed to remove ${maintainer} from the organization:`, error);
+                core.setFailed(`Failed to remove ${maintainer} from the organization: ${error.message}`);
               }
             }
 
@@ -173,9 +173,9 @@ jobs:
                 await github.request('DELETE /orgs/asyncapi/teams/maintainers/memberships/{username}', {
                   username: maintainer
                 });
-                console.log(`Successfully removed ${maintainer} from the team.`);
+                core.info(`Successfully removed ${maintainer} from the team.`);
               } catch (error) {
-                console.error(`Failed to remove ${maintainer} from the team:`, error);
+                core.setFailed(`Failed to remove ${maintainer} from the team: ${error.message}`);
               }
             }
     outputs:
@@ -209,8 +209,8 @@ jobs:
             // Write the updated content back to the file
             fs.writeFileSync(path, content);
   
-            // Log the updated content to the console
-            console.log('Updated Emeritus.yaml:\n', content);
+            // Log the updated content using core.info
+            core.info(`Updated Emeritus.yaml:\n${content}`);
       
       - name: Create new branch
         run: |
