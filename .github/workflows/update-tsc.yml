@@ -51,18 +51,18 @@ jobs:
                 const mainMaintainer = mainFile.find(m => m.github === maintainerGithub);
                 const prMaintainer = prFile.find(m => m.github === maintainerGithub);
             
-                console.log(`Checking for ${maintainerGithub}`);
+                core.info(`Checking for ${maintainerGithub}`);
             
                 if (!mainMaintainer || !prMaintainer) {
                     console.error('Maintainer not found:', maintainerGithub);
                     return;
                 }
             
-                console.log(`${maintainerGithub} in mainFile has isTscMember as:`, mainMaintainer.isTscMember);
-                console.log(`${maintainerGithub} in prFile has isTscMember as:`, prMaintainer.isTscMember);
+                core.info(`${maintainerGithub} in mainFile has isTscMember as:`, mainMaintainer.isTscMember);
+                core.info(`${maintainerGithub} in prFile has isTscMember as:`, prMaintainer.isTscMember);
             
                 if (mainMaintainer.isTscMember !== prMaintainer.isTscMember) {
-                    console.log(`isTscMember value changed for ${maintainerGithub}`);
+                    core.info(`isTscMember value changed for ${maintainerGithub}`);
                     updatedMaintainers.push({ githubUser: maintainerGithub, updatedValue: mainMaintainer.isTscMember });
                     updatedValue = mainMaintainer.isTscMember;
                 }
@@ -72,8 +72,8 @@ jobs:
             mainFile.forEach(maintainer => hasIsTscMemberChanged(maintainer.github));
             
             // Log final results
-            console.log("Final updatedValue:", updatedValue);
-            console.log("Final updatedMaintainers:", JSON.stringify(updatedMaintainers));
+            core.info("Final updatedValue:", updatedValue);
+            core.info("Final updatedMaintainers:", JSON.stringify(updatedMaintainers));
             
             // Set outputs
             core.setOutput("updatedValue", updatedValue);
@@ -82,7 +82,7 @@ jobs:
       updatedValue: ${{ steps.compare-files.outputs.updatedValue }}
       updatedMaintainers: ${{ steps.compare-files.outputs.updatedMaintainers }}
 
-   add_to_tsc_members_team:
+  add_to_tsc_members_team:
     needs: update_tsc_member
     if: needs.update_tsc_member.outputs.updatedValue
     runs-on: ubuntu-latest
@@ -97,12 +97,8 @@ jobs:
             for (const maintainerObj of updatedMaintainers) {
               const maintainer = maintainerObj.githubUser;
               try {
-                await github.request('PUT /orgs/{org}/teams/{team_slug}/memberships/{username}', {
-                  org: 'asyncapi',
-                  team_slug: 'tsc_members',
-                  username: tsc_members
-                });
+                await github.request(`PUT /orgs/asyncapi/teams/tsc_members/memberships/${maintainer}`);
               } catch (error) {
-                console.error(`Failed to add ${maintainer} to the team:`, error);
+                core.setFailed(`Failed to add ${maintainer} to the team: ${error.message}`);
               }
             }
