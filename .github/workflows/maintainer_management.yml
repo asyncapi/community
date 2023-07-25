@@ -1,4 +1,4 @@
-name: Welcome New Maintainer
+name: Maintainer Management Workflow
 
 on:
   pull_request:
