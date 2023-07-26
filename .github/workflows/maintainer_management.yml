@@ -124,16 +124,29 @@ jobs:
     if: needs.add_maintainer.outputs.newMaintainers != ''
     runs-on: ubuntu-latest
     steps:
-      - name: Display welcome message
+      - name: Display welcome message for new maintainers
         uses: actions/github-script@v6
         with:
           github-token: ${{ secrets.GH_TOKEN }}
           script: |
             const newMaintainers = "${{ needs.add_maintainer.outputs.newMaintainers }}".split(",");
-            const welcomeMessage = newMaintainers.map((maintainer) => `@${maintainer.trim().replace(/^@/, '')} I have invited you to join the AsyncAPI organization, and you are added to the team that lists all Maintainers.
-            We use this team to mention in different discussions in various places on GitHub where Maintainer's opinion is needed. Once Maintainers are mentioned:
-            - You will receive GitHub notifications.
-            Welcome aboard! We are excited to have you as part of the team.`).join("\n");
+            const welcomeMessage = newMaintainers.map((maintainer) => {
+              if (maintainer.isTscMember) {
+                // Welcome message for TSC members
+                return `@${maintainer.github.trim().replace(/^@/, '')} I have invited you to join the AsyncAPI organization and you will soon be added to the team that lists all Maintainers.
+                We use this team to mention in different discussions in different places on GitHub where Maintainer's opinion is needed or even voting on some topic. Once Maintainers are mentioned:
+                - You get GitHub notification
+                - We also drop notification in our slack in #95_bot-maintainers-mentioned channel
+                - We drop an email to people that subscribed to Maintainer news here https://www.asyncapi.com/community/maintainers
+                Pick the channel for notifications that you prefer. Welcome aboard! We are excited to have you as part of the team.`;
+              } else {
+                // Welcome message for non-TSC members
+                return `@${maintainer.trim().replace(/^@/, '')} I have invited you to join the AsyncAPI organization, and you are added to the team that lists all Maintainers.
+                      We use this team to mention in different discussions in various places on GitHub where Maintainer's opinion is needed. Once Maintainers are mentioned:
+                      - You will receive GitHub notifications.
+                      Welcome aboard! We are excited to have you as part of the team.`;
+                }
+            }).join("\n");
             const { owner, repo } = context.repo;
             const { number: issue_number } = context.issue;
             return github.rest.issues.createComment({ owner, repo, issue_number, body: welcomeMessage });
