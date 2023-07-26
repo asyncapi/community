@@ -91,7 +91,7 @@ jobs:
       - name: Add new maintainers to the team
         uses: actions/github-script@v6
         with:
-          github-token: ${{ secrets.BOT_TOKEN }}
+          github-token: ${{ secrets.GH_TOKEN }}
           script: |
             const updatedMaintainers = JSON.parse('${{ needs.update_tsc_member.outputs.updatedMaintainers }}');
             for (const maintainerObj of updatedMaintainers) {
