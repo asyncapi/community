@@ -82,23 +82,35 @@ jobs:
       updatedValue: ${{ steps.compare-files.outputs.updatedValue }}
       updatedMaintainers: ${{ steps.compare-files.outputs.updatedMaintainers }}
 
-  add_to_tsc_members_team:
+  add_or_remove_tsc_members_team:
     needs: update_tsc_member
-    if: needs.update_tsc_member.outputs.updatedValue
     runs-on: ubuntu-latest
 
     steps:
-      - name: Add new maintainers to the team
+      - name: Add or remove maintainers from the team
         uses: actions/github-script@v6
         with:
           github-token: ${{ secrets.GH_TOKEN }}
           script: |
+            const updatedValue = ${{ needs.update_tsc_member.outputs.updatedValue }};
             const updatedMaintainers = JSON.parse('${{ needs.update_tsc_member.outputs.updatedMaintainers }}');
             for (const maintainerObj of updatedMaintainers) {
               const maintainer = maintainerObj.githubUser;
               try {
-                await github.request(`PUT /orgs/asyncapi/teams/tsc_members/memberships/${maintainer}`);
+                if (updatedValue) {
+                  // Add maintainer to the team
+                  await github.request('PUT /orgs/asyncapi/teams/tsc_members/memberships/{username}', {
+                    username: maintainer
+                  });
+                  core.info(`Successfully added ${maintainer} to the team.`);
+                } else {
+                  // Remove maintainer from the team
+                  await github.request('DELETE /orgs/asyncapi/teams/tsc_members/memberships/{username}', {
+                    username: maintainer
+                  });
+                  core.info(`Successfully removed ${maintainer} from the team.`);
+                }
               } catch (error) {
-                core.setFailed(`Failed to add ${maintainer} to the team: ${error.message}`);
+                core.error(`Failed to update ${maintainer} in the team: ${error.message}`);
               }
             }
