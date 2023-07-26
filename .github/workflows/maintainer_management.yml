@@ -60,7 +60,7 @@ jobs:
               core.info(`Added Maintainer:\n${yaml.dump(addedWithTSC)}`);
               core.setOutput("newMaintainers", addedWithTSC.map((obj) => obj.github).join(","));
             }
-            
+
             if (removed.length > 0) {
               core.setOutput("removedMaintainers", removed.map((obj) => obj.github).join(","));
             }
@@ -203,7 +203,7 @@ jobs:
 
   update_emeritus:
     needs: remove_maintainer
-    if: needs.detect_maintainer_changes.outputs.removedMaintainers != ''
+    if: needs.remove_maintainer.outputs.removedMaintainers != ''
     runs-on: ubuntu-latest
     steps:
       - name: Check out code
