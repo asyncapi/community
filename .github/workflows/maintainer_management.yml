@@ -207,10 +207,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v2
 
-      - name: Add TSC maintainers to Emeritus.yaml and print
-        id: add_emeritus
+      - name: Add maintainers to Emeritus.yaml and print
         uses: actions/github-script@v6
         with:
           github-token: ${{ env.GH_TOKEN }}
@@ -221,26 +220,17 @@ jobs:
             // Read the current content of the file
             let content = fs.readFileSync(path, 'utf8').trim(); // remove any trailing whitespaces
   
-            // Get the list of maintainers from the maintainers.yaml file
-            const maintainers = ${JSON.stringify(yaml.safeLoad(fs.readFileSync('./maintainers.yaml', 'utf8')))};
-
-            // Get the list of removed maintainers from the previous step's output and split them
-            const removedMaintainers = "${{ needs.remove_maintainer.outputs.removedMaintainers }}".split(',');
-
-            // Filter out non-TSC members from the list of removed maintainers
-            const tscMaintainers = removedMaintainers.filter(maintainer => maintainers[maintainer.trim()] && maintainers[maintainer.trim()].isTscMember);
-      
-            // Prepare the TSC maintainers for the yaml format
-            const tscMaintainersYaml = tscMaintainers.map(maintainer => `  - ${maintainer.trim()}`).join('\n');
-      
-            // Append the TSC maintainers to the file content
-            content = content + '\n' + tscMaintainersYaml;
+            // Split the removed maintainers and prepare them for the yaml format
+            const removedMaintainers = "${{ needs.remove_maintainer.outputs.removedMaintainers }}".split(',').map(maintainer => `  - ${maintainer.trim()}`).join('\n');
+  
+            // Append the removed maintainers to the file content
+            content = content + '\n' + removedMaintainers;
   
             // Write the updated content back to the file
             fs.writeFileSync(path, content);
   
-            // Log the updated content using core.info
-            core.info(`Updated Emeritus.yaml:\n${content}`);
+            // Log the updated content to the console
+            core.info('Updated Emeritus.yaml:\n', content);
       
       - name: Create new branch
         run: |
