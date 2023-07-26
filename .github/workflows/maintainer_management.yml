@@ -49,14 +49,23 @@ jobs:
               (oldObj) => !previousMaintainers.some((newObj) => newObj.github === oldObj.github)
             );
 
-            if(added.length > 0) {
-              core.info(`Added Maintainer:\n${yaml.dump(added)}`);
-              core.setOutput("newMaintainers", added.map((obj) => obj.github).join(","));
+            // Collect information about TSC membership for added maintainers
+            const addedWithTSC = added.map((maintainer) => {
+              const tscMember = currentMaintainers.find((m) => m.github === maintainer.github);
+              return { ...maintainer, isTscMember: tscMember ? tscMember.isTscMember : false };
+            });
+
+            // Store the added maintainers along with their TSC membership status in the outputs
+            if (addedWithTSC.length > 0) {
+              core.info(`Added Maintainer:\n${yaml.dump(addedWithTSC)}`);
+              core.setOutput("newMaintainers", addedWithTSC.map((obj) => obj.github).join(","));
             }
+            
             if (removed.length > 0) {
               core.setOutput("removedMaintainers", removed.map((obj) => obj.github).join(","));
             }
 
+            // Log information for debugging
             core.info('Maintainers in main branch:\n' + yaml.dump(currentMaintainers));
             core.info('Location of Maintainers in main branch:');
             core.info(fs.realpathSync('./community-main/MAINTAINERS.yaml'));
@@ -131,19 +140,19 @@ jobs:
           script: |
             const newMaintainers = "${{ needs.add_maintainer.outputs.newMaintainers }}".split(",");
             const welcomeMessage = newMaintainers.map((maintainer) => {
-              if (maintainer.isTscMember) {
+              const isTscMember = maintainer.isTscMember;
+              if (isTscMember)) {
                 // Welcome message for TSC members
-                return `@${maintainer.github.trim().replace(/^@/, '')} I have invited you to join the AsyncAPI organization and you will soon be added to the team that lists all Maintainers.
-                We use this team to mention in different discussions in different places on GitHub where Maintainer's opinion is needed or even voting on some topic. Once Maintainers are mentioned:
-                - You get GitHub notification
-                - We also drop notification in our slack in #95_bot-maintainers-mentioned channel
-                - We drop an email to people that subscribed to Maintainer news here https://www.asyncapi.com/community/maintainers
-                Pick the channel for notifications that you prefer. Welcome aboard! We are excited to have you as part of the team.`;
+                return `@${maintainer.github.trim().replace(/^@/, '')} Welcome to the TSC Members' Club, you are now a member of the exclusive TSC Members team.
+                    We use this team to mention in different discussions in different places on GitHub where Maintainer's opinion is needed or even voting on some topic. Once Maintainers are mentioned:
+                    -  You will receive GitHub notifications.
+                    -  We will also send notifications to our Slack channel #95_bot-maintainers-mentioned.
+                    -  Subscribers to Maintainer news at https://www.asyncapi.com/community/maintainers will receive email notifications.`;
               } else {
                 // Welcome message for non-TSC members
                 return `@${maintainer.trim().replace(/^@/, '')} I have invited you to join the AsyncAPI organization, and you are added to the team that lists all Maintainers.
-                      We use this team to mention in different discussions in various places on GitHub where Maintainer's opinion is needed. Once Maintainers are mentioned:
-                      - You will receive GitHub notifications.
+                      Please take a moment to verify if you would like to provide more details for your account, such as your LinkedIn profile, Twitter handle, or company affiliation. 
+                      Additionally, if you are interested in becoming a TSC member and contributing to the direction of the AsyncAPI Initiative, let us know, and we'll be happy to guide you through the process.
                       Welcome aboard! We are excited to have you as part of the team.`;
                 }
             }).join("\n");
