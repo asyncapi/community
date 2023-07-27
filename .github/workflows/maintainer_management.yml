@@ -253,7 +253,7 @@ jobs:
 
   notify_slack_on_failure:
     if: always() && (needs.detect_maintainer_changes.result == 'failure' || needs.add_maintainer.result == 'failure' || needs.display_message.result == 'failure' || needs.remove_maintainer.result == 'failure' || needs.update_emeritus.result == 'failure' )
-    needs: [detect_maintainer_changes, add_maintainer.result, display_message, remove_maintainer, update_emeritus]
+    needs: [detect_maintainer_changes, add_maintainer.result, display_message, remove_maintainer,remove_maintainer_goodbye, update_emeritus]
     runs-on: ubuntu-latest
     steps:
     - name: Report workflow run status to Slack
