@@ -7,7 +7,7 @@ on:
       - 'MAINTAINERS.yaml'
 
 jobs:
-  update_tsc_member:
+  detect_tsc_changes:
     if: github.event.pull_request.merged
     name: Update TSC Member
     runs-on: ubuntu-latest
@@ -83,7 +83,7 @@ jobs:
       updatedMaintainers: ${{ steps.compare-files.outputs.updatedMaintainers }}
 
   add_or_remove_tsc_members_team:
-    needs: update_tsc_member
+    needs: detect_tsc_changes
     runs-on: ubuntu-latest
 
     steps:
@@ -92,8 +92,8 @@ jobs:
         with:
           github-token: ${{ secrets.GH_TOKEN }}
           script: |
-            const updatedValue = ${{ needs.update_tsc_member.outputs.updatedValue }};
-            const updatedMaintainers = JSON.parse('${{ needs.update_tsc_member.outputs.updatedMaintainers }}');
+            const updatedValue = ${{ needs.detect_tsc_changes.outputs.updatedValue }};
+            const updatedMaintainers = JSON.parse('${{ needs.detect_tsc_changes.outputs.updatedMaintainers }}');
             for (const maintainerObj of updatedMaintainers) {
               const maintainer = maintainerObj.githubUser;
               try {
