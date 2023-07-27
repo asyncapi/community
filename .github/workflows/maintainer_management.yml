@@ -171,23 +171,7 @@ jobs:
                 core.setFailed(`Failed to remove ${maintainer} from the organization: ${error.message}`);
               }
             }
-
-      - name: Remove maintainers from the team
-        uses: actions/github-script@v6
-        with:
-          github-token: ${{ env.GH_TOKEN }}
-          script: |
-            const removedMaintainers = '${{ needs.detect_maintainer_changes.outputs.removedMaintainers }}'.split(',');
-            for (const maintainer of removedMaintainers) {
-              try {
-                await github.request('DELETE /orgs/asyncapi/teams/maintainers/memberships/{username}', {
-                  username: maintainer
-                });
-                core.info(`Successfully removed ${maintainer} from the team.`);
-              } catch (error) {
-                core.setFailed(`Failed to remove ${maintainer} from the team: ${error.message}`);
-              }
-            }
+            
     outputs:
       removedMaintainers: ${{ needs.welcome.outputs.removedMaintainers }}
 
