@@ -90,15 +90,15 @@ jobs:
       - name: Add new TSC members to the team
         uses: actions/github-script@v6
         with:
-          github-token: ${{ secrets.BOT_TOKEN }}
+          github-token: ${{ secrets.GH_TOKEN }}
           script: |
             async function addTscMembers() {
               const newTscMembers = '${{ needs.detect_tsc_changes.outputs.updatedMaintainers }}'.split(',');
               for (const tscMember of newTscMembers) {
                 try {
                   await github.request('PUT /orgs/{org}/teams/{team_slug}/memberships/{username}', {
-                    org: 'richaOrg',
-                    team_slug: 'maintainers',
+                    org: 'asyncapi',
+                    team_slug: 'tsc_members',
                     username: tscMember
                   });
                 } catch (error) {
