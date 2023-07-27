@@ -171,9 +171,11 @@ jobs:
                 core.setFailed(`Failed to remove ${maintainer} from the organization: ${error.message}`);
               }
             }
-            
+
     outputs:
-      removedMaintainers: ${{ needs.welcome.outputs.removedMaintainers }}
+      removedMaintainers: ${{ needs.detect_maintainer_changes.outputs.removedMaintainers }}
+      removedTscMembers: ${{ needs.detect_maintainer_changes.outputs.removedTscMembers }}
+
 
   update_emeritus:
     needs: detect_maintainer_changes
