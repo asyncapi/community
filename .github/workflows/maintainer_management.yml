@@ -176,6 +176,31 @@ jobs:
       removedMaintainers: ${{ needs.detect_maintainer_changes.outputs.removedMaintainers }}
       removedTscMembers: ${{ needs.detect_maintainer_changes.outputs.removedTscMembers }}
 
+  remove_maintainer_goodbye:
+    needs: remove_maintainer
+    if: needs.remove_maintainer.outputs.removedMaintainers != ''
+    runs-on: ubuntu-latest
+    steps:
+      - name: Display goodbye message to removed maintainers
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{ env.GH_TOKEN }}
+           script: |
+              const removedMaintainers = "${{ needs.remove_maintainer.outputs.removedMaintainers }}".split(",");
+              const removedTscMembers = "${{ needs.remove_maintainer.outputs.removedTscMembers }}".split(",");
+
+              // Goodbye message to removed maintainers and notification to TSC members
+              const combinedMessage = removedMaintainers.map((maintainer) => {
+                const tscNotification = removedTscMembers.includes(maintainer)
+                  ? `We want to inform you that a TSC member has decided to step down from their role as a maintainer. Their contributions have been valuable to AsyncAPI Initiative , and we are grateful for their efforts.`
+                  : '';
+                return `@${maintainer.trim().replace(/^@/, '')} We wanted to express our gratitude for your contributions as a maintainer to our project. Your efforts have been immensely valuable to us, and we truly appreciate your dedication. Thank you once again, and we wish you all the best in your future endeavors!\n\n${tscNotification}`;
+              }).join('\n');
+
+              const { owner, repo } = context.repo;
+              const { number: issue_number } = context.issue;
+              return github.rest.issues.createComment({ owner, repo, issue_number, body: combinedMessage });
+
 
   update_emeritus:
     needs: detect_maintainer_changes
