@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       time:
-        description: 'Info about meeting hour in UTC time zone, like: 08 or 16. No PM or AM versions.'
+        description: 'Info about meeting time in UTC time zone in "HH:MM"(MM can be 00 or 30), like: 08:30 or 16:00. No PM or AM versions.'
         required: true
       date:
         description: 'Date in a form like: 2022-04-05 where 04 is a month and 05 is a day number.'
@@ -13,11 +13,10 @@ on:
         description: 'You can specify additional text that appears at the end of generated issue title, like: - Product Design'
         required: false
         default: ''
-      meeting_banner: 
+      meeting_banner:
         description: 'Meeting banner(image) URL'
         required: false
 jobs:
-
   setup-lets-talk-about-contrib-stream:
     uses: ./.github/workflows/create-event-workflow-reusable.yml
     with:
@@ -28,7 +27,7 @@ jobs:
       meeting_banner: ${{ github.event.inputs.meeting_banner }}
       meeting_desc: The purpose of this meeting is to focus on contributors, focus on people that want to contribute to AsyncAPI Initiative but do not know how to do it.
       host: lpgornicki@gmail.com
-      alternative_host: "fmvilas@gmail.com,devlopergene@gmail.com"
+      alternative_host: 'fmvilas@gmail.com,devlopergene@gmail.com,sibanda.thulie@gmail.com'
       issue_template_path: .github/workflows/create-event-helpers/issues_templates/lets-talk-about-contrib.md
       create_zoom: false
     secrets:
@@ -39,7 +38,7 @@ jobs:
       STREAM_KEY: ${{ secrets.STREAM_KEY }}
       CALENDAR_ID: ${{ secrets.CALENDAR_ID }}
       CALENDAR_SERVICE_ACCOUNT: ${{ secrets.CALENDAR_SERVICE_ACCOUNT }}
-      TWITTER_CONSUMER_KEY: ${{ secrets.TWITTER_CONSUMER_KEY }} 
-      TWITTER_CONSUMER_SECRET: ${{ secrets.TWITTER_CONSUMER_SECRET }} 
-      TWITTER_ACCESS_TOKEN_KEY: ${{ secrets.TWITTER_ACCESS_TOKEN_KEY }} 
+      TWITTER_CONSUMER_KEY: ${{ secrets.TWITTER_CONSUMER_KEY }}
+      TWITTER_CONSUMER_SECRET: ${{ secrets.TWITTER_CONSUMER_SECRET }}
+      TWITTER_ACCESS_TOKEN_KEY: ${{ secrets.TWITTER_ACCESS_TOKEN_KEY }}
       TWITTER_ACCESS_TOKEN_SECRET: ${{ secrets.TWITTER_ACCESS_TOKEN_SECRET }}

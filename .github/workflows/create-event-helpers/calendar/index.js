@@ -15,7 +15,7 @@ const calendar = google.calendar({ version: 'v3', auth });
  * All events are being linked to their GitHub issues
  * @param {String} zoomUrl Zoom url of the meeting
  * @param {String} startDate ex. 2022-04-05
- * @param {String} startTime ex. 08 or 16
+ * @param {String} startTime ex. 08:00 or 16:30
  * @param {Number} issueNumber GitHub issue number of the event, to find event later
  */
 async function addEvent(zoomUrl, startDate, startTime, issueNumber) {
@@ -32,10 +32,9 @@ async function addEvent(zoomUrl, startDate, startTime, issueNumber) {
 
         //helper to create end time which is always 1h later
         const getEndTime = (startTime) => {
-            const time = Number(startTime);
-            if (time < 10) return '0' + (time + 1)
-
-            return (time + 1) + ''
+            const [hour, min] = startTime.split(':').map(Number);
+            let nextHour = (hour + 1) % 24;
+            return `${nextHour.toString().padStart(2, '0')}:${min.toString().padStart(2, '0')}`;
         }
 
         //helper to build meeting description
@@ -60,10 +59,10 @@ async function addEvent(zoomUrl, startDate, startTime, issueNumber) {
               guest
             ),
             start: {
-              dateTime: `${startDate}T${startTime}:00:00Z`,
+              dateTime: `${startDate}T${startTime}:00Z`,
             },
             end: {
-              dateTime: `${startDate}T${getEndTime(startTime)}:00:00Z`,
+              dateTime: `${startDate}T${getEndTime(startTime)}:00Z`,
             },
             location: zoomUrl,
             extendedProperties: {

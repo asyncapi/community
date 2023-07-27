@@ -5,4 +5,7 @@
 # For more details, read the following article on GitHub: https://help.github.com/articles/about-codeowners/.
 
 # The default owners are automatically added as reviewers when you open a pull request unless different owners are specified in the file.
-* @fmvilas @alequetzalli @derberg @asyncapi-bot-eve
+* @fmvilas @alequetzalli @derberg @asyncapi-bot-eve @thulieblack
+
+# All ambassadors related files
+AMBASSADOR* @Barbanio

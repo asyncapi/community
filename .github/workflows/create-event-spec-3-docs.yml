@@ -1,0 +1,40 @@
+name: Schedule Spec 3.0 Docs Meeting
+
+on:
+  workflow_dispatch:
+    inputs:
+      time:
+        description: 'Info about meeting time in UTC time zone in "HH:MM"(MM can be 00 or 30), like: 08:30 or 16:00. No PM or AM versions.'
+        required: true
+      date:
+        description: 'Date in a form like: 2022-04-05 where 04 is a month and 05 is a day number.'
+        required: true
+      meeting_banner:
+        description: 'Meeting banner(image) URL'
+        required: false
+
+jobs:
+  setup-spec-3-docs-meeting:
+    uses: ./.github/workflows/create-event-workflow-reusable.yml
+    with:
+      time: ${{ github.event.inputs.time }}
+      date: ${{ github.event.inputs.date }}
+      meeting_banner: ${{ github.event.inputs.meeting_banner }}
+      meeting_name: Spec 3.0 Docs Meeting
+      meeting_desc: This is a open meeting to plan and write Spec 3.0 Docs.
+      host: alejandra.olvera.novack@gmail.com
+      alternative_host: 'fmvilas@gmail.com,devlopergene@gmail.com,sibanda.thulie@gmail.com,jonas-lt@live.dk,lpgornicki@gmail.com'
+      issue_template_path: .github/workflows/create-event-helpers/issues_templates/spec-3-docs.md
+      create_zoom: true
+    secrets:
+      GH_TOKEN: ${{ secrets.GH_TOKEN }}
+      ZOOM_API_KEY: ${{ secrets.ZOOM_API_KEY }}
+      ZOOM_API_SECRET: ${{ secrets.ZOOM_API_SECRET }}
+      STREAM_URL: ${{ secrets.STREAM_URL }}
+      STREAM_KEY: ${{ secrets.STREAM_KEY }}
+      CALENDAR_ID: ${{ secrets.CALENDAR_ID }}
+      CALENDAR_SERVICE_ACCOUNT: ${{ secrets.CALENDAR_SERVICE_ACCOUNT }}
+      TWITTER_CONSUMER_KEY: ${{ secrets.TWITTER_CONSUMER_KEY }}
+      TWITTER_CONSUMER_SECRET: ${{ secrets.TWITTER_CONSUMER_SECRET }}
+      TWITTER_ACCESS_TOKEN_KEY: ${{ secrets.TWITTER_ACCESS_TOKEN_KEY }}
+      TWITTER_ACCESS_TOKEN_SECRET: ${{ secrets.TWITTER_ACCESS_TOKEN_SECRET }}
