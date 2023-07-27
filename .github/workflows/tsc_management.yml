@@ -92,7 +92,7 @@ jobs:
         with:
           github-token: ${{ secrets.BOT_TOKEN }}
           script: |
-            async function addTscMembers() {  // Wrap the script in an asynchronous function
+            async function addTscMembers() {
               const newTscMembers = '${{ needs.detect_tsc_changes.outputs.updatedMaintainers }}'.split(',');
               for (const tscMember of newTscMembers) {
                 try {
