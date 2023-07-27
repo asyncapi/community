@@ -1,4 +1,4 @@
-name: TSC Member Update
+name: TSC Management Workflow
 
 on:
   pull_request:
