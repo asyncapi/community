@@ -49,24 +49,15 @@ jobs:
               (oldObj) => !previousMaintainers.some((newObj) => newObj.github === oldObj.github)
             );
 
-            // Collect information about TSC membership for added maintainers
-            const addedWithTSC = added.map((maintainer) => {
-              const tscMember = currentMaintainers.find((m) => m.github === maintainer.github);
-              return { ...maintainer, isTscMember: tscMember ? tscMember.isTscMember : false };
-            });
-
-            // Store the added maintainers along with their TSC membership status in the outputs
-            if (addedWithTSC.length > 0) {
-              core.info(`Added Maintainer:\n${yaml.dump(addedWithTSC)}`);
-              core.setOutput("newMaintainers", addedWithTSC.map((obj) => obj.github).join(","));
+            if (added.length > 0) {
+              core.setOutput("newMaintainers", added.map((obj) => obj.github).join(","));
             }
-
             if (removed.length > 0) {
               core.setOutput("removedMaintainers", removed.map((obj) => obj.github).join(","));
             }
 
             const removedTscMembers = pr_file.filter(
-              (obj) => !main_file.some((mainObj) => mainObj.github === obj.github) && obj.isTscMember === true
+              (obj) => !currentMaintainers.some((mainObj) => mainObj.github === obj.github) && obj.isTscMember === true
             );
 
             if (removedTscMembers.length > 0) {
@@ -149,23 +140,12 @@ jobs:
           github-token: ${{ secrets.GH_TOKEN }}
           script: |
             const newMaintainers = "${{ needs.add_maintainer.outputs.newMaintainers }}".split(",");
-            const welcomeMessage = newMaintainers.map((maintainer) => {
-              const isTscMember = maintainer.isTscMember;
-              if (isTscMember)) {
-                // Welcome message for TSC members
-                return `@${maintainer.github.trim().replace(/^@/, '')} Welcome to the TSC Members' Club, you are now a member of the exclusive TSC Members team.
-                    We use this team to mention in different discussions in different places on GitHub where Maintainer's opinion is needed or even voting on some topic. Once Maintainers are mentioned:
-                    -  You will receive GitHub notifications.
-                    -  We will also send notifications to our Slack channel #95_bot-maintainers-mentioned.
-                    -  Subscribers to Maintainer news at https://www.asyncapi.com/community/maintainers will receive email notifications.`;
-              } else {
-                // Welcome message for non-TSC members
-                return `@${maintainer.trim().replace(/^@/, '')} I have invited you to join the AsyncAPI organization, and you are added to the team that lists all Maintainers.
+            console.log(`New maintainers: ${newMaintainers}`);
+            const welcomeMessage = newMaintainers.map((maintainer) => `@${maintainer.trim().replace(/^@/, '')} I have invited you to join the AsyncAPI organization, and you are added to the team that lists all Maintainers.
                       Please take a moment to verify if you would like to provide more details for your account, such as your LinkedIn profile, Twitter handle, or company affiliation. 
                       Additionally, if you are interested in becoming a TSC member and contributing to the direction of the AsyncAPI Initiative, let us know, and we'll be happy to guide you through the process.
-                      Welcome aboard! We are excited to have you as part of the team.`;
-                }
-            }).join("\n");
+                      Welcome aboard! We are excited to have you as part of the team.`).join("\n");
+            
             const { owner, repo } = context.repo;
             const { number: issue_number } = context.issue;
             return github.rest.issues.createComment({ owner, repo, issue_number, body: welcomeMessage });
