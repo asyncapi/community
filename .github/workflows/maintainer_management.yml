@@ -193,15 +193,18 @@ jobs:
               const removedTscMembers = "${{ needs.remove_maintainer.outputs.removedTscMembers }}".split(",");
 
               // Goodbye message to removed maintainers and notification to TSC members
-              const combinedMessage = removedMaintainers.map((maintainer) => {
+              const combinedMessages = removedMaintainers.map((maintainer) => {
                 const tscNotification = removedTscMembers.includes(maintainer)
                   ? `@asyncapi/tsc_members We want to inform you that @${maintainer.trim().replace(/^@/, '')} is no longer a maintainer of any repository under AsyncAPI Initiative. It means this maintainer is also no longer a member of TSC.`
                   : '';
                 return `@${maintainer.trim().replace(/^@/, '')} We wanted to express our gratitude for your contributions as a maintainer of AsyncAPI Initiative. Your efforts have been immensely valuable to us, and we truly appreciate your dedication. Thank you once again, and we wish you all the best in your future endeavors!\n\n${tscNotification}`;
+              });
 
               const { owner, repo } = context.repo;
               const { number: issue_number } = context.issue;
-              return github.rest.issues.createComment({ owner, repo, issue_number, body: combinedMessage });
+              for (const message of combinedMessages) {
+                  github.rest.issues.createComment({ owner, repo, issue_number, body: message });
+              }
 
 
   update_emeritus:
