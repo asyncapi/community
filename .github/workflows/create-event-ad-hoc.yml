@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       time:
-        description: 'Info about meeting hour in UTC time zone, like: 08 or 16. No PM or AM versions.'
+        description: 'Info about meeting time in UTC time zone in "HH:MM"(MM can be 00 or 30), like: 08:30 or 16:00. No PM or AM versions.'
         required: true
       date:
         description: 'Date in a form like: 2022-04-05 where 04 is a month and 05 is a day number.'
