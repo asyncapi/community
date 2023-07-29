@@ -183,3 +183,17 @@ jobs:
 
             // Log the updated content to the console
             console.log('Updated Emeritus.yaml:\n', content);
+
+      - name: Create new branch
+        run: |
+          git checkout -b update-emeritus-${{ github.run_id }}
+
+      - name: Commit and push
+        run: |
+          git add .
+          git commit -m "Update Emeritus.yaml"
+          git push https://${{ secrets.GH_TOKEN}}@github.com/asyncapi/community update-emeritus-${{ github.run_id }}
+
+      - name: Create PR
+        run: |
+          gh pr create --title "docs(community): update latest emeritus list" --body "Updated Emeritus list is available and this PR introduces changes with latest information about Emeritus" --head update-emeritus-${{ github.run_id }}
