@@ -110,3 +110,76 @@ jobs:
             addTscMembers();
     outputs:
       newTscMember: ${{ needs.detect_tsc_changes.outputs.updatedMaintainers }}
+
+  display_message:
+    needs: add_tsc_member
+    if: needs.add_tsc_member.outputs.newTscMember != ''
+    runs-on: ubuntu-latest
+    steps:
+      - name: Filter GitHub users with updatedValue
+        id: filter_users
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{ secrets.GH_TOKEN }}
+          script: |
+            const newTscMembers = JSON.parse('${{ needs.add_tsc_member.outputs.newTscMember }}');
+            const filteredUsers = newTscMembers.filter(user => user.updatedValue === true).map(user => user.githubUser);
+            core.setOutput('filteredUsers', JSON.stringify(filteredUsers));
+
+      - name: Display welcome message to new TSC members
+        if: steps.filter_users.outputs.filteredUsers != '[]'
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{ secrets.GH_TOKEN }}
+          script: |
+            const newTscMembers = ${{ steps.filter_users.outputs.filteredUsers }};
+            console.log(`New TSC members: ${newTscMembers}`);
+            const welcomeMessage = newTscMembers.map(tscMember => {
+                return `@${tscMember.trim().replace(/^@/, '')} Welcome to the AsyncAPI Initiative's TSC Teams!
+                We value your expertise and look forward to collaborating with you. Feel free to engage in discussions and share your ideas with the TSC.
+                If you have any questions, reach out on Slack or comment on this pull request.
+                Congratulations, and let's make great things happen together!`
+            }).join('\n\n');
+
+            const { owner, repo } = context.repo;
+            const { number: issue_number } = context.issue;
+            github.rest.issues.createComment({ owner, repo, issue_number, body: welcomeMessage });
+
+  update_emeritus:
+    needs: add_tsc_member
+    if: needs.add_tsc_member.outputs.newTscMember != ''
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v2
+
+      - name: Add TSC members to Emeritus.yaml and print
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{ secrets.GH_TOKEN }}
+          script: |
+            const fs = require('fs');
+            const path = './Emeritus.yaml';
+
+            // Read the current content of the file
+            let content = fs.readFileSync(path, 'utf8').trim(); // remove any trailing whitespaces
+
+            // Parse the updatedMaintainers JSON string to an array of objects
+            const updatedMaintainers = JSON.parse('${{ needs.add_tsc_member.outputs.newTscMember }}');
+
+            // Filter the maintainers whose updatedValue is true and prepare them for the yaml format
+            const addedTscMembers = updatedMaintainers
+              .filter(maintainer => maintainer.updatedValue === true)
+              .map(maintainer => `  - ${maintainer.githubUser.trim()}`)
+              .join('\n');
+
+            // Append the added maintainers to the file content
+            if (addedTscMembers) {
+              content = content + '\n' + addedTscMembers;
+            }
+
+            // Write the updated content back to the file
+            fs.writeFileSync(path, content);
+
+            // Log the updated content to the console
+            console.log('Updated Emeritus.yaml:\n', content);
