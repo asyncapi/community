@@ -92,22 +92,17 @@ jobs:
         with:
           github-token: ${{ secrets.GH_TOKEN }}
           script: |
-            async function addTscMembers() {
-              const newTscMembers = '${{ needs.detect_tsc_changes.outputs.updatedMaintainers }}'.split(',');
-              for (const tscMember of newTscMembers) {
-                try {
-                  await github.request('PUT /orgs/{org}/teams/{team_slug}/memberships/{username}', {
-                    org: 'asyncapi',
-                    team_slug: 'tsc_members',
-                    username: tscMember
-                  });
-                } catch (error) {
-                  console.error(`Failed to add ${tscMember} to the team:`, error);
-                }
+            const newTscMembers = ${{ needs.detect_tsc_changes.outputs.updatedMaintainers }};
+            for (const tscMember of newTscMembers) {
+              try {
+                await github.request('PUT /orgs/asyncapi/teams/tsc_members/memberships/{username}', {
+                  username: tscMember.githubUser
+                });
+                core.info(`Successfully added ${tscMember.githubUser} to the team.`);
+              } catch (error) {
+                core.setFailed(`Failed to add ${tscMember.githubUser} to the team: ${error.message}`);
               }
             }
-
-            addTscMembers();
     outputs:
       newTscMember: ${{ needs.detect_tsc_changes.outputs.updatedMaintainers }}
 
