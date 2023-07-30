@@ -192,3 +192,104 @@ jobs:
       - name: Create PR
         run: |
           gh pr create --title "docs(community): update latest emeritus list" --body "Updated Emeritus list is available and this PR introduces changes with latest information about Emeritus" --head update-emeritus-${{ github.run_id }}
+
+  remove_tsc_member:
+    needs: detect_tsc_changes
+    if: needs.detect_tsc_changes.outputs.updatedValue == 'false'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Remove TSC members from the team
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{ secrets.BOT_TOKEN }}
+          script: |
+            const removedMaintainers = ${{ needs.detect_tsc_changes.outputs.updatedMaintainers }};
+            for (const maintainer of removedMaintainers) {
+              try {
+                await github.request('DELETE /orgs/richaOrg/teams/maintainers/memberships/{username}', {
+                  username: maintainer.githubUser
+                });
+                core.info(`Successfully removed ${maintainer.githubUser} from the team.`);
+              } catch (error) {
+                core.setFailed(`Failed to remove ${maintainer.githubUser} from the team: ${error.message}`);
+              }
+            }
+    outputs:
+      removedMaintainers: ${{ needs.detect_tsc_changes.outputs.updatedMaintainers }}
+
+  remove_tsc_goodbye:
+    needs: remove_tsc_member
+    if: needs.remove_tsc_member.outputs.removedMaintainers != ''
+    runs-on: ubuntu-latest
+    steps:
+      - name: Display goodbye message to removed TSC members
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{ secrets.BOT_TOKEN }}
+          script: |
+            const removedMaintainers = JSON.parse('${{ needs.remove_tsc_member.outputs.removedMaintainers }}');
+            const removedTscMembers = removedMaintainers.map(maintainer => maintainer.githubUser);
+
+            // Goodbye message to removed TSC members
+            const tscMessages = removedTscMembers.map(tscMember => {
+              return `@asyncapi/tsc_members We want to inform you that @${tscMember.trim().replace(/^@/, '')} is no longer a maintainer of any repository under AsyncAPI Initiative. It means this maintainer is also no longer a member of TSC.`;
+            });
+
+            const { owner, repo } = context.repo;
+            const { number: issue_number } = context.issue;
+            for (const message of tscMessages) {
+              github.rest.issues.createComment({ owner, repo, issue_number, body: message });
+            }
+
+  remove_tsc_emeritus:
+    needs: remove_tsc_member
+    if: needs.remove_tsc_member.outputs.removedMaintainers != ''
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v2
+
+      - name: Remove TSC members from Emeritus.yaml and print
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{ secrets.BOT_TOKEN }}
+          script: |
+            const fs = require('fs');
+            const path = './Emeritus.yaml';
+
+            // Read the current content of the file
+            let content = fs.readFileSync(path, 'utf8').trim(); // remove any trailing whitespaces
+
+            // Parse the removedMaintainers JSON string to an array of objects
+            const removedMaintainers = JSON.parse('${{ needs.remove_tsc_member.outputs.removedMaintainers }}');
+
+            // Filter the maintainers whose updatedValue is false and prepare them for the yaml format
+            const removedTscMembers = removedMaintainers
+              .filter(maintainer => maintainer.updatedValue === false)
+              .map(maintainer => maintainer.githubUser.trim());
+
+            // Remove the TSC members from Emeritus.yaml
+            for (const tscMember of removedTscMembers) {
+              const regex = new RegExp(`^\\s*-\\s*${tscMember}\\s*$`, 'gm');
+              content = content.replace(regex, '');
+            }
+
+            // Write the updated content back to the file
+            fs.writeFileSync(path, content);
+
+            // Log the updated content to the console
+            console.log('Updated Emeritus.yaml:\n', content);
+      
+      - name: Create new branch
+        run: |
+          git checkout -b update-emeritus-${{ github.run_id }}
+
+      - name: Commit and push
+        run: |
+          git add .
+          git commit -m "Update Emeritus.yaml"
+          git push https://${{ secrets.GH_TOKEN}}@github.com/asyncapi/community update-emeritus-${{ github.run_id }}
+
+      - name: Create PR
+        run: |
+          gh pr create --title "docs(community): update latest emeritus list" --body "Updated Emeritus list is available and this PR introduces changes with latest information about Emeritus" --head update-emeritus-${{ github.run_id }}
