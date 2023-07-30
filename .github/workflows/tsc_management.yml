@@ -201,7 +201,7 @@ jobs:
       - name: Remove TSC members from the team
         uses: actions/github-script@v6
         with:
-          github-token: ${{ secrets.BOT_TOKEN }}
+          github-token: ${{ secrets.GH_TOKEN }}
           script: |
             const removedMaintainers = ${{ needs.detect_tsc_changes.outputs.updatedMaintainers }};
             for (const maintainer of removedMaintainers) {
@@ -225,7 +225,7 @@ jobs:
       - name: Display goodbye message to removed TSC members
         uses: actions/github-script@v6
         with:
-          github-token: ${{ secrets.BOT_TOKEN }}
+          github-token: ${{ secrets.GH_TOKEN }}
           script: |
             const removedMaintainers = JSON.parse('${{ needs.remove_tsc_member.outputs.removedMaintainers }}');
             const removedTscMembers = removedMaintainers.map(maintainer => maintainer.githubUser);
@@ -252,7 +252,7 @@ jobs:
       - name: Remove TSC members from Emeritus.yaml and print
         uses: actions/github-script@v6
         with:
-          github-token: ${{ secrets.BOT_TOKEN }}
+          github-token: ${{ secrets.GH_TOKEN }}
           script: |
             const fs = require('fs');
             const path = './Emeritus.yaml';
