@@ -206,7 +206,7 @@ jobs:
             const removedMaintainers = ${{ needs.detect_tsc_changes.outputs.updatedMaintainers }};
             for (const maintainer of removedMaintainers) {
               try {
-                await github.request('DELETE /orgs/richaOrg/teams/maintainers/memberships/{username}', {
+                await github.request('DELETE /orgs/asyncapi/teams/tsc_members/memberships/{username}', {
                   username: maintainer.githubUser
                 });
                 core.info(`Successfully removed ${maintainer.githubUser} from the team.`);
