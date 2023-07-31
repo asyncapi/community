@@ -133,7 +133,11 @@ jobs:
                 return `@${tscMember.trim().replace(/^@/, '')} Welcome to the AsyncAPI Initiative's TSC Teams!
                 We value your expertise and look forward to collaborating with you. Feel free to engage in discussions and share your ideas with the TSC.
                 If you have any questions, reach out on Slack or comment on this pull request.
-                Congratulations, and let's make great things happen together!`
+                We use this team to mention in different discussions in different places in GitHub where Maintainer's opinion is needed or even voting on some topic. Once Maintainers are mentioned:
+                - You get GitHub notification
+                - We also drop notification in our slack in #95_bot-maintainers-mentioned channel
+                - We drop an email to people that subscribed to Maintainer news here https://www.asyncapi.com/community/maintainers
+                Pick the channel for notifications that you prefer. Welcome aboard! We are excited to have you as part of the team.`
             }).join('\n\n');
 
             const { owner, repo } = context.repo;
