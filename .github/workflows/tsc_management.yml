@@ -188,7 +188,7 @@ jobs:
               github.rest.issues.createComment({ owner, repo, issue_number, body: message });
             }
 
-  remove_tsc_emeritus:
+  update_emeritus:
     needs: remove_tsc_member
     if: needs.remove_tsc_member.outputs.removedMaintainers != ''
     runs-on: ubuntu-latest
@@ -196,7 +196,7 @@ jobs:
       - name: Check out code
         uses: actions/checkout@v2
 
-      - name: Remove TSC members from Emeritus.yaml and print
+      - name: Add Former TSC members to Emeritus.yaml and print
         uses: actions/github-script@v6
         with:
           github-token: ${{ secrets.GH_TOKEN }}
@@ -213,12 +213,12 @@ jobs:
             // Filter the maintainers whose updatedValue is false and prepare them for the yaml format
             const removedTscMembers = removedMaintainers
               .filter(maintainer => maintainer.updatedValue === false)
-              .map(maintainer => maintainer.githubUser.trim());
+              .map(maintainer => `  - ${maintainer.githubUser.trim()}`)
+              .join('\n');
 
-            // Remove the TSC members from Emeritus.yaml
-            for (const tscMember of removedTscMembers) {
-              const regex = new RegExp(`^\\s*-\\s*${tscMember}\\s*$`, 'gm');
-              content = content.replace(regex, '');
+            // Append the added maintainers to the file content
+            if (removedTscMembers) {
+              content = content + '\n' + removedTscMembers;
             }
 
             // Write the updated content back to the file
