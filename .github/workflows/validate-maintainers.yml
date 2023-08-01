@@ -131,5 +131,5 @@ jobs:
               owner: github.context.repo.owner,
               repo: github.context.repo.repo,
               issue_number: prNumber,
-              body: 'A TSC member has been removed in this PR and it was opened by a bot. A maintainer of this repository needs to review and approve this PR.'
+              body: 'A TSC member has been removed in this PR. Maintainers of this repository needs to review and approve this PR.'
             });
