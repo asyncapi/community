@@ -98,20 +98,23 @@ jobs:
           script: |
             const yaml = require('yaml');
             const fs = require('fs');
-            
+
             // Check if the PR was opened by asyncapi-bot
             const opener = github.context.payload.pull_request.user.login;
             const isBotOpened = opener.endsWith('[bot]');
 
-            // Check if MAINTAINERS.yaml has been changed and a TSC member was removed
+            // Check if MAINTAINERS.yaml has been changed
+            const filesChanged = github.context.payload.pull_request.changed_files;
             let tscMemberRemoved = false;
-            if (fs.existsSync('MAINTAINERS.yaml')) {
-              // Load the maintainers from the changed file
+
+            if (filesChanged > 0) {
+              // Load the MAINTAINERS.yaml file from the pull request
               const maintainersContent = fs.readFileSync('MAINTAINERS.yaml', 'utf8');
               const maintainers = yaml.parse(maintainersContent);
 
+              // Check for removed maintainers with isTscMember value as true
               for (const maintainer of maintainers) {
-                if (maintainer.isTscMember === true) {
+                if (maintainer.isTscMember === true && !maintainers.some(m => m.github === maintainer.github && m.isTscMember === true)) {
                   tscMemberRemoved = true;
                   break;
                 }
