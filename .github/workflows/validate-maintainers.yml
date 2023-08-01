@@ -93,6 +93,7 @@ jobs:
         run: npm install yaml
 
       - name: Verify PR Opener and Check for disallowed changes
+        id: verify
         uses: actions/github-script@v6
         with: 
           script: |
