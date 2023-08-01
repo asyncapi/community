@@ -96,7 +96,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '14'
+          node-version: '18'
 
       - name: Install js-yaml
         run: npm install js-yaml@4.1.0
@@ -117,7 +117,7 @@ jobs:
               // If the PR is made by the bot, continue, otherwise skip
 
               if (author === 'asyncapi-bot') {
-                
+
                   const mainMaintainers = yaml.load(fs.readFileSync('./community-main/MAINTAINERS.yaml', 'utf8'));
                   const prMaintainers = yaml.load(fs.readFileSync('./community/MAINTAINERS.yaml', 'utf8'));
 
