@@ -77,63 +77,74 @@ jobs:
               }
             });
   
-  check_tsc_removal:
+  detect_maintainer_changes:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout code
+
+      - name: Checkout main branch
         uses: actions/checkout@v3
+        with:
+          ref: master
+          path: community-main
+
+      - name: Checkout PR branch
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.head_ref }}
+          path: community
 
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
           node-version: '14'
 
-      - name: Install YAML parser
-        run: npm install yaml
+      - name: Install js-yaml
+        run: npm install js-yaml@4.1.0
 
-      - name: Verify PR Opener and Check for disallowed changes
-        id: verify
-        uses: actions/github-script@v6
-        with: 
-          script: |
-            const yaml = require('yaml');
-            const fs = require('fs');
-
-            // Check if the PR was opened by asyncapi-bot
-            const opener = github.context.payload.pull_request.user.login;
-            const isBotOpened = opener.endsWith('[bot]');
-
-            // Check if MAINTAINERS.yaml has been changed
-            const filesChanged = github.context.payload.pull_request.changed_files;
-            let tscMemberRemoved = false;
-
-            if (filesChanged > 0) {
-              // Load the MAINTAINERS.yaml file from the pull request
-              const maintainersContent = fs.readFileSync('MAINTAINERS.yaml', 'utf8');
-              const maintainers = yaml.parse(maintainersContent);
-
-              // Check for removed maintainers with isTscMember value as true
-              for (const maintainer of maintainers) {
-                if (maintainer.isTscMember === true && !maintainers.some(m => m.github === maintainer.github && m.isTscMember === true)) {
-                  tscMemberRemoved = true;
-                  break;
-                }
-              }
-            }
-
-            return { isBotOpened, tscMemberRemoved };
-      
-      - name: Comment on PR if necessary
-        if: steps.verify.outputs.isBotOpened == 'true' && steps.verify.outputs.tscMemberRemoved == 'true'
+      - name: Compare files and check removed TSC members
+        id: compare-files
         uses: actions/github-script@v6
         with:
           script: |
-            const prNumber = github.context.payload.pull_request.number;
-            // Comment on PR
-            await github.issues.createComment({
-              owner: github.context.repo.owner,
-              repo: github.context.repo.repo,
-              issue_number: prNumber,
-              body: 'A TSC member has been removed in this PR. Maintainers of this repository needs to review and approve this PR.'
-            });
+              const fs = require("fs");
+              const yaml = require('js-yaml');
+
+              // Extract PR author
+              const author = github.context.payload.pull_request.user.login;
+
+              let removedTscMembers = [];
+
+              // If the PR is made by the bot, continue, otherwise skip
+
+              if (author === 'asyncapi-bot') {
+                
+                  const mainMaintainers = yaml.load(fs.readFileSync('./community-main/MAINTAINERS.yaml', 'utf8'));
+                  const prMaintainers = yaml.load(fs.readFileSync('./community/MAINTAINERS.yaml', 'utf8'));
+
+                  const removedMaintainers = mainMaintainers.filter(
+                      (mainMaintainer) => !prMaintainers.some((maintainer) => mainMaintainer.github === maintainer.github)
+                  );
+
+                  removedTscMembers = removedMaintainers.filter(maintainer => maintainer.isTscMember);
+
+                  if (removedTscMembers.length > 0) {
+                      core.setOutput("removedTscMembers", JSON.stringify(removedTscMembers));
+                  }
+              }
+
+      - name: Comment on PR if TSC member is removed
+        if: steps.compare-files.outputs.removedTscMembers != ''
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{ secrets.GH_TOKEN}}
+          script: |
+              const github = require('@actions/github');
+
+              const issueComment = {
+                  owner: github.context.repo.owner,
+                  repo: github.context.repo.repo,
+                  issue_number: github.context.issue.number,
+                  body: 'A TSC member has been removed in this PR. Maintainers of this repository need to review and approve this PR.'
+              };
+
+              github.issues.createComment(issueComment);
