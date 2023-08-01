@@ -1,4 +1,4 @@
-name: Verify if human changes in PR are allowed
+name: Verify tsc and maintainers changes by human and bot
 
 on:
   pull_request:
@@ -24,20 +24,20 @@ jobs:
           ref: ${{ github.head_ref }}
           path: pr-branch
 
-      - name: Install Dependencies
-        run: npm install yaml
+      - name: Install js-yaml
+        run: npm install js-yaml@4.1.0
 
       - name: Verify changes in MAINTAINERS.yaml
         id: verify-changes
         uses: actions/github-script@v6
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          github-token: ${{ secrets.GH_TOKEN}}
           script: |
-            const yaml = require("yaml");
+            const yaml = require("js-yaml");
             const fs = require("fs");
 
-            const mainFile = yaml.parse(fs.readFileSync("./community-main/MAINTAINERS.yaml", "utf8"));
-            const prFile = yaml.parse(fs.readFileSync("./pr-branch/MAINTAINERS.yaml", "utf8"));
+            const mainFile = yaml.load(fs.readFileSync("./community-main/MAINTAINERS.yaml", "utf8"));
+            const prFile = yaml.load(fs.readFileSync("./pr-branch/MAINTAINERS.yaml", "utf8"));
 
             const beforeMaintainers = new Map(mainFile.map((maintainer) => [maintainer.name, {github: maintainer.github, repos: maintainer.repos || []}]));
             let errorMessages = [];
@@ -46,11 +46,23 @@ jobs:
             const repo = context.repo.repo;
             const pull_number = context.issue.number;
             const author = context.payload.pull_request.user.login;
+            let removedTscMembers = [];
 
-            // If the PR is made by the bot, don't do anything.
+            // If the PR is made by the bot.
             if (author === 'asyncapi-bot') {
               console.log('Changes made by asyncapi-bot, skipping verification.');
-              return;
+
+              const removedMaintainers = mainFile.filter(
+                (mainMaintainer) => !prFile.some((maintainer) => mainMaintainer.github === maintainer.github)
+              );
+              removedTscMembers = removedMaintainers.filter(maintainer => maintainer.isTscMember);
+
+              if (removedTscMembers.length > 0) {
+                core.setOutput("removedTscMembers", JSON.stringify(removedTscMembers));
+              }
+              else {
+                return
+              }
             }
 
             // detecting if changes in the PR contain removal of maintainer object 
@@ -102,3 +114,18 @@ jobs:
                 state: 'closed'
               });
             }
+
+  - name: Comment on PR if TSC member is removed by bot
+    if: steps.verify-changes.outputs.removedTscMembers != ''
+    uses: actions/github-script@v6
+    with:
+      github-token: ${{ secrets.GH_TOKEN}}
+      script: |
+          const github = require('@actions/github')
+          const issueComment = {
+              owner: github.context.repo.owner,
+              repo: github.context.repo.repo,
+              issue_number: github.context.issue.number,
+              body: 'A TSC member has been removed in this PR. Maintainers of this repository need to review and approve this PR.'
+          }
+          github.issues.createComment(issueComment);
