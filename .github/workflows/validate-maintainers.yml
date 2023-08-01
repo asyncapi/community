@@ -76,3 +76,60 @@ jobs:
                 core.setFailed(`There are too many TSC members affiliated with ${companyName} and it violates the open governance model. ${numberOfRepresentatives} is more than 1/4 of ${allTscMembers}`);
               }
             });
+  
+  check_tsc_removal:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+
+      - name: Install YAML parser
+        run: npm install yaml
+
+      - name: Verify PR Opener and Check for disallowed changes
+        uses: actions/github-script@v6
+        with: 
+          script: |
+            const yaml = require('yaml');
+            const fs = require('fs');
+            
+            // Check if the PR was opened by asyncapi-bot
+            const opener = github.context.payload.pull_request.user.login;
+            const isBotOpened = opener.endsWith('[bot]');
+
+            // Check if MAINTAINERS.yaml has been changed and a TSC member was removed
+            let tscMemberRemoved = false;
+            if (fs.existsSync('MAINTAINERS.yaml')) {
+              // Load the maintainers from the changed file
+              const maintainersContent = fs.readFileSync('MAINTAINERS.yaml', 'utf8');
+              const maintainers = yaml.parse(maintainersContent);
+
+              for (const maintainer of maintainers) {
+                if (maintainer.isTscMember === true) {
+                  tscMemberRemoved = true;
+                  break;
+                }
+              }
+            }
+
+            return { isBotOpened, tscMemberRemoved };
+      
+      - name: Comment on PR if necessary
+        if: steps.verify.outputs.isBotOpened == 'true' && steps.verify.outputs.tscMemberRemoved == 'true'
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const prNumber = github.context.payload.pull_request.number;
+            // Comment on PR
+            await github.issues.createComment({
+              owner: github.context.repo.owner,
+              repo: github.context.repo.repo,
+              issue_number: prNumber,
+              body: 'A TSC member has been removed in this PR and it was opened by a bot. A maintainer of this repository needs to review and approve this PR.'
+            });
