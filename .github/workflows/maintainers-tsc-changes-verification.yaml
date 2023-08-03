@@ -120,7 +120,7 @@ jobs:
       - name: Comment and close the PR if there are are any critical changes done by human
         uses: actions/github-script@v6
         with:
-          github-token: ${{ secrets.BOT_TOKEN }}
+          github-token: ${{ secrets.GH_TOKEN }}
           script: |
             const rawErrorMessages = `${{ needs.verify-changes.outputs.errorMessages }}`;
             const owner = context.repo.owner;
@@ -142,7 +142,7 @@ jobs:
         if: steps.verify-changes.outputs.removedTscMembers != ''
         uses: actions/github-script@v6
         with:
-          github-token: ${{ secrets.BOT_TOKEN}}
+          github-token: ${{ secrets.GH_TOKEN}}
           script: |
               const github = require('@actions/github')
               const issueComment = {
@@ -151,4 +151,4 @@ jobs:
                   issue_number: github.context.issue.number,
                   body: 'A TSC member has been removed in this PR. Maintainers of this repository need to review and approve this PR.'
               }
-              github.issues.createComment(issueComment);
+              github.rest.issues.createComment(issueComment);
