@@ -50,7 +50,7 @@ jobs:
 
             // If the PR is made by the bot.
             if (author === 'asyncapi-bot') {
-              console.log('Changes made by asyncapi-bot, skipping verification.');
+              console.log('Changes made by asyncapi-bot)
 
               const removedMaintainers = mainFile.filter(
                 (mainMaintainer) => !prFile.some((maintainer) => mainMaintainer.github === maintainer.github)
@@ -102,24 +102,47 @@ jobs:
                 }
               }
             }
+            // Console log the error messages
+            console.log('Error messages:', errorMessages);
+            // Set the error messages as an output
+            console.log('Setting error messages output...');
+            core.setOutput('errorMessages', JSON.stringify(errorMessages));
 
-            // If there are any error messages, create a comment on the PR and close it
-            if (errorMessages.length > 0) {
-              const commentBody = errorMessages.join('\n');
-              github.rest.issues.createComment({ owner, repo, issue_number: pull_number, body: commentBody });
-              github.rest.pulls.update({
-                owner,
-                repo,
-                pull_number,
-                state: 'closed'
-              });
-            }
+    outputs: 
+      errorMessages: ${{ steps.verify-changes.outputs.errorMessages }}
+      removedTscMembers: ${{ steps.verify-changes.outputs.removedTscMembers }}
 
-      - name: Comment on PR if TSC member is removed by bot
+  handle-human-made-critical-changes:
+    needs: verify-changes
+    if: needs.verify-changes.outputs.errorMessages != '[]'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Comment and close the PR if there are are any critical changes done by human
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{ secrets.BOT_TOKEN }}
+          script: |
+            const rawErrorMessages = `${{ needs.verify-changes.outputs.errorMessages }}`;
+            const owner = context.repo.owner;
+            const repo = context.repo.repo;
+            const pull_number = context.issue.number;
+
+            const errorMessages = JSON.parse(rawErrorMessages); 
+
+            const commentBody = errorMessages.join('\n');
+            github.rest.issues.createComment({ owner, repo, issue_number: pull_number, body: commentBody });
+            github.rest.pulls.update({ owner, repo, pull_number, state: 'closed' });
+
+  bot-removal-notification:
+    needs: verify-changes
+    if:  needs.verify-changes.outputs.removedTscMembers !=  ''
+    runs-on: ubuntu-latest
+    steps:
+      - name: Comment on PR if TSC member is removed by asyncapi-bot
         if: steps.verify-changes.outputs.removedTscMembers != ''
         uses: actions/github-script@v6
         with:
-          github-token: ${{ secrets.GH_TOKEN}}
+          github-token: ${{ secrets.BOT_TOKEN}}
           script: |
               const github = require('@actions/github')
               const issueComment = {
