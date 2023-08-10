@@ -140,7 +140,7 @@
     - optimizer
     - bindings
     - glee
-    - ".github"
+    - .github
 - name: Laurent Broudoux
   github: lbroudoux
   twitter: lbroudoux
@@ -516,3 +516,8 @@
   repos:
     - website
     - community
+- github: khudadad414
+  twitter: null
+  isTscMember: false
+  repos:
+    - optimizer
