@@ -32,7 +32,7 @@ jobs:
       - name: Create branch
         working-directory: ./website
         run: |
-          git checkout -b update-ambassadors-${{ github.head_ref }}
+          git checkout -b update-ambassadors-${{ github.sha }}
       - name: Copy ambassadors file from Current Repo to Another
         working-directory: ./website
         run: |
@@ -46,4 +46,4 @@ jobs:
       - name: Create PR
         working-directory: ./website
         run: |
-          gh pr create --title "docs(community): update latest tsc members list" --body "Updated Ambassadors list is available and this PR introduces changes with latest information about Ambassadors list" --head "update-ambassadors-${{ github.head_ref }}"
+          gh pr create --title "docs(community): update latest tsc members list" --body "Updated Ambassadors list is available and this PR introduces changes with latest information about Ambassadors list" --head "update-ambassadors-${{ github.sha }}"

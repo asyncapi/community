@@ -56,7 +56,7 @@ jobs:
               core.setOutput("removedMaintainers", removed.map((obj) => obj.github).join(","));
             }
 
-            const removedTscMembers = pr_file.filter(
+            const removedTscMembers = previousMaintainers.filter(
               (obj) => !currentMaintainers.some((mainObj) => mainObj.github === obj.github) && obj.isTscMember === true
             );
 
