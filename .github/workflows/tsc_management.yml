@@ -254,6 +254,6 @@ jobs:
       uses: rtCamp/action-slack-notify@v2
       env:
         SLACK_WEBHOOK: ${{secrets.SLACK_CI_FAIL_NOTIFY}}
-        SLACK_TITLE: 🚨 Welcome new contributor action failed 🚨
-        SLACK_MESSAGE: Failed to post a message to new Maintainer
+        SLACK_TITLE: 🚨 TSC Management Workflow failed 🚨
+        SLACK_MESSAGE: Failed to post a message to new TSC member
         MSG_MINIMAL: true
