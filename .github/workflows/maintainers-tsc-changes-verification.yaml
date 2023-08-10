@@ -9,7 +9,7 @@ env:
   GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
 
 jobs:
-  verify-changes:
+  verify-changes-if-tsc-if-maintainers:
     # if statement to check if the PR is open.
     if: github.event.pull_request.state == 'open'
     runs-on: ubuntu-latest
@@ -115,9 +115,9 @@ jobs:
       errorMessages: ${{ steps.verify-changes.outputs.errorMessages }}
       removedTscMembers: ${{ steps.verify-changes.outputs.removedTscMembers }}
 
-  handle-human-made-critical-changes:
-    needs: verify-changes
-    if: needs.verify-changes.outputs.errorMessages != '[]'
+  block-human-made-critical-changes:
+    needs: verify-changes-if-tsc-if-maintainers
+    if: needs.verify-changes-if-tsc-if-maintainers.outputs.errorMessages != '[]'
     runs-on: ubuntu-latest
     steps:
       - name: Comment and close the PR if there are any critical changes done by human
@@ -125,7 +125,7 @@ jobs:
         with:
           github-token: ${{ env.GITHUB_TOKEN }}
           script: |
-            const errorMessages = ${{ needs.verify-changes.outputs.errorMessages }};
+            const errorMessages = ${{ needs.verify-changes-if-tsc-if-maintainers.outputs.errorMessages }};
             console.log('Parsed errorMessages:', errorMessages);
             if (errorMessages && Array.isArray(errorMessages) && errorMessages.length > 0) {
               const owner = context.repo.owner;
@@ -149,13 +149,13 @@ jobs:
               console.info('rawErrorMessages is empty.');
             }
 
-  bot-removal-notification:
-    needs: verify-changes
-    if:  needs.verify-changes.outputs.removedTscMembers !=  ''
+  block-bot-from-tsc-removal:
+    needs: verify-changes-if-tsc-if-maintainers
+    if:  needs.verify-changes-if-tsc-if-maintainers.outputs.removedTscMembers !=  ''
     runs-on: ubuntu-latest
     steps:
       - name: Comment on PR if TSC member is removed by asyncapi-bot
-        if: steps.verify-changes.outputs.removedTscMembers != ''
+        if: steps.verify-changes-if-tsc-if-maintainers.outputs.removedTscMembers != ''
         uses: actions/github-script@v6
         with:
           github-token: ${{ env.GITHUB_TOKEN }}
