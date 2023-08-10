@@ -9,7 +9,7 @@ env:
   GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
 
 jobs:
-  verify-changes:
+  verify-changes-if-tsc-if-maintainers:
     # if statement to check if the PR is open.
     if: github.event.pull_request.state == 'open'
     runs-on: ubuntu-latest
@@ -115,43 +115,64 @@ jobs:
       errorMessages: ${{ steps.verify-changes.outputs.errorMessages }}
       removedTscMembers: ${{ steps.verify-changes.outputs.removedTscMembers }}
 
-  handle-human-made-critical-changes:
-    needs: verify-changes
-    if: needs.verify-changes.outputs.errorMessages != '[]'
+  block-human-made-critical-changes:
+    needs: verify-changes-if-tsc-if-maintainers
+    if: needs.verify-changes-if-tsc-if-maintainers.outputs.errorMessages != '[]'
     runs-on: ubuntu-latest
     steps:
-      - name: Comment and close the PR if there are are any critical changes done by human
+      - name: Comment and close the PR if there are any critical changes done by human
         uses: actions/github-script@v6
         with:
           github-token: ${{ env.GITHUB_TOKEN }}
           script: |
-            const rawErrorMessages = `${{ needs.verify-changes.outputs.errorMessages }}`;
-            const owner = context.repo.owner;
-            const repo = context.repo.repo;
-            const pull_number = context.issue.number;
+            const errorMessages = ${{ needs.verify-changes-if-tsc-if-maintainers.outputs.errorMessages }};
+            console.log('Parsed errorMessages:', errorMessages);
+            if (errorMessages && Array.isArray(errorMessages) && errorMessages.length > 0) {
+              const owner = context.repo.owner;
+              const repo = context.repo.repo;
+              const pull_number = context.issue.number;
+              const commentBody = errorMessages[0];
+              const commentContext = {
+                owner: owner,
+                repo: repo,
+                issue_number: pull_number,
+                body: commentBody
+              };
+              github.rest.issues.createComment(commentContext);
+              github.rest.pulls.update({
+                owner: owner,
+                repo: repo,
+                pull_number: pull_number,
+                state: 'closed'
+              });
+            } else {
+              console.info('rawErrorMessages is empty.');
+            }
 
-            const errorMessages = JSON.parse(rawErrorMessages); 
-
-            const commentBody = errorMessages.join('\n');
-            github.rest.issues.createComment({ owner, repo, issue_number: pull_number, body: commentBody });
-            github.rest.pulls.update({ owner, repo, pull_number, state: 'closed' });
-
-  bot-removal-notification:
-    needs: verify-changes
-    if:  needs.verify-changes.outputs.removedTscMembers !=  ''
+  block-bot-from-tsc-removal:
+    needs: verify-changes-if-tsc-if-maintainers
+    if:  needs.verify-changes-if-tsc-if-maintainers.outputs.removedTscMembers !=  ''
     runs-on: ubuntu-latest
     steps:
       - name: Comment on PR if TSC member is removed by asyncapi-bot
-        if: steps.verify-changes.outputs.removedTscMembers != ''
+        if: steps.verify-changes-if-tsc-if-maintainers.outputs.removedTscMembers != ''
         uses: actions/github-script@v6
         with:
           github-token: ${{ env.GITHUB_TOKEN }}
           script: |
-              const github = require('@actions/github')
               const issueComment = {
                   owner: github.context.repo.owner,
                   repo: github.context.repo.repo,
                   issue_number: github.context.issue.number,
                   body: 'A TSC member has been removed in this PR. Maintainers of this repository need to review and approve this PR.'
               }
+              
+              const addLabel = {
+                  owner: github.context.repo.owner,
+                  repo: github.context.repo.repo,
+                  issue_number: github.context.issue.number,
+                  labels: ['do-not-merge']
+              }
+              
               github.rest.issues.createComment(issueComment);
+              github.rest.issues.addLabels(addLabel);

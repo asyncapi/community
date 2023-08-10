@@ -1,11 +1,13 @@
 #This action update the list of TSC members in the website repository. List of all Maintainers is later rendered in the asyncapi.com website.
 name: Update list of Maintainers in the website repo
+
 on:
   push:
     branches:
       - "master"
     paths:
       - "MAINTAINERS.yaml"
+
 jobs:
   update-website:
     name: Make PR on website repository with updated maintainers list
@@ -39,12 +41,16 @@ jobs:
         working-directory: ./website
         run: |
           cp ../community/MAINTAINERS.json ./config/MAINTAINERS.json
-      - name: Commit and push
+      - name: Check if there are changes
         working-directory: ./website
         run: |
-          git add .
-          git commit -m "docs(community): update latest maintainers list"
-          git push https://${{ env.GITHUB_TOKEN }}@github.com/asyncapi/website
+          if ! git diff --quiet; then
+            git add .
+            git commit -m "docs(community): update latest maintainers list"
+            git push https://${{ env.GITHUB_TOKEN }}@github.com/asyncapi/website
+          else
+            echo "No changes to push."
+          fi
       - name: Create PR
         working-directory: ./website
         run: |
