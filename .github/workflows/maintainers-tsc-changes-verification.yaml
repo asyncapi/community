@@ -5,14 +5,15 @@ on:
     types: [synchronize, opened, reopened]
     paths:
       - "MAINTAINERS.yaml"
+env:
+  GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
 
 jobs:
   verify-changes:
     # if statement to check if the PR is open.
     if: github.event.pull_request.state == 'open'
     runs-on: ubuntu-latest
-    env:
-      GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+
     steps:
       - name: Checkout main branch
         uses: actions/checkout@v3
@@ -52,7 +53,7 @@ jobs:
 
             // If the PR is made by the bot.
             if (author === 'asyncapi-bot') {
-              console.log('Changes made by asyncapi-bot')
+              core.info('Changes made by asyncapi-bot')
 
               const removedMaintainers = mainFile.filter(
                 (mainMaintainer) => !prFile.some((maintainer) => mainMaintainer.github === maintainer.github)
@@ -105,9 +106,9 @@ jobs:
               }
             }
             // Console log the error messages
-            console.log('Error messages:', errorMessages);
+            core.info('Error messages:', errorMessages);
             // Set the error messages as an output
-            console.log('Setting error messages output...');
+            core.info('Setting error messages output...');
             core.setOutput('errorMessages', JSON.stringify(errorMessages));
 
     outputs: 
