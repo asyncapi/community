@@ -11,6 +11,8 @@ jobs:
     # if statement to check if the PR is open.
     if: github.event.pull_request.state == 'open'
     runs-on: ubuntu-latest
+    env:
+      GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
     steps:
       - name: Checkout main branch
         uses: actions/checkout@v3
@@ -31,7 +33,7 @@ jobs:
         id: verify-changes
         uses: actions/github-script@v6
         with:
-          github-token: ${{ secrets.GH_TOKEN}}
+          github-token: ${{ env.GITHUB_TOKEN }}
           script: |
             const yaml = require("js-yaml");
             const fs = require("fs");
@@ -120,7 +122,7 @@ jobs:
       - name: Comment and close the PR if there are are any critical changes done by human
         uses: actions/github-script@v6
         with:
-          github-token: ${{ secrets.GH_TOKEN }}
+          github-token: ${{ env.GITHUB_TOKEN }}
           script: |
             const rawErrorMessages = `${{ needs.verify-changes.outputs.errorMessages }}`;
             const owner = context.repo.owner;
@@ -142,7 +144,7 @@ jobs:
         if: steps.verify-changes.outputs.removedTscMembers != ''
         uses: actions/github-script@v6
         with:
-          github-token: ${{ secrets.GH_TOKEN}}
+          github-token: ${{ env.GITHUB_TOKEN }}
           script: |
               const github = require('@actions/github')
               const issueComment = {
