@@ -140,6 +140,7 @@
     - bindings
     - glee
     - .github
+    - optimizer
 - name: Laurent Broudoux
   github: lbroudoux
   twitter: lbroudoux
