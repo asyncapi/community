@@ -48,8 +48,7 @@ jobs:
       - name: Create PR
         working-directory: ./website
         run: |
-          gh pr create --title "docs(community): update latest maintainers list" --body "Updated Maintainers list is available and this PR introduces changes with latest information about Maintainers" --head "update-tscmembers-${{ github.head_ref }}"
-
+          gh pr create --title "docs(community): update latest maintainers list" --body "Updated Maintainers list is available and this PR introduces changes with latest information about Maintainers" --head "update-tscmembers-${{ github.sha }}"
       - name: Report workflow run status to Slack
         if: failure() # Only, on failure, send a message on the slack channel
         uses: rtCamp/action-slack-notify@v2
