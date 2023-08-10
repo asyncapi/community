@@ -137,7 +137,6 @@
   company: Postman
   isTscMember: true
   repos:
-    - optimizer
     - bindings
     - glee
     - .github
