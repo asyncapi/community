@@ -160,11 +160,19 @@ jobs:
         with:
           github-token: ${{ env.GITHUB_TOKEN }}
           script: |
-              const github = require('@actions/github')
               const issueComment = {
                   owner: github.context.repo.owner,
                   repo: github.context.repo.repo,
                   issue_number: github.context.issue.number,
                   body: 'A TSC member has been removed in this PR. Maintainers of this repository need to review and approve this PR.'
               }
+              
+              const addLabel = {
+                  owner: github.context.repo.owner,
+                  repo: github.context.repo.repo,
+                  issue_number: github.context.issue.number,
+                  labels: ['do-not-merge']
+              }
+              
               github.rest.issues.createComment(issueComment);
+              github.rest.issues.addLabels(addLabel);
