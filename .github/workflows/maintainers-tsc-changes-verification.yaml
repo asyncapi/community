@@ -126,7 +126,7 @@ jobs:
         with:
           github-token: ${{ env.GITHUB_TOKEN }}
           script: |
-            const errorMessagesString = '${{ needs.verify-changes-if-tsc-if-maintainers.outputs.errorMessages }}';
+            const errorMessagesString = `${{ needs.verify-changes-if-tsc-if-maintainers.outputs.errorMessages }}`;
             const errorMessages = errorMessagesString ? JSON.parse(errorMessagesString) : [];
             console.log('Parsed errorMessages:', errorMessages);
             if (errorMessages && Array.isArray(errorMessages) && errorMessages.length > 0) {
