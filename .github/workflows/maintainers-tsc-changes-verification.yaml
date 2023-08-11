@@ -54,6 +54,7 @@ jobs:
             // If the PR is made by the bot.
             if (author === 'asyncapi-bot') {
               core.info('Changes made by asyncapi-bot')
+              core.setOutput('errorMessages', JSON.stringify(errorMessages));
 
               const removedMaintainers = mainFile.filter(
                 (mainMaintainer) => !prFile.some((maintainer) => mainMaintainer.github === maintainer.github)
@@ -125,7 +126,8 @@ jobs:
         with:
           github-token: ${{ env.GITHUB_TOKEN }}
           script: |
-            const errorMessages = ${{ needs.verify-changes-if-tsc-if-maintainers.outputs.errorMessages }};
+            const errorMessagesString = '${{ needs.verify-changes-if-tsc-if-maintainers.outputs.errorMessages }}';
+            const errorMessages = errorMessagesString ? JSON.parse(errorMessagesString) : [];
             console.log('Parsed errorMessages:', errorMessages);
             if (errorMessages && Array.isArray(errorMessages) && errorMessages.length > 0) {
               const owner = context.repo.owner;
@@ -146,7 +148,7 @@ jobs:
                 state: 'closed'
               });
             } else {
-              console.info('rawErrorMessages is empty.');
+              console.info('errorMessages is empty.');
             }
 
   block-bot-from-tsc-removal:
