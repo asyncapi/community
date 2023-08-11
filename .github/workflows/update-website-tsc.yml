@@ -49,10 +49,10 @@ jobs:
             git add .
             git commit -m "docs(community): update latest maintainers list"
             git push https://${{ env.GITHUB_TOKEN }}@github.com/asyncapi/website
-            CHANGES=true
+            echo "CHANGES=true" >> $GITHUB_ENV
           else
             echo "No changes to commit."
-            CHANGES=false
+            echo "CHANGES=false" >> $GITHUB_ENV
           fi
       - name: Create PR if there are changes
         if: steps.check_changes.outputs.CHANGES == 'true'
