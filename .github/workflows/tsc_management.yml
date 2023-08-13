@@ -1,0 +1,259 @@
+name: TSC Management Workflow
+
+on:
+  pull_request:
+    types: [closed]
+    paths:
+      - 'MAINTAINERS.yaml'
+
+jobs:
+  detect_tsc_membership_changes:
+    if: github.event.pull_request.merged
+    name: Update TSC Member
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout main branch
+        uses: actions/checkout@v2
+        with:
+          ref: master
+          path: community-main
+
+      - name: Checkout one commit before last one
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 2
+          ref: master
+          path: community
+
+      - run: cd community && git checkout HEAD^
+
+      - name: Install js-yaml
+        run: npm install js-yaml@4.1.0
+
+      - name: Compare files
+        id: compare-files
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const fs = require('fs');
+            const yaml = require('js-yaml');
+
+            const mainFile = yaml.load(fs.readFileSync('./community-main/MAINTAINERS.yaml', 'utf8'));
+            const prFile = yaml.load(fs.readFileSync('./community/MAINTAINERS.yaml', 'utf8')); 
+
+            // Variables to store the updated value and GitHub user
+            let updatedMaintainers = [];
+            let updatedValue;
+
+            // Function to check if isTscMember value has changed
+            function hasIsTscMemberChanged(maintainerGithub) {
+                const mainMaintainer = mainFile.find(m => m.github === maintainerGithub);
+                const prMaintainer = prFile.find(m => m.github === maintainerGithub);
+            
+                core.info(`Checking for ${maintainerGithub}`);
+            
+                if (!mainMaintainer || !prMaintainer) {
+                    console.error('Maintainer not found:', maintainerGithub);
+                    return;
+                }
+            
+                core.info(`${maintainerGithub} in mainFile has isTscMember as:`, mainMaintainer.isTscMember);
+                core.info(`${maintainerGithub} in prFile has isTscMember as:`, prMaintainer.isTscMember);
+            
+                if (mainMaintainer.isTscMember !== prMaintainer.isTscMember) {
+                    core.info(`isTscMember value changed for ${maintainerGithub}`);
+                    updatedMaintainers.push({ githubUser: maintainerGithub, updatedValue: mainMaintainer.isTscMember });
+                    updatedValue = mainMaintainer.isTscMember;
+                }
+            }
+
+            // Loop over all maintainers and find the changes
+            mainFile.forEach(maintainer => hasIsTscMemberChanged(maintainer.github));
+            
+            // Log final results
+            core.info("Final updatedValue:", updatedValue);
+            core.info("Final updatedMaintainers:", JSON.stringify(updatedMaintainers));
+            
+            // Set outputs
+            core.setOutput("updatedValue", updatedValue);
+            core.setOutput("updatedMaintainers", JSON.stringify(updatedMaintainers));
+    outputs: 
+      updatedValue: ${{ steps.compare-files.outputs.updatedValue }}
+      updatedMaintainers: ${{ steps.compare-files.outputs.updatedMaintainers }}
+
+  add_tsc_member:
+    needs: detect_tsc_membership_changes
+    if: needs.detect_tsc_membership_changes.outputs.updatedValue == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Add new TSC members to the team
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{ secrets.GH_TOKEN }}
+          script: |
+            const newTscMembers = ${{ needs.detect_tsc_membership_changes.outputs.updatedMaintainers }};
+            for (const tscMember of newTscMembers) {
+              try {
+                await github.request('PUT /orgs/asyncapi/teams/tsc_members/memberships/{username}', {
+                  username: tscMember.githubUser
+                });
+                core.info(`Successfully added ${tscMember.githubUser} to the team.`);
+              } catch (error) {
+                core.setFailed(`Failed to add ${tscMember.githubUser} to the team: ${error.message}`);
+              }
+            }
+    outputs:
+      newTscMember: ${{ needs.detect_tsc_membership_changes.outputs.updatedMaintainers }}
+
+  display_message:
+    needs: add_tsc_member
+    if: needs.add_tsc_member.outputs.newTscMember != ''
+    runs-on: ubuntu-latest
+    steps:
+      - name: Filter GitHub users with updatedValue
+        id: filter_users
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{ secrets.GH_TOKEN }}
+          script: |
+            const newTscMembers = JSON.parse('${{ needs.add_tsc_member.outputs.newTscMember }}');
+            const filteredUsers = newTscMembers.filter(user => user.updatedValue === true).map(user => user.githubUser);
+            core.setOutput('filteredUsers', JSON.stringify(filteredUsers));
+
+      - name: Display welcome message to new TSC members
+        if: steps.filter_users.outputs.filteredUsers != '[]'
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{ secrets.GH_TOKEN }}
+          script: |
+            const newTscMembers = ${{ steps.filter_users.outputs.filteredUsers }};
+            console.log(`New TSC members: ${newTscMembers}`);
+            const welcomeMessage = newTscMembers.map(tscMember => {
+                return `@${tscMember.trim().replace(/^@/, '')} Welcome to the AsyncAPI Initiative's TSC Teams!
+                We value your expertise and look forward to collaborating with you. Feel free to engage in discussions and share your ideas with the TSC.
+                If you have any questions, reach out on Slack or comment on this pull request.
+                We use this team to mention in different discussions in different places in GitHub where Maintainer's opinion is needed or even voting on some topic. Once Maintainers are mentioned:
+                - You get GitHub notification
+                - We also drop notification in our slack in #95_bot-maintainers-mentioned channel
+                - We drop an email to people that subscribed to Maintainer news here https://www.asyncapi.com/community/maintainers
+                Pick the channel for notifications that you prefer. Welcome aboard! We are excited to have you as part of the team.`
+            }).join('\n\n');
+
+            const { owner, repo } = context.repo;
+            const { number: issue_number } = context.issue;
+            github.rest.issues.createComment({ owner, repo, issue_number, body: welcomeMessage });
+
+  remove_tsc_member:
+    needs: detect_tsc_membership_changes
+    if: needs.detect_tsc_membership_changes.outputs.updatedValue == 'false'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Remove TSC members from the team
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{ secrets.GH_TOKEN }}
+          script: |
+            const removedMaintainers = ${{ needs.detect_tsc_membership_changes.outputs.updatedMaintainers }};
+            for (const maintainer of removedMaintainers) {
+              try {
+                await github.request('DELETE /orgs/asyncapi/teams/tsc_members/memberships/{username}', {
+                  username: maintainer.githubUser
+                });
+                core.info(`Successfully removed ${maintainer.githubUser} from the team.`);
+              } catch (error) {
+                core.setFailed(`Failed to remove ${maintainer.githubUser} from the team: ${error.message}`);
+              }
+            }
+    outputs:
+      removedMaintainers: ${{ needs.detect_tsc_membership_changes.outputs.updatedMaintainers }}
+
+  remove_tsc_goodbye:
+    needs: remove_tsc_member
+    if: needs.remove_tsc_member.outputs.removedMaintainers != ''
+    runs-on: ubuntu-latest
+    steps:
+      - name: Display goodbye message to removed TSC members
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{ secrets.GH_TOKEN }}
+          script: |
+            const removedMaintainers = JSON.parse('${{ needs.remove_tsc_member.outputs.removedMaintainers }}');
+            const removedTscMembers = removedMaintainers.map(maintainer => maintainer.githubUser);
+
+            // Goodbye message to removed TSC members
+            const tscMessages = removedTscMembers.map(tscMember => {
+              return `@asyncapi/tsc_members We want to inform you that @${tscMember.trim().replace(/^@/, '')} is no longer a maintainer of any repository under AsyncAPI Initiative. It means this maintainer is also no longer a member of TSC.`;
+            });
+
+            const { owner, repo } = context.repo;
+            const { number: issue_number } = context.issue;
+            for (const message of tscMessages) {
+              github.rest.issues.createComment({ owner, repo, issue_number, body: message });
+            }
+
+  update_emeritus:
+    needs: remove_tsc_member
+    if: needs.remove_tsc_member.outputs.removedMaintainers != ''
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v2
+
+      - name: Add Former TSC members to Emeritus.yaml and print
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{ secrets.GH_TOKEN }}
+          script: |
+            const fs = require('fs');
+            const path = './Emeritus.yaml';
+
+            // Read the current content of the file
+            let content = fs.readFileSync(path, 'utf8').trim(); // remove any trailing whitespaces
+
+            // Parse the removedMaintainers JSON string to an array of objects
+            const removedMaintainers = JSON.parse('${{ needs.remove_tsc_member.outputs.removedMaintainers }}');
+
+            // Filter the maintainers whose updatedValue is false and prepare them for the yaml format
+            const removedTscMembers = removedMaintainers
+              .filter(maintainer => maintainer.updatedValue === false)
+              .map(maintainer => `  - ${maintainer.githubUser.trim()}`)
+              .join('\n');
+
+            // Append the added maintainers to the file content
+            if (removedTscMembers) {
+              content = content + '\n' + removedTscMembers;
+            }
+
+            // Write the updated content back to the file
+            fs.writeFileSync(path, content);
+
+            // Log the updated content to the console
+            console.log('Updated Emeritus.yaml:\n', content);
+      
+      - name: Create new branch
+        run: |
+          git checkout -b update-emeritus-${{ github.run_id }}
+
+      - name: Commit and push
+        run: |
+          git add .
+          git commit -m "Update Emeritus.yaml"
+          git push https://${{ secrets.GH_TOKEN}}@github.com/asyncapi/community update-emeritus-${{ github.run_id }}
+
+      - name: Create PR
+        run: |
+          gh pr create --title "docs(community): update latest emeritus list" --body "Updated Emeritus list is available and this PR introduces changes with latest information about Emeritus" --head update-emeritus-${{ github.run_id }}
+
+  notify_slack_on_failure:
+    if: always() && (needs.detect_tsc_membership_changes.result == 'failure' || needs.add_tsc_member.result == 'failure' || needs.display_message.result == 'failure' || needs.update_emeritus.result == 'failure' || needs.remove_tsc_member.result == 'failure' || needs.remove_tsc_goodbye.result == 'failure')
+    needs: [detect_tsc_membership_changes,  add_tsc_member, display_message, update_emeritus,remove_tsc_goodbye, remove_tsc_member]
+    runs-on: ubuntu-latest
+    steps:
+    - name: Report workflow run status to Slack
+      uses: rtCamp/action-slack-notify@v2
+      env:
+        SLACK_WEBHOOK: ${{secrets.SLACK_CI_FAIL_NOTIFY}}
+        SLACK_TITLE: 🚨 TSC Management Workflow failed 🚨
+        SLACK_MESSAGE: Failed to post a message to new TSC member
+        MSG_MINIMAL: true

@@ -52,7 +52,7 @@
   repos:
     - cupid
 - name: Cameron Rushton
-  github: CameronRushton
+  github: cameronrushton
   slack: U01DVKKAV5K
   availableForHire: false
   company: Solace
@@ -104,7 +104,7 @@
     - website
     - bindings
 - name: Gerald Loeffler
-  github: GeraldLoeffler
+  github: geraldloeffler
   linkedin: geraldloeffler
   slack: U01P5QDLP0X
   availableForHire: false
@@ -129,7 +129,7 @@
     - parser-api
     - simulator
 - name: Khuda Dad Nomani
-  github: KhudaDad414
+  github: khudadad414
   twitter: KhudaDadNomani
   linkedin: khudadadnomani
   slack: U01RVRD1TCL
@@ -137,10 +137,10 @@
   company: Postman
   isTscMember: true
   repos:
-    - optimizer
     - bindings
     - glee
-    - ".github"
+    - .github
+    - optimizer
 - name: Laurent Broudoux
   github: lbroudoux
   twitter: lbroudoux
@@ -213,7 +213,7 @@
     - website
 - name: Azeez Elegbede
   linkedin: acebuild
-  github: AceTheCreator
+  github: acethecreator
   twitter: _acebuild
   slack: U01RWDD69PZ
   company: Postman
@@ -245,7 +245,7 @@
     - studio
     - website
 - name: Nektarios Fifes
-  github: NektariosFifes
+  github: nektariosfifes
   linkedin: nektarios-fifes-372740220
   slack: U01SE93Q48N
   availableForHire: true
@@ -253,7 +253,7 @@
   repos:
     - simulator
 - name: Pavel Bodiachevskii
-  github: Pakisan
+  github: pakisan
   slack: U0132LQU8C9
   twitter: pbodiachevskii
   availableForHire: false
@@ -307,7 +307,7 @@
     - spec-json-schemas
     - template-for-go-projects
 - name: Souvik De
-  github: Souvikns
+  github: souvikns
   slack: U01SGCZMJKW
   twitter: souvik_ns
   linkedin: souvik-de-a2b941169
@@ -331,7 +331,7 @@
     - training
     - community
 - name: David Pereira
-  github: BOLT04
+  github: bolt04
   twitter: BOLT2938
   slack: U02EC8BT0TX
   linkedin: josé-david-pereira-13ba5315a
@@ -350,7 +350,7 @@
   repos:
     - java-template
 - name: Kieran Murphy
-  github: KieranM1999
+  github: kieranm1999
   linkedin: kieran-murphy-175b0412b
   availableForHire: false
   slack: U02FT2TKM37
@@ -359,7 +359,7 @@
   repos:
     - java-template
 - name: Tom Jefferson
-  github: JEFFLUFC
+  github: jefflufc
   linkedin: t-jefferson
   slack: U02FPPCEH6H
   availableForHire: false
@@ -386,7 +386,7 @@
     - studio
     - cli
 - name: Semen Tenishchev
-  github: Tenischev
+  github: tenischev
   linkedin: semen-tenishchev
   availableForHire: true
   slack: U011D1DAU6S
@@ -394,7 +394,7 @@
   repos:
     - java-spring-template
 - name: Samridhi Agrawal
-  github: Samridhi-98
+  github: samridhi-98
   slack: U02T2MY9W5T
   linkedin: samridhi-agrawal-1713201ab
   availableForHire: false
@@ -422,7 +422,7 @@
   repos:
     - vs-asyncapi-preview
 - name: Florence Njeri
-  github: Florence-Njeri
+  github: florence-njeri
   linkedin: florencenjeri
   slack: U03D18YKX2M
   twitter: njericodes
@@ -453,7 +453,7 @@
     - spec
     - spec-json-schemas
 - name: Alexander Wichmann
-  github: VisualBean
+  github: visualbean
   linkedin: alexcarlsen
   slack: U04C58GB8TF
   availableForHire: false
@@ -464,7 +464,7 @@
 - name: Barbaño González
   linkedin: barbano-gonzalez-moreno
   twitter: BarbanoGonzalez
-  github: Barbanio
+  github: barbanio
   slack: U01J42QDSLU
   availableForHire: false
   company: Postman
@@ -482,7 +482,7 @@
   repos:
     - modelina
 - name: Heiko Henning
-  github: GreenRover
+  github: greenrover
   slack: U03AC4G51H8
   availableForHire: false
   company: mtrail GmbH
