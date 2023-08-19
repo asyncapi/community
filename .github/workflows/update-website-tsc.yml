@@ -1,11 +1,13 @@
 #This action update the list of TSC members in the website repository. List of all Maintainers is later rendered in the asyncapi.com website.
 name: Update list of Maintainers in the website repo
+
 on:
   push:
     branches:
       - "master"
     paths:
       - "MAINTAINERS.yaml"
+
 jobs:
   update-website:
     name: Make PR on website repository with updated maintainers list
@@ -30,7 +32,7 @@ jobs:
       - name: Create branch
         working-directory: ./website
         run: |
-          git checkout -b update-tscmembers-${{ github.head_ref }}
+          git checkout -b update-tscmembers-${{ github.sha }}
       - name: Convert YAML to JSON using Python
         working-directory: ./community
         run: |
@@ -39,17 +41,24 @@ jobs:
         working-directory: ./website
         run: |
           cp ../community/MAINTAINERS.json ./config/MAINTAINERS.json
-      - name: Commit and push
+      - name: Check if there are changes
+        id: check_changes
         working-directory: ./website
         run: |
-          git add .
-          git commit -m "docs(community): update latest maintainers list"
-          git push https://${{ env.GITHUB_TOKEN }}@github.com/asyncapi/website
-      - name: Create PR
+          if ! git diff --quiet; then
+            git add .
+            git commit -m "docs(community): update latest maintainers list"
+            git push https://${{ env.GITHUB_TOKEN }}@github.com/asyncapi/website
+            echo "CHANGES=true" >> $GITHUB_ENV
+          else
+            echo "No changes to commit."
+            echo "CHANGES=false" >> $GITHUB_ENV
+          fi
+      - name: Create PR if there are changes
+        if: steps.check_changes.outputs.CHANGES == 'true'
         working-directory: ./website
         run: |
-          gh pr create --title "docs(community): update latest maintainers list" --body "Updated Maintainers list is available and this PR introduces changes with latest information about Maintainers" --head "update-tscmembers-${{ github.head_ref }}"
-
+          gh pr create --title "docs(community): update latest maintainers list" --body "Updated Maintainers list is available and this PR introduces changes with latest information about Maintainers" --head "update-tscmembers-${{ github.sha }}"
       - name: Report workflow run status to Slack
         if: failure() # Only, on failure, send a message on the slack channel
         uses: rtCamp/action-slack-notify@v2
