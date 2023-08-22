@@ -70,6 +70,10 @@ on:
         required: true
       TWITTER_ACCESS_TOKEN_SECRET:
         required: true
+      GOOGLE_OAUTH_TOKEN:
+        required: true
+      GOOGLE_OAUTH_CLIENT_SECRET:
+        required: true
 
 jobs:
   setup-meeting:

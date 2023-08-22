@@ -119,10 +119,10 @@ function _addVideoToPlaylist(videoId, playlistId) {
 }
 
 // Example usage
-scheduleLivestream(
-  'Test stream!',
-  'Test stream description',
-  '2023-08-05T13:00:00Z',
-  'https://raw.githubusercontent.com/asyncapi/brand/master/brand-guidelines/branded-tools/assets/tooling-parser-light.png',
-  'PLSNLKbNep0njUwB8FtzM_I99hlmrd2Cz2'
-);
+// scheduleLivestream(
+//   'Test stream!',
+//   'Test stream description',
+//   '2023-08-05T13:00:00Z',
+//   'https://raw.githubusercontent.com/asyncapi/brand/master/brand-guidelines/branded-tools/assets/tooling-parser-light.png',
+//   'PLSNLKbNep0njUwB8FtzM_I99hlmrd2Cz2'
+// );
