@@ -416,6 +416,18 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "meteatamel",
+      "name": "Mete Atamel",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1177542?v=4",
+      "profile": "http://atamel.dev",
+      "contributions": [
+        "talk",
+        "review",
+        "maintenance",
+        "ideas"
+      ]
     }
   ],
   "commitConvention": "angular",
