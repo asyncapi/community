@@ -56,7 +56,7 @@ jobs:
               core.setOutput("removedMaintainers", removed.map((obj) => obj.github).join(","));
             }
 
-            const removedTscMembers = pr_file.filter(
+            const removedTscMembers = previousMaintainers.filter(
               (obj) => !currentMaintainers.some((mainObj) => mainObj.github === obj.github) && obj.isTscMember === true
             );
 
@@ -257,14 +257,14 @@ jobs:
           gh pr create --title "docs(community): update latest emeritus list" --body "Updated Emeritus list is available and this PR introduces changes with latest information about Emeritus" --head update-emeritus-${{ github.run_id }}
 
   notify_slack_on_failure:
-    if: always() && (needs.detect_maintainer_changes.result == 'failure' || needs.add_maintainer.result == 'failure' || needs.display_message.result == 'failure' || needs.remove_maintainer.result == 'failure' || needs.update_emeritus.result == 'failure' || needs.remove_maintainer_goodbye.result == 'failure' )
-    needs: [detect_maintainer_changes, add_maintainer.result, display_message, remove_maintainer,remove_maintainer_goodbye, update_emeritus]
+    if: always() && (needs.detect_maintainer_changes.result == 'failure' || needs.add_maintainer.result == 'failure' || needs.display_message.result == 'failure' || needs.remove_maintainer.result == 'failure' || needs.update_emeritus.result == 'failure' || needs.remove_maintainer_goodbye.result == 'failure')
+    needs: [detect_maintainer_changes, add_maintainer, display_message, remove_maintainer, remove_maintainer_goodbye, update_emeritus]
     runs-on: ubuntu-latest
     steps:
     - name: Report workflow run status to Slack
       uses: rtCamp/action-slack-notify@v2
       env:
         SLACK_WEBHOOK: ${{secrets.SLACK_CI_FAIL_NOTIFY}}
-        SLACK_TITLE: 🚨 Welcome new contributor action failed 🚨
+        SLACK_TITLE: 🚨 Maintainer Management Workflow failed 🚨
         SLACK_MESSAGE: Failed to post a message to new Maintainer
         MSG_MINIMAL: true
