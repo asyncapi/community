@@ -216,7 +216,6 @@ Here the video ID is the word/entity after `https://www.youtube.com/watch?v=`, i
 - `https://youtube.com/shorts/VIDEO_ID?feature=share`
   - Here, it can be https://youtube.com/shorts/U5jUr8XAF_M?feature=share
 
-*If you find more formats, please add to this list by raising an issue and with a follow-up Pull Request (PR)*
 
 ***
 
