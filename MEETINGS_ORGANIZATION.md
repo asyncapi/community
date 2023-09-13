@@ -177,7 +177,6 @@ Once your `Regular` meeting gets approved, contact `Fran Mendez` so that he can 
 
 - The goal is to upload our AsyncAPI video/livestreams on `Spotify For Podcasters` platform which will ultimately allow the listener to play the episodes on Spotify. Almost every YouTube video can be converted into a podcast.
 
-- This workflow provides the solution to the above problem.
 
 ### Who can upload the videos?
 
