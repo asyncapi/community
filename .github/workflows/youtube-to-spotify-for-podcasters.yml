@@ -34,5 +34,3 @@ jobs:
           URL_IN_DESCRIPTION: true
           LOAD_THUMBNAIL: true
           POSTPROCESSOR_ARGS: 'ffmpeg:-ac 1'
-          SAVE_AS_DRAFT: true
-
