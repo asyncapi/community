@@ -197,7 +197,6 @@ Let's take this video link for example: https://www.youtube.com/watch?v=3rg_7hIb
 
 Here the video ID is the word/entity after `https://www.youtube.com/watch?v=`, i.e., `3rg_7hIb9PQ`
 
-***
 
 ### List of different types of YouTube links
 
@@ -216,8 +215,6 @@ Here the video ID is the word/entity after `https://www.youtube.com/watch?v=`, i
 - `https://youtube.com/shorts/VIDEO_ID?feature=share`
   - Here, it can be https://youtube.com/shorts/U5jUr8XAF_M?feature=share
 
-
-***
 
 ### Step-by-step procedure
 
