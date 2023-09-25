@@ -1,5 +1,5 @@
 const fetch = require('node-fetch');
-const jwt = require('jsonwebtoken');
+const { URLSearchParams } = require('url');
 const core = require('@actions/core');
 
 /**
@@ -11,14 +11,24 @@ const core = require('@actions/core');
 module.exports = async(date, time, host, cohost) => {
 
     const meetingTitle = process.env.MEETING_NAME;
-    let meetingDetails;
+    let meetingDetails, token;
 
-    const tokenConfig = {
-        iss: process.env.ZOOM_API_KEY,
-        exp: ((new Date()).getTime() + 5000)
+    //getting request token
+    try {
+        const params = new URLSearchParams();
+        params.append('grant_type', 'account_credentials');
+        params.append('account_id', process.env.ZOOM_ACCOUNT_ID);
+        const tokenCreationResponse = await fetch('https://zoom.us/oauth/token', {
+            method: 'POST',
+            body: params,
+            headers: {
+                Authorization: `Basic ${ process.env.ZOOM_TOKEN }`
+            },
+        });
+        token = (await tokenCreationResponse.json()).access_token;
+    } catch (error) {
+        return core.setFailed(`Failed getting token: ${ error }`)
     }
-
-    const token = jwt.sign(tokenConfig, process.env.ZOOM_API_SECRET);
 
     const zoomSettings = JSON.stringify({
         topic: meetingTitle,
