@@ -9,7 +9,7 @@ const core = require('@actions/core');
  * @param {string} cohost coma-separated list of email addresses of alternative hosts
  */
 module.exports = async(date, time, host, cohost) => {
-
+    
     const meetingTitle = process.env.MEETING_NAME;
     let meetingDetails, token;
 
@@ -67,8 +67,11 @@ module.exports = async(date, time, host, cohost) => {
         return core.setFailed(`Meeting creation failed: ${ error }`)
     }
 
-    //core.debug(JSON.stringify(meetingDetails));
     const meetingId = meetingDetails.id;
+    if (!meetingId) {
+        core.info(JSON.stringify(meetingDetails, null, 4));
+        return core.setFailed('meetingId is not available which means something went wrong in communication with Zoom');
+    }
     const meetingUrl = meetingDetails.join_url;
 
     const streamOptions = JSON.stringify({
@@ -94,7 +97,6 @@ module.exports = async(date, time, host, cohost) => {
         return core.setFailed(`Meeting update with streaming info failed: ${ error }`)
     }
 
-    if (!meetingId) return core.setFailed('meetingId is not available which means something went wrong in communication with Zoom. Most probably the host that you defined is not yet part of related Zoom account');
     core.info(`Created meeting ${ meetingId } that you can join at ${ meetingUrl }`);
     core.setOutput('meetingUrl', meetingUrl);
 }
