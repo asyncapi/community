@@ -9,7 +9,7 @@ const core = require('@actions/core');
  * @param {string} cohost coma-separated list of email addresses of alternative hosts
  */
 module.exports = async(date, time, host, cohost) => {
-    
+
     const meetingTitle = process.env.MEETING_NAME;
     let meetingDetails, token;
 
