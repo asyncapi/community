@@ -1,6 +1,6 @@
-import path from 'path';
-import axios from 'axios';
-import {google} from 'googleapis';
+const path = require('path');
+const {google} = require('googleapis');
+const fetch = require('node-fetch');
 const OAuth2 = google.auth.OAuth2;
 const youtube = google.youtube('v3');
 
@@ -25,11 +25,17 @@ module.exports = { scheduleLivestream };
  * @param {String} thumbnail Thumbnail URL (only supports PNG and JPG formats)
  * @param {String} playlistId Playlist ID to add the stream to
  */
-async function scheduleLivestream(title, description, scheduledStartTime, thumbnail, playlistId) {
+async function scheduleLivestream(scheduledStartTime, playlistId) {
   try {
-    const id = await _createNewBroadcast(title, description, scheduledStartTime);
+    const title = process.env.MEETING_NAME;
+    const suffix = process.env.MEETING_NAME_SUFFIX;
+    const description = process.env.MEETING_DESC;
+    const banner = process.env.MEETING_BANNER;
+    const summary = suffix ? `${title} ${suffix}` : title;
+
+    const id = await _createNewBroadcast(summary, description, scheduledStartTime);
     await Promise.all([
-      _addThumbnailToVideo(id, thumbnail),
+      _addThumbnailToVideo(id, banner),
       _addVideoToPlaylist(id, playlistId)
     ]);
 
@@ -69,12 +75,8 @@ function _addThumbnailToVideo(videoId, thumbnailUri) {
     const ext = path.extname(thumbnailUri);
     const mimeType = (ext == 'png' ? 'image/png' : 'image/jpeg');
     
-    axios({
-      method: 'get',
-      url: thumbnailUri,
-      responseType: 'stream'
-    }).then(res => {
-      const thumbnailStream = res.data;
+    fetch(thumbnailUri).then(res => {
+      const thumbnailStream = res.body;
 
       youtube.thumbnails.set({
         auth: OAUTH_CLIENT,
@@ -117,12 +119,3 @@ function _addVideoToPlaylist(videoId, playlistId) {
     })
   });
 }
-
-// Example usage
-// scheduleLivestream(
-//   'Test stream!',
-//   'Test stream description',
-//   '2023-08-05T13:00:00Z',
-//   'https://raw.githubusercontent.com/asyncapi/brand/master/brand-guidelines/branded-tools/assets/tooling-parser-light.png',
-//   'PLSNLKbNep0njUwB8FtzM_I99hlmrd2Cz2'
-// );

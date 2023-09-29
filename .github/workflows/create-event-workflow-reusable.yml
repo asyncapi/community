@@ -170,4 +170,4 @@ jobs:
         with:
           script: |
             const { scheduleLivestream } = require('./.github/workflows/create-event-helpers/youtube/index.js');
-            scheduleLivestream('${{ inputs.meeting_name }}', '${{ steps.create-issue.outputs.url }}', '${{ inputs.date }}T${{ inputs.time }}:00Z', '${{ inputs.meeting_banner }}', 'PLbi1gRlP7pijUwZJErzyYf_Rc-PWu4lXS');
+            scheduleLivestream('${{ inputs.date }}T${{ inputs.time }}:00Z', 'PLbi1gRlP7pijUwZJErzyYf_Rc-PWu4lXS');
