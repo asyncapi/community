@@ -1,0 +1,78 @@
+name: Validating the list of maintainers
+
+on:
+  pull_request:
+    types: [opened, reopened, synchronize, ready_for_review]
+    paths:
+      - 'MAINTAINERS.yaml'
+
+jobs:
+  # Make sure that changes in the MAINTAINERS.yaml file do not break the schema
+  # Until we have MAINTAINERS.yaml updates automated, we need to ensure we are not breaking things
+  validate_schema:
+    if: github.event.pull_request.draft == false
+    name: Validate JSON Schema for MAINTAINERS list
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - run: npm install ajv@6.12.6
+      - name: Install dependencies
+        run: npm install js-yaml@4.1.0
+      - name: Validate list with schema
+        uses: actions/github-script@v4
+        with:
+          script: |
+            const Ajv = require("ajv");
+            const fs = require('fs').promises;
+            const yaml = require('js-yaml');
+
+            const schema = await fs.readFile('.github/workflows/tsc_members_validator/schema.json', 'utf8');
+            const members = await fs.readFile('MAINTAINERS.yaml', 'utf8');
+            
+            const ajv = new Ajv();
+            const validator = ajv.compile(JSON.parse(schema));
+
+            const valid = validator(yaml.load(members));
+
+            if (!valid) {
+              core.error(`Validation of maintainers file failed with the following errors:`);
+              core.error(validator.errors);
+            } else {
+              core.info(`MAINTAINERS file is valid`);
+            }
+
+  # Open governance model doesn't allow more than 1/4 maintainers affiliated with a single company
+  calculate_companies:
+    if: github.event.pull_request.draft == false
+    name: Calculate TSC members affiliation
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Install dependencies
+        run: npm install js-yaml@4.1.0
+      - name: Calculate
+        uses: actions/github-script@v4
+        with:
+          script: |
+            const fs = require('fs');
+            const yaml = require('js-yaml');
+            const members = yaml.load(fs.readFileSync('./MAINTAINERS.yaml', 'utf8'));
+            // Filter in the members who are part of the TSC
+            const tscMembers = members.filter(member => member.isTscMember);
+
+            const allTscMembers = tscMembers.length;
+
+            const allowedMemberPerCompany = Math.floor(allTscMembers / 4);
+            const numberOfMemByCompany = tscMembers.reduce((acc, m) => {
+              const company = m.company && m.company.toLowerCase();
+              if (company) acc.has(company) ? acc.set(company, acc.get(company) + 1) : acc.set(company, 1);
+              return acc;
+            }, new Map());
+
+            numberOfMemByCompany.forEach((numberOfRepresentatives, companyName) => {
+              if (numberOfRepresentatives > allowedMemberPerCompany) {
+                core.setFailed(`There are too many TSC members affiliated with ${companyName} and it violates the open governance model. ${numberOfRepresentatives} is more than 1/4 of ${allTscMembers}`);
+              }
+            });
