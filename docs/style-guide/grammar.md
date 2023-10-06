@@ -6,7 +6,7 @@ This document defines grammar standards for AsyncAPI documentation across abbrev
 
 When you use an abbreviation or acronym for the first time, spell it out and include the shortest form in parentheses. 
 
-Abbreviations are meant to be used to save the reader’s time. They make your documentation look clean. However, using abbreviations may come with some downsides. Abbreviations add a layer of abstraction to text, which requires the reader to spend some mental energy to expand. Thus, it is best to add abbreviations in case of words that have been repeatedly used throughout your document. Once defined in a document, abbreviations or acronyms should be used consistently to ensure clarity and avoid confusion for readers
+Abbreviations are meant to be used to save the reader’s time. They make your documentation look clean. However, using abbreviations may come with some downsides. Abbreviations add a layer of abstraction to text, which requires the reader to spend some mental energy to expand. Thus, it is best to add abbreviations in case of words that have been repeatedly used throughout your document. Once defined in a document, abbreviations or acronyms should be used consistently to ensure clarity and avoid confusion for readers.
 
 Here are some examples of abbreviations:
 - ‘Event-driven architecture’ can be abbreviated as ‘EDA’.
