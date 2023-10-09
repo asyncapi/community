@@ -11,7 +11,7 @@ jobs:
   upload_episode:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: Create episode.json file
         run: |
           # Get the video ID from the workflow_dispatch input.
