@@ -39,7 +39,7 @@ Due to asynchronous nature of the AsyncAPI project itself and thus its Bounty Pr
 
 ## Bounty Issue Submission
 
-Up to two Bounty Issues per each calendar quarter round of the Bounty Program are submitted in comments of a dedicated AsyncAPI GitHub Organization's Discussion by the AsyncAPI Maintainer of the repository where the candidate for the Bounty Issue is residing, containing the following five fields:
+Bounty Issues are submitted from the eighth to the twenty-first day (inclusive) of March, June, September and December, in a quantity of no more than two issues per repository, in comments of the dedicated [AsyncAPI Organization's Discussion](https://github.com/orgs/asyncapi/discussions), by the AsyncAPI Maintainer of the given repository, containing the following five fields:
 
 1. Number: `cli#361`
 
