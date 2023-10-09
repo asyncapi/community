@@ -65,9 +65,13 @@ All GitHub issues selected as Bounty Issues get labels on GitHub:
 
 - label indicating calendar quarter round of the Bounty Program in which Bounty Issue participates, e. g. `2023-Q4`
 
-After addition of labels GitHub issues selected as Bounty Issues can be viewed with GitHub's search tool using URL formed as:
+After addition of labels GitHub issues selected as Bounty Issues can be viewed with GitHub's search tool using the URL formed as:
 ```
 https://github.com/issues?q=is%3Aopen+org%3Aasyncapi+label%3Abounty+label%3A2023-Q4
+```
+Also, Bounty Issues that have no assignee and are free to pick up can be viewed with GitHub's search tool using the URL formed as:
+```
+https://github.com/issues?q=is%3Aopen+org%3Aasyncapi+label%3Abounty+no%3Aassignee
 ```
 
 
