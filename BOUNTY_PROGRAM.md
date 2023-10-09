@@ -39,7 +39,7 @@ Due to asynchronous nature of the AsyncAPI project itself and thus its Bounty Pr
 
 ## Bounty Issue Submission
 
-Bounty Issues are submitted from the eighth to the twenty-first day (inclusive) of March, June, September and December, in a quantity of no more than two issues per repository, in comments of the dedicated [AsyncAPI Organization's Discussion](https://github.com/orgs/asyncapi/discussions), by the AsyncAPI Maintainer of the given repository, containing the following five fields:
+Bounty Issues for the upcoming calendar quarter round of the Bounty Program are submitted during the second and third weeks of the last month of the current calendar quarter, after call for such submission, in a quantity of no more than two issues per repository, in comments of the dedicated [AsyncAPI Organization's Discussion](https://github.com/orgs/asyncapi/discussions), by the AsyncAPI Maintainer of the given repository, containing the following five fields:
 
 1. Number: `cli#361`
 
@@ -79,7 +79,7 @@ https://github.com/issues?q=is%3Aopen+org%3Aasyncapi+label%3Abounty+no%3Aassigne
 
 Start date in Bounty Program is counted from Monday of the next week when assignment of the Bounty Issue on GitHub happened.
 
-In case assignment of the Bounty Issue on GitHub happened at any moment between twenty-second day of March, June, September or December and the last day of the month (inclusive), start date in Bounty Program is counted from the first Monday of the new calendar quarter round.
+In case assignment of the Bounty Issue on GitHub happened during fourth or fifth week of the last month of the calendar quarter, start date in Bounty Program is counted from the first Monday of the new calendar quarter round.
 
 For Bounty Issues of Complexity Level `Medium`:
 - Draft Pull Request must be submitted not later than on Friday of second week from the start date and updated on every Friday until submission of Final Pull Request
