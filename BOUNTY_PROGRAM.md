@@ -20,7 +20,7 @@ Bounty Program Participants are prioritized in the following order:
 
 2. Regular contributors (GitHub users who have three or more Pull Requests merged throughout the AsyncAPI GitHub Organization)
 
-3. Other (if a GitHub user doesn't fall under the above, the maintainer can determine the criteria i. e. regular volunteers, etc)
+3. Other (if a GitHub user doesn't fall under the above, the AsyncAPI Maintainer can determine the criteria i. e. regular volunteers, etc)
 
 
 ## Bounty Issues' numbering
