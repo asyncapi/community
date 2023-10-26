@@ -3,6 +3,10 @@ title: Add new AsyncAPI tool to website
 description: Learn how to add your tool to the AsyncAPI website using the .asyncapi-tool file.
 ---
 
+------
+title: Adding new category
+------
+
 ## Introduction 
 Learn how to add your tool to the AsyncAPI website using the `.asyncapi-tool` file. Make sure to structure your `.asyncapi-tool` file correctly to render your tool on the AsyncAPI website with customized tags and information for users to filter tools according to different categories.
 
