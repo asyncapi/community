@@ -33,6 +33,22 @@ Contribute funds to AsyncAPI through any of the following channels:
 </a>
 </center>
 
+###how can you support to community
+1 - Financial Support Information:
+
+Check and update any information related to how to provide financial support through GitHub Sponsors, Open Collective, or the Linux Foundation Crowdfunding. Ensure that the links provided are accurate and working.
+
+2 -Sponsorship Tiers:
+
+If there are changes or updates to the sponsorship tiers, you can propose them. For example, if they introduce new sponsorship tiers or modify existing benefits, you can suggest these changes.
+Other Forms of Financial Support:
+
+Review and update the information related to other forms of financial support, such as employee involvement, event organization, service provision, and expense management. Ensure that the details are accurate and comprehensive.
+Where Your Contributions Go:
+
+If you have additional information about where the contributions are allocated, such as specific projects or initiatives, you can add it. You can also propose changes to this section to make it more informative.
+
+
 #### Other forms of financial support
 
 ##### Employee involvement
