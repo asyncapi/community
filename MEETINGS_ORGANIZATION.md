@@ -228,8 +228,5 @@ Here is an example with procedure on how to use this workflow:
 6. Click on `Run workflow` button. 
 7. Wait for the workflow to finish. (May take some time to upload depending upon video size so please have patience. Thank you.) 
 8. Go to podcasters.spotify.com (Log in to your account if you haven't already).
-9. Go to `Episodes` section. There you will see your latest upload. 
-10. Click on the latest episode.
-11. Update the episode details as per your requirement.
-12. At last, after updating all the informations, click on the `Publish` button.
-13. Hurray! Your episode is now uploaded successfully!
+9. Go to `Episodes` section. There you will see your latest upload.
+10. Hurray! Your episode is now uploaded successfully!
