@@ -19,19 +19,16 @@ module.exports = { scheduleLivestream };
 /**
  * Schedules a live stream with the parameters provided.
  * 
- * @param {String} title Title
- * @param {String} description Description
  * @param {String} scheduledStartTime RFC3339 scheduled starting time
- * @param {String} thumbnail Thumbnail URL (only supports PNG and JPG formats)
- * @param {String} playlistId Playlist ID to add the stream to
  */
-async function scheduleLivestream(scheduledStartTime, playlistId) {
+async function scheduleLivestream(scheduledStartTime) {
   try {
     const title = process.env.MEETING_NAME;
     const suffix = process.env.MEETING_NAME_SUFFIX;
     const description = process.env.MEETING_DESC;
     const banner = process.env.MEETING_BANNER;
     const summary = suffix ? `${title} ${suffix}` : title;
+    const playlistId = process.env.YT_PLAYLIST;
 
     const id = await _createNewBroadcast(summary, description, scheduledStartTime);
     await Promise.all([
@@ -98,6 +95,8 @@ function _addThumbnailToVideo(videoId, thumbnailUri) {
 
 function _addVideoToPlaylist(videoId, playlistId) {
   return new Promise((resolve, reject) => {
+    if ( !playlistId ) return resolve();
+
     youtube.playlistItems.insert({
       auth: OAUTH_CLIENT,
       part: 'contentDetails,id,snippet,status',

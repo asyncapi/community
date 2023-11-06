@@ -47,6 +47,10 @@ on:
         description: 'Meeting banner(image) URL'
         required: false
         type: string
+      yt_playlist:
+        description: 'Youtube Playlist ID for the stream'
+        required: false
+        type: string
     secrets:
       GH_TOKEN:
         required: true
@@ -167,7 +171,8 @@ jobs:
           MEETING_DESC: ${{ inputs.meeting_desc }}
           MEETING_BANNER: ${{ inputs.meeting_banner }}
           GUEST: ${{ inputs.guest }}
+          YT_PLAYLIST: ${{ inputs.yt_playlist }}
         with:
           script: |
             const { scheduleLivestream } = require('./.github/workflows/create-event-helpers/youtube/index.js');
-            scheduleLivestream('${{ inputs.date }}T${{ inputs.time }}:00Z', 'PLbi1gRlP7pijUwZJErzyYf_Rc-PWu4lXS');
+            scheduleLivestream('${{ inputs.date }}T${{ inputs.time }}:00Z');

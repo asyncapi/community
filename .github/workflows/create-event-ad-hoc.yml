@@ -18,6 +18,9 @@ on:
       meeting_banner: 
         description: 'Meeting banner(image) URL'
         required: false
+      yt_playlist:
+        description: 'Youtube Playlist ID for the stream'
+        required: false
 
 jobs:
 
@@ -29,6 +32,7 @@ jobs:
       meeting_name: ${{ github.event.inputs.name }}
       meeting_desc: ${{ github.event.inputs.desc }}
       meeting_banner: ${{ github.event.inputs.meeting_banner }}
+      yt_playlist: ${{ github.events.inputs.yt_playlist }}
       host: lpgornicki@gmail.com
       alternative_host: "fmvilas@gmail.com,jonas-lt@live.dk,devlopergene@gmail.com,sibanda.thulie@gmail.com"
       issue_template_path: .github/workflows/create-event-helpers/issues_templates/ad-hoc.md
@@ -45,3 +49,5 @@ jobs:
       TWITTER_CONSUMER_SECRET: ${{ secrets.TWITTER_CONSUMER_SECRET }} 
       TWITTER_ACCESS_TOKEN_KEY: ${{ secrets.TWITTER_ACCESS_TOKEN_KEY }} 
       TWITTER_ACCESS_TOKEN_SECRET: ${{ secrets.TWITTER_ACCESS_TOKEN_SECRET }}
+      GOOGLE_OAUTH_TOKEN: ${{ secrets.GOOGLE_OAUTH_TOKEN }}
+      GOOGLE_OAUTH_CLIENT_SECRET: ${{ secrets.GOOGLE_OAUTH_CLIENT_SECRET }}
