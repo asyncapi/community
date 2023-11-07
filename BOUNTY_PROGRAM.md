@@ -9,7 +9,7 @@ Reward for Bounty Issue of Complexity Level `Medium` is two hundred US dollars 0
 
 Reward for Bounty Issue of Complexity Level `Advanced` is four hundred US dollars 00 cents (USD 400.00).
 
-Approximate quantity of Bounty Issues per calendar quarter varies from thirteen to twenty five (from ((12 * 400) + (1 * 200)) to (25 * 200)).
+Approximate quantity of Bounty Issues per calendar quarter round varies from thirteen to twenty five (from ((12 * 400) + (1 * 200)) to (25 * 200)).
 
 
 ## Prioritization of participants
@@ -20,7 +20,11 @@ Bounty Program Participants are prioritized in the following order:
 
 2. Regular contributors (GitHub users who have three or more Pull Requests merged throughout the AsyncAPI GitHub Organization, checked with https://github.com/search?q=is%3Apr+org%3Aasyncapi+is%3Amerged+author%3Agh_username)
 
-3. Other (if a GitHub user doesn't fall under the above, the AsyncAPI Maintainer can determine the criteria i. e. regular volunteers, etc)
+3. Other (if a GitHub user doesn't fall under the above, the AsyncAPI Maintainer can determine the criteria i. e. regular volunteers, etc.)
+
+Assignment of the Bounty Issue on GitHub to users that fall under the first category can be performed immediately after the addition of the label `bounty` according to GitHub's timestamp.
+
+Assignment of the Bounty Issue on GitHub to users that fall under the second and third categories is performed not earlier than three calendar days after the addition of the label `bounty` according to GitHub's timestamp.
 
 
 ## Bounty Issues' numbering
@@ -29,12 +33,12 @@ To ensure ease of referencing, searching and automation, strictly defined format
 
 1. In submissions of issues for Bounty Program: `[repo]#[issue]` (`cli#38`)
 
-2. In invoices claiming reward: invoice subject `Bounty [repo]#[issue]` (e.g., `Bounty cli#38`), tag `bounty`
+2. In invoices claiming reward: invoice's subject `Bounty [repo]#[issue]` (e.g., `Bounty cli#38`), tag `bounty`
 
 
 ## Clarification of time periods
 
-Due to asynchronous nature of the AsyncAPI project itself and thus its Bounty Program, UTC offset in Bounty Program Issues' starting and ending dates is used. Starting dates should be considered having start at `00:00:00 UTC+12:00`, ending dates should be considered having end at `23:59:59 UTC-12:00`.
+Due to asynchronous nature of the AsyncAPI project itself and thus its Bounty Program, UTC offset in Bounty Program Issues' starting and ending dates is used. Starting dates should be considered having start at `00:00:00 UTC+12:00`, ending dates should be considered having end at `23:59:59 UTC-12:00` (inclusive).
 
 
 ## Bounty Issue Submission
@@ -71,7 +75,7 @@ https://github.com/issues?q=is%3Aopen+org%3Aasyncapi+label%3Abounty+label%3Aboun
 ```
 Also, Bounty Issues that have no assignee and thus are free to pick up can be viewed with GitHub's search tool using the URL formed as:
 ```
-https://github.com/issues?q=is%3Aopen+org%3Aasyncapi+label%3Abounty+no%3Aassignee
+https://github.com/issues?q=is%3Aopen+org%3Aasyncapi+label%3Abounty+label%3Abounty/2024-Q1+no%3Aassignee
 ```
 
 
@@ -97,15 +101,15 @@ Dropped Bounty Issue gets label of the second calendar quarter round (e.g., `bou
 
 ### Example Bounty Issue Timeline
 
-| Complexity Level | Assignment date (by GitHub) | Start date (by BP rules) | End date (by BP rules) | Draft PR submission | Final PR submission | Final PR merge |
-|------------------|-----------------------------|--------------------------|------------------------|---------------------|---------------------|----------------|
-| Medium           | 2023-04-27                  | 2023-05-01               | **2023-06-09**             | 2023-05-12          | 2023-05-26          | **2023-06-09**     |
-| Advanced         | 2023-04-26                  | 2023-05-01               | **2023-06-23**             | 2023-05-19          | 2023-06-09          | **2023-06-23**     |
+|Complexity Level|Assignment date (by GitHub)|Start date (by BP rules)|End date (by BP rules)|Draft PR submission|Final PR submission|Final PR merge|
+|----------------|---------------------------|------------------------|----------------------|-------------------|-------------------|--------------|
+|Medium          |2023-04-27                 |2023-05-01              |**2023-06-09**        |2023-05-12         |2023-05-26         |**2023-06-09**|
+|Advanced        |2023-04-26                 |2023-05-01              |**2023-06-23**        |2023-05-19         |2023-06-09         |**2023-06-23**|
 
 
 ## Extension of Bounty Issue's Timeline
 
-In case of the online absence of the AsyncAPI Maintainer in [Slack](https://asyncapi.slack.com) for a period of more than three working days in a raw, all target dates of the Bounty Issue Timeline are increased by one calendar week per each three working days in a raw of the online absence of the AsyncAPI Maintainer plus one calendar week. 'Plus one calendar week' period is required because after the AsyncAPI Maintainer has regained a confident online presence in [Slack](https://asyncapi.slack.com), the Bounty Program Participant would have to spend time getting back to the insides of the issue, and nearly unfamiliar at that time her or his own code.
+In case of the online absence of the AsyncAPI Maintainer in [Slack](https://asyncapi.slack.com) for a period of more than three working days in a row, all target dates of the Bounty Issue Timeline are increased by one calendar week per each three working days in a row of the online absence of the AsyncAPI Maintainer plus one calendar week. 'Plus one calendar week' period is required because after the AsyncAPI Maintainer has regained a confident online presence in [Slack](https://asyncapi.slack.com), the Bounty Program Participant would have to spend time getting back to the insides of the issue, and nearly unfamiliar at that time her or his own code.
 
 In case of unpredicted force majeure circumstances that could not be foreseen and/or are beyond the control of both the Bounty Program Participant and the AsyncAPI Maintainer, the Bounty Issue Timeline can be increased by either a fixed or indefinite amount of time, with a fair explanation in the Bounty Issue's or Pull Request's comments.
 
@@ -120,7 +124,7 @@ Bounty Program Participant is allowed to choose up to two Bounty Issues of any C
 
 In case documentation must be provided together with solution requested in the Bounty Issue, such requirement should be explicitly stated in the Scope during Bounty Issue submission.
 
-Bounty Issue has an overall time of life of five calendar months. If the Bounty Issue was not resolved during the first calendar quarter round (e.g., `bounty/2024-Q1`), it gets label of the second calendar quarter round (e.g., `bounty/2024-Q2`) and label `bounty/stalled`. If during two calendar months of the second calendar quarter round the Bounty Issue was not picked up by any Bounty Program Participant for resolution, all bounty-related labels are removed from it and Bounty Issue becomes a regular GitHub issue, which can again be submitted as a Bounty Issue Candidate.
+Bounty Issue has an overall time of life of five calendar months. If the Bounty Issue was not assigned during the first calendar quarter round (e.g., `bounty/2024-Q1`), it gets label of the second calendar quarter round (e.g., `bounty/2024-Q2`) and label `bounty/stalled`. If during two calendar months of the second calendar quarter round the Bounty Issue still was not picked up by any Bounty Program Participant for resolution, all bounty-related labels are removed from it and Bounty Issue becomes a regular GitHub issue, which can again be submitted as a Bounty Issue Candidate.
 
 
 
@@ -139,9 +143,9 @@ Note, that if Bounty Program Participant submits invoice expenses for more than 
 
 Each new Bounty Program Participant starts participation in the Bounty Program with the quantity of Bans equal to zero.
 
-In case a Bounty Program Participant stops rendering services directed towards resolution of the Bounty Issue without any communication on the subject (performs silent drop) for the first time, she or he receives a First Ban and will not be eligible to participate in the Bounty Program during the next one calendar quarter. After this period the First Ban expires.
+In case a Bounty Program Participant stops rendering services directed towards resolution of the Bounty Issue without any communication on the subject (performs 'silent drop') for the first time, she or he receives a First Ban and will not be eligible to participate in the Bounty Program during the next one calendar quarter. After this period the First Ban expires.
 
-In case a Bounty Program Participant stops rendering services directed towards resolution of the Bounty Issue without any communication on the subject (performs silent drop) for the second time during two calendar quarters after the expiration of the First Ban, she or he receives a Second Ban and will not be eligible to participate in the Bounty Program during the next three calendar quarters. After this period the Second Ban expires.
+In case a Bounty Program Participant stops rendering services directed towards resolution of the Bounty Issue without any communication on the subject (performs 'silent drop') for the second time during two calendar quarters after the expiration of the First Ban, she or he receives a Second Ban and will not be eligible to participate in the Bounty Program during the next three calendar quarters. After this period the Second Ban expires.
 
 After the expiration of the Second Ban or after two calendar quarters after the expiration of the First Ban if no Second Ban was received during this time, her or his Ban history is considered clean, and the quantity of Bans is reset to zero.
 
@@ -161,3 +165,4 @@ Think on the task, make sure that you understand how to do it and CAN do it, ask
 ##### This document is the consolidated and formalized version of all information publicly available in free form at
 ##### https://github.com/orgs/asyncapi/discussions/541#discussioncomment-5462792
 ##### https://github.com/orgs/asyncapi/discussions/877#discussioncomment-6970799
+##### https://asyncapi.slack.com/archives/C05UHTSEHE2/p1699433566459269
