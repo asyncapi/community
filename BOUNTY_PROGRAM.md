@@ -18,7 +18,7 @@ Bounty Program Participants are prioritized in the following order:
 
 1. AsyncAPI Maintainers (from any repository)
 
-2. Regular contributors (GitHub users who have three or more Pull Requests merged throughout the AsyncAPI GitHub Organization)
+2. Regular contributors (GitHub users who have three or more Pull Requests merged throughout the AsyncAPI GitHub Organization, checked with https://github.com/search?q=is%3Apr+org%3Aasyncapi+is%3Amerged+author%3Agh_username)
 
 3. Other (if a GitHub user doesn't fall under the above, the AsyncAPI Maintainer can determine the criteria i. e. regular volunteers, etc)
 
@@ -63,11 +63,11 @@ All GitHub issues selected as Bounty Issues get labels on GitHub:
 
 - `level/medium` or `level/advanced` according to the Complexity Level of the Bounty Issue
 
-- label indicating calendar quarter round of the Bounty Program in which Bounty Issue participates (e.g., `2024-Q1`)
+- label indicating calendar quarter round of the Bounty Program in which Bounty Issue participates (e.g., `bounty/2024-Q1`)
 
 After addition of labels GitHub issues selected as Bounty Issues can be viewed with GitHub's search tool using the URL formed as:
 ```
-https://github.com/issues?q=is%3Aopen+org%3Aasyncapi+label%3Abounty+label%3A2024-Q1
+https://github.com/issues?q=is%3Aopen+org%3Aasyncapi+label%3Abounty+label%3Abounty/2024-Q1
 ```
 Also, Bounty Issues that have no assignee and thus are free to pick up can be viewed with GitHub's search tool using the URL formed as:
 ```
@@ -93,14 +93,14 @@ If the Bounty Program Participant has not provided a weekly PR update, they are 
 
 In case the Bounty Program Participant still doesn't provide the PR update after three pings over three weeks, it is assumed that the task cannot be completed within the rest of the time, and the Bounty Program Participant has silently dropped the Bounty Issue. Ban rules are applied to such Bounty Program Participant, and the Bounty Issue becomes free for assignment to another Bounty Program Participant with a reset timeline, in the next calendar quarter round of the Bounty Program. At the same time the reward for this Bounty Issue does not alter the budget allocated for the next calendar quarter round of the Bounty Program, and it is excluded from randomization process for the next calendar quarter round of the Bounty Program if such process is to take place. 
 
-Dropped Bounty Issue gets label of the second calendar quarter round (e.g., `2024-Q2`) and label `dropped`. If during two calendar months of the second calendar quarter round the dropped Bounty Issue was not picked up by any Bounty Program Participant for resolution, all bounty-related labels are removed from it and this Bounty Issue becomes a regular GitHub issue, which can again be submitted as a Bounty Issue Candidate. It also can again be assigned to the same Bounty Program Participant who dropped it.
+Dropped Bounty Issue gets label of the second calendar quarter round (e.g., `bounty/2024-Q2`) and label `bounty/dropped`. If during two calendar months of the second calendar quarter round the dropped Bounty Issue was not picked up by any Bounty Program Participant for resolution, all bounty-related labels are removed from it and this Bounty Issue becomes a regular GitHub issue, which can again be submitted as a Bounty Issue Candidate. It also can again be assigned to the same Bounty Program Participant who dropped it.
 
 ### Example Bounty Issue Timeline
 
 | Complexity Level | Assignment date (by GitHub) | Start date (by BP rules) | End date (by BP rules) | Draft PR submission | Final PR submission | Final PR merge |
 |------------------|-----------------------------|--------------------------|------------------------|---------------------|---------------------|----------------|
-| Medium           | 2023-04-27                  | 2023-01-05               | **2023-06-09**             | 2023-05-12          | 2023-05-26          | **2023-06-09**     |
-| Advanced         | 2023-04-26                  | 2023-01-05               | **2023-06-23**             | 2023-05-19          | 2023-06-09          | **2023-06-23**     |
+| Medium           | 2023-04-27                  | 2023-05-01               | **2023-06-09**             | 2023-05-12          | 2023-05-26          | **2023-06-09**     |
+| Advanced         | 2023-04-26                  | 2023-05-01               | **2023-06-23**             | 2023-05-19          | 2023-06-09          | **2023-06-23**     |
 
 
 ## Extension of Bounty Issue's Timeline
@@ -120,7 +120,7 @@ Bounty Program Participant is allowed to choose up to two Bounty Issues of any C
 
 In case documentation must be provided together with solution requested in the Bounty Issue, such requirement should be explicitly stated in the Scope during Bounty Issue submission.
 
-Bounty Issue has an overall time of life of five calendar months. If the Bounty Issue was not resolved during the first calendar quarter round (e.g., `2024-Q1`), it gets label of the second calendar quarter round (e.g., `2024-Q2`) and label `stalled`. If during two calendar months of the second calendar quarter round the Bounty Issue was not picked up by any Bounty Program Participant for resolution, all bounty-related labels are removed from it and Bounty Issue becomes a regular GitHub issue, which can again be submitted as a Bounty Issue Candidate.
+Bounty Issue has an overall time of life of five calendar months. If the Bounty Issue was not resolved during the first calendar quarter round (e.g., `bounty/2024-Q1`), it gets label of the second calendar quarter round (e.g., `bounty/2024-Q2`) and label `bounty/stalled`. If during two calendar months of the second calendar quarter round the Bounty Issue was not picked up by any Bounty Program Participant for resolution, all bounty-related labels are removed from it and Bounty Issue becomes a regular GitHub issue, which can again be submitted as a Bounty Issue Candidate.
 
 
 
