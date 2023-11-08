@@ -1,0 +1,270 @@
+name: Maintainer Management Workflow
+
+on:
+  pull_request:
+    types: [closed]
+    paths: 
+      - 'MAINTAINERS.yaml'
+env:
+  GH_TOKEN: ${{ secrets.GH_TOKEN }}
+
+jobs:
+  detect_maintainer_changes:
+    if: github.event.pull_request.merged 
+    runs-on: ubuntu-latest
+    steps: 
+      - name: Checkout main branch 
+        uses: actions/checkout@v3
+        with:
+          ref: master
+          path: community-main
+      - name: List of directory
+        run: ls -la
+      - name: Checkout one commit before last one
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 2
+          ref: master
+          path: community
+      - name: List of directory 
+        run: ls -la
+      - run: cd community && git checkout HEAD^
+      - name: Install dependencies
+        run: npm install js-yaml@4.1.0
+      - name: Compare files
+        id: compare-files
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const fs = require("fs");
+            const yaml = require('js-yaml');
+
+            const currentMaintainers = yaml.load(fs.readFileSync('./community-main/MAINTAINERS.yaml', 'utf8'));
+            const previousMaintainers = yaml.load(fs.readFileSync('./community/MAINTAINERS.yaml', 'utf8'));
+
+            const removed = previousMaintainers.filter(
+              (newObj) => !currentMaintainers.some((oldObj) => oldObj.github === newObj.github)
+            );
+            const added = currentMaintainers.filter(
+              (oldObj) => !previousMaintainers.some((newObj) => newObj.github === oldObj.github)
+            );
+
+            if (added.length > 0) {
+              core.setOutput("newMaintainers", added.map((obj) => obj.github).join(","));
+            }
+            if (removed.length > 0) {
+              core.setOutput("removedMaintainers", removed.map((obj) => obj.github).join(","));
+            }
+
+            const removedTscMembers = previousMaintainers.filter(
+              (obj) => !currentMaintainers.some((mainObj) => mainObj.github === obj.github) && obj.isTscMember === true
+            );
+
+            if (removedTscMembers.length > 0) {
+              core.setOutput("removedTscMembers", removedTscMembers.map((obj) => obj.github).join(","));
+              core.info(`Removed TSC Members: ${removedTscMembers.map((obj) => obj.github).join(",")}`);
+            }
+
+            // Log information for debugging
+            core.info('Maintainers in main branch:\n' + yaml.dump(currentMaintainers));
+            core.info('Location of Maintainers in main branch:');
+            core.info(fs.realpathSync('./community-main/MAINTAINERS.yaml'));
+            core.info('Maintainers in PR branch:\n' + yaml.dump(previousMaintainers));
+            core.info('Location of Maintainers in PR branch:');
+            core.info(fs.realpathSync('./community/MAINTAINERS.yaml'));
+
+      - name: Debug newMaintainers output
+        run: |
+          echo "newMaintainers = $newMaintainers"
+
+      - name: Debug removedMaintainers output
+        run: |
+          echo "removedMaintainers = $removedMaintainers"
+
+    outputs:
+      newMaintainers: ${{ steps.compare-files.outputs.newMaintainers }}
+      removedMaintainers: ${{ steps.compare-files.outputs.removedMaintainers }}
+      removedTscMembers: ${{ steps.compare-files.outputs.removedTscMembers }}
+
+  add_maintainer:
+    needs: detect_maintainer_changes
+    if: needs.detect_maintainer_changes.outputs.newMaintainers != ''
+    runs-on: ubuntu-latest
+    steps:
+      - name: Invite new maintainers to the organization
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{ env.GH_TOKEN }}
+          script: |
+            const newMaintainers = '${{ needs.detect_maintainer_changes.outputs.newMaintainers }}'.split(',');
+            for (const maintainer of newMaintainers) {
+              try {
+                await github.request('PUT /orgs/{org}/memberships/{username}', {
+                  org: 'asyncapi',
+                  username: maintainer
+                });
+              } catch (error) {
+                core.setFailed(`Failed to add ${maintainer} to the organization: ${error.message}`);
+              }
+            }
+
+      - name: Add new maintainers to the team
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{ env.GH_TOKEN }}
+          script: |
+            const newMaintainers = '${{ needs.detect_maintainer_changes.outputs.newMaintainers }}'.split(',');
+            for (const maintainer of newMaintainers) {
+              try {
+                await github.request('PUT /orgs/{org}/teams/{team_slug}/memberships/{username}', {
+                  org: 'asyncapi',
+                  team_slug: 'maintainers',
+                  username: maintainer
+                });
+              } catch (error) {
+                core.setFailed(`Failed to add ${maintainer} to the team: ${error.message}`);
+              }
+            }
+
+    outputs:
+      newMaintainers: ${{needs.detect_maintainer_changes.outputs.newMaintainers }}
+
+  display_message:
+    needs: add_maintainer
+    if: needs.add_maintainer.outputs.newMaintainers != ''
+    runs-on: ubuntu-latest
+    steps:
+      - name: Display welcome message for new maintainers
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{ secrets.GH_TOKEN }}
+          script: |
+            const newMaintainers = "${{ needs.add_maintainer.outputs.newMaintainers }}".split(",");
+            console.log(`New maintainers: ${newMaintainers}`);
+            const welcomeMessage = newMaintainers.map((maintainer) => `@${maintainer.trim().replace(/^@/, '')} I have invited you to join the AsyncAPI organization, and you are added to the team that lists all Maintainers.\n
+            
+                      Please take a moment to verify if you would like to provide more details for your account, such as your LinkedIn profile, Twitter handle, or company affiliation. In case there is anything you want to add, please open up a separate pull request for the \`MAINTAINERS.yaml\` file.\n
+                      
+                      Additionally, if you are interested in becoming a [TSC member](https://github.com/amadeus4dev-examples/amadeus-async-flight-status) and contributing to the direction of the AsyncAPI Initiative, let us know, and we'll be happy to guide you through the process. Every maintainer has the right to become a TSC member, just open a pull request to modify your entry in \`MAINTAINER.yaml\` file and make sure \`isTscMember\` property is set to \`true\`. You can find some basic information about TSC membership in [this TSC-related guide](https://github.com/asyncapi/community/blob/master/TSC_MEMBERSHIP.md). Feel free to reach out to us for more help by dropping a comment in this pull request, or by asking for help in our Slack.\n
+                      
+                      Welcome aboard! We are excited to have you as part of the team.`).join("\n");
+            
+            const { owner, repo } = context.repo;
+            const { number: issue_number } = context.issue;
+            return github.rest.issues.createComment({ owner, repo, issue_number, body: welcomeMessage });
+
+  remove_maintainer:
+    needs: detect_maintainer_changes
+    if: needs.detect_maintainer_changes.outputs.removedMaintainers != ''
+    runs-on: ubuntu-latest
+    steps:
+      - name: Remove maintainers from the organization
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{ env.GH_TOKEN }}
+          script: |
+            const removedMaintainers = '${{ needs.detect_maintainer_changes.outputs.removedMaintainers }}'.split(',');
+            for (const maintainer of removedMaintainers) {
+              try {
+                await github.request('DELETE /orgs/asyncapi/memberships/{username}', {
+                  username: maintainer
+                });
+                core.info(`Successfully removed ${maintainer} from the organization.`);
+              } catch (error) {
+                core.setFailed(`Failed to remove ${maintainer} from the organization: ${error.message}`);
+              }
+            }
+
+    outputs:
+      removedMaintainers: ${{ needs.detect_maintainer_changes.outputs.removedMaintainers }}
+      removedTscMembers: ${{ needs.detect_maintainer_changes.outputs.removedTscMembers }}
+
+  remove_maintainer_goodbye:
+    needs: remove_maintainer
+    if: needs.remove_maintainer.outputs.removedMaintainers != ''
+    runs-on: ubuntu-latest
+    steps:
+      - name: Display goodbye message to removed maintainers
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{ env.GH_TOKEN }}
+          script: |
+              const removedMaintainers = "${{ needs.remove_maintainer.outputs.removedMaintainers }}".split(",");
+              const removedTscMembers = "${{ needs.remove_maintainer.outputs.removedTscMembers }}".split(",");
+
+              // Goodbye message to removed maintainers and notification to TSC members
+              const combinedMessages = removedMaintainers.map((maintainer) => {
+                const tscNotification = removedTscMembers.includes(maintainer)
+                  ? `@asyncapi/tsc_members We want to inform you that @${maintainer.trim().replace(/^@/, '')} is no longer a maintainer of any repository under AsyncAPI Initiative. It means this maintainer is also no longer a member of TSC.`
+                  : '';
+                return `@${maintainer.trim().replace(/^@/, '')} We wanted to express our gratitude for your contributions as a maintainer of AsyncAPI Initiative. Your efforts have been immensely valuable to us, and we truly appreciate your dedication. Thank you once again, and we wish you all the best in your future endeavors!\n\n${tscNotification}`;
+              });
+
+              const { owner, repo } = context.repo;
+              const { number: issue_number } = context.issue;
+              for (const message of combinedMessages) {
+                  github.rest.issues.createComment({ owner, repo, issue_number, body: message });
+              }
+
+
+  update_emeritus:
+    needs: detect_maintainer_changes
+    if: needs.detect_maintainer_changes.outputs.removedTscMembers != ''
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v3
+
+      - name: Add TSC members to Emeritus.yaml and print
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{ env.GH_TOKEN }}
+          script: |
+            const fs = require('fs');
+            const path = './Emeritus.yaml';
+
+            // Read the current content of the file
+            let content = fs.readFileSync(path, 'utf8').trim(); // remove any trailing whitespaces
+
+            // Split the removed maintainers and prepare them for the yaml format
+            const removedTscMembers = "${{ needs.detect_maintainer_changes.outputs.removedTscMembers }}".split(',')
+              .map(maintainer => `  - ${maintainer.trim()}`)
+              .join('\n');
+
+            // Append the removed maintainers to the file content
+            if (removedTscMembers) {
+              content = content + '\n' + removedTscMembers;
+            }
+
+            // Write the updated content back to the file
+            fs.writeFileSync(path, content);
+
+            // Log the updated content to the console
+            core.info('Updated Emeritus.yaml:\n', content);
+      
+      - name: Create new branch
+        run: |
+          git checkout -b update-emeritus-${{ github.run_id }}
+
+      - name: Commit and push
+        run: |
+          git add .
+          git commit -m "Update Emeritus.yaml"
+          git push https://${{ secrets.GH_TOKEN}}@github.com/asyncapi/community update-emeritus-${{ github.run_id }}
+
+      - name: Create PR
+        run: |
+          gh pr create --title "docs(community): update latest emeritus list" --body "Updated Emeritus list is available and this PR introduces changes with latest information about Emeritus" --head update-emeritus-${{ github.run_id }}
+
+  notify_slack_on_failure:
+    if: always() && (needs.detect_maintainer_changes.result == 'failure' || needs.add_maintainer.result == 'failure' || needs.display_message.result == 'failure' || needs.remove_maintainer.result == 'failure' || needs.update_emeritus.result == 'failure' || needs.remove_maintainer_goodbye.result == 'failure')
+    needs: [detect_maintainer_changes, add_maintainer, display_message, remove_maintainer, remove_maintainer_goodbye, update_emeritus]
+    runs-on: ubuntu-latest
+    steps:
+    - name: Report workflow run status to Slack
+      uses: rtCamp/action-slack-notify@v2
+      env:
+        SLACK_WEBHOOK: ${{secrets.SLACK_CI_FAIL_NOTIFY}}
+        SLACK_TITLE: 🚨 Maintainer Management Workflow failed 🚨
+        SLACK_MESSAGE: Failed to post a message to new Maintainer
+        MSG_MINIMAL: true
