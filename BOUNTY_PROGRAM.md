@@ -109,7 +109,7 @@ Dropped Bounty Issue gets label of the second calendar quarter round (e.g., `bou
 
 ## Extension of Bounty Issue's Timeline
 
-In case of the online absence of the AsyncAPI Maintainer in [Slack](https://asyncapi.slack.com) for a period of more than three working days in a row, all target dates of the Bounty Issue Timeline are increased by one calendar week per each three working days in a row of the online absence of the AsyncAPI Maintainer plus one calendar week. 'Plus one calendar week' period is required because after the AsyncAPI Maintainer has regained a confident online presence in [Slack](https://asyncapi.slack.com), the Bounty Program Participant would have to spend time getting back to the insides of the issue, and nearly unfamiliar at that time her or his own code.
+In case of the online absence of the AsyncAPI Maintainer in [Slack](https://asyncapi.slack.com) for a period of more than three working days in a row, all target dates of the Bounty Issue Timeline are increased by one calendar week per each three working days in a row of the online absence of the AsyncAPI Maintainer plus one calendar week. 'Plus one calendar week' period is required because after the AsyncAPI Maintainer has regained a confident online presence in [Slack](https://asyncapi.slack.com), the Bounty Program Participant would have to spend time getting back to the insides of the issue, and nearly unfamiliar at that time their own code.
 
 In case of unpredicted force majeure circumstances that could not be foreseen and/or are beyond the control of both the Bounty Program Participant and the AsyncAPI Maintainer, the Bounty Issue Timeline can be increased by either a fixed or indefinite amount of time, with a fair explanation in the Bounty Issue's or Pull Request's comments.
 
@@ -136,18 +136,18 @@ At the time of writing (2023-10-01) OpenCollective supports `ACH`, `Internationa
 
 **Potential Bounty Program Participants should check whether they will be able to receive payment themselves before starting participation in the Bounty Program.**
 
-Note, that if Bounty Program Participant submits invoice expenses for more than six hundred US dollars 00 cents (USD 600.00) per calendar year to a Collective at OpenCollective with a Fiscal Host in the US (which is AsyncAPI), she or he will be asked to fill out an IRS tax information form, which will be either a `W-8BEN` or a `W-8BEN-E` depending on whether the Bounty Program Participant is an individual or a sole proprietor, supplying a local tax ID.
+Note, that if Bounty Program Participant submits invoice expenses for more than six hundred US dollars 00 cents (USD 600.00) per calendar year to a Collective at OpenCollective with a Fiscal Host in the US (which is AsyncAPI), they will be asked to fill out an IRS tax information form, which will be either a `W-8BEN` or a `W-8BEN-E` depending on whether the Bounty Program Participant is an individual or a sole proprietor, supplying a local tax ID.
 
 
 ## Ban
 
 Each new Bounty Program Participant starts participation in the Bounty Program with the quantity of Bans equal to zero.
 
-In case a Bounty Program Participant stops rendering services directed towards resolution of the Bounty Issue without any communication on the subject (performs 'silent drop') for the first time, she or he receives a First Ban and will not be eligible to participate in the Bounty Program during the next one calendar quarter. After this period the First Ban expires.
+In case a Bounty Program Participant stops rendering services directed towards resolution of the Bounty Issue without any communication on the subject (performs 'silent drop') for the first time, they receive a First Ban and will not be eligible to participate in the Bounty Program during the next one calendar quarter. After this period the First Ban expires.
 
-In case a Bounty Program Participant stops rendering services directed towards resolution of the Bounty Issue without any communication on the subject (performs 'silent drop') for the second time during two calendar quarters after the expiration of the First Ban, she or he receives a Second Ban and will not be eligible to participate in the Bounty Program during the next three calendar quarters. After this period the Second Ban expires.
+In case a Bounty Program Participant stops rendering services directed towards resolution of the Bounty Issue without any communication on the subject (performs 'silent drop') for the second time during two calendar quarters after the expiration of the First Ban, they receive a Second Ban and will not be eligible to participate in the Bounty Program during the next three calendar quarters. After this period the Second Ban expires.
 
-After the expiration of the Second Ban or after two calendar quarters after the expiration of the First Ban if no Second Ban was received during this time, her or his Ban history is considered clean, and the quantity of Bans is reset to zero.
+After the expiration of the Second Ban or after two calendar quarters after the expiration of the First Ban if no Second Ban was received during this time, their Ban history is considered clean, and the quantity of Bans is reset to zero.
 
 A dedicated list is used for the purpose of tracking Ban history.
 
@@ -166,3 +166,4 @@ Think on the task, make sure that you understand how to do it and CAN do it, ask
 ##### https://github.com/orgs/asyncapi/discussions/541#discussioncomment-5462792
 ##### https://github.com/orgs/asyncapi/discussions/877#discussioncomment-6970799
 ##### https://asyncapi.slack.com/archives/C05UHTSEHE2/p1699433566459269
+##### https://github.com/asyncapi/community/pull/897#discussion_r1390778779
