@@ -226,7 +226,12 @@ Here is an example with a procedure on how to use this workflow:
 4. Click on the `Run Workflow` button.
 5. Provide the YouTube ID in the box.
 6. Click on `Run workflow` button. 
-7. Wait for the workflow to finish. (Depending on video size, it may take some time to upload, so please have patience. Thank you.) 
-8. Go to podcasters.spotify.com (Login to your account if you haven't already).
-9. Go to `Episodes` section. There, you will see your latest upload.
-10. Hurray! Your episode is now uploaded successfully!
+7. Wait for the workflow to finish. (Depending on video size, it may take some time to upload, so please have patience. Thank you.) .
+8. A few moments later....Hurray! Your episode is now uploaded successfully!
+
+You can also modify description and other information for uploaded podcast directly in Spotify:
+
+1. Go to https://podcasters.spotify.com/.
+2. Login using AsyncAPI account.
+2. Go to `Episodes` section. There, you will see your latest upload.
+3. Perform edits and save them.
