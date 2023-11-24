@@ -33,7 +33,7 @@ To ensure ease of referencing, searching and automation, strictly defined format
 
 1. In submissions of issues for Bounty Program: `[repo]#[issue]` (`cli#38`)
 
-2. In invoices claiming reward: invoice's subject `Bounty [repo]#[issue]` (e.g., `Bounty cli#38`), tag `bounty`
+2. In invoices claiming reward: invoice's subject `Bounty [repo]#[issue]` (e.g., `Bounty cli#38`), tag `bounty` (two rewards can be joined into one sum, in this case a comma and a space should be used in the invoice's subject as a separator for Bounty Issues numbers, e.g., `Bounty cli#38, cli#361`)
 
 
 ## Clarification of time periods
@@ -43,7 +43,7 @@ Due to asynchronous nature of the AsyncAPI project itself and thus its Bounty Pr
 
 ## Bounty Issue Submission
 
-Bounty Issues for the upcoming calendar quarter round of the Bounty Program are submitted during the second and third weeks of the last month of the current calendar quarter, after call for such submission, in a quantity of no more than two issues per repository, in comments of the dedicated [AsyncAPI Organization's Discussion](https://github.com/orgs/asyncapi/discussions), by the AsyncAPI Maintainer of the given repository, containing the following five fields:
+Bounty Issues for the upcoming calendar quarter round of the Bounty Program are submitted during the first and second full (seven-day) calendar weeks of the last month of the current calendar quarter, after call for such submission, in a quantity of no more than two issues per repository, in comments of the dedicated [AsyncAPI Organization's Discussion](https://github.com/orgs/asyncapi/discussions), by the AsyncAPI Maintainer of the given repository, containing the following five fields:
 
 1. Number: `cli#361`
 
@@ -83,7 +83,7 @@ https://github.com/issues?q=is%3Aopen+org%3Aasyncapi+label%3Abounty+label%3Aboun
 
 Start date in Bounty Program is counted from Monday of the next week when assignment of the Bounty Issue on GitHub happened.
 
-In case assignment of the Bounty Issue on GitHub happened during fourth or fifth week of the last month of the calendar quarter, start date in Bounty Program is counted from the first Monday of the new calendar quarter round.
+In case assignment of the Bounty Issue on GitHub happened during third or fourth full (seven-day) calendar week of the last month of the calendar quarter, start date in Bounty Program is counted from the first Monday of the new calendar quarter round.
 
 For Bounty Issues of Complexity Level `Medium`:
 - Draft Pull Request must be submitted not later than on Friday of second week from the start date and updated on every Friday until submission of Final Pull Request
@@ -130,7 +130,7 @@ Bounty Issue has an overall time of life of five calendar months. If the Bounty 
 
 ## Claiming reward
 
-Claiming reward for the completed Bounty Issue is made through submission of invoice at [AsyncAPI page on OpenCollective](https://opencollective.com/asyncapi) (button 'SUBMIT EXPENSE') with invoice subject '`Bounty [repo]#[issue]`' (e.g., '`Bounty cli#38`'), tag '`bounty`'.
+Claiming reward for the completed Bounty Issue is made through submission of invoice at [AsyncAPI page on OpenCollective](https://opencollective.com/asyncapi) (button 'SUBMIT EXPENSE') with invoice subject '`Bounty [repo]#[issue]`' (e.g., '`Bounty cli#38`' or '`Bounty cli#38, cli#361`' in case of two rewards joined into one sum), tag '`bounty`'.
 
 At the time of writing (2023-10-01) OpenCollective supports `ACH`, `International SWIFT through Wise` (limitations of financial technology company 'Wise' are applied) and `PayPal` as automated payout methods. In rare cases (once per calendar year) Bounty Program Participant in personal communication with OpenCollective can request them to perform a payout using custom payment method to a non-sanctioned jurisdiction.
 
@@ -165,5 +165,6 @@ Think on the task, make sure that you understand how to do it and CAN do it, ask
 ##### This document is the consolidated and formalized version of all information publicly available in free form at
 ##### https://github.com/orgs/asyncapi/discussions/541#discussioncomment-5462792
 ##### https://github.com/orgs/asyncapi/discussions/877#discussioncomment-6970799
+##### https://docs.opencollective.com/help/expenses-and-getting-paid/tax-information
 ##### https://asyncapi.slack.com/archives/C05UHTSEHE2/p1699433566459269
 ##### https://github.com/asyncapi/community/pull/897#discussion_r1390778779
