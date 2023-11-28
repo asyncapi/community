@@ -1,26 +1,35 @@
-# Docs community
-## Open community meetings
+# AsyncAPI docs community
+
+## Open docs community meetings
+
 We host regular community meetings via Zoom where we discuss topics relating to the AsyncAPI initiative. All the meetings are livestreamed on our social media channels.
 
-### Join meetings
+### Join docs meetings
+
 - Add the AsyncAPI calendar to your [Google Calendar](https://calendar.google.com/calendar/u/3?cid=Y19xOXRzZWlnbG9tZHNqNm5qdWh2YnB0czExY0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t) or download the [ICS file](https://calendar.google.com/calendar/ical/c_q9tseiglomdsj6njuhvbpts11c%40group.calendar.google.com/public/basic.ics) to stay informed about upcoming meetings and calls.
 
 - If you're interested in the `spec` docs, join the dedicated **Spec 3.0 Docs** calls held bi-weekly every Thursday. 
 
 - You can also find [upcoming and past meetings details](https://www.asyncapi.com/community/events) on the events page. 
 
-### Watch past meetings
+### Watch past AsyncAPI docs meetings
+
 
 Visit the [AsyncAPI YouTube channel](https://www.youtube.com/AsyncAPI) for past meetings recordings.
 
-### Schedule meetings
+### Schedule docs meetings
 
-Read our FAQ for [meeting setup and automation details](https://github.com/asyncapi/community/blob/master/MEETINGS_ORGANIZATION.md).
 
-### Community discussion
-Visit the [Docs & Education discussion board](https://github.com/orgs/asyncapi/discussions/categories/docs-education) to discuss docs-related issues.
+Read our FAQ to [set up and automate your own docs meetings](https://github.com/asyncapi/community/blob/master/MEETINGS_ORGANIZATION.md).
 
-## Slack workspace (Asynchronous communication)
+
+### Docs and education community discussions
+
+Visit the [public AsyncAPI Docs & Education discussion board](https://github.com/orgs/asyncapi/discussions/categories/docs-education) to discuss docs-related issues.
+
+
+## AsyncAPI Slack workspace and docs channels
+
 
 Join our documentation-specific [Slack](https://www.asyncapi.com/slack-invite) channels to meet other technical writers:
 
