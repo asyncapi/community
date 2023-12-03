@@ -7,7 +7,7 @@ weight: 10
 
 These are some ways to get your first task:
 
-1. <b>Work on existing docs’ issues</b>: Look for issues with the ‘docs, ’ ‘documentation,’ ‘area/docs,’ and ‘good-first-issue’ tags on the [Docs Project board](https://github.com/orgs/asyncapi/projects/12).
+1. <b>Work on existing docs issues</b>: Look for issues with the `docs`, `documentation`, `area/docs`, and `good-first-issue` tags on the [Docs Project board](https://github.com/orgs/asyncapi/projects/12).
 
 2. <b>Update current docs</b>: Surf the existing documentation, look for typos, grammar, and errors, create an issue, and send a Pull Request. 
 
