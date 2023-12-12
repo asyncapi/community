@@ -6,28 +6,28 @@ This document defines grammar standards for AsyncAPI documentation across abbrev
 
 When you use an abbreviation or acronym for the first time, spell it out and include the shortest form in parentheses. 
 
-Abbreviations are meant to be used to save the reader’s time. They make your documentation look clean. However, using abbreviations may come with some downsides. Abbreviations add a layer of abstraction to text, which requires the reader to spend some mental energy to expand. Thus, it is best to add abbreviations in case of words that have been repeatedly used throughout your document. Once defined in a document, abbreviations or acronyms should be used consistently to ensure clarity and avoid confusion for readers.
+Abbreviations are meant to be used to save the reader's time. They make your documentation look clean. However, using abbreviations may come with some downsides. Abbreviations add a layer of abstraction to text, which requires the reader to spend some mental energy to expand. Thus, it is best to add abbreviations in case of words that have been repeatedly used throughout your document. Once defined in a document, abbreviations or acronyms should be used consistently to ensure clarity and avoid confusion for readers.
 
 Here are some examples of abbreviations:
-- ‘Event-driven architecture’ can be abbreviated as ‘EDA’.
-- ‘Producer Consumer Model’ can be abbreviated as ‘PCM’.
+- 'Event-driven architecture' can be abbreviated as 'EDA'.
+- 'Producer Consumer Model' can be abbreviated as 'PCM'.
 
 Here are some examples of acronyms:
-- ‘Artificial Intelligence’ can be acronymized as ‘AI’.
-- ‘Application Programming Interface’ can be acronymized as ‘API’.
+- 'Artificial Intelligence' can be acronymized as 'AI'.
+- 'Application Programming Interface' can be acronymized as 'API'.
 
 ## Active voice
 
 Use active voice over passive voice whenever possible. Active voice makes writing easier to read and understand. When combined with short sentences, it makes it easy to convey an idea to the reader.
 
-Passive: ‘The documentation is being read by Charlie.’
-Active: ‘Charlie is reading the documentation.’
+Passive: 'The documentation is being read by Charlie.'
+Active: 'Charlie is reading the documentation.'
 
-Passive: ‘APIs are leveraged by developers to save time while building software.’
-Active: ‘Developers leverage APIs to save time while building software.’
+Passive: 'APIs are leveraged by developers to save time while building software.'
+Active: 'Developers leverage APIs to save time while building software.'
 
-Passive: ‘Clear instructions and explanations are provided for users by technical documentation.’
-Active: ‘Technical documentation provides clear instructions and explanations for users.’
+Passive: 'Clear instructions and explanations are provided for users by technical documentation.'
+Active: 'Technical documentation provides clear instructions and explanations for users.'
 
 ## Capitalization
 
@@ -54,10 +54,10 @@ A few examples:
 Stick with the present tense wherever possible. However, in some cases, using the future tense might be unavoidable. The present tense is more appropriate when speaking about facts, while the future tense might be needed when referring to experiments or improvements that are yet to come.
 
 The present tense is more appropriate when speaking about facts.
-‘An AsyncAPI document is a file that defines and annotates the different components of a specific Event-Driven API.’
+'An AsyncAPI document is a file that defines and annotates the different components of a specific Event-Driven API.'
 
 The future tense might be needed when referring to future enhancements, experiments, or planned improvements.
-‘We will incorporate user feedback to address any problems in the documentation.’
+'We will incorporate user feedback to address any problems in the documentation.'
 
 Past tense is used while talking about events that have previously occurred.
-‘Tutorials were added to the documentation as an entry point for new users.’
+'Tutorials were added to the documentation as an entry point for new users.'
