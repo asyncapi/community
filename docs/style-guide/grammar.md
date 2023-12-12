@@ -1,6 +1,6 @@
 ## Grammar
 
-This document defines grammar standards for AsyncAPI documentation across abbreviations and acronyms, active voice, capitalization, spelling, and verb tense. 
+The Grammar style guide defines grammar standards for AsyncAPI documentation across abbreviations and acronyms, active voice, capitalization, spelling, and verb tense.
 
 ## Abbreviations and acronyms
 
