@@ -117,6 +117,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     </tr>
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/akkshitgupta"><img src="https://avatars.githubusercontent.com/u/96991785?v=4?s=100" width="100px;" alt="Akshit Gupta"/><br /><sub><b>Akshit Gupta</b></sub></a><br /><a href="https://github.com/asyncapi/community/commits?author=akkshitgupta" title="Documentation">📖</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/nikhilkalburgi"><img src="https://avatars.githubusercontent.com/u/70331875?v=4?s=100" width="100px;" alt="nikhilkalburgi"/><br /><sub><b>nikhilkalburgi</b></sub></a><br /><a href="https://github.com/asyncapi/community/commits?author=nikhilkalburgi" title="Documentation">📖</a></td>
     </tr>
   </tbody>
 </table>
