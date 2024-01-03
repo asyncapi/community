@@ -439,6 +439,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "nikhilkalburgi",
+      "name": "nikhilkalburgi",
+      "avatar_url": "https://avatars.githubusercontent.com/u/70331875?v=4",
+      "profile": "https://github.com/nikhilkalburgi",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "commitConvention": "angular",
