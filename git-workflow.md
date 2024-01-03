@@ -44,7 +44,7 @@ The result is as follows:
     ```
     git remote add upstream https://github.com/asyncapi/asyncapi.git
     ```
-3. Run the `git fetch upstream master` command to fetch all branches.
+3. Run the `git fetch upstream master` command to fetch all the changes from upstream/master branch.
 4. Set up the local `master` branch to track the remote `master` branch from the upstream repository:
     ```
     git branch -u upstream/master master
