@@ -8,7 +8,7 @@ The members of the CoC Committee are members of the [Technical Steering Committe
 
 ## Members
 
-The CoC Committee consists of 3 full members and 3 members alternates. The members of the interim committee are listed below:
+The AsyncAPI CoC Committee consists of 3 full members and 3 alternate members:
 
 **Full Members**:
 
