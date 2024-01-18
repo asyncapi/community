@@ -1,6 +1,6 @@
 ---
 title: 'Prerequisite knowledge'
-weight: 20
+weight: 40
 ---
 
 This section highlights the key technologies, concepts, and skills that technical writers should know when working on AsyncAPI documentation. While you don't need to know everything to begin contributing, you should understand the main concepts behind the documentation methodology and tools, as well as the technologies surrounding the AsyncAPI specification.

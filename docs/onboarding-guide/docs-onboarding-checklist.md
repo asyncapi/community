@@ -1,6 +1,6 @@
 ---
 title: Docs onboarding checklist
-weight: 10
+weight: 30
 ---
 ## AsyncAPI docs onboarding checklist
 

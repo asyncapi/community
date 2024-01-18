@@ -1,6 +1,6 @@
 ---
 title: 'Technical writer contributor responsibilities'
-weight: 30
+weight: 20
 ---
 
 Technical writers will collaborate with other writers, SMEs, designers, developers, and maintainers to create quality technical documentation. 

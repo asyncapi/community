@@ -1,20 +1,22 @@
 ---
 title: 'Introduction'
-weight: 0
+weight: 10
 ---
-## AsyncAPI docs onboarding guide
+## Technical writer onboarding guide
 
-This onboarding guide is for technical writers who are new to the AsyncAPI community to learn how to contribute. For information about contributing to the AsyncAPI codebase, see the [contributing document](https://github.com/asyncapi/community/blob/master/CONTRIBUTING.md). Although intended for a developer audience, writers can find descriptions of general contribution principles and workflows for AsyncAPI projects.
+The AsyncAPI technical writer onboarding guide teaches new community members how to contribute to our documentation effectively. 
 
-The goal of this onboarding guide is to help technical writers understand the tools, technologies, and processes in our documentation. More specifically, this section will help new writers to:
+> For a comprehensive understanding of the various ways you can contribute to the AsyncAPI Initiative, please consult the [AsyncAPI contributing guidelines](https://github.com/asyncapi/community/blob/master/CONTRIBUTING.md).
 
-* Understand consumers of the documentation.
-* Identify teammates and subject matter experts (SMEs).
-* Find bugs and create issues.
-* Make changes to the documentation.
-* Receive feedback from reviewers.
-* Publish changes.
+The goal is providing docs contributors with the necessary tools and knowledge to:
 
-We encourage you to reach out to the community whenever you have questions. For specifics on communication channels and to move forward with onboarding, start with the [onboarding checklist](/onboarding-guide/docs-onboarding-checklist.md).
+* Understand our documentation tools, technologies, and processes.
+* Comprehend our documentation target audiences.
+* Connect with teammates and subject matter experts (SMEs).
+* Report documentation bugs via issues.
+* Implement and propose updates to our documentation.
+* Obtain and incorporate reviewers' feedback.
+* Publish changes successfully.
+
 
 
