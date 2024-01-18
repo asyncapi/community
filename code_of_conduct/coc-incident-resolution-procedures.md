@@ -45,7 +45,8 @@ To report a violation in writing, please email [conduct@asyncapi.io](mailto:cond
 
 ### Submit in spoken conversation
 
-If you prefer to report the violation in a spoken conversation, you may request a virtual meeting with a CoC Committee member. If the incident occurs at an event, you may report the incident in person either to a member of the AsyncAPI CoC member or a [Technical Steering Committee](https://www.asyncapi.com/community/tsc) (TSC) member.
+If you prefer to report the violation in a spoken conversation, you may request a virtual meeting with a CoC Committee member. If the incident occurs at an event, you may report the incident in person either to a member of the AsyncAPI CoC Committee or a [Technical Steering Committee](https://www.asyncapi.com/community/tsc) (TSC) member.
+
 
 ### How to report anonymously
 
