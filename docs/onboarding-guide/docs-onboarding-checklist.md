@@ -1,5 +1,5 @@
 ---
-title: Docs onboarding checklist
+title: 'Docs onboarding checklist'
 weight: 30
 ---
 ## AsyncAPI docs onboarding checklist

@@ -3,12 +3,12 @@ title: 'Technical writer contributor responsibilities'
 weight: 20
 ---
 
-Technical writers will collaborate with other writers, SMEs, designers, developers, and maintainers to create quality technical documentation. 
+In the AsyncAPI community, technical writers collaborate with other technical writers, Subject Matter Experts (SME), designers, engineers, and core maintainers. 
 
-Some of your responsibilities include: 
+Technical writer contributor responsibilities include: 
 
-* Creating quality, easy-to-use, clear, and accurate documentation for internal and external audiences.
-* Collaborating with other teammates to plan, create, and maintain documentation.
-* Assisting other technical writers and members of the community.
-* Reviewing and improving documentation.
-* Joining community calls and meetings to learn more and share ideas.
+* Create quality, easy-to-use, clear, and accurate documentation for all audience levels.
+* Collaborate with other contributors to propose, create, and maintain documentation.
+* Support fellow technical writers and community members.
+*  Engage in documentation review processes and incorporate feedback.
+* Join documentation community meetings/streams to connect with the community.
