@@ -82,7 +82,7 @@ Reports will only be shared with non-conflicted members of the CoC Committee, wi
 
 The CoC Committee will investigate the report by reviewing available evidence and, if appropriate, interviewing witnesses, the accused person, and persons who were targeted or may have been harmed. In some cases, the CoC Committee may consult an external professional investigator or mediator to assist.
 
-If a potential incident comes to the CoC Committee’s attention that may present a serious continuing risk to community safety, the CoC Committee may investigate or ask Project-level incident responders to investigate, even if no official report has been received.
+If a potential incident comes to the CoC Committee’s attention that may present a serious continuing risk to community safety, the CoC Committee may investigate it even if no official report has been received.
 
 If the CoC Committee determines that the Code of Conduct was violated, the CoC Committee will decide on what remediation steps should be taken. See “Resolution” below for more information.
 
