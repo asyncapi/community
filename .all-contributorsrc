@@ -430,6 +430,24 @@
         "blog",
         "promotion"
       ]
+    },
+    {
+      "login": "akkshitgupta",
+      "name": "Akshit Gupta",
+      "avatar_url": "https://avatars.githubusercontent.com/u/96991785?v=4",
+      "profile": "https://github.com/akkshitgupta",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "nikhilkalburgi",
+      "name": "nikhilkalburgi",
+      "avatar_url": "https://avatars.githubusercontent.com/u/70331875?v=4",
+      "profile": "https://github.com/nikhilkalburgi",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "commitConvention": "angular",
