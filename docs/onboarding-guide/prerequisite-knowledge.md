@@ -11,7 +11,7 @@ Our prerequisite knowledge section highlights the key technologies, concepts, an
 ## Markdown syntax and `mermaid.js` diagrams
 AsyncAPI's docs are written in [Markdown syntax](https://www.markdownguide.org/basic-syntax/).
 
-Our diagrams are also written with [markdown syntax](https://mermaid.live/) thanks to the [mermaid.js](https://mermaid.js.org/) dependency.
+Our diagrams are created with [Mermaid markdown syntax](https://mermaid.live/) thanks to the [mermaid.js](https://mermaid.js.org/) dependency.
  
 ## Familiarity with the open-source ecosystem
 
