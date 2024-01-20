@@ -13,7 +13,7 @@ Join OPEN docs community meetings via Zoom, a regular space for docs contributor
 Visit the [public AsyncAPI Docs & Education discussion board](https://github.com/orgs/asyncapi/discussions/categories/docs-education) to discuss docs-related issues and propose improvements.
 
 ## AsyncAPI Slack workspace and docs channels
-Join our documentation Slack channel to meet other technical writers:
+Join the [AsyncAPI documentation Slack channel](https://join.slack.com/share/enQtNjUxNTY1NTU1MDk0NS1mYjNhODFhZDI3ZDRjODA1ZWRkZTZlYmM4ZTNjNzZjNTg5NTBiYjNmNTkwYzRlYzY4ZjQ4M2RhMDYzMjI3N2U5) to meet other technical writers:
 
 - **#13_docs:** A space for all technical writers to start discussions, ask questions, share new ideas, and request `good first issues.`
 
