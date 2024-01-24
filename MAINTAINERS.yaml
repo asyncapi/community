@@ -268,15 +268,15 @@
   isTscMember: true
   repos:
     - jasyncapi-idea-plugin
-- name: Pratik Haldankar
-  github: pratik2315
-  slack: U03ADC8FD2S
-  linkedin: pratik-haldankar-1b237a205
-  twitter: PratikHaldankr
+- name: Prince Rajpoot
+  github: princerajpoot20
+  linkedin: princerajpoot
+  slack: U04STTQHV18
+  twitter: iamPrince_2003
   availableForHire: true
   isTscMember: true
   repos:
-    - generator
+    - studio
 - name: Richard Coppen
   github: rcoppen
   linkedin: richard-coppen
