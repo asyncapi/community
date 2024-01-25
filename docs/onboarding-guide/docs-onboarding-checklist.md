@@ -17,6 +17,6 @@ Complete in order the following onboarding tasks:
 - [ ] Familiarize yourself with the _work-in-progress_ [AsyncAPI Style Guide](https://github.com/asyncapi/community/pulls?q=is%3Apr+is%3Aopen+style+guide).
 - [ ] Read all docs under the following content buckets: `Concepts`, `Tutorials`, `Reference`. (Take the time to go through each tutorial.)
 - [ ] Set up your local environment following our instructions for the [AsyncAPI git workflow](https://github.com/asyncapi/community/blob/master/git-workflow.md).
-- [ ] Introduce yourself in AsyncAPI Slack in the #01_introductions channel and the #13_docs channel. Ask docs-related questions in #13_docs.
-- [ ] [Reach out to Quetzalli in Slack DM](https://asyncapi.slack.com/team/U02AKC14WAJ) to request a good first docs issue.
+- [ ] Introduce yourself in AsyncAPI Slack in the `#01_introductions` channel and the `#13_docs` channel. Ask docs-related questions in #13_docs.
+- [ ] Request a good first docs issue in the [`#13_docs` Slack channel](https://asyncapi.com/slack-invite).
 - [ ] Attend [OPEN docs meetings](https://www.asyncapi.com/community/events) to chat with other maintainers, ask docs questions, and request help on docs blockers. 
