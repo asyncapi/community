@@ -45,6 +45,51 @@
           "month": "December"
         },
         "link": "https://www.asyncapi.com/blog/google-season-of-docs-2022"
+      },
+      {
+        "type": "initiative_driver",
+        "title": "Driver, manager and promoter of Google Season of Docs Case Study at AsyncAPI",
+        "date": {
+          "year": 2023,
+          "month": "April-December"
+        },
+        "link": "https://github.com/orgs/asyncapi/discussions/961"
+      },
+      {
+        "type": "category_driver",
+        "title": "Driver and manager the TW category & writers for the AsyncAPI Mentorship Program",
+        "date": {
+          "year": 2023,
+          "month": "April-December"
+        },
+        "link": "https://github.com/orgs/asyncapi/discussions/689"
+      },
+      {
+        "type": "presentation",
+        "title": "The Power of Ecosystem Thinking Cultivating AsyncAPI Docs Community, AACoT, Madrid edition",
+        "date": {
+          "year": 2023,
+          "month": "October"
+        },
+        "link": "https://www.youtube.com/watch?v=1FagXNonmQ4"
+      },
+      {
+        "type": "mentoring",
+        "title": "Mentored Vaishnavi in public speaking for her own request/reply to the AACoT Bengaluru talk",
+        "date": {
+          "year": 2023,
+          "month": "November"
+        },
+        "link": "https://www.youtube.com/watch?v=JDrO8JypFOM&t=3s"
+      },
+      {
+        "type": "presentation",
+        "title": "Presentation V3. Request/Reply use cases ",
+        "date": {
+          "year": 2023,
+          "month": "December"
+        },
+        "link": "https://github.com/asyncapi/community/issues/985"
       }
     ]
   },
