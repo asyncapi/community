@@ -1,9 +1,9 @@
 ---
-title: Contribute to Docs
+title: Contribute to docs
 weight: 10
 ---
 
-## Contribute to Docs
+## Contribute to docs
 
 These are some ways to get your first task:
 
