@@ -1,56 +1,59 @@
 # AsyncAPI Bounty Program
 
+## Overview
+
 The AsyncAPI Bounty Program is a specification of the software development process, customized to meet the needs of the AsyncAPI Initiative.
 
-The AsyncAPI Bounty Program operates exclusively on donated funds, does not seek financial profit, uses publicly and freely available tools only, and has as its main purpose rewarding contributors to open source software while creating an artificial set of time constraints to make the schedule for achieving programming targets predictable.
+The AsyncAPI Bounty Program operates exclusively on donated funds, does not seek financial profit, uses publicly and freely available tools only, and has as its main purpose rewarding individual contributors to open source software while creating an artificial set of time constraints to make the schedule for achieving programming targets predictable.
 
 Anyone may implement this specification of the software development process with or without any modification in any way they find suitable.
+
 
 ## Budget
 
 The budget of the Bounty Program per calendar year is twenty thousand US dollars and 00 cents (USD 20,000.00), which is five thousand US dollars and 00 cents (USD 5,000.00) per calendar quarter (three calendar months), split as follows:
 
-- four thousand six hundred US dollars and 00 cents (USD 4,600.00) per calendar quarter as the total amount of reward for Bounty Issues
+- four thousand six hundred US dollars and 00 cents (USD 4,600.00) per calendar quarter as the total amount of reward for completed Bounty Issues
 
 - four hundred US dollars and 00 cents (USD 400.00) per calendar quarter as the cost of the Bounty Program Coordination
 
-Reward for Bounty Issue of Complexity Level `Medium` is two hundred US dollars and 00 cents (USD 200.00).
+The reward for completion of the Bounty Issue of Complexity Level `Medium` is two hundred US dollars and 00 cents (USD 200.00).
 
-Reward for Bounty Issue of Complexity Level `Advanced` is four hundred US dollars and 00 cents (USD 400.00).
+The reward for completion of the Bounty Issue of Complexity Level `Advanced` is four hundred US dollars and 00 cents (USD 400.00).
 
 Approximate maximum quantity of Bounty Issues per calendar quarter round varies from twelve to twenty three (from ((11 * 400) + (1 * 200)) to (23 * 200)).
 
 
-## Prioritization of participants
+## Prioritization Of Participants
 
 Bounty Program Participants are prioritized in the following order:
 
-1. AsyncAPI Maintainers (from any repository)
+1. AsyncAPI Maintainers (from any repository,) checked at https://github.com/asyncapi/community/blob/master/MAINTAINERS.yaml
 
 2. Regular contributors (GitHub users who have three or more Pull Requests merged throughout the AsyncAPI GitHub Organization, checked with https://github.com/search?q=is%3Apr+org%3Aasyncapi+is%3Amerged+author%3Agh_username)
 
 3. Other (if a GitHub user doesn't fall under the above, the AsyncAPI Maintainer can determine the criteria i. e. regular volunteers, etc.)
 
-Assignment of the Bounty Issue on GitHub to users that fall under the first category can be performed immediately after the addition of the GitHub label `bounty` (hex code `#0E8A16`) according to GitHub's timestamp.
+Assignment of the Bounty Issue on GitHub to users that fall under the first category can be performed immediately after the addition of the GitHub label `bounty` according to GitHub's timestamp.
 
 Assignment of the Bounty Issue on GitHub to users that fall under the second and third categories is performed not earlier than three calendar days after the addition of the GitHub label `bounty` according to GitHub's timestamp.
 
 
-## Bounty Issues' numbering
+## Bounty Issues' Numbering
 
 To ensure ease of referencing, searching and automation, strictly defined format of Bounty Issues' numbering is used:
 
 1. In submissions of issues for Bounty Program: `[repo]#[issue]` (`cli#38`)
 
-2. In invoices claiming reward: invoice's subject `Bounty [repo]#[issue]` (e.g., `Bounty cli#38`), tag `bounty` (two rewards can be joined into one sum, in this case a comma and a space should be used in the invoice's subject as a separator for Bounty Issues numbers, e.g., `Bounty cli#38, cli#361`)
+2. In invoices claiming reward: invoice's subject `Bounty [repo]#[issue]` (e.g., `Bounty cli#38`), tag `bounty` (two rewards can be joined into one sum, in this case a comma and a space must be used in the invoice's subject as a separator for Bounty Issues' numbers, e.g., `Bounty cli#38, cli#361`)
 
 
-## Clarification of time periods
+## Clarification Of Time Periods
 
-Due to asynchronous nature of the AsyncAPI Initiative itself and thus its Bounty Program, UTC offset in Bounty Program Issues' starting and ending dates is used. Starting dates should be considered having start at `00:00:00 UTC+12:00`, ending dates should be considered having end at `23:59:59 UTC-12:00` (inclusive).
+Due to asynchronous nature of the AsyncAPI Initiative itself and thus its Bounty Program, UTC offset in Bounty Program Issues' starting and ending dates is used. Starting dates should be considered having start at `00:00:00 UTC+12:00`, ending dates should be considered having end at `23:59:59 UTC-12:00` (inclusive.)
 
 
-## Bounty Issue Submission
+## Bounty Issue's Submission
 
 Bounty Issues for the upcoming calendar quarter round of the Bounty Program are submitted during the first and second full (seven-day) calendar weeks of the last month of the current calendar quarter, after call for such submission, in a quantity of no more than two issues per repository, in comments of the dedicated [AsyncAPI Organization's Discussion](https://github.com/orgs/asyncapi/discussions), by the AsyncAPI Maintainer of the given repository, containing the following five fields:
 
@@ -63,6 +66,8 @@ Bounty Issues for the upcoming calendar quarter round of the Bounty Program are 
 4. Complexity: `Medium` | `Advanced`
 
 5. Type: `Coding` | `Docs` | `Design`
+
+In case documentation must be provided together with solution requested in the Bounty Issue, such requirement should be explicitly stated in the Scope.
 
 In case two Bounty Issues are inextricably linked and cannot be completed separately from each other, such connection must be explicitly stated in the Scope.
 
@@ -89,27 +94,43 @@ https://github.com/issues?q=is%3Aopen+org%3Aasyncapi+%22bounty/2024-Q1%22+in%3Ac
 Note, that results of the GitHub search are visible to logged-in GitHub users only.
 
 
-## Bounty Issue Timeline
+## Bounty Issue's Timeline
 
 Start date in Bounty Program is counted from Monday of the next week when assignment of the Bounty Issue on GitHub happened.
 
 In case assignment of the Bounty Issue on GitHub happened during third or fourth full (seven-day) calendar week of the last month of the calendar quarter, start date in Bounty Program is counted from the first Monday of the new calendar quarter round.
 
 For Bounty Issues of Complexity Level `Medium`:
+
 - Draft Pull Request must be submitted not later than on Friday of second week from the start date and updated on every Friday until submission of Final Pull Request
+
 - Final Pull Request must be submitted not later than on Friday of fourth week from the start date and merged not later than on Friday of sixth week from the start date
 
 For Bounty Issues of Complexity Level `Advanced`:
+
 - Draft Pull Request must be submitted not later than on Friday of third week from the start date and updated on every Friday until submission of Final Pull Request
+
 - Final Pull Request must be submitted not later than on Friday of sixth week from the start date and merged not later than on Friday of eighth week from the start date
 
-If the Bounty Program Participant has not provided a weekly PR update, they are pinged as a reminder to do so.
+Updates to the Draft Pull Request are determined by:
 
-In case the Bounty Program Participant still doesn't provide the PR update after three pings over three weeks, it is assumed that the task cannot be completed within the rest of the time, and the Bounty Program Participant has silently dropped the Bounty Issue. Ban rules are applied to such Bounty Program Participant, and the Bounty Issue becomes free for assignment to another Bounty Program Participant with a reset timeline, in the next calendar quarter round of the Bounty Program. At the same time the reward for this Bounty Issue does not alter the budget allocated for the next calendar quarter round of the Bounty Program, and it is excluded from randomization process for the next calendar quarter round of the Bounty Program if such process is to take place. 
+- activity in the `Commits` section of the Draft Pull Request
 
-Dropped Bounty Issue gets text label of the second calendar quarter round (e.g., `bounty/2024-Q2`) and text label `bounty/dropped`. If during two calendar months of the second calendar quarter round the dropped Bounty Issue was not picked up by any Bounty Program Participant for resolution, all bounty-related labels are removed from it and this Bounty Issue becomes a regular GitHub issue, which can again be submitted as a Bounty Issue Candidate. It also can again be assigned to the same Bounty Program Participant who dropped it.
+- activity of the automated code analysis service that runs on every commit (`SonarCloud`)
 
-### Example Bounty Issue Timeline
+If no Pull Request is involved, updates on the Bounty Issue are determined by:
+
+- activity in the Bounty Issue's comments
+
+In case the Bounty Program Participant has not provided a weekly update to the Draft Pull Request and/or on the Bounty Issue (on Monday, the last activity of any of the abovementioned types was five or more calendar days before, e.g., on `2024-01-29`, the last activity of any type was on `2024-01-24` or earlier,) they are pinged as a reminder to do so.
+
+In case the Bounty Program Participant has not provided an update to the Draft Pull Request and/or on the Bounty Issue after two pings over two Mondays, on the third Monday it is assumed that the task cannot be completed within the rest of the time, and the Bounty Program Participant has silently dropped the Bounty Issue. Ban rules are applied to such Bounty Program Participants, and the Bounty Issue becomes free for assignment to another Bounty Program Participant with a reset timeline, both in the current and next calendar quarter rounds of the Bounty Program.
+
+In case the dropped Bounty Issue is transferred to the next calendar quarter round of the Bounty Program, the reward for this Bounty Issue does not alter the budget allocated for the next calendar quarter round of the Bounty Program, and it is excluded from the randomization process for the next calendar quarter round of the Bounty Program if such a process is to take place.
+
+Dropped Bounty Issue gets text label of the second calendar quarter round (e.g., `bounty/2024-Q2`) and text label `bounty/dropped`. If during two calendar months of the second calendar quarter round of the Bounty Program the dropped Bounty Issue was not picked up by any Bounty Program Participant for resolution, all bounty-related labels are removed from it and this Bounty Issue becomes a regular GitHub issue, which can again be submitted as a Bounty Issue Candidate. It also can again be assigned to the same Bounty Program Participant who dropped it.
+
+### Bounty Issue's Timeline Example
 
 |Complexity Level|Assignment date (by GitHub)|Start date (by BP rules)|End date (by BP rules)|Draft PR submission|Final PR submission|Final PR merge|
 |----------------|---------------------------|------------------------|----------------------|-------------------|-------------------|--------------|
@@ -117,7 +138,7 @@ Dropped Bounty Issue gets text label of the second calendar quarter round (e.g.,
 |Advanced        |2023-04-26                 |2023-05-01              |**2023-06-23**        |2023-05-19         |2023-06-09         |**2023-06-23**|
 
 
-## Extension of Bounty Issue's Timeline
+## Extension Of Bounty Issue's Timeline
 
 In case of the online absence of the AsyncAPI Maintainer in [Slack](https://asyncapi.slack.com) for a period of more than three working days in a row, all remaining target dates of the Bounty Issue Timeline are increased by one calendar week per each three working days in a row of the online absence of the AsyncAPI Maintainer plus one calendar week. 'Plus one calendar week' period is required because after the AsyncAPI Maintainer has regained a confident online presence in [Slack](https://asyncapi.slack.com), the Bounty Program Participant would have to spend time getting back to the insides of the issue, and nearly unfamiliar at that time their own code.
 
@@ -126,17 +147,12 @@ In case of unpredicted [force majeure](https://iccwbo.org/wp-content/uploads/sit
 Communication on the necessity of the Bounty Issue Timeline extension should happen prior to any current milestone of the Bounty Issue's Timeline approaching, with a reflection of the start of such communication in the Bounty Issue's or Pull Request's comments, in case a communication platform other than GitHub is used.
 
 
-## Additional conditions
+## Bounty Issue's Reclassification
 
-AsyncAPI Maintainers are allowed to work on Bounty Issues submitted by themselves.
+Upon request of the AsyncAPI Maintainer who is responsible for the resolution of the given Bounty Issue from the AsyncAPI's side in the Bounty Issue's comments in the process of resolution, the Complexity Level of the Bounty Issue can be reclassified in any direction (both lowered to `Medium` and heightened to `Advanced`,) with corresponding changes to the Bounty Issue's Timeline.
 
-Bounty Program Participant is allowed to choose up to two Bounty Issues of any Complexity Level for simultaneous resolution.
 
-In case documentation must be provided together with solution requested in the Bounty Issue, such requirement should be explicitly stated in the Scope during Bounty Issue submission.
-
-Bounty Issue has an overall time of life of five calendar months. If the Bounty Issue was not assigned during the first calendar quarter round (e.g., `bounty/2024-Q1`), it gets text label of the second calendar quarter round (e.g., `bounty/2024-Q2`) and text label `bounty/stalled`. If during two calendar months of the second calendar quarter round the Bounty Issue still was not picked up by any Bounty Program Participant for resolution, all bounty-related labels are removed from it and Bounty Issue becomes a regular GitHub issue, which can again be submitted as a Bounty Issue Candidate.
-
-Upon request of the AsyncAPI Maintainer in the Bounty Issue's comments in the process of resolution, the Complexity Level of the Bounty Issue can be reclassified in any direction (both lowered to `Medium` and heightened to `Advanced`,) with corresponding changes to the Bounty Issue's Timeline.
+## Bounty Issue's Completion
 
 To avoid half-merges, unmet dependencies on the completion of other (inextricably linked) issues, waiting for merges of other separate PRs that provide critically important functionality for the given task, etc., and to avoid situations where AsyncAPI has already acquired an obligation to pay but factually the conditions of the Bounty Issue completion are not met yet, a system of double control with separation of concerns is exercised on the Bounty Issues:
 
@@ -145,13 +161,29 @@ To avoid half-merges, unmet dependencies on the completion of other (inextricabl
 - the Bounty Program Participant proceeds with the process of claiming the reward only after the second comment from the Bounty Program Coordinator, confirming the Bounty Issue completion and readiness to perform the payout.
 
 
-## Claiming the reward
+## Bounty Issue's Time Of Life
+
+Bounty Issue has an overall time of life of five calendar months since the start of the calendar quarter it was first introduced in. If the Bounty Issue was not assigned during the first calendar quarter round (e.g., `bounty/2024-Q1`), it gets text label of the second calendar quarter round (e.g., `bounty/2024-Q2`) and text label `bounty/stalled`. If during two calendar months of the second calendar quarter round of the Bounty Program the Bounty Issue still was not picked up by any Bounty Program Participant for resolution, all bounty-related labels are removed from it and Bounty Issue becomes a regular GitHub issue, which can again be submitted as a Bounty Issue Candidate.
+
+
+## Additional Conditions
+
+AsyncAPI Maintainers are allowed to work on Bounty Issues submitted by themselves.
+
+Bounty Program Participant is allowed to choose up to two Bounty Issues of any Complexity Level for simultaneous resolution.
+
+GitHub label `bounty` has hex code `#0E8A16`.
+
+
+## Claiming The Reward
 
 Claiming the reward for the completed Bounty Issue is done via submission of an invoice at [the AsyncAPI page on Open Collective](https://opencollective.com/asyncapi) (button '`SUBMIT EXPENSE`'.)
 
+**Before submission of the invoice, the Bounty Program Participant MUST ensure that the account they will use for the payout is VERIFIED, fully operational, and able to receive payments.**
+
 Requirements for the invoice:
 
-- Make sure that `Legal Name` and `Full name of the account holder` **are the same** and are YOUR REAL LEGAL NAME according to the passport/ID (nicknames are allowed only in `Settings / Public profile / Display name`, and it is **this** name that will be displayed publicly thoughout https://opencollective.com, if you have privacy concerns)
+- Make sure that your `Full Name` on GitHub, as well as `Legal Name` and `Full name of the account holder` on the invoice, **are the same** and are YOUR REAL LEGAL NAME according to the passport/ID (on Open Collective, nicknames are allowed only in `Settings / Public profile / Display name`, and it is **this** name that will be displayed publicly throughout all https://opencollective.com, if you have privacy concerns)
 
 - **Expense title**: '`Bounty [repo]#[issue]`' (e.g., '`Bounty cli#38`' or '`Bounty cli#38, cli#361`' in case of two rewards being joined into one sum)
 
@@ -159,12 +191,11 @@ Requirements for the invoice:
 
 - **Set invoice details / Description**: mention full URL of the GitHub issue which served as the Bounty Issue
 
-AsyncAPI relies on Open Collective for [compliance with global sanctions](https://docs.opencollective.foundation/how-it-works/policies/international#international-activity-that-we-cant-enable). However, it has been empirically proven that even if the Bounty Program Participant is a citizen of a sanctioned jurisdiction, they can still receive the financial payment made to a payee in a non-sanctioned jurisdiction. Taking this into account, **potential Bounty Program Participants should check whether they will be able to receive payment themselves prior to starting participation in the Bounty Program**. AsyncAPI will not take any action if Open Collective refuses to relay the payment due to US or global sanctions imposed on a jurisdiction or an individual.
+AsyncAPI does not perform financial transactions itself and relies on Open Collective to service payments and, thus, [comply with global sanctions](https://docs.opencollective.foundation/how-it-works/policies/international#international-activity-that-we-cant-enable). However, it has been empirically proven that even if the Bounty Program Participant is a citizen of a sanctioned jurisdiction, they can still receive the financial payment made to a payee in a non-sanctioned jurisdiction. Taking this into account, **potential Bounty Program Participants must check whether they will be able to receive payment themselves prior to starting participation in the Bounty Program**. AsyncAPI will not take any action if Open Collective refuses to relay the payment due to US or global sanctions imposed on a jurisdiction or an individual.
 
-Also, note, that if a Bounty Program Participant submits invoice expenses for more than six hundred US dollars and 00 cents (USD 600.00) per calendar year to a Collective at Open Collective with a Fiscal Host in the US (AsyncAPI fits this description,) they will be asked to fill out an IRS tax information form, which will be either a `W-8BEN` or a `W-8BEN-E` depending on whether the Bounty Program Participant is an individual or a sole proprietor, **supplying a local Tax ID**.
+Also, note that if a Bounty Program Participant submits invoice expenses for more than six hundred US dollars and 00 cents (USD 600.00) per calendar year to a Collective at Open Collective with a Fiscal Host in the US (AsyncAPI fits this description,) they will be asked to fill out an IRS tax information form, which will be either a `W-8BEN` or a `W-8BEN-E` depending on whether the Bounty Program Participant has the legal status of an individual or of a sole proprietor, **supplying a local Tax ID**.
 
 At the time of writing (2023-10-01) Open Collective supports `ACH`, `International SWIFT through Wise` (limitations of financial technology company 'Wise' are applied) and `PayPal` as automated payout methods. In rare cases (once per calendar year) Bounty Program Participant in personal communication with Open Collective can request them to perform a payout using a custom payment method to a non-sanctioned jurisdiction.
-
 
 
 ## Ban
@@ -181,18 +212,19 @@ After the expiration of the Second Ban or after two calendar quarters after the 
 
 A dedicated list is used for the purpose of tracking Ban history.
 
-
-## Instruction on assuring a Ban receipt
+### Instruction on assuring a Ban receipt
 
 First ask to assign the Bounty Issue to you on GitHub, _only then_ start to think on the task, understand you can't do it, silently drop.
 
-
-## Instruction on avoiding a Ban receipt
+### Instruction on avoiding a Ban receipt
 
 Think on the task, make sure that you understand how to do it and CAN do it, ask to assign the Bounty Issue to you on GitHub, meet all milestones of the Bounty Issue Timeline.
 
 
-##### This document is the consolidated and formalized version of all information publicly available in free form at
+## Sources
+
+This document is the consolidated and formalized version of all information publicly available in free form at
+
 ##### https://github.com/orgs/asyncapi/discussions/541#discussioncomment-5462792
 ##### https://github.com/orgs/asyncapi/discussions/877#discussioncomment-6970799
 ##### https://docs.opencollective.com/help/expenses-and-getting-paid/tax-information
