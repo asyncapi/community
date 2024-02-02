@@ -3,8 +3,6 @@ title : 'Docs Tools and Processes'
 weight : 10
 ---
 
-## Docs Tools and Processes
-The following sections will guide you on what tools you will need and how to contribute to docs’ projects. Following tools and guidelines will help you with creating and maintaining docs processes.
 
 ### Create new docs directories/folders
 To create a new folder, take the following steps:
