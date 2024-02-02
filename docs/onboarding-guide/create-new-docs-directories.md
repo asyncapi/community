@@ -1,5 +1,5 @@
 ---
-title : 'Docs Tools and Processes'
+title : 'Create new docs directories'
 weight : 10
 ---
 
