@@ -3,7 +3,7 @@ title: Tools for Technical Writers
 weight: 10
 ---
 
-## AsyncAPI Tools for Technical Writers
+## Tools for Technical Writers
 
 To effectively contribute to the AsyncAPI project documentation, you will need the following
 range of tools to author technical documentation;
