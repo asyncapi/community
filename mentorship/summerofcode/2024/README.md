@@ -114,7 +114,7 @@ Learn more here https://github.com/asyncapi-archived-repos/design-system/issues/
 @acethecreator @akshatnema
 
 **Project Repo:** 
-https://github.com/asyncapi/webiste
+https://github.com/asyncapi/website
 
 **Expected Difficulty**:
 Easy-Medium
