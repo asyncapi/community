@@ -25,6 +25,8 @@ VSCode comes with an API for providing quick/autofixes for linting errors (see h
 The purpose of this feature is to provide auto-fix refactoring for the most common and standard spectral linting errors for asyncapi:
 https://docs.stoplight.io/docs/spectral/1e63ffd0220f3-async-api-rules
 
+Skills required: TypeScript/JavaScript and knowledge of Spectral rules
+
 Learn more here https://github.com/asyncapi/vs-asyncapi-preview/issues/160
 
 **Mentor/s**: 
@@ -59,7 +61,7 @@ https://github.com/asyncapi/website
 Medium-Hard
 
 **Expected Time Commitment**:
-175 Hour
+320 Hour
 
 ## 3) Library for easier integration testing of code generators: Generator
 
@@ -87,6 +89,8 @@ This project proposes the development of an alternative preview option for visua
 
 Additionally, the preview should support synchronization between the preview panel and source code, allowing users to navigate and comprehend the structure effortlessly. To enhance usability, the project includes a crucial export functionality, enabling users to export the Markdown preview as text for easy inclusion in external documentation. This endeavor combines the power of Markdown and MermaidJS to offer a comprehensive and visually appealing preview option, fostering a more intuitive understanding of message payloads within the AsyncAPI ecosystem.
 
+Skills required: TypeScript/JavaScript
+
 Learn more here https://github.com/asyncapi/vs-asyncapi-preview/issues/161
 
 **Mentor/s**: 
@@ -108,25 +112,30 @@ This exciting project revolves around the development of a Website UI Kit, espec
 The design is ready, and the goal is to translate it into a user-friendly UI Kit. While Tailwind CSS is a powerful tool, we aim to optimize its usage by encapsulating class names within components. This approach replaces the practice of duplicating classes for similar visual styles, ensuring a modular and maintainable design system. 
 
 The outcome will be a comprehensive UI Kit that not only complements the existing design but also streamlines development, making it easier to create and manage cohesive elements across the website.
+
+Skills required: JavaScript, React, Storybook & TailwindCSS
+
 Learn more here https://github.com/asyncapi-archived-repos/design-system/issues/4
 
 **Mentor/s**: 
 @acethecreator @akshatnema
 
 **Project Repo:** 
-https://github.com/asyncapi/webiste
+https://github.com/asyncapi/website
 
 **Expected Difficulty**:
 Easy-Medium
 
 **Expected Time Commitment**:
-175 Hour
+320 Hour
 
 ## 6) Dynamic Open Graph Link Preview for AsyncAPI Studio: Studio
 
 This project envisions enhancing the social media sharing experience for AsyncAPI Studio by introducing a dynamic Open Graph link preview image generation mechanism. Currently, when users share a link to the Studio with or without query parameters like ?url=<url-of-file> or ?base64=<base64-encoded-doc>, the default preview image lacks context about the specific file being shared.
 
 The goal is to implement a solution that dynamically generates a preview image based on the file being shared. This customized preview image will include essential information such as the title, description, and relevant statistics, offering a more informative representation of the document. This improvement is expected to enhance the user experience when sharing AsyncAPI docs on platforms like Twitter, Linkedin, Facebook, Slack, and others, providing a visually appealing and context-rich preview image.
+
+Skills required: Typescript/Javascript & React
 
 Learn more here https://github.com/asyncapi/studio/issues/224
 
@@ -150,6 +159,8 @@ The primary goal is to empower multiple users to collaboratively work on AsyncAP
 
 This enhancement is designed to elevate the collaborative workflow, providing users with the ability to collaborate on AsyncAPI specifications in a dynamic and synchronized manner
 
+Skill required: Typescript/Javascript, React & Websocket
+
 Learn more here https://github.com/asyncapi/studio/issues/619
 
 **Mentor/s**: 
@@ -163,3 +174,19 @@ Easy-Medium
 
 **Expected Time Commitment**:
 175 
+
+## A word on ChatGPT
+
+When writing your proposal **we encourage you to not use ChatGPT** or other AI tools. If you do so, we ask you to disclose the usage in your proposal. It doesn't automatically disqualify you, but we will take that usage into account when evaluating your application.
+
+
+## Contact
+
+- Join [our Slack workspace](https://www.asyncapi.com/slack-invite). Just make sure to follow our [Slack etiquette](https://github.com/asyncapi/.github/blob/master/slack-etiquette.md) and [the code of conduct](https://github.com/asyncapi/.github/blob/master/CODE_OF_CONDUCT.md).
+- Join the dedicated Mentorship channel `#mentorships` that we will use to coordinate the application process until program starts. All mentees and mentors are there.
+
+Feel free to share with your peers 🙂
+
+## Q&A
+
+>If you have any questions or queries, please create an issue on this repo (with a prefix GSoC 2024) or start a topic on our [community forums](https://github.com/orgs/asyncapi/discussions).
