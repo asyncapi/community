@@ -7,16 +7,16 @@ Enhance the [AsyncAPI Preview + Spectral](https://github.com/asyncapi/vs-asyncap
 - 🎯 **Outcome:** Automate corrections for standard spectral linting issues in AsyncAPI documents. [Learn more](https://docs.stoplight.io/docs/spectral/1e63ffd0220f3-async-api-rules).
 - 🛠️ **Skills Required:** TypeScript/JavaScript and understanding of Spectral rules.
 - 🧩 **Difficulty:** Easy/Medium
-- 👩🏿‍🏫 **Mentor(s):** @ivangsa
+- 👩🏿‍🏫 **Mentor(s):** [@ivangsa](https://github.com/ivangsa)
 - ⏳ **Length:** 175 Hours
 
 ## 2) [Script Stability Enhancement for AsyncAPI Website](https://github.com/asyncapi/website/issues/2626)
-Improve the AsyncAPI website's robustness by enhancing script stability in the `/scripts/*` directory. This project involves selecting a suitable testing framework for JavaScript and Next.js, integrating it with the website, developing detailed test cases for scripts, and setting up a GitHub Actions CI workflow for automated testing.
+Improve the [AsyncAPI website](https://github.com/asyncapi/website)'s robustness by enhancing script stability in the `/scripts/*` directory. This project involves selecting a suitable testing framework for JavaScript and Next.js, integrating it with the website, developing detailed test cases for scripts, and setting up a GitHub Actions CI workflow for automated testing.
 
 - 🎯 **Outcome:** Achieve a stable website framework to support continuous development and updates.
 - 🛠️ **Skills:** JavaScript, Next.js, unit testing, and CI/CD practices.
 - 🧩 **Difficulty:** Medium/Hard
-- 👩🏿‍🏫 **Mentor(s):** @akshatnema, @anshgoyalevil
+- 👩🏿‍🏫 **Mentor(s):** [@akshatnema](https://github.com/akshatnema), [@anshgoyalevil](https://github.com/anshgoyalevil)
 - ⏳ **Length:** 320 Hours
 
 ## 3) [Integration Testing Library for Code Generators](https://github.com/asyncapi/generator/issues/752)
@@ -25,7 +25,7 @@ Enhance the [Generator tool](https://github.com/asyncapi/generator) by introduci
 - 🎯 **Outcome:** Enable template maintainers to easily validate and improve the quality of code-generating templates.
 - 🛠️ **Skills:** JavaScript/TypeScript, testing libraries, Docker, virtualization, and test automation.
 - 🧩 **Difficulty:** Medium/Hard
-- 👩🏿‍🏫 **Mentor(s):** @derberg
+- 👩🏿‍🏫 **Mentor(s):** [@derberg](https://github.com/derberg)
 - ⏳ **Length:** 175 Hours
 
 ## 4) [Markdown and MermaidJS Diagrams Preview: VS Code Extension](https://github.com/asyncapi/vs-asyncapi-preview/issues/161)
@@ -34,7 +34,7 @@ Upgrade the [AsyncAPI Preview](https://github.com/asyncapi/vs-asyncapi-preview) 
 - 🎯 **Outcome:** Deliver an enriched AsyncAPI preview tool that provides a user-friendly, graphical representation of message payloads, improving comprehension and documentation within the AsyncAPI ecosystem.
 - 🛠️ **Skills:** TypeScript/JavaScript, MermaidJS, and AsyncAPI schemas.
 - 🧩 **Difficulty:** Easy/Medium
-- 👩🏿‍🏫 **Mentor(s):** @ivangsa
+- 👩🏿‍🏫 **Mentor(s):** [@ivangsa](https://github.com/ivangsa)
 - ⏳ **Length:** 175 Hours
 
 ## 5) [AsyncAPI Website UI Kit Development](https://github.com/asyncapi-archived-repos/design-system/issues/4)
@@ -43,7 +43,7 @@ Create a UI Kit for the AsyncAPI website to ensure brand visual consistency and 
 - 🎯 **Outcome:** Establish an AsyncAPI Website UI Kit that aligns with our design principles, facilitating the creation of uniform and manageable website elements.
 - 🛠️ **Skills:** JavaScript, React, Storybook, and TailwindCSS.
 - 🧩 **Difficulty:** Easy/Medium
-- 👩🏿‍🏫 **Mentor(s):** @acethecreator, @akshatnema
+- 👩🏿‍🏫 **Mentor(s):** [@acethecreator](https://github.com/acethecreator), [@akshatnema](https://github.com/akshatnema)
 - ⏳ **Length:** 320 Hours
 
 ## 6) [Dynamic Open Graph Preview for AsyncAPI Studio](https://github.com/asyncapi/studio/issues/224)
@@ -52,7 +52,7 @@ Improve social sharing for [AsyncAPI Studio](https://studio.asyncapi.com/) by im
 - 🎯 **Outcome:** Provide a richer, more informative link-sharing experience on platforms like Twitter, LinkedIn, Facebook, and Slack with custom preview images.
 - 🛠️ **Skills:** TypeScript/JavaScript and React.
 - 🧩 **Difficulty:** Easy/Medium
-- 👩🏿‍🏫 **Mentor(s):** @smoya
+- 👩🏿‍🏫 **Mentor(s):** [@smoya](https://github.com/smoya)
 - ⏳ **Length:** 175 Hours
 
 ## 7) [Real-time Collaboration in AsyncAPI Studio](https://github.com/asyncapi/studio/issues/619)
@@ -61,7 +61,7 @@ Upgrade [AsyncAPI Studio](https://studio.asyncapi.com/) to support real-time col
 - 🎯 **Outcome:** Enable efficient, real-time collaboration among users on AsyncAPI documents, improving the co-editing experience.
 - 🛠️ **Skills:** TypeScript/JavaScript, React, and WebSocket.
 - 🧩 **Difficulty:** Easy/Medium
-- 👩🏿‍🏫 **Mentor(s):** @fmvilas
+- 👩🏿‍🏫 **Mentor(s):** [@fmvilas](https://github.com/fmvilas)
 - ⏳ **Length:** 175 Hours
 
 ## Contact AsyncAPI Mentors
