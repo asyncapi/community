@@ -1,18 +1,5 @@
-# Status: Application Phase
+# AsyncAPI Project Ideas for Google Summer of Code 2024
 
-## Timeline
-
-- January 22: Organization applications open
-- February 20: Accepted GSoC Organizations announced
-- February 22 - March 18: Potential GSoC contributors discuss application ideas with mentoring organizations
-- March 18 - April 2: GSoC contributor application period
-- April 24: Proposal Ranking Deadline
-- April 29: Slot Allocation Deadline
-- April 30 - Projects Announced to Orgs
-- May 1: Accepted Projects Announced
-- November 14: Program End Date
-
-## Proposed Project Ideas
 
 ## 1) Add "Autofix" feature for common linting errors (w/ spectral): Vs-code Extension
 
