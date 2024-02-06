@@ -59,7 +59,7 @@ Improve social sharing for [AsyncAPI Studio](https://studio.asyncapi.com/) by im
 Upgrade [AsyncAPI Studio](https://studio.asyncapi.com/) to support real-time collaborative editing. This enhancement will introduce features for simultaneous document editing, version control, and integrated communication tools, streamlining teamwork on AsyncAPI specifications.
 
 - 🎯 **Outcome:** Enable efficient, real-time collaboration among users on AsyncAPI documents, improving the co-editing experience.
-- 🛠️ **Skills:** Expertise in TypeScript/JavaScript, React, and WebSocket.
+- 🛠️ **Skills:** TypeScript/JavaScript, React, and WebSocket.
 - 🧩 **Difficulty:** Easy/Medium
 - 👩🏿‍🏫 **Mentor(s):** @fmvilas
 - ⏳ **Length:** 175 Hours
@@ -68,10 +68,17 @@ Upgrade [AsyncAPI Studio](https://studio.asyncapi.com/) to support real-time col
 - Join [our Slack workspace](https://www.asyncapi.com/slack-invite).  Observe our [Slack etiquette](https://github.com/asyncapi/.github/blob/master/slack-etiquette.md) and [AsyncAPI code of conduct](https://github.com/asyncapi/.github/blob/master/CODE_OF_CONDUCT.md).
 - Join the dedicated Mentorship channel `#mentorships` to meet all other GSoC mentees and mentors.
 
-## Q&A
-1. **How many of your GSoC contributors from the previous year (or your most recent GSoC participation) are still active in your community?** 
-- [@14Richa](https://github.com/14Richa) is currently active in our [.github](https://github.com/asyncapi/.github), [community](https://github.com/asyncapi/community), and [optimizer](https://github.com/asyncapi/optimizer) repos.
-- [@reachaadrika](https://github.com/reachaadrika) is currently active in our [AsyncAPI website](https://github.com/asyncapi/website) repo.
-- [@oviecodes](https://github.com/oviecodes) is currently active in our [Glee](https://github.com/asyncapi/glee) and [parser-js](https://github.com/asyncapi/parser-js) repos.
+## FAQ
+1. **How active are previous GSoC contributors in AsyncAPI?**
+   Although AsyncAPI hasn't directly participated in GSoC, our projects were featured in Postman's proposal last year. Active contributors from that cohort include:
+   - **[@14Richa](https://github.com/14Richa)** in our [.github](https://github.com/asyncapi/.github), [community](https://github.com/asyncapi/community), and [optimizer](https://github.com/asyncapi/optimizer) repositories.
+   - **[@reachaadrika](https://github.com/reachaadrika)** in our [AsyncAPI website](https://github.com/asyncapi/website) repository.
+   - **[@oviecodes](https://github.com/oviecodes)** in our [Glee](https://github.com/asyncapi/glee) and [parser-js](https://github.com/asyncapi/parser-js) repositories.
+
+2. **Is using ChatGPT for GSoC project proposals allowed?**
+   We advise against using ChatGPT or similar AI tools for your GSoC project proposals with AsyncAPI. Should you choose to use such tools, we require that this be fully disclosed in your application.
+
+3. **Where is the AsyncAPI source code located?**
+   You can find all AsyncAPI source code on GitHub under our organization: [https://github.com/asyncapi](https://github.com/asyncapi).
 
 >If you have further questions or queries, please create an issue in this `/community` repo (with the prefix `GSoC 2024`) or start an [open AsyncAPI discussion](https://github.com/orgs/asyncapi/discussions).
