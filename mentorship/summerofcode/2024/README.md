@@ -1,179 +1,72 @@
-# AsyncAPI Project Ideas for Google Summer of Code 2024
-
-
-## 1) Add "Autofix" feature for common linting errors (w/ spectral): Vs-code Extension
-
-AsyncAPI-Preview + Spectral for VSCode form a perfect combo in terms of UX/DX for asyncapi editing:
-
-with this extension, you can navigate and preview your API definition
-while Spectral for VSCode provides inline and listed linting error for common and even custom mistakes
-VSCode comes with an API for providing quick/autofixes for linting errors (see https://code.visualstudio.com/docs/editor/refactoring https://code.visualstudio.com/api/references/vscode-api#CodeActionProvider and https://github.com/microsoft/vscode-extension-samples/tree/main/code-actions-sample for an example)
-
-The purpose of this feature is to provide auto-fix refactoring for the most common and standard spectral linting errors for asyncapi:
-https://docs.stoplight.io/docs/spectral/1e63ffd0220f3-async-api-rules
-
-Skills required: TypeScript/JavaScript and knowledge of Spectral rules
-
-Learn more here https://github.com/asyncapi/vs-asyncapi-preview/issues/160
-
-**Mentor/s**: 
-@ivangsa 
-
-**Project Repo:** 
-https://github.com/asyncapi/vs-asyncapi-preview
-
-**Expected Difficulty**:
-Easy-Medium
-
-**Expected Time Commitment**:
-175 Hour
-
-## 2) Enhancing Script Stability for AsyncAPI Website: Website
-
-In response to the growing AsyncAPI project and website contributors, this initiative aims to bolster website stability by implementing a systematic approach to validate the integrity of scripts within the /scripts/* folder.
-
-The project involves researching and selecting an appropriate testing engine or framework for JavaScript and Next.JS, seamlessly integrating it into the AsyncAPI website, and crafting comprehensive test cases for all scripts in the specified folder. 
-
-The final step includes establishing a CI workflow using GitHub Actions to automate the testing process, enabling early error detection before code deployment. Proficiency in JavaScript, Next.JS, unit testing, and CI/CD is essential for successful execution, ensuring a resilient and reliable website in the face of continuous development and enhancements.
-
-Learn more here https://github.com/asyncapi/website/issues/2626
-
-**Mentor/s**: 
-@akshatnema @anshgoyalevil
-
-**Project Repo:** 
-https://github.com/asyncapi/website
-
-**Expected Difficulty**:
-Medium-Hard
-
-**Expected Time Commitment**:
-320 Hour
-
-## 3) Library for easier integration testing of code generators: Generator
-
-This project addresses the needs of template maintainers, particularly those overseeing code-generating templates. The goal is to develop a dedicated feature within the generator or potentially create a standalone library that can be effortlessly enabled in repositories. The envisioned capability allows maintainers to seamlessly activate integration tests specifically tailored to their code generation templates. By creating this testing library, template maintainers will benefit from a streamlined process to ensure the robustness and reliability of their templates, enhancing overall code generation quality and reliability.
-
-Additionally, contributors will have the opportunity to code in JavaScript or TypeScript, collaborate on a solution that will be used across the AsyncAPI organization, delve into the intricacies of writing a testing library, and gain hands-on experience with Docker, virtualization, and testing automation.
-
-Learn more here https://github.com/asyncapi/generator/issues/752
-
-**Mentor/s**: 
-@derberg
-
-**Project Repo:** 
-https://github.com/asyncapi/generator
-
-**Expected Difficulty**:
-Medium-Hard
-
-**Expected Time Commitment**:
-175 Hour
-
-## 4) Enhanced Preview Option with Markdown and MermaidJS Diagrams: VsCode Extension
-
-This project proposes the development of an alternative preview option for visualizing message payloads using Markdown and MermaidJS Class Diagrams. The envisioned feature aims to integrate seamlessly with the existing AsyncAPI schema and Avro (.avsc) files, providing a dynamic and interactive representation of message structures. 
-
-Additionally, the preview should support synchronization between the preview panel and source code, allowing users to navigate and comprehend the structure effortlessly. To enhance usability, the project includes a crucial export functionality, enabling users to export the Markdown preview as text for easy inclusion in external documentation. This endeavor combines the power of Markdown and MermaidJS to offer a comprehensive and visually appealing preview option, fostering a more intuitive understanding of message payloads within the AsyncAPI ecosystem.
-
-Skills required: TypeScript/JavaScript
-
-Learn more here https://github.com/asyncapi/vs-asyncapi-preview/issues/161
-
-**Mentor/s**: 
-@ivangsa 
-
-**Project Repo:** 
-https://github.com/asyncapi/vs-asyncapi-preview
-
-**Expected Difficulty**:
-Easy-Medium
-
-**Expected Time Commitment**:
-175 Hour
-
-## 5) Website UI Kit Development: Website
-
-This exciting project revolves around the development of a Website UI Kit, especially crucial after identifying the need for visual consistency during the visual style update in the recent PR. The current challenge lies in maintaining cohesion across recurring elements, even the smallest ones, on the website. 
-
-The design is ready, and the goal is to translate it into a user-friendly UI Kit. While Tailwind CSS is a powerful tool, we aim to optimize its usage by encapsulating class names within components. This approach replaces the practice of duplicating classes for similar visual styles, ensuring a modular and maintainable design system. 
-
-The outcome will be a comprehensive UI Kit that not only complements the existing design but also streamlines development, making it easier to create and manage cohesive elements across the website.
-
-Skills required: JavaScript, React, Storybook & TailwindCSS
-
-Learn more here https://github.com/asyncapi-archived-repos/design-system/issues/4
-
-**Mentor/s**: 
-@acethecreator @akshatnema
-
-**Project Repo:** 
-https://github.com/asyncapi/website
-
-**Expected Difficulty**:
-Easy-Medium
-
-**Expected Time Commitment**:
-320 Hour
-
-## 6) Dynamic Open Graph Link Preview for AsyncAPI Studio: Studio
-
-This project envisions enhancing the social media sharing experience for AsyncAPI Studio by introducing a dynamic Open Graph link preview image generation mechanism. Currently, when users share a link to the Studio with or without query parameters like ?url=<url-of-file> or ?base64=<base64-encoded-doc>, the default preview image lacks context about the specific file being shared.
-
-The goal is to implement a solution that dynamically generates a preview image based on the file being shared. This customized preview image will include essential information such as the title, description, and relevant statistics, offering a more informative representation of the document. This improvement is expected to enhance the user experience when sharing AsyncAPI docs on platforms like Twitter, Linkedin, Facebook, Slack, and others, providing a visually appealing and context-rich preview image.
-
-Skills required: Typescript/Javascript & React
-
-Learn more here https://github.com/asyncapi/studio/issues/224
-
-**Mentor/s**: 
-@smoya
-
-**Project Repo:** 
-https://github.com/asyncapi/studio
-
-**Expected Difficulty**:
-Easy-Medium
-
-**Expected Time Commitment**:
-175 Hour
-
-## 7) Real-time Collaboration and Editing Enhancement for AsyncAPI Studio: Studio
-
-This project centers around enhancing the collaborative experience within AsyncAPI Studio by introducing real-time editing capabilities. 
-
-The primary goal is to empower multiple users to collaboratively work on AsyncAPI specifications in real-time, fostering a seamless and efficient collaborative environment. The project involves implementing features that enable simultaneous editing, version control, and communication tools within the Studio, ensuring that collaborative efforts are streamlined and productive. 
-
-This enhancement is designed to elevate the collaborative workflow, providing users with the ability to collaborate on AsyncAPI specifications in a dynamic and synchronized manner
-
-Skill required: Typescript/Javascript, React & Websocket
-
-Learn more here https://github.com/asyncapi/studio/issues/619
-
-**Mentor/s**: 
-@fmvilas
-
-**Project Repo:** 
-https://github.com/asyncapi/studio
-
-**Expected Difficulty**:
-Easy-Medium
-
-**Expected Time Commitment**:
-175 
-
-## A word on ChatGPT
-
-When writing your proposal **we encourage you to not use ChatGPT** or other AI tools. If you do so, we ask you to disclose the usage in your proposal. It doesn't automatically disqualify you, but we will take that usage into account when evaluating your application.
-
-
-## Contact
-
-- Join [our Slack workspace](https://www.asyncapi.com/slack-invite). Just make sure to follow our [Slack etiquette](https://github.com/asyncapi/.github/blob/master/slack-etiquette.md) and [the code of conduct](https://github.com/asyncapi/.github/blob/master/CODE_OF_CONDUCT.md).
-- Join the dedicated Mentorship channel `#mentorships` that we will use to coordinate the application process until program starts. All mentees and mentors are there.
-
-Feel free to share with your peers 🙂
+# AsyncAPI Ideas Page: Google Summer of Code 2024
+Welcome to the **AsyncAPI Ideas Page** with our proposed projects for Google Summer of Code (GSoC) 2024! If you are an interested student/contributor, please don't hesitate to contact our mentors directly to discuss project ideas.
+
+## 1) [Autofix for Spectral Linting Errors: VS Code Extension](https://github.com/asyncapi/vs-asyncapi-preview/issues/160)
+Enhance the [AsyncAPI Preview + Spectral](https://github.com/asyncapi/vs-asyncapi-preview) VS Code extension by introducing an autofix feature. This improvement aims to streamline the editing experience by automatically resolving common Spectral linting errors directly within the IDE.
+
+- 🎯 **Outcome:** Automate corrections for standard spectral linting issues in AsyncAPI documents. [Learn more](https://docs.stoplight.io/docs/spectral/1e63ffd0220f3-async-api-rules).
+- 🛠️ **Skills Required:** TypeScript/JavaScript and understanding of Spectral rules.
+- 🧩 **Difficulty:** Easy/Medium
+- 👩🏿‍🏫 **Mentor(s):** @ivangsa
+- ⏳ **Length:** 175 Hours
+
+## 2) [Script Stability Enhancement for AsyncAPI Website](https://github.com/asyncapi/website/issues/2626)
+Improve the AsyncAPI website's robustness by enhancing script stability in the `/scripts/*` directory. This project involves selecting a suitable testing framework for JavaScript and Next.js, integrating it with the website, developing detailed test cases for scripts, and setting up a GitHub Actions CI workflow for automated testing.
+
+- 🎯 **Outcome:** Achieve a stable website framework to support continuous development and updates.
+- 🛠️ **Skills:** JavaScript, Next.js, unit testing, and CI/CD practices.
+- 🧩 **Difficulty:** Medium/Hard
+- 👩🏿‍🏫 **Mentor(s):** @akshatnema, @anshgoyalevil
+- ⏳ **Length:** 320 Hours
+
+## 3) [Integration Testing Library for Code Generators](https://github.com/asyncapi/generator/issues/752)
+Enhance the [Generator tool](https://github.com/asyncapi/generator) by introducing a feature or creating a new library to simplify integration testing for code generation templates. This solution facilitates the activation of integration tests, ensuring reliability and robustness with our code generators.
+
+- 🎯 **Outcome:** Enable template maintainers to easily validate and improve the quality of code-generating templates.
+- 🛠️ **Skills:** JavaScript/TypeScript, testing libraries, Docker, virtualization, and test automation.
+- 🧩 **Difficulty:** Medium/Hard
+- 👩🏿‍🏫 **Mentor(s):** @derberg
+- ⏳ **Length:** 175 Hours
+
+## 4) [Markdown and MermaidJS Diagrams Preview: VS Code Extension](https://github.com/asyncapi/vs-asyncapi-preview/issues/161)
+Upgrade the [AsyncAPI Preview](https://github.com/asyncapi/vs-asyncapi-preview) VS Code extension to include a feature for visualizing message payloads through Markdown and MermaidJS Class Diagrams. It also incorporates an export feature for the Markdown preview to facilitate its use in external documentation. This enhancement will work with both AsyncAPI schemas and Avro (.avsc) files to offer a dynamic and interactive view of message structures. 
+
+- 🎯 **Outcome:** Deliver an enriched AsyncAPI preview tool that provides a user-friendly, graphical representation of message payloads, improving comprehension and documentation within the AsyncAPI ecosystem.
+- 🛠️ **Skills:** TypeScript/JavaScript, MermaidJS, and AsyncAPI schemas.
+- 🧩 **Difficulty:** Easy/Medium
+- 👩🏿‍🏫 **Mentor(s):** @ivangsa
+- ⏳ **Length:** 175 Hours
+
+## 5) [AsyncAPI Website UI Kit Development](https://github.com/asyncapi-archived-repos/design-system/issues/4)
+Create a UI Kit for the AsyncAPI website to ensure brand visual consistency and streamline web development. The project will leverage Tailwind CSS, focusing on component-based class encapsulation to minimize class duplication and promote a modular, easy-to-maintain design system.
+
+- 🎯 **Outcome:** Establish an AsyncAPI Website UI Kit that aligns with our design principles, facilitating the creation of uniform and manageable website elements.
+- 🛠️ **Skills:** JavaScript, React, Storybook, and TailwindCSS.
+- 🧩 **Difficulty:** Easy/Medium
+- 👩🏿‍🏫 **Mentor(s):** @acethecreator, @akshatnema
+- ⏳ **Length:** 320 Hours
+
+## 6) [Dynamic Open Graph Preview for AsyncAPI Studio](https://github.com/asyncapi/studio/issues/224)
+Improve social sharing for [AsyncAPI Studio](https://studio.asyncapi.com/) by implementing a dynamic Open Graph link preview generator. This feature will create context-specific preview images for shared links, incorporating key details like the title, description, and statistics from the shared AsyncAPI document.
+
+- 🎯 **Outcome:** Provide a richer, more informative link-sharing experience on platforms like Twitter, LinkedIn, Facebook, and Slack with custom preview images.
+- 🛠️ **Skills:** TypeScript/JavaScript and React.
+- 🧩 **Difficulty:** Easy/Medium
+- 👩🏿‍🏫 **Mentor(s):** @smoya
+- ⏳ **Length:** 175 Hours
+
+## 7) [Real-time Collaboration in AsyncAPI Studio](https://github.com/asyncapi/studio/issues/619)
+Upgrade [AsyncAPI Studio](https://studio.asyncapi.com/) to support real-time collaborative editing. This enhancement will introduce features for simultaneous document editing, version control, and integrated communication tools, streamlining teamwork on AsyncAPI specifications.
+
+- 🎯 **Outcome:** Enable efficient, real-time collaboration among users on AsyncAPI documents, improving the co-editing experience.
+- 🛠️ **Skills:** Expertise in TypeScript/JavaScript, React, and WebSocket.
+- 🧩 **Difficulty:** Easy/Medium
+- 👩🏿‍🏫 **Mentor(s):** @fmvilas
+- ⏳ **Length:** 175 Hours
+
+## Contact AsyncAPI Mentors
+- Join [our Slack workspace](https://www.asyncapi.com/slack-invite).  Observe our [Slack etiquette](https://github.com/asyncapi/.github/blob/master/slack-etiquette.md) and [AsyncAPI code of conduct](https://github.com/asyncapi/.github/blob/master/CODE_OF_CONDUCT.md).
+- Join the dedicated Mentorship channel `#mentorships` to meet all other GSoC mentees and mentors.
 
 ## Q&A
-
->If you have any questions or queries, please create an issue on this repo (with a prefix GSoC 2024) or start a topic on our [community forums](https://github.com/orgs/asyncapi/discussions).
+>If you have further questions or queries, please create an issue in this `/community` repo (with the prefix `GSoC 2024`) or start an [open AsyncAPI discussion](https://github.com/orgs/asyncapi/discussions).
