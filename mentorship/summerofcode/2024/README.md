@@ -69,4 +69,9 @@ Upgrade [AsyncAPI Studio](https://studio.asyncapi.com/) to support real-time col
 - Join the dedicated Mentorship channel `#mentorships` to meet all other GSoC mentees and mentors.
 
 ## Q&A
+1. **How many of your GSoC contributors from the previous year (or your most recent GSoC participation) are still active in your community?** 
+- [@14Richa](https://github.com/14Richa) is currently active in our [.github](https://github.com/asyncapi/.github), [community](https://github.com/asyncapi/community), and [optimizer](https://github.com/asyncapi/optimizer) repos.
+- [@reachaadrika](https://github.com/reachaadrika) is currently active in our [AsyncAPI website](https://github.com/asyncapi/website) repo.
+- [@oviecodes](https://github.com/oviecodes) is currently active in our [Glee](https://github.com/asyncapi/glee) and [parser-js](https://github.com/asyncapi/parser-js) repos.
+
 >If you have further questions or queries, please create an issue in this `/community` repo (with the prefix `GSoC 2024`) or start an [open AsyncAPI discussion](https://github.com/orgs/asyncapi/discussions).
