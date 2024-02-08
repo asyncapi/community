@@ -98,7 +98,8 @@ Although the CoC Committee will not take any permanent actions until the CoC Com
 
 ### Mediation and Resolution by Agreement
 
-If the accused person and the parties potentially harmed in an incident communicate to the CoC Committee that they would like to resolve the incident through restorative conversation (see “Restorative Justice" below), mediation, or mutual agreement, the CoC Committee will wait until the parties have attempted to do so before making any final decisions regarding resolution of the incident. If all involved parties consent, the CoC Committee, other community members, or an external professional mediator may help facilitate the discussion. If the involved parties agree on an outcome for resolving the incident, and the CoC Committee will review the outcome to (a) determine if it is adequate or if any further actions need to be taken to protect the health and safety of the community and (b) support the involved parties with implementation and accountability.
+If the accused person and the parties potentially harmed in an incident communicate to the CoC Committee that they would like to resolve the incident through restorative conversation (see “Restorative Justice" below), mediation, or mutual agreement, the CoC Committee will wait until the parties have attempted to do so before making any final decisions regarding resolution of the incident. If all involved parties consent, the CoC Committee, other community members, or an external professional mediator may help facilitate the discussion. If the involved parties agree on an outcome for resolving the incident, the CoC Committee will review the outcome to (a) determine if it is adequate or if any further actions need to be taken to protect the health and safety of the community and (b) support the involved parties with implementation and accountability.
+
 
 ### Potential Remedies
 
