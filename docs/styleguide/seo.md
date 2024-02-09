@@ -30,4 +30,6 @@ Alt text are short descriptions of images used to help Google and people who use
 
 URLs are addresses to webpages and other forms of online content. In the context of SEO, they help make it easier for users to gain access content. To make them more SEO-friendly, use the following methods:
 
--
+- **Make them short:** It'll make the links easier for users to comprehend and find the needed tutorial on our website
+- **Use keywords**: Like alt text, effectively adding keywords in the URL would make it easier for Google to find them.
+- **Avoid using special characters and spaces:** Characters like hyphens, numbers, ampersands(&), and spaces can make it difficult for the URL to quickly locate the content you're looking for on our site.
