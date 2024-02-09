@@ -3,8 +3,6 @@ title: SEO
 description: This guide gives advice on how to implement SEO when creating tutorials for our project.
 ---
 
-# SEO
-
 ## What is SEO?
 
 SEO (Search Engine Optimization)is the use of methods and strategies to ensure that a website's online content shows up when people search for them.
