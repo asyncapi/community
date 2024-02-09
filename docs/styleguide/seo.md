@@ -1,3 +1,8 @@
+---
+title: SEO
+description: This guide gives advice on how to implement SEO when creating tutorials for our project.
+---
+
 # SEO
 
 ## What is SEO?
