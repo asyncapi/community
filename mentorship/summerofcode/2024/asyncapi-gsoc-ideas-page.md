@@ -66,7 +66,7 @@ Upgrade [AsyncAPI Studio](https://studio.asyncapi.com/) to support real-time col
 
 ## Contact AsyncAPI Mentors
 - Join [our Slack workspace](https://www.asyncapi.com/slack-invite).  Observe our [Slack etiquette](https://github.com/asyncapi/.github/blob/master/slack-etiquette.md) and [AsyncAPI code of conduct](https://github.com/asyncapi/.github/blob/master/CODE_OF_CONDUCT.md).
-- Join the dedicated Mentorship channel `#mentorships` to meet all other GSoC mentees and mentors.
+- Join the dedicated Mentorship channel `#09_mentorships` to meet all other GSoC mentees and mentors.
 
 ## FAQ
 1. **How active are previous GSoC contributors in AsyncAPI?**
