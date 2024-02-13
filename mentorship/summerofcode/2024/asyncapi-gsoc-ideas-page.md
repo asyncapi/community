@@ -1,7 +1,7 @@
 # AsyncAPI Ideas Page: Google Summer of Code 2024
 Welcome to the **AsyncAPI Ideas Page** with our proposed projects for Google Summer of Code (GSoC) 2024! If you are an interested student/contributor, please don't hesitate to contact our mentors directly to discuss project ideas.
 
-## 1) [Autofix for Spectral Linting Errors: VS Code Extension](https://github.com/asyncapi/vs-asyncapi-preview/issues/160)
+## 1) [Autofix for Spectral Linting Errors: VS Code Extension](https://github.com/postman-open-technologies/gsoc-2024/issues/4)
 Enhance the [AsyncAPI Preview + Spectral](https://github.com/asyncapi/vs-asyncapi-preview) VS Code extension by introducing an autofix feature. This improvement aims to streamline the editing experience by automatically resolving common Spectral linting errors directly within the IDE.
 
 - 🎯 **Outcome:** Automate corrections for standard spectral linting issues in AsyncAPI documents. [Learn more](https://docs.stoplight.io/docs/spectral/1e63ffd0220f3-async-api-rules).
@@ -10,7 +10,7 @@ Enhance the [AsyncAPI Preview + Spectral](https://github.com/asyncapi/vs-asyncap
 - 👩🏿‍🏫 **Mentor(s):** [@ivangsa](https://github.com/ivangsa)
 - ⏳ **Length:** 175 Hours
 
-## 2) [Script Stability Enhancement for AsyncAPI Website](https://github.com/asyncapi/website/issues/2626)
+## 2) [Script Stability Enhancement for AsyncAPI Website](https://github.com/postman-open-technologies/gsoc-2024/issues/5)
 Improve the [AsyncAPI website](https://github.com/asyncapi/website)'s robustness by enhancing script stability in the `/scripts/*` directory. This project involves selecting a suitable testing framework for JavaScript and Next.js, integrating it with the website, developing detailed test cases for scripts, and setting up a GitHub Actions CI workflow for automated testing.
 
 - 🎯 **Outcome:** Achieve a stable website framework to support continuous development and updates.
@@ -19,7 +19,7 @@ Improve the [AsyncAPI website](https://github.com/asyncapi/website)'s robustness
 - 👩🏿‍🏫 **Mentor(s):** [@akshatnema](https://github.com/akshatnema), [@anshgoyalevil](https://github.com/anshgoyalevil)
 - ⏳ **Length:** 350 Hours
 
-## 3) [Integration Testing Library for Code Generators](https://github.com/asyncapi/generator/issues/752)
+## 3) [Integration Testing Library for Code Generators](https://github.com/postman-open-technologies/gsoc-2024/issues/6)
 Enhance the [Generator tool](https://github.com/asyncapi/generator) by introducing a feature or creating a new library to simplify integration testing for code generation templates. This solution facilitates the activation of integration tests, ensuring reliability and robustness with our code generators.
 
 - 🎯 **Outcome:** Enable template maintainers to easily validate and improve the quality of code-generating templates.
@@ -28,7 +28,7 @@ Enhance the [Generator tool](https://github.com/asyncapi/generator) by introduci
 - 👩🏿‍🏫 **Mentor(s):** [@derberg](https://github.com/derberg)
 - ⏳ **Length:** 175 Hours
 
-## 4) [Markdown and MermaidJS Diagrams Preview: VS Code Extension](https://github.com/asyncapi/vs-asyncapi-preview/issues/161)
+## 4) [Markdown and MermaidJS Diagrams Preview: VS Code Extension](https://github.com/postman-open-technologies/gsoc-2024/issues/7)
 Upgrade the [AsyncAPI Preview](https://github.com/asyncapi/vs-asyncapi-preview) VS Code extension to include a feature for visualizing message payloads through Markdown and MermaidJS Class Diagrams. It also incorporates an export feature for the Markdown preview to facilitate its use in external documentation. This enhancement will work with both AsyncAPI schemas and Avro (.avsc) files to offer a dynamic and interactive view of message structures. 
 
 - 🎯 **Outcome:** Deliver an enriched AsyncAPI preview tool that provides a user-friendly, graphical representation of message payloads, improving comprehension and documentation within the AsyncAPI ecosystem.
@@ -37,7 +37,7 @@ Upgrade the [AsyncAPI Preview](https://github.com/asyncapi/vs-asyncapi-preview) 
 - 👩🏿‍🏫 **Mentor(s):** [@ivangsa](https://github.com/ivangsa)
 - ⏳ **Length:** 175 Hours
 
-## 5) [AsyncAPI Website UI Kit Development](https://github.com/asyncapi-archived-repos/design-system/issues/4)
+## 5) [AsyncAPI Website UI Kit Development](https://github.com/postman-open-technologies/gsoc-2024/issues/8)
 Create a UI Kit for the AsyncAPI website to ensure brand visual consistency and streamline web development. The project will leverage Tailwind CSS, focusing on component-based class encapsulation to minimize class duplication and promote a modular, easy-to-maintain design system.
 
 - 🎯 **Outcome:** Establish an AsyncAPI Website UI Kit that aligns with our design principles, facilitating the creation of uniform and manageable website elements.
@@ -46,7 +46,7 @@ Create a UI Kit for the AsyncAPI website to ensure brand visual consistency and 
 - 👩🏿‍🏫 **Mentor(s):** [@acethecreator](https://github.com/acethecreator), [@akshatnema](https://github.com/akshatnema)
 - ⏳ **Length:** 350 Hours
 
-## 6) [Dynamic Open Graph Preview for AsyncAPI Studio](https://github.com/asyncapi/studio/issues/224)
+## 6) [Dynamic Open Graph Preview for AsyncAPI Studio](https://github.com/postman-open-technologies/gsoc-2024/issues/9)
 Improve social sharing for [AsyncAPI Studio](https://studio.asyncapi.com/) by implementing a dynamic Open Graph link preview generator. This feature will create context-specific preview images for shared links, incorporating key details like the title, description, and statistics from the shared AsyncAPI document.
 
 - 🎯 **Outcome:** Provide a richer, more informative link-sharing experience on platforms like Twitter, LinkedIn, Facebook, and Slack with custom preview images.
@@ -55,7 +55,7 @@ Improve social sharing for [AsyncAPI Studio](https://studio.asyncapi.com/) by im
 - 👩🏿‍🏫 **Mentor(s):** [@smoya](https://github.com/smoya)
 - ⏳ **Length:** 175 Hours
 
-## 7) [Real-time Collaboration in AsyncAPI Studio](https://github.com/asyncapi/studio/issues/619)
+## 7) [Real-time Collaboration in AsyncAPI Studio](https://github.com/postman-open-technologies/gsoc-2024/issues/10)
 Upgrade [AsyncAPI Studio](https://studio.asyncapi.com/) to support real-time collaborative editing. This enhancement will introduce features for simultaneous document editing, version control, and integrated communication tools, streamlining teamwork on AsyncAPI specifications.
 
 - 🎯 **Outcome:** Enable efficient, real-time collaboration among users on AsyncAPI documents, improving the co-editing experience.
