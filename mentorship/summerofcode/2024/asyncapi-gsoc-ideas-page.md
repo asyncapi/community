@@ -17,7 +17,7 @@ Improve the [AsyncAPI website](https://github.com/asyncapi/website)'s robustness
 - 🛠️ **Skills:** JavaScript, Next.js, unit testing, and CI/CD practices.
 - 🧩 **Difficulty:** Medium/Hard
 - 👩🏿‍🏫 **Mentor(s):** [@akshatnema](https://github.com/akshatnema), [@anshgoyalevil](https://github.com/anshgoyalevil)
-- ⏳ **Length:** 320 Hours
+- ⏳ **Length:** 350 Hours
 
 ## 3) [Integration Testing Library for Code Generators](https://github.com/asyncapi/generator/issues/752)
 Enhance the [Generator tool](https://github.com/asyncapi/generator) by introducing a feature or creating a new library to simplify integration testing for code generation templates. This solution facilitates the activation of integration tests, ensuring reliability and robustness with our code generators.
@@ -44,7 +44,7 @@ Create a UI Kit for the AsyncAPI website to ensure brand visual consistency and 
 - 🛠️ **Skills:** JavaScript, React, Storybook, and TailwindCSS.
 - 🧩 **Difficulty:** Easy/Medium
 - 👩🏿‍🏫 **Mentor(s):** [@acethecreator](https://github.com/acethecreator), [@akshatnema](https://github.com/akshatnema)
-- ⏳ **Length:** 320 Hours
+- ⏳ **Length:** 350 Hours
 
 ## 6) [Dynamic Open Graph Preview for AsyncAPI Studio](https://github.com/asyncapi/studio/issues/224)
 Improve social sharing for [AsyncAPI Studio](https://studio.asyncapi.com/) by implementing a dynamic Open Graph link preview generator. This feature will create context-specific preview images for shared links, incorporating key details like the title, description, and statistics from the shared AsyncAPI document.
@@ -66,7 +66,7 @@ Upgrade [AsyncAPI Studio](https://studio.asyncapi.com/) to support real-time col
 
 ## Contact AsyncAPI Mentors
 - Join [our Slack workspace](https://www.asyncapi.com/slack-invite).  Observe our [Slack etiquette](https://github.com/asyncapi/.github/blob/master/slack-etiquette.md) and [AsyncAPI code of conduct](https://github.com/asyncapi/.github/blob/master/CODE_OF_CONDUCT.md).
-- Join the dedicated Mentorship channel `#mentorships` to meet all other GSoC mentees and mentors.
+- Join the dedicated Mentorship channel `#09_mentorships` to meet all other GSoC mentees and mentors.
 
 ## FAQ
 1. **How active are previous GSoC contributors in AsyncAPI?**
