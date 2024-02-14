@@ -34,7 +34,7 @@ The CoC Committee may, in its discretion, consult external mediators, investigat
 
 ## Incident Resolution Procedures
 
-Please see our [Incident Resolution Procedures](*), which address: 
+Please see our [Incident Resolution Procedures](coc-incident-resolution-procedures.md), which address: 
 
 - How to submit a report
 - What information to share in your report
