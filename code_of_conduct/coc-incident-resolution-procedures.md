@@ -10,7 +10,7 @@ These Procedures address the following topics related to resolution of potential
 - [What information to include in your report](#what-information-to-include-in-your-report)
 - [What happens after a report is submitted](#what-happens-after-a-report-is-submitted)
  - [Acknowledgement of Receipt](#acknowledgement-of-receipt)
- - [Confirmation of Jurisdiction](#confirmation-of-jurisdiction)
+ - [Confirmation and Jurisdiction](#confirmation-and-jurisdiction)
   - [Who will have access to reports](#who-will-have-access-to-reports)
   - [Investigation](#investigation)
   - [Notification to the Accused Person](#notification-to-the-accused-person)
@@ -70,9 +70,15 @@ When reporting a potential Code of Conduct violation, please include the followi
 
 The Code of Conduct Committee will acknowledge receipt of your report in a timely manner, usually within a three business days.
 
-### Confirmation of Jurisdiction
+### Confirmation and Jurisdiction
 
-After a report is submitted, the AsyncAPI CoC Committee will confirm who has jurisdiction over the incident under the Jurisdiction and Escalation Policy. If the CoC Committee does not have jurisdiction, it will escalate the incident to the TSC. Reporters will be notified if this occurs unless they reported anonymously and did not provide their contact information. If the CoC Committee does have jurisdiction and is not required to escalate it, the committee will proceed to investigate and resolve the incident.
+Once the report has been submitted, the AsyncAPI CoC Committee will confirm receipt of the report and, if it does not have jurisdiction over the incident, notify the complainants unless they have done so anonymously and have not provided their contact information.
+
+The Jurisdiction of the CoC Committee is as follows:
+- [AsyncAPI Initiative GitHub](https://github.com/asyncapi)
+- [AsyncAPI Slack](asyncapi.slack.com)
+- AsyncAPI social networks: [Twitter](https://twitter.com/AsyncAPISpec), [LinkedIn](https://www.linkedin.com/company/asyncapi), [YouTube](https://www.youtube.com/asyncapi), [Twitch](https://www.twitch.tv/asyncapi)
+- AsyncAPI events: conferences, talks, workshops, etc.
 
 ### Who will have access to reports
 
