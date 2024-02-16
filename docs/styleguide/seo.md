@@ -5,11 +5,11 @@ description: This guide gives advice on how to implement SEO when creating tutor
 
 ## What is SEO?
 
-SEO (Search Engine Optimization)is the use of methods and strategies to ensure that a website's online content shows up when people search for them.
+SEO (Search Engine Optimization) refers to the methods and strategies used to enhance the visibility of a website's content in search engine results.
 
 ### Why is important in our Documentation?
 
-Implementing SEO practices would make it easier for our users and others to find them.  
+Implementing SEO practices would make it easier for our users and others to find them, resulting in more contributions and people to our community.  
 
 ### SEO Best Practices  
 
@@ -17,9 +17,18 @@ Implementing SEO practices would make it easier for our users and others to find
 
 Headings are tags used to make sub titles distinctive from each other. When it comes to making them SEO-friendly, it's highly recommended to do the following:
 
-- **Put them in chronological order:** Since an `h1` tag tend to be titles, always start with this tag. From there, use `h2` and`h3` tags for the subsections and `h4` and `h5` tags for other sections in your tutorial or other piece of documentation.
+- **Put them in hierarchcial order:** Since an `h1` tag tend to be titles, always start with this tag. From there, use `h2` and`h3` tags for the subsections and `h4` and `h5` tags for other sections in your tutorial or other piece of documentation.
 - **Be descriptive:** Avoid using terms like "Conclusion" and "Introduction" due to their vagueness. Instead, make them specific and ensure they describe the section's content.
 - **Include keywords:** Since sites like Google often use keywords to help people's online content appear on the web, Adding these terms effectively is helpful in reaching the tutorials or other pieces of content you create for our project to a wider audience.
+
+Here's an example of SEO-friendly headings:
+
+```md
+# Server 
+## What is Server?
+## What is the purpose of servers?
+### Cilent and Server
+```
 
 #### Alt Text
 
