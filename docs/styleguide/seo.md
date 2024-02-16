@@ -34,9 +34,15 @@ Here's an example of SEO-friendly headings:
 
 Alt text are short descriptions of images used to help Google and people who use screen readers gain a better understanding of our tutorials and other pieces of content. To make them SEO-friendly, it's highly recommended to do the following:
 
-- **Describe the image accurately**:  Doing this would help our users understand how to use Asycapi in their work
-- **Be concise**: While accuracy is important, avoid writing add every single detail about the image.
+- **Describe the image accurately**:  Doing this would help our users understand how to use Asycapi in their work.
+- **Be concise**: While accuracy is important, avoid writing every single detail about the image.
 - **Use keywords strategically**: Avoid adding every single keyword to your image's alt text. It can overwhelm Google's search engine.
+
+Here's an example of effective alternative text:
+
+```html
+alt="Diagram of EDAs"
+```
 
 #### URLs
 
@@ -44,4 +50,6 @@ URLs are addresses to webpages and other forms of online content. In the context
 
 - **Make them short:** It'll make the links easier for users to comprehend and find the needed tutorial on our website
 - **Use keywords**: Like alt text, effectively adding keywords in the URL would make it easier for Google to find them.
-- **Avoid using special characters and spaces:** Characters like hyphens, numbers, ampersands(&), and spaces can make it difficult for the URL to quickly locate the content you're looking for on our site.
+- **Avoid using special characters and spaces:** Use hyphens (-) instead of underscores (_) to separate words in URLs, as search engines treat hyphens as space.
+
+Here are some examples of SEO-friendly URLs:
