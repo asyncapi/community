@@ -52,4 +52,7 @@ URLs are addresses to webpages and other forms of online content. In the context
 - **Use keywords**: Like alt text, effectively adding keywords in the URL would make it easier for Google to find them.
 - **Avoid using special characters and spaces:** Use hyphens (-) instead of underscores (_) to separate words in URLs, as search engines treat hyphens as space.
 
-Here are some examples of SEO-friendly URLs:
+Here are some examples of SEO-friendly URLs from our documentation:
+- `https://www.asyncapi.com/docs/concepts/application`
+- `https://www.asyncapi.com/docs/concepts/server`
+- `https://www.asyncapi.com/docs/concepts/message`
