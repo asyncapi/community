@@ -106,7 +106,6 @@ Although the CoC Committee will not take any permanent actions until the CoC Com
 
 If the accused person and the parties potentially harmed in an incident communicate to the CoC Committee that they would like to resolve the incident through restorative conversation (see “Restorative Justice" below), mediation, or mutual agreement, the CoC Committee will wait until the parties have attempted to do so before making any final decisions regarding resolution of the incident. If all involved parties consent, the CoC Committee, other community members, or an external professional mediator may help facilitate the discussion. If the involved parties agree on an outcome for resolving the incident, the CoC Committee will review the outcome to (a) determine if it is adequate or if any further actions need to be taken to protect the health and safety of the community and (b) support the involved parties with implementation and accountability.
 
-
 ### Potential Remedies
 
 The goal of Code of Conduct incident resolution is to support and safeguard the health, safety, and wellbeing of the community and individuals who participate in the community, and to reinforce community standards for acceptable behavior; the purpose is not to punish. Whenever appropriate, the CoC Committee shall seek to resolve incidents using restorative justice and transformative justice approaches, as summarized below.
