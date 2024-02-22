@@ -1,0 +1,11 @@
+# This file contains the list of the currently active working groups.
+#
+# To learn more about working groups, read the WORKING_GROUPS.md file.
+
+working_groups:
+  # - name: The name of the working group
+  #   description: Describe what this working group is about.
+  #   chairperson: @Barbanio # GitHub handle of the chairperson.
+  #   members:
+  #     - @fmvilas # GitHub handle of the member.
+  #   roadmap_url: https://example.com/xyz # Link to a GitHub project, issue, or any other tool where the Working Group outlines their roadmap.
