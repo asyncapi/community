@@ -33,7 +33,7 @@ Here's an example of SEO-friendly headings:
 
 Alt text are short descriptions of images used to help Google and people who use screen readers gain a better understanding of our tutorials and other pieces of content. To make them SEO-friendly, it's highly recommended to do the following:
 
-- **Describe the image accurately**:  Doing this would help our users understand how to use Asycapi in their work.
+- **Describe the image accurately**:  Doing this would help our users understand how to use Asyncapi in their work.
 - **Be concise**: While accuracy is important, avoid writing every single detail about the image.
 - **Use keywords strategically**: Avoid adding every single keyword to your image's alt text. It can overwhelm Google's search engine.
 
@@ -56,3 +56,7 @@ Here are some examples of SEO-friendly URLs from our documentation:
 - `https://www.asyncapi.com/docs/concepts/server`
 - `https://www.asyncapi.com/docs/concepts/message`
 
+#### Anchor Text
+
+While URLs help users lead people to Asyncapi's content, their anchor texts are the phrases that introduces users to them. Here are some tips to make them SEO-friendly:
+<!-- add tips here later -->
