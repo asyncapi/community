@@ -57,12 +57,3 @@ Here are some examples of SEO-friendly URLs from our documentation:
 - `https://www.asyncapi.com/docs/concepts/server`
 - `https://www.asyncapi.com/docs/concepts/message`
 
-#### Additional Suggestions
-- **Meta Descriptions:** Our current docs and blog posts all use meta descriptions and titles. These summaries appear under the title in search results and can significantly impact click-through rates.
-- **Mobile-Friendliness:** Mention the importance of ensuring that documentation is mobile-friendly, as this is a factor in search engine rankings.
-- **Internal Linking:** Encourage the use of internal linking to other parts of the documentation or the AsyncAPI website to boost SEO and user navigation.
-- **Content Quality:** Emphasize the importance of high-quality, original content. Search engines favor content that provides value to users.
-  **Anchor Text:**
-- Be descriptive and relevant.
-- Avoid generic phrases like "click here" or "this page". (Instead, use meaningful phrases that give users and search engines an idea of what to expect on the linked page.)
-- Vary your anchor text. While it's important to be descriptive, using the exact same anchor text for every link to a particular page can appear spammy to search engines. Try to vary the phrasing while still being clear about the page content.
