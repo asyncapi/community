@@ -3,10 +3,10 @@
 # To learn more about working groups, read the WORKING_GROUPS.md file.
 
 working_groups:
-  # - name: The name of the working group
-  #   description: Describe what this working group is about.
-  #   chairperson: @Barbanio # GitHub handle of the chairperson.
-  #   members:
+  # - name: Required. The name of the working group.
+  #   description: Required. Describe what this working group is about.
+  #   chairperson: Required. GitHub handle of the chairperson. Example: @Barbanio.
+  #   members: # Required to have at least 2 members who are not the same as the chairperson.
   #     - @fmvilas # GitHub handle of the member.
-  #   okrs_url: https://example.com/xyz # Link to a GitHub project, issue, or any other tool where the Working Group explains their objectives.
-  #   roadmap_url: https://example.com/xyz # Link to a GitHub project, issue, or any other tool where the Working Group outlines their roadmap.
+  #   okrs_url: https://example.com/xyz # Required. Link to a GitHub project, issue, or any other tool where the Working Group explains their objectives.
+  #   roadmap_url: https://example.com/xyz # Recommended. Link to a GitHub project, issue, or any other tool where the Working Group outlines their roadmap.
