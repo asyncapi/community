@@ -18,7 +18,6 @@ Implementing SEO practices would make it easier for our users and others to find
 Headings are tags used to make sub titles distinctive from each other. When it comes to making them SEO-friendly, it's highly recommended to do the following:
 
 - **Put them in hierarchcial order:** Since an `h1` tag tend to be titles, always start with this tag. From there, use `h2` and`h3` tags for the subsections and `h4` and `h5` tags for other sections in your tutorial or other piece of documentation.
-- **Be descriptive:** Avoid using terms like "Conclusion" and "Introduction" due to their vagueness. Instead, make them specific and ensure they describe the section's content.
 - **Include keywords:** Since sites like Google often use keywords to help people's online content appear on the web, Adding these terms effectively is helpful in reaching the tutorials or other pieces of content you create for our project to a wider audience.
 
 Here's an example of SEO-friendly headings:
