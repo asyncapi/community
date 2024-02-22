@@ -8,4 +8,5 @@ working_groups:
   #   chairperson: @Barbanio # GitHub handle of the chairperson.
   #   members:
   #     - @fmvilas # GitHub handle of the member.
+  #   okrs_url: https://example.com/xyz # Link to a GitHub project, issue, or any other tool where the Working Group explains their objectives.
   #   roadmap_url: https://example.com/xyz # Link to a GitHub project, issue, or any other tool where the Working Group outlines their roadmap.
