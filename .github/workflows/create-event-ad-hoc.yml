@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       time:
-        description: 'Info about meeting hour in UTC time zone, like: 08 or 16. No PM or AM versions.'
+        description: 'Info about meeting time in UTC time zone in "HH:MM"(MM can be 00 or 30), like: 08:30 or 16:00. No PM or AM versions.'
         required: true
       date:
         description: 'Date in a form like: 2022-04-05 where 04 is a month and 05 is a day number.'
@@ -30,13 +30,13 @@ jobs:
       meeting_desc: ${{ github.event.inputs.desc }}
       meeting_banner: ${{ github.event.inputs.meeting_banner }}
       host: lpgornicki@gmail.com
-      alternative_host: "fmvilas@gmail.com,jonas-lt@live.dk,devlopergene@gmail.com"
+      alternative_host: "fmvilas@gmail.com,jonas-lt@live.dk,devlopergene@gmail.com,sibanda.thulie@gmail.com"
       issue_template_path: .github/workflows/create-event-helpers/issues_templates/ad-hoc.md
       create_zoom: true
     secrets:
       GH_TOKEN: ${{ secrets.GH_TOKEN }}
-      ZOOM_API_KEY: ${{ secrets.ZOOM_API_KEY }}
-      ZOOM_API_SECRET: ${{ secrets.ZOOM_API_SECRET }}
+      ZOOM_ACCOUNT_ID: ${{ secrets.ZOOM_ACCOUNT_ID }}
+      ZOOM_TOKEN: ${{ secrets.ZOOM_TOKEN }}
       STREAM_URL: ${{ secrets.STREAM_URL }}
       STREAM_KEY: ${{ secrets.STREAM_KEY }}
       CALENDAR_ID: ${{ secrets.CALENDAR_ID }}

@@ -6,7 +6,6 @@
     "@actions/core": "^1.6.0",
     "@mailchimp/mailchimp_marketing": "^3.0.74",
     "googleapis": "^99.0.0",
-    "jsonwebtoken": "^8.5.1",
     "node-fetch": "2.6.1"
   }
 }

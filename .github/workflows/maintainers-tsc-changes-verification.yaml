@@ -1,0 +1,181 @@
+name: Verify tsc and maintainers changes by human and bot
+
+on:
+  pull_request:
+    types: [synchronize, opened, reopened]
+    paths:
+      - "MAINTAINERS.yaml"
+env:
+  GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+
+jobs:
+  verify-changes-if-tsc-if-maintainers:
+    # if statement to check if the PR is open.
+    if: github.event.pull_request.state == 'open'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout main branch
+        uses: actions/checkout@v3
+        with:
+          ref: master
+          path: community-main
+
+      - name: Checkout PR branch
+        uses: actions/checkout@v3
+        with:
+          ref: ${{github.event.pull_request.head.ref}}
+          repository: ${{github.event.pull_request.head.repo.full_name}}
+          path: pr-branch
+
+      - name: Install js-yaml
+        run: npm install js-yaml@4.1.0
+
+      - name: Verify changes in MAINTAINERS.yaml
+        id: verify-changes
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{ env.GITHUB_TOKEN }}
+          script: |
+            const yaml = require("js-yaml");
+            const fs = require("fs");
+
+            const mainFile = yaml.load(fs.readFileSync("./community-main/MAINTAINERS.yaml", "utf8"));
+            const prFile = yaml.load(fs.readFileSync("./pr-branch/MAINTAINERS.yaml", "utf8"));
+
+            const beforeMaintainers = new Map(mainFile.map((maintainer) => [maintainer.name, {github: maintainer.github, repos: maintainer.repos || []}]));
+            let errorMessages = [];
+
+            const owner = context.repo.owner;
+            const repo = context.repo.repo;
+            const pull_number = context.issue.number;
+            const author = context.payload.pull_request.user.login;
+            let removedTscMembers = [];
+
+            // If the PR is made by the bot.
+            if (author === 'asyncapi-bot') {
+              core.info('Changes made by asyncapi-bot')
+              core.setOutput('errorMessages', JSON.stringify(errorMessages));
+
+              const removedMaintainers = mainFile.filter(
+                (mainMaintainer) => !prFile.some((maintainer) => mainMaintainer.github === maintainer.github)
+              );
+              removedTscMembers = removedMaintainers.filter(maintainer => maintainer.isTscMember);
+
+              if (removedTscMembers.length > 0) {
+                core.setOutput("removedTscMembers", JSON.stringify(removedTscMembers));
+              }
+              else {
+                return
+              }
+            }
+
+            // detecting if changes in the PR contain removal of maintainer object 
+            if (prFile.length < mainFile.length) {
+              errorMessages.push('A maintainer has been removed from `MAINTAINERS.yaml` file. Only `asyncapi-bot` can make such changes. Maintainers are removed from the file in an automated way only if they are no longer mentioned in `CODEOWNERS` file in any repository under AsyncAPI GitHub organization.');
+            }
+
+            for (const maintainer of prFile) {
+              // retrieve the previous data of the maintainer from the main file
+              const previousData = beforeMaintainers.get(maintainer.name);
+              // if the maintainer is not found in the previous data, it is a new maintainer 
+              if (!previousData) {
+                errorMessages.push(`A new maintainer, ${maintainer.name}, has been added to MAINTAINERS.yaml. Only asyncapi-bot can make such changes. Maintainers are added to the file in an automated way only if they are mentioned in the CODEOWNERS file in any repository under AsyncAPI GitHub organization.`);
+              } else {
+                // retrieve the previous GitHub key and repositories of the maintainer
+                const previousGithub = previousData.github;
+                const previousRepos = previousData.repos;
+                // check if the GitHub key for the maintainer has been modified
+                if (previousGithub !== maintainer.github) {
+                  errorMessages.push(`GitHub key for ${maintainer.name} has been modified in MAINTAINERS.yaml. Only asyncapi-bot can make such changes. This information is derived from the CODEOWNERS file located in any repository under AsyncAPI GitHub organization.`);
+                }
+                // check if the repositories list for the maintainer has been modified
+                if (previousRepos.toString() !== (maintainer.repos || []).toString()) {
+                  // Check if a human added a repo to the maintainer's repository list
+                  const previousReposLength = previousData.repos.length;
+                  const currentReposLength = (maintainer.repos || []).length;                
+                  // Check if a repository is added by a human
+                  if (currentReposLength > previousReposLength) {
+                    const addedRepos = (maintainer.repos || []).slice(previousReposLength);
+                    errorMessages.push(`New repositories (${addedRepos.join(', ')}) have been added to ${maintainer.name}'s repository list in MAINTAINERS.yaml. Only asyncapi-bot can make such changes. This information is derived from the CODEOWNERS file located in any repository under AsyncAPI GitHub organization.`);
+                  }
+                  // Check if a repository is removed by a human
+                  if (currentReposLength < previousReposLength) {
+                    const removedRepos = previousData.repos.slice(currentReposLength);
+                    errorMessages.push(`Repositories (${removedRepos.join(', ')}) have been removed from ${maintainer.name}'s repository list in MAINTAINERS.yaml. Only asyncapi-bot can make such changes. This information is derived from the CODEOWNERS file located in any repository under AsyncAPI GitHub organization.`);
+                  }
+                }
+              }
+            }
+            // Console log the error messages
+            core.info('Error messages:', errorMessages);
+            // Set the error messages as an output
+            core.info('Setting error messages output...');
+            core.setOutput('errorMessages', JSON.stringify(errorMessages));
+
+    outputs: 
+      errorMessages: ${{ steps.verify-changes.outputs.errorMessages }}
+      removedTscMembers: ${{ steps.verify-changes.outputs.removedTscMembers }}
+
+  block-human-made-critical-changes:
+    needs: verify-changes-if-tsc-if-maintainers
+    if: needs.verify-changes-if-tsc-if-maintainers.outputs.errorMessages != '[]'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Comment and close the PR if there are any critical changes done by human
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{ env.GITHUB_TOKEN }}
+          script: |
+            const errorMessagesString = `${{ needs.verify-changes-if-tsc-if-maintainers.outputs.errorMessages }}`;
+            const errorMessages = errorMessagesString ? JSON.parse(errorMessagesString) : [];
+            console.log('Parsed errorMessages:', errorMessages);
+            if (errorMessages && Array.isArray(errorMessages) && errorMessages.length > 0) {
+              const owner = context.repo.owner;
+              const repo = context.repo.repo;
+              const pull_number = context.issue.number;
+              const commentBody = errorMessages[0];
+              const commentContext = {
+                owner: owner,
+                repo: repo,
+                issue_number: pull_number,
+                body: commentBody
+              };
+              github.rest.issues.createComment(commentContext);
+              github.rest.pulls.update({
+                owner: owner,
+                repo: repo,
+                pull_number: pull_number,
+                state: 'closed'
+              });
+            } else {
+              console.info('errorMessages is empty.');
+            }
+
+  block-bot-from-tsc-removal:
+    needs: verify-changes-if-tsc-if-maintainers
+    if:  needs.verify-changes-if-tsc-if-maintainers.outputs.removedTscMembers !=  ''
+    runs-on: ubuntu-latest
+    steps:
+      - name: Comment on PR if TSC member is removed by asyncapi-bot
+        if: steps.verify-changes-if-tsc-if-maintainers.outputs.removedTscMembers != ''
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{ env.GITHUB_TOKEN }}
+          script: |
+              const issueComment = {
+                  owner: github.context.repo.owner,
+                  repo: github.context.repo.repo,
+                  issue_number: github.context.issue.number,
+                  body: 'A TSC member has been removed in this PR. Maintainers of this repository need to review and approve this PR.'
+              }
+              
+              const addLabel = {
+                  owner: github.context.repo.owner,
+                  repo: github.context.repo.repo,
+                  issue_number: github.context.issue.number,
+                  labels: ['do-not-merge']
+              }
+              
+              github.rest.issues.createComment(issueComment);
+              github.rest.issues.addLabels(addLabel);

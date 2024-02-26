@@ -1,29 +1,39 @@
 const fetch = require('node-fetch');
-const jwt = require('jsonwebtoken');
+const { URLSearchParams } = require('url');
 const core = require('@actions/core');
 
 /**
  * @param {string} date Date as YYYY-MM-DD
- * @param {string} time Number that represents hour, 2-digit format
+ * @param {string} time String representing the time in "HH:MM" format. MM can be 00 or 30.
  * @param {string} host email address of meeting host
  * @param {string} cohost coma-separated list of email addresses of alternative hosts
  */
 module.exports = async(date, time, host, cohost) => {
 
     const meetingTitle = process.env.MEETING_NAME;
-    let meetingDetails;
+    let meetingDetails, token;
 
-    const tokenConfig = {
-        iss: process.env.ZOOM_API_KEY,
-        exp: ((new Date()).getTime() + 5000)
+    //getting request token
+    try {
+        const params = new URLSearchParams();
+        params.append('grant_type', 'account_credentials');
+        params.append('account_id', process.env.ZOOM_ACCOUNT_ID);
+        const tokenCreationResponse = await fetch('https://zoom.us/oauth/token', {
+            method: 'POST',
+            body: params,
+            headers: {
+                Authorization: `Basic ${ process.env.ZOOM_TOKEN }`
+            },
+        });
+        token = (await tokenCreationResponse.json()).access_token;
+    } catch (error) {
+        return core.setFailed(`Failed getting token: ${ error }`)
     }
-
-    const token = jwt.sign(tokenConfig, process.env.ZOOM_API_SECRET);
 
     const zoomSettings = JSON.stringify({
         topic: meetingTitle,
         type: '2',
-        start_time: `${ date }T${ time }:00:00`,
+        start_time: `${ date }T${ time }:00`,
         duration: '60',
         timezone: 'UTC',
         settings: {
@@ -57,8 +67,11 @@ module.exports = async(date, time, host, cohost) => {
         return core.setFailed(`Meeting creation failed: ${ error }`)
     }
 
-    //core.debug(JSON.stringify(meetingDetails));
     const meetingId = meetingDetails.id;
+    if (!meetingId) {
+        core.info(JSON.stringify(meetingDetails, null, 4));
+        return core.setFailed('meetingId is not available which means something went wrong in communication with Zoom');
+    }
     const meetingUrl = meetingDetails.join_url;
 
     const streamOptions = JSON.stringify({
@@ -84,7 +97,6 @@ module.exports = async(date, time, host, cohost) => {
         return core.setFailed(`Meeting update with streaming info failed: ${ error }`)
     }
 
-    if (!meetingId) return core.setFailed('meetingId is not available which means something went wrong in communication with Zoom. Most probably the host that you defined is not yet part of related Zoom account');
     core.info(`Created meeting ${ meetingId } that you can join at ${ meetingUrl }`);
     core.setOutput('meetingUrl', meetingUrl);
 }

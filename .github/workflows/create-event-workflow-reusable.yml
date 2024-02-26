@@ -2,10 +2,9 @@ name: Schedule X Template Workflow
 
 on:
   workflow_call:
-
     inputs:
       time:
-        description: 'Info about meeting hour in UTC time zone, like: 08 or 16. No PM or AM versions.'
+        description: 'Info about meeting time in UTC time zone in "HH:MM"(MM can be 00 or 30), like: 08:30 or 16:00. No PM or AM versions.'
         required: true
         type: string
       date:
@@ -49,17 +48,17 @@ on:
         required: false
         type: string
     secrets:
-      GH_TOKEN: 
+      GH_TOKEN:
         required: true
-      ZOOM_API_KEY:
+      ZOOM_ACCOUNT_ID:
         required: true
-      ZOOM_API_SECRET:
+      ZOOM_TOKEN:
         required: true
       STREAM_URL:
         required: true
       STREAM_KEY:
         required: true
-      CALENDAR_ID: 
+      CALENDAR_ID:
         required: true
       CALENDAR_SERVICE_ACCOUNT:
         required: true
@@ -73,11 +72,10 @@ on:
         required: true
 
 jobs:
-
   setup-meeting:
     env:
-      ZOOM_API_KEY: ${{ secrets.ZOOM_API_KEY }}
-      ZOOM_API_SECRET: ${{ secrets.ZOOM_API_SECRET }}
+      ZOOM_ACCOUNT_ID: ${{ secrets.ZOOM_ACCOUNT_ID }}
+      ZOOM_TOKEN: ${{ secrets.ZOOM_TOKEN }}
       STREAM_URL: ${{ secrets.STREAM_URL }}
       STREAM_KEY: ${{ secrets.STREAM_KEY }}
       CALENDAR_ID: ${{ secrets.CALENDAR_ID }}
@@ -85,6 +83,22 @@ jobs:
     name: Setup meeting
     runs-on: ubuntu-latest
     steps:
+      - name: Validate inputs
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const time = '${{inputs.time}}'
+            const [HH, MM] = time.split(':')
+            if(Number(HH) > 23 || Number(HH) < 0 || !(Number(MM) === 0 || Number(MM) === 30)){
+              core.setFailed(`${time} is an invalid input. Time should be in UTC time zone in "HH:MM"(MM can be 00 or 30), like: 08:30 or 16:00. No PM or AM versions.`);
+            }
+            // Validate if the event is in the future
+            const eventDate = new Date('${{ inputs.date }}T${{ inputs.time }}:00Z');
+            const currentDate = new Date();
+            if (eventDate <= currentDate) {
+              let errorMessage = `The event cannot be scheduled in the past. You attempted to schedule the event on ${eventDate.toLocaleString()}, but the current date and time is ${currentDate.toLocaleString()}. Please specify a future date and time for the event.`;
+              core.setFailed(errorMessage);
+            }
       - name: Checkout repository
         uses: actions/checkout@v2
       - name: Setup Node.js
@@ -98,7 +112,7 @@ jobs:
         working-directory: ./.github/workflows/create-event-helpers
       - if: inputs.create_zoom == true
         name: Create zoom meeting
-        uses: actions/github-script@v4
+        uses: actions/github-script@v6
         id: zoom
         env:
           MEETING_NAME: ${{ inputs.meeting_name }}
@@ -111,7 +125,7 @@ jobs:
         id: create-issue
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-          FULL_DATE: ${{ inputs.date }}T${{ inputs.time }}:00:00Z
+          FULL_DATE: ${{ inputs.date }}T${{ inputs.time }}:00Z
           DATE_ONLY: ${{ inputs.date }}
           ZOOM_LINK: ${{ steps.zoom.outputs.meetingUrl }}
           MEETING_NAME: ${{ inputs.meeting_name }}
@@ -121,12 +135,13 @@ jobs:
           GUEST: ${{ inputs.guest }}
         with:
           filename: ${{ inputs.issue_template_path }}
-      - name: Create Google Calendar entry with zoom
+      - name: Create Google Calendar entry
         uses: actions/github-script@v4
         env:
           MEETING_NAME: ${{ inputs.meeting_name }}
           MEETING_NAME_SUFFIX: ${{ inputs.meeting_name_suffix }}
           MEETING_DESC: ${{ inputs.meeting_desc }}
+          MEETING_BANNER: ${{ inputs.meeting_banner }}
           GUEST: ${{ inputs.guest }}
         with:
           script: |
@@ -136,7 +151,7 @@ jobs:
         uses: m1ner79/Github-Twittction@v1.0.1
         with:
           twitter_status: "New meeting scheduled 💪\n\nName: ${{ inputs.meeting_name }}\n\nCheck what is it about and how to connect 👇🏼 https://github.com/asyncapi/community/issues/${{ steps.create-issue.outputs.number }}"
-          twitter_consumer_key: ${{ secrets.TWITTER_CONSUMER_KEY }} 
-          twitter_consumer_secret: ${{ secrets.TWITTER_CONSUMER_SECRET }} 
-          twitter_access_token_key: ${{ secrets.TWITTER_ACCESS_TOKEN_KEY }} 
+          twitter_consumer_key: ${{ secrets.TWITTER_CONSUMER_KEY }}
+          twitter_consumer_secret: ${{ secrets.TWITTER_CONSUMER_SECRET }}
+          twitter_access_token_key: ${{ secrets.TWITTER_ACCESS_TOKEN_KEY }}
           twitter_access_token_secret: ${{ secrets.TWITTER_ACCESS_TOKEN_SECRET }}
