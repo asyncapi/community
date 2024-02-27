@@ -1,17 +1,17 @@
-### Definition of a working group
+### Definition of a Working Group
 
-A working group is a group of people in our community who share a common interest beyond GitHub repositories.
+A `Working Group` is a group of people in our community who share a common interest beyond GitHub repositories.
 
-A working group must have, at least, one of its members appointed as its chairperson.
+A `Working Group` must have at least one of its members appointed as its chairperson.
 
-Anyone can create a working group. The only prerequisites are to have at least 3 founding members and the approval of the TSC (Technical Steering Committee).
+Anyone can create a `Working Group`. The only prerequisites are to have at least 3 founding members and the approval of the TSC (Technical Steering Committee).
 
-A working group should have its own set of goals or objectives. This helps everyone in the working group to stay aligned. The goals must be public and easily accessible by anyone on the internet.
+A `Working Group` should have clearly defined goals that are easily accessible to everyone on the internet, as this helps maintain alignment within the group.
 
-It's recommended that a working group has an associated [GitHub Projects](https://docs.github.com/en/issues/planning-and-tracking-with-projects/creating-projects/creating-a-project) project (or any other project management tool) where the group outlines their roadmap. It's up to the Working Group to decide the structure of the project. E.g., Kanban, Shape Up, TO-DO list, etc.
+The `Working Group` should have an associated project management tool like [GitHub Projects](https://docs.github.com/en/issues/planning-and-tracking-with-projects/creating-projects/creating-a-project) (or any other project management tool) to outline their roadmap. It's up to the `Working Group` to decide the structure of the project. E.g., Kanban, Shape Up, TO-DO list, etc.
 
-The name of the group, its members, the goals, and any other relevant information must be listed in the WORKING_GROUPS.yaml file in the `community` repository.
+The group's name, members, goals, and other relevant information must be added to the `WORKING_GROUPS.yaml` file in the `community` repository.
 
-A working group has no decision power over the roadmap of the projects they may impact. It's up to the maintainers (code owners) of the repositories involved to approve or reject the resulting pull requests. Therefore, it's highly recommended to either have maintainers of the impacted projects in the working group or make sure everyone is in agreement before deciding about the roadmap of the different repositories/projects.
+A `Working Group` has no authority or power over the roadmap of the projects they may impact. It's up to the repositories' maintainers (code owners) to approve or reject the pull requests. Therefore, it's advisable to either have maintainers of the impacted projects in the `Working Group` or ensure everyone agrees on the roadmap of the different repositories/projects.
 
-Working groups should be listed in the AsyncAPI website (asyncapi.com and asyncapi.org), along with their description, goals, members, an anything the working group wants to include.
+`Working Groups` should be listed on the AsyncAPI website (asyncapi.com and asyncapi.org), along with their description, goals, members, and anything the `Working Group` wants to include.
