@@ -12,6 +12,6 @@ The Working Group should have an associated project management tool like [GitHub
 
 The group's name, members, goals, and other relevant information must be added to the `WORKING_GROUPS.yaml` file in the `community` repository.
 
-A Working Group has no authority or power over the roadmap of the projects they may impact. It's up to the repositories' maintainers (code owners) to approve or reject the pull requests. Therefore, it's advisable to either have maintainers of the impacted projects in the `Working Group` or ensure everyone agrees on the roadmap of the different repositories/projects.
+A Working Group has no authority or power over the roadmap of the projects they may impact. It's up to the repositories' maintainers (code owners) to approve or reject the pull requests. Therefore, it's advisable to either have maintainers of the impacted projects in the Working Group or ensure everyone agrees on the roadmap of the different repositories/projects.
 
-Working Groups should be listed on the AsyncAPI website (asyncapi.com and asyncapi.org), along with their description, goals, members, and anything the Working Group wants to include.
+Working Groups should be listed on the [AsyncAPI website](https://www.asyncapi.com), along with their description, goals, members, and anything the Working Group wants to include.
