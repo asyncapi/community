@@ -8,7 +8,7 @@ Anyone can create a Working Group. The only prerequisites are to have at least 3
 
 A Working Group should have clearly defined goals that are easily accessible to everyone on the internet, as this helps maintain alignment within the group.
 
-The Working Group should have an associated project management tool like [GitHub Projects](https://docs.github.com/en/issues/planning-and-tracking-with-projects/creating-projects/creating-a-project) (or any other project management tool) to outline their roadmap. It's up to the Working Group to decide the structure of the project. E.g., Kanban, Shape Up, TO-DO list, etc.
+It is recommended that the Working Group has an associated project management tool like [GitHub Projects](https://docs.github.com/en/issues/planning-and-tracking-with-projects/creating-projects/creating-a-project) (or any other project management tool) to outline their roadmap. It's up to the Working Group to decide the structure of the project. E.g., Kanban, Shape Up, TO-DO list, etc.
 
 The group's name, members, goals, and other relevant information must be added to the `WORKING_GROUPS.yaml` file in the `community` repository.
 
