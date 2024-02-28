@@ -177,7 +177,7 @@ GitHub label `bounty` has hex code `#0E8A16`.
 
 ## Claiming The Reward
 
-Claiming the reward for the completed Bounty Issue is done via submission of an invoice at [the AsyncAPI page on Open Collective](https://opencollective.com/asyncapi) (button '`SUBMIT EXPENSE`'.)
+Claiming the reward for the completed Bounty Issue is done via submission of an invoice at the [AsyncAPI page on Open Collective](https://opencollective.com/asyncapi) (button '`SUBMIT EXPENSE`'.)
 
 **Before submission of the invoice, the Bounty Program Participant MUST ensure that the account they will use for the payout is VERIFIED, fully operational, and able to receive payments.**
 
@@ -191,7 +191,7 @@ Requirements for the invoice:
 
 - **Set invoice details / Description**: mention full URL of the GitHub issue which served as the Bounty Issue
 
-AsyncAPI does not perform financial transactions itself and relies on Open Collective to service payments and, thus, [comply with global sanctions](https://docs.opencollective.foundation/how-it-works/policies/international#international-activity-that-we-cant-enable). However, it has been empirically proven that even if the Bounty Program Participant is a citizen of a sanctioned jurisdiction, they can still receive the financial payment made to a payee in a non-sanctioned jurisdiction. Taking this into account, **potential Bounty Program Participants must check whether they will be able to receive payment themselves prior to starting participation in the Bounty Program**. AsyncAPI will not take any action if Open Collective refuses to relay the payment due to US or global sanctions imposed on a jurisdiction or an individual.
+AsyncAPI does not perform financial transactions itself and relies on Open Collective's Fiscal Host 'Open Source Collective' to service payments and, thus, [comply with global sanctions](https://docs.oscollective.org/how-it-works/basics/expense-policies-and-limitations#permitted-countries-ofac-checks-and-payments-to-certain-countries). However, it has been empirically proven that even if the Bounty Program Participant is a citizen of a sanctioned jurisdiction, they can still receive the financial payment made to a payee in a non-sanctioned jurisdiction. Taking this into account, **potential Bounty Program Participants must check whether they will be able to receive payment themselves prior to starting participation in the Bounty Program**. AsyncAPI will not take any action if Open Source Collective refuses to relay the payment due to US or global sanctions imposed on a jurisdiction or an individual.
 
 Also, note that if a Bounty Program Participant submits invoice expenses for more than six hundred US dollars and 00 cents (USD 600.00) per calendar year to a Collective at Open Collective with a Fiscal Host in the US (AsyncAPI fits this description,) they will be asked to fill out an IRS tax information form, which will be either a `W-8BEN` or a `W-8BEN-E` depending on whether the Bounty Program Participant has the legal status of an individual or of a sole proprietor, **supplying a local Tax ID**.
 
