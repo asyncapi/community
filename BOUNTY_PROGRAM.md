@@ -13,9 +13,9 @@ Anyone may implement this specification of the software development process with
 
 The budget of the Bounty Program per calendar year is twenty thousand US dollars and 00 cents (USD 20,000.00), which is five thousand US dollars and 00 cents (USD 5,000.00) per calendar quarter (three calendar months), split as follows:
 
-- four thousand six hundred US dollars and 00 cents (USD 4,600.00) per calendar quarter as the total amount of reward for completed Bounty Issues
+- Four thousand six hundred US dollars and 00 cents (USD 4,600.00) per calendar quarter as the total amount of reward for completed Bounty Issues
 
-- four hundred US dollars and 00 cents (USD 400.00) per calendar quarter as the cost of the Bounty Program Coordination
+- Four hundred US dollars and 00 cents (USD 400.00) per calendar quarter as the cost of the Bounty Program Coordination
 
 The reward for completion of the Bounty Issue of Complexity Level `Medium` is two hundred US dollars and 00 cents (USD 200.00).
 
