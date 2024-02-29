@@ -9,7 +9,7 @@ on:
 
 jobs:
   Make-PR:
-    name: Make PR on website repository with updated latest CLI documentation
+    name: Make PR on website repository with updated latest Community documentation
     runs-on: ubuntu-latest
     env:
       GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
@@ -17,7 +17,7 @@ jobs:
       - name: Checkout Current repository
         uses: actions/checkout@v3
         with:
-          path: cli
+          path: community
       - name: Checkout Another repository
         uses: actions/checkout@v3
         with:
@@ -31,20 +31,20 @@ jobs:
       - name: Create branch
         working-directory: ./website
         run: |
-          git checkout -b update-cli-docs-${{ github.sha }}
-      - name: Copy cli folder from Current Repo to Another
+          git checkout -b update-community-docs-${{ github.sha }}
+      - name: Copy community folder from Current Repo to Another
         working-directory: ./website
         run: |
-          mkdir -p ./pages/docs/tools/cli
-          printf "%s\ntitle: CLI\nweight: 10\n%s" "---" "---"> ../cli/docs/_section.md
-          mv ../cli/docs/*.md ./pages/docs/tools/cli
+          mkdir -p ./pages/docs/community/
+          printf "%s\ntitle: Community\nweight: 7\n%s" "---" "---"> ../community/docs/_section.md
+          mv ../community/docs/*.md ./pages/docs/community
       - name: Commit and push
         working-directory: ./website
         run: |
           git add .
-          git commit -m "docs(cli): update latest cli docs"
+          git commit -m "docs(community): update latest community docs"
           git push https://${{ env.GITHUB_TOKEN }}@github.com/asyncapi/website
       - name: Create PR
         working-directory: ./website
         run: |
-          gh pr create --title "docs(cli): update latest cli documentation" --body "Updated cli documentation is available and this PR introduces update to cli folder on the website" --head "update-cli-docs-${{ github.sha }}"
+          gh pr create --title "docs(community): update latest community documentation" --body "Updated community documentation is available and this PR introduces update to community folder on the website" --head "update-community-docs-${{ github.sha }}"
