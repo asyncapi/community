@@ -62,4 +62,11 @@ In addition to being short, these examples clearly mentions the titles for our c
 #### Anchor Text
 
 While URLs help users lead people to Asyncapi's content, their anchor texts are the phrases that introduces users to them. Here are some tips to make them SEO-friendly:
-<!-- add tips here later -->
+
+- **Implement SEO keywords:**  Be descriptive yet mindful of the amount of keywords being used to avoid overwhelming the search engine.
+- **Consider the audience's needs**:  Think about what the user might be looking for in Asyncapi's documentation and make sure the anchor text reflects this.
+- **Maintain the text**: Asyncapi is constantly evolving so it's crucial to update the anchor text to suit the documentation's updates.
+
+Here are some examples of SEO-friendly anchor texts from our documentation:
+
+<!-- add examples here -->
