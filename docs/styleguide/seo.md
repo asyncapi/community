@@ -52,9 +52,12 @@ URLs are addresses to webpages and other forms of online content. In the context
 - **Avoid using special characters and spaces:** Use hyphens (-) instead of underscores (_) to separate words in URLs, as search engines treat hyphens as space.
 
 Here are some examples of SEO-friendly URLs from our documentation:
+
 - `https://www.asyncapi.com/docs/concepts/application`
 - `https://www.asyncapi.com/docs/concepts/server`
 - `https://www.asyncapi.com/docs/concepts/message`
+
+In addition to being short, these examples clearly mentions the titles for our content buckets, no hyphens nor special characters and spaces.
 
 #### Anchor Text
 
