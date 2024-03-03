@@ -67,10 +67,10 @@ While URLs help users lead people to Asyncapi's content, their anchor texts are 
 - **Consider the audience's needs**:  Think about what the user might be looking for in Asyncapi's documentation and make sure the anchor text reflects this.
 - **Maintain the text**: Asyncapi is constantly evolving so it's crucial to update the anchor text to suit the documentation's updates.
 
-Here are some examples of SEO-friendly anchor texts from our documentation:
+Here are some examples of SEO-friendly anchor texts from Asyncapi's documentation:
 
 - `[OpenAPI (aka Swagger)](https://github.com/OAI/OpenAPI-Specification)`
 - `[`Server Object`](https://www.asyncapi.com/docs/reference/specification/latest#serverobject)`
 - `["the many meanings of Event-Driven Architecture"](https://www.youtube.com/watch?v=STKCRSUsyP0)`
 
-<!-- add explanation here -->
+These links include relevant keywords such as "OpenAPI(aka Swagger)", "Server Object", and "the many meanings of Event-Driven Architecture", which accurately describes the content they are linked to. 
