@@ -1,6 +1,6 @@
 ---
 title: SEO
-description: This guide gives advice on how to implement SEO when creating tutorials for our project.
+description: This guide gives advice on how to implement SEO when creating tutorials and other forms of content for Asyncapi.
 ---
 
 ## What is SEO?
