@@ -18,7 +18,6 @@ working_groups:
     members:
       - @KhudaDad414
       - @peter-rr
-      - @Amzani
     slack_channel: developer-experience-wg
     roadmap_url: https://shapeit.app/projects/org/asyncapi/16
     okrs_url: https://github.com/users/Amzani/projects/12/views/1
