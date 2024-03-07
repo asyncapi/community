@@ -16,8 +16,12 @@ working_groups:
     description: The goal of this group is to empower AsyncAPI user journey trough intuitive onboarding, tools, and a frictionless experience.
     chairperson: @Amzani
     members:
+      - @Pakisan
       - @KhudaDad414
+      - @ivangsa
       - @peter-rr
+      - @Shurtu-gal
+      - @princerajpoot20
     slack_channel: developer-experience-wg
     roadmap_url: https://shapeit.app/projects/org/asyncapi/16
     okrs_url: https://github.com/users/Amzani/projects/12/views/1
