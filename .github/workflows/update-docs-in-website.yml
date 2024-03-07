@@ -33,23 +33,23 @@ jobs:
         run: |
           git checkout -b update-community-docs-${{ github.sha }}
       - name: Update edit-page-config.json
-          uses: actions/github-script@v4
-          with:
-            script: |
-              const { writeFile } = require('fs').promises;
-              const configPath = './website/config/edit-page-config.json';
-              const checkSlug = 'reference/extensions/';
-              const slug = {
-                "value": checkSlug,
-                "href": "https://github.com/asyncapi/community/tree/master/docs"
-              };
-            
-              const configData = require(configPath);
-              const entryExists = configData.some(entry => entry.value === checkSlug);
-              if (!entryExists) {
-                configData.push(slug);
-                await writeFile(configPath, JSON.stringify(configData, null, 2))
-              }
+        uses: actions/github-script@v4
+        with:
+          script: |
+            const { writeFile } = require('fs').promises;
+            const configPath = './website/config/edit-page-config.json';
+            const checkSlug = 'reference/extensions/';
+            const slug = {
+              "value": checkSlug,
+              "href": "https://github.com/asyncapi/community/tree/master/docs"
+            };
+          
+            const configData = require(configPath);
+            const entryExists = configData.some(entry => entry.value === checkSlug);
+            if (!entryExists) {
+              configData.push(slug);
+              await writeFile(configPath, JSON.stringify(configData, null, 2))
+            }
       - name: Copy community folder from Current Repo to Another
         working-directory: ./website
         run: |
