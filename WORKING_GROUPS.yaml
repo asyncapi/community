@@ -13,7 +13,7 @@ working_groups:
   #   roadmap_url: https://example.com/xyz # Recommended. Link to a GitHub project, issue, or any other tool where the Working Group outlines their roadmap.
   #   github_team: # Recommended. The GitHub team handle to tag all the working group members at once. Example: @asyncapi/community_growth_wg.
   - name: Developer Experience
-    description: The goal of this group is to empower AsyncAPI user journey trough intuitive onboarding, tools, and a frictionless experience.
+    description: The goal of the Developer Experience Working Group is to empower the AsyncAPI user journey through intuitive onboarding, tools, and a frictionless experience. 
     chairperson: @Amzani
     members:
       - @Pakisan
