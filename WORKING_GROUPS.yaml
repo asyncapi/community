@@ -13,7 +13,7 @@ working_groups:
   #   roadmap_url: https://example.com/xyz # Recommended. Link to a GitHub project, issue, or any other tool where the Working Group outlines their roadmap.
   #   github_team: # Recommended. The GitHub team handle to tag all the working group members at once. Example: @asyncapi/community_growth_wg.
  - name: Community Growth
-    description: The goal of this group is making sure the AsyncAPI community grows in a healthy and sustainable way.
+    description: The Community Working Group aims to ensure AsyncAPI community growth in a healthy and sustainable way.  
     chairperson: @Barbanio 
     members:
       - @AceTheCreator
