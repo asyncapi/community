@@ -3,6 +3,7 @@ title: Formatting
 description: This guide illustrates the standards for formatting and writing our documentation.
 weight: 11
 ---
+
 ## Documentation formatting
 
 Documentation formatting refers to how the document appears on the page and how the content is organized, which includes font selection, font size and presentation (such as bold or italics), spacing, margins, alignment, columns, indentation, and lists. Formatting is crucial because it helps the reader perceive the information and makes it more accessible. 
