@@ -82,12 +82,12 @@ function myFunction() {
 
 ## Spacing
 
-Line spacing, or the vertical space between lines of text in a paragraph, can aid or hinder reading. Adequate line spacing aids readers in navigating from the end of one line to the start of the next.
+Line spacing, or the vertical space between lines of text in a paragraph, can aid or hinder reading. Adequate line spacing helps readers navigate from the end of one line to the start of the next.
 
 - Leave a blank line between paragraphs to visually separate them. This helps readers distinguish between different sections of content.
-- For headings and subheadings, leave a single blank line before and after them to provide clear visual separation.
+- For headings and subheadings, leave a blank line before and after them to provide clear visual separation.
 - Leave a single line spacing after bullet points or numbered lists to enhance readability.
 - Use consistent indentation to show the hierarchy of the content.
 - Indentation can be achieved with either 2 or 4 spaces, depending on your preference or the coding style guidelines of your project. Choose one and use it consistently throughout the document.
 - Use indentation to show nested content, such as code blocks, lists, or paragraphs within a list item.
-- Indent code blocks by an additional level of indentation to differentiate them from regular text.
+- Indent code blocks by an additional indentation level to differentiate them from regular text.
