@@ -74,3 +74,4 @@ Here are some examples of SEO-friendly anchor texts from Asyncapi's documentatio
 - `["the many meanings of Event-Driven Architecture"](https://www.youtube.com/watch?v=STKCRSUsyP0)`
 
 These links include relevant keywords such as "OpenAPI(aka Swagger)", "Server Object", and "the many meanings of Event-Driven Architecture", which accurately describes the content they are linked to.
+<!-- add section on how to create high quality content --!> 
