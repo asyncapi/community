@@ -38,7 +38,7 @@ jobs:
           script: |
             const { writeFile } = require('fs').promises;
             const configPath = './website/config/edit-page-config.json';
-            const checkSlug = 'reference/extensions/';
+            const checkSlug = 'community/docs';
             const slug = {
               "value": checkSlug,
               "href": "https://github.com/asyncapi/community/tree/master/docs"
