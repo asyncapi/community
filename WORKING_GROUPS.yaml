@@ -33,6 +33,7 @@ working_groups:
       - @AceTheCreator
       - @alequetzalli
       - @smoya
+      - @thulieblack 
     slack_channel: community-growth-wg
     roadmap_url: https://github.com/orgs/asyncapi/projects/33/views/8
     okrs_url: https://github.com/orgs/asyncapi/projects/33/views/12
