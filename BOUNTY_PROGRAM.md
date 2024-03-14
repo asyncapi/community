@@ -55,7 +55,7 @@ Due to asynchronous nature of the AsyncAPI Initiative itself and thus its Bounty
 
 ## Bounty Issue's Submission
 
-Bounty Issues for the upcoming calendar quarter round of the Bounty Program are submitted during the first and second full (seven-day) calendar weeks of the last month of the current calendar quarter, after call for such submission, in a quantity of no more than two issues per repository, in comments of the dedicated [AsyncAPI Organization's Discussion](https://github.com/orgs/asyncapi/discussions), by the AsyncAPI Maintainer of the given repository, containing the following five fields:
+Bounty Issues for the upcoming calendar quarter round of the Bounty Program are submitted during the first and second full (seven-day) calendar weeks of the last month of the current calendar quarter, after call for such submission, in a quantity of no more than two issues per repository, in comments of the dedicated [AsyncAPI Organization's Discussion](https://github.com/orgs/asyncapi/discussions), by one of the GitHub users whose GitHub handles are written in the `CODEOWNERS` file of the given repository (one of the AsyncAPI Maintainers of this repository,) containing the following five fields:
 
 1. Number: `cli#361`
 
