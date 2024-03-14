@@ -65,7 +65,7 @@ Bounty Issues for the upcoming calendar quarter round of the Bounty Program are 
 
 4. Complexity: `Medium` | `Advanced`
 
-5. Type: `Coding` | `Docs` | `Design`
+5. Type: `Coding` | `DevOps` | `Docs` | `Design`
 
 In case documentation must be provided together with solution requested in the Bounty Issue, such requirement should be explicitly stated in the Scope.
 
