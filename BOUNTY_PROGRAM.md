@@ -124,7 +124,7 @@ If no Pull Request is involved, updates on the Bounty Issue are determined by:
 
 In case the Bounty Program Participant has not provided a weekly update to the Draft Pull Request and/or on the Bounty Issue (on Monday, the last activity of any of the abovementioned types was five or more calendar days before, e.g., on `2024-01-29`, the last activity of any type was on `2024-01-24` or earlier,) they are pinged as a reminder to do so.
 
-In case the Bounty Program Participant has not provided an update to the Draft Pull Request and/or on the Bounty Issue after two pings over two Mondays, on the third Monday it is assumed that the task cannot be completed within the rest of the time, and the Bounty Program Participant has silently dropped the Bounty Issue. Ban rules are applied to such Bounty Program Participants, and the Bounty Issue becomes free for assignment to another Bounty Program Participant with a reset timeline, both in the current and next calendar quarter rounds of the Bounty Program.
+In case the Bounty Program Participant has not provided an update to the Draft Pull Request and/or on the Bounty Issue after two pings over two Mondays, on the third Monday it is assumed that the task cannot be completed within the rest of the time, and the Bounty Program Participant has silently dropped the Bounty Issue. Suspension rules are applied to such Bounty Program Participants, and the Bounty Issue becomes free for assignment to another Bounty Program Participant with a reset timeline, both in the current and next calendar quarter rounds of the Bounty Program.
 
 In case the dropped Bounty Issue is transferred to the next calendar quarter round of the Bounty Program, the reward for this Bounty Issue does not alter the budget allocated for the next calendar quarter round of the Bounty Program, and it is excluded from the randomization process for the next calendar quarter round of the Bounty Program if such a process is to take place.
 
@@ -198,27 +198,27 @@ Also, note that if a Bounty Program Participant submits invoice expenses for mor
 At the time of writing (2023-10-01) Open Collective supports `ACH`, `International SWIFT through Wise` (limitations of financial technology company 'Wise' are applied) and `PayPal` as automated payout methods. In rare cases (once per calendar year) Bounty Program Participant in personal communication with Open Collective can request them to perform a payout using a custom payment method to a non-sanctioned jurisdiction.
 
 
-## Ban
+## Suspension
 
-Each new Bounty Program Participant starts participation in the Bounty Program with the quantity of Bans equal to zero.
+Each new Bounty Program Participant starts participation in the Bounty Program with the quantity of Suspensions equal to zero.
 
-In case a Bounty Program Participant stops rendering services directed toward resolution of the Bounty Issue without any communication on the subject (performs 'silent drop') and/or fails to complete the Bounty Issue within the assigned Timeline, for the first time, they receive a First Ban and will be prohibited from participating in the Bounty Program starting from the current moment and during two calendar months from the beginning of the next full (three-month) calendar quarter. After this period, the First Ban expires.
+In case a Bounty Program Participant stops rendering services directed toward resolution of the Bounty Issue without any communication on the subject (performs 'silent drop') and/or fails to complete the Bounty Issue within the assigned Timeline, for the first time, they receive a First Suspension and will be prohibited from participating in the Bounty Program starting from the current moment and during two calendar months from the beginning of the next full (three-month) calendar quarter. After this period, the First Suspension expires.
 
-In case a Bounty Program Participant stops rendering services directed toward resolution of the Bounty Issue without any communication on the subject (performs 'silent drop') and/or fails to complete the Bounty Issue within the assigned Timeline, for the second time during two full (three-month) calendar quarters after the expiration of the First Ban, they receive a Second Ban and will be prohibited from participating in the Bounty Program starting from the current moment and during eight calendar months from the beginning of the next full (three-month) calendar quarter. After this period, the Second Ban expires.
+In case a Bounty Program Participant stops rendering services directed toward resolution of the Bounty Issue without any communication on the subject (performs 'silent drop') and/or fails to complete the Bounty Issue within the assigned Timeline, for the second time during two full (three-month) calendar quarters after the expiration of the First Suspension, they receive a Second Suspension and will be prohibited from participating in the Bounty Program starting from the current moment and during eight calendar months from the beginning of the next full (three-month) calendar quarter. After this period, the Second Suspension expires.
 
-In case a Bounty Program Participant stops rendering services directed toward resolution of two Bounty Issues simultaneously without any communication on the subject (performs 'silent drop') and/or fails to complete two Bounty Issues within the assigned Timeline simultaneously, the Second Ban is applied immediately.
+In case a Bounty Program Participant stops rendering services directed toward resolution of two Bounty Issues simultaneously without any communication on the subject (performs 'silent drop') and/or fails to complete two Bounty Issues within the assigned Timeline simultaneously, the Second Suspension is applied immediately.
 
-Reward for the completed Bounty Issue (Bounty Issues) is not paid to the Bounty Program Participant who received Ban for this Bounty Issue (Bounty Issues) in the current and next one Bounty Program's calendar quarter round, even in case of its (their) voluntary completion.
+Reward for the completed Bounty Issue (Bounty Issues) is not paid to the Bounty Program Participant who received Suspension for this Bounty Issue (Bounty Issues) in the current and next one Bounty Program's calendar quarter round, even in case of its (their) voluntary completion.
 
-After the expiration of the Second Ban or after two full (three-month) calendar quarters after the expiration of the First Ban, if no Second Ban was received during this time, their Ban history is considered clean, and the quantity of Bans is reset to zero.
+After the expiration of the Second Suspension or after two full (three-month) calendar quarters after the expiration of the First Suspension, if no Second Suspension was received during this time, their Suspension history is considered clean, and the quantity of Suspensions is reset to zero.
 
-A dedicated list is used for the purpose of tracking Ban history.
+A dedicated list is used for the purpose of tracking Suspension history.
 
-### Instruction on assuring a Ban receipt
+### Instruction on assuring a Suspension receipt
 
 First ask to assign the Bounty Issue to you on GitHub, _only then_ start to think on the task, understand you can't do it, silently drop.
 
-### Instruction on avoiding a Ban receipt
+### Instruction on avoiding a Suspension receipt
 
 Think on the task, make sure that you understand how to do it and CAN do it, ask to assign the Bounty Issue to you on GitHub, meet all milestones of the Bounty Issue Timeline.
 
