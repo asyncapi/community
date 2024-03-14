@@ -232,3 +232,4 @@ This document is the consolidated and formalized version of all information publ
 ##### https://docs.opencollective.com/help/expenses-and-getting-paid/tax-information
 ##### https://asyncapi.slack.com/archives/C05UHTSEHE2/p1699433566459269
 ##### https://github.com/asyncapi/community/pull/897#discussion_r1390778779
+##### https://github.com/asyncapi/community/issues/1072
