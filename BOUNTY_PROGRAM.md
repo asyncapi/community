@@ -4,7 +4,7 @@
 
 The AsyncAPI Bounty Program is a specification of the software development process, customized to meet the needs of the AsyncAPI Initiative.
 
-The AsyncAPI Bounty Program operates exclusively on donated funds, does not seek financial profit, uses publicly and freely available tools only, and has as its main purpose rewarding individual contributors to open source software while creating an artificial set of time constraints to make the schedule for achieving programming targets predictable.
+The AsyncAPI Bounty Program operates exclusively on donated funds, does not seek financial profit, uses publicly and freely available tools only, and has as its main purpose rewarding individual open source maintainers and contributors while creating an artificial set of time constraints to make the schedule for achieving programming targets predictable.
 
 Anyone may implement this specification of the software development process with or without any modification in any way they find suitable.
 
@@ -55,7 +55,7 @@ Due to asynchronous nature of the AsyncAPI Initiative itself and thus its Bounty
 
 ## Bounty Issue's Submission
 
-Bounty Issues for the upcoming calendar quarter round of the Bounty Program are submitted during the first and second full (seven-day) calendar weeks of the last month of the current calendar quarter, after call for such submission, in a quantity of no more than two issues per repository, in comments of the dedicated [AsyncAPI Organization's Discussion](https://github.com/orgs/asyncapi/discussions), by one of the GitHub users whose GitHub handles are written in the `CODEOWNERS` file of the given repository (one of the AsyncAPI Maintainers of this repository,) containing the following five fields:
+Bounty Issues for the upcoming calendar quarter round of the Bounty Program are submitted during the first and second full (seven-day) calendar weeks of the last month of the current calendar quarter, after the call for such submission, in a quantity of no more than two issues per repository, in the comments of the dedicated [AsyncAPI Organization's Discussion](https://github.com/orgs/asyncapi/discussions), by an AsyncAPI Maintainer who will be responsible for the resolution of the given Bounty Issue from the AsyncAPI's side, containing the following five fields:
 
 1. Number: `cli#361`
 
@@ -149,7 +149,7 @@ Communication on the necessity of the Bounty Issue Timeline extension should hap
 
 ## Bounty Issue's Reclassification
 
-Upon request of the AsyncAPI Maintainer who is responsible for the resolution of the given Bounty Issue from the AsyncAPI's side in the Bounty Issue's comments in the process of resolution, the Complexity Level of the Bounty Issue can be reclassified in any direction (both lowered to `Medium` and heightened to `Advanced`,) with corresponding changes to the Bounty Issue's Timeline.
+Upon request of the AsyncAPI Maintainer who is responsible for the resolution of the given Bounty Issue from the AsyncAPI's side in the Bounty Issue's comments in the process of resolution, the Complexity Level of the Bounty Issue can be reclassified in any direction (both lowered to `Medium` and heightened to `Advanced`,) with corresponding changes to the Bounty Issue's Timeline in case of a need.
 
 
 ## Bounty Issue's Completion
