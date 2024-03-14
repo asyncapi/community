@@ -202,13 +202,15 @@ At the time of writing (2023-10-01) Open Collective supports `ACH`, `Internation
 
 Each new Bounty Program Participant starts participation in the Bounty Program with the quantity of Bans equal to zero.
 
-In case a Bounty Program Participant stops rendering services directed towards resolution of the Bounty Issue without any communication on the subject (performs 'silent drop') for the first time, they receive a First Ban and will be prohibited from participating in the Bounty Program starting from the current moment, and during two calendar months from the beginning of the next calendar quarter. After this period, the First Ban expires.
+In case a Bounty Program Participant stops rendering services directed toward resolution of the Bounty Issue without any communication on the subject (performs 'silent drop') and/or fails to complete the Bounty Issue within the assigned Timeline, for the first time, they receive a First Ban and will be prohibited from participating in the Bounty Program starting from the current moment and during two calendar months from the beginning of the next full (three-month) calendar quarter. After this period, the First Ban expires.
 
-In case a Bounty Program Participant stops rendering services directed towards resolution of the Bounty Issue without any communication on the subject (performs 'silent drop') for the second time during two calendar quarters after the expiration of the First Ban, they receive a Second Ban and will be prohibited from participating in the Bounty Program starting from the current moment, and during eight calendar months from the beginning of the next calendar quarter. After this period, the Second Ban expires.
+In case a Bounty Program Participant stops rendering services directed toward resolution of the Bounty Issue without any communication on the subject (performs 'silent drop') and/or fails to complete the Bounty Issue within the assigned Timeline, for the second time during two full (three-month) calendar quarters after the expiration of the First Ban, they receive a Second Ban and will be prohibited from participating in the Bounty Program starting from the current moment and during eight calendar months from the beginning of the next full (three-month) calendar quarter. After this period, the Second Ban expires.
 
-In case a Bounty Program Participant stops rendering services directed towards resolution of two Bounty Issues simultaneously without any communication on the subject (performs 'silent drop',) the Second Ban is applied immediately.
+In case a Bounty Program Participant stops rendering services directed toward resolution of two Bounty Issues simultaneously without any communication on the subject (performs 'silent drop') and/or fails to complete two Bounty Issues within the assigned Timeline simultaneously, the Second Ban is applied immediately.
 
-After the expiration of the Second Ban or after two calendar quarters after the expiration of the First Ban if no Second Ban was received during this time, their Ban history is considered clean, and the quantity of Bans is reset to zero.
+Reward for the completed Bounty Issue (Bounty Issues) is not paid to the Bounty Program Participant who received Ban for this Bounty Issue (Bounty Issues) in the current and next one Bounty Program's calendar quarter round, even in case of its (their) voluntary completion.
+
+After the expiration of the Second Ban or after two full (three-month) calendar quarters after the expiration of the First Ban, if no Second Ban was received during this time, their Ban history is considered clean, and the quantity of Bans is reset to zero.
 
 A dedicated list is used for the purpose of tracking Ban history.
 
