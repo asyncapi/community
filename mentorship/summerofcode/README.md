@@ -20,7 +20,7 @@ TL;DR: GSoC exclusively focuses on coding projects. While initiatives like docum
 ### First Steps
 
 - **The ideal starting point is Google's [Student Guide](https://google.github.io/gsocguides/student)**!
-  Carefully read through it to familiarize yourself with the initiative. The guide provides a comprehensive program overview and offers valuable advice on starting communication, proposal writing, and beginning your work. Additionally, refer to Google's [FAQ](https://developers.google.com/open-source/gsoc/faq) for more information.
+  Carefully read through the guide to familiarize yourself with the initiative. The guide provides a comprehensive program overview and offers valuable advice on starting communication, proposal writing, and beginning your work. Additionally, refer to Google's [FAQ](https://developers.google.com/open-source/gsoc/faq) for more information.
 
 - **Get familiar with the AsyncAPI project.**
   Please familiarize yourself with the AsyncAPI initiative and its mission and get involved in the [community.](https://asyncapi.com/slack-invite) Explore the [AsyncAPI projects](https://github.com/asyncapi), get an idea of the project of your interest, explore the source code and how the project is organized.
