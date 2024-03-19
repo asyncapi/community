@@ -56,14 +56,13 @@ Improve social sharing for [AsyncAPI Studio](https://studio.asyncapi.com/) by im
 - ⏳ **Length:** 175 Hours
 
 ## 7) [Conference Website Maintainance](https://github.com/asyncapi/conference-website/issues/284)
-It's really important to have a website that's easy to use and keeps everybody informed about the upcoming conference.
-That's why we must ensure our website is dynamic and user-friendly.
+Ensure our conference website remains a dynamic and user-friendly for the upcoming 2024 AsyncAPI Conference.
 
-- 🎯 **Outcome:** Make the website more efficient and user-friendly
+- 🎯 **Outcome:** Improve the website's efficiency and user-friendliness for an improved user experience. 
 - 🛠️ **Skills:** JavaScript, Tailwind, and any testing framework.
 - 🧩 **Difficulty:** Easy/Medium
 - 👩🏿‍🏫 **Mentor(s):** [@acethecreator](https://github.com/acethecreator) [@mayaleeeee](https://github.com/Mayaleeeee)
-- ⏳ **Length:** 320 Hours
+- ⏳ **Length:** 350 Hours
 
 ## Contact AsyncAPI Mentors
 - Join [our Slack workspace](https://www.asyncapi.com/slack-invite).  Observe our [Slack etiquette](https://github.com/asyncapi/.github/blob/master/slack-etiquette.md) and [AsyncAPI code of conduct](https://github.com/asyncapi/.github/blob/master/CODE_OF_CONDUCT.md).
