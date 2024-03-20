@@ -19,14 +19,14 @@ Improve the [AsyncAPI website](https://github.com/asyncapi/website)'s robustness
 - 👩🏿‍🏫 **Mentor(s):** [@akshatnema](https://github.com/akshatnema), [@anshgoyalevil](https://github.com/anshgoyalevil)
 - ⏳ **Length:** 350 Hours
 
-## 3) [Integration Testing Library for Code Generators](https://github.com/asyncapi/generator/issues/752)
-Enhance the [Generator tool](https://github.com/asyncapi/generator) by introducing a feature or creating a new library to simplify integration testing for code generation templates. This solution facilitates the activation of integration tests, ensuring reliability and robustness with our code generators.
+## 3) [AsyncAPI Generator Maintainership](https://github.com/asyncapi/generator/issues/1145)
+This initiative aims to guide you on a journey from being a contributor to becoming a maintainer of the project. You'll gain insight into the responsibilities of a maintainer, involving tasks beyond mere coding.
 
-- 🎯 **Outcome:** Enable template maintainers to easily validate and improve the quality of code-generating templates.
+- 🎯 **Outcome:** Taking responsibility for the project's future and continuous improvement.
 - 🛠️ **Skills:** JavaScript/TypeScript, testing libraries, Docker, virtualization, and test automation.
 - 🧩 **Difficulty:** Medium/Hard
 - 👩🏿‍🏫 **Mentor(s):** [@derberg](https://github.com/derberg)
-- ⏳ **Length:** 175 Hours
+- ⏳ **Length:** 350 Hours
 
 ## 4) [Markdown and MermaidJS Diagrams Preview: VS Code Extension](https://github.com/asyncapi/vs-asyncapi-preview/issues/161)
 Upgrade the [AsyncAPI Preview](https://github.com/asyncapi/vs-asyncapi-preview) VS Code extension to include a feature for visualizing message payloads through Markdown and MermaidJS Class Diagrams. It also incorporates an export feature for the Markdown preview to facilitate its use in external documentation. This enhancement will work with both AsyncAPI schemas and Avro (.avsc) files to offer a dynamic and interactive view of message structures. 
@@ -55,14 +55,14 @@ Improve social sharing for [AsyncAPI Studio](https://studio.asyncapi.com/) by im
 - 👩🏿‍🏫 **Mentor(s):** [@smoya](https://github.com/smoya)
 - ⏳ **Length:** 175 Hours
 
-## 7) [Real-time Collaboration in AsyncAPI Studio](https://github.com/asyncapi/studio/issues/619)
-Upgrade [AsyncAPI Studio](https://studio.asyncapi.com/) to support real-time collaborative editing. This enhancement will introduce features for simultaneous document editing, version control, and integrated communication tools, streamlining teamwork on AsyncAPI specifications.
+## 7) [Conference Website Maintainance](https://github.com/asyncapi/conference-website/issues/284)
+Ensure our conference website remains a dynamic and user-friendly for the upcoming 2024 AsyncAPI Conference.
 
-- 🎯 **Outcome:** Enable efficient, real-time collaboration among users on AsyncAPI documents, improving the co-editing experience.
-- 🛠️ **Skills:** TypeScript/JavaScript, React, and WebSocket.
+- 🎯 **Outcome:** Improve the website's efficiency and user-friendliness for an improved user experience. 
+- 🛠️ **Skills:** JavaScript, Tailwind, and any testing framework.
 - 🧩 **Difficulty:** Easy/Medium
-- 👩🏿‍🏫 **Mentor(s):** [@fmvilas](https://github.com/fmvilas)
-- ⏳ **Length:** 175 Hours
+- 👩🏿‍🏫 **Mentor(s):** [@acethecreator](https://github.com/acethecreator) [@mayaleeeee](https://github.com/Mayaleeeee)
+- ⏳ **Length:** 350 Hours
 
 ## Contact AsyncAPI Mentors
 - Join [our Slack workspace](https://www.asyncapi.com/slack-invite).  Observe our [Slack etiquette](https://github.com/asyncapi/.github/blob/master/slack-etiquette.md) and [AsyncAPI code of conduct](https://github.com/asyncapi/.github/blob/master/CODE_OF_CONDUCT.md).
