@@ -1,0 +1,71 @@
+name: Remove vote label
+
+on:
+  issue_comment:
+    types: [created]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Get the comment body
+        id: get_comment_body
+        run: |
+          echo "Comment body: ${{ github.event.comment.body }}"
+
+      - name: Verify TSC Member
+        id: verify_member
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const fs = require('fs');
+            const filePath = 'TSC_MEMBERS.json';
+            const commenterName = context.payload.sender.login;
+            let isTSCMember = false;
+
+            function readFileAndProcess(callback) {
+              fs.readFile(filePath, 'utf8', (err, data) => {
+                if (err) {
+                  callback(err, null);
+                  return;
+                }
+                try {
+                  const jsonData = JSON.parse(data);
+                  // Iterate over each object in the array
+                  jsonData.forEach(item => {
+                    if (item.github === commenterName) {
+                      isTSCMember = true;
+                    }
+                  });
+                  // Invoke the callback function with the result
+                  callback(null, isTSCMember);
+                } catch (parseError) {
+                  callback(parseError, null);
+                }
+              });
+            }
+
+            readFileAndProcess((error, result) => {
+              if (error) {
+                console.error('Error:', error);
+              } else {
+                console.log('Is TSC Member:', result);
+                core.setOutput('isTSCMember', isTSCMember);
+              }
+            });
+
+      - name: Add the label
+        if: contains(github.event.comment.body, '/cancel-vote') && steps.verify_member.outputs.isTSCMember =='true'
+        run:
+          run:|
+            if [ "${{ github.event_name }}" = "pull_request" ]; then
+              gh pr edit ${{ github.event.pull_request.number }} --remove-label "vote"
+            else
+              gh issue edit ${{ github.event.issue.number }} --remove-label "vote"
+            fi
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
