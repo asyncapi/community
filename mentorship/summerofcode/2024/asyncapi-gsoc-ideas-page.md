@@ -16,7 +16,7 @@ Improve the [AsyncAPI website](https://github.com/asyncapi/website)'s robustness
 - 🎯 **Outcome:** Achieve a stable website framework to support continuous development and updates.
 - 🛠️ **Skills:** JavaScript, Next.js, unit testing, and CI/CD practices.
 - 🧩 **Difficulty:** Medium/Hard
-- 👩🏿‍🏫 **Mentor(s):** [@akshatnema](https://github.com/akshatnema), [@anshgoyalevil](https://github.com/anshgoyalevil)
+- 👩🏿‍🏫 **Mentor(s):** [@sambhavgupta0705](https://github.com/sambhavgupta0705), [@anshgoyalevil](https://github.com/anshgoyalevil)
 - ⏳ **Length:** 350 Hours
 
 ## 3) [AsyncAPI Generator Maintainership](https://github.com/asyncapi/generator/issues/1145)
@@ -61,7 +61,7 @@ Ensure our conference website remains a dynamic and user-friendly for the upcomi
 - 🎯 **Outcome:** Improve the website's efficiency and user-friendliness for an improved user experience. 
 - 🛠️ **Skills:** JavaScript, Tailwind, and any testing framework.
 - 🧩 **Difficulty:** Easy/Medium
-- 👩🏿‍🏫 **Mentor(s):** [@acethecreator](https://github.com/acethecreator) [@mayaleeeee](https://github.com/Mayaleeeee)
+- 👩🏿‍🏫 **Mentor(s):** [@acethecreator](https://github.com/acethecreator) [@mayaleeeee](https://github.com/Mayaleeeee) [@thulieblack](https://github.com/thulieblack) 
 - ⏳ **Length:** 350 Hours
 
 ## Contact AsyncAPI Mentors
