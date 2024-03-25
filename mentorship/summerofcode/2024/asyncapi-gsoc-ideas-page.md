@@ -16,7 +16,7 @@ Improve the [AsyncAPI website](https://github.com/asyncapi/website)'s robustness
 - 🎯 **Outcome:** Achieve a stable website framework to support continuous development and updates.
 - 🛠️ **Skills:** JavaScript, Next.js, unit testing, and CI/CD practices.
 - 🧩 **Difficulty:** Medium/Hard
-- 👩🏿‍🏫 **Mentor(s):** [@akshatnema](https://github.com/akshatnema), [@anshgoyalevil](https://github.com/anshgoyalevil)
+- 👩🏿‍🏫 **Mentor(s):** [@sambhavgupta0705](https://github.com/sambhavgupta0705), [@anshgoyalevil](https://github.com/anshgoyalevil)
 - ⏳ **Length:** 350 Hours
 
 ## 3) [AsyncAPI Generator Maintainership](https://github.com/asyncapi/generator/issues/1145)
