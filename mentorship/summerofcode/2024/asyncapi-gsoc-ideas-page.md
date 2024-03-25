@@ -61,7 +61,7 @@ Ensure our conference website remains a dynamic and user-friendly for the upcomi
 - 🎯 **Outcome:** Improve the website's efficiency and user-friendliness for an improved user experience. 
 - 🛠️ **Skills:** JavaScript, Tailwind, and any testing framework.
 - 🧩 **Difficulty:** Easy/Medium
-- 👩🏿‍🏫 **Mentor(s):** [@acethecreator](https://github.com/acethecreator) [@mayaleeeee](https://github.com/Mayaleeeee)
+- 👩🏿‍🏫 **Mentor(s):** [@acethecreator](https://github.com/acethecreator) [@mayaleeeee](https://github.com/Mayaleeeee) [@thulieblack](https://github.com/thulieblack) 
 - ⏳ **Length:** 350 Hours
 
 ## Contact AsyncAPI Mentors
