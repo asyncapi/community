@@ -1,4 +1,9 @@
-## Create a docs Pull Request (PR)
+---
+title : 'Create new docs pull request'
+weight : 90
+---
+
+## Create a new docs Pull Request (PR)
 Contributing to open source involves actively participating in a project by proposing changes such as code enhancements, test modifications, documentation updates, or addressing minor issues like typos and broken links. This section will guide you through creating and submitting a pull request.
 
 - A Docs’ PR should solve one documentation problem. 
