@@ -13,7 +13,6 @@ Technical writer contributors need the following tools to contribute to AsyncAPI
 - Code editor:  Any text editor or IDE, such as [VS Code](https://code.visualstudio.com), capable of handling Markdown files.
 - Basic understanding of [Git](https://git-scm.com).
 
-
 ## Setup your AsyncAPI local environment
 1. Fork the repository by clicking the `Fork` option on the top right of the main repository.
 
