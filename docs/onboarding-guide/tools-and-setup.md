@@ -3,9 +3,9 @@ title: Tools and setup
 weight: 60
 ---
 
-## Tools and setup for technical writers
+## Tools for technical writers
 
-To effectively contribute to the AsyncAPI project documentation, you will need the following range of tools and local setup to author technical documentation.
+To effectively contribute to the AsyncAPI project documentation, you will need the following range of tools to author technical documentation.
 
 ### Hardware and Internet
 - A laptop or desktop computer capable of running the tools necessary for contributing to the project.
