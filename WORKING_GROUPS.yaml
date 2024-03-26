@@ -1,0 +1,14 @@
+# This file contains the list of the currently active working groups.
+#
+# To learn more about working groups, read the WORKING_GROUPS.md file.
+
+working_groups:
+  # - name: Required. The name of the working group.
+  #   description: Required. Describe what this working group is about.
+  #   chairperson: Required. GitHub handle of the chairperson. Example: @Barbanio.
+  #   members: # Required to have at least 2 members who are not the same as the chairperson.
+  #     - @fmvilas # GitHub handle of the member.
+  #   slack_channel: # Required. The name of the Slack channel in the AsyncAPI workspace. Example: community_growth_wg
+  #   okrs_url: https://example.com/xyz # Required. Link to a GitHub project, issue, or any other tool where the Working Group explains their objectives.
+  #   roadmap_url: https://example.com/xyz # Recommended. Link to a GitHub project, issue, or any other tool where the Working Group outlines their roadmap.
+  #   github_team: # Recommended. The GitHub team handle to tag all the working group members at once. Example: @asyncapi/community_growth_wg.
