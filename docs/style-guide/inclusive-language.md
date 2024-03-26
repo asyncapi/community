@@ -9,7 +9,7 @@ Thus, we must ensure that our diverse audience can connect with our information.
 
 ## 1. Culturally inclusive language
 
-Certain phrases and words are commonly used in specific regions of the world. Avoid avoiding region-specific language in the documentation. 
+Certain phrases and words are commonly used in specific regions of the world. Avoid using region-specific language in the documentation. 
 Some examples of Region Specific Language are -
 - “It’s not rocket science” is commonly used in the USA, and non-US people might not be able to relate to it properly.
 - Phrases written in regional languages instead of English.
