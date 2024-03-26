@@ -11,7 +11,7 @@ Thus, we must ensure that our diverse audience can connect with our information.
 
 Certain phrases and words are commonly used in specific regions of the world. Avoid using region-specific language in the documentation. 
 Some examples of Region Specific Language are -
-- “It’s not rocket science” is commonly used in the USA, and non-US people might not be able to relate to it properly.
+- “It’s not rocket science” is commonly used in the USA, and non-US people might not be able to relate to it as intended.
 - Phrases written in regional languages instead of English.
 - “It’s a piece of cake” is commonly used in the USA, and non-US people might not be able to relate to it properly.
 - Terms like "gypsy" is considered derogatory in Romani community, "eskimo" is considered offensive in artic community.
