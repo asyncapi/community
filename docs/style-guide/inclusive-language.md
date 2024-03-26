@@ -4,7 +4,7 @@ Description: This style guide outlines the guideline for using inclusive languag
 
 # Inclusive Language
 
-While writing documentation we are indirectly reaching out to thousands of people all around the globe. 
+While writing documentation we are directly speaking to thousands of people all around the globe. 
 Thus, we must ensure that our diverse audience can connect with our information. 
 
 ## 1. Culturally inclusive language
