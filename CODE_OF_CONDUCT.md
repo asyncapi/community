@@ -28,6 +28,20 @@ Project maintainers are responsible for clarifying the standards of acceptable b
 
 Project maintainers have the right and responsibility to remove, edit, or reject comments, commits, code, wiki edits, issues, and other contributions that are not aligned to this Code of Conduct, or to ban temporarily or permanently any contributor for other behaviors that they deem inappropriate, threatening, offensive, or harmful.
 
+## Project Team
+
+The CoC committee consists of 5 nominated members of the Technical Steering Committee (TSC) and 2 supporting TSC members.
+
+## Selection of CoC Members
+
+The process for selecting members for the Code of Conduct (CoC) is nomination-based and follows these set of key criteria:
+
+- Each Community member can suggest 3 names from the TSC list.
+- Nominations can be made publicly or privately to avoid pressuring TSC members who may be nominated but not interested.
+- Votes are tallied, and the nominee with the majority of votes is selected.
+- Nominees must agree to accept the role.
+- The term duration is 2 years, with the possibility of reelection.
+
 ## Scope
 
 This Code of Conduct applies both within project spaces and in public spaces when an individual is representing the project or its community. Examples of representing a project or community include using an official project e-mail address, posting via an official social media account, or acting as an appointed representative at an online or offline event. Representation of a project may be further defined and clarified by project maintainers.
