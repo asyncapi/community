@@ -12,3 +12,17 @@ working_groups:
   #   okrs_url: https://example.com/xyz # Required. Link to a GitHub project, issue, or any other tool where the Working Group explains their objectives.
   #   roadmap_url: https://example.com/xyz # Recommended. Link to a GitHub project, issue, or any other tool where the Working Group outlines their roadmap.
   #   github_team: # Recommended. The GitHub team handle to tag all the working group members at once. Example: @asyncapi/community_growth_wg.
+  - name: Essential Building Blocks
+    description: The goal of the Essential Building Blocks Working Group is to provide fundamental building blocks that enable a similar developer experience across languages.
+    chairperson: @jonaslagoni
+    members:
+      - @m-wild
+      - @lorenzsimon
+      - @VisualBean
+      - @Pakisan
+      - @Souvikns
+      - @jonaslagoni
+    slack_channel: TBD
+    roadmap_url: TBD
+    okrs_url: TBD
+    github_team: TBD
