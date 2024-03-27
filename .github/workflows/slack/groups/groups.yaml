@@ -1,0 +1,26 @@
+# - Groups:
+# - name: (Required) The name of the user group.
+# - handle: (Required) A name for the user group that is unique among channels, users, and user groups.
+# - description: (Optional) A short description of the user group.
+# - users: (Optional) A list of user IDs that are part of the user group.
+# - data_source: (Optional) The data source to use for the user group. If users is not provided, the user group will be populated with users from the data source.
+# - channels: (Optional) A list of channel IDs for channels that the user group will be in.
+
+# IMPORTANT: Once a user group is created it cannot be deleted. And an existing user group cannot be created again. 
+# Before adding them here please make sure to import them like this:
+# terraform import slack_usergroup.<usergroup_name> <usergroup_id>
+
+- name: "ambassador"
+  handle: "ambassador"
+  description: "Ambassadors"
+  data_source: "ambassadors_user_ids"
+
+- name: "tsc_members"
+  handle: "tsc_members"
+  description: "TSC members"
+  data_source: "tsc_members_user_ids"
+
+- name: "maintainer"
+  handle: "maintainer"
+  description: "Maintainers"
+  data_source: "maintainers_user_ids"
