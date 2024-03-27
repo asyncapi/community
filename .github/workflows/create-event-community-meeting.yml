@@ -22,6 +22,7 @@ jobs:
       meeting_banner: ${{ github.event.inputs.meeting_banner }}
       meeting_name: Community Meeting
       meeting_desc: This is a community meeting to regularly talk in open about important topics around AsyncAPI Initiative.
+      yt_playlist: PLbi1gRlP7pijUwZJErzyYf_Rc-PWu4lXS
       host: lpgornicki@gmail.com
       alternative_host: 'fmvilas@gmail.com,devlopergene@gmail.com,sibanda.thulie@gmail.com'
       issue_template_path: .github/workflows/create-event-helpers/issues_templates/community.md
@@ -38,3 +39,5 @@ jobs:
       TWITTER_CONSUMER_SECRET: ${{ secrets.TWITTER_CONSUMER_SECRET }}
       TWITTER_ACCESS_TOKEN_KEY: ${{ secrets.TWITTER_ACCESS_TOKEN_KEY }}
       TWITTER_ACCESS_TOKEN_SECRET: ${{ secrets.TWITTER_ACCESS_TOKEN_SECRET }}
+      GOOGLE_OAUTH_TOKEN: ${{ secrets.GOOGLE_OAUTH_TOKEN }}
+      GOOGLE_OAUTH_CLIENT_SECRET: ${{ secrets.GOOGLE_OAUTH_CLIENT_SECRET }}
