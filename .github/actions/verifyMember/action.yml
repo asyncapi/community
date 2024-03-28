@@ -25,7 +25,7 @@ runs:
         script: |
            const yaml = require('js-yaml');
            const fs = require('fs');
-           const commenterName = 'AayushSaini101';
+           const commenterName = '${{inputs.authorName}}';
            let isTSCMember = false;
            try {
                // Load YAML file
