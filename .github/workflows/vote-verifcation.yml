@@ -1,0 +1,52 @@
+name: Verification of the Vote
+on:
+  issue_comment:
+    types: [created]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Verify the person
+        id: verify_member
+        uses: ./.github/actions/verifyMember
+        with:
+          authorName: "${{github.event.comment.user.login}}"
+          
+      - name: Set Output to Environment Variable
+        run: echo "IS_TSC_MEMBER=${{ steps.verify_member.outputs.isTSCMember }}" >> $GITHUB_ENV
+
+      - name: Sending authorised
+        if: (contains(github.event.comment.body, '/vote') || contains(github.event.comment.body, '/cancel-vote')) && env.IS_TSC_MEMBER == 'false'
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const commentText = `❌ @${{github.actor}} is not authorized to vote.
+             These commands can only be used by TSC members of the [TSC Members](https://github.com/asyncapi/community/blob/master/TSC_MEMBERS.json).`;
+             console.log(`❌ @${{github.actor}} made an unauthorized attempt to use a vote command.`);
+             github.rest.issues.createComment({
+                 issue_number: context.issue.number,
+                 owner: context.repo.owner,
+                 repo: context.repo.repo,
+                 body: commentText
+               })
+            
+      - name: Add the label
+        if: (contains(github.event.comment.body, '/cancel-vote') || contains(github.event.comment.body, '/vote')) && env.IS_TSC_MEMBER =='true'
+        run: |
+          if [ "${{ github.event.comment.body }}" == "/cancel-vote" ]; then
+            if [ "${{ github.event_name }}" != "pull_request" ]; then
+              gh issue edit ${{ github.event.issue.number }} --remove-label "vote"
+            else
+              gh pr edit ${{ github.event.issue.number }} --remove-label "vote"
+            fi
+          fi
+          if [ "${{ github.event.comment.body }}" == "/vote" ]; then
+            if [ "${{ github.event_name }}" != "pull_request" ]; then
+              gh issue edit ${{ github.event.issue.number }} --add-label "vote"
+            else
+              gh pr edit ${{ github.event.issue.number }} --add-label "vote"
+            fi
+          fi
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
