@@ -16,7 +16,7 @@ jobs:
       - name: Set Output to Environment Variable
         run: echo "IS_TSC_MEMBER=${{ steps.verify_member.outputs.isTSCMember }}" >> $GITHUB_ENV
 
-      - name: Sending authorised
+      - name: Sending unauthorised Message
         if: (contains(github.event.comment.body, '/cancel-vote')) && env.IS_TSC_MEMBER == 'false'
         uses: actions/github-script@v6
         with:
