@@ -35,9 +35,10 @@ runs:
                    // Check if the person is a TSC member or not
                    if (person.isTscMember && person.github == commenterName) {
                        isTSCMember = true;
-                       core.setOutput('isTSCMember', isTSCMember);
+                       
                    }
                });
            } catch (e) {
                console.log(e);
            }
+          core.setOutput('isTSCMember', isTSCMember);
