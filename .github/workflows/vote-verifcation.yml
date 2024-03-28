@@ -17,11 +17,11 @@ jobs:
         run: echo "IS_TSC_MEMBER=${{ steps.verify_member.outputs.isTSCMember }}" >> $GITHUB_ENV
 
       - name: Sending authorised
-        if: (contains(github.event.comment.body, '/vote') || contains(github.event.comment.body, '/cancel-vote')) && env.IS_TSC_MEMBER == 'false'
+        if: (contains(github.event.comment.body, '/cancel-vote')) && env.IS_TSC_MEMBER == 'false'
         uses: actions/github-script@v6
         with:
           script: |
-            const commentText = `❌ @${{github.actor}} is not authorized to vote.
+            const commentText = `❌ @${{github.actor}} is not authorised to execute vote command.
              These commands can only be used by TSC members of the [TSC Members](https://github.com/asyncapi/community/blob/master/TSC_MEMBERS.json).`;
              console.log(`❌ @${{github.actor}} made an unauthorized attempt to use a vote command.`);
              github.rest.issues.createComment({
