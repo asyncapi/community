@@ -77,5 +77,11 @@ Here are some examples of SEO-friendly anchor texts from Asyncapi's documentatio
 
 These links include relevant keywords such as "OpenAPI(aka Swagger)", "Server Object", and "the many meanings of Event-Driven Architecture", which accurately describes the content they are linked to.
 
-## Creating High-quality Content 
+## Meta Description 
+<!-- add tips here -->
+
+### Internal Linking 
+<!-- add tips here -->
+
+#### Mobile-Friendly
 <!-- add tips here -->
