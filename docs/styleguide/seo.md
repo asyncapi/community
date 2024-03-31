@@ -29,6 +29,7 @@ Here's an example of SEO-friendly headings:
 ## What is the purpose of servers?
 ### Cilent and Server
 ```
+
 In addition to using keywords, these headings appear in hierarchial order and appear in their respective content once. 
 
 #### Alt Text
@@ -44,6 +45,7 @@ Here's an example of effective alternative text:
 ```html
 alt="Diagram of EDAs"
 ```
+
 The above example is not only concise, but also uses keywords (EDAs) and accurately describes the image used in the tutorial. 
 #### URLs
 
@@ -78,7 +80,7 @@ Here are some examples of SEO-friendly anchor texts from Asyncapi's documentatio
 These links include relevant keywords such as "OpenAPI(aka Swagger)", "Server Object", and "the many meanings of Event-Driven Architecture", which accurately describes the content they are linked to.
 
 ## Meta Description 
-<!-- add tips here -->
+
 
 ### Internal Linking 
 <!-- add tips here -->
