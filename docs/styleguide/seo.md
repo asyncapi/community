@@ -18,7 +18,8 @@ Implementing SEO practices would make it easier for users and others to find the
 Headings are tags used to make sub titles distinctive from each other. When it comes to making them SEO-friendly, it's highly recommended to do the following:
 
 - **Put them in hierarchcial order:** Since an `h1` tag tend to be titles, always start with this tag. From there, use `h2` and`h3` tags for the subsections and `h4` and `h5` tags for other sections in yAsyncapi's tutorial or other piece of documentation.
-- **Include keywords:** Since sites like Google often use keywords to help people's online content appear on the web, Adding these terms effectively is helpful in ensuring that the tutorials and other pieces of content created reach a wider audience.
+- **Include keywords:** Since sites like Google often use keywords to help people's online content appear on the web, adding these terms effectively is helpful in ensuring that the tutorials and other pieces of content created reach a wider audience. Moz highly recommennds ["implementing keywords in the `h1` and`h2` elements because it is where most users start reading"(Stark Visibility, p.16)](https://starkvisibility.com/wp-content/uploads/2022/04/SEO-Copywriting-101-eBook.pdf)  
+- **Use them effectively:** While it is important to use headings in hierachcial order, consider using methods like ["putting one `h2` element in the content sections for easier navigation and readability purposes"(Stark Visibility, p.29)](https://starkvisibility.com/wp-content/uploads/2022/04/SEO-Copywriting-101-eBook.pdf)
 
 Here's an example of SEO-friendly headings:
 
@@ -28,6 +29,7 @@ Here's an example of SEO-friendly headings:
 ## What is the purpose of servers?
 ### Cilent and Server
 ```
+In addition to using keywords, these headings appear in hierarchial order and appear in their respective content once. 
 
 #### Alt Text
 
@@ -42,7 +44,7 @@ Here's an example of effective alternative text:
 ```html
 alt="Diagram of EDAs"
 ```
-
+The above example is not only concise, but also uses keywords (EDAs) and accurately describes the image used in the tutorial. 
 #### URLs
 
 URLs are addresses to webpages and other forms of online content. In the context of SEO, they help make it easier for users to gain access content. To make them SEO-friendly, use the following methods:
@@ -74,4 +76,6 @@ Here are some examples of SEO-friendly anchor texts from Asyncapi's documentatio
 - `["the many meanings of Event-Driven Architecture"](https://www.youtube.com/watch?v=STKCRSUsyP0)`
 
 These links include relevant keywords such as "OpenAPI(aka Swagger)", "Server Object", and "the many meanings of Event-Driven Architecture", which accurately describes the content they are linked to.
-<!-- add section on how to create high quality content --!> 
+
+## Creating High-quality Content 
+<!-- add tips here -->
