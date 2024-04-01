@@ -30,7 +30,7 @@ Here's an example of SEO-friendly headings:
 ### Cilent and Server
 ```
 
-In addition to using keywords, these headings appear in hierarchial order and appear in their respective content once. 
+In addition to using keywords, these headings appear in hierarchial order and appear in their respective content once.
 
 #### Alt Text
 
@@ -46,7 +46,8 @@ Here's an example of effective alternative text:
 alt="Diagram of EDAs"
 ```
 
-The above example is not only concise, but also uses keywords (EDAs) and accurately describes the image used in the tutorial. 
+The above example is not only concise, but also uses keywords (EDAs) and accurately describes the image used in the tutorial.
+
 #### URLs
 
 URLs are addresses to webpages and other forms of online content. In the context of SEO, they help make it easier for users to gain access content. To make them SEO-friendly, use the following methods:
@@ -73,17 +74,18 @@ While URLs help users lead people to Asyncapi's content, their anchor texts are 
 
 Here are some examples of SEO-friendly anchor texts from Asyncapi's documentation:
 
-- `[OpenAPI (aka Swagger)](https://github.com/OAI/OpenAPI-Specification)`
-- `[`Server Object`](https://www.asyncapi.com/docs/reference/specification/latest#serverobject)`
-- `["the many meanings of Event-Driven Architecture"](https://www.youtube.com/watch?v=STKCRSUsyP0)`
+- [OpenAPI (aka Swagger)](https://github.com/OAI/OpenAPI-Specification)
+- [Server Object](https://www.asyncapi.com/docs/reference/specification/latest#serverobject)
+- ["The many meanings of Event-Driven Architecture"](https://www.youtube.com/watch?v=STKCRSUsyP0)
 
 These links include relevant keywords such as "OpenAPI(aka Swagger)", "Server Object", and "the many meanings of Event-Driven Architecture", which accurately describes the content they are linked to.
 
-## Meta Description 
+## Meta Description
 
-
-### Internal Linking 
+Meta descriptions are ["snippets of HTML code that are placed in a web page's header."](https://www.techtarget.com/whatis/definition/meta-description-tag). To make them SEO-friendly, consider following these methods:
+<!-- - add methods here -->
+### Internal Linking
 <!-- add tips here -->
 
-#### Mobile-Friendly
+### Mobile-Friendly
 <!-- add tips here -->
