@@ -81,7 +81,7 @@ Internal linking is the process of enclosing links to certain sections of a blog
 
 ### What are meta descriptions?
 
-Meta descriptions are ["snippets of HTML code that are placed in a web page's header."](https://www.techtarget.com/whatis/definition/meta-description-tag). They appear under the title in the search results on Google and can significantly impact click-through rates.
+Meta descriptions are ["snippets of HTML code that are placed in a web page's header"](https://www.techtarget.com/whatis/definition/meta-description-tag). They appear under the title in the search results on Google and can significantly impact click-through rates.
 
 #### Strategies for making SEO-friendly meta descriptions
 
