@@ -26,7 +26,7 @@ jobs:
           # Verify the content was written successfully
           cat episode.json
       - name: Upload Episode from YouTube To Anchor.Fm
-        uses: Schrodinger-Hat/youtube-to-anchorfm@c722f3edeee94f3173dad36c5a959247973c5253 #commit related to https://github.com/Schrodinger-Hat/youtube-to-anchorfm/commit/c722f3edeee94f3173dad36c5a959247973c5253 || The latest commit which is of Nov 14, 2023
+        uses: Schrodinger-Hat/youtube-to-anchorfm@b02b82f809d24db88472a78c51ffa627f46a6dc3 #commit related to https://github.com/Schrodinger-Hat/youtube-to-anchorfm/commit/b02b82f809d24db88472a78c51ffa627f46a6dc3 || The latest commit which refers to v2.4.0 of the action
         env:
           ANCHOR_EMAIL: ${{ secrets.ANCHOR_EMAIL }}
           ANCHOR_PASSWORD: ${{ secrets.ANCHOR_PASSWORD }}
