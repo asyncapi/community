@@ -82,8 +82,23 @@ These links include relevant keywords such as "OpenAPI(aka Swagger)", "Server Ob
 
 ## Meta Description
 
-Meta descriptions are ["snippets of HTML code that are placed in a web page's header."](https://www.techtarget.com/whatis/definition/meta-description-tag). To make them SEO-friendly, consider following these methods:
-<!-- - add methods here -->
+Meta descriptions are ["snippets of HTML code that are placed in a web page's header."](https://www.techtarget.com/whatis/definition/meta-description-tag). They appear under the title in the search results on Google and can significantly impact click-through rates. To make them SEO-friendly, consider following these methods:
+
+- **Make them unique:** Meta descriptions that are identical to each other would make it difficult for the content to appear in the search results.
+- **Be descriptive** Since this information does not appear in webpages, add enough detail to the content's meta descriptions. It is highly recommended "to keep these descriptions within a range of ["150-300 characters"](https://docs.readthedocs.io/en/stable/guides/technical-docs-seo-guide.html).
+- **Be accurate**: Ensure that the meta description includes information that correlates to the blog post or tutorial's topic. Doing so helps its meta description appear in the search engine's results.
+
+Here are some examples of high-quality meta descriptions from Asyncapi's website:
+
+- `title: Kafka bindings
+description: Learn how to configure Kafka bindings in your AsyncAPI document.`
+- `title: "Validate AsyncAPI documents"
+description: In this guide, you'll learn multiple ways to validate AsyncAPI documents.`
+- `title: Generate code
+description: In this tutorial, you'll learn how to generate code from your AsyncAPI document.`
+
+In addition to having information that correlate to the content's topic, these meta descriptions are concise and contain keywords.
+
 ### Internal Linking
 <!-- add tips here -->
 
