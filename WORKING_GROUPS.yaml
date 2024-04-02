@@ -12,10 +12,26 @@ working_groups:
   #   okrs_url: https://example.com/xyz # Required. Link to a GitHub project, issue, or any other tool where the Working Group explains their objectives.
   #   roadmap_url: https://example.com/xyz # Recommended. Link to a GitHub project, issue, or any other tool where the Working Group outlines their roadmap.
   #   github_team: # Recommended. The GitHub team handle to tag all the working group members at once. Example: @asyncapi/community_growth_wg.
-   - name: Marketing  
-    Description: The Marketing Working Group aims to ensure AsyncAPI marketing growth is healthy and sustainable.  
+
+  - name: Marketing  
+    description: The Marketing Working Group aims to ensure AsyncAPI marketing growth is healthy and sustainable.  
     chairperson: tbd 
     members:
       - @derberg
       - @thulieblack
       - @Mayaleeeee
+  - name: Developer Experience
+    description: The goal of this group is to empower AsyncAPI user journey trough intuitive onboarding, tools, and a frictionless experience.
+    chairperson: @Amzani
+    members:
+      - @Pakisan
+      - @KhudaDad414
+      - @ivangsa
+      - @peter-rr
+      - @Shurtu-gal
+      - @princerajpoot20
+      - @Mayaleeeee
+    slack_channel: developer-experience-wg
+    roadmap_url: https://shapeit.app/projects/org/asyncapi/16
+    okrs_url: https://github.com/users/Amzani/projects/12/views/1
+    github_team: @asyncapi/developer_experience_wg
