@@ -5,25 +5,82 @@
 working_groups:
   # - name: Required. The name of the working group.
   #   description: Required. Describe what this working group is about.
-  #   chairperson: Required. GitHub handle of the chairperson. Example: @Barbanio.
+  #   chairperson: 
+  #     name: Fran Méndez        # Required. Name of the chairperson.
+  #     email: fmvilas@gmail.com # Recommended. Email of the chairperson.
+  #     github: '@fmvilas'       # Required. GitHub handle of the chairperson.
+  #     slack: U34F2JRRS         # Required. Slack user ID of the chairperson.
   #   members: # Required to have at least 2 members who are not the same as the chairperson.
-  #     - @fmvilas # GitHub handle of the member.
+  #     - name: Sergio Moya        # Required. Name of the member.
+  #       email: smoya89@gmail.com # Recommended. Email of the member.
+  #       github: '@smoya'         # Required. GitHub handle of the member.
+  #       slack: UN22ZTLHG         # Required. Slack user ID of the member.
   #   slack_channel: # Required. The name of the Slack channel in the AsyncAPI workspace. Example: community_growth_wg
   #   okrs_url: https://example.com/xyz # Required. Link to a GitHub project, issue, or any other tool where the Working Group explains their objectives.
   #   roadmap_url: https://example.com/xyz # Recommended. Link to a GitHub project, issue, or any other tool where the Working Group outlines their roadmap.
   #   github_team: # Recommended. The GitHub team handle to tag all the working group members at once. Example: @asyncapi/community_growth_wg.
   - name: Developer Experience
     description: The goal of this group is to empower AsyncAPI user journey trough intuitive onboarding, tools, and a frictionless experience.
-    chairperson: @Amzani
+    chairperson: 
+      name: Samir Amzani
+      github: '@amzani'
+      slack: U01N6AW5V5G
     members:
-      - @Pakisan
-      - @KhudaDad414
-      - @ivangsa
-      - @peter-rr
-      - @Shurtu-gal
-      - @princerajpoot20
-      - @Mayaleeeee
+      - name: Pavel Bodiachevskii
+        github: '@pakisan'
+        slack: U0132LQU8C9
+      - name: Khuda Dad Nomani
+        github: '@KhudaDad414'
+        slack: U01RVRD1TCL
+      - name: Iván García Sainz-Aja
+        github: '@ivangsa'
+        slack: UTCN3ET4M
+      - name: Pedro Ramos
+        github: '@peter-rr'
+        slack: U01TP1KJV1R
+      - name: Ashish Padhy
+        github: '@Shurtu-gal'
+        slack: U0572R8J927
+      - name: Prince Rajpoot
+        github: '@princerajpoot20'
+        slack: U04STTQHV18
+      - name: Aishat Muibudeen
+        email: muibudeenaishat@gmail.com
+        github: '@Mayaleeeee'
+        slack: U03CNHGEUR1
     slack_channel: developer-experience-wg
     roadmap_url: https://shapeit.app/projects/org/asyncapi/16
     okrs_url: https://github.com/users/Amzani/projects/12/views/1
-    github_team: @asyncapi/developer_experience_wg
+    github_team: '@asyncapi/developer_experience_wg'
+  - name: Community Growth
+    description: The Community Working Group aims to ensure AsyncAPI community growth in a healthy and sustainable way.  
+    chairperson: 
+      name: <TBD>
+      email: <TBD>
+      github: <TBD>
+      slack: <TBD>
+    members:
+      - name: Elegbede Azeez
+        email: acebuild404@gmail.com
+        github: '@AceTheCreator'
+        slack: U01RWDD69PZ
+      - name: Alejandra Quetzalli
+        email: quetzalliwritesbooks@gmail.com
+        github: '@alequetzalli'
+        slack: U02AKC14WAJ
+      - name: Aishat Muibudeen
+        email: muibudeenaishat@gmail.com
+        github: '@Mayaleeeee'
+        slack: U03CNHGEUR1
+      - name: Sergio Moya
+        email: smoya89@gmail.com
+        github: '@smoya'
+        slack: UN22ZTLHG
+      - name: Thulisile Sibanda
+        email: <thulies-email>
+        github: '@thulieblack'
+        slack: U03CNJPMT7C
+    slack_channel: community-growth-wg
+    roadmap_url: https://github.com/orgs/asyncapi/projects/33/views/8
+    okrs_url: https://github.com/orgs/asyncapi/projects/33/views/12
+    github_team: '@asyncapi/community_growth_wg'
