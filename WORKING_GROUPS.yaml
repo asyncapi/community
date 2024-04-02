@@ -7,12 +7,10 @@ working_groups:
   #   description: Required. Describe what this working group is about.
   #   chairperson: 
   #     name: Fran Méndez        # Required. Name of the chairperson.
-  #     email: fmvilas@gmail.com # Recommended. Email of the chairperson.
   #     github: '@fmvilas'       # Required. GitHub handle of the chairperson.
   #     slack: U34F2JRRS         # Required. Slack user ID of the chairperson.
   #   members: # Required to have at least 2 members who are not the same as the chairperson.
   #     - name: Sergio Moya        # Required. Name of the member.
-  #       email: smoya89@gmail.com # Recommended. Email of the member.
   #       github: '@smoya'         # Required. GitHub handle of the member.
   #       slack: UN22ZTLHG         # Required. Slack user ID of the member.
   #   slack_channel: # Required. The name of the Slack channel in the AsyncAPI workspace. Example: community_growth_wg
@@ -45,7 +43,6 @@ working_groups:
         github: '@princerajpoot20'
         slack: U04STTQHV18
       - name: Aishat Muibudeen
-        email: muibudeenaishat@gmail.com
         github: '@Mayaleeeee'
         slack: U03CNHGEUR1
     slack_channel: developer-experience-wg
@@ -56,30 +53,27 @@ working_groups:
     description: The Community Working Group aims to ensure AsyncAPI community growth in a healthy and sustainable way.  
     chairperson: 
       name: <TBD>
-      email: <TBD>
       github: <TBD>
       slack: <TBD>
     members:
       - name: Elegbede Azeez
-        email: acebuild404@gmail.com
         github: '@AceTheCreator'
         slack: U01RWDD69PZ
       - name: Alejandra Quetzalli
-        email: quetzalliwritesbooks@gmail.com
         github: '@alequetzalli'
         slack: U02AKC14WAJ
       - name: Aishat Muibudeen
-        email: muibudeenaishat@gmail.com
         github: '@Mayaleeeee'
         slack: U03CNHGEUR1
       - name: Sergio Moya
-        email: smoya89@gmail.com
         github: '@smoya'
         slack: UN22ZTLHG
       - name: Thulisile Sibanda
-        email: <thulies-email>
         github: '@thulieblack'
         slack: U03CNJPMT7C
+      - name: Fran Méndez
+        github: '@fmvilas'
+        slack: U34F2JRRS
     slack_channel: community-growth-wg
     roadmap_url: https://github.com/orgs/asyncapi/projects/33/views/8
     okrs_url: https://github.com/orgs/asyncapi/projects/33/views/12
