@@ -135,3 +135,6 @@ Here are some ways to make blog posts and documentation for Asyncapi's website m
 
 ### Examples of high-quality and SEO-friendly content from Asyncapi's website
 <!-- add list of examples -->
+
+## Additional resources 
+<!-- add explanation and list of resources -->
