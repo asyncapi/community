@@ -79,9 +79,16 @@ Internal linking is the process of enclosing links to certain sections of a blog
 
 ### Examples of SEO-friendly anchor texts from Asyncapi's website
 
+- "In this case, in your AsyncAPI file, you describe the `server`, and therefore the [Server Object](https://www.asyncapi.com/docs/reference/specification/latest#serverObject) holds information about the actual server, including its physical location."
+- "JSON Schema Draft 07 is 100% compatible with AsyncAPI schemas. You can also use other standards to describe payload schema, such as [Avro](https://github.com/asyncapi/avro-schema-parser#usage)."
+- "Furthermore, the [Pub/sub](/docs/tutorials/getting-started/event-driven-architectures#publishersubscriber) is appealing for IoT use cases due to two key features: support for flexible coupling between publishers/subscribers and inherent support for point-to-multipoint transmission."  
+
 ### What are meta descriptions?
 
-Meta descriptions are ["snippets of HTML code that are placed in a web page's header"](https://www.techtarget.com/whatis/definition/meta-description-tag). They appear under the title in the search results on Google and can significantly impact click-through rates.
+Meta descriptions are typically ["snippets of HTML code that are placed in a web page's header"](https://www.techtarget.com/whatis/definition/meta-description-tag). They appear under the title in the search results on Google and can significantly impact click-through rates.
+
+>[!NOTE]
+> In the case of Asyncapi's documentation, meta descriptions are written in YAML
 
 #### Strategies for making SEO-friendly meta descriptions
 
@@ -101,13 +108,24 @@ description: In this tutorial, you'll learn how to generate code from your Async
 In addition to having information that correlate to the content's topic, these meta descriptions are concise and contain keywords.
 
 ### Why mobile-friendliness important to technical documentation when making it SEO-friendly?
-<!-- add explanation here -->
+
+Whether it's on a tablet, smartphone, or computer, [people consume most online content on these devices](https://blog.google/products/marketingplatform/analytics/mobile-challenge-and-how-measure-it/). Also, making Asyncapi's content mobile-friendly would bring more users to the site as ["users are more likely to return to and have a high opinion of a product if it's website is mobile-friendly"](https://www.webfx.com/blog/web-design/user-experience-matters-marketing/). Lastly, mobile SEO-friendly technical documentation appears more in search results.
 
 #### Strategies for making mobile and SEO-friendly content
-<!-- add tips here -->
+
+Here are some ways to make blog posts and documentation for Asyncapi's website mobile and SEO-friendly.
+
+- **Use smaller images and videos**: Large images and videos can cause the documentation on Asyncapi's website to appear at slower rates, which create an unpleasant user-experience.
+
+- **Use mobile-friendly font**: Some fonts can be hard to read on mobile devices, so it's crucial to picks font styles and sizes that can be adaptable to their screen sizes. It highly recommended to use styles like ["Arial, Tahoma, Verdana for headings and Times New Roman, Georgia, Bookman for body text"](https://clickhelp.com/clickhelp-technical-writing-blog/choosing-fonts-for-technical-documentation/) and sizes like ["14-16 point font for headings and 12-point for body text"](https://clickhelp.com/clickhelp-technical-writing-blog/choosing-fonts-for-technical-documentation/).
+- **Give each topic its own page and/or section**: Consider putting a link to the next page or implementing internal links. It'll help users the project's docs and blog post have an easier time navigating the site.
+
+>[!TIP]
+> Consider using testing tools like [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/) to ensure that the proposed blog post, tutorial, or other form of documentation for  Asyncapi is mobile and SEO-friendly if quick results are needed.  
 
 ### Examples of SEO and mobile-friendly content from Asyncapi's website
-<!-- add list of examples -->
+
+<!-- add examples here -->
 
 ### Why is quality important when making technical documentation that is SEO-friendly?
  <!--add explaination here  -->
