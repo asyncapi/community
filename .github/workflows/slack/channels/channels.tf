@@ -49,3 +49,34 @@ resource "slack_conversation" "channels" {
   action_on_update_permanent_members = each.value.action_on_update_permanent_members
   adopt_existing_channel = each.value.adopt_existing_channel  
 }
+
+locals {
+  wg_channel_data = yamldecode(file("${path.module}/../../../../WORKING_GROUPS.yaml")).working_groups
+  wg_channels = {
+    for wg_channel in local.wg_channel_data : wg_channel.name => {
+      name = lookup(wg_channel, "slack_channel", wg_channel.name)
+      purpose = lookup(wg_channel, "slack_description", lookup(wg_channel, "description", ""))
+      topic = lookup(wg_channel, "slack_topic", "")
+
+      permanent_members = concat([wg_channel.chairperson.slack], [for member in wg_channel.members : member.slack])
+      is_private = false
+
+      action_on_destroy = "archive"
+      action_on_update_permanent_members = "none"
+      adopt_existing_channel = true
+    }
+  }
+}
+
+resource "slack_conversation" "wg_channels" {
+  for_each = local.wg_channels
+  name = each.value.name
+  topic = each.value.topic
+  purpose = each.value.purpose
+  permanent_members = each.value.permanent_members
+
+  is_private = each.value.is_private
+  action_on_destroy = each.value.action_on_destroy
+  action_on_update_permanent_members = each.value.action_on_update_permanent_members
+  adopt_existing_channel = each.value.adopt_existing_channel
+}

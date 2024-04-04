@@ -3,7 +3,7 @@ name: Automatic Slack Management
 on:
   push:
     paths:
-      - 'slack/*'
+      - '**/slack/**/*'
       - 'AMBASSADORS.json'
       - 'MAINTAINERS.yaml'
   
