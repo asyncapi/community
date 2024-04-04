@@ -1,7 +1,7 @@
 name: Verify Member
 outputs:
   isTSCMember:
-    description: 'Verify Member'
+    description: 'Check whether the person is TSCMember or not'
     value: ${{steps.verify_member.outputs.isTSCMember}}
 inputs:
   authorName:
