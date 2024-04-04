@@ -25,3 +25,18 @@ working_groups:
     slack_channel: essential-building-blocks-wg
     roadmap_url: https://github.com/orgs/asyncapi/projects/44
     github_team: @asyncapi/essential_building_blocks_wg
+  - name: Developer Experience
+    description: The goal of this group is to empower AsyncAPI user journey trough intuitive onboarding, tools, and a frictionless experience.
+    chairperson: @Amzani
+    members:
+      - @Pakisan
+      - @KhudaDad414
+      - @ivangsa
+      - @peter-rr
+      - @Shurtu-gal
+      - @princerajpoot20
+      - @Mayaleeeee
+    slack_channel: developer-experience-wg
+    roadmap_url: https://shapeit.app/projects/org/asyncapi/16
+    okrs_url: https://github.com/users/Amzani/projects/12/views/1
+    github_team: @asyncapi/developer_experience_wg
