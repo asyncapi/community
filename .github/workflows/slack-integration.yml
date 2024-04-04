@@ -39,7 +39,7 @@ jobs:
           commit-message: 'chore(slack): update slack configuration'
           committer: asyncapi-bot <info@asyncapi.io>
           author: asyncapi-bot <info@asyncapi.io>
-          title: 'chore(slack): update slack configuration'
+          title: 'ci(slack): update slack configuration'
           body: 'This PR was automatically created by the Automatic Slack Management GitHub Action.'
-          branch: 'chore/slack-update${{ github.run_number }}'
+          branch: 'chore/slack-update-${{ github.run_number }}'
           base: 'main'
