@@ -25,6 +25,7 @@ working_groups:
     slack_channel: essential-building-blocks-wg
     roadmap_url: https://github.com/orgs/asyncapi/projects/44
     github_team: @asyncapi/essential_building_blocks_wg
+    okrs_url: https://github.com/orgs/asyncapi/projects/44
   - name: Developer Experience
     description: The goal of this group is to empower AsyncAPI user journey trough intuitive onboarding, tools, and a frictionless experience.
     chairperson: @Amzani
