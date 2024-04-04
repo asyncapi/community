@@ -22,7 +22,6 @@ working_groups:
       - @Pakisan
       - @Souvikns
       - @jonaslagoni
-    slack_channel: TBD
-    roadmap_url: TBD
-    okrs_url: TBD
-    github_team: TBD
+    slack_channel: essential-building-blocks-wg
+    roadmap_url: https://github.com/orgs/asyncapi/projects/44
+    github_team: @asyncapi/essential_building_blocks_wg
