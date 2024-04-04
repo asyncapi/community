@@ -9,37 +9,35 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Verify the person
         id: verify_member
-        uses: ./.github/actions/verifyMember
+        uses: ./.github/actions/verifyTSCMember
         with:
           authorName: "${{github.event.comment.user.login}}"
 
-      - name: Set Output to Environment Variable
-        run: echo "IS_TSC_MEMBER=${{ steps.verify_member.outputs.version }}" >> $GITHUB_ENV
-
-      - name: Checking the person authenticity for vote.
+      - name: Checking the person authenticity.
         if:  contains(github.event.comment.body, '/vote') || contains(github.event.comment.body, '/cancel-vote')
         uses: actions/github-script@v6
         with:
-          script: |
-            const isTSCMember = ${{env.IS_TSC_MEMBER}};
-             if (!isTSCMember) {
-                const commentText = `User ❌ @${{ github.actor }} is not a [TSC Member](https://github.com/asyncapi/community/blob/master/TSC_MEMBERS.json).`;
-                 console.log(`User ❌ @${{ github.actor }} is not a TSC Member`);
-                 github.rest.issues.createComment({
-                  issue_number: context.issue.number,
-                  owner: context.repo.owner,
-                  repo: context.repo.repo,
-                 body: commentText
-               });
-             } else if('${{github.actor}}' != 'git-vote[bot]') {
-                console.log(`User ✅ @${{ github.actor }} is a TSC Member`);
-            }
+          script : |
+               const isTSCMember = ${{ steps.verify_member.outputs.isTSCMember}}
+                  if(!isTSCMember) {
+                   const commentText = `User ❌ @${{ github.actor }} is not a [TSC Member](https://github.com/asyncapi/community/blob/master/TSC_MEMBERS.json).`;
+                   console.log(`User ❌ @${{ github.actor }} is not a TSC Member`);
+                   github.rest.issues.createComment({
+                     issue_number: context.issue.number,
+                     owner: context.repo.owner,
+                     repo: context.repo.repo,
+                    body: commentText
+                  });
+               } else if('${{github.actor}}' != 'git-vote[bot]') {
+                 console.log(`User ✅ @${{ github.actor }} is a TSC Member`);
+               } 
+          
 
       - name: Add the label
-        if: (contains(github.event.comment.body, '/cancel-vote') || contains(github.event.comment.body, '/vote')) && env.IS_TSC_MEMBER =='true'
+        if: (contains(github.event.comment.body, '/cancel-vote') || contains(github.event.comment.body, '/vote')) && ${{steps.verify_member.outputs.isTSCMember}} == true
         run: |
           if [ "${{ github.event.comment.body }}" == "/cancel-vote" ]; then
             if [ "${{ github.event_name }}" != "pull_request" ]; then
