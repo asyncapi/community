@@ -7,7 +7,7 @@ Now we can easily listen the suggestions of the members via **git-vot** bot.
 ### Voting Rules
 
 * The voting will be done by only TSC Members.
-* The duration of the voting will be 1 day. 
+* The duration of the voting will be 2 minutes. 
 * The vote will be passed when more than 50% voting are in favour.
 
 ### How to vote on particular issue and pull request.
@@ -67,7 +67,7 @@ When unauthorised member tries to execute the /vote command, he or she will get 
 
 
 **Getting response for voting**
-![image](https://hackmd.io/_uploads/rkjnS0bkA.png)
+![Screenshot 2024-04-05 at 3.09.33 PM](https://hackmd.io/_uploads/HybSDBakA.png)
 
 
 

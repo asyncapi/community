@@ -23,7 +23,7 @@ jobs:
           script : |
                const isTSCMember = ${{ steps.verify_member.outputs.isTSCMember}}
                   if(!isTSCMember) {
-                   const commentText = `User ❌ @${{ github.actor }} is not a [TSC Member](https://github.com/asyncapi/community/blob/master/TSC_MEMBERS.json).`;
+                   const commentText = `User ❌ @${{ github.actor }} is not a [TSC Member](https://www.asyncapi.com/community/tsc). Guidelines to become a [TSC Member](https://github.com/asyncapi/community/blob/master/TSC_MEMBERSHIP.md)`;
                    console.log(`User ❌ @${{ github.actor }} is not a TSC Member`);
                    github.rest.issues.createComment({
                      issue_number: context.issue.number,
@@ -36,16 +36,9 @@ jobs:
                } 
           
 
-      - name: Add the label
-        if: (contains(github.event.comment.body, '/cancel-vote') || contains(github.event.comment.body, '/vote')) && ${{steps.verify_member.outputs.isTSCMember}} == true
+      - name: Adding the vote label.
+        if:  contains(github.event.comment.body, '/vote') && ${{steps.verify_member.outputs.isTSCMember}} == true
         run: |
-          if [ "${{ github.event.comment.body }}" == "/cancel-vote" ]; then
-            if [ "${{ github.event_name }}" != "pull_request" ]; then
-              gh issue edit ${{ github.event.issue.number }} --remove-label "vote"
-            else
-              gh pr edit ${{ github.event.issue.number }} --remove-label "vote"
-            fi
-          fi
           if [ "${{ github.event.comment.body }}" == "/vote" ]; then
             if [ "${{ github.event_name }}" != "pull_request" ]; then
               gh issue edit ${{ github.event.issue.number }} --add-label "vote"
@@ -54,4 +47,16 @@ jobs:
             fi
           fi
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+      - name: Removing the vote label.
+        if: contains(github.event.comment.body, '/cancel-vote') && ${{steps.verify_member.outputs.isTSCMember}} == true
+        run: |
+          if [ "${{ github.event.comment.body }}" == "/cancel-vote" ]; then
+            if [ "${{ github.event_name }}" != "pull_request" ]; then
+              gh issue edit ${{ github.event.issue.number }} --remove-label "vote"
+            else
+              gh pr edit ${{ github.event.issue.number }} --remove-label "vote"
+            fi
+          fi
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN}}
