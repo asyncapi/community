@@ -53,7 +53,9 @@ jobs:
       - name: Copy community folder from Current Repo to Another
         working-directory: ./website
         run: |
-          mkdir -p ./pages/docs/community/
+          rm -r ./pages/docs/community/onboarding-guide
+          mkdir -p ./pages/docs/community/onboarding-guide
+          rm ../community/docs/README.md
           printf "%s\ntitle: Community\nweight: 7\n%s" "---" "---"> ../community/docs/_section.md
           mv ../community/docs/*.md ./pages/docs/community
       - name: Commit and push
