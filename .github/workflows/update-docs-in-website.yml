@@ -36,20 +36,37 @@ jobs:
         uses: actions/github-script@v4
         with:
           script: |
-            const { writeFile } = require('fs').promises;
-            const configPath = './website/config/edit-page-config.json';
-            const checkSlug = 'community/docs';
+                const fs = require('fs').promises;
+                const configPath = './website/config/edit-page-config.json';
+                const configData = require(configPath);
+    const docsDir = 'community/docs';
+    
+    async function readDirectories(dirPath) {
+        const entries = await fs.readdir(dirPath, { withFileTypes: true });
+        const subdirectories = entries.filter(entry => entry.isDirectory()).map(entry => entry.name);
+        return subdirectories;
+    }
+    
+    async function updateConfigData() {
+        const subfolders = await readDirectories(docsDir);
+        
+        for (const subfolder of subfolders) {
+            const checkSlug = `community/${subfolder}`;
             const slug = {
-              "value": checkSlug,
-              "href": "https://github.com/asyncapi/community/tree/master/docs"
+                "value": checkSlug,
+                "href": `https://github.com/asyncapi/community/tree/master/docs/${subfolder}`
             };
-          
-            const configData = require(configPath);
+    
             const entryExists = configData.some(entry => entry.value === checkSlug);
             if (!entryExists) {
-              configData.push(slug);
-              await writeFile(configPath, JSON.stringify(configData, null, 2))
+                configData.push(slug);
             }
+        }
+    
+        await fs.writeFile(configPath, JSON.stringify(configData, null, 2));
+    }
+    
+    updateConfigData();
       - name: Copy community folder from Current Repo to Another
         working-directory: ./website
         run: |
