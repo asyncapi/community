@@ -16,23 +16,6 @@
 # 4. The default value for change in permanent_members is kick for private channels and nothing for public channels.
 # 5. The default value for adopt_current_channels is true.
 
-
-- name: maintainers
-  topic: Private channel for maintainers of the test environment
-  purpose: A private channel for the maintainers of the test environment to discuss and share information.
-  data_source: maintainers_user_ids
-  is_private: true
-  is_archived: false
-  action_on_destroy: archive
-
-- name: ambassadors
-  topic: Private channel for ambassadors of the test environment
-  purpose: A private channel for the ambassadors of the test environment to discuss and share information.
-  data_source: ambassadors_user_ids
-  is_private: true
-  is_archived: false
-  action_on_destroy: archive
-
 - name: 01_introductions
   topic: Welcome to our AsyncAPI Slack! Take a moment to introduce yourself.
   purpose: Welcome to our AsyncAPI Slack! Take a moment to introduce yourself.
