@@ -65,8 +65,8 @@ jobs:
                 
                     await fs.writeFile(configPath, JSON.stringify(configData, null, 2));
                 }
-    
-    updateConfigData();
+                updateConfigData();
+
       - name: Copy community folder from Current Repo to Another
         working-directory: ./website
         run: |
