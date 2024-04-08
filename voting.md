@@ -2,7 +2,7 @@
 
 There are many situation in the open source contribution, when we need to take suggestion of all the organsiation members, whether the particular issue is required or not, or the changes is valid in the specific pull request. 
 
-Now we can easily listen the suggestions of the members via **git-vot** bot.
+Now we can easily listen the suggestions of the members via [**git-vote**](https://github.com/cncf/gitvote) bot.
 
 ### Voting Rules
 
