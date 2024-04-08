@@ -1,6 +1,6 @@
 profiles:
   default:
-    duration: 2m
+    duration: 4w
     pass_threshold: 51
     periodic_status_check: "1 week"
     allowed_voters:
