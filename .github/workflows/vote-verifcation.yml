@@ -34,11 +34,10 @@ jobs:
                } else if('${{github.actor}}' != 'git-vote[bot]') {
                  console.log(`User ✅ @${{ github.actor }} is a TSC Member`);
                } 
-          
 
-      - name: Adding the vote label.
-        if:  contains(github.event.comment.body, '/vote') && ${{steps.verify_member.outputs.isTSCMember}} == true
+      - name: Add the label
         run: |
+         if [ "${{steps.verify_member.outputs.isTSCMember}}" == "true" ]; then
           if [ "${{ github.event.comment.body }}" == "/vote" ]; then
             if [ "${{ github.event_name }}" != "pull_request" ]; then
               gh issue edit ${{ github.event.issue.number }} --add-label "vote"
@@ -46,11 +45,12 @@ jobs:
               gh pr edit ${{ github.event.issue.number }} --add-label "vote"
             fi
           fi
+         fi
         env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
-      - name: Removing the vote label.
-        if: contains(github.event.comment.body, '/cancel-vote') && ${{steps.verify_member.outputs.isTSCMember}} == true
+          GH_TOKEN: ${{ github.token  }}
+      - name: Remove the label
         run: |
+         if [ "${{steps.verify_member.outputs.isTSCMember}}" == "true" ]; then
           if [ "${{ github.event.comment.body }}" == "/cancel-vote" ]; then
             if [ "${{ github.event_name }}" != "pull_request" ]; then
               gh issue edit ${{ github.event.issue.number }} --remove-label "vote"
@@ -58,5 +58,6 @@ jobs:
               gh pr edit ${{ github.event.issue.number }} --remove-label "vote"
             fi
           fi
+         fi
         env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN}}
+          GH_TOKEN: ${{ github.token }}
