@@ -1,9 +1,8 @@
-## Voting for TSC Members
+## Overview
 
-There are many situation in the open source contribution, when we need to take suggestion of all the organsiation members, whether the particular issue is required or not, or the changes is valid in the specific pull request. 
+In the [search for the right governance model](https://www.asyncapi.com/blog/governance-motivation) we ended up defining Technical Steering Committee (TSC) that can help making decisions that are related to entire AsyncAPI Initiative and not only specific repository. TSC voting is described in official [Charter](https://github.com/asyncapi/community/blob/master/CHARTER.md#4-tsc-voting).
 
-Now we can easily listen the suggestions of the members via [**git-vote**](https://github.com/cncf/gitvote) bot.
-
+To make voting process easier with proper automation we use [**git-vote**](https://github.com/cncf/gitvote) bot.
 ### Voting Rules
 
 * The voting will be done by only TSC Members.
