@@ -14,9 +14,9 @@ In majority of cases topics we vote on introduce some new rules, some new ways o
 
 ### Voting Rules
 
-* The voting will be done by only TSC Members.
-* The duration of the voting will be 2 minutes. 
-* The vote will be passed when more than 50% voting are in favour.
+* Only votes from [TSC members](https://www.asyncapi.com/community/tsc) are counted. You are still encouraged to participate in voting, even if your vote is not binding.
+* TSC members have no less than 7 calendar days to vote. As community we did not set exact voting deadline and only have a rule that you can translate into: "just be nice and give people at least 7 days to get familiar with the topic so they can vote". Our automation is set for 4 weeks, to take into account all possible limitations related to holidays and other events.
+* The vote completes when more than 50% voting are in favour.
 
 ### Voting Process
 
