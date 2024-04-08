@@ -9,76 +9,27 @@ To make voting process easier with proper automation we use [**git-vote**](https
 * The duration of the voting will be 2 minutes. 
 * The vote will be passed when more than 50% voting are in favour.
 
-### How to vote on particular issue and pull request.
+### Voting Process
 
-You need to add only one command to start the voting process on the issue on in the particular PR. **Please not only TSC Members can participate in the voting process**.
+#### Start Voting
 
-*A **vote label** will be added on the issue after starting of the voting process.*
+1. TSC member adds `/vote` comment to an Issue or a Pull Request.
+2. Git Vote bot creates a comment with instruction on how the voting should be done. It is based on  👍🏼 , 👎🏼 and 👀 emojis. You can still put comments or suggestions.
+3. AsyncAPI bot adds `vote` label so later it is easier for us to extract information about voted topics and participation.
 
-**Command:**
+#### Check Status
 
-```
-/vote
-```
+1. Anyone can add `/check-vote` comment to an Issue or a Pull Request.
+2. Git Vote bot creates a comment with update on how many binding votes were provided and how much is missing to reach the quorum.
 
-**TSC Member starting voting process:**
+### Cancel Voting
 
-![image](https://hackmd.io/_uploads/Sk_L-CWyR.png)
+1. TSC member adds `/cancel-vote` comment to an Issue or a Pull Request.
+2. Git Vote bot creates a comment.
+3. AsyncAPI bot removes `vote` label.
 
+### Finish Voting
 
-**Reactions to participate in voting process**
-* In favor of the changes. 👍
-* In against of the changes. 👎
-* Abstain from the voting. 👀
+There is no way to complete voting with a comment. It ends either when quorum is reached or duration deadline ends.
 
-
-**Example:**
-
-Member voted in the favor of the required changes
-
-![image](https://hackmd.io/_uploads/BybuXCZ1C.png)
-
-
-**Result:**
-
-
-![image](https://hackmd.io/_uploads/ByXBNRWJA.png)
-
-
-### Checking status of the vote 
-If anyone wants to check the status of the vote can easily check by using following command:
-
-```
-/check-vote
-```
-**Status of the vote**
-
-![image](https://hackmd.io/_uploads/ry3dOLGJ0.png)
-
-### Invalid vote execution 
-
-
-When unauthorised member tries to execute the /vote command, he or she will get a message related to unauthorised. 
-
-**Starting unauthorised voting:**
-
-![image](https://hackmd.io/_uploads/BywW8AbkR.png)
-
-
-**Getting response for voting**
-![Screenshot 2024-04-05 at 3.09.33 PM](https://hackmd.io/_uploads/HybSDBakA.png)
-
-
-
-### Cancelling the vote 
-
-TSC members can cancel the voting on the particular issue or PR, The cancelling vote removes the **vote** label from an issue.
-
-**Command:**
-```
-cancel-vote
-```
-
-**Cancelling vote status:**
-
-![image](https://hackmd.io/_uploads/rkhgYUzkC.png)
+Git Vote bot adds a comment that voting is completed.
