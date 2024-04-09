@@ -25,17 +25,36 @@ working_groups:
   #   github_team: # Recommended. The GitHub team handle to tag all the working group members at once. Example: @asyncapi/community_growth_wg.
   - name: Essential Building Blocks
     description: The goal of the Essential Building Blocks Working Group is to provide fundamental building blocks that enable a similar developer experience across languages.
-    chairperson: @jonaslagoni
+    chairperson: 
+      name: Jonas Lagoni
+      github: '@jonaslagoni'
+      slack: UQ2ANBG1E
     members:
-      - @m-wild
-      - @lorenzsimon
-      - @VisualBean
-      - @Pakisan
-      - @Souvikns
-      - @jonaslagoni
+      - name: Michael Wildman
+        github: '@m-wild'
+        slack: UNH2HT346
+      - name: Lorenz Simon
+        github: '@lorenzsimon'
+        slack: U06L7EQQSF2
+      - name: Alex Wichmann
+        github: '@VisualBean'
+        slack: U04C58GB8TF
+      - name: Pavel Bodiachevskii
+        github: '@pakisan'
+        slack: U0132LQU8C9 
+      - name: Souvik De
+        github: '@Souvikns'
+        slack: U01SGCZMJKW
+    slack:
+      channel: 
+        handle: essential-building-blocks-wg
+        description: 'The goal of the Essential Building Blocks Working Group is to provide fundamental building blocks that enable a similar developer experience across different languages. GitHub Project: https://github.com/orgs/asyncapi/projects/44'
+      group: 
+        handle: wg-essential-building-blocks
+        description: Essential Building Blocks Working Group
     slack_channel: essential-building-blocks-wg
     roadmap_url: https://github.com/orgs/asyncapi/projects/44
-    github_team: @asyncapi/essential_building_blocks_wg
+    github_team: '@asyncapi/essential_building_blocks_wg'
     okrs_url: https://github.com/orgs/asyncapi/projects/44
   - name: Developer Experience
     description: The goal of this group is to empower AsyncAPI user journey trough intuitive onboarding, tools, and a frictionless experience.
@@ -67,8 +86,8 @@ working_groups:
         slack: U03CNHGEUR1
     slack:
       channel: 
-        handle: developer-experience-wg # wg-dx
-        description: This is the channel for the Developer Experience Working Group.
+        handle: developer-experience-wg
+        description: 'The goal of this group is to empower AsyncAPI user journey trough intuitive onboarding, tools, and a frictionless experience. Current Roadmap: https://shapeit.app/projects/org/asyncapi/16/cycles/ceb40c9d?issue=I_kwDOLQFNzc5-xigF'
       group: 
         handle: wg-dx
     roadmap_url: https://shapeit.app/projects/org/asyncapi/16
