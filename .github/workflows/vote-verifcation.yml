@@ -23,7 +23,7 @@ jobs:
           script : |
                const isTSCMember = ${{ steps.verify_member.outputs.isTSCMember}}
                   if(!isTSCMember) {
-                   const commentText = `User ❌ @${{ github.actor }} is not a [TSC Member](https://www.asyncapi.com/community/tsc). Learn more from [guidelines to become a TSC Member](https://github.com/asyncapi/community/blob/master/TSC_MEMBERSHIP.md)`;
+                   const commentText = `User ❌ @${{ github.actor }}, since you are not a [TSC Member](https://www.asyncapi.com/community/tsc), you are not allowed to participate in voting. Learn more from [guidelines to become a TSC Member](https://github.com/asyncapi/community/blob/master/TSC_MEMBERSHIP.md)`;
                    console.log(`User ❌ @${{ github.actor }} is not a TSC Member`);
                    github.rest.issues.createComment({
                      issue_number: context.issue.number,
@@ -47,7 +47,7 @@ jobs:
           fi
          fi
         env:
-          GH_TOKEN: ${{ github.token  }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN_BOT_EVE }}
       - name: Remove the label
         run: |
          if [ "${{steps.verify_member.outputs.isTSCMember}}" == "true" ]; then
@@ -60,4 +60,4 @@ jobs:
           fi
          fi
         env:
-          GH_TOKEN: ${{ github.token }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN_BOT_EVE }}
