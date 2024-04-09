@@ -20,6 +20,7 @@ jobs:
         if:  contains(github.event.comment.body, '/vote') || contains(github.event.comment.body, '/cancel-vote')
         uses: actions/github-script@v6
         with:
+          github-token: ${{ secrets.GH_TOKEN_BOT_EVE }}
           script : |
                const isTSCMember = ${{ steps.verify_member.outputs.isTSCMember}}
                   if(!isTSCMember) {
