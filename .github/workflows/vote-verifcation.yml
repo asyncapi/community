@@ -23,7 +23,7 @@ jobs:
           script : |
                const isTSCMember = ${{ steps.verify_member.outputs.isTSCMember}}
                   if(!isTSCMember) {
-                   const commentText = `User ❌ @${{ github.actor }}, since you are not a [TSC Member](https://www.asyncapi.com/community/tsc), you are not allowed to participate in voting. Learn more from [guidelines to become a TSC Member](https://github.com/asyncapi/community/blob/master/TSC_MEMBERSHIP.md)`;
+                   const commentText = `Hi @${{ github.actor }}, since you are not a [TSC Member](https://www.asyncapi.com/community/tsc), you are not allowed to participate in voting. Please [read more about voting process](https://github.com/asyncapi/community/blob/master/voting.md)`;
                    console.log(`User ❌ @${{ github.actor }} is not a TSC Member`);
                    github.rest.issues.createComment({
                      issue_number: context.issue.number,
