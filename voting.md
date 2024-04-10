@@ -3,6 +3,7 @@
 In the [search for the right governance model](https://www.asyncapi.com/blog/governance-motivation) we ended up defining Technical Steering Committee (TSC) that can help making decisions that are related to entire AsyncAPI Initiative and not only specific repository. TSC voting is described in official [Charter](https://github.com/asyncapi/community/blob/master/CHARTER.md#4-tsc-voting).
 
 To make voting process easier with proper automation we use [**git-vote**](https://github.com/cncf/gitvote) bot.
+
 ### Voting Location
 
 - Voting must take place only in [community](https://github.com/asyncapi/community) repository
