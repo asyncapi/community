@@ -40,6 +40,6 @@ In the majority of cases topics we vote on introduce some new rules, some new wa
 
 ### Finish Voting
 
-There is no way to complete voting with a comment. It ends either when the majority of the positive voting is reached that is least 51% of the users with binding votes or the duration deadline ends.
+There is no way to complete voting with a comment. It ends either when the majority of the positive voting is reached that is least >50% of the users with binding votes or the duration deadline ends.
 
 The Git Vote bot adds a comment that voting is completed.
