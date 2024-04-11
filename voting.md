@@ -34,7 +34,7 @@ In the majority of cases topics we vote on introduce some new rules, some new wa
 
 ### Cancel Voting
 
-1. TSC member adds `/cancel-vote` comment to an Issue or a Pull Request.
+1. The TSC member adds `/cancel-vote` comment to an Issue or a Pull Request.
 2. The Git Vote bot creates a comment.
 3. The AsyncAPI bot removes the `vote` label.
 
