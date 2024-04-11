@@ -23,7 +23,7 @@ In the majority of cases topics we vote on introduce some new rules, some new wa
 
 #### Start Voting
 
-1. TSC member adds `/vote` comment to an Issue or a Pull Request.
+1. TSC member adds a `/vote` comment to an Issue or a Pull Request.
 2. The Git Vote bot creates a comment with instructions on how the voting should be done. It is based on  👍🏼 , 👎🏼 and 👀 emojis. You can still put comments or suggestions.
 3. AsyncAPI bot adds a `vote` label so later it is easier for us to extract information about voted topics and participation.
 
