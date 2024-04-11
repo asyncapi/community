@@ -17,6 +17,7 @@ In the majority of cases topics we vote on introduce some new rules, some new wa
 
 * Only votes from [TSC members](https://www.asyncapi.com/community/tsc) are counted. You are still encouraged to participate in voting, even if your vote is not binding.
 * TSC members have no less than 7 calendar days to vote. As a community, we did not set an exact voting deadline and only have a rule that you can translate into: "Just be nice and give people at least 7 days to get familiar with the topic so they can vote". Our automation is set for 4 weeks, to take into account all possible limitations related to holidays and other events.
+* TSC members can skip some votes, although, if you do not have an opinion, please participate with 👀 to indicated that you saw a vote, but you have no opinion and abstain. There is one strict rule though, that if you do not participate in voting within any three-month period, you stop being TSC member. It has nothing to do though with your maintainer responsibilities.
 * The vote is completed when more than 50% voting are in favour.
 
 ### Voting Process
