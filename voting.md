@@ -6,7 +6,7 @@ To make the voting process easier with proper automation we use [**git-vote**](h
 
 ### Voting Location
 
-- Voting must take place only in [community](https://github.com/asyncapi/community) repository
+- Voting must only take place in the [community](https://github.com/asyncapi/community) repository.
 - Voting automation works only with GitHub Issues and Pull Requests
 
 Discussions should be used only for initial discussion, to brainstorm ideas or to get some initial support.
