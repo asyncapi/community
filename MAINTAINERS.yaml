@@ -482,17 +482,6 @@
   isTscMember: true
   repos:
     - bindings
-- name: Barbaño González
-  linkedin: barbano-gonzalez-moreno
-  twitter: BarbanoGonzalez
-  github: barbanio
-  slack: U01J42QDSLU
-  availableForHire: false
-  company: Postman
-  isTscMember: true
-  repos:
-    - training
-    - community
 - name: Kenneth Aasan
   github: kennethaasan
   slack: U037S2HK4TS
