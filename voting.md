@@ -31,7 +31,7 @@ In the majority of cases topics we vote on introduce some new rules, some new wa
 #### Check Status
 
 1. Anyone can add a `/check-vote` comment to an Issue or a Pull Request.
-2. The Git Vote bot creates a comment with an update on how many binding votes were provided and how much is missing to reach the quorum.
+2. The Git Vote bot creates a comment with an update on how many binding votes were provided and how much is missing to reach the passing threshold that is at least >50%  of the TSC members.
 
 ### Cancel Voting
 
