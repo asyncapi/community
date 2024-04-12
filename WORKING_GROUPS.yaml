@@ -42,3 +42,15 @@ working_groups:
     roadmap_url: https://shapeit.app/projects/org/asyncapi/16
     okrs_url: https://github.com/users/Amzani/projects/12/views/1
     github_team: @asyncapi/developer_experience_wg
+    - name: Conference Coordination
+    description: The goal of the group is to plan, manage, and create a seamless way to enhance the conference experience.
+    chairperson: @thulieblack
+    members:
+      - @thulieblack 
+      - @derberg 
+      - @AceTheCreator 
+      - @Mayaleeeee 
+    slack_channel: tba
+    roadmap_url: https://github.com/orgs/asyncapi/projects/43/views/1
+    okrs_url: https://github.com/orgs/asyncapi/projects/43/views/2
+    github_team: tba
