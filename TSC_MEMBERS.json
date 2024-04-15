@@ -549,19 +549,6 @@
 		]
 	},
 	{
-		"name": "Barbaño González",
-		"linkedin": "barbano-gonzalez-moreno",
-		"twitter": "BarbanoGonzalez",
-		"github":"Barbanio",
-		"slack":"U01J42QDSLU",
-		"availableForHire": false,
-		"company": "Postman",
-		"repos": [
-			 "training",
-			 "community"
-		]
-	},
-	{
 		"name": "Kenneth Aasan",
 		"github": "kennethaasan",
 		"slack": "U037S2HK4TS",
