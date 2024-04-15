@@ -170,7 +170,7 @@
 	},
 	{
 		"name": "Ludovic Dussart",
-		"github": "m3lkior",
+		"github": "M3lkior",
 		"linkedin": "ludovic-dussart-846a8063",
 		"slack": "U01BM49KL3Z",
 		"twitter": "ldussart",
@@ -546,19 +546,6 @@
 		"company": "The LEGO Group",
 		"repos": [
 			"bindings"
-		]
-	},
-	{
-		"name": "Barbaño González",
-		"linkedin": "barbano-gonzalez-moreno",
-		"twitter": "BarbanoGonzalez",
-		"github":"Barbanio",
-		"slack":"U01J42QDSLU",
-		"availableForHire": false,
-		"company": "Postman",
-		"repos": [
-			 "training",
-			 "community"
 		]
 	},
 	{
