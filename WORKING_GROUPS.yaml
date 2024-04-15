@@ -12,8 +12,22 @@ working_groups:
   #   okrs_url: https://example.com/xyz # Required. Link to a GitHub project, issue, or any other tool where the Working Group explains their objectives.
   #   roadmap_url: https://example.com/xyz # Recommended. Link to a GitHub project, issue, or any other tool where the Working Group outlines their roadmap.
   #   github_team: # Recommended. The GitHub team handle to tag all the working group members at once. Example: @asyncapi/community_growth_wg.
+  - name: Essential Building Blocks
+    description: The goal of the Essential Building Blocks Working Group is to provide fundamental building blocks that enable a similar developer experience across languages.
+    chairperson: @jonaslagoni
+    members:
+      - @m-wild
+      - @lorenzsimon
+      - @VisualBean
+      - @Pakisan
+      - @Souvikns
+      - @jonaslagoni
+    slack_channel: essential-building-blocks-wg
+    roadmap_url: https://github.com/orgs/asyncapi/projects/44
+    github_team: @asyncapi/essential_building_blocks_wg
+    okrs_url: https://github.com/orgs/asyncapi/projects/44
   - name: Developer Experience
-    description: The goal of the Developer Experience Working Group is to empower the AsyncAPI user journey through intuitive onboarding, tools, and a frictionless experience. 
+    description: The goal of this group is to empower AsyncAPI user journey trough intuitive onboarding, tools, and a frictionless experience.
     chairperson: @Amzani
     members:
       - @Pakisan
@@ -22,6 +36,8 @@ working_groups:
       - @peter-rr
       - @Shurtu-gal
       - @princerajpoot20
+      - @Mayaleeeee
+      - @fmvilas
     slack_channel: developer-experience-wg
     roadmap_url: https://shapeit.app/projects/org/asyncapi/16
     okrs_url: https://github.com/users/Amzani/projects/12/views/1

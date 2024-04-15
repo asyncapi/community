@@ -448,6 +448,17 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "gvensan",
+      "name": "Giri Venkatesan",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4477169?v=4",
+      "profile": "https://github.com/gvensan",
+      "contributions": [
+        "talk",
+        "blog",
+        "promotion"
+      ]
     }
   ],
   "commitConvention": "angular",
