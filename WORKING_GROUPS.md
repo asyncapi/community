@@ -14,4 +14,8 @@ The group's name, members, goals, and other relevant information must be added t
 
 A Working Group has no authority or power over the roadmap of the projects they may impact. It's up to the repositories' maintainers (code owners) to approve or reject the pull requests. Therefore, it's advisable to either have maintainers of the impacted projects in the Working Group or ensure everyone agrees on the roadmap of the different repositories/projects.
 
+A Working Group must discuss ideas and solutions in public, and communicate through official channels all relevant discussions and implementations that want to suggest to others.
+
+It is recommended that the Working Group schedules meetings using the methods described at https://github.com/asyncapi/community/blob/master/MEETINGS_ORGANIZATION.md.
+
 Working Groups should be listed on the [AsyncAPI website](https://www.asyncapi.com), along with their description, goals, members, and anything the Working Group wants to include.
