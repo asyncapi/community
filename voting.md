@@ -47,6 +47,6 @@ The Git Vote bot adds a comment that voting is completed.
 
 ### Note
 
-* As per the CHARTER, quorum is not needed. However, git-vote has technically limitations and quorum should be reached. That's the reason we give 4 weeks to vote and we should chase people to vote in order to reach the quorum of people (people voting is >50).
+* As per the [charter](./CHARTER.md), quorum is not needed. However, git-vote has technical limitations, and a quorum should be reached. That's why we allocate 4 weeks for voting, and it's important to actively encourage participation to ensure that the quorum (where votes cast exceed 50% of eligible voters) is met
 * The abstain votes are included in the total number of votes, they are not removed.
 * At present, the git-vote is enabled in the community repo only, and all the voting process will be done by git-vote bot, We will add git-vote feature in other projects as well in future.
