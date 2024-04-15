@@ -9,7 +9,8 @@ working_groups:
   #   members: # Required to have at least 2 members who are not the same as the chairperson.
   #     - @fmvilas # GitHub handle of the member.
   #   slack_channel: # Required. The name of the Slack channel in the AsyncAPI workspace. Example: community_growth_wg
-  #   okrs_url: https://example.com/xyz # Required. Link to a GitHub project, issue, or any other tool where the Working Group explains their objectives.
+  #   objectives: # Recommended. List of sentences outlining the objectives of the working group; or Link to a GitHub project, issue, or any other tool where the Working Group outlines their objectives.
+  #     - The AsyncAPI community grows sustainably.
   #   roadmap_url: https://example.com/xyz # Recommended. Link to a GitHub project, issue, or any other tool where the Working Group outlines their roadmap.
   #   github_team: # Recommended. The GitHub team handle to tag all the working group members at once. Example: @asyncapi/community_growth_wg.
   - name: Essential Building Blocks
@@ -40,5 +41,5 @@ working_groups:
       - @fmvilas
     slack_channel: developer-experience-wg
     roadmap_url: https://shapeit.app/projects/org/asyncapi/16
-    okrs_url: https://github.com/users/Amzani/projects/12/views/1
+    objectives: https://github.com/users/Amzani/projects/12/views/1
     github_team: @asyncapi/developer_experience_wg
