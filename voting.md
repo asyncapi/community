@@ -2,7 +2,7 @@
 
 In the [search for the right governance model](https://www.asyncapi.com/blog/governance-motivation) we ended up defining a Technical Steering Committee (TSC) that can help make decisions that are related to the entire AsyncAPI Initiative and not only a specific repository. TSC voting is described in the official [Charter](https://github.com/asyncapi/community/blob/master/CHARTER.md#4-tsc-voting).
 
-To make the voting process easier with proper automation we use [**git-vote**](https://github.com/cncf/gitvote) bot.
+To make the voting process easier with proper automation we use [**Git Vote**](https://github.com/cncf/gitvote) bot.
 
 ### Voting Location
 
@@ -47,6 +47,6 @@ The Git Vote bot adds a comment that voting is completed.
 
 ### Note
 
-* As per the [charter](./CHARTER.md), quorum is not needed. However, git-vote has technical limitations, and a quorum should be reached. That's why we allocate 4 weeks for voting, and it's important to actively encourage participation to ensure that the quorum (where votes cast exceed 50% of eligible voters) is met
+* As per the [charter](./CHARTER.md), quorum is not needed. However, Git Vote has technical limitations, and a quorum should be reached. That's why we allocate 4 weeks for voting, and it's important to actively encourage participation to ensure that the quorum (where votes cast exceed 50% of eligible voters) is met
 * The abstain votes are included in the total number of votes, they are not removed.
-* At present, the git-vote is enabled in the community repo only, and all the voting process will be done by git-vote bot, We will add git-vote feature in other projects as well in future.
+* At present, the Git Vote is enabled in the community repo only, and all the voting process will be done by Git Vote bot, We will add Git Vote in other projects as well in the future.
