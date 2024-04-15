@@ -15,14 +15,14 @@ working_groups:
   #     slack: UN22ZTLHG         # Required. Slack user ID of the member.
   #   slack:
   #     channel: 
-  #       handle:        # Required. The handle of the Slack channel in the AsyncAPI workspace. Recommended pattern: wg-<name-in-kebab-case>. Example: wg-community-growth.
+  #       handle:        # Required. The handle of the Slack channel in the AsyncAPI workspace. Recommended pattern: wg-<name-in-kebab-case>. Example: wg-maintainers-growth.
   #       description:   # Recommended. A brief description of the working group to be used in the Slack channel description. If not provided, the name of the wg will be used and transformed to follow the recommended pattern. The handle should be unique and not in use by a member, channel, or another group.
   #     group: 
-  #       handle:        # Optional. The handle of the Slack group in the AsyncAPI workspace. Recommended pattern: wg-<name-in-kebab-case>. Example: community-growth-wg. If not provided, the name of the wg will be used and transformed to follow the recommended pattern. The handle should be unique and not in use by a member, channel, or another group.
+  #       handle:        # Optional. The handle of the Slack group in the AsyncAPI workspace. Recommended pattern: wg-<name-in-kebab-case>. Example: maintainers-growth-wg. If not provided, the name of the wg will be used and transformed to follow the recommended pattern. The handle should be unique and not in use by a member, channel, or another group.
   #       description:   # Recommended. The description of the Slack group. (If not provided, the description of the wg will be used).
   #   okrs_url: https://example.com/xyz # Required. Link to a GitHub project, issue, or any other tool where the Working Group explains their objectives.
   #   roadmap_url: https://example.com/xyz # Recommended. Link to a GitHub project, issue, or any other tool where the Working Group outlines their roadmap.
-  #   github_team: # Recommended. The GitHub team handle to tag all the working group members at once. Example: @asyncapi/community_growth_wg.
+  #   github_team: # Recommended. The GitHub team handle to tag all the working group members at once. Example: @asyncapi/maintainers_growth_wg.
   - name: Essential Building Blocks
     description: The goal of the Essential Building Blocks Working Group is to provide fundamental building blocks that enable a similar developer experience across languages.
     chairperson: 
@@ -93,8 +93,8 @@ working_groups:
     roadmap_url: https://shapeit.app/projects/org/asyncapi/16
     okrs_url: https://github.com/users/Amzani/projects/12/views/1
     github_team: '@asyncapi/developer_experience_wg'
-  - name: Community Growth
-    description: The Community Working Group aims to ensure AsyncAPI community growth in a healthy and sustainable way.  
+  - name: Maintainers Growth
+    description: The Maintainers Working Group aims to help grow the number of maintainers at AsyncAPI.
     chairperson: 
       name: <TBD>
       github: <TBD>
@@ -120,11 +120,11 @@ working_groups:
         slack: U34F2JRRS
     slack:
       channel: 
-        handle: wg-community-growth
-        description: This is the channel for the Community Growth Working Group.
+        handle: wg-maintainers-growth
+        description: This is the channel for the Maintainers Growth Working Group.
       group: 
-        handle: community-growth-wg
-        description: Community Growth Working Group
+        handle: maintainers-growth-wg
+        description: Maintainers Growth Working Group
     roadmap_url: https://github.com/orgs/asyncapi/projects/33/views/8
     okrs_url: https://github.com/orgs/asyncapi/projects/33/views/12
-    github_team: '@asyncapi/community_growth_wg'
+    github_team: '@asyncapi/maintainers_growth_wg'
