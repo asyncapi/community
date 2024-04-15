@@ -31,7 +31,7 @@ In the majority of cases topics we vote on introduce some new rules, some new wa
 #### Check Status
 
 1. Anyone can add a `/check-vote` comment to an Issue or a Pull Request.
-2. The Git Vote bot creates a comment with an update on how many binding votes were provided and how much is missing to reach the passing threshold that is at least >50%  of the TSC members.
+2. The Git Vote bot creates a comment with an update on how many binding votes were provided. and how much the percentage requires to finish the voting process.
 
 ### Cancel Voting
 
@@ -44,3 +44,9 @@ In the majority of cases topics we vote on introduce some new rules, some new wa
 There is no way to complete voting with a comment. It ends either when the majority of the positive voting is reached that is least >50% of the users with binding votes or the duration deadline ends.
 
 The Git Vote bot adds a comment that voting is completed.
+
+### Note
+
+* As per the CHARTER, quorum is not needed. However, git-vote has technically limitations and quorum should be reached. That's the reason we give 4 weeks to vote and we should chase people to vote in order to reach the quorum of people (people voting is >50).
+* The abstain votes are included in the total number of votes, they are not removed.
+* At present, the git-vote is enabled in the community repo only, and all the voting process will be done by git-vote bot, We will add git-vote feature in other projects as well in future.
