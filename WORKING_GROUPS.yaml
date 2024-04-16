@@ -103,9 +103,9 @@ working_groups:
   - name: Maintainers Growth
     description: The Maintainers Working Group aims to help grow the number of maintainers at AsyncAPI.
     chairperson: 
-      name: <TBD>
-      github: <TBD>
-      slack: <TBD>
+      name: Sergio Moya
+      github: '@smoya'
+      slack: UN22ZTLHG
     members:
       - name: Elegbede Azeez
         github: '@AceTheCreator'
@@ -116,9 +116,6 @@ working_groups:
       - name: Aishat Muibudeen
         github: '@Mayaleeeee'
         slack: U03CNHGEUR1
-      - name: Sergio Moya
-        github: '@smoya'
-        slack: UN22ZTLHG
       - name: Thulisile Sibanda
         github: '@thulieblack'
         slack: U03CNJPMT7C
