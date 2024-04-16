@@ -129,7 +129,4 @@ working_groups:
       group: 
         handle: maintainers-growth-wg
         description: Maintainers Growth Working Group
-    roadmap_url: https://github.com/orgs/asyncapi/projects/33/views/8
-    objectives: 
-      - https://github.com/orgs/asyncapi/projects/33/views/12
     github_team: '@asyncapi/maintainers_growth_wg'
