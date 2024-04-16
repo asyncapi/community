@@ -1,6 +1,6 @@
 ## Infrastructure for slack integration
 
-This directory contains the infrastructure for slack integration. The slack integration is used to create/manage slack channels, usergroups and invite users to slack channels. The slack integration is implemented using the [slack-terraform-provider](https://github.com/pablovarela/terraform-provider-slack).
+This directory contains the infrastructure for Slack integration. It is used to create/manage Slack channels and groups and invite users to Slack channels. The Slack integration is implemented using the [slack-terraform-provider](https://github.com/pablovarela/terraform-provider-slack).
 
 ### Prerequisites
 
@@ -19,7 +19,7 @@ This directory contains the infrastructure for slack integration. The slack inte
   - `users:read.email`
   
 > [!CAUTION]
-> Try to use a bot for logging in to slack. This will prevent any changes to be attribued to the workspace owner. This is due to use of `user token` for authentication which does the changes on behalf of the user who created the token.
+> Try to use a bot to log into Slack to prevent any changes from being attributed to the workspace owner. This is due to using a `user token` for authentication, which does the changes on behalf of the user who created the token.
 
 - [API Token](https://api.slack.com/apps) after installing the app in your workspace. ( `xoxp-<your-slack-token>` )
 
@@ -33,7 +33,7 @@ This directory contains the infrastructure for slack integration. The slack inte
 slack_token = "xoxp-<your-slack-token>"
 ```
 
-- Run the following commands to create the slack resources:
+- Run the following commands to create the Slack resources:
 
 ```bash
 terraform init
@@ -45,25 +45,25 @@ terraform apply
 
 ### How it works
 
-There are three main resources that are created using the slack integration:
+Three main resources are created using the slack integration:
 
-- `slack_channel`: This resource is used to create a slack channel. The channels are defined in the [channels.yaml](./channels/channels.yaml) file. with the structure explained there.
+- `slack_channel`: This resource creates a slack channel. The channels are defined in the [channels.yaml](./channels/channels.yaml) file. with the structure explained there.
 
-- `slack_usergroup`: This resource is used to create a slack usergroup. The usergroups are defined in the [usergroups.yaml](./groups/groups.yaml) file. with the structure explained there. 
+- `slack_usergroup`: This resource creates a Slack user group. The usergroups are defined in the [usergroups.yaml](./groups/groups.yaml) file, and their structure is explained there. 
 
 > [!CAUTION]
-> The usergroups handles should be unique across the workspace (i.e. no channel, user, usergroup should have the same handle). Also in case of usergroups mentioned in the yaml existin in the workspace, you have to run the following command to import it to terraform state:
+> The user groups should be unique across the workspace (i.e., no channel, user, or user group should have the same handle). Also, in case of user groups mentioned in the yaml existing in the workspace, you have to run the following command to import it to terraform state:
 > ```bash
 > terraform import slack_usergroup.<usergroup_handle> <usergroup_id>
 > ```
 
-- `slack_user`: This resource is used to invite users to the slack workspace. The users are defined in the [users.tf](./users/users.tf) file, with the structure explained there.
+- `slack_user`: This resource invites users to the Slack workspace. The users are defined in the [users.tf](./users/users.tf) file, and their structure is explained there.
 
 ### Pitfalls
 
-- Use of bot token of the format `xoxb-<your-slack-token>` is not supported for creating usergroups.
-- The usergroups handles should be unique across the workspace (i.e. no channel, user, usergroup should have the same handle).
-- Please import the usergroups to terraform state if they already exist in the workspace, as they **cannot be deleted** in slack 😢.
+- Use of bot token of the format `xoxo-<your-slack-token>` is not supported for creating user groups.
+- The user group should be unique across the workspace (i.e., no channel, user, or user group should have the same handle).
+- Please import the user groups to terraform state if they already exist in the workspace, as they **cannot be deleted** in Slack 😢.
 
 > [!IMPORTANT]
-> Any change of description, name or topic will be overwritten by the terraform state. So, it is better to manage the changes in the yaml files and then apply the changes. However bookmarks, pinned items, etc. will not be affected by the terraform state.
+> The terraform state will overwrite any description, name, or topic change. It is better to manage the changes in the YAML files and then apply them. However, the terraform state will not affect bookmarks, pinned items, etc.
