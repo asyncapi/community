@@ -4,7 +4,7 @@
 
 The AsyncAPI Bounty Program is a specification of the software development process, customized to meet the needs of the AsyncAPI Initiative.
 
-The AsyncAPI Bounty Program operates exclusively on donated funds, does not seek financial profit, uses publicly and freely available tools only, and has as its main purpose rewarding individual open source maintainers and contributors while creating an artificial set of time constraints to make the schedule for achieving programming targets predictable.
+The AsyncAPI Bounty Program operates exclusively on donated funds, does not seek financial profit, uses publicly and freely available tools only, and has as its main purpose rewarding individual open source maintainers and contributors while creating an artificial set of time constraints to make the schedule for achieving assigned targets predictable.
 
 Anyone may implement this specification of the software development process with or without any modification in any way they find suitable.
 
@@ -102,15 +102,15 @@ In case assignment of the Bounty Issue on GitHub happened during third or fourth
 
 For Bounty Issues of Complexity Level `Medium`:
 
-- Draft Pull Request must be submitted not later than on Friday of second week from the start date and updated on every Friday until submission of Final Pull Request
+- Draft Pull Request, [appropriately linked to the Bounty Issue](https://docs.github.com/en/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue),  must be submitted no later than on Friday of second week from the start date and updated on every Friday until submission of Final Pull Request
 
-- Final Pull Request must be submitted not later than on Friday of fourth week from the start date and merged not later than on Friday of sixth week from the start date
+- Final Pull Request must be submitted no later than on Friday of fourth week from the start date and merged no later than on Friday of sixth week from the start date
 
 For Bounty Issues of Complexity Level `Advanced`:
 
-- Draft Pull Request must be submitted not later than on Friday of third week from the start date and updated on every Friday until submission of Final Pull Request
+- Draft Pull Request, [appropriately linked to the Bounty Issue](https://docs.github.com/en/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue), must be submitted no later than on Friday of third week from the start date and updated on every Friday until submission of Final Pull Request
 
-- Final Pull Request must be submitted not later than on Friday of sixth week from the start date and merged not later than on Friday of eighth week from the start date
+- Final Pull Request must be submitted no later than on Friday of sixth week from the start date and merged no later than on Friday of eighth week from the start date
 
 Updates to the Draft Pull Request are determined by:
 
