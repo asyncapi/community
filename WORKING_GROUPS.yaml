@@ -24,7 +24,7 @@ working_groups:
   #   objectives: # Recommended. List of sentences outlining the objectives of the working group; or Link to a GitHub project, issue, or any other tool where the Working Group outlines their objectives.
   #     - The AsyncAPI community grows sustainably.
   #   roadmap_url: https://example.com/xyz # Recommended. Link to a GitHub project, issue, or any other tool where the Working Group outlines their roadmap.
-  #   github_team: # Recommended. The GitHub team handle to tag all the working group members at once. Example: maintainers_growth_wg.
+  #   github_team: # Recommended. The GitHub team handle to tag all the working group members at once. Example: maintainers_growth_wg, without @asyncapi/ prefix.
   - name: Essential Building Blocks
     description: The goal of the Essential Building Blocks Working Group is to provide fundamental building blocks that enable a similar developer experience across languages.
     chairperson: 
