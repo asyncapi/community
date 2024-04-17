@@ -7,11 +7,11 @@ working_groups:
   #   description: Required. Describe what this working group is about.
   #   chairperson: 
   #     name: Fran Méndez        # Required. Name of the chairperson.
-  #     github: '@fmvilas'       # Required. GitHub handle of the chairperson.
+  #     github: fmvilas       # Required. GitHub handle of the chairperson without the @.
   #     slack: U34F2JRRS         # Required. Slack user ID of the chairperson.
   #   members: # Required to have at least 2 members who are not the same as the chairperson.
   #   - name: Sergio Moya        # Required. Name of the member.
-  #     github: '@smoya'         # Required. GitHub handle of the member.
+  #     github: smoya         # Required. GitHub handle of the member without the @.
   #     slack: UN22ZTLHG         # Required. Slack user ID of the member.
   #   slack:
   #     channel: 
@@ -24,28 +24,28 @@ working_groups:
   #   objectives: # Recommended. List of sentences outlining the objectives of the working group; or Link to a GitHub project, issue, or any other tool where the Working Group outlines their objectives.
   #     - The AsyncAPI community grows sustainably.
   #   roadmap_url: https://example.com/xyz # Recommended. Link to a GitHub project, issue, or any other tool where the Working Group outlines their roadmap.
-  #   github_team: # Recommended. The GitHub team handle to tag all the working group members at once. Example: @asyncapi/maintainers_growth_wg.
+  #   github_team: # Recommended. The GitHub team handle to tag all the working group members at once. Example: maintainers_growth_wg.
   - name: Essential Building Blocks
     description: The goal of the Essential Building Blocks Working Group is to provide fundamental building blocks that enable a similar developer experience across languages.
     chairperson: 
       name: Jonas Lagoni
-      github: '@jonaslagoni'
+      github: jonaslagoni
       slack: UQ2ANBG1E
     members:
       - name: Michael Wildman
-        github: '@m-wild'
+        github: m-wild
         slack: UNH2HT346
       - name: Lorenz Simon
-        github: '@lorenzsimon'
+        github: lorenzsimon
         slack: U06L7EQQSF2
       - name: Alex Wichmann
-        github: '@VisualBean'
+        github: VisualBean
         slack: U04C58GB8TF
       - name: Pavel Bodiachevskii
-        github: '@pakisan'
+        github: pakisan
         slack: U0132LQU8C9 
       - name: Souvik De
-        github: '@Souvikns'
+        github: Souvikns
         slack: U01SGCZMJKW
     slack:
       channel: 
@@ -56,39 +56,39 @@ working_groups:
         description: Essential Building Blocks Working Group
     slack_channel: essential-building-blocks-wg
     roadmap_url: https://github.com/orgs/asyncapi/projects/44
-    github_team: '@asyncapi/essential_building_blocks_wg'
+    github_team: essential_building_blocks_wg
     objectives: 
       - https://github.com/orgs/asyncapi/projects/44
   - name: Developer Experience
     description: The goal of this group is to empower AsyncAPI user journey trough intuitive onboarding, tools, and a frictionless experience.
     chairperson: 
       name: Samir Amzani
-      github: '@amzani'
+      github: amzani
       slack: U01N6AW5V5G
     members:
       - name: Pavel Bodiachevskii
-        github: '@pakisan'
+        github: pakisan
         slack: U0132LQU8C9
       - name: Khuda Dad Nomani
-        github: '@KhudaDad414'
+        github: KhudaDad414
         slack: U01RVRD1TCL
       - name: Iván García Sainz-Aja
-        github: '@ivangsa'
+        github: ivangsa
         slack: UTCN3ET4M
       - name: Pedro Ramos
-        github: '@peter-rr'
+        github: peter-rr
         slack: U01TP1KJV1R
       - name: Ashish Padhy
-        github: '@Shurtu-gal'
+        github: Shurtu-gal
         slack: U0572R8J927
       - name: Prince Rajpoot
-        github: '@princerajpoot20'
+        github: princerajpoot20
         slack: U04STTQHV18
       - name: Aishat Muibudeen
-        github: '@Mayaleeeee'
+        github: Mayaleeeee
         slack: U03CNHGEUR1
       - name: Fran Méndez
-        github: '@fmvilas'
+        github: fmvilas
         slack: U34F2JRRS
     slack:
       channel: 
@@ -99,28 +99,28 @@ working_groups:
     roadmap_url: https://shapeit.app/projects/org/asyncapi/16
     objectives: 
       - https://github.com/users/Amzani/projects/12/views/1
-    github_team: '@asyncapi/developer_experience_wg'
+    github_team: developer_experience_wg
   - name: Maintainers Growth
     description: The Maintainers Working Group aims to help grow the number of maintainers at AsyncAPI.
     chairperson: 
       name: Sergio Moya
-      github: '@smoya'
+      github: smoya
       slack: UN22ZTLHG
     members:
       - name: Elegbede Azeez
-        github: '@AceTheCreator'
+        github: AceTheCreator
         slack: U01RWDD69PZ
       - name: Alejandra Quetzalli
-        github: '@alequetzalli'
+        github: alequetzalli
         slack: U02AKC14WAJ
       - name: Aishat Muibudeen
-        github: '@Mayaleeeee'
+        github: Mayaleeeee
         slack: U03CNHGEUR1
       - name: Thulisile Sibanda
-        github: '@thulieblack'
+        github: thulieblack
         slack: U03CNJPMT7C
       - name: Fran Méndez
-        github: '@fmvilas'
+        github: fmvilas
         slack: U34F2JRRS
     slack:
       channel: 
@@ -129,4 +129,4 @@ working_groups:
       group: 
         handle: maintainers-growth-wg
         description: Maintainers Growth Working Group
-    github_team: '@asyncapi/maintainers_growth_wg'
+    github_team: maintainers_growth_wg
