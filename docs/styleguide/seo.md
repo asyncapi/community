@@ -19,8 +19,8 @@ Headings are tags used to make sub titles distinctive from each other.
 
 #### Strategies for making SEO-friendly headings
 
-- **Put them in hierarchcial order:** Since an `h1` tag tend to be titles, always start with this tag. From there, use `h2` and`h3` tags for the subsections and `h4` and `h5` tags for other sections in yAsyncapi's tutorial or other piece of documentation.
-- **Include keywords:** Since sites like Google often use keywords to help people's online content appear on the web, adding these terms effectively is helpful in ensuring that the tutorials and other pieces of content created reach a wider audience. Moz highly recommennds ["implementing keywords in the `h1` and`h2` elements because it is where most users start reading"(Stark Visibility, p.16)](https://starkvisibility.com/wp-content/uploads/2022/04/SEO-Copywriting-101-eBook.pdf)  
+- **Put them in hierarchical order:** Since an `h1` tag tend to be titles, always start with this tag. From there, use `h2` and`h3` tags for the subsections and `h4` and `h5` tags for other sections in Asyncapi's tutorial or other piece of documentation.
+- **Include keywords:** Since sites like Google often use keywords to help people's online content appear on the web, adding these terms effectively is helpful in ensuring that the tutorials and other pieces of content created reach a wider audience. It is highly recommended to [implement keywords in the `h1` and`h2` elements because it is where most users start reading"(Stark Visibility, p.16)](https://starkvisibility.com/wp-content/uploads/2022/04/SEO-Copywriting-101-eBook.pdf)  
 
 ### Examples of SEO-friendly headings from Asyncapi's documentation
 
@@ -123,18 +123,26 @@ Here are some ways to make blog posts and documentation for Asyncapi's website m
 >[!TIP]
 > Consider using testing tools like [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/) to ensure that the proposed blog post, tutorial, or other form of documentation for  Asyncapi is mobile and SEO-friendly if quick results are needed.  
 
-### Examples of SEO and mobile-friendly content from Asyncapi's website
-
-<!-- add examples here -->
-
 ### Why is quality important when making technical documentation that is SEO-friendly?
- <!--add explaination here  -->
+
+While implementing the previously mentioned strategies are important, ensuring that the content is original and high-quality are also important when creating SEO-friendly content. Search engines tend to favor content that provides value for online users.
 
 #### Strategies for making high-quality and SEO-friendly content
-<!-- add tips here -->
 
-### Examples of high-quality and SEO-friendly content from Asyncapi's website
-<!-- add list of examples -->
+Here are some questions to consider when creating SEO-friendly and original content:
 
-## Additional resources
-<!-- add explanation and list of resources -->
+- Is the content interactive and engaging?
+- Is the information I present accurate?
+- Is the content too technical for its intended audience?
+
+### Images
+
+The way a technical documentation's images are presented influences how it shows up in the search engine rankings, so it's important to optimize them in the best way possible.
+
+### Strategies for making images SEO-friendly
+
+Here are ways to make SEO-friendly images:
+
+- **Create descriptive alt text**: Ensure that it describes the image's context a purpose. Doing so makes it easier for search engines to understand why it is being used, [especially when the image fails to appear on screen](https://rb.gy/5axft9).  
+- **Use search-engine supported image formats**: [Google tends to support images that are `JPEG`, `SVG`, and `PNG`](https://developers.google.com/search/docs/appearance/google-images#supported-image-formats) format, so consider saving the images in these formats.
+- **Keep their sizes not too large**: [Large image file sizes can make cause the site to load slowly](https://developers.google.com/search/docs/appearance/google-images#good-quality-photos%20optimize-for-speed) so remember to reduce and compress them before add them to the content.
