@@ -38,7 +38,7 @@ resource "slack_usergroup" "groups" {
 
 resource "slack_usergroup" "maintainer_repos" {
   for_each = var.data_sources.repo_maintainers
-  name = "maintainers_${each.key}"
+  name = "Maintainers of asyncapi/${each.key}"
   handle = "maintainers_${each.key}"
   description = "Maintainers for https://github.com/asyncapi/${each.key}"
   users = each.value
