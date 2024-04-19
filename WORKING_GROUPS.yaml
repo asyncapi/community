@@ -103,7 +103,7 @@ working_groups:
       - https://github.com/users/Amzani/projects/12/views/1
     github_team: developer_experience_wg
   - name: Maintainers Growth
-    description: The Maintainers Working Group aims to help grow the number of maintainers at AsyncAPI.
+    description: The Maintainers Growth Working Group aims to help grow the number of maintainers at AsyncAPI.
     chairperson: 
       name: Sergio Moya
       github: smoya
