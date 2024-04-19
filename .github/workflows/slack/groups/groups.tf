@@ -51,8 +51,8 @@ locals {
       name = lookup(lookup(lookup(wg_channel, "slack", {}), "group", {}), "name", wg_channel.name)
       description = lookup(lookup(lookup(wg_channel, "slack", {}), "group", {}), "description", lookup(wg_channel, "description", ""))
 
-      # Handle will be the name of the group in lowercase and with spaces replaced by hyphens preceded by "wg-"
-      handle = lookup(lookup(lookup(wg_channel, "slack", {}), "group", {}), "handle", "wg-${replace(lower(wg_channel.name), " ", "-")}")
+      # Handle will be the name of the group in lowercase and with spaces replaced by hyphens succeded by "wg-"
+      handle = lookup(lookup(lookup(wg_channel, "slack", {}), "group", {}), "handle", "${replace(lower(wg_channel.name), " ", "-")}-wg")
       users = concat([wg_channel.chairperson.slack], [for member in wg_channel.members : member.slack])
     }
   }
