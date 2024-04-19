@@ -15,8 +15,6 @@ This directory contains the infrastructure for Slack integration. It is used to 
   - `channels:read`
   - `groups:read`
   - `usergroups:read`
-  - `users:read`
-  - `users:read.email`
   
 > [!CAUTION]
 > Try to use a bot to log into Slack to prevent any changes from being attributed to the workspace owner. This is due to using a `user token` for authentication, which does the changes on behalf of the user who created the token.

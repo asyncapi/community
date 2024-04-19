@@ -11,7 +11,6 @@ variable "data_sources" {
   default = {
     tsc_members_user_ids = []
     maintainers_user_ids = []
-    ambassadors_user_ids = []
     repo_maintainers = {}
   }
   description = "Data sources for the slack groups from the users module"
@@ -39,8 +38,8 @@ resource "slack_usergroup" "groups" {
 
 resource "slack_usergroup" "maintainer_repos" {
   for_each = var.data_sources.repo_maintainers
-  name = "maintainer_${each.key}"
-  handle = "maintainer_${each.key}"
+  name = "maintainers_${each.key}"
+  handle = "maintainers_${each.key}"
   description = "Maintainers for ${each.key}"
   users = each.value
 }

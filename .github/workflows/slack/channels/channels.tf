@@ -11,7 +11,6 @@ variable "data_sources" {
   default = {
     tsc_members_user_ids = []
     maintainers_user_ids = []
-    ambassadors_user_ids = []
     repo_maintainers = {}
   }
   description = "Data sources for the slack channels from the users module"

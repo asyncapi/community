@@ -10,11 +10,6 @@
 # Before adding them here please make sure to import them like this:
 # terraform import slack_usergroup.<usergroup_name> <usergroup_id>
 
-- name: "Ambassadors"
-  handle: "ambassadors"
-  description: "Ambassadors - https://www.asyncapi.com/community/ambassadors"
-  data_source: "ambassadors_user_ids"
-
 - name: "TSC Members"
   handle: "tsc"
   description: "TSC members - https://www.asyncapi.com/community/tsc"

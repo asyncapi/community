@@ -7,7 +7,7 @@
 # is_private - (Optional) create a private channel instead of a public one.
 # is_archived - (Optional) indicates a conversation is archived. Frozen in time.
 # action_on_destroy - (Optional, Default archive) indicates whether the conversation should be archived or left behind on destroy. Valid values are archive | none. Note that when set to none the conversation will be left as it is and as a result any subsequent runs of terraform apply with the same name will fail.
-# data_source - (Optional) data_source source to use for the list of user IDs to add to the channel. Valid values are maintainers_user_ids | ambassadors_user_ids | tsc_user_ids right now.
+# data_source - (Optional) data_source source to use for the list of user IDs to add to the channel. Valid values are maintainers_user_ids | tsc_user_ids right now.
 
 # NOTE:-
 # 1. The channel name should be unique.

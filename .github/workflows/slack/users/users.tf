@@ -8,13 +8,6 @@ terraform {
 }
 
 locals {
-  ambassadors_data = jsondecode(file("${path.root}/../../../AMBASSADORS.json")) 
-  ambassadors_emails = {
-    for ambassador in local.ambassadors_data : ambassador.email => {
-      email = ambassador.email
-    }
-  }
-
   maintainers_data = yamldecode(file("${path.root}/../../../MAINTAINERS.yaml"))
 
   # maintainers with isTscMember = true are added to the tsc_members group
@@ -28,14 +21,8 @@ locals {
   }
 }
 
-data "slack_user" "ambassadors" {
-  for_each = local.ambassadors_emails
-  email = each.value.email
-}
-
 output "data_sources" {
   value = {
-    ambassadors_user_ids = [for ambassador in local.ambassadors_data : data.slack_user.ambassadors[ambassador.email].id]
     maintainers_user_ids = [for maintainer in local.maintainers_data : maintainer.slack]
     tsc_members_user_ids = [for tsc_member in local.tsc_members_data : tsc_member.slack]
     repo_maintainers = local.repo_maintainers
