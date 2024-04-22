@@ -99,6 +99,10 @@ working_groups:
       group: 
         handle: wg-dx
     roadmap_url: https://shapeit.app/projects/org/asyncapi/16
+    objectives: 
+      - https://github.com/users/Amzani/projects/12/views/1
+    github_team: developer_experience_wg
+
      - name: Conference Coordination
     description: The goal of the group is to plan, manage, and create a seamless way to enhance the conference experience.
     chairperson: 
@@ -123,4 +127,6 @@ working_groups:
         handle: wg-conference-coordination
         description: 'The Conference Coordination Working Group aims to plan, manage, and create a seamless way to enhance the conference experience. GitHub Project: https://github.com/orgs/asyncapi/projects/43/views/2'
     roadmap_url: https://github.com/orgs/asyncapi/projects/43/views/2
+        objectives: 
+      - https://github.com/orgs/asyncapi/projects/43/views/2
     github_team: conference_coordination_wg
