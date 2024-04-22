@@ -102,15 +102,15 @@ In case assignment of the Bounty Issue on GitHub happened during third or fourth
 
 For Bounty Issues of Complexity Level `Medium`:
 
-- Draft Pull Request, [appropriately linked to the Bounty Issue](https://docs.github.com/en/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue),  must be submitted no later than on Friday of second week from the start date and updated on every Friday until submission of Final Pull Request
+- Draft Pull Request, [linked to the Bounty Issue using a keyword](https://docs.github.com/en/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue) if applicable,  must be submitted no later than Friday of the second week from the start date and updated every Friday until submission of Final Pull Request
 
-- Final Pull Request must be submitted no later than on Friday of fourth week from the start date and merged no later than on Friday of sixth week from the start date
+- Final Pull Request must be submitted no later than Friday of fourth week from the start date and merged no later than Friday of sixth week from the start date
 
 For Bounty Issues of Complexity Level `Advanced`:
 
-- Draft Pull Request, [appropriately linked to the Bounty Issue](https://docs.github.com/en/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue), must be submitted no later than on Friday of third week from the start date and updated on every Friday until submission of Final Pull Request
+- Draft Pull Request, [linked to the Bounty Issue using a keyword](https://docs.github.com/en/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue) if applicable, must be submitted no later than Friday of the third week from the start date and updated every Friday until submission of Final Pull Request
 
-- Final Pull Request must be submitted no later than on Friday of sixth week from the start date and merged no later than on Friday of eighth week from the start date
+- Final Pull Request must be submitted no later than Friday of sixth week from the start date and merged no later than Friday of eighth week from the start date
 
 Updates to the Draft Pull Request are determined by:
 
