@@ -51,7 +51,7 @@ working_groups:
       - @derberg 
       - @AceTheCreator 
       - @Mayaleeeee 
-    slack_channel: conference-coordination-wg
+    slack_channel: wg-conference-coordination
     roadmap_url: https://github.com/orgs/asyncapi/projects/43/views/2
     okrs_url: https://github.com/orgs/asyncapi/projects/43/views/2
     github_team: @tbd
