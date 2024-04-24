@@ -104,17 +104,17 @@ working_groups:
     github_team: developer_experience_wg
   - name: Maintainers Growth
     description: The Maintainers Growth Working Group aims to help grow the number of maintainers at AsyncAPI.
-    chairperson: 
-      name: Sergio Moya
+    chairpersons: 
+    - name: Sergio Moya
       github: smoya
       slack: UN22ZTLHG
+    - name: Alejandra Quetzalli
+      github: alequetzalli
+      slack: U02AKC14WAJ
     members:
       - name: Elegbede Azeez
         github: AceTheCreator
         slack: U01RWDD69PZ
-      - name: Alejandra Quetzalli
-        github: alequetzalli
-        slack: U02AKC14WAJ
       - name: Aishat Muibudeen
         github: Mayaleeeee
         slack: U03CNHGEUR1
