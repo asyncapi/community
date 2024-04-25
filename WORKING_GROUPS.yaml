@@ -5,11 +5,11 @@
 working_groups:
   # - name: Required. The name of the working group.
   #   description: Required. Describe what this working group is about.
-  #   chairperson: 
-  #     name: Fran Méndez        # Required. Name of the chairperson.
+  #   chairpersons: # Required to have at least 1 chairperson. In case of multiple, and unless specified, the first one is the primary chairperson.
+  #   - name: Fran Méndez        # Required. Name of the chairperson.
   #     github: fmvilas       # Required. GitHub handle of the chairperson without the @.
   #     slack: U34F2JRRS         # Required. Slack user ID of the chairperson.
-  #   members: # Required to have at least 2 members who are not the same as the chairperson.
+  #   members: # Required to have at least 2 members who are not the same as the chairperson(s).
   #   - name: Sergio Moya        # Required. Name of the member.
   #     github: smoya         # Required. GitHub handle of the member without the @.
   #     slack: UN22ZTLHG         # Required. Slack user ID of the member.
@@ -28,8 +28,8 @@ working_groups:
   #   github_team: # Recommended. The GitHub team handle to tag all the working group members at once. Example: maintainers_growth_wg, without @asyncapi/ prefix.
   - name: Essential Building Blocks
     description: The goal of the Essential Building Blocks Working Group is to provide fundamental building blocks that enable a similar developer experience across languages.
-    chairperson: 
-      name: Jonas Lagoni
+    chairpersons: 
+    - name: Jonas Lagoni
       github: jonaslagoni
       slack: UQ2ANBG1E
     members:
@@ -62,8 +62,8 @@ working_groups:
       - https://github.com/orgs/asyncapi/projects/44
   - name: Developer Experience
     description: The goal of this group is to empower AsyncAPI user journey trough intuitive onboarding, tools, and a frictionless experience.
-    chairperson: 
-      name: Samir Amzani
+    chairpersons: 
+    - name: Samir Amzani
       github: amzani
       slack: U01N6AW5V5G
     members:
