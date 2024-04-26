@@ -53,7 +53,7 @@ locals {
 
       # Handle will be the name of the group in lowercase and with spaces replaced by hyphens succeded by "wg-"
       handle = lookup(lookup(lookup(wg_data, "slack", {}), "group", {}), "handle", "${replace(lower(wg_data.name), " ", "-")}-wg")
-      users = concat([wg_data.chairperson.slack], [for member in wg_data.members : member.slack])
+      users = concat([for member in wg_channel.chairpersons : member.slack], [for member in wg_data.members : member.slack])
     }
   }
 }
