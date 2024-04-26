@@ -47,13 +47,13 @@ resource "slack_usergroup" "maintainer_repos" {
 locals {
   wg_groups_data = yamldecode(file("${path.module}/../../../../WORKING_GROUPS.yaml")).working_groups
   wg_groups = {
-    for wg_channel in local.wg_groups_data : wg_channel.name => {
-      name = lookup(lookup(lookup(wg_channel, "slack", {}), "group", {}), "name", wg_channel.name)
-      description = lookup(lookup(lookup(wg_channel, "slack", {}), "group", {}), "description", lookup(wg_channel, "description", ""))
+    for wg_data in local.wg_groups_data : wg_data.name => {
+      name = lookup(lookup(lookup(wg_data, "slack", {}), "group", {}), "name", wg_data.name)
+      description = lookup(lookup(lookup(wg_data, "slack", {}), "group", {}), "description", lookup(wg_data, "description", ""))
 
       # Handle will be the name of the group in lowercase and with spaces replaced by hyphens succeded by "wg-"
-      handle = lookup(lookup(lookup(wg_channel, "slack", {}), "group", {}), "handle", "${replace(lower(wg_channel.name), " ", "-")}-wg")
-      users = concat([wg_channel.chairperson.slack], [for member in wg_channel.members : member.slack])
+      handle = lookup(lookup(lookup(wg_data, "slack", {}), "group", {}), "handle", "${replace(lower(wg_data.name), " ", "-")}-wg")
+      users = concat([wg_data.chairperson.slack], [for member in wg_data.members : member.slack])
     }
   }
 }
