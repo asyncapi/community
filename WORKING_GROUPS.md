@@ -2,7 +2,10 @@
 
 A Working Group is a group of people in our community who share a common interest beyond GitHub repositories.
 
-A Working Group must have at least one of its members appointed as its chairperson.
+A Working Group must have at least one of its members appointed as its **chairperson**.
+The selection of the chairperson is done by the members of the group. Volunteers can be chairpersons, or the group can decide to elect one. The chairperson can also resign if they feel they can't fulfill their duties anymore. In this case, the group must elect a new chairperson if there is no other chairperson in the group.
+The role of the chairperson is to ensure the group's goals are met, the group works efficiently, and aligned with the AsyncAPI Roadmap. The chairperson is also responsible for running meetings effectively, ensuring that all members have a voice, and that the group works in a transparent manner.
+Multiple chairpersons can be elected if the working group members decide it's necessary. The way they share responsibilities is decided by the group.
 
 Anyone can create a Working Group. The only prerequisites are to have at least 3 founding members and the approval of the TSC (Technical Steering Committee).
 
