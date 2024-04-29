@@ -50,14 +50,14 @@ resource "slack_conversation" "channels" {
 }
 
 locals {
-  wg_channel_data = yamldecode(file("${path.module}/../../../../WORKING_GROUPS.yaml")).working_groups
+  working_groups_data = yamldecode(file("${path.module}/../../../../WORKING_GROUPS.yaml")).working_groups
   wg_channels = {
-    for wg_data in local.wg_channel_data : wg_data.name => {
+    for wg_data in local.working_groups_data : wg_data.name => {
       name = lookup(lookup(lookup(wg_data, "slack", {}), "channel", {}), "handle", "wg-${replace(lower(wg_data.name), " ", "-")}")
       purpose = lookup(lookup(lookup(wg_data, "slack", {}), "channel", {}), "description", lookup(wg_data, "description", ""))
       topic = lookup(lookup(lookup(wg_data, "slack", {}), "channel", {}), "topic", "")
 
-      permanent_members = concat([for member in wg_channel.chairpersons : member.slack], [for member in wg_data.members : member.slack])
+      permanent_members = concat([for member in wg_data.chairpersons : member.slack], [for member in wg_data.members : member.slack])
       is_private = false
 
       action_on_destroy = "archive"

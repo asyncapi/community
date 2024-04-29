@@ -45,15 +45,15 @@ resource "slack_usergroup" "maintainer_repos" {
 }
 
 locals {
-  wg_groups_data = yamldecode(file("${path.module}/../../../../WORKING_GROUPS.yaml")).working_groups
+  working_groups_data = yamldecode(file("${path.module}/../../../../WORKING_GROUPS.yaml")).working_groups
   wg_groups = {
-    for wg_data in local.wg_groups_data : wg_data.name => {
+    for wg_data in local.working_groups_data : wg_data.name => {
       name = lookup(lookup(lookup(wg_data, "slack", {}), "group", {}), "name", wg_data.name)
       description = lookup(lookup(lookup(wg_data, "slack", {}), "group", {}), "description", lookup(wg_data, "description", ""))
 
       # Handle will be the name of the group in lowercase and with spaces replaced by hyphens succeded by "wg-"
       handle = lookup(lookup(lookup(wg_data, "slack", {}), "group", {}), "handle", "${replace(lower(wg_data.name), " ", "-")}-wg")
-      users = concat([for member in wg_channel.chairpersons : member.slack], [for member in wg_data.members : member.slack])
+      users = concat([for member in wg_data.chairpersons : member.slack], [for member in wg_data.members : member.slack])
     }
   }
 }
