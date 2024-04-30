@@ -52,7 +52,10 @@ Three main resources are created using the slack integration:
 > [!CAUTION]
 > The user groups should be unique across the workspace (i.e., no channel, user, or user group should have the same handle). Also, in case of user groups mentioned in the yaml existing in the workspace, you have to run the following command to import it to terraform state:
 > ```bash
-> terraform import slack_usergroup.<usergroup_handle> <usergroup_id>
+> terraform import module.groups.slack_usergroup.<resource name>[\"<usergroup name>\"] <usergroup id>
+> 
+> # Example
+> terraform import module.groups.slack_usergroup.wg_groups[\"Developer Experience\"] <actual_group_id>
 > ```
 
 - `slack_user`: This resource invites users to the Slack workspace. The users are defined in the [users.tf](./users/users.tf) file, and their structure is explained there.
@@ -61,7 +64,7 @@ Three main resources are created using the slack integration:
 
 - Use of bot token of the format `xoxo-<your-slack-token>` is not supported for creating user groups.
 - The user group should be unique across the workspace (i.e., no channel, user, or user group should have the same handle).
-- Please import the user groups to terraform state if they already exist in the workspace, as they **cannot be deleted** in Slack 😢.
+- Please [import](#L52) the user groups to terraform state if they already exist in the workspace, as they **cannot be deleted** in Slack 😢.
 
 > [!IMPORTANT]
 > The terraform state will overwrite any description, name, or topic change. It is better to manage the changes in the YAML files and then apply them. However, the terraform state will not affect bookmarks, pinned items, etc.
