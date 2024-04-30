@@ -28,12 +28,23 @@ working_groups:
   #   github_team: # Recommended. The GitHub team handle to tag all the working group members at once. Example: maintainers_growth_wg, without @asyncapi/ prefix.
 
   - name: Marketing  
-    description: The Marketing Working Group aims to ensure AsyncAPI marketing growth is healthy and sustainable.  
-    chairperson: tbd 
+    description: The group is dedicated to leveraging marketing strategies to achieve two key objectives: promoting AsyncAPI adoption and highlighting community achievements. By strategically showcasing AsyncAPI capabilities and celebrating community successes, the group drives both user growth and community engagement. It shares a vision of close collaboration between AsyncAPI community and sponsors.
+    chairpersons: 
+        - #tbd 
     members:
       - @derberg
       - @thulieblack
       - @Mayaleeeee
+    slack:
+      channel: 
+        handle: wg-marketing
+        topic: Tasks board https://github.com/orgs/asyncapi/projects/46
+      group: 
+        handle: wg-marketing
+        name: Marketing Working Group
+  roadmap_url: https://github.com/orgs/asyncapi/projects/46
+  github_team: marketing_wg
+  
   - name: Essential Building Blocks
     description: The goal of the Essential Building Blocks Working Group is to provide fundamental building blocks that enable a similar developer experience across languages.
     chairpersons: 
@@ -68,6 +79,7 @@ working_groups:
     github_team: essential_building_blocks_wg
     objectives: 
       - https://github.com/orgs/asyncapi/projects/44
+      
   - name: Developer Experience
     description: The goal of this group is to empower AsyncAPI user journey trough intuitive onboarding, tools, and a frictionless experience.
     chairpersons: 
