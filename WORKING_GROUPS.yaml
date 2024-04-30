@@ -97,7 +97,7 @@ working_groups:
         description: 'The goal of this group is to empower AsyncAPI user journey trough intuitive onboarding, tools, and a frictionless experience.'
         topic: 'Current Roadmap: https://shapeit.app/projects/org/asyncapi/16/cycles/ceb40c9d?issue=I_kwDOLQFNzc5-xigF'
       group: 
-        handle: wg-dx
+        handle: dx_wg
     roadmap_url: https://shapeit.app/projects/org/asyncapi/16
     objectives: 
       - https://github.com/users/Amzani/projects/12/views/1

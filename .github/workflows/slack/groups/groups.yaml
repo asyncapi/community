@@ -19,3 +19,29 @@
   handle: "maintainers"
   description: "Maintainers"
   data_source: "maintainers_user_ids"
+
+- name: "Studio"
+  handle: "studio"
+  description: "To notify all regular Studio contributors at once. If you don't contribute regularly but want to get notified too, ping Fran to get added."
+  users:
+    - "U01RWDD69PZ"
+    - "U0572R8J927"
+    - "U058PQFJPS4"
+    - "U01RVRD1TCL"
+    - "U01EB02BP7A"
+    - "U01TP1KJV1R"
+    - "UN22ZTLHG"
+    - "U01N6AW5V5G"
+    - "U01SGCZMJKW"
+
+
+- name: "CoC Committee"
+  handle: "coc_committee"
+  description: "To notify the code of conduct team all at once when there is a question or anything related to them."
+  users: 
+    - "U01RWDD69PZ"
+    - "U01J42QDSLU"
+    - "U03CNHGEUR1"
+    - "UN22ZTLHG"
+    - "U03CNJPMT7C"
+    - "U02AKC14WAJ"
