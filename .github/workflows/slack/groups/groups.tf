@@ -24,6 +24,7 @@ locals {
       handle = group.handle
       description = group.description
       users = lookup(group, "users", lookup(var.data_sources, lookup(group, "data_source", group.name), []))
+      channels = lookup(group, "channels", [])
     }
   }
 }
@@ -34,6 +35,7 @@ resource "slack_usergroup" "groups" {
   handle = each.value.handle
   description = each.value.description
   users = each.value.users  
+  channels = each.value.channels
 }
 
 resource "slack_usergroup" "maintainer_repos" {
@@ -54,6 +56,7 @@ locals {
       # Handle will be the name of the group in lowercase and with spaces replaced by hyphens succeded by "wg-"
       handle = lookup(lookup(lookup(wg_data, "slack", {}), "group", {}), "handle", "${replace(lower(wg_data.name), " ", "-")}-wg")
       users = concat([for member in wg_data.chairpersons : member.slack], [for member in wg_data.members : member.slack])
+      channels = lookup(wg_data, "channels", [])
     }
   }
 }
@@ -64,4 +67,5 @@ resource "slack_usergroup" "wg_groups" {
   handle = each.value.handle
   description = each.value.description
   users = each.value.users  
+  channels = each.value.channels
 }

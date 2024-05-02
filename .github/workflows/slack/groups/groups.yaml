@@ -30,9 +30,12 @@
     - "U01RVRD1TCL"
     - "U01EB02BP7A"
     - "U01TP1KJV1R"
-    - "UN22ZTLHG"
+    - "U04STTQHV18"
     - "U01N6AW5V5G"
     - "U01SGCZMJKW"
+  channels:
+    - "CQVJXFNQL"
+    - "C02JW8DA0DC"
 
 
 - name: "CoC Committee"
@@ -45,3 +48,6 @@
     - "UN22ZTLHG"
     - "U03CNJPMT7C"
     - "U02AKC14WAJ"
+  channels:
+    - "C06FLH3AVSB"
+    - "C06CQCK03EJ"
