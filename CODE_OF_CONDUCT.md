@@ -76,10 +76,10 @@ Consequence: A permanent ban from any sort of public interaction within the comm
 
 ## Attribution
 
-This Code of Conduct is adapted from the [Contributor Covenant][homepage], version 2.1, available at [http://contributor-covenant.org/version/2/1][version]
+This Code of Conduct is adapted from the [Contributor Covenant][homepage], version 2.1, available at [http://contributor-covenant.org/version/2/1][version].
+
+Community Impact Guidelines were inspired by [Mozilla's code of conduct enforcement ladder][Mozilla CoC].
 
 [homepage]: http://contributor-covenant.org
-[version]: https://www.contributor-covenant.org/version/2/1/code_of_conduct.html.
-
-Community Impact Guidelines were inspired by [Mozilla's code of conduct enforcement ladder][Mozilla CoC] : https://github.com/mozilla/inclusion
-
+[version]: https://www.contributor-covenant.org/version/2/1/code_of_conduct.html
+[Mozilla CoC]: https://github.com/mozilla/inclusion
