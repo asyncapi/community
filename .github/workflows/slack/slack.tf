@@ -30,6 +30,7 @@ module "channels" {
 
 module "groups" {
   source = "./groups"
-  depends_on = [ module.users ]
+  depends_on = [ module.users, module.channels ]
   data_sources = module.users.data_sources
+  wg_channels = module.channels.wg_channels
 }

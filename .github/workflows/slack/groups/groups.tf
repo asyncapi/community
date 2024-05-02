@@ -7,6 +7,10 @@ terraform {
   }
 }
 
+variable "wg_channels" {
+  description = "Map of working group channels"
+}
+
 variable "data_sources" {
   default = {
     tsc_members_user_ids = []
@@ -56,7 +60,6 @@ locals {
       # Handle will be the name of the group in lowercase and with spaces replaced by hyphens succeded by "wg-"
       handle = lookup(lookup(lookup(wg_data, "slack", {}), "group", {}), "handle", "${replace(lower(wg_data.name), " ", "-")}-wg")
       users = concat([for member in wg_data.chairpersons : member.slack], [for member in wg_data.members : member.slack])
-      channels = lookup(wg_data, "channels", [])
     }
   }
 }
@@ -67,5 +70,5 @@ resource "slack_usergroup" "wg_groups" {
   handle = each.value.handle
   description = each.value.description
   users = each.value.users  
-  channels = each.value.channels
+  channels = [var.wg_channels[each.value.name].id]
 }

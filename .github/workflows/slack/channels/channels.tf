@@ -79,3 +79,7 @@ resource "slack_conversation" "wg_channels" {
   action_on_update_permanent_members = each.value.action_on_update_permanent_members
   adopt_existing_channel = each.value.adopt_existing_channel
 }
+
+output "wg_channels" {
+  value = slack_conversation.wg_channels
+}
