@@ -1,13 +1,13 @@
-# Contributor Covenant Code of Conduct
+# AsyncAPI Code of Conduct
 
 ## Introduction
 Welcome to our community! We are a diverse group of individuals united by our passion for open source and commitment to inclusivity and respect.
 
 Our community promotes and supports inclusivity, welcoming individuals from all backgrounds and experiences. We believe that diversity is our strength, and we actively seek participation from those who enhance it.
 
-Our Code of Conduct governs how we behave publicly or privately when we represent the project. It ensures that diverse groups collaborate for mutual advantage and enjoyment and challenges prejudice that could jeopardize anyone's participation in the project.
+Our Code of Conduct governs how we behave publicly or privately when representing the project. It ensures that diverse groups collaborate for mutual advantage and enjoyment and challenges prejudice that could jeopardize anyone's participation in the project.
 
-We expect everyone in our community to treat each other with kindness, empathy, and respect. We believe that fostering a welcoming and respectful environment can create a positive and successful community for all.
+We expect everyone in our community to treat each other with kindness, empathy, and respect. We believe fostering a welcoming and respectful environment can create a positive and successful community.
 
 ## Our Pledge
 
