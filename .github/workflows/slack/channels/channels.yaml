@@ -247,13 +247,6 @@
   is_archived: false
   action_on_destroy: archive
 
-- name: temp-gsod-2024
-  topic: null
-  purpose: null
-  is_private: false
-  is_archived: false
-  action_on_destroy: archive
-
 - name: test-bot-public
   topic: null
   purpose: null

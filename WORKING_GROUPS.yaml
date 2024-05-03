@@ -51,7 +51,7 @@ working_groups:
     slack:
       channel: 
         handle: wg-essential-building-blocks
-        description: 'The goal of the Essential Building Blocks Working Group is to provide fundamental building blocks that enable a similar developer experience across different languages. GitHub Project: https://github.com/orgs/asyncapi/projects/44'
+        description: 'The goal of the Essential Building Blocks Working Group is to provide fundamental building blocks that enable a similar developer experience across different languages. GitHub Project: <https://github.com/orgs/asyncapi/projects/44>'
       group: 
         handle: essential-building-blocks-wg
         description: Essential Building Blocks Working Group
@@ -95,7 +95,7 @@ working_groups:
       channel: 
         handle: wg-developer-experience
         description: 'The goal of this group is to empower AsyncAPI user journey trough intuitive onboarding, tools, and a frictionless experience.'
-        topic: 'Current Roadmap: https://shapeit.app/projects/org/asyncapi/16/cycles/ceb40c9d?issue=I_kwDOLQFNzc5-xigF'
+        topic: 'Current Roadmap: <https://shapeit.app/projects/org/asyncapi/16/cycles/ceb40c9d?issue=I_kwDOLQFNzc5-xigF>'
       group:
         handle: dx_wg
     roadmap_url: https://shapeit.app/projects/org/asyncapi/16
