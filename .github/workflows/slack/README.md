@@ -68,3 +68,45 @@ Three main resources are created using the slack integration:
 
 > [!IMPORTANT]
 > The terraform state will overwrite any description, name, or topic change. It is better to manage the changes in the YAML files and then apply them. However, the terraform state will not affect bookmarks, pinned items, etc.
+
+### Importing existing resources
+
+In case you have existing resources such as channels, user groups in the workspace, you can import them to the terraform state by transforming the `json` response from the slack API. An example script can be seen below:
+
+```javascript
+const fs = require('fs');
+const fetch = require('node-fetch');
+
+const token = 'xoxp-<your-slack-token>';
+
+const fetchResource = async (resource, url_params) => {
+  // convert the url_params to query string
+  const url = new URL(`https://slack.com/api/${resource}`);
+  Object.keys(url_params).forEach(key => url.searchParams.append(key, url_params[key]));
+  const response = await fetch(url, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded',
+      'Authorization': `Bearer ${token}`
+    }
+  });
+  const data = await response.json();
+  return data;
+}
+
+async function main() {
+  const channels = await fetchResource('conversations.list', { exclude_archived: true });
+  const usergroups = await fetchResource('usergroups.list', { include_users: true });
+
+  channels.channels.forEach(channel => {
+    console.log(`terraform import module.channels.slack_conversation.channels[\\"${channel.name}\\"] ${channel.id}`);
+  });
+
+  usergroups.usergroups.forEach(usergroup => {
+    console.log(`terraform import module.groups.slack_usergroup.wg_groups[\\"${usergroup.name}\\"] ${usergroup.id}`);
+  });
+}
+
+
+main();
+```
