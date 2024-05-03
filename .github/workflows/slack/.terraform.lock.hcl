@@ -6,6 +6,7 @@ provider "registry.terraform.io/pablovarela/slack" {
   constraints = "~> 1.0"
   hashes = [
     "h1:0cQTyJPZUA2AYz+tKQ4z6Vbm0LwZbvtLOAsStWxFkIE=",
+    "h1:eNX77+dnJ7JRx9xX7WHMNy4QUxlcEXDUzldOunLDRNk=",
     "zh:001870e887a1e29a328b87f6431444d8d60e3c7e958fae2e885fbfc4d345886a",
     "zh:065ff64914739cb2942a5a133b2f6e37c3a4278199ca2416d4c578f4d5a12659",
     "zh:383d283b2344732b1c2514c072f4d93de2fd0660d478381756f35ca1be69da41",
