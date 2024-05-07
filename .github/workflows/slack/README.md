@@ -110,3 +110,38 @@ async function main() {
 
 main();
 ```
+
+### What all can be done?
+
+#### Groups
+
+The groups can be mentioned in the slack messages using the `@<group-name>` syntax. Addition of groups can be done by adding the group to the [groups.yaml](./groups/groups.yaml) file. 
+
+The following groups are being created currently:
+- [tsc](./groups/groups.yaml#L13)
+
+  This group is for the Technical Steering Committee members mentioned in the [TSC_MEMBERS](../../../TSC_MEMBERS.json) file. Can be used to mention all the TSC members at once.
+
+- [maintainers](./groups/groups.yaml#L19)
+
+  This group is for the all maintainers of the repository mentioned in the [MAINTAINERS](../../../MAINTAINERS.yaml) file. Can be used to mention all the maintainers at once. 
+  
+- [studio](./groups/groups.yaml#L24)
+
+  This group consists of members actively working on the studio project.
+
+- [coc_commitee](./groups/groups.yaml#L42)
+  
+  This group consists of members of the Code of Conduct committee.
+
+In addition to these groups are also being created for each working group mentioned in the [WORKING_GROUPS](../../../WORKING_GROUPS.yaml) file. Example: `@dx_wg`. 
+
+We are also having groups for maintainers of each repository mentioned in the [MAINTAINERS](../../../MAINTAINERS.yaml) file. You can mention the maintainers of a repository using `@maintainers_<repo-name>`. Example: `@maintainers_studio`.
+
+#### Channels
+
+Two types of channels are being created currently:
+
+- General channels: The channels are defined in the [channels.yaml](./channels/channels.yaml) file with the structure explained there. 
+
+- Working group channels: The working group channels are created for each working group mentioned in the [WORKING_GROUPS](../../../WORKING_GROUPS.yaml) file. The channels are created with the name `wg_<working-group-name>` or custom nameas configured in the [WORKING_GROUPS](../../../WORKING_GROUPS.yaml) file.
