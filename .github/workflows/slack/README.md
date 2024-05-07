@@ -64,7 +64,7 @@ Three main resources are created using the slack integration:
 
 - Use of bot token of the format `xoxo-<your-slack-token>` is not supported for creating user groups.
 - The user group should be unique across the workspace (i.e., no channel, user, or user group should have the same handle).
-- Please [import](#L52) the user groups to terraform state if they already exist in the workspace, as they **cannot be deleted** in Slack 😢.
+- Please [import](#importing-existing-resources) the user groups to terraform state if they already exist in the workspace, as they **cannot be deleted** in Slack 😢.
 
 > [!IMPORTANT]
 > The terraform state will overwrite any description, name, or topic change. It is better to manage the changes in the YAML files and then apply them. However, the terraform state will not affect bookmarks, pinned items, etc.
@@ -118,19 +118,19 @@ main();
 The groups can be mentioned in the slack messages using the `@<group-name>` syntax. Addition of groups can be done by adding the group to the [groups.yaml](./groups/groups.yaml) file. 
 
 The following groups are being created currently:
-- [tsc](./groups/groups.yaml#L13)
+- `tsc`
 
   This group is for the Technical Steering Committee members mentioned in the [TSC_MEMBERS](../../../TSC_MEMBERS.json) file. Can be used to mention all the TSC members at once.
 
-- [maintainers](./groups/groups.yaml#L19)
+- `maintainers`
 
   This group is for the all maintainers of the repository mentioned in the [MAINTAINERS](../../../MAINTAINERS.yaml) file. Can be used to mention all the maintainers at once. 
   
-- [studio](./groups/groups.yaml#L24)
+- `studio`
 
   This group consists of members actively working on the studio project.
 
-- [coc_commitee](./groups/groups.yaml#L42)
+- `coc_commitee`
   
   This group consists of members of the Code of Conduct committee.
 
