@@ -19,3 +19,14 @@ A Working Group must discuss ideas and solutions in public, and communicate thro
 It is recommended that the Working Group schedules meetings using the methods described at https://github.com/asyncapi/community/blob/master/MEETINGS_ORGANIZATION.md.
 
 Working Groups should be listed on the [AsyncAPI website](https://www.asyncapi.com), along with their description, goals, members, and anything the Working Group wants to include.
+
+### How to reach out to a Working Group
+
+There are several ways to reach out to a Working Group:
+
+- Join the [AsyncAPI Slack](https://www.asyncapi.com/slack-invite) and ping the working group's handle to ask questions or share your thoughts. The handle can be found in the [WORKING_GROUPS.yaml](./WORKING_GROUPS.yaml) file in the `slack.group.handle` field. Example: `@dx_wg`.
+- Do a GitHub team mention in any issue, discussion, or pull request. The team handle can be found in the [WORKING_GROUPS.yaml](./WORKING_GROUPS.yaml) file in `github_team` field. Example: `developer_experience_wg`.
+- Join the working group's channel on Slack. The channel name can be found in the [WORKING_GROUPS.yaml](./WORKING_GROUPS.yaml) file in the `slack.channel.handle` field. Example: `#wg-developer-experience`.
+
+> [!IMPORTANT]
+> Please note that the Working Group members are volunteers and may not be able to respond immediately. Please be patient and respectful. Also, it will be helpful if there is as little spam as possible. For more information, please refer to the [Slack Etiquette](./slack-etiquette.md) document.
