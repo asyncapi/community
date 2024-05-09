@@ -42,8 +42,8 @@ working_groups:
       group: 
         handle: wg-marketing
         name: Marketing Working Group
-  roadmap_url: https://github.com/orgs/asyncapi/projects/46
-  github_team: marketing_wg
+    roadmap_url: https://github.com/orgs/asyncapi/projects/46
+    github_team: marketing_wg
   
   - name: Essential Building Blocks
     description: The goal of the Essential Building Blocks Working Group is to provide fundamental building blocks that enable a similar developer experience across languages.
