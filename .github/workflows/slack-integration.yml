@@ -18,7 +18,7 @@ jobs:
           cd .github/workflows/slack
           terraform init
           terraform apply \
-            -var "slack_token=${{ secrets.SLACK_TOKEN }}" \
+            -var "slack_token=${{ secrets.SLACK_INFRA_TOKEN }}" \
             -auto-approve
       - name: Check if there are any uncommitted changes
         id: git-check
