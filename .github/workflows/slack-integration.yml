@@ -6,6 +6,7 @@ on:
       - '**/slack/**/*'
       - 'MAINTAINERS.yaml'
       - 'WORKING_GROUPS.yaml'
+      - '.github/workflows/slack-integration.yml'
   
 jobs:
   deploy-changes-to-slack:
@@ -42,4 +43,3 @@ jobs:
           title: 'ci(slack): update slack configuration'
           body: 'This PR was automatically created by the Automatic Slack Management GitHub Action.'
           branch: 'chore/slack-update-${{ github.run_number }}'
-          base: 'main'
