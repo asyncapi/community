@@ -6,7 +6,7 @@ on:
       - '**/slack/**/*'
       - 'MAINTAINERS.yaml'
       - 'WORKING_GROUPS.yaml'
-      - 'slack-integration.yml'
+      - '.github/workflows/slack-integration.yml'
   
 jobs:
   deploy-changes-to-slack:
