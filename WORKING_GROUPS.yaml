@@ -35,6 +35,7 @@ working_groups:
       - @derberg
       - @thulieblack
       - @Mayaleeeee
+      - @ChristopheDujarric
     slack:
       channel: 
         handle: wg-marketing
