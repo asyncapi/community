@@ -1,7 +1,7 @@
 # AsyncAPI Code of Conduct
 
 ## Introduction
-Welcome to our community! We are a diverse group of individuals united by our passion for open source and commitment to inclusivity and respect.
+Welcome to our community! We are a diverse group of individuals united by our passion for open source and commitment to inclusivity.
 
 Our community promotes and supports inclusivity, welcoming individuals from all backgrounds and experiences. We believe that diversity is our strength, and we actively seek participation from those who enhance it.
 
@@ -19,21 +19,21 @@ We pledge to encourage a diverse, healthy community that celebrates individualit
 
 ### Examples of behavior that contributes to a positive environment for our community include:
 
-- Using welcoming and inclusive language
-- Being respectful of differing viewpoints and experiences
-- Gracefully accepting constructive criticism
-- Focusing on what is best for the community
-- Showing empathy towards other community members
+- Using welcoming and inclusive language.
+- Being respectful of differing viewpoints and experiences.
+- Gracefully accepting constructive criticism.
+- Focusing on what is best for the community.
+- Showing empathy towards other community members.
 
 ### Examples of unacceptable behavior include:
 
-- The use of sexualized language or imagery and unwelcome sexual attention or advances
-- Trolling, insulting/derogatory comments, and personal or political attacks
-- Public or private harassment
-- Publishing others' private information, such as a physical or electronic address, without explicit permission
+- The use of sexualized language or imagery and unwelcome sexual attention or advances.
+- Trolling, insulting/derogatory comments, and personal or political attacks.
+- Public or private harassment.
+- Publishing others' private information, such as a physical or electronic address, without explicit permission.
 - Publishing content or comments that promote illegal activities.
-- Violence, threats of violence or violent language.
-- Other conduct which could reasonably be considered inappropriate in a professional setting
+- Violence, threats of violence, or violent language.
+- Other conduct that could reasonably be considered inappropriate in a professional setting.
 
 ## Scope
 
@@ -43,7 +43,7 @@ This Code of Conduct applies both within project spaces and in public spaces whe
 
 The Code of Conduct Committee (CoC Committee) responds to, investigates, and resolves AsyncAPI Incidents. The Committee is responsible for clarifying the standards of acceptable behavior and taking appropriate and fair corrective action in response to unacceptable behavior.
 
-The Committee has the right and responsibility to remove, edit, or reject comments, commits, code, wiki edits, issues, and other contributions that do not align with this Code of Conduct. The Committee may also temporarily or permanently ban any contributor for inappropriate, threatening, offensive, or harmful behaviours to the community.
+The Committee has the right and responsibility to remove, edit, or reject comments, commits, code, wiki edits, issues, and other contributions that do not align with this Code of Conduct. The Committee may also temporarily or permanently ban any contributor for inappropriate, threatening, offensive, or harmful behaviors to the community.
 
 ## Enforcement
 
