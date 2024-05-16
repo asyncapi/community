@@ -63,7 +63,7 @@ Bounty Issues for the upcoming calendar quarter round of the Bounty Program are 
 
 3. Scope: `We need to extend the functionality of '--version' flag in AsyncAPI CLI to include info about versions of other AsyncAPI libraries used in the project`
 
-4. Complexity: `Medium` | `Advanced`
+4. Complexity Level: `Medium` | `Advanced`
 
 5. Type: `Coding` | `DevOps` | `Docs` | `Design`
 
@@ -79,17 +79,19 @@ All GitHub issues selected as Bounty Issues get labels on GitHub:
 
 - GitHub label `bounty`
 
-- text label `level/medium` or `level/advanced` according to the Complexity Level of the Bounty Issue
+- text label indicating calendar quarter round of the Bounty Program in which Bounty Issue participates (e.g., `bounty/2024-Q3`)
 
-- text label indicating calendar quarter round of the Bounty Program in which Bounty Issue participates (e.g., `bounty/2024-Q1`)
+- text labels `bounty/medium` | `bounty/advanced` according to the Complexity Level of the Bounty Issue
+
+- text labels `bounty/coding` | `bounty/devops` | `bounty/docs` | `bounty/design` according to the Type of the Bounty Issue
 
 After addition of labels GitHub issues selected as Bounty Issues can be viewed with GitHub's search tool using the URL formed as:
 ```
-https://github.com/issues?q=is%3Aopen+org%3Aasyncapi+%22bounty/2024-Q1%22+in%3Acomments
+https://github.com/issues?q=is%3Aopen+org%3Aasyncapi+%22bounty/2024-Q3%22+in%3Acomments
 ```
 Also, Bounty Issues that have no assignee and thus are free to pick up can be viewed with GitHub's search tool using the URL formed as:
 ```
-https://github.com/issues?q=is%3Aopen+org%3Aasyncapi+%22bounty/2024-Q1%22+in%3Acomments+no%3Aassignee
+https://github.com/issues?q=is%3Aopen+org%3Aasyncapi+%22bounty/2024-Q3%22+in%3Acomments+no%3Aassignee
 ```
 Note, that results of the GitHub search are visible to logged-in GitHub users only.
 
@@ -102,15 +104,15 @@ In case assignment of the Bounty Issue on GitHub happened during third or fourth
 
 For Bounty Issues of Complexity Level `Medium`:
 
-- Draft Pull Request, [linked to the Bounty Issue using a keyword](https://docs.github.com/en/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue) if applicable,  must be submitted no later than Friday of the second week from the start date and updated every Friday until submission of Final Pull Request
+- Draft Pull Request, [linked to the Bounty Issue using a keyword](https://docs.github.com/en/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue) if applicable, must be submitted no later than Sunday of the second week from the start date and updated every week no later than Sunday, until submission of Final Pull Request and the start of its merging process
 
-- Final Pull Request must be submitted no later than Friday of fourth week from the start date and merged no later than Friday of sixth week from the start date
+- Final Pull Request must be submitted, and its merging process started no later than Sunday of the fourth week from the start date, with the merging process' successful ending no later than Sunday of the sixth week from the start date
 
 For Bounty Issues of Complexity Level `Advanced`:
 
-- Draft Pull Request, [linked to the Bounty Issue using a keyword](https://docs.github.com/en/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue) if applicable, must be submitted no later than Friday of the third week from the start date and updated every Friday until submission of Final Pull Request
+- Draft Pull Request, [linked to the Bounty Issue using a keyword](https://docs.github.com/en/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue) if applicable, must be submitted no later than Sunday of the third week from the start date and updated every week no later than Sunday, until submission of Final Pull Request and the start of its merging process
 
-- Final Pull Request must be submitted no later than Friday of sixth week from the start date and merged no later than Friday of eighth week from the start date
+- Final Pull Request must be submitted, and its merging process started no later than Sunday of the sixth week from the start date, with the merging process' successful ending no later than Sunday of the eighth week from the start date
 
 Updates to the Draft Pull Request are determined by:
 
@@ -122,25 +124,26 @@ If no Pull Request is involved, updates on the Bounty Issue are determined by:
 
 - activity in the Bounty Issue's comments
 
-In case the Bounty Program Participant has not provided a weekly update to the Draft Pull Request and/or on the Bounty Issue (on Monday, the last activity of any of the abovementioned types was five or more calendar days before, e.g., on `2024-01-29`, the last activity of any type was on `2024-01-24` or earlier,) they are pinged as a reminder to do so.
+In case the Bounty Program Participant has not provided a weekly update to the Draft Pull Request and/or on the Bounty Issue (on Monday, the last activity of any of the abovementioned types was four or more calendar days before, e.g., on `2024-05-20`, the last activity of any type was on `2024-05-16` or earlier,) they are pinged as a reminder to do so.
 
-In case the Bounty Program Participant has not provided an update to the Draft Pull Request and/or on the Bounty Issue after two pings over two Mondays, on the third Monday it is assumed that the task cannot be completed within the rest of the time, and the Bounty Program Participant has silently dropped the Bounty Issue. Suspension rules are applied to such Bounty Program Participants, and the Bounty Issue becomes free for assignment to another Bounty Program Participant with a reset timeline, both in the current and next calendar quarter rounds of the Bounty Program.
+In case the Bounty Program Participant has not provided an update to the Draft Pull Request and/or on the Bounty Issue after two pings over two consecutive Mondays, on the third consecutive Monday it is assumed that the task cannot be completed within the rest of the time, and the Bounty Program Participant has silently dropped the Bounty Issue. Suspension rules are applied to such Bounty Program Participants, and the End Of Life rules to such Bounty Issues.
 
-In case the dropped Bounty Issue is transferred to the next calendar quarter round of the Bounty Program, the reward for this Bounty Issue does not alter the budget allocated for the next calendar quarter round of the Bounty Program, and it is excluded from the randomization process for the next calendar quarter round of the Bounty Program if such a process is to take place.
+In case the Bounty Program Participant has not provided the critical fixes required to make the Final Pull Request merging possible during the last week of the Timeline, they are pinged on Thursday, four days before the last day of the Timeline, to do so.
 
-Dropped Bounty Issue gets text label of the second calendar quarter round (e.g., `bounty/2024-Q2`) and text label `bounty/dropped`. If during two calendar months of the second calendar quarter round of the Bounty Program the dropped Bounty Issue was not picked up by any Bounty Program Participant for resolution, all bounty-related labels are removed from it and this Bounty Issue becomes a regular GitHub issue, which can again be submitted as a Bounty Issue Candidate. It also can again be assigned to the same Bounty Program Participant who dropped it.
+In case the Bounty Program Participant has not provided critical fixes during the next four days, on Monday, after the last day of the Bounty Issues' Timeline, it is considered that the Bounty Program Participant did not complete the Bounty Issue within the assigned Timeline due to their own misperformance. Suspension rules are applied to such Bounty Program Participants, and the End Of Life rules to such Bounty Issues.
+
 
 ### Bounty Issue's Timeline Example
 
-|Complexity Level|Assignment date (by GitHub)|Start date (by BP rules)|End date (by BP rules)|Draft PR submission|Final PR submission|Final PR merge|
-|----------------|---------------------------|------------------------|----------------------|-------------------|-------------------|--------------|
-|Medium          |2023-04-27                 |2023-05-01              |**2023-06-09**        |2023-05-12         |2023-05-26         |**2023-06-09**|
-|Advanced        |2023-04-26                 |2023-05-01              |**2023-06-23**        |2023-05-19         |2023-06-09         |**2023-06-23**|
+|Complexity Level|Assignment Date (by GitHub)|Start Date (by BP Rules)|End Date (by BP Rules)|Draft PR Submission|Final PR Merge Start|Final PR Merge End|
+|----------------|---------------------------|------------------------|----------------------|-------------------|--------------------|------------------|
+|Medium          |2024-06-21                 |2024-07-01              |**2024-08-11**        |2024-07-14         |2024-07-28          |**2024-08-11**    |
+|Advanced        |2024-06-25                 |2024-07-01              |**2024-08-25**        |2024-07-21         |2024-08-11          |**2024-08-25**    |
 
 
 ## Extension Of Bounty Issue's Timeline
 
-In case of the online absence of the AsyncAPI Maintainer in [Slack](https://asyncapi.slack.com) for a period of more than three working days in a row, all remaining target dates of the Bounty Issue Timeline are increased by one calendar week per each three working days in a row of the online absence of the AsyncAPI Maintainer plus one calendar week. 'Plus one calendar week' period is required because after the AsyncAPI Maintainer has regained a confident online presence in [Slack](https://asyncapi.slack.com), the Bounty Program Participant would have to spend time getting back to the insides of the issue, and nearly unfamiliar at that time their own code.
+In case of the online absence of the AsyncAPI Maintainer in [Slack](https://asyncapi.slack.com) for a period of more than three consecutive working days, all remaining target dates of the Bounty Issue Timeline are increased by one calendar week per each three consecutive working days of the online absence of the AsyncAPI Maintainer plus one calendar week. 'Plus one calendar week' period is required because after the AsyncAPI Maintainer has regained a confident online presence in [Slack](https://asyncapi.slack.com), the Bounty Program Participant would have to spend time getting back to the insides of the issue, and nearly unfamiliar at that time their own code.
 
 In case of unpredicted [force majeure](https://iccwbo.org/wp-content/uploads/sites/3/2020/03/icc-forcemajeure-hardship-clauses-march2020.pdf) and/or circumstances that could not be foreseen and/or that are beyond the control of both the Bounty Program Participant and the AsyncAPI Maintainer, the Bounty Issue Timeline can be increased by a fixed or indefinite amount of time, with a fair explanation in the Bounty Issue's or Pull Request's comments.
 
@@ -151,19 +154,33 @@ Communication on the necessity of the Bounty Issue Timeline extension should hap
 
 Upon request of the AsyncAPI Maintainer who is responsible for the resolution of the given Bounty Issue from the AsyncAPI's side in the Bounty Issue's comments in the process of resolution, the Complexity Level of the Bounty Issue can be reclassified in any direction (both lowered to `Medium` and heightened to `Advanced`,) with corresponding changes to the Bounty Issue's Timeline in case of a need.
 
+Reclassified Bounty Issue gets one of historical text labels `bounty/downgraded` or `bounty/upgraded` accordingly.
+
 
 ## Bounty Issue's Completion
 
 To avoid half-merges, unmet dependencies on the completion of other (inextricably linked) issues, waiting for merges of other separate PRs that provide critically important functionality for the given task, etc., and to avoid situations where AsyncAPI has already acquired an obligation to pay but factually the conditions of the Bounty Issue completion are not met yet, a system of double control with separation of concerns is exercised on the Bounty Issues:
 
-- after Bounty Issue's closure on GitHub, the AsyncAPI Maintainer, who was responsible for the resolution of the given Bounty Issue from the AsyncAPI's side, confirms the Bounty Issue's technical resolution by posting a separate confirming comment in this Bounty Issue's comments;
+- After Bounty Issue's closure on GitHub, the AsyncAPI Maintainer, who was responsible for the resolution of the given Bounty Issue from the AsyncAPI's side, confirms the Bounty Issue's technical resolution by posting a separate confirming comment in this Bounty Issue's comments (followed by another confirming comment from the AsyncAPI Maintainer of this specific repository, if these were two different persons)
 
-- the Bounty Program Participant proceeds with the process of claiming the reward only after the second comment from the Bounty Program Coordinator, confirming the Bounty Issue completion and readiness to perform the payout.
+- The Bounty Program Participant proceeds with the process of claiming the reward only after the second comment from the Bounty Program Coordinator, confirming the Bounty Issue completion and readiness to perform the payout
 
 
-## Bounty Issue's Time Of Life
+## Bounty Issue's End Of Life
 
-Bounty Issue has an overall time of life of five calendar months since the start of the calendar quarter it was first introduced in. If the Bounty Issue was not assigned during the first calendar quarter round (e.g., `bounty/2024-Q1`), it gets text label of the second calendar quarter round (e.g., `bounty/2024-Q2`) and text label `bounty/stalled`. If during two calendar months of the second calendar quarter round of the Bounty Program the Bounty Issue still was not picked up by any Bounty Program Participant for resolution, all bounty-related labels are removed from it and Bounty Issue becomes a regular GitHub issue, which can again be submitted as a Bounty Issue Candidate.
+GitHub issue participates in the Bounty Program and is considered a Bounty Issue starting from the second of addition of the GitHub label `bounty` according to GitHub's timestamp until the Bounty Issue's End Of Life, which starts after the last second of the last day of the first calendar month since the start of the calendar quarter round of the Bounty Program it was introduced in, inclusive.
+
+In case a Bounty Issue gets an assignee before the End Of Life and continues to have an assignee after the End Of Life, it continues to be a Bounty Issue until completion.
+
+In case a Bounty Issue does not get an assignee before the End Of Life, after reaching End Of Life it gets the historical text label `bounty/unpicked` and is considered the one that reached End Of Life.
+
+In case a Bounty Issue gets an assignee before the End Of Life and is dropped after the End Of Life, it gets the historical text label `bounty/dropped` and is considered the one that reached End Of Life.
+
+In case a Bounty Issue gets an assignee before the End Of Life and does not get completed within the assigned Timeline after the End Of Life due to Bounty Program Participant's misperformance, it gets the historical text label `bounty/misperformed` and is considered the one that reached End Of Life.
+
+Bounty Issue that reached End Of Life gets the historical text label `bounty/eol`, reward for this Bounty Issue gets excluded from the budget allocated for the corresponding calendar quarter round of the Bounty Program, and this Bounty Issue becomes a regular GitHub issue, which can be submitted again as a Bounty Issue Candidate.
+
+Dropped Bounty Issue can be assigned again to the same Bounty Program Participant who dropped it.
 
 
 ## Additional Conditions
@@ -202,15 +219,19 @@ At the time of writing (2023-10-01) Open Collective supports `ACH`, `Internation
 
 Each new Bounty Program Participant starts participation in the Bounty Program with the quantity of Suspensions equal to zero.
 
-In case a Bounty Program Participant stops rendering services directed toward resolution of the Bounty Issue without any communication on the subject (performs 'silent drop') and/or fails to complete the Bounty Issue within the assigned Timeline, for the first time, they receive a First Suspension and will be prohibited from participating in the Bounty Program starting from the current moment and during two calendar months from the beginning of the next full (three-month) calendar quarter. After this period, the First Suspension expires.
+In case a Bounty Program Participant stops rendering services directed toward resolution of the (**one**) Bounty Issue without any communication on the subject ('silently dropped') and/or fails to complete the (**one**) Bounty Issue within the assigned Timeline due to their own misperformance, for the **first time**, they receive a **First Suspension** and will be prohibited from participating in the Bounty Program **starting from the current moment and during two calendar months from the beginning of the next full (three-month) calendar quarter**. After this period, the First Suspension expires.
 
-In case a Bounty Program Participant stops rendering services directed toward resolution of the Bounty Issue without any communication on the subject (performs 'silent drop') and/or fails to complete the Bounty Issue within the assigned Timeline, for the second time during two full (three-month) calendar quarters after the expiration of the First Suspension, they receive a Second Suspension and will be prohibited from participating in the Bounty Program starting from the current moment and during eight calendar months from the beginning of the next full (three-month) calendar quarter. After this period, the Second Suspension expires.
+In case a Bounty Program Participant stops rendering services directed toward resolution of the (**one**) Bounty Issue without any communication on the subject ('silently dropped') and/or fails to complete the (**one**) Bounty Issue within the assigned Timeline due to their own misperformance, for the **second time** during five calendar months from the beginning of the next full (three-month) calendar quarter after the expiration of the First Suspension, they receive a **Second Suspension** and will be prohibited from participating in the Bounty Program **starting from the current moment and during eight calendar months from the beginning of the next full (three-month) calendar quarter**. After this period, the Second Suspension expires.
 
-In case a Bounty Program Participant stops rendering services directed toward resolution of two Bounty Issues simultaneously without any communication on the subject (performs 'silent drop') and/or fails to complete two Bounty Issues within the assigned Timeline simultaneously, the Second Suspension is applied immediately.
+In case a Bounty Program Participant stops rendering services directed toward resolution of **one of two** Bounty Issues, chosen for simultaneous resolution, without any communication on the subject ('silently dropped') and/or fails to complete **one of two** Bounty Issues chosen for simultaneous resolution within the assigned Timeline due to their own misperformance, for the **first time**, they receive a **First Suspension** and will be prohibited from participating in the Bounty Program **during two calendar months from the beginning of the next full (three-month) calendar quarter**. After this period, the First Suspension expires.
 
-Reward for the completed Bounty Issue (Bounty Issues) is not paid to the Bounty Program Participant who received Suspension for this Bounty Issue (Bounty Issues) in the current and next one Bounty Program's calendar quarter round, even in case of its (their) voluntary completion.
+In case a Bounty Program Participant stops rendering services directed toward resolution of **one of two** Bounty Issues, chosen for simultaneous resolution, without any communication on the subject ('silently dropped') and/or fails to complete **one of two** Bounty Issues chosen for simultaneous resolution within the assigned Timeline due to their own misperformance, for the **second time** during five calendar months from the beginning of the next full (three-month) calendar quarter after the expiration of the First Suspension, they receive a **Second Suspension** and will be prohibited from participating in the Bounty Program **during eight calendar months from the beginning of the next full (three-month) calendar quarter**. After this period, the Second Suspension expires.
 
-After the expiration of the Second Suspension or after two full (three-month) calendar quarters after the expiration of the First Suspension, if no Second Suspension was received during this time, their Suspension history is considered clean, and the quantity of Suspensions is reset to zero.
+In case a Bounty Program Participant stops rendering services directed toward resolution of **two** Bounty Issues **simultaneously** without any communication on the subject ('silently dropped') and/or fails to complete **two** Bounty Issues within the assigned Timeline due to their own misperformance **simultaneously**, they receive a **Second Suspension** immediately and will be prohibited from participating in the Bounty Program **starting from the current moment and during eight calendar months from the beginning of the next full (three-month) calendar quarter**. After this period, the Second Suspension expires.
+
+Reward for the completed Bounty Issue (Bounty Issues) is not paid to the Bounty Program Participant who received Suspension for this Bounty Issue (Bounty Issues) during the Suspension period, even in case of its (their) voluntary completion.
+
+After the expiration of the Second Suspension or after five calendar months from the beginning of the next full (three-month) calendar quarter after the expiration of the First Suspension, if no Second Suspension was received during this time, their Suspension history is considered clean, and the quantity of Suspensions is reset to zero.
 
 A dedicated list is used for the purpose of tracking Suspension history.
 
