@@ -30,12 +30,25 @@ working_groups:
   - name: Marketing  
     description: The group is dedicated to leveraging marketing strategies to achieve two key objectives: promoting AsyncAPI adoption and highlighting community achievements. By strategically showcasing AsyncAPI capabilities and celebrating community successes, the group drives both user growth and community engagement. It shares a vision of close collaboration between AsyncAPI community and sponsors.
     chairpersons: 
-        - #tbd 
+      - name: Oluwabamikemi Kayode
+        github: iambami
+        slack: U070DE02VQX
     members:
-      - @derberg
-      - @thulieblack
-      - @Mayaleeeee
-      - @ChristopheDujarric
+      - name: Lukasz Gornicki
+        github: derberg
+        slack: UD698Q5LM
+      - name: Aishat Muibudeen
+        github: Mayaleeeee
+        slack: U03CNHGEUR1
+      - name: Thulisile Sibanda
+        github: thulieblack
+        slack: U03CNJPMT7C
+      - name: Christophe Dujarric
+        github: ChristopheDujarric
+        slack: U048TMNQ1M0
+      - name: Georgie from Gravitee.io
+        github: Georgie-Gravitee
+        slack: U043BE3QUS2
     slack:
       channel: 
         handle: wg-marketing
