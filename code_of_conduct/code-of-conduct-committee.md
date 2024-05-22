@@ -13,7 +13,6 @@ The AsyncAPI CoC Committee consists of 3 full members and 3 alternate members:
 **Full Members**:
 
 - [Azeez Elegbede](https://github.com/acethecreator)
-- [Barbaño González](https://github.com/barbanio)
 - [Sergio Moya](https://github.com/smoya)
 
 **Alternate Members:** 
