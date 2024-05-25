@@ -1,19 +1,18 @@
+AsyncAPI has taken a significant leap forward in our journey towards fostering a vibrant and inclusive community by establishing the "Maintainers Growth Working Group." This initiative marks a pivotal moment in our collective effort to expand our horizons and deepen our impact within the AsyncAPI organization. 
 
-# Aloha Maintainers!
+The "Maintainers Growth Working Group" exemplifies our steadfast commitment to nurturing an inclusive and dynamic community.
 
-Hey beautiful people, 
+## Maintainers Growth Objectives
 
-I'm thrilled to share some exciting news with you. We've taken a significant leap forward in our journey towards fostering a vibrant and inclusive community by establishing the "Maintainers Growth Working Group." This initiative marks a pivotal moment in our collective effort to not only expand our horizons but also deepen our impact within the AsyncAPI organization. 
+The "Maintainers Growth Working Group" is committed to multifaceted objectives, striving for ambitious, attainable goals. Our focus areas include:
+1. **Expand Horizons**: Significantly increase the number of maintainers across the AsyncAPI organization. This expansion will bring diverse perspectives and skill sets, enriching our community and projects.
+2. **Optimize Onboarding Experience**: Acknowledging the importance of a smooth onboarding experience for new maintainers, we endeavor to refine and optimize this process. Our aim is to make it intuitive, informative, and supportive, ensuring that newcomers feel valued and empowered from the outset.
+3. **Embrace Diversity**: We are steadfast in our commitment to increasing the representation of non-Postman maintainers. Diversity is not merely a buzzword but a motivation for innovation and resilience within our community. We eagerly embrace maintainers from varied backgrounds and experiences.
+4. **Build a Support System**: Recognizing the challenges and responsibilities inherent in the role of a maintainer, we are dedicated to establishing a comprehensive support system. We aim to offer guidance, resources, and assistance whenever needed, fostering a sense of support and empowerment among maintainers.
+5. **Nurture Talent**: We are passionate about identifying and nurturing potential maintainers among our regular contributors. We recognize the value of nurturing talents within our community and providing avenues for growth and leadership.
 
-Our mission with this newly formed group is all-rounded, and we're committed to setting ambitious yet achievable goals. Here's what we're setting our sights on:
-1. **Expanding Our Horizons**: We aim to significantly increase the number of maintainers across the AsyncAPI organization. This will ensure diverse perspectives and skills that will enrich our community and projects. 
-2. **Enhance the Onboarding Experience**: We recognize the importance of a smooth and welcoming onboarding process for new maintainers. We aim to enhance this experience, making it more intuitive, informative, and supportive, ensuring that new members feel valued and empowered from day one. 
-3. **Embracing Diversity**: A crucial objective of ours is to increase the number of Non-Postman maintainers. We firmly believe that diversity is not just a buzzword, but a strength that can drive innovation and resilience in our community. We're eager to welcome maintainers from all backgrounds and experiences. 
-4. **Building a Support System**: We're fully aware of the challenges and responsibilities that come with being a maintainer. That's why we're not just offering a support system, but we're committed to building a robust one. We'll be there to guide, provide resources, and lend a helping hand whenever needed, ensuring that you feel supported and empowered in your role. 
-5. **Nurturing Talent**: Lastly, we're passionate about identifying and nurturing potential maintainers among our regular contributors. We see immense value in recognizing and encouraging the talents within our community and providing opportunities for growth and leadership. 
+## Invitation to Collaborate
+We are pleased to invite prospective maintainers to join our ranks. If your project stands to benefit from our support, we encourage you to reach out. Our community is currently modest, so we operate on a first-come, first-served basis. With one project already in the pipeline, prompt action is advisable. Whether you are a longstanding member of our community or contemplating joining us, we eagerly anticipate the opportunity to connect. 
 
-We're excited to announce that our doors are now open to welcoming new maintainers! If your project could use our support, don't hesitate to reach out. As we're a relatively small team at the moment, we operate on a first-come, first-served basis. With one project already in the queue, it's wise not to delay getting in touch. We're keen to get started and help you as fast as possible. Whether you're an existing member of our community or considering joining us, we're eager to connect. Let's explore how we can support your journey as a maintainer. Your passion, skills, and unique perspective are precious to us. Together, we're confident that we can achieve something truly remarkable.
-
-In conclusion, the "Maintainers Growth Working Group" is more than just a working group; it's a testament to our commitment to fostering a nurturing, inclusive, and dynamic community. We're on this journey together, and I'm incredibly excited about what we can achieve as a team. Let's roll up our sleeves and make a difference, one step at a time. 
 
 
