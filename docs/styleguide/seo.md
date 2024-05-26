@@ -117,11 +117,11 @@ Here are some ways to make blog posts and documentation for Asyncapi's website m
 
 - **Use smaller images and videos**: Large images and videos can cause the documentation on Asyncapi's website to appear at slower rates, which create an unpleasant user-experience.
 
-- **Use mobile-friendly font**: Some fonts can be hard to read on mobile devices, so it's crucial to picks font styles and sizes that can be adaptable to their screen sizes. It highly recommended to use styles like ["Arial, Tahoma, Verdana for headings and Times New Roman, Georgia, Bookman for body text"](https://clickhelp.com/clickhelp-technical-writing-blog/choosing-fonts-for-technical-documentation/) and sizes like ["14-16 point font for headings and 12-point for body text"](https://clickhelp.com/clickhelp-technical-writing-blog/choosing-fonts-for-technical-documentation/).
+- **Use mobile-friendly fonts**: Some fonts can be hard to read on mobile devices, so it's crucial to picks font styles and sizes that can be adaptable to their screen sizes. It highly recommended to use styles like ["Arial, Tahoma, Verdana for headings and Times New Roman, Georgia, Bookman for body text"](https://clickhelp.com/clickhelp-technical-writing-blog/choosing-fonts-for-technical-documentation/) and sizes like ["14-16 point font for headings and 12-point for body text"](https://clickhelp.com/clickhelp-technical-writing-blog/choosing-fonts-for-technical-documentation/).
 - **Give each topic its own page and/or section**: Consider putting a link to the next page or implementing internal links. It'll help users the project's docs and blog post have an easier time navigating the site.
 
 >[!TIP]
-> Consider using testing tools like [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/) to ensure that the proposed blog post, tutorial, or other form of documentation for  Asyncapi is mobile and SEO-friendly if quick results are needed.  
+> Consider using testing tools like [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/) to ensure that the proposed blog post, tutorial, or update to Aynscapi's documentation  is mobile and SEO-friendly if quick results are needed.  
 
 ### Why is quality important when making technical documentation that is SEO-friendly?
 
@@ -129,7 +129,7 @@ While implementing the previously mentioned strategies are important, ensuring t
 
 #### Strategies for making high-quality and SEO-friendly content
 
-Here are some questions to consider when creating SEO-friendly and original content:
+Consider asking yourself the following questions to ensure the content being submitted to Asyncapi's blog or documentation is high-quality and SEO-friendly:
 
 - Is the content interactive and engaging?
 - Is the information I present accurate?
@@ -144,5 +144,5 @@ The way a technical documentation's images are presented influences how it shows
 Here are ways to make SEO-friendly images:
 
 - **Create descriptive alt text**: Ensure that it describes the image's context a purpose. Doing so makes it easier for search engines to understand why it is being used, [especially when the image fails to appear on screen](https://rb.gy/5axft9).  
-- **Use search-engine supported image formats**: [Google tends to support images that are `JPEG`, `SVG`, and `PNG`](https://developers.google.com/search/docs/appearance/google-images#supported-image-formats) format, so consider saving the images in these formats.
-- **Keep their sizes not too large**: [Large image file sizes can make cause the site to load slowly](https://developers.google.com/search/docs/appearance/google-images#good-quality-photos%20optimize-for-speed) so remember to reduce and compress them before add them to the content.
+- **Use search-engine supported image formats**: [`JPEG`, `SVG`, and `PNG`](https://developers.google.com/search/docs/appearance/google-images#supported-image-formats) are the common formats that appear in Google's search rankings, so consider saving the images in these formats.
+- **Be mindful of the images' file size**: [Large image file sizes can make cause the site to load slowly](https://developers.google.com/search/docs/appearance/google-images#good-quality-photos%20optimize-for-speed) so remember to reduce and compress them before add them to the content.
