@@ -12,12 +12,12 @@ The AsyncAPI CoC Committee consists of 3 full members and 3 alternate members:
 
 **Full Members**:
 
+- [Aishat Muibudeen](https://github.com/mayaleeeee)
 - [Azeez Elegbede](https://github.com/acethecreator)
 - [Sergio Moya](https://github.com/smoya)
 
 **Alternate Members:** 
 
-- [Aishat Muibudeen](https://github.com/mayaleeeee)
 - [Alejandra Quetzalli](https://github.com/alequetzalli)
 - [Thulisile Sibanda](https://github.com/thulieblack)
 
