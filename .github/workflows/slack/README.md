@@ -65,10 +65,10 @@ Three main resources are created using the slack integration:
 - Use of bot token of the format `xoxo-<your-slack-token>` is not supported for creating user groups.
 - The user group should be unique across the workspace (i.e., no channel, user, or user group should have the same handle).
 - Please [import](#importing-existing-resources) the user groups to terraform state if they already exist in the workspace, as they **cannot be deleted** in Slack 😢.
-- **You have to invite the bot to the channel to make it work.**
+- **You have to invite the bot to all managed channels to make it work.**
 
 > [!WARNING]
-> **Creation of multitudes of groups leads to a lot of API calls and can lead to rate limiting. Please be cautious while creating groups. otherwise you will get `Error: couldn't get usergroups: slack rate limit exceeded, retry after 30s`**
+> **Creation of multitudes of groups leads to a lot of API calls and can lead to rate limiting. Please be cautious while creating groups. otherwise you will get `Error: couldn't get usergroups: slack rate limit exceeded, retry after 30s`**. Related issue (not fixed even thought it is closed): https://github.com/pablovarela/terraform-provider-slack/issues/64
 
 > [!IMPORTANT]
 > The terraform state will overwrite any description, name, or topic change. It is better to manage the changes in the YAML files and then apply them. However, the terraform state will not affect bookmarks, pinned items, etc.
