@@ -132,7 +132,7 @@ While implementing the previously mentioned strategies are important, ensuring t
 Consider asking yourself the following questions to ensure the content being submitted to Asyncapi's blog or documentation is high-quality and SEO-friendly:
 
 - Is the content interactive and engaging?
-- Is the information I present accurate?
+- Is the information presented accurate?
 - Is the content too technical for its intended audience?
 
 ### Images
@@ -145,4 +145,4 @@ Here are ways to make SEO-friendly images:
 
 - **Create descriptive alt text**: Ensure that it describes the image's context a purpose. Doing so makes it easier for search engines to understand why it is being used, [especially when the image fails to appear on screen](https://rb.gy/5axft9).  
 - **Use search-engine supported image formats**: [`JPEG`, `SVG`, and `PNG`](https://developers.google.com/search/docs/appearance/google-images#supported-image-formats) are the common formats that appear in Google's search rankings, so consider saving the images in these formats.
-- **Be mindful of the images' file size**: [Large image file sizes can make cause the site to load slowly](https://developers.google.com/search/docs/appearance/google-images#good-quality-photos%20optimize-for-speed) so remember to reduce and compress them before add them to the content.
+- **Be mindful of the images' file size**: [Large image file sizes can make cause the site to load slowly](https://developers.google.com/search/docs/appearance/google-images#good-quality-photos%20optimize-for-speed) so reduce and compress them before adding them to the content.
