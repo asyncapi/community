@@ -137,7 +137,7 @@ Consider asking yourself the following questions to ensure the content being sub
 
 ### Images
 
-The way a technical documentation's images are presented influences how it shows up in the search engine rankings, so it's important to optimize them in the best way possible.
+The way a technical documentation's images are presented influences how they show up in a search engine's rankings, so it's important to optimize them in the best way possible.
 
 ### Strategies for making images SEO-friendly
 
