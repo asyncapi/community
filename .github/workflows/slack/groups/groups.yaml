@@ -22,7 +22,7 @@
 
 - name: "Studio"
   handle: "studio"
-  description: "To notify all regular Studio contributors at once. If you don't contribute regularly but want to get notified too, please open a PR to get added."
+  description: "To notify all regular Studio contributors at once, please open PR to get added"
   users:
     - "U01RWDD69PZ"
     - "U0572R8J927"
