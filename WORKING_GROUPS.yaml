@@ -26,6 +26,39 @@ working_groups:
   #     - The AsyncAPI community grows sustainably.
   #   roadmap_url: https://example.com/xyz # Recommended. Link to a GitHub project, issue, or any other tool where the Working Group outlines their roadmap.
   #   github_team: # Recommended. The GitHub team handle to tag all the working group members at once. Example: maintainers_growth_wg, without @asyncapi/ prefix.
+
+  - name: Marketing  
+    description: The group is dedicated to leveraging marketing strategies to achieve two key objectives: promoting AsyncAPI adoption and highlighting community achievements. By strategically showcasing AsyncAPI capabilities and celebrating community successes, the group drives both user growth and community engagement. It shares a vision of close collaboration between AsyncAPI community and sponsors.
+    chairpersons: 
+      - name: Oluwabamikemi Kayode
+        github: iambami
+        slack: U070DE02VQX
+    members:
+      - name: Lukasz Gornicki
+        github: derberg
+        slack: UD698Q5LM
+      - name: Aishat Muibudeen
+        github: Mayaleeeee
+        slack: U03CNHGEUR1
+      - name: Thulisile Sibanda
+        github: thulieblack
+        slack: U03CNJPMT7C
+      - name: Christophe Dujarric
+        github: ChristopheDujarric
+        slack: U048TMNQ1M0
+      - name: Georgie from Gravitee.io
+        github: Georgie-Gravitee
+        slack: U043BE3QUS2
+    slack:
+      channel: 
+        handle: wg-marketing
+        topic: Tasks board https://github.com/orgs/asyncapi/projects/46
+      group: 
+        handle: wg-marketing
+        name: Marketing Working Group
+    roadmap_url: https://github.com/orgs/asyncapi/projects/46
+    github_team: marketing_wg
+  
   - name: Essential Building Blocks
     description: The goal of the Essential Building Blocks Working Group is to provide fundamental building blocks that enable a similar developer experience across languages.
     chairpersons: 
@@ -60,6 +93,7 @@ working_groups:
     github_team: essential_building_blocks_wg
     objectives: 
       - https://github.com/orgs/asyncapi/projects/44
+      
   - name: Developer Experience
     description: The goal of this group is to empower AsyncAPI user journey trough intuitive onboarding, tools, and a frictionless experience.
     chairpersons: 
@@ -105,6 +139,7 @@ working_groups:
     objectives: 
       - https://github.com/users/Amzani/projects/12/views/1
     github_team: developer_experience_wg
+
   - name: Maintainers Growth
     description: The Maintainers Growth Working Group aims to help grow the number of maintainers at AsyncAPI.
     chairpersons: 
@@ -135,6 +170,7 @@ working_groups:
         handle: maintainers-growth-wg
         description: Maintainers Growth Working Group
     github_team: maintainers_growth_wg
+    
   - name: Conference Coordination
     description: The goal of the group is to plan, manage, and create a seamless way to enhance the conference experience.
     chairpersons: 
