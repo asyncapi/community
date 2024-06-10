@@ -125,6 +125,9 @@ working_groups:
       - name: Fran Méndez
         github: fmvilas
         slack: U34F2JRRS
+      - name: Aayush Saini
+        github: AayushSaini101
+        slack: U04RN9LRV97
     slack:
       channel: 
         handle: wg-developer-experience
