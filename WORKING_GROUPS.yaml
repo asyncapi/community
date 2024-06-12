@@ -28,7 +28,7 @@ working_groups:
   #   github_team: # Recommended. The GitHub team handle to tag all the working group members at once. Example: maintainers_growth_wg, without @asyncapi/ prefix.
 
   - name: Marketing  
-    description: The group is dedicated to leveraging marketing strategies to achieve two key objectives: promoting AsyncAPI adoption and highlighting community achievements. By strategically showcasing AsyncAPI capabilities and celebrating community successes, the group drives both user growth and community engagement. It shares a vision of close collaboration between AsyncAPI community and sponsors.
+    description: 'The group is dedicated to leveraging marketing strategies to achieve two key objectives: promoting AsyncAPI adoption and highlighting community achievements. By strategically showcasing AsyncAPI capabilities and celebrating community successes, the group drives both user growth and community engagement. It shares a vision of close collaboration between AsyncAPI community and sponsors.'
     chairpersons: 
       - name: Oluwabamikemi Kayode
         github: iambami
@@ -54,7 +54,7 @@ working_groups:
         handle: wg-marketing
         topic: Tasks board https://github.com/orgs/asyncapi/projects/46
       group: 
-        handle: wg-marketing
+        handle: marketing-wg
         name: Marketing Working Group
     roadmap_url: https://github.com/orgs/asyncapi/projects/46
     github_team: marketing_wg
