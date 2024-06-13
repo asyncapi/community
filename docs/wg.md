@@ -14,5 +14,11 @@ The "Maintainers Growth Working Group" is committed to multifaceted objectives, 
 ## Invitation to Collaborate
 We are pleased to invite prospective maintainers to join our ranks. If your project stands to benefit from our support, we encourage you to reach out. Our community is currently modest, so we operate on a first-come, first-served basis. With one project already in the pipeline, prompt action is advisable. Whether you are a longstanding member of our community or contemplating joining us, we eagerly anticipate the opportunity to connect. 
 
+## How to contact us
 
+If you have any questions or are interested in becoming a member of this working group, please contact us by:
+
+- Joining our [Slack workspace](https://www.asyncapi.com/slack-invite). Please follow our [Slack etiquette](https://github.com/asyncapi/.github/blob/master/slack-etiquette.md) and adhere to the [code of conduct](https://github.com/asyncapi/.github/blob/master/CODE_OF_CONDUCT.md).
+
+- Joining the dedicated Working Group channel, `#wg-maintainers-growth`, where we discuss all aspects of maintainers' growth. You can find all existing members there.
 
