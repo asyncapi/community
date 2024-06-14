@@ -17,4 +17,4 @@ We are pleased to invite prospective maintainers to join our ranks. If your proj
 ## How to contact us
 If you have any questions or are interested in becoming a member of this working group, please get in touch with us by joining our Slack channel [#wg-maintainers-growth](https://asyncapi.slack.com/archives/C06GGK7EMSA) in [AsyncAPI's Slack workspace](https://www.asyncapi.com/slack-invite). Please ensure you follow our [Slack etiquette](https://github.com/asyncapi/.github/blob/master/slack-etiquette.md) and adhere to the [Code Of Conduct](https://github.com/asyncapi/.github/blob/master/CODE_OF_CONDUCT.md).
 
-You are also welcome to attend any of our bi-weekly meetings by visiting our website at https://www.asyncapi.com/community/events and clicking on any meeting with the title "Maintainers Growth Working Group."
+You are also welcome to attend any of our [live-streamed bi-weekly meetings](https://github.com/asyncapi/community/issues?q=is%3Aissue+Maintainers+label%3Ameeting+%22Maintainers+Growth+Working+Group%22). 
