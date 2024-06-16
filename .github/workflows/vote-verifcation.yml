@@ -17,7 +17,7 @@ jobs:
           authorName: "${{github.event.comment.user.login}}"
 
       - name: Checking the person authenticity.
-        if:  contains(github.event.comment.body, '/vote') || contains(github.event.comment.body, '/cancel-vote')
+        if: (github.event.comment.body == '/vote') || (github.event.comment.body == '/cancel-vote')
         uses: actions/github-script@v6
         with:
           github-token: ${{ secrets.GH_TOKEN_BOT_EVE }}
