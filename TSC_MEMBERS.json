@@ -114,17 +114,6 @@
 		]
 	},
 	{
-		"name": "Gerald Loeffler",
-		"github": "GeraldLoeffler",
-		"linkedin": "geraldloeffler",
-		"slack": "U01P5QDLP0X",
-		"availableForHire": false,
-		"company": "Salesforce",
-		"repos": [
-			"bindings"
-		]
-	},
-	{
 		"name": "Jonas Lagoni",
 		"github": "jonaslagoni",
 		"linkedin": "jonaslagoni",
