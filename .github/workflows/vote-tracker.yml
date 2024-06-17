@@ -1,0 +1,47 @@
+name: Vote Tracker
+
+on:
+  issue_comment:
+    types: [created]
+
+jobs:
+  track-vote:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+
+      - name: Install the dependencies
+        run: npm install js-yaml@4.1.0
+        shell: bash
+
+      - name: Configure Git
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Run vote tracker script
+        id: vote_tracker
+        if: |
+          github.event.comment.user.login == 'git-vote[bot]' &&
+          contains(github.event.comment.body, 'Vote closed')
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          COMMENT_BODY: ${{ github.event.comment.body }}
+        run: |
+          node .github/scripts/vote_tracker.js
+          echo "::set-output name=ran_successfully::true"
+
+      - name: Commit VotingTracking.json
+        if: steps.vote_tracker.outputs.ran_successfully == 'true'
+        run: |
+          git  add VoteTracking.json
+          git commit -m "Update VoteTracking.json"
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
