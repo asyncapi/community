@@ -451,18 +451,6 @@
   isTscMember: true
   repos:
     - bindings
-- name: Vladimír Gorej
-  github: char0n
-  linkedin: vladimirgorej
-  slack: U03NV5L4S49
-  twitter: vladimirgorej
-  availableForHire: false
-  company: SmartBear
-  isTscMember: true
-  repos:
-    - bindings
-    - spec
-    - spec-json-schemas
 - name: Alexander Wichmann
   github: visualbean
   linkedin: alexcarlsen
