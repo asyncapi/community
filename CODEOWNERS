@@ -9,3 +9,6 @@
 
 # All ambassadors related files
 AMBASSADOR* @thulieblack
+
+# Code Of Conduct
+/code_of_conduct/ @asyncapi/code_of_conduct
