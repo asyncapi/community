@@ -24,7 +24,7 @@ jobs:
       meeting_name: Spec 3.0 Meeting
       meeting_desc: This is the meeting for community member involved in works related to 3.0 release of AsyncAPI Specification.
       host: jonas-lt@live.dk
-      alternative_host: fmvilas@gmail.com
+      alternative_host: lpgornicki@gmail.com
       issue_template_path: .github/workflows/create-event-helpers/issues_templates/spec-3-0.md
       create_zoom: true
     secrets:
