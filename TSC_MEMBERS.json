@@ -15,10 +15,10 @@
 		"linkedin": "imabp",
 		"slack": "U01S8EQ9LQ2",
 		"twitter": "imabptweets",
-		"github":"imabp",
+		"github": "imabp",
 		"availableForHire": false,
 		"repos": [
-			 "problem"
+			"problem"
 		]
 	},
 	{
@@ -29,7 +29,7 @@
 		"twitter": "AksNema",
 		"availableForHire": true,
 		"repos": [
-			 "website"
+			"website"
 		]
 	},
 	{
@@ -263,7 +263,7 @@
 		"name": "Missy Turco",
 		"github": "mcturco",
 		"twitter": "missyturco",
-		"slack":"U02JVEQ6S9W",
+		"slack": "U02JVEQ6S9W",
 		"linkedin": "missy-turco-a476a6126",
 		"availableForHire": false,
 		"company": "Postman",
@@ -467,17 +467,6 @@
 		]
 	},
 	{
-		"name": "Samridhi Agrawal",
-		"github": "Samridhi-98",
-		"slack": "U02T2MY9W5T",
-		"linkedin": "samridhi-agrawal-1713201ab",
-		"availableForHire": false,
-		"company": "ThoughtWorks",
-		"repos": [
-			"modelina"
-		]
-	},
-	{
 		"name": "Debajyoti Halder",
 		"github": "ron-debajyoti",
 		"twitter": "rondebajyoti",
@@ -569,5 +558,4 @@
 			"protobuf-schema-parser"
 		]
 	}
-
 ]

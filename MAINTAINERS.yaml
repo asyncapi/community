@@ -404,15 +404,6 @@
   isTscMember: true
   repos:
     - java-spring-template
-- name: Samridhi Agrawal
-  github: samridhi-98
-  slack: U02T2MY9W5T
-  linkedin: samridhi-agrawal-1713201ab
-  availableForHire: false
-  company: ThoughtWorks
-  isTscMember: true
-  repos:
-    - modelina
 - name: Debajyoti Halder
   github: ron-debajyoti
   twitter: rondebajyoti
