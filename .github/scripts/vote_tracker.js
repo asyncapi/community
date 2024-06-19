@@ -2,7 +2,9 @@ const yaml = require('js-yaml');
 const fs = require('fs');
 const path = require('path');
 const message = process.env.COMMENT_BODY;
+const Issue_Number = process.env.Issue_Number;
 // Extract the binding votes section
+
 const bindingVotesSectionMatch = message.match(/Binding votes \(\d+\)[\s\S]*?(?=(<details>|$))/);
 
 if (!bindingVotesSectionMatch) {
@@ -31,54 +33,85 @@ const latestVotes = rows.map(row => {
   };
 });
 
+//console.log(latestVotes)
 const filePath = path.join('VoteTracking.json');
 // Check whether the VoteTracking file is present in the directory or not 
 if (!fs.existsSync(filePath)) {
   const yamlData = fs.readFileSync("MAINTAINERS.yaml", 'utf8');
   const parsedData = yaml.load(yamlData);
   const tscMembers = parsedData.filter(entry => entry.isTscMember)
-                               .map(entry => ({
-                                 name: entry.github,
-                                 isVotedInLast3Months: "Member doesn't give vote to any voting process",
-                                 lastClosedVoteTime: new Date().toISOString()
-                               }));
+    .map(entry => ({
+      name: entry.github,
+      lastParticipatedVoteTime: "",
+      isVotedInLast3Months: "Member doesn't give vote to any voting process",
+      LastVoteClosedTime: new Date().toISOString(),
+      AgreeCount: 0,
+      DisagreeCount: 0,
+      AbstainCount: 0
+
+    }));
 
   fs.writeFileSync(filePath, JSON.stringify(tscMembers, null, 2));
 }
 
-const voteDetailsAll = fs.readFileSync(filePath, 'utf8');
-  const voteDetails = JSON.parse(voteDetailsAll);
-  voteDetails.forEach(voteInfo => {
-    // Finding the member in the VoteTracking.json
-    const tscMember = latestVotes.findIndex(vote => vote.user === voteInfo.name);
-    const currentTime = new Date().toISOString();
 
-    if (tscMember !== -1) {
-      voteInfo.isVotedInLast3Months = true;
-      voteInfo.lastClosedVoteTime = currentTime;
+const voteDetailsAll = fs.readFileSync(filePath, 'utf8');
+const voteDetails = JSON.parse(voteDetailsAll);
+const updatedVotes = []
+voteDetails.forEach(voteInfo => {
+
+  // Finding the member in the VoteTracking.json
+  const tscMember = latestVotes.findIndex(vote => vote.user === voteInfo.name);
+  const currentTime = new Date().toISOString();
+  if (tscMember !== -1) {
+    voteInfo.isVotedInLast3Months = true;
+    voteInfo.lastParticipatedVoteTime = currentTime;
+    const userInfo = latestVotes.find(vote => vote.user === voteInfo.name);
+    const choice = userInfo.vote;
+    if (choice === "In favor") {
+      voteInfo.AgreeCount++;
+    } else if (choice === "Against") {
+      voteInfo.DisagreeCount++;
     } else {
-      if (voteInfo.isVotedInLast3Months === "Member doesn't give vote to any voting process") {
-        if (checkVotingDurationMoreThanThreeMonths(voteInfo)) {
-          voteInfo.isVotedInLast3Months = false;
-        }
-      } else {
-        if (!checkVotingDurationMoreThanThreeMonths(voteInfo)) {
-          voteInfo.isVotedInLast3Months = true;
-          voteInfo.lastClosedVoteTime = currentTime;
-        }
+      voteInfo.AbstainCount++;
+    }
+    let updatedVoteInfo = {};
+    Object.keys(voteInfo).forEach(key => {
+      if (key == 'name') {
+        updatedVoteInfo['name'] = voteInfo.name
+        updatedVoteInfo["IssueNumber#" + Issue_Number] = choice;
+      }
+      else {
+        updatedVoteInfo[key] = voteInfo[key];
+      }
+    })
+    updatedVotes.push(updatedVoteInfo)
+
+
+  } else {
+    if (voteInfo.isVotedInLast3Months === "Member doesn't give vote to any voting process") {
+      if (checkVotingDurationMoreThanThreeMonths(voteInfo)) {
+        voteInfo.isVotedInLast3Months = false;
+      }
+    } else {
+      if (!checkVotingDurationMoreThanThreeMonths(voteInfo)) {
+        voteInfo.isVotedInLast3Months = true;
       }
     }
-  });
-  fs.writeFileSync(filePath, JSON.stringify(voteDetails, null, 2));
+    updatedVotes.push(voteInfo)
+  }
+});
 
+fs.rmSync(filePath)
+fs.writeFileSync(filePath, JSON.stringify(updatedVotes, null, 2));
 
 function checkVotingDurationMoreThanThreeMonths(voteInfo) {
-  const lastVoteDate = new Date(voteInfo.lastClosedVoteTime);
+
   const currentDate = new Date();
-  const threeMonthsAgo = new Date(currentDate);
+  const lastCompletedVoteDate = new Date(voteInfo.LastVoteClosedTime);
+  const lastVoteDateOfTCSMember = new Date(voteInfo.lastParticipatedVoteTime)
+  const threeMonthsAgoDate = new Date(currentDate);
+  threeMonthsAgoDate.setMonth(currentDate.getMonth() - 3);
 
-  // Set the date to 3 months ago
-  threeMonthsAgo.setMonth(currentDate.getMonth() - 3);
-
-  return lastVoteDate <= threeMonthsAgo;
+  return lastCompletedVoteDate >= threeMonthsAgoDate && lastVoteDateOfTCSMember <= threeMonthsAgoDate
 }
