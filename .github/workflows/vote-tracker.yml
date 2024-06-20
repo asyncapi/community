@@ -41,8 +41,8 @@ jobs:
       - name: Commit VotingTracking.json
         if: steps.vote_tracker.outputs.ran_successfully == 'true'
         run: |
-          git  add VoteTracking.json
-          git commit -m "Update VoteTracking.json"
+          git  add voteTracking.json
+          git commit -m "Update voteTracking.json"
           git push
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
