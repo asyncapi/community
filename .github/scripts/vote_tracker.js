@@ -34,7 +34,7 @@ const latestVotes = rows.map(row => {
 });
 
 //console.log(latestVotes)
-const filePath = path.join('VoteTracking.json');
+const filePath = path.join('voteTracking.json');
 // Check whether the VoteTracking file is present in the directory or not 
 if (!fs.existsSync(filePath)) {
   const yamlData = fs.readFileSync("MAINTAINERS.yaml", 'utf8');
@@ -44,10 +44,10 @@ if (!fs.existsSync(filePath)) {
       name: entry.github,
       lastParticipatedVoteTime: "",
       isVotedInLast3Months: "Member doesn't give vote to any voting process",
-      LastVoteClosedTime: new Date().toISOString(),
-      AgreeCount: 0,
-      DisagreeCount: 0,
-      AbstainCount: 0,
+      lastVoteClosedTime: new Date().toISOString(),
+      agreeCount: 0,
+      disagreeCount: 0,
+      abstainCount: 0,
       notParticipatingCount: 0
 
     }));
