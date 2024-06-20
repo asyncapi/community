@@ -69,11 +69,11 @@ voteDetails.forEach(voteInfo => {
     const userInfo = latestVotes.find(vote => vote.user === voteInfo.name);
     const choice = userInfo.vote;
     if (choice === "In favor") {
-      voteInfo.AgreeCount++;
+      voteInfo.agreeCount++;
     } else if (choice === "Against") {
-      voteInfo.DisagreeCount++;
+      voteInfo.disagreeCount++;
     } else {
-      voteInfo.AbstainCount++;
+      voteInfo.abstainCount++;
     }
     let updatedVoteInfo = {};
     Object.keys(voteInfo).forEach(key => {
