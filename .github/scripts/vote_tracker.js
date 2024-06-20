@@ -7,20 +7,11 @@ const Issue_Number = process.env.Issue_Number;
 
 const bindingVotesSectionMatch = message.match(/Binding votes \(\d+\)[\s\S]*?(?=(<details>|$))/);
 
-if (!bindingVotesSectionMatch) {
-  console.error('No binding votes section found');
-  process.exit(0);
-}
-
-const bindingVotesSection = bindingVotesSectionMatch[0];
+const bindingVotesSection = bindingVotesSectionMatch ? bindingVotesSectionMatch[0] : '';
 
 // Extract the binding voting rows
-const rows = bindingVotesSection.match(/\| @\w+.*?\|.*?\|.*?\|/g);
+const rows = bindingVotesSection.match(/\| @\w+.*?\|.*?\|.*?\|/g) || [];
 
-if (!rows) {
-  console.error('No binding vote rows found');
-  process.exit(0);
-}
 
 // Parse the extracted rows to get user names, votes, and timestamps
 const latestVotes = rows.map(row => {
@@ -34,7 +25,7 @@ const latestVotes = rows.map(row => {
 });
 
 //console.log(latestVotes)
-const filePath = path.join('voteTracking.json');
+const filePath = path.join('VoteTracking.json');
 // Check whether the VoteTracking file is present in the directory or not 
 if (!fs.existsSync(filePath)) {
   const yamlData = fs.readFileSync("MAINTAINERS.yaml", 'utf8');
@@ -44,10 +35,10 @@ if (!fs.existsSync(filePath)) {
       name: entry.github,
       lastParticipatedVoteTime: "",
       isVotedInLast3Months: "Member doesn't give vote to any voting process",
-      lastVoteClosedTime: new Date().toISOString(),
-      agreeCount: 0,
-      disagreeCount: 0,
-      abstainCount: 0,
+      LastVoteClosedTime: new Date().toISOString(),
+      AgreeCount: 0,
+      DisagreeCount: 0,
+      AbstainCount: 0,
       notParticipatingCount: 0
 
     }));
@@ -69,11 +60,11 @@ voteDetails.forEach(voteInfo => {
     const userInfo = latestVotes.find(vote => vote.user === voteInfo.name);
     const choice = userInfo.vote;
     if (choice === "In favor") {
-      voteInfo.agreeCount++;
+      voteInfo.AgreeCount++;
     } else if (choice === "Against") {
-      voteInfo.disagreeCount++;
+      voteInfo.DisagreeCount++;
     } else {
-      voteInfo.abstainCount++;
+      voteInfo.AbstainCount++;
     }
     let updatedVoteInfo = {};
     Object.keys(voteInfo).forEach(key => {
@@ -90,6 +81,7 @@ voteDetails.forEach(voteInfo => {
 
   } else {
     voteInfo.notParticipatingCount++;
+    voteInfo.LastVoteClosedTime = currentTime
     if (voteInfo.isVotedInLast3Months === "Member doesn't give vote to any voting process") {
       if (checkVotingDurationMoreThanThreeMonths(voteInfo)) {
         voteInfo.isVotedInLast3Months = false;
@@ -109,7 +101,7 @@ fs.writeFileSync(filePath, JSON.stringify(updatedVotes, null, 2));
 function checkVotingDurationMoreThanThreeMonths(voteInfo) {
 
   const currentDate = new Date();
-  const lastCompletedVoteDate = new Date(voteInfo.lastVoteClosedTime);
+  const lastCompletedVoteDate = new Date(voteInfo.LastVoteClosedTime);
   const lastVoteDateOfTCSMember = new Date(voteInfo.lastParticipatedVoteTime)
   const threeMonthsAgoDate = new Date(currentDate);
   threeMonthsAgoDate.setMonth(currentDate.getMonth() - 3);
