@@ -109,7 +109,7 @@ fs.writeFileSync(filePath, JSON.stringify(updatedVotes, null, 2));
 function checkVotingDurationMoreThanThreeMonths(voteInfo) {
 
   const currentDate = new Date();
-  const lastCompletedVoteDate = new Date(voteInfo.LastVoteClosedTime);
+  const lastCompletedVoteDate = new Date(voteInfo.lastVoteClosedTime);
   const lastVoteDateOfTCSMember = new Date(voteInfo.lastParticipatedVoteTime)
   const threeMonthsAgoDate = new Date(currentDate);
   threeMonthsAgoDate.setMonth(currentDate.getMonth() - 3);
