@@ -47,7 +47,8 @@ if (!fs.existsSync(filePath)) {
       LastVoteClosedTime: new Date().toISOString(),
       AgreeCount: 0,
       DisagreeCount: 0,
-      AbstainCount: 0
+      AbstainCount: 0,
+      notParticipatingCount: 0
 
     }));
 
@@ -59,8 +60,7 @@ const voteDetailsAll = fs.readFileSync(filePath, 'utf8');
 const voteDetails = JSON.parse(voteDetailsAll);
 const updatedVotes = []
 voteDetails.forEach(voteInfo => {
-
-  // Finding the member in the VoteTracking.json
+  // Checking the member who voted in the latest voting process
   const tscMember = latestVotes.findIndex(vote => vote.user === voteInfo.name);
   const currentTime = new Date().toISOString();
   if (tscMember !== -1) {
@@ -89,6 +89,7 @@ voteDetails.forEach(voteInfo => {
 
 
   } else {
+    voteInfo.notParticipatingCount++;
     if (voteInfo.isVotedInLast3Months === "Member doesn't give vote to any voting process") {
       if (checkVotingDurationMoreThanThreeMonths(voteInfo)) {
         voteInfo.isVotedInLast3Months = false;
