@@ -25,7 +25,7 @@ const latestVotes = rows.map(row => {
 });
 
 //console.log(latestVotes)
-const filePath = path.join('VoteTracking.json');
+const filePath = path.join('voteTracking.json');
 // Check whether the VoteTracking file is present in the directory or not 
 if (!fs.existsSync(filePath)) {
   const yamlData = fs.readFileSync("MAINTAINERS.yaml", 'utf8');
@@ -35,10 +35,10 @@ if (!fs.existsSync(filePath)) {
       name: entry.github,
       lastParticipatedVoteTime: "",
       isVotedInLast3Months: "Member doesn't give vote to any voting process",
-      LastVoteClosedTime: new Date().toISOString(),
-      AgreeCount: 0,
-      DisagreeCount: 0,
-      AbstainCount: 0,
+      lastVoteClosedTime: new Date().toISOString(),
+      agreeCount: 0,
+      disagreeCount: 0,
+      abstainCount: 0,
       notParticipatingCount: 0
 
     }));
@@ -81,7 +81,7 @@ voteDetails.forEach(voteInfo => {
 
   } else {
     voteInfo.notParticipatingCount++;
-    voteInfo.LastVoteClosedTime = currentTime
+    voteInfo.lastVoteClosedTime = currentTime
     if (voteInfo.isVotedInLast3Months === "Member doesn't give vote to any voting process") {
       if (checkVotingDurationMoreThanThreeMonths(voteInfo)) {
         voteInfo.isVotedInLast3Months = false;
@@ -101,7 +101,7 @@ fs.writeFileSync(filePath, JSON.stringify(updatedVotes, null, 2));
 function checkVotingDurationMoreThanThreeMonths(voteInfo) {
 
   const currentDate = new Date();
-  const lastCompletedVoteDate = new Date(voteInfo.LastVoteClosedTime);
+  const lastCompletedVoteDate = new Date(voteInfo.lastVoteClosedTime);
   const lastVoteDateOfTCSMember = new Date(voteInfo.lastParticipatedVoteTime)
   const threeMonthsAgoDate = new Date(currentDate);
   threeMonthsAgoDate.setMonth(currentDate.getMonth() - 3);
