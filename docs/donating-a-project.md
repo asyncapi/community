@@ -12,14 +12,14 @@ The AsyncAPI Initiative uses the [Apache-2.0 license](https://www.apache.org/lic
 
 ### Legal Consideration
 
-All the projects under the AsyncAPI initiative are strictly community-driven, so to avoid any problems, we put legal consideration into donating projects to the initiative. 
+All the projects under the AsyncAPI initiative are strictly community-driven, so to avoid any problems, we put legal consideration into donating projects to the initiative.
 
 - **Contributor License Agreements (CLAs)**: This agreement ensures that the project's maintainers have the legal right to distribute and modify the code contributed by various individuals. This helps us protect both our maintainers and contributors. 
 - **Intellectual Property (IP) Review**: sometimes, project donation doesn't come from individual contributors, sometimes, it comes from organizations, and we need to verify the ownership and the chain of title to ensure no proprietary code or third-party IP is included.
 
 ### Community Engagement
 
-When donating your project to a community-driven initiative like AsyncAPI, you should understand that communication is an integral part of the initiative. So, before donating your project, communication with the community has to be established. 
+When donating your project to a community-driven initiative like AsyncAPI, you should understand that communication is an integral part of the initiative. So, before donating your project, communication with the community has to be established.
 
 Follow the instructions below to establish and involve the community in your project donation:
 
