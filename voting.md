@@ -54,7 +54,7 @@ The [voteTrackingDetail](https://github.com/asyncapi/community/blob/master/voteT
 * 👎 indicates that the member was against.
 * 👀 indicates that the member abstained from voting.
 
-The voteTrackingDetails file also tracks whether the member has voted in the last 3 months, helping to identify inactive TSC Members.
+Tracking file us automatically updated by a bot after each vote is completed. It also records whether the member has voted in the last 3 months, helping to identify inactive TSC Members.
 
 ### Note
 
