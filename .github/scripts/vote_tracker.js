@@ -85,14 +85,14 @@ function jsonToMarkdownTable(data) {
       return `[${title}](https://github.com/${orgName}/${repoName}/issues/${number})`;
     }
     const titles = {
-      name: "Github user name",
-      lastParticipatedVoteTime: "Last participated vote time of the user",
-      hasVotedInLast3Months: "Voted in last 3 months or not",
-      lastVoteClosedTime: "Last vote closed time",
-      agreeCount: "Number of agreements votes",
-      disagreeCount: "Number of disagreements votes",
-      abstainCount: "Number of abstentions votes",
-      notParticipatingCount: "Number of non-participations votes"
+      name: "GitHub user name",
+      lastParticipatedVoteTime: "Last time the TSC member participated in a vote",
+      hasVotedInLast3Months: "Flag indicating if TSC member voted in last 3 months. This information is calculated after each voting, and not basing on a schedule as there might be moments when there is no voting in place for 3 months and therefore no TSC member votes.",
+      lastVoteClosedTime: "Date when last vote was closed. It indicated when the last voting took place and marks the date when this tracking document was updated.",
+      agreeCount: "Number of times TSC member agreed in a vote.",
+      disagreeCount: "Number of times TSC member did not agree in a vote.",
+      abstainCount: "Number of times TSC member abstained from voting.",
+      notParticipatingCount: "Number of times TSC member did not participate in voting."
     };
     return `<span style="position: relative; cursor: pointer;" title="${titles[key] || key}">${key}</span>`;
   }).join(' | ') + ' |\n';
