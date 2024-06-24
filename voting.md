@@ -49,10 +49,10 @@ The Git Vote bot adds a comment that voting is completed.
 
 The [voteTrackingDetail](https://github.com/asyncapi/community/blob/master/voteTrackingDetail.md) file contains the complete voting history of all TSC Members, whether they voted or not in the community's voting processes.
 
-* 🔕 indicates that the member did not vote in the last voting.
-* 👍 indicates that the member was in favor in the last voting.
-* 👎 indicates that the member was against in the last voting.
-* 👀 indicates that the member abstained in the last voting.
+* 🔕 indicates that the member did not vote.
+* 👍 indicates that the member was in favor.
+* 👎 indicates that the member was against.
+* 👀 indicates that the member abstained from voting.
 
 The voteTrackingDetails file also tracks whether the member has voted in the last 3 months, helping to identify inactive TSC Members.
 
