@@ -14,8 +14,9 @@ The AsyncAPI Initiative uses the [Apache-2.0 license](https://www.apache.org/lic
 
 All the projects under the AsyncAPI initiative are strictly community-driven, so to avoid any problems, we put legal consideration into donating projects to the initiative.
 
-- **Contributor License Agreements (CLAs)**: This agreement ensures that the project's maintainers have the legal right to distribute and modify the code contributed by various individuals. This helps us protect both our maintainers and contributors. 
-- **Intellectual Property (IP) Review**: sometimes, project donation doesn't come from individual contributors, sometimes, it comes from organizations, and we need to verify the ownership and the chain of title to ensure no proprietary code or third-party IP is included.
+- We value Contributor License Agreements (CLAs) as they provide project maintainers with the necessary legal rights to distribute and modify code contributed by different individuals, ensuring protection for both maintainers and contributors.
+
+- We make Intellectual Property (IP) Review essential when donating projects from organizations instead of individual contributors. It's crucial to verify ownership and the chain of title to ensure that no proprietary code or third-party IP is included, maintaining a clear and respectful process for all involved.
 
 ### Community Engagement
 
