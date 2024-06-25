@@ -20,14 +20,14 @@ module.exports = async ({ github, context, core }) => {
     return { user: user.replace('@', ''), vote, timestamp, isVotedInLast3Months: true };
   });
 
+  const yamlData = fs.readFileSync('MAINTAINERS.yaml', 'utf8');
+  const parsedData = yaml.load(yamlData);
   // Initialize vote tracking file if it doesn't exist
   if (!fs.existsSync(filePath)) {
-    const yamlData = fs.readFileSync('MAINTAINERS.yaml', 'utf8');
-    const parsedData = yaml.load(yamlData);
     const tscMembers = parsedData.filter(entry => entry.isTscMember).map(entry => ({
       name: entry.github,
       lastParticipatedVoteTime: '',
-      hasVotedInLast3Months: 'false',
+      isVotedInLast3Months: 'false',
       lastVoteClosedTime: new Date().toISOString().split('T')[0],
       agreeCount: 0,
       disagreeCount: 0,
@@ -36,39 +36,43 @@ module.exports = async ({ github, context, core }) => {
     }));
     fs.writeFileSync(filePath, JSON.stringify(tscMembers, null, 2));
   }
-
+  const found = parsedData.some(item => item.github === "AayushSaini101");
+  console.log(found)
   const voteDetails = JSON.parse(fs.readFileSync(filePath, 'utf8'));
   const latestVotesInfo = []
   voteDetails.map(voteInfo => {
-    const currentTime = new Date().toISOString().split('T')[0];
-    const userInfo = latestVotes.find(vote => vote.user === voteInfo.name);
-    const choice = userInfo ? userInfo.vote : "Not participated";
-
-    if (userInfo) {
-      voteInfo.hasVotedInLast3Months = true;
-      voteInfo.lastParticipatedVoteTime = currentTime;
-      voteInfo[choice === "In favor" ? 'agreeCount' : choice === "Against" ? 'disagreeCount' : 'abstainCount']++;
-    } else {
-      voteInfo.notParticipatingCount++;
-      voteInfo.lastVoteClosedTime = currentTime;
-      if (!checkVotingDurationMoreThanThreeMonths(voteInfo)) {
-        voteInfo.hasVotedInLast3Months = false;
+    const checkPersonisTSC = parsedData.some(item => item.github === voteInfo.name);
+    if (checkPersonisTSC) {
+      const currentTime = new Date().toISOString().split('T')[0];
+      const userInfo = latestVotes.find(vote => vote.user === voteInfo.name);
+      const choice = userInfo ? userInfo.vote : "Not participated";
+  
+      if (userInfo) {
+        voteInfo.isVotedInLast3Months = true;
+        voteInfo.lastParticipatedVoteTime = currentTime;
+        voteInfo[choice === "In favor" ? 'agreeCount' : choice === "Against" ? 'disagreeCount' : 'abstainCount']++;
+      } else {
+        voteInfo.notParticipatingCount++;
+        voteInfo.lastVoteClosedTime = currentTime;
+        if (!checkVotingDurationMoreThanThreeMonths(voteInfo)) {
+          voteInfo.isVotedInLast3Months = false;
+        }
       }
+  
+      let updatedVoteInfo = {};
+      Object.keys(voteInfo).forEach(key => {
+        if (key == 'name') {
+          updatedVoteInfo['name'] = voteInfo.name
+          updatedVoteInfo[eventTitle + "$$" + eventNumber] = choice
+        }
+        else {
+          updatedVoteInfo[key] = voteInfo[key];
+        }
+      })
+      latestVotesInfo.push(updatedVoteInfo)
     }
-
-    let updatedVoteInfo = {};
-    Object.keys(voteInfo).forEach(key => {
-      if (key == 'name') {
-        updatedVoteInfo['name'] = voteInfo.name
-        updatedVoteInfo[eventTitle + "$$" + eventNumber] = choice
-      }
-      else {
-        updatedVoteInfo[key] = voteInfo[key];
-      }
-    })
-    latestVotesInfo.push(updatedVoteInfo)
   });
-
+  
   fs.writeFileSync(filePath, JSON.stringify(latestVotesInfo, null, 2));
 
   // Check voting duration
