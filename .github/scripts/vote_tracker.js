@@ -36,8 +36,7 @@ module.exports = async ({ github, context, core }) => {
     }));
     fs.writeFileSync(filePath, JSON.stringify(tscMembers, null, 2));
   }
-  const found = parsedData.some(item => item.github === "AayushSaini101");
-  console.log(found)
+
   const voteDetails = JSON.parse(fs.readFileSync(filePath, 'utf8'));
   const latestVotesInfo = []
   voteDetails.map(voteInfo => {
