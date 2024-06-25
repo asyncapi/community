@@ -1,3 +1,4 @@
+
 name: Vote Tracker
 
 on:
@@ -36,18 +37,15 @@ jobs:
           script: |
             const script = require('./.github/scripts/vote_tracker.js');
             await script({ github, context, core });
+          
 
-      - name: Configure Git
-        if: steps.check_comment.outputs.comment_matched == 'true' 
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-
-      - name: Commit VotingTracking.json
-        if: steps.check_comment.outputs.comment_matched == 'true'
-        run: |
-          git add voteTrackingDetails.md VoteTracking.json
-          git commit -m "Update vote tracking details"
-          git push
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+       - name: Create Pull Request to update Vote Tracking Details
+        uses: peter-evans/create-pull-request@153407881ec5c347639a548ade7d8ad1d6740e38 # uses 5.0.2 https://github.com/peter-evans/create-pull-request/releases/tag/v5.0.2
+        with:
+          token: ${{ secrets.GH_TOKEN }}
+          commit-message: 'chore: update vote tracking details'
+          committer: asyncapi-bot <info@asyncapi.io>
+          author: asyncapi-bot <info@asyncapi.io>
+          title: 'chore: vote tracking details'
+          body: 'Update the votetrackingDetails.md and votetracking.json'
+          branch: vote-trackingupdate/${{ github.job }}
