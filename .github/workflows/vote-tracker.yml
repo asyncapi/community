@@ -8,45 +8,43 @@ jobs:
   track-vote:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-      
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: '14'
+      - name: Check Comment and Run Steps
+        id: check_comment
+        run: |
+          if [[ ${{ github.event.comment.user.login }} == 'git-vote[bot]' && $(echo "${{ github.event.comment.body }}" | grep -c 'Vote closed') -gt 0 ]]; then
+            echo "Comment matched, proceeding with steps."
+            echo "::set-output name=comment_matched::true"
+          else
+            echo "Comment not matched, skipping steps."
+            echo "::set-output name=comment_matched::false"
+          fi
 
-      - name: Install the dependencies
+      - name: Checkout repository
+        if: steps.check_comment.outputs.comment_matched == 'true'
+        uses: actions/checkout@v4
+
+      - name: Installing Module
+        if: steps.check_comment.outputs.comment_matched == 'true'
         run: npm install js-yaml@4.1.0
         shell: bash
 
-      - name: Configure Git
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-
-      - name: Run vote tracker script
+      - name: Run GitHub Script
+        if: steps.check_comment.outputs.comment_matched == 'true'
         id: vote_tracker
-        if: |
-          github.event.comment.user.login == 'git-vote[bot]' &&
-          contains(github.event.comment.body, 'Vote closed')
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          COMMENT_BODY: ${{ github.event.comment.body }}
-          EVENT_NUMBER: ${{ github.event.issue.number  }}
-          EVENT_TITLE:  ${{ github.event.issue.title }}
-          ORG_NAME:     ${{ github.repository_owner }}
-          REPO_NAME:    ${{ github.event.repository.name }}
-        run: |
-          node .github/scripts/vote_tracker.js
-          echo "::set-output name=ran_successfully::true"
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const script = require('./.github/scripts/vote_tracker.js');
+            await script({ github, context, core });
+          
 
-      - name: Commit VotingTracking.json
-        if: steps.vote_tracker.outputs.ran_successfully == 'true'
-        run: |
-          git  add voteTrackingDetails.md
-          git  add VoteTracking.json
-          git  commit -m "Update voteTrackingDetails.md"
-          git  push
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+       - name: Create Pull Request to update Vote Tracking Details
+        uses: peter-evans/create-pull-request@153407881ec5c347639a548ade7d8ad1d6740e38 # uses 5.0.2 https://github.com/peter-evans/create-pull-request/releases/tag/v5.0.2
+        with:
+          token: ${{ secrets.GH_TOKEN }}
+          commit-message: 'chore: update vote tracking details'
+          committer: asyncapi-bot <info@asyncapi.io>
+          author: asyncapi-bot <info@asyncapi.io>
+          title: 'chore: vote tracking details'
+          body: 'Update the votetrackingDetails.md and votetracking.json'
+          branch: vote-trackingupdate/${{ github.job }}
