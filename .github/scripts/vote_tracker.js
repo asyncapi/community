@@ -7,8 +7,8 @@ module.exports = async ({ github, context, core }) => {
   const message = context.payload.comment.body;
   const eventNumber = context.issue.number;
   const eventTitle = context.payload.issue.title
-  const orgName = context.issue.number.owner
-  const repoName = context.issue.number.repo
+  const orgName = context.issue.owner
+  const repoName = context.issue.repo
 
   const filePath = path.join('VoteTracking.json');
 
