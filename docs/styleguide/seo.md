@@ -88,7 +88,7 @@ Internal linking is the process of enclosing links to certain sections of a blog
 Meta descriptions are typically ["snippets of HTML code that are placed in a web page's header"](https://www.techtarget.com/whatis/definition/meta-description-tag). They appear under the title in the search results on Google and can significantly impact click-through rates.
 
 >[!NOTE]
-> In the case of Asyncapi's documentation, meta descriptions are written in YAML
+> In the case of Asyncapi's documentation, meta descriptions are written in YAML.
 
 #### Strategies for making SEO-friendly meta descriptions
 
@@ -117,19 +117,19 @@ Here are some ways to make blog posts and documentation for Asyncapi's website m
 
 - **Use smaller images and videos**: Large images and videos can cause the documentation on Asyncapi's website to appear at slower rates, which create an unpleasant user-experience.
 
-- **Use mobile-friendly fonts**: Some fonts can be hard to read on mobile devices, so it's crucial to picks font styles and sizes that can be adaptable to their screen sizes. It highly recommended to use styles like ["Arial, Tahoma, Verdana for headings and Times New Roman, Georgia, Bookman for body text"](https://clickhelp.com/clickhelp-technical-writing-blog/choosing-fonts-for-technical-documentation/) and sizes like ["14-16 point font for headings and 12-point for body text"](https://clickhelp.com/clickhelp-technical-writing-blog/choosing-fonts-for-technical-documentation/).
+- **Use mobile-friendly fonts**: Some fonts can be hard to read on mobile devices, so it's crucial to picks font styles and sizes that can be adaptable to their screen sizes. It highly recommended to use styles like ["Arial, Tahoma, and Verdana for headings. For text, it is best to use Times New Roman, Georgia, and  Bookman"](https://clickhelp.com/clickhelp-technical-writing-blog/choosing-fonts-for-technical-documentation/). For sizes, it's best to use ["14-16 point font for headings and 12-point for body text"](https://clickhelp.com/clickhelp-technical-writing-blog/choosing-fonts-for-technical-documentation/).
 - **Give each topic its own page and/or section**: Consider putting a link to the next page or implementing internal links. It'll help users the project's docs and blog post have an easier time navigating the site.
 
 >[!TIP]
-> Consider using testing tools like [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/) to ensure that the proposed blog post, tutorial, or update to Aynscapi's documentation  is mobile and SEO-friendly if quick results are needed.  
+> Need quicker results? Consider using testing tools like [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/) to ensure that the proposed blog post, tutorial, or update to Aynscapi's documentation  is mobile and SEO-friendly.
 
 ### Why is quality important when making technical documentation that is SEO-friendly?
 
-While implementing the previously mentioned strategies are important, ensuring that the content is original and high-quality are also important when creating SEO-friendly content. Search engines tend to favor content that provides value for online users.
+Search engines tend to favor content that provides value for online users. Therefore, it's important to ensure that the content is high-quality.
 
 #### Strategies for making high-quality and SEO-friendly content
 
-Consider asking yourself the following questions to ensure the content being submitted to Asyncapi's blog or documentation is high-quality and SEO-friendly:
+When writing a post for Asyncapi's blog or contributing to its documentation, consider asking the following questions to ensure it is high-quality and SEO-friendly:
 
 - Is the content interactive and engaging?
 - Is the information presented accurate?
@@ -141,8 +141,8 @@ The way a technical documentation's images are presented influences how they sho
 
 ### Strategies for making images SEO-friendly
 
-Here are ways to make SEO-friendly images:
+To make SEO-friendly images, it is recommended to the following methods:
 
 - **Create descriptive alt text**: Ensure that it describes the image's context a purpose. Doing so makes it easier for search engines to understand why it is being used, [especially when the image fails to appear on screen](https://rb.gy/5axft9).  
 - **Use search-engine supported image formats**: [`JPEG`, `SVG`, and `PNG`](https://developers.google.com/search/docs/appearance/google-images#supported-image-formats) are the common formats that appear in Google's search rankings, so consider saving the images in these formats.
-- **Be mindful of the images' file size**: [Large image file sizes can make cause the site to load slowly](https://developers.google.com/search/docs/appearance/google-images#good-quality-photos%20optimize-for-speed) so reduce and compress them before adding them to the content.
+- **Be mindful of the images' file size**: [Large image file sizes can make cause the site to load slowly](https://developers.google.com/search/docs/appearance/google-images#good-quality-photos-optimize-for-speed) so reduce and compress them before adding them to the documentation or blog post.
