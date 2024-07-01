@@ -20,7 +20,7 @@ Headings are tags used to make sub titles distinctive from each other.
 #### Strategies for making SEO-friendly headings
 
 - **Put them in hierarchical order:** Since an `h1` tag tend to be titles, always start with this tag. From there, use `h2` and`h3` tags for the subsections and `h4` and `h5` tags for other sections in Asyncapi's tutorial or other piece of documentation.
-- **Include keywords:** Since sites like Google often use keywords to help people's online content appear on the web, adding these terms effectively is helpful in ensuring that the tutorials and other pieces of content created reach a wider audience. It is highly recommended to [implement keywords in the `h1` and`h2` elements because it is where most users start reading"(Stark Visibility, p.16)](https://starkvisibility.com/wp-content/uploads/2022/04/SEO-Copywriting-101-eBook.pdf)  
+- **Use relevant keywords:** Since sites like Google often use keywords to help people's online content appear on the web, adding these terms effectively is helpful in ensuring that the tutorials and other pieces of content created reach a wider audience. It is highly recommended to [implement keywords in the `h1` and`h2` elements because it is where most users start reading"(Stark Visibility, p.16)](https://starkvisibility.com/wp-content/uploads/2022/04/SEO-Copywriting-101-eBook.pdf)  
 
 ### Examples of SEO-friendly headings from Asyncapi's documentation
 
