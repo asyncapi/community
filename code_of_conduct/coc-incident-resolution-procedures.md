@@ -76,7 +76,7 @@ Once the report has been submitted, the AsyncAPI CoC Committee will confirm rece
 
 The Jurisdiction of the CoC Committee is as follows:
 - [AsyncAPI Initiative GitHub](https://github.com/asyncapi)
-- [AsyncAPI Slack](asyncapi.slack.com)
+- [AsyncAPI Slack](asyncapi.slack.com), including all external channels connected through [Slack Connect](https://slack.com/connect).
 - AsyncAPI social networks: [Twitter](https://twitter.com/AsyncAPISpec), [LinkedIn](https://www.linkedin.com/company/asyncapi), [YouTube](https://www.youtube.com/asyncapi), [Twitch](https://www.twitch.tv/asyncapi), and [Mastodon](https://fosstodon.org/@AsyncAPISpec)
 - AsyncAPI events: conferences, talks, workshops, etc.
 
