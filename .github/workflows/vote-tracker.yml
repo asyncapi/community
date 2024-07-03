@@ -25,7 +25,6 @@ jobs:
             const script = require('./.github/scripts/vote_tracker.js');
             await script({ github, context, core });
           
-
       - name: Create Pull Request to update Vote Tracking Details
         uses: peter-evans/create-pull-request@153407881ec5c347639a548ade7d8ad1d6740e38 # uses 5.0.2 https://github.com/peter-evans/create-pull-request/releases/tag/v5.0.2
         with:
