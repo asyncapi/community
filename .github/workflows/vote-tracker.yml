@@ -6,30 +6,18 @@ on:
 
 jobs:
   track-vote:
+    if: ${{ github.actor == 'git-vote[bot]' && contains(github.event.comment.body, 'Vote closed')}}
     runs-on: ubuntu-latest
     steps:
-      - name: Check Comment and Run Steps
-        id: check_comment
-        run: |
-          if [[ ${{ github.event.comment.user.login }} == 'git-vote[bot]' && $(echo "${{ github.event.comment.body }}" | grep -c 'Vote closed') -gt 0 ]]; then
-            echo "Comment matched, proceeding with steps."
-            echo "::set-output name=comment_matched::true"
-          else
-            echo "Comment not matched, skipping steps."
-            echo "::set-output name=comment_matched::false"
-          fi
 
       - name: Checkout repository
-        if: steps.check_comment.outputs.comment_matched == 'true'
         uses: actions/checkout@v4
 
       - name: Installing Module
-        if: steps.check_comment.outputs.comment_matched == 'true'
         run: npm install js-yaml@4.1.0
         shell: bash
 
       - name: Run GitHub Script
-        if: steps.check_comment.outputs.comment_matched == 'true'
         id: vote_tracker
         uses: actions/github-script@v7
         with:
