@@ -47,7 +47,7 @@ The Git Vote bot adds a comment that voting is completed.
 
 ### Tracking Voting 
 
-The [voteTrackingDetail](https://github.com/asyncapi/community/blob/master/voteTrackingDetail.md) file contains the complete voting history of all TSC Members, whether they voted or not in the community's voting processes.
+We store [the voting history of entire TSC](https://github.com/asyncapi/community/blob/master/voteTrackingDetail.md) since voting automation was introduces.
 
 * 🔕 indicates that the member did not vote.
 * 👍 indicates that the member was in favor.
