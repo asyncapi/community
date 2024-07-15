@@ -24,10 +24,10 @@
 ## Accepted Project Ideas
 | No | Project Idea | Mentor/s | Category | Mentee/s |
 | --- | --- | --- | --- | --- |
-| 1 | [Autofix for Spectral Linting Errors: VS Code Extension](https://github.com/asyncapi/vs-asyncapi-preview/issues/160) | @ivangsa @Pakisan | Engineering | @FelicixAwe |
-| 2 | [Script Stability Enhancement for AsyncAPI Website](https://github.com/asyncapi/website/issues/2626) |  @sambhavgupta0705 @anshgoyalevil  | Engineering | @vishvamsinh28  |
-| 3 | [AsyncAPI Generator Maintainership](https://github.com/asyncapi/generator/issues/1145) |  @derberg | Engineering | @Gmin2  @lmgyuan |
-| 4 | [Markdown and MermaidJS Diagrams Preview: VS Code Extension](https://github.com/asyncapi/vs-asyncapi-preview/issues/161) |  @ivangsa @acethecreator  | Engineering | @nikhil-3112 |
-| 5 | [AsyncAPI Website UI Kit Development](https://github.com/asyncapi-archived-repos/design-system/issues/4) | @acethecreator @akshatnema | Engineering | @devilkiller-ag |
-| 6 | [Dynamic Open Graph Preview for AsyncAPI Studio](https://github.com/asyncapi/studio/issues/224) |  @smoya  | Engineering | @helios2003 |
-| 7 | [Conference Website Maintainance](https://github.com/asyncapi/conference-website/issues/284) |  @acethecreator @mayaleeeee @thulieblack | Engineering | @ashmit-coder |
+| 1 | [Autofix for Spectral Linting Errors: VS Code Extension](https://github.com/asyncapi/vs-asyncapi-preview/issues/160) | [@ivangsa](https://github.com/ivangsa) [@Pakisan](https://github.com/Pakisan) | Engineering | [@FelicixAwe](https://github.com/FelicixAwe) |
+| 2 | [Script Stability Enhancement for AsyncAPI Website](https://github.com/asyncapi/website/issues/2626) | [@sambhavgupta0705](https://github.com/sambhavgupta0705) [@anshgoyalevil](https://github.com/anshgoyalevil)   | Engineering | [@vishvamsinh28](https://github.com/vishvamsinh28)   |
+| 3 | [AsyncAPI Generator Maintainership](https://github.com/asyncapi/generator/issues/1145) | [@derberg](https://github.com/derberg) | Engineering | [@Gmin2](https://github.com/Gmin2) [@lmgyuan](https://github.com/lmgyuan) |
+| 4 | [Markdown and MermaidJS Diagrams Preview: VS Code Extension](https://github.com/asyncapi/vs-asyncapi-preview/issues/161) | [@ivangsa](https://github.com/ivangsa) [@acethecreator](https://github.com/acethecreator)  | Engineering | [@nikhil-3112](https://github.com/nikhil-3112)  |
+| 5 | [AsyncAPI Website UI Kit Development](https://github.com/asyncapi-archived-repos/design-system/issues/4) | [@acethecreator](https://github.com/acethecreator) [@akshatnema](https://github.com/akshatnema)  | Engineering | [@devilkiller-ag](https://github.com/devilkiller-ag)  |
+| 6 | [Dynamic Open Graph Preview for AsyncAPI Studio](https://github.com/asyncapi/studio/issues/224) | [@smoya](https://github.com/smoya)  | Engineering | [@helios2003](https://github.com/helios2003) |
+| 7 | [Conference Website Maintainance](https://github.com/asyncapi/conference-website/issues/284) | [@acethecreator](https://github.com/acethecreator) [@mayaleeeee](https://github.com/mayaleeeee) [@thulieblack](https://github.com/thulieblack) | Engineering | [@ashmit-coder](https://github.com/ashmit-coder) |
