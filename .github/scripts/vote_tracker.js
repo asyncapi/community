@@ -144,7 +144,6 @@ module.exports = async ({ context }) => {
 
     // Parse the vote-closed comment created by git-vote[bot]
     // No need to look for "Vote closed" as this is already validated by the workflow that runs this code
-    // No need to look for "Vote closed" as this is already validated by the workflow that runs this code
     async function parseVoteClosedComment() {
       const bindingVotesSectionMatch = message.match(/Binding votes \(\d+\)[\s\S]*?(?=(<details>|$))/);
       const bindingVotesSection = bindingVotesSectionMatch ? bindingVotesSectionMatch[0] : '';
