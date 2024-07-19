@@ -1,0 +1,150 @@
+name: Update MAINTAINERS.yaml file
+
+on:
+  push:
+    branches: [ master ]
+    paths:
+      - 'CODEOWNERS'
+      - '.github/scripts/maintainers/**'
+      - '.github/workflows/update-maintainers.yaml'
+
+  schedule:
+    - cron: "0 0 * * MON"  # Runs at 10:00 AM UTC every Monday.
+
+  workflow_dispatch:
+
+  repository_dispatch:
+    types: [ trigger-maintainers-update ]
+
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+
+env:
+  IGNORED_REPOSITORIES: "shape-up-process"
+  IGNORED_USERS: "asyncapi-bot-eve"
+  
+  GIT_USER: asyncapi-bot
+  GIT_EMAIL: info@asyncapi.io
+
+  BRANCH_NAME: "bot/update-maintainers-${{ github.run_id }}"
+  PR_TITLE: "docs(maintainers): update MAINTAINERS.yaml file with the latest CODEOWNERS changes"
+
+jobs:
+  update-maintainers:
+    name: Update MAINTAINERS.yaml based on CODEOWNERS files in all organization repositories
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          # If an action pushes code using the repository’s GITHUB_TOKEN, a pull request workflow will not run.
+          token: ${{ secrets.GH_TOKEN }}
+
+      - name: Wait for active pull requests to be merged
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TIMEOUT: 300  # Timeout in seconds
+          INTERVAL: 5   # Check interval in seconds 
+        run: |
+          check_active_prs() {
+              ACTIVE_PULL_REQUESTS=$(gh -R $GITHUB_REPOSITORY pr list --search "is:pr ${PR_TITLE} in:title" --json id)
+              if [ "$ACTIVE_PULL_REQUESTS" == "[]" ]; then
+                  return 1  # No active PRs
+              else
+                  return 0  # Active PRs found
+              fi
+          }
+          
+          # Loop with timeout
+          elapsed_time=0
+          while [ $elapsed_time -lt $TIMEOUT ]; do
+              if check_active_prs; then
+                  echo "There is an active pull request. Waiting for it to be merged..."
+              else
+                  echo "There is no active pull request. Proceeding with updating MAINTAINERS file."
+                  git pull
+                  exit 0
+              fi
+          
+              sleep $INTERVAL
+              elapsed_time=$((elapsed_time + INTERVAL))
+          done
+          
+          echo "Timeout reached. Proceeding with updating MAINTAINERS.yaml file with active pull request(s) present. It may result in merge conflict."
+          exit 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          cache: 'npm'
+          node-version-file: './.github/scripts/maintainers/package.json'
+          cache-dependency-path: './.github/scripts/maintainers/package-lock.json'
+
+      - name: Install dependencies
+        working-directory: ./.github/scripts/maintainers
+        run: npm install
+
+      - name: Restore cached GitHub API calls
+        uses: actions/cache/restore@v4
+        id: restore-cache
+        with:
+          path: ./.github/scripts/maintainers/github.api.cache.json
+          key: github-api-cache
+          restore-keys: |
+            github-api-cache-
+
+      - name: Run script updating MAINTAINERS.yaml
+        working-directory: ./.github/scripts/maintainers
+        run: npm run start
+        env:
+          GH_TOKEN: ${{ github.token }}
+          MAINTAINERS_FILE_PATH: "${{ github.workspace }}/MAINTAINERS.yaml"
+
+      - name: Save cached GitHub API calls
+        uses: actions/cache/save@v4
+        with:
+          path: ./.github/scripts/maintainers/github.api.cache.json
+          #  re-evaluate the key, so we update cache when file changes
+          key: github-api-cache-${{ hashfiles('./.github/scripts/maintainers/github.api.cache.json') }}
+
+      - name: Detect git changes
+        id: check_changes
+        run: |
+          if [[ $(git diff --stat) != '' ]]; then
+            echo "CHANGES=true" >> $GITHUB_OUTPUT
+          else
+            echo '✔ No changes detected. Have a nice day :-)'
+          fi
+
+      - name: Create PR with latest changes
+        if: steps.check_changes.outputs.CHANGES == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+        run: |
+          git config --global user.name "${{ env.GIT_USER }}"
+          git config --global user.email ${{ env.GIT_EMAIL }}
+
+          git checkout -b "${{ env.BRANCH_NAME }}"
+          git add -A
+          git commit -m "${{ env.PR_TITLE }}"
+          git push origin "${{ env.BRANCH_NAME }}" -f
+
+          BODY="
+          **Description**
+            - Update MAINTAINERS.yaml based on CODEOWNERS files across all repositories in the organization.
+          
+          For details on why a maintainer was removed or changed, refer to the [Job summary page](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}).
+          "
+
+          gh pr create --title "${{ env.PR_TITLE }}" --body "$BODY" --head ${{ env.BRANCH_NAME }}
+
+      - name: Report workflow run status to Slack
+        uses: rtCamp/action-slack-notify@4e5fb42d249be6a45a298f3c9543b111b02f7907 # https://github.com/rtCamp/action-slack-notify/releases/tag/v2.3.0
+        if: failure()
+        env:
+          SLACK_WEBHOOK: ${{secrets.SLACK_CI_FAIL_NOTIFY}}
+          SLACK_TITLE: 🚨 Update MAINTAINERS.yaml file Workflow failed 🚨
+          SLACK_MESSAGE: Failed to auto update MAINTAINERS.yaml file.
+          MSG_MINIMAL: true
