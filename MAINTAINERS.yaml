@@ -319,11 +319,11 @@
     - cli
     - bundler
     - glee
-- name: Alejandra Quetzalli
+- name: Quetzalli 
   github: quetzalliwrites
-  twitter: QuetzalliAle
+  twitter: QuetzalliWrites
   slack: U02AKC14WAJ
-  linkedin: alejandra-quetzalli
+  linkedin: quetzalli-writes
   availableForHire: false
   company: Postman
   isTscMember: true
