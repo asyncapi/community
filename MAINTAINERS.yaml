@@ -319,7 +319,7 @@
     - cli
     - bundler
     - glee
-- name: Quetzalli 
+- name: Quetzalli Writes
   github: quetzalliwrites
   twitter: QuetzalliWrites
   slack: U02AKC14WAJ
