@@ -98,12 +98,12 @@
       "notParticipatingCount": 0
     },
     {
-      "name": "cameronrushton",
-      "Proposal for Admin Rights for CoC Main Committee on Slack$$1227": "Not participated",
+      "name": "CameronRushton",
+      "Proposal for Admin Rights for CoC Main Committee on Slack$$1227": "Abstain",
       "chore: add Marketing WORKING_GROUP$$1130": "Not participated",
       "docs: add instruction how voting automation works$$1155": "Not participated",
-      "lastParticipatedVoteTime": "Member has not participated in all previous voting process.",
-      "isVotedInLast3Months": "Member has not participated in all previous voting process.",
+      "lastParticipatedVoteTime": "2024-06-13",
+      "isVotedInLast3Months": "true",
       "lastVoteClosedTime": "2024-06-14",
       "firstVoteClosedTime": "2024-04-12",
       "agreeCount": 0,
