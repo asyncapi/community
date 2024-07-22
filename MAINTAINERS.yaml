@@ -61,7 +61,7 @@
   repos:
     - github-action-for-cli
 - name: Cameron Rushton
-  github: cameronrushton
+  github: CameronRushton
   slack: U01DVKKAV5K
   availableForHire: false
   company: Solace
