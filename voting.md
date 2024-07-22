@@ -47,7 +47,7 @@ The Git Vote bot adds a comment that voting is completed.
 
 ### Tracking Voting 
 
-We store [the voting history of entire TSC](voteTrackingDetail.md) since voting automation was introduces.
+We store [the voting history of entire TSC](TSC_VOTING_OVERVIEW.md) since voting automation was introduces.
 
 * 🔕 indicates that the member did not vote.
 * 👍 indicates that the member was in favor.
