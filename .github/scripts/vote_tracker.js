@@ -40,7 +40,7 @@ module.exports = async ({ context }) => {
 
     // Process each vote detail to update voting information
     voteDetails.forEach(voteInfo => {
-      const userVote = latestVotes.find(vote => vote.user === voteInfo.name);
+      const userVote = latestVotes.find(vote => vote.user.toLowerCase() === voteInfo.name.toLowerCase());
       let currentTime;
       if (userVote && userVote.timestamp) {
         currentTime = userVote.timestamp.toString().split(" ")[0];
@@ -190,7 +190,7 @@ module.exports = async ({ context }) => {
   
         if (validExampleMember) {
           tscMembers.forEach(member => {
-            const existingMember = voteDetails.find(voteInfo => voteInfo.name === member.github);
+            const existingMember = voteDetails.find(voteInfo => voteInfo.name.toLowerCase() === member.github.toLowerCase());
             if (!existingMember) {
               // Create a new member by copying the structure of the valid example member
               const newMember = {};
