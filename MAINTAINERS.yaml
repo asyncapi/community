@@ -108,7 +108,7 @@
     - spec-json-schemas
     - bindings
 - name: Gerald Loeffler
-  github: geraldloeffler
+  github: GeraldLoeffler
   linkedin: geraldloeffler
   slack: U01P5QDLP0X
   availableForHire: false
@@ -132,7 +132,7 @@
     - parser-api
     - simulator
 - name: Khuda Dad Nomani
-  github: khudadad414
+  github: KhudaDad414
   twitter: KhudaDadNomani
   linkedin: khudadadnomani
   slack: U01RVRD1TCL
@@ -206,7 +206,7 @@
     - website
 - name: Azeez Elegbede
   linkedin: acebuild
-  github: acethecreator
+  github: AceTheCreator
   twitter: _acebuild
   slack: U01RWDD69PZ
   company: Postman
@@ -234,7 +234,7 @@
   repos:
     - brand
 - name: Nektarios Fifes
-  github: nektariosfifes
+  github: NektariosFifes
   linkedin: nektarios-fifes-372740220
   slack: U01SE93Q48N
   availableForHire: true
@@ -242,7 +242,7 @@
   repos:
     - simulator
 - name: Pavel Bodiachevskii
-  github: pakisan
+  github: Pakisan
   slack: U0132LQU8C9
   twitter: pbodiachevskii
   availableForHire: false
@@ -308,7 +308,7 @@
     - go-watermill-template
     - template-for-go-projects
 - name: Souvik De
-  github: souvikns
+  github: Souvikns
   slack: U01SGCZMJKW
   twitter: souvik_ns
   linkedin: souvik-de-a2b941169
@@ -332,7 +332,7 @@
     - training
     - community
 - name: David Pereira
-  github: bolt04
+  github: BOLT04
   twitter: BOLT2938
   slack: U02EC8BT0TX
   linkedin: josé-david-pereira-13ba5315a
@@ -350,7 +350,7 @@
   repos:
     - java-template
 - name: Kieran Murphy
-  github: kieranm1999
+  github: KieranM1999
   linkedin: kieran-murphy-175b0412b
   availableForHire: false
   slack: U02FT2TKM37
@@ -359,7 +359,7 @@
   repos:
     - java-template
 - name: Tom Jefferson
-  github: jefflufc
+  github: JEFFLUFC
   linkedin: t-jefferson
   slack: U02FPPCEH6H
   availableForHire: false
@@ -376,7 +376,7 @@
   repos:
     - java-template
 - name: Semen Tenishchev
-  github: tenischev
+  github: Tenischev
   linkedin: semen-tenishchev
   availableForHire: true
   slack: U011D1DAU6S
@@ -384,7 +384,7 @@
   repos:
     - java-spring-template
 - name: Samridhi Agrawal
-  github: samridhi-98
+  github: Samridhi-98
   slack: U02T2MY9W5T
   linkedin: samridhi-agrawal-1713201ab
   availableForHire: false
@@ -412,7 +412,7 @@
   repos:
     - vs-asyncapi-preview
 - name: Florence Njeri
-  github: florence-njeri
+  github: Florence-Njeri
   linkedin: florencenjeri
   slack: U03D18YKX2M
   twitter: njericodes
@@ -443,7 +443,7 @@
     - spec
     - spec-json-schemas
 - name: Alexander Wichmann
-  github: visualbean
+  github: VisualBean 
   linkedin: alexcarlsen
   slack: U04C58GB8TF
   availableForHire: false
@@ -461,7 +461,7 @@
   repos:
     - modelina
 - name: Heiko Henning
-  github: greenrover
+  github: GreenRover
   slack: U03AC4G51H8
   availableForHire: false
   company: mtrail GmbH
