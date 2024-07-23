@@ -45,7 +45,7 @@ module.exports = async ({ context }) => {
       if (userVote && userVote.timestamp) {
         currentTime = userVote.timestamp.toString().split(" ")[0];
       }
-      const userInfo = latestVotes.find(vote => vote.user === voteInfo.name);
+      const userInfo = latestVotes.find(vote => vote.user.toLowerCase() === voteInfo.name.toLowerCase());
       const voteChoice = userInfo ? userInfo.vote : "Not participated";
       voteInfo.lastVoteClosedTime = new Date().toISOString().split('T')[0];
 
