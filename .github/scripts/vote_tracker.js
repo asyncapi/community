@@ -179,6 +179,7 @@ module.exports = async ({ context }) => {
           console.error('Error reading voteTrackingFile.json:', readError);
           throw readError;
         }
+        let updatedVoteDetails = [...voteDetails]
         const updatedTSCMembers = [];
         const requiredKeys = ['name', 'lastParticipatedVoteTime', 'isVotedInLast3Months', 'lastVoteClosedTime', 'agreeCount', 'disagreeCount', 'abstainCount', 'notParticipatingCount'];
         // Function to check if an object has all required keys
@@ -230,16 +231,17 @@ module.exports = async ({ context }) => {
         } else {
           console.log('No valid example member found in voteDetails.');
         }
-  
+       
         if (updatedTSCMembers.length > 0) {
           try {
             const combinedData = [...voteDetails, ...updatedTSCMembers];
             await writeFile(voteTrackingFile, JSON.stringify(combinedData, null, 2));
-            return combinedData; // Return the updated data
+            updatedVoteDetails = [...combinedData]
           } catch (writeError) {
             console.error('Error wile writing file:' ,writeError)
         } 
        }
+       return combinedData
     }
 }   catch (error) {
     console.error('Error while running the vote_tracker workflow:', error);
