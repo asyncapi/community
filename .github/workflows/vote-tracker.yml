@@ -33,5 +33,5 @@ jobs:
           committer: asyncapi-bot <info@asyncapi.io>
           author: asyncapi-bot <info@asyncapi.io>
           title: 'chore: vote tracking details'
-          body: 'Update the TSC_VOTNING_OVERVIEW.md and voteTrackingFile.json'
+          body: 'Update the TSC_VOTING_OVERVIEW.md and voteTrackingFile.json'
           branch: vote-trackingupdate/${{ github.job }}
