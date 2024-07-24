@@ -234,14 +234,13 @@ module.exports = async ({ context }) => {
        
         if (updatedTSCMembers.length > 0) {
           try {
-            const combinedData = [...voteDetails, ...updatedTSCMembers];
-            await writeFile(voteTrackingFile, JSON.stringify(combinedData, null, 2));
-            updatedVoteDetails = [...combinedData]
+            updatedVoteDetails.concat(...updatedTSCMembers)
+            await writeFile(voteTrackingFile, JSON.stringify(updatedVoteDetails, null, 2));
           } catch (writeError) {
             console.error('Error wile writing file:' ,writeError)
         } 
        }
-       return combinedData
+       return updatedVoteDetails
     }
 }   catch (error) {
     console.error('Error while running the vote_tracker workflow:', error);
