@@ -250,6 +250,7 @@ module.exports = async ({ github, context, botCommentURL}) => {
        }
        return updatedVoteDetails
     }
+    // Method to fetch information from the comment when workflow triggered manually 
     async function fetchCommentInformation() {
       const urlParts = botCommentURL.split('/');
       const eventNumber = urlParts[urlParts.length - 1].split('#')[0];
