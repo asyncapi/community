@@ -10,6 +10,7 @@ module.exports = async ({ github, context, botCommentURL}) => {
       eventNumber = voteCommentContext.eventNumber
       eventTitle = voteCommentContext.eventTitle
       orgName = voteCommentContext.orgName
+      repoName = voteCommentContext.repoName
     } else {
       // Extract necessary details from the context when triggered by issue_comment
       message = context.payload.comment.body;
