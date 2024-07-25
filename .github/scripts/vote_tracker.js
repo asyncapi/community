@@ -2,15 +2,23 @@ const yaml = require('js-yaml');
 const { readFile, writeFile } = require('fs').promises;
 const path = require('path');
 
-module.exports = async ({ context }) => {
-  try {
-    // Extract necessary details from the context
-    const message = context.payload.comment.body;
-    const eventNumber = context.issue.number;
-    const eventTitle = context.payload.issue.title;
-    const orgName = context.issue.owner;
-    const repoName = context.issue.repo;
+module.exports = async ({ githuh, context, botCommentURL}) => {
 
+  try {
+
+    let message, eventNumber, eventTitle, orgName, repoName;
+
+    if (botCommentURL) {
+      await fetchCommentInformation()
+    } else {
+      // Extract necessary details from the context when triggered by issue_comment
+      message = context.payload.comment.body;
+      eventNumber = context.issue.number;
+      eventTitle = context.payload.issue.title;
+      orgName = context.repo.owner;
+      repoName = context.repo.repo;
+    }
+  
     // Path to the vote tracking file
     const voteTrackingFile = path.join('voteTrackingFile.json');
 
@@ -242,6 +250,34 @@ module.exports = async ({ context }) => {
        }
        return updatedVoteDetails
     }
+   // Method to parse the comment that is executed by manually triggered 
+    async function fetchCommentInformation(){
+      const { Octokit } = await import("@octokit/rest");
+      const urlParts = botCommentURL.split('/');
+      eventNumber = urlParts[urlParts.length - 1].split('#')[0];
+      const commentId = urlParts[urlParts.length - 1].split('#')[1].replace('issuecomment-', '');
+      const [owner, repo] = urlParts.slice(3, 5);
+      orgName = owner
+      repoName = repo
+      const octokit = new Octokit();
+    
+      try {
+          message = await octokit.request("GET /repos/{owner}/{repo}/issues/comments/{comment_id}", {
+          owner: owner,
+          repo: repo,
+          comment_id: commentId
+        });
+        message = message.data.body
+        const { data: issue } = await octokit.rest.issues.get({
+          owner,
+          repo,
+          issue_number: eventNumber
+        });
+        eventTitle = issue.title
+      } catch (error) {
+        console.error(error);
+      }
+   }
 }   catch (error) {
     console.error('Error while running the vote_tracker workflow:', error);
   }
