@@ -4,9 +4,16 @@ on:
   issue_comment:
     types: [created]
 
+  workflow_dispatch:
+    inputs:
+      bot_comment_url:
+        description: |
+          Provide URL pointing to gitvote bot comment that contains closing voting update. It looks like `https://github.com/asyncapi/community/issues/1313#issuecomment-2247595858`. We use this to update the voting summary in cases when we see errors in the voting status, when for example TSC member voted, but did a mistake and voted by adding emoji to main description or other bot comment instead of the correct way: which is adding an emoji to a comment from bot that opens the vote.
+        required: true
+
 jobs:
   track-vote:
-    if: ${{ github.actor == 'git-vote[bot]' && contains(github.event.comment.body, 'Vote closed')}}
+    if: ${{ github.actor == 'git-vote[bot]' && contains(github.event.comment.body, 'Vote closed') || github.event_name == 'workflow_dispatch' }}
     runs-on: ubuntu-latest
     steps:
 
@@ -14,7 +21,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Installing Module
-        run: npm install js-yaml@4.1.0
+        run: npm install js-yaml@4.1.0 --no-save
         shell: bash
 
       - name: Run GitHub Script
@@ -23,7 +30,8 @@ jobs:
         with:
           script: |
             const script = require('./.github/scripts/vote_tracker.js');
-            await script({ github, context, core });
+            const botCommentURL = "${{ github.event.inputs.bot_comment_url || '' }}";
+            await script({ github, context, botCommentURL });
           
       - name: Create Pull Request to update Vote Tracking Details
         uses: peter-evans/create-pull-request@153407881ec5c347639a548ade7d8ad1d6740e38 # uses 5.0.2 https://github.com/peter-evans/create-pull-request/releases/tag/v5.0.2
@@ -33,5 +41,5 @@ jobs:
           committer: asyncapi-bot <info@asyncapi.io>
           author: asyncapi-bot <info@asyncapi.io>
           title: 'chore: vote tracking details'
-          body: 'Update the votetrackingDetails.md and votetracking.json'
+          body: 'Update the TSC_VOTING_OVERVIEW.md and voteTrackingFile.json'
           branch: vote-trackingupdate/${{ github.job }}

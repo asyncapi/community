@@ -1,15 +1,24 @@
 const yaml = require('js-yaml');
 const { readFile, writeFile } = require('fs').promises;
-const path = require('path');
-
-module.exports = async ({ context }) => {
+const path = require("path")
+module.exports = async ({ github, context, botCommentURL}) => {
   try {
-    // Extract necessary details from the context
-    const message = context.payload.comment.body;
-    const eventNumber = context.issue.number;
-    const eventTitle = context.payload.issue.title;
-    const orgName = context.issue.owner;
-    const repoName = context.issue.repo;
+    let message, eventNumber, eventTitle, orgName, repoName;
+    if (botCommentURL) {
+      const voteCommentContext = await fetchCommentInformation();
+      message = voteCommentContext.messageBody
+      eventNumber = voteCommentContext.eventNumber
+      eventTitle = voteCommentContext.eventTitle
+      orgName = voteCommentContext.orgName
+      repoName = voteCommentContext.repoName
+    } else {
+      // Extract necessary details from the context when triggered by issue_comment
+      message = context.payload.comment.body;
+      eventNumber = context.issue.number;
+      eventTitle = context.payload.issue.title;
+      orgName = context.repo.owner;
+      repoName = context.repo.repo;
+    }
 
     // Path to the vote tracking file
     const voteTrackingFile = path.join('voteTrackingFile.json');
@@ -179,6 +188,7 @@ module.exports = async ({ context }) => {
           console.error('Error reading voteTrackingFile.json:', readError);
           throw readError;
         }
+        let updatedVoteDetails = [...voteDetails]
         const updatedTSCMembers = [];
         const requiredKeys = ['name', 'lastParticipatedVoteTime', 'isVotedInLast3Months', 'lastVoteClosedTime', 'agreeCount', 'disagreeCount', 'abstainCount', 'notParticipatingCount'];
         // Function to check if an object has all required keys
@@ -230,18 +240,58 @@ module.exports = async ({ context }) => {
         } else {
           console.log('No valid example member found in voteDetails.');
         }
-  
+       
         if (updatedTSCMembers.length > 0) {
           try {
-            const combinedData = [...voteDetails, ...updatedTSCMembers];
-            await writeFile(voteTrackingFile, JSON.stringify(combinedData, null, 2));
-            return combinedData; // Return the updated data
+            updatedVoteDetails.concat(...updatedTSCMembers)
+            await writeFile(voteTrackingFile, JSON.stringify(updatedVoteDetails, null, 2));
           } catch (writeError) {
             console.error('Error wile writing file:' ,writeError)
         } 
        }
+       return updatedVoteDetails
     }
-}   catch (error) {
+    // Method to fetch information from the comment when workflow triggered manually 
+    async function fetchCommentInformation() {
+      const urlParts = botCommentURL.split('/');
+      const eventNumber = urlParts[urlParts.length - 1].split('#')[0];
+      const commentId = urlParts[urlParts.length - 1].split('#')[1].replace('issuecomment-', '');
+      const [owner, repo] = urlParts.slice(3, 5);
+      let orgName = owner;
+      let repoName = repo;
+      let messageBody = '';
+      let eventTitle = '';
+  
+      try {
+          const messageResponse = await github.request("GET /repos/{owner}/{repo}/issues/comments/{comment_id}", {
+              owner: owner,
+              repo: repo,
+              comment_id: commentId
+          });
+          messageBody = messageResponse.data.body;
+          
+          const issueResponse = await github.rest.issues.get({
+              owner,
+              repo,
+              issue_number: eventNumber
+          });
+          eventTitle = issueResponse.data.title;
+      } catch (error) {
+          console.error(error);
+      }
+  
+      return {
+          orgName,
+          repoName,
+          eventNumber,
+          commentId,
+          messageBody,
+          eventTitle
+      };
+  }
+  
+  }
+  catch (error) {
     console.error('Error while running the vote_tracker workflow:', error);
   }
 }
