@@ -1,9 +1,6 @@
-const core = require("@actions/core");
-const { context } = require("@actions/github");
-
 module.exports = { summarizeChanges };
 
-async function summarizeChanges(oldMaintainers, newMaintainers) {
+async function summarizeChanges(oldMaintainers, newMaintainers, core) {
   const outOfSync = [];
   const noLongerActive = [];
 
@@ -92,7 +89,7 @@ function compareRepos(oldRepos, newRepos) {
 function repositoriesLinks(repos) {
   return repos
     .map((repo) => {
-      return `<a href="https://github.com/${context.repo.owner}/${repo}/blob/master/CODEOWNERS">${repo}</a>`;
+      return `<a href="https://github.com/asyncapi/${repo}/blob/master/CODEOWNERS">${repo}</a>`;
     })
     .join(", ");
 }

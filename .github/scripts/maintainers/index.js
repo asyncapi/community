@@ -1,5 +1,3 @@
-const core = require("@actions/core");
-const { getOctokit, context } = require("@actions/github");
 const yaml = require("js-yaml");
 const fs = require("fs");
 const { saveCache, loadCache, printAPICallsStats } = require("./cache");
@@ -9,6 +7,15 @@ const {
   getGitHubProfile,
   getRepositories,
 } = require("./gh_calls");
+
+module.exports = async ({ github, context, core }) => {
+  try {
+    await run(github, context, core);
+  } catch (error) {
+    console.log(error);
+    core.setFailed(`An error occurred: ${error}`);
+  }
+};
 
 const config = {
   ghToken: process.env.GH_TOKEN,
@@ -26,7 +33,7 @@ function getCommaSeparatedInputList(list) {
   );
 }
 
-function extractGitHubUsernames(codeownersContent) {
+function extractGitHubUsernames(codeownersContent, core) {
   if (!codeownersContent) {
     return [];
   }
@@ -55,12 +62,12 @@ function extractGitHubUsernames(codeownersContent) {
   return uniqueOwners;
 }
 
-async function collectCurrentMaintainers(codeownersFiles, github) {
+async function collectCurrentMaintainers(codeownersFiles, github, core) {
   core.startGroup(`Fetching  GitHub profile information for each codeowner`);
 
   const currentMaintainers = {};
   for (const codeowners of codeownersFiles) {
-    const owners = extractGitHubUsernames(codeowners.content);
+    const owners = extractGitHubUsernames(codeowners.content, core);
 
     for (const owner of owners) {
       if (config.ignoredUsers.includes(owner)) {
@@ -72,7 +79,7 @@ async function collectCurrentMaintainers(codeownersFiles, github) {
       const key = owner.toLowerCase();
       if (!currentMaintainers[key]) {
         // Fetching GitHub profile is useful to ensure that all maintainers are valid (e.g., their GitHub accounts haven't been deleted).
-        const profile = await getGitHubProfile(github, owner);
+        const profile = await getGitHubProfile(github, owner, core);
         if (!profile) {
           core.warning(
             `[repo: ${codeowners.repo}]: GitHub profile not found for ${owner}.`,
@@ -91,7 +98,11 @@ async function collectCurrentMaintainers(codeownersFiles, github) {
   return currentMaintainers;
 }
 
-function refreshPreviousMaintainers(previousMaintainers, currentMaintainers) {
+function refreshPreviousMaintainers(
+  previousMaintainers,
+  currentMaintainers,
+  core,
+) {
   core.startGroup(`Refreshing previous maintainers list`);
 
   const updatedMaintainers = [];
@@ -113,6 +124,7 @@ function refreshPreviousMaintainers(previousMaintainers, currentMaintainers) {
     updatedMaintainers.push({
       ...previousEntry,
       repos: currentMaintainer.repos,
+      githubID: currentMaintainer.githubID,
     });
   }
 
@@ -124,55 +136,48 @@ function refreshPreviousMaintainers(previousMaintainers, currentMaintainers) {
   return updatedMaintainers;
 }
 
-async function run() {
-  try {
-    if (!config.maintainersFilePath) {
-      core.setFailed("The MAINTAINERS_FILE_PATH is not defined");
-      return;
-    }
-    await loadCache();
-
-    const github = getOctokit(config.ghToken);
-
-    const repos = await getRepositories(
-      github,
-      context.repo.owner,
-      config.ignoredRepos,
-    );
-    const codeownersFiles = await getAllCodeownersFiles(
-      github,
-      context.repo.owner,
-      repos,
-    );
-
-    const previousMaintainers = yaml.load(
-      fs.readFileSync(config.maintainersFilePath, "utf8"),
-    );
-
-    // 1. Collect new maintainers from all current CODEOWNERS files found across all repositories.
-    const currentMaintainers = await collectCurrentMaintainers(
-      codeownersFiles,
-      github,
-    );
-
-    // 2. Refresh the repository list for existing maintainers and add any new maintainers to the list.
-    const refreshedMaintainers = refreshPreviousMaintainers(
-      previousMaintainers,
-      currentMaintainers,
-    );
-
-    fs.writeFileSync(
-      config.maintainersFilePath,
-      yaml.dump(refreshedMaintainers),
-    );
-
-    printAPICallsStats();
-
-    await summarizeChanges(previousMaintainers, refreshedMaintainers);
-    await saveCache();
-  } catch (error) {
-    core.setFailed(`An error occurred: ${error}`);
+async function run(github, context, core) {
+  if (!config.maintainersFilePath) {
+    core.setFailed("The MAINTAINERS_FILE_PATH is not defined");
+    return;
   }
-}
+  loadCache(core);
 
-run();
+  const repos = await getRepositories(
+    github,
+    context.repo.owner,
+    config.ignoredRepos,
+    core,
+  );
+  const codeownersFiles = await getAllCodeownersFiles(
+    github,
+    context.repo.owner,
+    repos,
+    core,
+  );
+
+  const previousMaintainers = yaml.load(
+    fs.readFileSync(config.maintainersFilePath, "utf8"),
+  );
+
+  // 1. Collect new maintainers from all current CODEOWNERS files found across all repositories.
+  const currentMaintainers = await collectCurrentMaintainers(
+    codeownersFiles,
+    github,
+    core,
+  );
+
+  // 2. Refresh the repository list for existing maintainers and add any new maintainers to the list.
+  const refreshedMaintainers = refreshPreviousMaintainers(
+    previousMaintainers,
+    currentMaintainers,
+    core,
+  );
+
+  fs.writeFileSync(config.maintainersFilePath, yaml.dump(refreshedMaintainers));
+
+  printAPICallsStats(core);
+
+  await summarizeChanges(previousMaintainers, refreshedMaintainers, core);
+  saveCache();
+}

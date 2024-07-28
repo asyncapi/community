@@ -1,5 +1,4 @@
 const fs = require("fs");
-const core = require("@actions/core");
 
 module.exports = {
   fetchWithCache,
@@ -8,14 +7,14 @@ module.exports = {
   printAPICallsStats,
 };
 
-const CODEOWNERS_CACHE_PATH = "github.api.cache.json";
+const CODEOWNERS_CACHE_PATH = "./.github/scripts/maintainers/github.api.cache.json";
 
 let cacheEntries = {};
 
 let numberOfFullFetches = 0;
 let numberOfCacheHits = 0;
 
-async function loadCache() {
+function loadCache(core) {
   try {
     cacheEntries = JSON.parse(fs.readFileSync(CODEOWNERS_CACHE_PATH, "utf8"));
   } catch (error) {
@@ -23,11 +22,11 @@ async function loadCache() {
   }
 }
 
-async function saveCache() {
+function saveCache() {
   fs.writeFileSync(CODEOWNERS_CACHE_PATH, JSON.stringify(cacheEntries));
 }
 
-async function fetchWithCache(cacheKey, fetchFn) {
+async function fetchWithCache(cacheKey, fetchFn, core) {
   const cachedResp = cacheEntries[cacheKey];
 
   try {
@@ -55,7 +54,7 @@ async function fetchWithCache(cacheKey, fetchFn) {
   }
 }
 
-function printAPICallsStats() {
+function printAPICallsStats(core) {
   core.startGroup("API calls statistic");
   core.info(
     `Number of API calls count against rate limit: ${numberOfFullFetches}`,

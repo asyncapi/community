@@ -1,3 +1,7 @@
+# This action updates the `MAINTAINERS.yaml` file based on `CODEOWNERS` files in all organization repositories.
+# It is triggered when a `CODEOWNERS` file is changed; the related repository triggers this workflow by emitting the `trigger-maintainers-update` event. 
+# It can also be triggered manually.
+
 name: Update MAINTAINERS.yaml file
 
 on:
@@ -24,9 +28,6 @@ env:
   IGNORED_REPOSITORIES: "shape-up-process"
   IGNORED_USERS: "asyncapi-bot-eve"
   
-  GIT_USER: asyncapi-bot
-  GIT_EMAIL: info@asyncapi.io
-
   BRANCH_NAME: "bot/update-maintainers-${{ github.run_id }}"
   PR_TITLE: "docs(maintainers): update MAINTAINERS.yaml file with the latest CODEOWNERS changes"
 
@@ -75,32 +76,27 @@ jobs:
           echo "Timeout reached. Proceeding with updating MAINTAINERS.yaml file with active pull request(s) present. It may result in merge conflict."
           exit 0
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          cache: 'npm'
-          node-version-file: './.github/scripts/maintainers/package.json'
-          cache-dependency-path: './.github/scripts/maintainers/package-lock.json'
-
-      - name: Install dependencies
-        working-directory: ./.github/scripts/maintainers
-        run: npm install
-
       - name: Restore cached GitHub API calls
         uses: actions/cache/restore@v4
-        id: restore-cache
         with:
           path: ./.github/scripts/maintainers/github.api.cache.json
           key: github-api-cache
           restore-keys: |
             github-api-cache-
 
+      - name: Installing Module
+        shell: bash
+        run: npm install js-yaml@4 --no-save
+
       - name: Run script updating MAINTAINERS.yaml
-        working-directory: ./.github/scripts/maintainers
-        run: npm run start
+        uses: actions/github-script@v7
         env:
           GH_TOKEN: ${{ github.token }}
           MAINTAINERS_FILE_PATH: "${{ github.workspace }}/MAINTAINERS.yaml"
+        with:
+          script: |
+            const script = require('./.github/scripts/maintainers/index.js')
+            await script({github, context, core})
 
       - name: Save cached GitHub API calls
         uses: actions/cache/save@v4
@@ -109,36 +105,20 @@ jobs:
           #  re-evaluate the key, so we update cache when file changes
           key: github-api-cache-${{ hashfiles('./.github/scripts/maintainers/github.api.cache.json') }}
 
-      - name: Detect git changes
-        id: check_changes
-        run: |
-          if [[ $(git diff --stat) != '' ]]; then
-            echo "CHANGES=true" >> $GITHUB_OUTPUT
-          else
-            echo '✔ No changes detected. Have a nice day :-)'
-          fi
-
       - name: Create PR with latest changes
-        if: steps.check_changes.outputs.CHANGES == 'true'
-        env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
-        run: |
-          git config --global user.name "${{ env.GIT_USER }}"
-          git config --global user.email ${{ env.GIT_EMAIL }}
+        uses: peter-evans/create-pull-request@c5a7806660adbe173f04e3e038b0ccdcd758773c # https://github.com/peter-evans/create-pull-request/releases/tag/v6.1.0
+        with:
+          token: ${{ secrets.GH_TOKEN }}
+          commit-message: ${{ env.PR_TITLE }}
+          committer: asyncapi-bot <info@asyncapi.io>
+          author: asyncapi-bot <info@asyncapi.io>
+          title: ${{ env.PR_TITLE }}
+          branch: ${{ env.BRANCH_NAME }}
+          body: |
+            **Description**
+              - Update MAINTAINERS.yaml based on CODEOWNERS files across all repositories in the organization.
 
-          git checkout -b "${{ env.BRANCH_NAME }}"
-          git add -A
-          git commit -m "${{ env.PR_TITLE }}"
-          git push origin "${{ env.BRANCH_NAME }}" -f
-
-          BODY="
-          **Description**
-            - Update MAINTAINERS.yaml based on CODEOWNERS files across all repositories in the organization.
-          
-          For details on why a maintainer was removed or changed, refer to the [Job summary page](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}).
-          "
-
-          gh pr create --title "${{ env.PR_TITLE }}" --body "$BODY" --head ${{ env.BRANCH_NAME }}
+            For details on why a maintainer was removed or changed, refer to the [Job summary page](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}).
 
       - name: Report workflow run status to Slack
         uses: rtCamp/action-slack-notify@4e5fb42d249be6a45a298f3c9543b111b02f7907 # https://github.com/rtCamp/action-slack-notify/releases/tag/v2.3.0
