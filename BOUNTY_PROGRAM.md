@@ -4,7 +4,7 @@
 
 The AsyncAPI Bounty Program is a specification of the software development process, customized to meet the needs of the AsyncAPI Initiative.
 
-The AsyncAPI Bounty Program operates exclusively on donated funds, does not seek financial profit, uses publicly and freely available tools only, and has as its main purpose rewarding individual open source maintainers and contributors while creating an artificial set of time constraints to make the schedule for achieving assigned targets predictable.
+The AsyncAPI Bounty Program operates exclusively on donated funds, does not seek financial profit, uses publicly and freely available tools only, and has as its main purpose rewarding individual open source maintainers and contributors of **Middle** and **Senior** professional levels while creating an artificial set of time constraints to make the schedule for achieving assigned targets predictable.
 
 Anyone may implement this specification of the software development process with or without any modification in any way they find suitable.
 
@@ -143,7 +143,7 @@ In case the Bounty Program Participant has not provided critical fixes during th
 
 ## Extension Of Bounty Issue's Timeline
 
-In case of the online absence of the AsyncAPI Maintainer in [Slack](https://asyncapi.slack.com) for a period of more than three consecutive working days, all remaining target dates of the Bounty Issue Timeline are increased by one calendar week per each three consecutive working days of the online absence of the AsyncAPI Maintainer plus one calendar week. 'Plus one calendar week' period is required because after the AsyncAPI Maintainer has regained a confident online presence in [Slack](https://asyncapi.slack.com), the Bounty Program Participant would have to spend time getting back to the insides of the issue, and nearly unfamiliar at that time their own code.
+In case of the AsyncAPI Maintainer's delay in response in [GitHub](https://github.com) and/or [Slack](https://asyncapi.slack.com) for a period of more than three consecutive working days, all remaining target dates of the Bounty Issue's Timeline are increased by one calendar week per each of the three consecutive working days of the AsyncAPI Maintainer's response delay plus one calendar week. 'Plus one calendar week' period is required because after the AsyncAPI Maintainer has regained online presence, the Bounty Program Participant would have to spend time getting back to the insides of the issue, and nearly unfamiliar at that time their own code.
 
 In case of unpredicted [force majeure](https://iccwbo.org/wp-content/uploads/sites/3/2020/03/icc-forcemajeure-hardship-clauses-march2020.pdf) and/or circumstances that could not be foreseen and/or that are beyond the control of both the Bounty Program Participant and the AsyncAPI Maintainer, the Bounty Issue Timeline can be increased by a fixed or indefinite amount of time, with a fair explanation in the Bounty Issue's or Pull Request's comments.
 
@@ -188,6 +188,12 @@ Dropped Bounty Issue can be assigned again to the same Bounty Program Participan
 AsyncAPI Maintainers are allowed to work on Bounty Issues submitted by themselves.
 
 Bounty Program Participant is allowed to choose up to two Bounty Issues of any Complexity Level for simultaneous resolution.
+
+Two or more GitHub issues (each of which individually has a Complexity Level lower than `Medium` or those that are coupled tightly but not inextricably) can be aggregated to form one Bounty Issue, which is then submitted for participation in the Bounty Program. Aggregated Bounty Issues have the prefix `[BOUNTY]`.
+
+Regular contributors should explain in meaningful words how they are going to approach the resolution process when expressing a desire to work on a Bounty Issue.
+
+All Bounty Program-related activities (expression of a desire to work on a Bounty Issue, explanation of the presumed approach to resolution of the Bounty Issue, etc.) are taken into consideration only if they have happened after the addition of the GitHub label `bounty` to the GitHub issue.
 
 GitHub label `bounty` has hex code `#0E8A16`.
 
