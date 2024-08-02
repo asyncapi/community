@@ -33,26 +33,33 @@ function getCommaSeparatedInputList(list) {
   );
 }
 
+function splitByWhitespace(line) {
+  return line.trim().split(/\s+/);
+}
+
 function extractGitHubUsernames(codeownersContent, core) {
-  if (!codeownersContent) {
-    return [];
-  }
+  if (!codeownersContent) return [];
 
   const uniqueOwners = new Set();
 
   for (const line of codeownersContent.split("\n")) {
-    // extract any data that is before the '#' char and trim whitespace
-    const trimmedLine = line.split("#")[0].trim();
+    // split by '#' to process comments separately
+    const [ownersLine, comment = ""] = line.split("#");
+    
+    // 1. Check AsyncAPI custom owners
+    const triagers = comment.split(/docTriagers:|codeTriagers:/)[1]
+    if (triagers) {
+      const owners = splitByWhitespace(triagers)
+      owners.forEach(owner => uniqueOwners.add(owner))
+    }
 
-    // split by whitespace to get the owners
-    const owners = trimmedLine.split(/\s+/);
+    // 2. Check GitHub native codeowners
+    const owners = splitByWhitespace(ownersLine);
 
     // the 1st element is the file location, we don't need it, so we start with 2nd item
     for (const owner of owners.slice(1)) {
       if (!owner.startsWith("@") || owner.includes("/")) {
-        core.warning(
-          `Skipping '${owner}' as emails and teams are not supported yet`,
-        );
+        core.warning(`Skipping '${owner}' as emails and teams are not supported yet`);
         continue;
       }
       uniqueOwners.add(owner.slice(1)); // remove the '@'
