@@ -1,7 +1,7 @@
 name: Verify tsc and maintainers changes by human and bot
 
 on:
-  pull_request:
+  pull_request_target:
     types: [synchronize, opened, reopened]
     paths:
       - "MAINTAINERS.yaml"
