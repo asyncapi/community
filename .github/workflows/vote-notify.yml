@@ -1,0 +1,128 @@
+name: Notify TSC Members about Voting Status
+
+on:
+  schedule:
+    # Daily at 9:00 UTC
+    - cron: '0 9 * * *'
+
+jobs:
+  notify-tsc-members:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: jorgebg/stateful-action@v0.3
+        id: state
+        with:
+          branch: vote_state
+
+      - name: List current open issues
+        uses: actions/github-script@v3
+        id: list
+        with:
+          script: |
+            const { data: issues } = await github.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              labels: 'vote open'
+            });
+            return issues;
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Fetch Current State
+        id: fetch
+        run: |
+          cd .vote_state
+          
+          if [ ! -f vote_status.json ]; then
+            echo "{}" > vote_status.json
+          fi
+
+          export json=$(cat vote_status.json | jq -c)
+
+          echo "::debug::vote_status=$json"
+
+          # Store in GitHub Output
+          echo "vote_status=$json" >> $GITHUB_OUTPUT
+      
+      - name: Install the dependencies
+        run: npm install js-yaml@4.1.0
+        shell: bash
+
+      - name: Notify TSC Members
+        # if: steps.list.outputs.result.length > 0
+        uses: actions/github-script@v6
+        id: notify
+        with:
+          script: |
+            const yaml = require('js-yaml');
+            const fs = require('fs');
+
+            const issues = ${{ steps.list.outputs.result }};
+            const state = ${{ steps.fetch.outputs.vote_status }};
+
+            // Add new issues and close old ones
+            const newIssues = issues.filter(issue => !state[issue.number]);
+            const closedIssues = Object.keys(state).filter(issue => !issues.find(i => i.number === parseInt(issue)));
+
+            // Update state
+            for (const issue of newIssues) {
+              state[issue.number] = {
+                status: 'open',
+                last_notified: null, 
+              }
+            }
+
+            for (const issue of closedIssues) {
+              state[issue] = {
+                ...state[issue],
+                status: 'closed',
+              }
+            }
+
+            const issuesToNotify = issues.filter(issue => 
+              state[issue.number].status === 'open' && 
+              (!state[issue.number].last_notified ||
+              new Date(state[issue.number].last_notified) + 7 * 24 * 60 * 60 * 1000 < new Date() || true)
+            );
+
+            const tscMembers = yaml.load(fs.readFileSync('MAINTAINERS.yaml', 'utf8'));
+
+            for (const issue of issuesToNotify) {
+              const { data: comments } = await github.rest.issues.listComments({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: issue.number,
+              });
+
+              const voteOpeningComment = comments.find(comment => comment.body.includes('Vote created') && comment.user.login === 'git-vote[bot]');
+
+              if (!voteOpeningComment) {
+                console.log(`Vote Opening Comment not found for issue #${issue.number}`);
+                continue;
+              }
+
+              const { data: reactions } = await github.rest.reactions.listForIssueComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                comment_id: voteOpeningComment.id,
+              });
+
+              const validReactions = reactions.filter(reaction => reaction.content === '+1' || reaction.content === '-1');
+
+              const leftToVote = tscMembers.filter(member => !validReactions.find(reaction => reaction.user.login === member.github));
+
+              for (const member of leftToVote) {
+                console.log(`Notifying ${member.name} about issue #${issue.number}`);
+
+                // TODO: Implement Notification Sending
+              }
+              state[issue.number].last_notified = new Date().toISOString();
+            }
+
+            return JSON.stringify(state);
+
+      - name: Update State
+        run: |
+          echo ${{ steps.notify.outputs.result }} | jq > ./.vote_state/vote_status.json
