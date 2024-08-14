@@ -29,7 +29,7 @@ jobs:
       meeting_name: Thinking Out Loud
       meeting_desc: ${{ github.event.inputs.desc }}
       guest: ${{ github.event.inputs.guest }}
-      host: fmvilas@gmail.com
+      host: lpgornicki@gmail.com
       issue_template_path: .github/workflows/create-event-helpers/issues_templates/thinking-out-loud.md
       create_zoom: true
     secrets:

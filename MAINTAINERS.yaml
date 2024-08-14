@@ -1,5 +1,5 @@
 - name: Aishat Muibudeen
-  github: mayaleeeee
+  github: Mayaleeeee
   linkedin: aishatmuibudeen
   slack: U03CNHGEUR1
   twitter: maya_ux_ui
@@ -34,6 +34,15 @@
   isTscMember: true
   repos:
     - website
+- name: Ansh Goyal
+  github: anshgoyalevil
+  linkedin: thisisanshg
+  slack: U057J527M24
+  twitter: thisisanshg
+  availableForHire: true
+  isTscMember: true
+  repos:
+    - website
 - name: Anand Sunderraman
   github: anandsunderraman
   linkedin: anand-sunderraman-a6b7a131
@@ -52,7 +61,7 @@
   repos:
     - github-action-for-cli
 - name: Cameron Rushton
-  github: cameronrushton
+  github: CameronRushton
   slack: U01DVKKAV5K
   availableForHire: false
   company: Solace
@@ -78,14 +87,13 @@
   linkedin: emilianozublena
   slack: U01LYC8PW0M
   availableForHire: false
-  isTscMember: true
+  isTscMember: false
   repos:
     - asyncapi-php-template
 - name: Fran Méndez
   github: fmvilas
   slack: U34F2JRRS
   availableForHire: false
-  company: Postman
   linkedin: fmvilas
   isTscMember: true
   repos:
@@ -94,22 +102,17 @@
     - openapi-schema-parser
     - asyncapi-react
     - glee
-    - generator
-    - nodejs-template
     - nodejs-ws-template
     - parser-js
-    - playground
     - spec
     - spec-json-schemas
-    - website
     - bindings
 - name: Gerald Loeffler
-  github: geraldloeffler
+  github: GeraldLoeffler
   linkedin: geraldloeffler
   slack: U01P5QDLP0X
   availableForHire: false
-  company: Salesforce
-  isTscMember: true
+  isTscMember: false
   repos:
     - bindings
 - name: Jonas Lagoni
@@ -129,7 +132,7 @@
     - parser-api
     - simulator
 - name: Khuda Dad Nomani
-  github: khudadad414
+  github: KhudaDad414
   twitter: KhudaDadNomani
   linkedin: khudadadnomani
   slack: U01RVRD1TCL
@@ -147,6 +150,7 @@
   linkedin: laurentbroudoux
   slack: U018NLDV5E1
   availableForHire: false
+  company: Postman
   isTscMember: true
   repos:
     - bindings
@@ -156,7 +160,7 @@
   slack: U01BM49KL3Z
   twitter: ldussart
   availableForHire: false
-  company: Ineat
+  company: zatsit
   isTscMember: true
   repos:
     - avro-schema-parser
@@ -169,37 +173,27 @@
   company: Postman
   isTscMember: true
   repos:
-    - avro-schema-parser
-    - openapi-schema-parser
-    - chatbot
     - diff
-    - cli
     - generator-filters
     - generator-hooks
     - github-action-for-generator
     - generator
     - nodejs-template
     - nodejs-ws-template
-    - parser-js
-    - playground
     - spec
     - spec-json-schemas
     - template-for-generator-templates
     - website
-    - bundler
 - name: Maciej Urbańczyk
   github: magicmatatjahu
   availableForHire: false
   linkedin: maciej-urbańczyk-909547164
   slack: U01EB02BP7A
-  company: Postman
+  company: Travelping GmbH
   isTscMember: true
   repos:
     - asyncapi-react
-    - chatbot
-    - cli
     - converter-go
-    - event-gateway
     - generator-react-sdk
     - generator
     - html-template
@@ -207,13 +201,12 @@
     - modelina
     - parser-js
     - parser-go
-    - playground
     - server-api
     - template-for-go-projects
     - website
 - name: Azeez Elegbede
   linkedin: acebuild
-  github: acethecreator
+  github: AceTheCreator
   twitter: _acebuild
   slack: U01RWDD69PZ
   company: Postman
@@ -225,8 +218,7 @@
   github: damaru-inc
   availableForHire: false
   slack: UH3B166TD
-  company: Solace
-  isTscMember: true
+  isTscMember: false
   repos:
     - java-spring-cloud-stream-template
     - python-paho-template
@@ -238,14 +230,11 @@
   linkedin: missy-turco-a476a6126
   availableForHire: false
   company: Postman
-  isTscMember: true
+  isTscMember: false
   repos:
     - brand
-    - design-system
-    - studio
-    - website
 - name: Nektarios Fifes
-  github: nektariosfifes
+  github: NektariosFifes
   linkedin: nektarios-fifes-372740220
   slack: U01SE93Q48N
   availableForHire: true
@@ -253,7 +242,7 @@
   repos:
     - simulator
 - name: Pavel Bodiachevskii
-  github: pakisan
+  github: Pakisan
   slack: U0132LQU8C9
   twitter: pbodiachevskii
   availableForHire: false
@@ -319,7 +308,7 @@
     - go-watermill-template
     - template-for-go-projects
 - name: Souvik De
-  github: souvikns
+  github: Souvikns
   slack: U01SGCZMJKW
   twitter: souvik_ns
   linkedin: souvik-de-a2b941169
@@ -330,11 +319,11 @@
     - cli
     - bundler
     - glee
-- name: Alejandra Quetzalli
-  github: alequetzalli
-  twitter: QuetzalliAle
+- name: Quetzalli Writes
+  github: quetzalliwrites
+  twitter: QuetzalliWrites
   slack: U02AKC14WAJ
-  linkedin: alejandra-quetzalli
+  linkedin: quetzalli-writes
   availableForHire: false
   company: Postman
   isTscMember: true
@@ -343,7 +332,7 @@
     - training
     - community
 - name: David Pereira
-  github: bolt04
+  github: BOLT04
   twitter: BOLT2938
   slack: U02EC8BT0TX
   linkedin: josé-david-pereira-13ba5315a
@@ -357,26 +346,25 @@
   slack: U02FP8WBFQE
   linkedin: danielr
   availableForHire: false
-  company: IBM
   isTscMember: true
   repos:
     - java-template
 - name: Kieran Murphy
-  github: kieranm1999
+  github: KieranM1999
   linkedin: kieran-murphy-175b0412b
   availableForHire: false
   slack: U02FT2TKM37
   company: IBM
-  isTscMember: true
+  isTscMember: false
   repos:
     - java-template
 - name: Tom Jefferson
-  github: jefflufc
+  github: JEFFLUFC
   linkedin: t-jefferson
   slack: U02FPPCEH6H
   availableForHire: false
   company: IBM
-  isTscMember: true
+  isTscMember: false
   repos:
     - java-template
 - name: Lewis Relph
@@ -384,11 +372,11 @@
   availableForHire: false
   slack: U02G8MDDEF3
   company: IBM
-  isTscMember: true
+  isTscMember: false
   repos:
     - java-template
 - name: Semen Tenishchev
-  github: tenischev
+  github: Tenischev
   linkedin: semen-tenishchev
   availableForHire: true
   slack: U011D1DAU6S
@@ -396,7 +384,7 @@
   repos:
     - java-spring-template
 - name: Samridhi Agrawal
-  github: samridhi-98
+  github: Samridhi-98
   slack: U02T2MY9W5T
   linkedin: samridhi-agrawal-1713201ab
   availableForHire: false
@@ -411,7 +399,7 @@
   linkedin: rondebajyoti
   availableForHire: false
   company: Narvar
-  isTscMember: true
+  isTscMember: false
   repos:
     - modelina
 - name: Ivan Garcia Sainz-Aja
@@ -424,7 +412,7 @@
   repos:
     - vs-asyncapi-preview
 - name: Florence Njeri
-  github: florence-njeri
+  github: Florence-Njeri
   linkedin: florencenjeri
   slack: U03D18YKX2M
   twitter: njericodes
@@ -449,13 +437,13 @@
   twitter: vladimirgorej
   availableForHire: false
   company: SmartBear
-  isTscMember: true
+  isTscMember: false
   repos:
     - bindings
     - spec
     - spec-json-schemas
 - name: Alexander Wichmann
-  github: visualbean
+  github: VisualBean 
   linkedin: alexcarlsen
   slack: U04C58GB8TF
   availableForHire: false
@@ -473,7 +461,7 @@
   repos:
     - modelina
 - name: Heiko Henning
-  github: greenrover
+  github: GreenRover
   slack: U03AC4G51H8
   availableForHire: false
   company: mtrail GmbH
@@ -532,3 +520,4 @@
   isTscMember: false
   repos:
     - bundler
+    - optimizer
