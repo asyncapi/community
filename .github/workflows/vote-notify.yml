@@ -10,19 +10,28 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
 
-      - uses: jorgebg/stateful-action@v0.3
+      # To store the state of the votes and the last time the TSC members were notified
+      # The format of the file is:
+      # {
+      #   "issue_number": {
+      #     "status": "open" | "closed",
+      #     "last_notified": "2021-09-01T00:00:00Z"
+      #   }
+      # }
+      - uses: jorgebg/stateful-action@bd279992190b64c6a5906c3b75a6f2835823ab46
         id: state
         with:
           branch: vote_state
 
+      # List all the open issues with the label "vote open"
       - name: List current open issues
-        uses: actions/github-script@v3
+        uses: actions/github-script@v7
         id: list
         with:
           script: |
-            const { data: issues } = await github.issues.listForRepo({
+            const { data: issues } = await github.rest.issues.listForRepo({
               owner: context.repo.owner,
               repo: context.repo.repo,
               labels: 'vote open'
@@ -30,6 +39,7 @@ jobs:
             return issues;
           github-token: ${{ secrets.GITHUB_TOKEN }}
 
+      # Fetch the current state from the vote_status.json file
       - name: Fetch Current State
         id: fetch
         run: |
@@ -47,17 +57,18 @@ jobs:
           echo "vote_status=$json" >> $GITHUB_OUTPUT
       
       - name: Install the dependencies
-        run: npm install js-yaml@4.1.0
+        run: npm install js-yaml@4.1.0 axios@1.7.4
         shell: bash
 
       - name: Notify TSC Members
         # if: steps.list.outputs.result.length > 0
-        uses: actions/github-script@v6
+        uses: actions/github-script@v7
         id: notify
         with:
           script: |
             const yaml = require('js-yaml');
             const fs = require('fs');
+            const axios = require('axios');
 
             const issues = ${{ steps.list.outputs.result }};
             const state = ${{ steps.fetch.outputs.vote_status }};
@@ -96,7 +107,7 @@ jobs:
                 issue_number: issue.number,
               });
 
-              const voteOpeningComment = comments.find(comment => comment.body.includes('Vote created') && comment.user.login === 'git-vote[bot]');
+              const voteOpeningComment = comments.findLast(comment => comment.body.includes('Vote created') && comment.user.login === 'git-vote[bot]');
 
               if (!voteOpeningComment) {
                 console.log(`Vote Opening Comment not found for issue #${issue.number}`);
@@ -116,7 +127,20 @@ jobs:
               for (const member of leftToVote) {
                 console.log(`Notifying ${member.name} about issue #${issue.number}`);
 
-                // TODO: Implement Notification Sending
+                const message = `👋 Hi ${member.name},\nYour vote is required on the following issue: *#${issue.number}*.\n*Issue Details*: <${issue.html_url}|View and cast your vote here>\nYour input is crucial to our decision-making process. Please take a moment to review the issue and share your thoughts.\nThank you for your contribution! 🙏`;
+
+                // Sending Slack DM via API
+                const response = await axios.post('https://slack.com/api/chat.postMessage', {
+                  channel: member.slack,
+                  text: message,
+                }, {
+                  headers: {
+                    'Authorization': `Bearer ${{ secrets.SLACK_TOKEN }}`,
+                    'Content-Type': 'application/json',
+                  },
+                });
+
+                console.log(`Slack DM sent to ${member.name}`);
               }
               state[issue.number].last_notified = new Date().toISOString();
             }
