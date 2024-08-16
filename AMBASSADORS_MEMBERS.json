@@ -686,5 +686,45 @@
         "link": "https://www.asyncapi.com/casestudies/hdiglobal"
       }
     ]
+  },
+{
+    "name": "Abdul Jaleel Kavungal",
+    "github": "abduljaleel",
+    "twitter": "",
+    "linkedin": "abduljaleelkavungal",
+    "country": "AU",
+    "bio": "Engineering Leader with a pronounced focus on design and delivery of engineering solutions within cloud technology, diligently focus on cloud-native and serverless technologies and pioneering the integration of AI to elevate and advance these technologies. His cloud-native approach aims to deliver value for organizations in a timely manner, with a consistent and mindful adherence to DevSecOps principles to intertwine security within the engineering process. As a strong supporter of observability engineering, he gives priority to introducing detailed telemetry pipelines across infrastructure and application stacks for enhancing developer velocity. Within sustainability tech, he navigates through the integration and exploration of sustainability-focused cloud resource optimizations, employing a systems-thinking approach to both FinOps and Sustainability. Ensuring a balance between technical acumen and collaborative interaction, he orchestrates the successful delivery of cloud-native engineering solutions, emphasizing efficient resource management and amplifying developer experience through both strategic and AI-augmented automations.",
+    "company": "HESTA",
+    "title": "Cloud Engineering Lead",
+    "img": "https://avatars.githubusercontent.com/u/16448905?v=4",
+    "contributions": [
+      {
+        "type": "talk",
+        "title": "AWS Appflow, Athena and Quicksight in Action - Workshop",
+        "date": {
+          "year": 2021,
+          "month": "April"
+        },
+        "link": "https://github.com/abduljaleel/workshop-appflow-athena-quicksight"
+      },
+      {
+        "type": "talk",
+        "title": "GraphQL: The Future-Forward Path To API Modernisation",
+        "date": {
+          "year": 2023,
+          "month": "October"
+        },
+        "link": "https://www.apidays.global/speaker/abdul-jaleel-kavungal/"
+      },
+      {
+        "type": "article",
+        "title": "Generative AI trends in 2024",
+        "date": {
+          "year": 2024,
+          "month": "February"
+        },
+        "link": "https://medium.com/@abduljaleelkavungal/generative-ai-trends-in-2024-fec4ee899580"
+      }
+    ]
   }
 ]
