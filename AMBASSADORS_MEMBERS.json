@@ -724,6 +724,15 @@
           "month": "February"
         },
         "link": "https://medium.com/@abduljaleelkavungal/generative-ai-trends-in-2024-fec4ee899580"
+      },
+      {
+        "type": "article",
+        "title": "RAG : Unleashing the Full Potential of Large Language Models in Question Answering",
+        "date": {
+          "year": 2023,
+          "month": "November"
+        },
+        "link": "https://medium.com/@abduljaleelkavungal/rag-how-to-unleash-the-full-potential-of-llms-in-question-answering-dbc472b23d21"
       }
     ]
   }
