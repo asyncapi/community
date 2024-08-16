@@ -47,7 +47,7 @@ School Leaders: These are  ambassadors leading all the developers in their schoo
 
 Skill-Based Team Leads: These are ambassadors leading different skill-based teams, such as design team leads, content team leads, etc. The ambassadors in these teams are responsible to their team leads.
 
-AsycAPI Community Manager: Ultimately, ambassadors are directly under the AsyncAPI Ambassadors Program. Issues and concerns should be reported to the Community Manager.
+AsyncAPI Community Manager: Ultimately, ambassadors are directly under the AsyncAPI Ambassadors Program. Issues and concerns should be reported to the Community Manager.
 
    
 ### Student Ambassadors duties
