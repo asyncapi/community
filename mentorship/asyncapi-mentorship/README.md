@@ -134,4 +134,4 @@ AsyncAPI is not required to pay any stipends to any Participant that violates an
 
 ## References
 
-This document was adapted from the [GSOC Guidlines and Rules](https://summerofcode.withgoogle.com/rules).
+This document was adapted from the [GSOC Guidelines and Rules](https://summerofcode.withgoogle.com/rules).
