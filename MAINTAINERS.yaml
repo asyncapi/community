@@ -7,6 +7,9 @@
   isTscMember: true
   repos:
     - website
+    - conference-website
+    - brand
+  githubID: 105395613
 - name: Aayush Sahu
   github: aayushmau5
   linkedin: aayushmau5
@@ -16,6 +19,7 @@
   isTscMember: true
   repos:
     - diff
+  githubID: 54525741
 - name: Abir Pal
   linkedin: imabp
   slack: U01S8EQ9LQ2
@@ -25,6 +29,7 @@
   isTscMember: true
   repos:
     - problem
+  githubID: 53480076
 - name: Akshat Nema
   github: akshatnema
   linkedin: akshat-nema
@@ -34,6 +39,7 @@
   isTscMember: true
   repos:
     - website
+  githubID: 76521428
 - name: Ansh Goyal
   github: anshgoyalevil
   linkedin: thisisanshg
@@ -43,6 +49,7 @@
   isTscMember: true
   repos:
     - website
+  githubID: 94157520
 - name: Anand Sunderraman
   github: anandsunderraman
   linkedin: anand-sunderraman-a6b7a131
@@ -51,6 +58,7 @@
   isTscMember: true
   repos:
     - go-watermill-template
+  githubID: 4500774
 - name: Ashish Padhy
   github: Shurtu-gal
   linkedin: ashish-padhy3023
@@ -60,6 +68,8 @@
   isTscMember: true
   repos:
     - github-action-for-cli
+    - cli
+  githubID: 100484401
 - name: Cameron Rushton
   github: CameronRushton
   slack: U01DVKKAV5K
@@ -67,9 +77,11 @@
   company: Solace
   isTscMember: true
   repos:
+    - spec-json-schemas
+    - bindings
     - java-spring-cloud-stream-template
     - python-paho-template
-    - bindings
+  githubID: 32455969
 - name: Dale Lane
   github: dalelane
   linkedin: dalelane
@@ -79,9 +91,12 @@
   isTscMember: true
   company: IBM
   repos:
-    - avro-schema-parser
+    - spec
+    - spec-json-schemas
     - bindings
+    - avro-schema-parser
     - java-template
+  githubID: 1444788
 - name: Emiliano Zublena
   github: emilianozublena
   linkedin: emilianozublena
@@ -89,7 +104,8 @@
   availableForHire: false
   isTscMember: false
   repos:
-    - asyncapi-php-template
+    - php-template
+  githubID: 466639
 - name: Fran Méndez
   github: fmvilas
   slack: U34F2JRRS
@@ -97,16 +113,21 @@
   linkedin: fmvilas
   isTscMember: true
   repos:
-    - raml-dt-schema-parser
-    - avro-schema-parser
-    - openapi-schema-parser
-    - asyncapi-react
-    - glee
-    - nodejs-ws-template
-    - parser-js
     - spec
     - spec-json-schemas
+    - asyncapi-react
+    - extensions-catalog
+    - converter-js
     - bindings
+    - enterprise-patterns
+    - raml-dt-schema-parser
+    - openapi-schema-parser
+    - html-template
+    - markdown-template
+    - nodejs-ws-template
+    - generator-hooks
+    - brand
+  githubID: 242119
 - name: Gerald Loeffler
   github: GeraldLoeffler
   linkedin: geraldloeffler
@@ -114,7 +135,9 @@
   availableForHire: false
   isTscMember: false
   repos:
+    - spec-json-schemas
     - bindings
+  githubID: 1985716
 - name: Jonas Lagoni
   github: jonaslagoni
   linkedin: jonaslagoni
@@ -123,14 +146,18 @@
   company: Postman
   isTscMember: true
   repos:
-    - dotnet-nats-template
-    - ts-nats-template
-    - generator-react-sdk
+    - spec-json-schemas
     - generator
-    - modelina
     - parser-js
-    - parser-api
+    - converter-js
+    - ts-nats-template
+    - dotnet-nats-template
+    - generator-react-sdk
+    - modelina
     - simulator
+    - parser-api
+    - EDAVisualiser
+  githubID: 13396189
 - name: Khuda Dad Nomani
   github: KhudaDad414
   twitter: KhudaDadNomani
@@ -140,10 +167,12 @@
   company: Postman
   isTscMember: true
   repos:
-    - bindings
-    - glee
+    - spec-json-schemas
+    - studio
     - .github
     - optimizer
+    - glee
+  githubID: 32505158
 - name: Laurent Broudoux
   github: lbroudoux
   twitter: lbroudoux
@@ -153,7 +182,9 @@
   company: Postman
   isTscMember: true
   repos:
+    - spec-json-schemas
     - bindings
+  githubID: 1538635
 - name: Ludovic Dussart
   github: M3lkior
   linkedin: ludovic-dussart-846a8063
@@ -164,6 +195,7 @@
   isTscMember: true
   repos:
     - avro-schema-parser
+  githubID: 5501911
 - name: Lukasz Gornicki
   github: derberg
   linkedin: lukasz-gornicki-a621914
@@ -173,17 +205,30 @@
   company: Postman
   isTscMember: true
   repos:
-    - diff
-    - generator-filters
-    - generator-hooks
-    - github-action-for-generator
+    - spec
+    - website
+    - spec-json-schemas
     - generator
+    - asyncapi-react
+    - extensions-catalog
+    - bindings
+    - enterprise-patterns
+    - html-template
+    - markdown-template
     - nodejs-template
     - nodejs-ws-template
-    - spec
-    - spec-json-schemas
+    - java-spring-template
+    - github-action-for-cli
+    - .github
+    - jasyncapi
+    - generator-hooks
+    - vs-asyncapi-preview
     - template-for-generator-templates
-    - website
+    - community
+    - diff
+    - chatbot
+    - infra
+  githubID: 6995927
 - name: Maciej Urbańczyk
   github: magicmatatjahu
   availableForHire: false
@@ -192,18 +237,29 @@
   company: Travelping GmbH
   isTscMember: true
   repos:
-    - asyncapi-react
-    - converter-go
-    - generator-react-sdk
+    - website
     - generator
+    - asyncapi-react
+    - parser-go
+    - parser-js
+    - converter-js
+    - converter-go
+    - studio
     - html-template
     - markdown-template
+    - github-action-for-cli
+    - ts-nats-template
+    - dotnet-nats-template
+    - template-for-generator-templates
+    - generator-react-sdk
     - modelina
-    - parser-js
-    - parser-go
-    - server-api
     - template-for-go-projects
-    - website
+    - diff
+    - chatbot
+    - server-api
+    - EDAVisualiser
+    - problem
+  githubID: 20404945
 - name: Azeez Elegbede
   linkedin: acebuild
   github: AceTheCreator
@@ -213,26 +269,20 @@
   availableForHire: false
   isTscMember: true
   repos:
+    - conference-website
     - chatbot
+  githubID: 40604284
 - name: Michael Davis
   github: damaru-inc
   availableForHire: false
   slack: UH3B166TD
   isTscMember: false
   repos:
+    - spec-json-schemas
+    - bindings
     - java-spring-cloud-stream-template
     - python-paho-template
-    - bindings
-- name: Missy Turco
-  github: mcturco
-  twitter: missyturco
-  slack: U02JVEQ6S9W
-  linkedin: missy-turco-a476a6126
-  availableForHire: false
-  company: Postman
-  isTscMember: false
-  repos:
-    - brand
+  githubID: 3926925
 - name: Nektarios Fifes
   github: NektariosFifes
   linkedin: nektarios-fifes-372740220
@@ -241,6 +291,7 @@
   isTscMember: true
   repos:
     - simulator
+  githubID: 61620751
 - name: Pavel Bodiachevskii
   github: Pakisan
   slack: U0132LQU8C9
@@ -248,7 +299,11 @@
   availableForHire: false
   isTscMember: true
   repos:
+    - spec-json-schemas
+    - tck
     - jasyncapi
+    - jasyncapi-idea-plugin
+  githubID: 3388414
 - name: Philip Schlesinger
   github: theschles
   slack: U054UUYBNLF
@@ -257,6 +312,7 @@
   isTscMember: true
   repos:
     - jasyncapi-idea-plugin
+  githubID: 901430
 - name: Prince Rajpoot
   github: princerajpoot20
   linkedin: princerajpoot
@@ -266,6 +322,7 @@
   isTscMember: true
   repos:
     - studio
+  githubID: 44585452
 - name: Richard Coppen
   github: rcoppen
   linkedin: richard-coppen
@@ -274,7 +331,9 @@
   company: IBM
   isTscMember: true
   repos:
+    - spec-json-schemas
     - bindings
+  githubID: 30902631
 - name: Samir AMZANI
   github: Amzani
   slack: U01N6AW5V5G
@@ -285,6 +344,8 @@
   isTscMember: true
   repos:
     - studio
+    - cli
+  githubID: 554438
 - name: Sergio Moya
   github: smoya
   linkedin: smoya
@@ -296,17 +357,19 @@
   repos:
     - spec
     - spec-json-schemas
-    - bindings
-    - parser-api
-    - parser-js
-    - avro-schema-parser
-    - openapi-schema-parser
-    - raml-dt-schema-parser
-    - server-api
     - parser-go
+    - parser-js
     - converter-go
+    - bindings
+    - raml-dt-schema-parser
+    - openapi-schema-parser
+    - avro-schema-parser
     - go-watermill-template
     - template-for-go-projects
+    - parser-api
+    - server-api
+    - infra
+  githubID: 1083296
 - name: Souvik De
   github: Souvikns
   slack: U01SGCZMJKW
@@ -317,8 +380,9 @@
   isTscMember: true
   repos:
     - cli
-    - bundler
     - glee
+    - bundler
+  githubID: 41781438
 - name: Quetzalli Writes
   github: quetzalliwrites
   twitter: QuetzalliWrites
@@ -329,8 +393,7 @@
   isTscMember: true
   repos:
     - website
-    - training
-    - community
+  githubID: 19964402
 - name: David Pereira
   github: BOLT04
   twitter: BOLT2938
@@ -341,6 +404,7 @@
   isTscMember: true
   repos:
     - server-api
+  githubID: 18630253
 - name: Daniel Raper
   github: dan-r
   slack: U02FP8WBFQE
@@ -349,6 +413,7 @@
   isTscMember: true
   repos:
     - java-template
+  githubID: 1384852
 - name: Kieran Murphy
   github: KieranM1999
   linkedin: kieran-murphy-175b0412b
@@ -358,6 +423,7 @@
   isTscMember: false
   repos:
     - java-template
+  githubID: 45017928
 - name: Tom Jefferson
   github: JEFFLUFC
   linkedin: t-jefferson
@@ -367,6 +433,7 @@
   isTscMember: false
   repos:
     - java-template
+  githubID: 54025356
 - name: Lewis Relph
   github: lewis-relph
   availableForHire: false
@@ -375,6 +442,7 @@
   isTscMember: false
   repos:
     - java-template
+  githubID: 91530893
 - name: Semen Tenishchev
   github: Tenischev
   linkedin: semen-tenishchev
@@ -383,6 +451,7 @@
   isTscMember: true
   repos:
     - java-spring-template
+  githubID: 4137916
 - name: Samridhi Agrawal
   github: Samridhi-98
   slack: U02T2MY9W5T
@@ -392,16 +461,7 @@
   isTscMember: true
   repos:
     - modelina
-- name: Debajyoti Halder
-  github: ron-debajyoti
-  twitter: rondebajyoti
-  slack: U02UK9RUPGQ
-  linkedin: rondebajyoti
-  availableForHire: false
-  company: Narvar
-  isTscMember: false
-  repos:
-    - modelina
+  githubID: 54466041
 - name: Ivan Garcia Sainz-Aja
   github: ivangsa
   linkedin: ivangarciasainzaja
@@ -411,6 +471,7 @@
   isTscMember: true
   repos:
     - vs-asyncapi-preview
+  githubID: 1246876
 - name: Florence Njeri
   github: Florence-Njeri
   linkedin: florencenjeri
@@ -420,6 +481,7 @@
   isTscMember: true
   repos:
     - generator
+  githubID: 40742916
 - name: Jeremy Whitlock
   github: whitlockjc
   linkedin: whitlockjc
@@ -429,7 +491,9 @@
   company: Google
   isTscMember: true
   repos:
+    - spec-json-schemas
     - bindings
+  githubID: 98899
 - name: Vladimír Gorej
   github: char0n
   linkedin: vladimirgorej
@@ -439,18 +503,22 @@
   company: SmartBear
   isTscMember: false
   repos:
-    - bindings
     - spec
     - spec-json-schemas
+    - bindings
+  githubID: 193286
 - name: Alexander Wichmann
-  github: VisualBean 
+  github: VisualBean
   linkedin: alexcarlsen
   slack: U04C58GB8TF
   availableForHire: false
   company: The LEGO Group
   isTscMember: true
   repos:
+    - spec-json-schemas
     - bindings
+    - saunter
+  githubID: 5294032
 - name: Kenneth Aasan
   github: kennethaasan
   slack: U037S2HK4TS
@@ -460,6 +528,7 @@
   isTscMember: true
   repos:
     - modelina
+  githubID: 1437394
 - name: Heiko Henning
   github: GreenRover
   slack: U03AC4G51H8
@@ -467,7 +536,11 @@
   company: mtrail GmbH
   isTscMember: true
   repos:
+    - spec
+    - spec-json-schemas
+    - bindings
     - protobuf-schema-parser
+  githubID: 512850
 - name: connil
   github: connil
   slack: U03A51H8
@@ -476,6 +549,7 @@
   isTscMember: false
   repos:
     - dotnet-rabbitmq-template
+  githubID: 6583798
 - name: mr-nuno
   github: mr-nuno
   slack: U03A5145
@@ -484,6 +558,7 @@
   isTscMember: false
   repos:
     - dotnet-rabbitmq-template
+  githubID: 1067841
 - name: Thulisile Sibanda
   github: thulieblack
   linkedin: v-thulisile-sibanda
@@ -494,7 +569,9 @@
   isTscMember: true
   repos:
     - website
+    - conference-website
     - community
+  githubID: 66913810
 - name: Ashmit JaiSarita Gupta
   github: devilkiller-ag
   linkedin: jaisarita
@@ -504,6 +581,7 @@
   isTscMember: true
   repos:
     - modelina
+  githubID: 43639341
 - name: Sambhav Gupta
   github: sambhavgupta0705
   linkedin: sambhavgupta0705
@@ -513,11 +591,162 @@
   isTscMember: true
   repos:
     - website
+  githubID: 81870866
 - name: Viacheslav Turovskyi
   github: aeworxet
   slack: U01G3U01SVC
   availableForHire: false
   isTscMember: false
   repos:
-    - bundler
     - optimizer
+    - bundler
+  githubID: 16149591
+- name: Rohit
+  github: TRohit20
+  twitter: TRRohit20
+  isTscMember: false
+  repos:
+    - website
+  githubID: 108233235
+- name: 'Bhaswati Roy '
+  github: BhaswatiRoy
+  twitter: swiftiebhaswati
+  isTscMember: false
+  repos:
+    - website
+  githubID: 78029145
+- name: 'Vaishnavi '
+  github: VaishnaviNandakumar
+  isTscMember: false
+  repos:
+    - website
+  githubID: 41518119
+- name: Joy Almeida
+  github: J0SAL
+  twitter: _j0sal
+  isTscMember: false
+  repos:
+    - website
+  githubID: 52382282
+- name: Mihael Bosnjak
+  github: mboss37
+  isTscMember: false
+  repos:
+    - spec-json-schemas
+    - bindings
+  githubID: 29606687
+- name: Steve Head
+  github: SrfHead
+  isTscMember: false
+  repos:
+    - spec-json-schemas
+    - bindings
+  githubID: 13767299
+- name: Dec Kolakowski
+  github: dpwdec
+  isTscMember: false
+  repos:
+    - spec-json-schemas
+    - bindings
+  githubID: 51292634
+- name: Ian Cooper
+  github: iancooper
+  twitter: ICooper
+  isTscMember: false
+  repos:
+    - spec-json-schemas
+    - bindings
+  githubID: 45537
+- name: Michael Wildman
+  github: m-wild
+  isTscMember: false
+  repos:
+    - saunter
+  githubID: 3260812
+- name: yurvon-screamo
+  github: yurvon-screamo
+  isTscMember: false
+  repos:
+    - saunter
+  githubID: 109030262
+- name: Jonathan Stoikovitch
+  github: jstoiko
+  twitter: jstoiko
+  isTscMember: false
+  repos:
+    - raml-dt-schema-parser
+  githubID: 9660342
+- name: Rishi
+  github: kaushik-rishi
+  twitter: KaushikRishi07
+  isTscMember: false
+  repos:
+    - nodejs-template
+  githubID: 52498617
+- name: Akshit Gupta
+  github: akkshitgupta
+  twitter: akkshitgupta
+  availableForHire: true
+  isTscMember: false
+  repos:
+    - modelina
+  githubID: 96991785
+- name: Leigh Johnson
+  github: leigh-johnson
+  twitter: grepLeigh
+  isTscMember: false
+  repos:
+    - modelina
+  githubID: 2601819
+- name: Zbigniew Malcherczyk
+  github: ferror
+  isTscMember: false
+  repos:
+    - modelina
+  githubID: 17534504
+- name: artur-ciocanu
+  github: artur-ciocanu
+  isTscMember: false
+  repos:
+    - modelina
+  githubID: 743192
+- name: Vinit Shahdeo
+  github: vinitshahdeo
+  twitter: Vinit_Shahdeo
+  availableForHire: true
+  isTscMember: false
+  repos:
+    - diff
+  githubID: 20594326
+- name: Anubhav Vats
+  github: onbit-uchenik
+  twitter: postmanlabs
+  availableForHire: true
+  isTscMember: false
+  repos:
+    - diff
+  githubID: 46771418
+- name: Akshaya Gurlhosur
+  github: AGurlhosur
+  isTscMember: false
+  repos:
+    - java-template
+  githubID: 91530186
+- name: Philip Schlesinger @ Cryoport
+  github: philCryoport
+  isTscMember: false
+  repos:
+    - jasyncapi-idea-plugin
+  githubID: 28901899
+- name: nathanaelweber
+  github: nathanaelweber
+  isTscMember: false
+  repos:
+    - protobuf-schema-parser
+  githubID: 40006685
+- name: Barbanio González
+  github: Barbanio
+  isTscMember: false
+  repos:
+    - learning-paths
+  githubID: 77982319
