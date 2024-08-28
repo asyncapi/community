@@ -1,0 +1,45 @@
+name: Automatic Slack Management
+
+on:
+  push:
+    paths:
+      - '**/slack/**/*'
+      - 'MAINTAINERS.yaml'
+      - 'WORKING_GROUPS.yaml'
+      - '.github/workflows/slack-integration.yml'
+  
+jobs:
+  deploy-changes-to-slack:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Deploy changes to Slack
+        run: |
+          cd .github/workflows/slack
+          terraform init
+          terraform apply \
+            -var "slack_token=${{ secrets.SLACK_INFRA_TOKEN }}" \
+            -auto-approve
+      - name: Check if there are any uncommitted changes
+        id: git-check
+        run: |
+          # Set the output should_push to true if there are uncommitted changes
+          if [ -n "$(git status --porcelain)" ]; then
+            echo "Changes detected"
+            echo "should_push=true" >> $GITHUB_OUTPUT
+          else
+            echo "No changes detected"
+            echo "should_push=false" >> $GITHUB_OUTPUT
+          fi
+      - name: Push changes to GitHub
+        if: steps.git-check.outputs.should_push == 'true'
+        uses: peter-evans/create-pull-request@38e0b6e68b4c852a5500a94740f0e535e0d7ba54 # use 4.2.4 https://github.com/peter-evans/create-pull-request/releases/tag/v4.2.4
+        with:
+          token: ${{ secrets.GH_TOKEN }}
+          commit-message: 'chore(slack): update slack configuration'
+          committer: asyncapi-bot <info@asyncapi.io>
+          author: asyncapi-bot <info@asyncapi.io>
+          title: 'ci(slack): update slack configuration'
+          body: 'This PR was automatically created by the Automatic Slack Management GitHub Action.'
+          branch: 'chore/slack-update-${{ github.run_number }}'
