@@ -1,0 +1,53 @@
+# - Groups:
+# - name: (Required) The name of the user group.
+# - handle: (Required) A name for the user group that is unique among channels, users, and user groups.
+# - description: (Optional) A short description of the user group.
+# - users: (Optional) A list of user IDs that are part of the user group.
+# - data_source: (Optional) The data source to use for the user group. If users is not provided, the user group will be populated with users from the data source.
+# - channels: (Optional) A list of channel IDs for channels that the user group will be in.
+
+# IMPORTANT: Once a user group is created it cannot be deleted. And an existing user group cannot be created again. 
+# Before adding them here please make sure to import them like this:
+# terraform import slack_usergroup.<usergroup_name> <usergroup_id>
+
+- name: "TSC Members"
+  handle: "tsc"
+  description: "TSC members - https://www.asyncapi.com/community/tsc"
+  data_source: "tsc_members_user_ids"
+
+- name: "Maintainers"
+  handle: "maintainers"
+  description: "Maintainers"
+  data_source: "maintainers_user_ids"
+
+- name: "Studio"
+  handle: "studio"
+  description: "To notify all regular Studio contributors at once, please open PR to get added"
+  users:
+    - "U01RWDD69PZ"
+    - "U0572R8J927"
+    - "U058PQFJPS4"
+    - "U01RVRD1TCL"
+    - "U01EB02BP7A"
+    - "U01TP1KJV1R"
+    - "U04STTQHV18"
+    - "U01N6AW5V5G"
+    - "U01SGCZMJKW"
+  channels:
+    - "CQVJXFNQL"
+    - "C02JW8DA0DC"
+
+
+- name: "CoC Committee"
+  handle: "coc_committee"
+  description: "To notify the code of conduct team all at once when there is a question or anything related to them."
+  users: 
+    - "U01RWDD69PZ"
+    - "U01J42QDSLU"
+    - "U03CNHGEUR1"
+    - "UN22ZTLHG"
+    - "U03CNJPMT7C"
+    - "U02AKC14WAJ"
+  channels:
+    - "C06FLH3AVSB"
+    - "C06CQCK03EJ"
