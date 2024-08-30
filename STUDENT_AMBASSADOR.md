@@ -10,9 +10,7 @@ In light of the impact created by the AsyncAPI Ambassador Program, we have decid
 - Nurture community growth and create a welcoming environment to spread knowledge about the project.
 
 ### How does the program work?
-The student ambassador selection process will be as transparent as possible. Similar to the existing ambassador program:
-
-- The ambassador selection process will be as transparent as possible.
+Similar to the existing ambassador program, the student ambassador selection process will be as transparent as possible:
 - The model currently in place for adding members to the Amabassadors through PR will be used.
 - The TSC or delegated maintainers of community repositories will evaluate applications according to compliance requirements via a traditional PR flow.
 - All student ambassador information will be displayed on the AsyncAPI website in a list after the PR is merged.
