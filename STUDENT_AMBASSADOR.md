@@ -2,12 +2,12 @@ This document covers the organizational and operational aspects of the AsyncAPI 
 
 ### What is the AsyncAPI Student Ambassador Program?
 
-After seeing the impact of the AsyncAPI Ambassador Program we thought to extend this to the Student commnunity. This aims to bring AsyncAPI closer to both current users and potential new project users in the student community. It also aims to provide users and community members with the necessary tools and resources to:
+In light of the impact created by the AsyncAPI Ambassador Program, we have decided to extend a similar initiative to the Student community. The initiative aims to bring AsyncAPI closer to current and potential new project users in the student community. It also aims to provide users and community members with the necessary tools and resources to:
 
 - Promote user cooperation and disseminate the necessary tools to any specific user.
 - Engage with the project in some way, either as a contributor, blogger, speaker, etc.
 - Speak at community events or write technical content (i.e., blog posts) that solves community needs in various institutions. 
-- Nurture community growth and a welcoming environment to spread knowledge about the project.
+- Nurture community growth and create a welcoming environment to spread knowledge about the project.
 
 ### How does the program work?
 The student ambassador selection process will be as transparent as possible. Similar to the existing ambassador program:
