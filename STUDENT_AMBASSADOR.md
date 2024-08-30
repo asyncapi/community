@@ -2,22 +2,17 @@ This document covers the organizational and operational aspects of the AsyncAPI 
 
 ### What is the AsyncAPI Student Ambassador Program?
 
-In light of the impact created by the AsyncAPI Ambassador Program, we have decided to extend a similar initiative to the student community. The initiative aims to bring AsyncAPI closer to both current and potential new project users in the student community. It also aims to provide users and community members with the necessary tools and resources to:
+In light of the impact created by the AsyncAPI Ambassador Program, we have decided to extend a similar initiative to the Student community. The initiative aims to bring AsyncAPI closer to current and potential new project users in the student community. It also aims to provide users and community members with the necessary tools and resources to:
 
 - Promote user cooperation and disseminate the necessary tools to any specific user.
 - Engage with the project in some way, either as a contributor, blogger, speaker, etc.
 - Speak at community events or write technical content (i.e., blog posts) that solves community needs in various institutions. 
 - Nurture community growth and create a welcoming environment to spread knowledge about the project.
 
-### Difference between AsyncAPI Ambassador and AsyncAPI Student Ambassador
-The AsyncAPI Ambassador and AsyncAPI Student Ambassador programs are both designed to promote and support the AsyncAPI initiative but cater to different audiences and have distinct roles, responsibilities, and requirements. AsyncAPI Ambassador is open to professionals or anyone passionate about the AsyncAPI initiative, while the AsyncAPI Student Ambassador program is geared towards students and recent graduates who are interested in sharing the AsyncAPI knowledge with their institution and alumni community.
-
-
 ### How does the program work?
-The student ambassador selection process will be as transparent as possible. Similar to the existing ambassador program:
-
-- The model currently in place for adding members to the Ambassadors through PR will be used.
-- The TSC or delegated maintainers of community repositories, will evaluate applications according to compliance requirements via a traditional PR flow.
+Similar to the existing ambassador program, the student ambassador selection process will be as transparent as possible:
+- The model currently in place for adding members to the Amabassadors through PR will be used.
+- The TSC or delegated maintainers of community repositories will evaluate applications according to compliance requirements via a traditional PR flow.
 - All student ambassador information will be displayed on the AsyncAPI website in a list after the PR is merged.
 - The program has the team tag `@asyncapi/student-ambassadors` to notify ambassadors on GitHub
 
