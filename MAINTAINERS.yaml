@@ -750,3 +750,9 @@
   repos:
     - learning-paths
   githubID: 77982319
+- name: Lorenz Simon
+  github: lorenzsimon
+  isTscMember: false
+  repos:
+    - kotlin-asyncapi
+  githubID: 39913716
