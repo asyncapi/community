@@ -11,7 +11,7 @@
 
 ## Introduction
 
-Welcome to our journey of fostering innovation and growth through the AsyncAPI community. As the Community Marketing Specialist, I'm thrilled to lead this initiative alongside our dedicated team. Our goal is to bring together a vibrant developer community and ignite a passion for event-driven architecture and asynchronous APIs through AsyncAPI adoption. By embracing this mission, we aim to enhance open-source tools to easily build and maintain your event-driven architecture. All are powered by the AsyncAPI specification, the industry standard for defining asynchronous APIs. This initiative is more than just an open-source project; it's a platform for collaboration, learning, building, and empowerment.
+Welcome to our journey of fostering innovation and growth through the AsyncAPI community. As the Community Marketing Specialist, I'm thrilled to lead this initiative alongside our dedicated team. Our goal is to bring together a vibrant community and ignite a passion for event-driven architecture and asynchronous APIs through AsyncAPI adoption. By embracing this mission, we aim to enhance open-source tools to easily build and maintain your event-driven architecture. All are powered by the AsyncAPI specification, the industry standard for defining asynchronous APIs. This initiative is more than just an open-source project; it's a platform for collaboration, learning, building, and empowerment.
 
 ## Demographics
 
