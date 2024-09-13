@@ -73,12 +73,26 @@ The primary goal of our AsyncAPI community strategy is to foster the adoption an
 |                                  | Like and repost mentions                                                                                                                                                                                                                             |                                       |
 |                                  | Create engaging/educational social media content                                                                                                                                                                                                    |                                       |
 |                                  | Host Twitter(X) space/LinkedIn live when necessary                                                                                                                                                                                                  |                                       |
-|                                  | Create content around community members, such as community spotlight, Ambassador spotlight, Bounty Programs, etc.                                                                                                                                   |                                       |
+|                                  | Create content around community members, such as community spotlight, Ambassador spotlight, Bounty Program, etc.                                                                                                                                   |                                       |
 | **Community Advocacy Program**   | Establish a community advocacy program to recognize and empower passionate advocates who actively promote AsyncAPI within their networks and communities.                                                                                              |                                       |
 |                                  | Enhance and promote the Bounty Program among the maintainers                                                                                                                                                                                                           |                                       |
 |                                  | Launch Community and Ambassador Spotlight                                                                                                                                                                                                           |                                       |
 |                                  | Launch the AsyncAPI Student Ambassador Program                                                                                                                                                                                                  |                                       |
 |                                  | Launch AsyncAPI Africa                                                                                                                                                                                                                              |                                       |
+
+## Automated Tweets Approach
+
+To maintain consistency and visibility around key updates, we will continue using automated tweets for version updates and meeting reminders. However, to improve engagement and avoid content fatigue, we will refine our approach as follows:
+
+- **Selective Automation:** Automated tweets will be limited to major version releases and significant meetings. These tweets should be concise, informative, and include visuals where possible to increase visibility.
+
+- **Personalized Follow-Ups:** Following an automated tweet, a manual follow-up tweet will be posted, providing context, highlighting key features, or inviting community feedback. This adds a personal touch and encourages engagement.
+
+- **Interactive Elements:** Occasionally, we will turn automated updates into interactive content (e.g., polls, questions) to enhance community interaction.
+
+- **Community Highlights:** Encourage community members to share their perspectives on new versions or meeting outcomes. We will retweet and promote these to diversify content and build a more engaging narrative.
+
+- **Performance Review:** Regularly review the engagement metrics for automated tweets and make data-driven adjustments. A/B testing will be used to determine if manual content performs better in certain contexts.
 
 ## Community Contribution
 
@@ -100,7 +114,7 @@ The success of AsyncAPI depends heavily on the strength and passion of its contr
 | **Mentorship Program**                              | Pair new contributors with experienced mentors to provide guidance and support throughout their contribution journey          | TBD    |
 | **Regular Check-ins**                               | Schedule regular check-ins with contributors to ensure they are progressing well and address any challenges they face         | Ongoing               |
 | **Feedback Loop**                                   | Establish a feedback loop where contributors can provide suggestions for improving the contribution process                   | Ongoing               |
-| **Bounty Program**                                 | It is a regular contribution to the AsyncAPI project. It is for engineers who already have professional levels mid and senior, and whose skills already allow them to complete the pre-defined assignments      | Quarterly              |
+| **Bounty Program** | Regularly publish a set of mid-level and senior-level tasks that are currently in demand among AsyncAPI Maintainers, financially rewarding their completion | Quarterly |
 
 ## Events and Activities
 
