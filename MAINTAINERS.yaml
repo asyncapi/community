@@ -227,7 +227,6 @@
     - community
     - diff
     - chatbot
-    - infra
   githubID: 6995927
 - name: Maciej Urbańczyk
   github: magicmatatjahu
@@ -368,7 +367,6 @@
     - template-for-go-projects
     - parser-api
     - server-api
-    - infra
   githubID: 1083296
 - name: Souvik De
   github: Souvikns
@@ -756,3 +754,9 @@
   repos:
     - kotlin-asyncapi
   githubID: 39913716
+- name: Jonas Süskind
+  github: sueskind
+  isTscMember: false
+  repos:
+    - kotlin-asyncapi
+  githubID: 52210599
