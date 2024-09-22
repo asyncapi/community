@@ -67,6 +67,7 @@
   availableForHire: true
   isTscMember: true
   repos:
+    - studio
     - github-action-for-cli
     - cli
   githubID: 100484401
@@ -578,6 +579,7 @@
   availableForHire: true
   isTscMember: true
   repos:
+    - website
     - modelina
   githubID: 43639341
 - name: Sambhav Gupta
@@ -760,3 +762,11 @@
   repos:
     - kotlin-asyncapi
   githubID: 52210599
+- name: Andrei
+  github: gimlet2
+  twitter: gimlet2
+  availableForHire: true
+  isTscMember: false
+  repos:
+    - kotlin-asyncapi
+  githubID: 758568
