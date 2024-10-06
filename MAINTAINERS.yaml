@@ -151,8 +151,6 @@
     - generator
     - parser-js
     - converter-js
-    - ts-nats-template
-    - dotnet-nats-template
     - generator-react-sdk
     - modelina
     - simulator
@@ -248,8 +246,6 @@
     - html-template
     - markdown-template
     - github-action-for-cli
-    - ts-nats-template
-    - dotnet-nats-template
     - template-for-generator-templates
     - generator-react-sdk
     - modelina
