@@ -127,7 +127,7 @@ jobs:
               for (const member of leftToVote) {
                 console.log(`Notifying ${member.name} about issue #${issue.number}`);
 
-                const message = `👋 Hi ${member.name},\nYour vote is required on the following issue: *#${issue.number}*.\n*Issue Details*: <${issue.html_url}|View and cast your vote here>\nYour input is crucial to our decision-making process. Please take a moment to review the issue and share your thoughts.\nThank you for your contribution! 🙏`;
+                const message = `👋 Hi ${member.name},\nWe need your vote on the following topic: *${issue.title}*.\n*Issue Details*: ${issue.html_url}\nYour input is crucial to our decision-making process. Please take a moment to review the voting topic and share your thoughts.\nThank you for your contribution! 🙏`;
 
                 // Sending Slack DM via API
                 const response = await axios.post('https://slack.com/api/chat.postMessage', {
