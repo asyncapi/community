@@ -45,6 +45,17 @@ Voting cannot be concluded with a comment; it ends when more than half of the us
 
 The Git Vote bot adds a comment that voting is completed.
 
+### Tracking Voting 
+
+We store [the voting history of entire TSC](TSC_VOTING_OVERVIEW.md) since voting automation was introduces.
+
+* 🔕 indicates that the member did not vote.
+* 👍 indicates that the member was in favor.
+* 👎 indicates that the member was against.
+* 👀 indicates that the member abstained from voting.
+
+Tracking file is automatically updated by a bot after each vote is completed. It also records whether the member has voted in the last 3 months, helping to identify inactive TSC Members.
+
 ### Note
 
 * As per the [Charter](./CHARTER.md), a quorum is not needed. However, Git Vote has technical limitations, and a quorum should be reached. That's why we allocate 4 weeks for voting, and it's important to actively encourage participation to ensure that the quorum (where votes cast exceed 50% of eligible voters) is met.
