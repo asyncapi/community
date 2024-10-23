@@ -45,7 +45,7 @@ The Code of Conduct Committee (CoC Committee) responds to, investigates, and res
 
 The Committee has the right and responsibility to remove, edit, or reject comments, commits, code, wiki edits, issues, and other contributions that do not align with this Code of Conduct. The Committee may also temporarily or permanently ban any contributor for inappropriate, threatening, offensive, or harmful behaviors to the community.
 
-For more details, please see the [CoC Committee and Incident Resolution Procedure](https://github.com/asyncapi/community/tree/master/code_of_conduct)).
+For more details, please see the [CoC Committee and Incident Resolution Procedure](https://github.com/asyncapi/community/tree/master/code_of_conduct).
 
 ## Enforcement
 
