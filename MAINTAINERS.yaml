@@ -67,6 +67,7 @@
   availableForHire: true
   isTscMember: true
   repos:
+    - studio
     - github-action-for-cli
     - cli
   githubID: 100484401
@@ -150,8 +151,6 @@
     - generator
     - parser-js
     - converter-js
-    - ts-nats-template
-    - dotnet-nats-template
     - generator-react-sdk
     - modelina
     - simulator
@@ -209,7 +208,6 @@
     - website
     - spec-json-schemas
     - generator
-    - asyncapi-react
     - extensions-catalog
     - bindings
     - enterprise-patterns
@@ -227,7 +225,6 @@
     - community
     - diff
     - chatbot
-    - infra
   githubID: 6995927
 - name: Maciej Urbańczyk
   github: magicmatatjahu
@@ -248,8 +245,6 @@
     - html-template
     - markdown-template
     - github-action-for-cli
-    - ts-nats-template
-    - dotnet-nats-template
     - template-for-generator-templates
     - generator-react-sdk
     - modelina
@@ -269,6 +264,7 @@
   availableForHire: false
   isTscMember: true
   repos:
+    - asyncapi-react
     - conference-website
     - chatbot
   githubID: 40604284
@@ -368,7 +364,6 @@
     - template-for-go-projects
     - parser-api
     - server-api
-    - infra
   githubID: 1083296
 - name: Souvik De
   github: Souvikns
@@ -580,6 +575,7 @@
   availableForHire: true
   isTscMember: true
   repos:
+    - website
     - modelina
   githubID: 43639341
 - name: Sambhav Gupta
@@ -750,3 +746,23 @@
   repos:
     - learning-paths
   githubID: 77982319
+- name: Lorenz Simon
+  github: lorenzsimon
+  isTscMember: false
+  repos:
+    - kotlin-asyncapi
+  githubID: 39913716
+- name: Jonas Süskind
+  github: sueskind
+  isTscMember: false
+  repos:
+    - kotlin-asyncapi
+  githubID: 52210599
+- name: Andrei
+  github: gimlet2
+  twitter: gimlet2
+  availableForHire: true
+  isTscMember: false
+  repos:
+    - kotlin-asyncapi
+  githubID: 758568
