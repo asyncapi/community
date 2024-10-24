@@ -39,7 +39,7 @@ Any maintainer can become a TSC member, meaning that to join the TSC, you need t
 
 You can become a maintainer by doing at least one of the following items within the AsyncAPI Initiative GitHub organization:
 * Initiate a new repository/project and become its maintainer.
-* Donate the existing repository/project and stay as its maintainer. 
+* Donate to the existing repository/project and stay as its maintainer. 
 * Support and commit to existing projects and be invited by other maintainers to join them as a maintainer. Learn more in [Become a maintainer in an existing project](https://github.com/asyncapi/community/blob/master/Become-maintainer-in-existing-project.md)
 
 Joining the TSC is something that you are allowed to do as a maintainer by default, as described in the [charter signed with the Linux Foundation when AsyncAPI joined the foundation](https://github.com/asyncapi/community/blob/master/CHARTER.md). It is not a subject that other TSC members vote on. 
@@ -49,8 +49,8 @@ See current [TSC members](https://www.asyncapi.com/community/tsc).
 ## How to reach out to the TSC
 There are several ways to reach out to the TSC members:
 * Join the [AsyncAPI Slack](https://www.asyncapi.com/slack-invite) and ping the `@tsc` group to ask questions or share your thoughts.
-* Mention the `@asyncapi/tsc_members` GitHub team in any issue, discussion or pull request. This will also send a message in the `95_bot-tsc-members-mentioned` channel in Slack.
+* Mention the `@asyncapi/tsc_members` GitHub team in any issue, discussion, or pull request. This will also send a message in the `95_bot-tsc-members-mentioned` channel in Slack.
 
 > [!IMPORTANT]
 > Please note that the TSC members are volunteers and may not respond immediately.
-> Please be patient and respectful. Also it will be helpful if there is as less spam as possible. For more information, please refer to the [Slack Etiquette](./slack-etiquette.md) document.
+> Please be patient and respectful. Also, it will be helpful if there is as little spam as possible. For more information, please refer to the [Slack Etiquette](./slack-etiquette.md) document.
