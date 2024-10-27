@@ -5,7 +5,7 @@ The AsyncAPI Mentorship makes it easy to sponsor and help train the next generat
 ## Program Cycles and Archive data
 | Year | Term   | Status    | Announcement                                                                                                                                                         | Details                                 |
 | ---- | ------ | --------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------- |
-| 2023 | Jan-Nov | In progress   |       | [Jan-Nov](2023/README.md) |
+| 2023 | Jan-Nov | Completed   |       | [Jan-Nov](2023/README.md) |
 | 2022 | Jan-Nov | Completed   |       | [Jan-Nov](2022/README.md) |
 
 ## Current cycle
@@ -134,4 +134,4 @@ AsyncAPI is not required to pay any stipends to any Participant that violates an
 
 ## References
 
-This document was adapted from the [GSOC Guidlines and Rules](https://summerofcode.withgoogle.com/rules).
+This document was adapted from the [GSOC Guidelines and Rules](https://summerofcode.withgoogle.com/rules).
