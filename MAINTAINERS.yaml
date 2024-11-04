@@ -144,7 +144,6 @@
   linkedin: jonaslagoni
   slack: UQ2ANBG1E
   availableForHire: false
-  company: Postman
   isTscMember: true
   repos:
     - spec-json-schemas
@@ -200,8 +199,7 @@
   linkedin: lukasz-gornicki-a621914
   slack: UD698Q5LM
   twitter: derberq
-  availableForHire: false
-  company: Postman
+  availableForHire: true
   isTscMember: true
   repos:
     - spec
@@ -259,7 +257,6 @@
   github: AceTheCreator
   twitter: _acebuild
   slack: U01RWDD69PZ
-  company: Postman
   availableForHire: false
   isTscMember: true
   repos:
@@ -335,7 +332,6 @@
   twitter: amzani
   linkedin: amzani
   availableForHire: false
-  company: Postman
   isTscMember: true
   repos:
     - studio
@@ -347,7 +343,6 @@
   slack: UN22ZTLHG
   twitter: smoyac
   availableForHire: false
-  company: Postman
   isTscMember: true
   repos:
     - spec
@@ -370,7 +365,6 @@
   twitter: souvik_ns
   linkedin: souvik-de-a2b941169
   availableForHire: false
-  company: Postman
   isTscMember: true
   repos:
     - cli
@@ -383,7 +377,6 @@
   slack: U02AKC14WAJ
   linkedin: quetzalli-writes
   availableForHire: false
-  company: Postman
   isTscMember: true
   repos:
     - website
