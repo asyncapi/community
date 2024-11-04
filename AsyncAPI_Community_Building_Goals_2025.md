@@ -10,7 +10,7 @@ We are facing several challenges in our community.
 ## Objectives to Address These Challenges:
 1. Increase maintainers and ensure their retention.
 2. Create onboarding documentation and video content.
-3. Establish a Community Working Group.
+3. Establish a Community Working Group Umbrella.
 
 ## Proposed Solutions:
 I invite everyone to discuss these proposed solutions and share any additional suggestions you may have.
