@@ -379,7 +379,7 @@
   twitter: QuetzalliWrites
   slack: U02AKC14WAJ
   linkedin: quetzalli-writes
-  availableForHire: false
+  availableForHire: true
   isTscMember: true
   repos:
     - website
