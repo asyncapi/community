@@ -660,5 +660,44 @@
         "link": "https://redocly.com/docs/cli/guides/lint-asyncapi"
       }
     ]
+  },
+  {
+    "name": "Nikita Pastukhov",
+    "bio": "Nikita is a big fan of asynchronous architecture. At one time, he worked a lot on various asynchronous services and faced the main problem of integrating them - the lack of documentation. Therefore, he created a new generation python framework - FastStream, which generates AsyncAPI schema from the service code automatically. Now he promotes Event-Driven architecture, AsyncAPI, and FastStream in all his public talks and articles.",
+    "title": "Open Source",
+    "img": "https://avatars.githubusercontent.com/u/44573917?v=4",
+    "github": "Lancetnik",
+    "twitter": "diementros",
+    "company": "Airt",
+    "country": "RU",
+    "contributions": [
+      {
+        "type": "tool",
+        "title": "FastStream",
+        "date": {
+          "year": 2023,
+          "month": "September"
+        },
+        "link": "https://github.com/airtai/faststream"
+      },
+      {
+        "type": "talk",
+        "title": "Message Brokers and why they are so difficult",
+        "date": {
+          "year": 2024,
+          "month": "May"
+        },
+        "link": "https://www.youtube.com/watch?v=_P7lgV5bKVw&t=1980s&ab_channel=Podlodka%D0%A1rew"
+      },
+      {
+        "type": "talk",
+        "title": "Message Brokers and Python in 2024",
+        "date": {
+          "year": 2024,
+          "month": "September"
+        },
+        "link": "https://www.youtube.com/watch?v=33bugga930w&ab_channel=PiterPy"
+      }
+    ]
   }
 ]
