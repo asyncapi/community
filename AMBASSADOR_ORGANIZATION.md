@@ -53,7 +53,7 @@ Examples:
 
 ### Become an AsyncAPI Ambassador
 
-The process of becoming an ambassador is very simple. Go to the **community** repository and open a PR to edit the `ambassadors.json` file. The TSC will then evaluate your candidacy!
+The process of becoming an ambassador is very simple. Go to the **community** repository and open a PR to edit the `AMBASSADORS_MEMBERS.json` file. The TSC will then evaluate your candidacy!
 
 That PR doesn't have to be created by the ambassador candidate; any community member may open a PR to submit someone's application to the AsyncAPI Ambassador Program. 
 
