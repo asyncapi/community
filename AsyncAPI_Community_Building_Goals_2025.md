@@ -72,11 +72,11 @@ We remain committed to supporting the following initiatives as they promote comm
 
 
 #### 1. AsyncAPI Conf 2025
-I'm pleased with how things went this year and the connections we made through the conference. For 2025, we should hold at least 4 conferences each calendar quarter, including an online edition. Additionally, with some improvements to do:
+I'm pleased with how things went this year and the connections we made through the conference. For 2025, we should hold at least 4 conferences each calendar quarter, including an online edition. Additionally, explore how we can scale the conference and have more events and people involved in the Conference Coordination WG and how other communities like Write the Docs do it. We have some areas to focus on and improve:
 
 - Rebrand the name AACoT.
 - Revise the conference prospectus.
-- Continue the Specs Booth, ensuring it is bigger, better, and properly planned.
+- Continue the API Standards Booth, ensuring it is bigger, better, and properly planned.
 - Revamp the current conference website following the rebranding.
 - Get conference sponsors and work to convince the AsyncAPI Initiative to become a platinum sponsor.
 - Plan conferences outside of Europe (the majority should be outside Europe/Schengen).
@@ -103,8 +103,9 @@ Our ambassadors play a significant role in our community, and we have even doubl
 
 For 2025, we need to focus on the following: 
 
-- Revise the Ambassadors' Contribution Guide to include booth volunteering as a requirement. 
--  Gather feedback from the ambassadors on how we can enhance their experience. 
+- Revise the Ambassadors' Contribution Guide to include booth volunteering as a counted contribution. 
+- Gather feedback from the ambassadors on how we can enhance their experience. 
+- Review current Ambassador contributions and activity.
 - Involve them in the Education Content initiative.
 
 #### 5. AsyncAPI Grant Program
@@ -112,6 +113,7 @@ Since this is a new initiative, some groundwork will be needed.
 
 - Secure funding for the program
 - Create documentation explaining the program, why, and who can apply.
+- Research and discuss ways on the criteria of how we select projects, who will perform selection TSC or through voting and communication around acceptance or rejections
 - Explore other funding organizations, such as STF
 
 #### 6. Student Ambassador Program
