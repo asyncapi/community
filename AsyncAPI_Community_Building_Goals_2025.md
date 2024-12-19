@@ -25,11 +25,11 @@ Increasing the number of maintainers in our community remains one of our top goa
 
 We hope to initiate a pilot program in 2025 and come together to discuss how we will structure the program and decide what we consider critical technical projects and community initiatives within AsyncAPI.
 
-3. **Increase Corpo Involvement** - We are looking for ways to increase business involvement and encourage sponsors to participate more actively in maintenance. This participation doesn’t have to be limited to coding; it can also include engaging in discussions, similar to our involvement in the marketing working group. Maybe do research by reaching out to the current TSC members and maintainers from corporate backgrounds. We welcome ideas and suggestions in this area.
+3. **Increase Corporation Involvement** - We are looking for ways to increase business involvement and encourage not only sponsors but also companies who depend on and use AsyncAPI Spec and tooling to participate more actively in maintenance. This participation doesn’t have to be limited to coding; it can also include engaging in discussions, similar to our involvement in the marketing working group. Maybe do research by reaching out to the current TSC members and maintainers from corporate backgrounds. We welcome ideas and suggestions in this area.
 
 
 ### Onboarding Docs and Video Content
-To improve and streamline the onboarding process for new contributors joining the community, we should still invest in creating onboarding materials. Currently, as part of the 2024 mentorship program, we have some docs that will be added. Additionally, we have training video scripts available in the [training repository](https://github.com/asyncapi/training), which we can record and build upon.
+To improve and streamline the onboarding process for new contributors joining the community, we should still invest in creating onboarding materials. Currently, as part of the 2024 mentorship program, we have some docs that will be added. Additionally, we have training video scripts available in the [training repository](https://github.com/asyncapi/training), which we can record and build upon.Once we have some onboarding available, we should have a dedicated landing page on the website where we can have all the materials in one place for easy accessibility.
 
 ### Community Working Group Umbrella
 I would like to introduce the Community Working Group, which serves as an umbrella for all community initiatives and programs at AsyncAPI. We have been functioning unofficially as a working group, but it’s time to reorganize, increase visibility for our current programs, and establish a structured approach to how we work.
