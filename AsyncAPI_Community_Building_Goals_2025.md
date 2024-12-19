@@ -62,13 +62,13 @@ With this structured setup, we will say goodbye to community meetings and hello 
 ### Initiatives and Programs
 We remain committed to supporting the following initiatives as they promote community development, sustainability, and growth. We should continue to invest in these programs, which are run and led by outstanding community builders:
 
-- AsyncAPI Bounty Program - Ash
+- [AsyncAPI Bounty Program](https://www.asyncapi.com/blog/asyncapi-bounty-program-2024) - Ash
 - AsyncAPI Grant Program - Thulie & Lukasz
-- AsyncAPI Conference 2025 - Thulie
-- Maintainership Program - Ace
-- AsyncAPI Ambassador Program - Thulie
+- [AsyncAPI Conference 2025](https://github.com/orgs/asyncapi/projects/43/views/2) - Thulie
+- [Maintainership Program](https://www.asyncapi.com/blog/beyond-boundaries) - Ace
+- [AsyncAPI Ambassador Program](https://www.asyncapi.com/community/ambassadors) - Thulie
 - Student Ambassador Program  - Bami
-- Working Groups - Bami
+- [Working Groups](https://github.com/asyncapi/community/blob/master/WORKING_GROUPS.md) - Bami
 
 
 #### 1. AsyncAPI Conf 2025
