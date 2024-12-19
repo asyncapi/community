@@ -1,4 +1,5 @@
-[Carrying on from Thulie](https://github.com/orgs/asyncapi/discussions/948), it's time to discuss the 2025 goals for building and maintaining the AsyncAPI community. The Community Manager needs to ensure the goals are addressed, and that each program/initiative has a dedicated person responsible.
+## AsyncAPI Community Building Goals and Objectives for 2025
+[Carrying on from Thulie](https://github.com/orgs/asyncapi/discussions/948), it's time to discuss the goals for building and maintaining the AsyncAPI community in 2025. These goals will include planned objectives that we will define together to sustain the AsyncAPI Community. The Community Manager will play an important role in ensuring that our goals are addressed and that each program or initiative has a dedicated person responsible.
 
 ## Current Challenges:
 
@@ -20,7 +21,9 @@ Increasing the number of maintainers in our community remains one of our top goa
 
 1. **Fully Implement Maintainership** - We are currently in the pilot stages of implementing maintainership and are already seeing positive outcomes. I believe that by 2025, we need to fully integrate this into all our programs. The program will cater to anyone looking to enhance their skills as maintainers and to learn what it takes to become an open-source maintainer. Additionally, we should be open to individuals who want to apply without requiring a stipend.
 
-2. **AsyncAPI Grant Program** - The AsyncAPI Community Grant Program, funded by the AsyncAPI Initiative, aims to provide financial support for critical technical projects and community initiatives within AsyncAPI. This initiative directly contributes to the ongoing goal of growing and retaining maintainers while sustaining the community. The AsyncAPI Grant Program will specifically cater to individual contributors who are part of TSC members and maintainers.
+2. **AsyncAPI Grant Program** - The AsyncAPI Community Grant Program, funded by the AsyncAPI Initiative, aims to provide financial support for critical technical projects and community initiatives within AsyncAPI. While this initiative is a new program and still in the ideation phase, it will directly contribute to the ongoing goal of growing and retaining maintainers while sustaining the community. The AsyncAPI Grant Program will specifically cater to individual contributors who are part of TSC members and maintainers.
+
+We hope to initiate a pilot program in 2025 and come together to discuss how we will structure the program and decide what we consider critical technical projects and community initiatives within AsyncAPI.
 
 3. **Increase Corpo Involvement** - We are looking for ways to increase business involvement and encourage sponsors to participate more actively in maintenance. This participation doesn’t have to be limited to coding; it can also include engaging in discussions, similar to our involvement in the marketing working group. Maybe do research by reaching out to the current TSC members and maintainers from corporate backgrounds. We welcome ideas and suggestions in this area.
 
