@@ -731,12 +731,6 @@
   repos:
     - kotlin-asyncapi
   githubID: 39913716
-- name: Jonas Süskind
-  github: sueskind
-  isTscMember: false
-  repos:
-    - kotlin-asyncapi
-  githubID: 52210599
 - name: Andrei
   github: gimlet2
   twitter: gimlet2
