@@ -2,3 +2,4 @@ node_modules
 .terraform
 *tfstate.backup
 *.tfvars
+.vote_state/
