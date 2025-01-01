@@ -59,8 +59,8 @@ module.exports = async ({ github, context, botCommentURL}) => {
       voteInfo.lastVoteClosedTime = new Date().toISOString().split('T')[0];
 
       if (userInfo) {
-        voteInfo.isVotedInLast3Months = true;
         voteInfo.lastParticipatedVoteTime = currentTime;
+        voteInfo.isVotedInLast3Months = isVotingWithinLastThreeMonths(voteInfo.lastParticipatedVoteTime)? 'true' : 'false';
         voteInfo[voteChoice === "In favor" ? 'agreeCount' : voteChoice === "Against" ? 'disagreeCount' : 'abstainCount']++;
       } else {
         voteInfo.notParticipatingCount++;
