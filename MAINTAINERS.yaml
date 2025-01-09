@@ -383,6 +383,7 @@
   isTscMember: true
   repos:
     - website
+    - community
   githubID: 19964402
 - name: David Pereira
   github: BOLT04
