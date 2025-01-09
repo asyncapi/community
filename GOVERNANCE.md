@@ -1,8 +1,8 @@
 ## Governance Board (GB) members
 
-You can determine who is the current GB member from [MAINTAINERS.yaml](MAINTAINERS.yaml) and [AMBASSADORS_MEMBERS.json](AMBASSADORS_MEMBERS.json), `isBoardMember` and `isBoardChair` properties. We also transparently list all the GB members in [AsyncAPI Website](`https://asyncapi.com/community/board`)
+You can determine who are the current GB members by filtering the [maintainers](MAINTAINERS.yaml) and the [ambassadors](AMBASSADORS_MEMBERS.json) with the ìsBoardMember` set to `true`. We also transparently list all the GB members in [AsyncAPI Website](`https://asyncapi.com/community/board`)
 
-To become GB member you need to be a member of Technical Steering Committee (TSC). To become a member of TSC, you need to be either Ambassador or Maintainer. 
+To become a GB member, you need to be a member of Technical Steering Committee (TSC). To become a member of TSC, you need to be either Ambassador or Maintainer. 
 
 ### Election
 

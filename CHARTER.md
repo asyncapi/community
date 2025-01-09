@@ -38,7 +38,7 @@ This Charter sets forth the responsibilities and procedures for technical contri
 5. Voting members of the Technical Steering Committee (TSC) include committers of any Project's code repository and AsyncAPI Ambassadors. The TSC documents in the project’s GOVERNANCE file the method for determining voting members.
 6. TSC members may resign anytime and also ask to be added to TSC list anytime, as long as the requirements are met.
 7. Any meetings of the TSC are intended to be open to the public, recorded, and can be conducted electronically, via teleconference, or in person.
-8. TSC projects generally will involve Contributors and Committers. The TSC may adopt or modify roles so long as the roles are documented in the Project’s GOVERNANCE file.
+8. TSC projects generally will involve Contributors, Committers, and Ambassadors. The TSC may adopt or modify roles so long as the roles are documented in the Project’s GOVERNANCE file.
 9. TSC members are expected to regularly participate in TSC voting.
 10. In the case where an individual TSC member -- within any three-month period -- does not participate in TSC votes, the member shall be automatically removed from the TSC.
 11. A TSC member may be removed from the TSC by the majority approval of the other TSC members.
@@ -61,19 +61,19 @@ This Charter sets forth the responsibilities and procedures for technical contri
 1. The Project Governance Board (the “Board”) will provide oversight and guidance on strategic and operational matters, but will not replace the TSC in making decisions, unless the TSC delegates some responsibilities to the Board. Exceptions will be specified in the GOVERNANCE document.
 2. The Board must have five members.
 3. The Board initially comprises three members and expands to five members after the first 12 months.
-4. The Board member is elected for 24-month cadence.
+4. The Board members are elected for 24-month cadence.
 5. The Board member is also a TSC member with all it's rights.
 6. The Board will follow a 12-month election cycle, with members eligible for re-election only once. 
-7. The Board elections are not managed as regular TSC vote. Details of the voting process will be specified in the GOVERNANCE document.
-8. The Board member can be removed only upon resignation or the TSC majority vote. New Board member election must be organized withing 60 days.
-9. The Board will appoint a chairperson from within its members. Cadence is 12 months. The chair can be replaced only upon resignation or the Board majority vote.
-10. The Board chairperson coordinates work of the board and ensures it operates effectively.
-11. The Board is responsible for presenting votes to the TSC. The Board is preparing and managing high-sensitivity issues before the vote especially in cases involving sponsorships, external partnerships, or policy considerations. 
-12. The Board assures effective voting process, participation and vote conclusion. 
+7. The Board elections will not be managed as regular TSC votes. Details of the voting process will be specified in the GOVERNANCE document.
+8. A Board member can only be removed upon resignation or a majority of the TSC votes. New Board member election must be organized within 60 days.
+9. The Board will appoint a chairperson from within its members every 12 months. The chairperson can only be replaced upon resignation or the majority of the Board members votes.
+10. The Board chairperson coordinates work of the board and ensures it operates efficiently.
+11. The Board is responsible for presenting votes to the TSC. The Board must prepare and manage high-sensitivity issues before the vote, especially in cases involving sponsorships, external partnerships, or policy considerations. 
+12. The Board must assure efficient voting processes, participation and vote conclusions.
 13. Board members are expected to hold private monthly meetings under `Chatham House Rule` guidelines, with meeting summaries made available publicly.
-14. Details on Board roles, duties, and operational processes are documented in a separate GOVERNANCE document for clarity and flexibility, covering:
+14. Details on Board roles, duties, and operational processes must be documented in a separate GOVERNANCE document for clarity and flexibility. They should cover:
     - Management of finances to ensure sustainability;
-    - Engagement with external companies and sponsorship;
+    - Engagement with external companies and sponsorships;
     - Oversight of Project programs and initiatives;
     - Tools, people, and process management to support community growth;
     - Collaboration with the TSC on strategic initiatives.
@@ -93,7 +93,7 @@ This Charter sets forth the responsibilities and procedures for technical contri
 2. Quorum requirements and voting rules will be specified in the GOVERNANCE document. If quorum is not reached after four weeks, the vote will be canceled, and the Board will reassess the topic.
 3. Except as provided in Section 6, decisions require a majority of votes.
 4. Decisions must be always made offline, by electronic vote.
-5. The voting process is described in the GOVERNANCE. In any case, TSC members must have no more and no less than seven calendar days to vote.
+5. The voting process is described in the GOVERNANCE file. In any case, TSC members must have no more and no less than seven calendar days to vote.
 6. Voting topics are proposed by the Board, which filters topics and prepares necessary context and guidelines before presentation to the TSC.
 
 ### 6. Amendments
