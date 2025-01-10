@@ -383,6 +383,7 @@
   isTscMember: true
   repos:
     - website
+    - community
   githubID: 19964402
 - name: David Pereira
   github: BOLT04
@@ -731,12 +732,6 @@
   repos:
     - kotlin-asyncapi
   githubID: 39913716
-- name: Jonas Süskind
-  github: sueskind
-  isTscMember: false
-  repos:
-    - kotlin-asyncapi
-  githubID: 52210599
 - name: Andrei
   github: gimlet2
   twitter: gimlet2
@@ -755,3 +750,9 @@
   repos:
     - conference-website
   githubID: 69006513
+- name: 'Moderator '
+  github: AayushSaini101
+  isTscMember: false
+  repos:
+    - cli
+  githubID: 60972989
