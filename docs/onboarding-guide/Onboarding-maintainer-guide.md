@@ -44,7 +44,7 @@ For a comprehensive guide on how to open a pull request, refer to the [AsyncAPI 
 
 - **Submit a Pull Request**: Once you’re done, submit a pull request to the main repository. Make sure to include a detailed description of your changes.
 
- - **Participate in discussions**: Engage with maintainers and other contributors in the PR comments section. This will help you understand the project better and improve your contributions.
+- **Participate in discussions**: Engage with maintainers and other contributors in the PR comments section. This will help you understand the project better and improve your contributions.
 
 ### 3. **Get your Pull Request Merged**
 
