@@ -64,7 +64,7 @@ This Charter sets forth the responsibilities and procedures for technical contri
 4. The Board members MUST be TSC members with all their rights.
 5. The Board will follow a 12-month election cycle, with members eligible for re-election only once. 
 6. The Board elections will not be managed as regular TSC votes. Details of the voting process will be specified in the GOVERNANCE document.
-7. A Board member can only be removed upon resignation or a majority of the TSC votes. New Board member election must be organized within 60 days.
+7. A Board member can only be removed upon resignation or a majority of the TSC votes. Next steps will be specified in the GOVERNANCE document.
 8. The Board will appoint a chairperson from among its members. The chairperson may only be replaced upon resignation or through a majority vote of the Board members. The process and cadence for appointing and replacing the chairperson will be detailed in the GOVERNANCE document.
 9. The Board chairperson coordinates work of the board and ensures it operates efficiently.
 10. The Board is responsible for presenting votes to the TSC. The Board must prepare and manage high-sensitivity issues before the vote, especially in cases involving sponsorships, external partnerships, or policy considerations. 

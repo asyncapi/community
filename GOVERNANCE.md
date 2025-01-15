@@ -35,7 +35,11 @@ Continuous Cycle:
 
 This system ensures a staggered rotation of board members, maintaining continuity in governance while allowing periodic introduction of fresh perspectives.
 
-### Duties and responsibilities
+#### Interim Election
+
+In the event that a board member's term is terminated prior to its scheduled end, the organization shall ensure that a replacement election is organized and completed within 60 days from the date of termination to fill the vacancy and maintain the full composition of the board.
+
+### Duties and Responsibilities
 
 Among others, the duties and responsibilities of the GB are the following:
 
