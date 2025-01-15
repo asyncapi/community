@@ -4,11 +4,11 @@ You can determine who are the current GB members by filtering the [maintainers](
 
 To become a GB member, you need to be a member of Technical Steering Committee (TSC). To become a member of TSC, you need to be either Ambassador or Maintainer. 
 
-### Election
+### Election of the Governance Board
 
 Election takes place every 12-months. First time 3 board members are elected, then after 12-months another 2 members are elected. Then again, since board members are elected for 24-months, we run election to reelect or pick new board members, and so on.
 
-- Minimum 60 days before elections, GB must ask community for candidates.
+- At least 60 days prior to elections, the Governance Board (GB) must invite the community to suggest candidates. It shoudl be done through a blog post that will be promoted via the current AsyncAPI communication channels.
 - People can also submit their application on their own. 
 - Information about candidate must be sent to info@asyncapi.io not later than 30 days before elections.
 - Nominee must agree to be nominated.
@@ -18,6 +18,22 @@ Election takes place every 12-months. First time 3 board members are elected, th
 GB calls out for voting by presenting the candidates and instructing how people should vote. Voting is private because we need to respect candidates and possible issues related to public rejection. Candidates know their results. Only winners and their votes are presented to public.
 
 TSC members are free to share publicly who they voted on.
+
+#### Explanation of the Board Election and Term Cycle
+
+Board Composition: The board consists of 5 members, each serving a term of 24 months.
+
+Staggered Elections:
+
+- Initial Year (Month 0): At the start, 3 members are elected. These members will serve for 24 months.
+- 12 Months Later: After one year, the remaining 2 members are elected. These members will also serve for 24 months.
+
+Continuous Cycle:
+
+- After the initial 24 months, the terms of the first 3 members come to an end. These positions are up for re-election or reappointment.
+- One year later (after the 24-month period of the second group ends), the positions of the remaining 2 members are up for re-election or reappointment.
+
+This system ensures a staggered rotation of board members, maintaining continuity in governance while allowing periodic introduction of fresh perspectives.
 
 ### Duties and responsibilities
 
@@ -34,6 +50,11 @@ Among others, the duties and responsibilities of the GB are the following:
 - Must be a servant leader and has no power other than the specified in the [charter](./CHARTER.md). Everything that is proposed should be voted by the TSC.
 
 Please note that the list above is not an exhaustive list and should not be treated as a legal document but just for reference.
+
+
+### Governance Board Chairperson
+
+Board members will appoint a chairperson during the first board meeting following an election. The chairperson's term will last 12 months.
 
 ## Technical Steering Committee (TSC) members
 
