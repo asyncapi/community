@@ -18,7 +18,7 @@ A maintainer is an individual who plays a crucial role in overseeing and guiding
 - Mentoring new contributors and helping them navigate their journey
 - Recognizing and rewarding contributions to foster community engagement
 
-Essentially, you serve as a person that *binds* the project together and guarantees that everything runs smoothly.
+Essentially, you serve as a person that binds the project together and guarantees that everything runs smoothly.
 
 ## Steps to becoming a Maintainer
 
@@ -26,33 +26,34 @@ Before you can become a **maintainer**, you need to start as a **contributor**. 
 
 ### 1. **Pick an Issue**
 
-- **Join existing PR reviews**: If you're not sure where to start, begin by reviewing open [pull requests](https://github.com/asyncapi/community/pulls). This will give you an understanding of the code and where your contributions might fit in.
+- **Join existing PR reviews**: If you're not sure where to start, begin by reviewing open [pull requests](https://github.com/pulls?q=is%3Aopen+org%3Aasyncapi+sort%3Aupdated-desc+archived%3Afalse+) within the organization. This will give you a high-level understanding of the projects and where your contributions might fit in.
 
-- **Look for "*good first issue*" labels**: These [issues](https://github.com/asyncapi/community/issues) are beginner-friendly and will help you get familiar with the project’s structure. Additionally, you can check out the [#97_bot-github-new-issues-prs](https://asyncapi.slack.com/archives/C01J06RL10X) channel on Slack for new issues and PRs.
+- **Look for "*good first issue*" labels**: These [issues](https://github.com/issues?page=1&q=is%3Aopen+org%3Aasyncapi+sort%3Aupdated-desc+label%3A%22good+first+issue%22) are beginner-friendly and will help you get familiar with the project’s structure. Additionally, you can check out the [#97_bot-github-new-issues-prs](https://asyncapi.slack.com/archives/C01J06RL10X) channel on Slack for new issues and PRs.
 
 - **Participate in live streams**: AsyncAPI maintainers sometimes host [live streams](https://www.asyncapi.com/community/events) where they walk through parts of the project. You can request a session on the specific area you want to contribute to.
 
-> **NOTE**: Make sure whatever issue you pick isn't marked "Do-not-merge" else your PR won't be merged.
+> [!NOTE]
+> Make sure whatever issue you pick isn't marked "Do-not-merge" else your PR won't be merged.
 
 ### 2. **Open a Pull Request**
 
-For a comprehensive guide on how to open a pull request, refer to the [AsyncAPI Git Workflow Guide](https://github.com/asyncapi/community/blob/master/git-workflow.md).
+For a comprehensive guide on how to create a fork and start contributing, refer to the [AsyncAPI Git Workflow Guide](https://github.com/asyncapi/community/blob/master/git-workflow.md).
 
 - **Fork the repository**: Fork the repository you want to contribute to and create a new branch for your changes.
 
 - **Make changes**: Implement the changes required to resolve the issue you picked. Ensure your code adheres to the project’s coding standards.
 
-- **Submit a Pull Request**: Once you’re done, submit a pull request to the main repository. Make sure to include a detailed description of your changes.
+- **Submit a Pull Request**: Once you’re done with the changes, submit a pull request to the main repository. Make sure to include a detailed description of your changes.
 
 - **Participate in discussions**: Engage with maintainers and other contributors in the PR comments section. This will help you understand the project better and improve your contributions.
 
 ### 3. **Get your Pull Request Merged**
 
-- After submitting a pull request, it’s time for the maintainers to review it.
+- **Pull Request Review Process**: After submitting a pull request, maintainers need to review it.
 
-- If you notice no one reviewing your PR (which is rare) or if you need a review urgently, don’t hesitate to ping the maintainers on Slack or GitHub
+- **Contact Maintainers**: If a pull request is not being reviewed (which is rare) or needs urgent review, contact maintainers on Slack or GitHub.
 
-- Make sure all the checks (tests, style checks, etc.) turn green for a smooth merge.
+- **Ensure Smooth Merge**: Ensure all checks (tests, style checks, etc.) pass before merging your PR.
 
 ### 4. **Receive an invitation to become a Maintainer 🎉**
 
