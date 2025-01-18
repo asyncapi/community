@@ -11,7 +11,7 @@ Before we go into getting you started, let's try and clarify just *who* a mainta
 A maintainer is an individual who plays a crucial role in overseeing and guiding the development and growth of an open-source project. As a maintainer for AsyncAPI, you'll be responsible for:
 
 - Overseeing the technical direction of the project
-- Helping with reviewing and resolving issues and pull requests
+- Helping with reviewing and resolving issues and pull requests (PR)
 - Managing workflows and GitHub Actions to automate tasks
 - Enforcing coding standards
 - Identifying and appointing new maintainers
@@ -26,7 +26,7 @@ Before you can become a **maintainer**, you need to start as a **contributor**. 
 
 ### 1. **Pick an Issue**
 
-- **Join existing PR reviews**: If you're not sure where to start, begin by reviewing open [pull requests](https://github.com/pulls?q=is%3Aopen+org%3Aasyncapi+sort%3Aupdated-desc+archived%3Afalse+) within the organization. This will give you a high-level understanding of the projects and where your contributions might fit in.
+- **Join existing PR reviews**: If you're not sure where to start, begin by reviewing open [PR](https://github.com/pulls?q=is%3Aopen+org%3Aasyncapi+sort%3Aupdated-desc+archived%3Afalse+) within the organization. This will give you a high-level understanding of the projects and where your contributions might fit in.
 
 - **Look for "*good first issue*" labels**: These [issues](https://github.com/issues?page=1&q=is%3Aopen+org%3Aasyncapi+sort%3Aupdated-desc+label%3A%22good+first+issue%22) are beginner-friendly and will help you get familiar with the project’s structure. Additionally, you can check out the [#97_bot-github-new-issues-prs](https://asyncapi.slack.com/archives/C01J06RL10X) channel on Slack for new issues and PRs.
 
@@ -35,7 +35,7 @@ Before you can become a **maintainer**, you need to start as a **contributor**. 
 > [!NOTE]
 > Make sure whatever issue you pick isn't marked "Do-not-merge" else your PR won't be merged.
 
-### 2. **Open a Pull Request**
+### 2. **Open a PR**
 
 For a comprehensive guide on how to create a fork and start contributing, refer to the [AsyncAPI Git Workflow Guide](https://github.com/asyncapi/community/blob/master/git-workflow.md).
 
@@ -43,17 +43,17 @@ For a comprehensive guide on how to create a fork and start contributing, refer 
 
 - **Make changes**: Implement the changes required to resolve the issue you picked. Ensure your code adheres to the project’s coding standards.
 
-- **Submit a Pull Request**: Once you’re done with the changes, submit a pull request to the main repository. Make sure to include a detailed description of your changes.
+- **Submit a PR**: Once you’re done with the changes, submit a PR to the main repository. Make sure to include a detailed description of your changes.
 
 - **Participate in discussions**: Engage with maintainers and other contributors in the PR comments section. This will help you understand the project better and improve your contributions.
 
-### 3. **Get your Pull Request Merged**
+### 3. **Get your PR merged**
 
-- **Pull Request Review Process**: After submitting a pull request, maintainers need to review it.
+- **PR review process**: After submitting a PR, maintainers need to review it.
 
-- **Contact Maintainers**: If a pull request is not being reviewed (which is rare) or needs urgent review, contact maintainers on Slack or GitHub.
+- **Contact maintainers**: If a PR is not being reviewed (which is rare) or needs urgent review, contact maintainers on Slack or GitHub.
 
-- **Ensure Smooth Merge**: Ensure all checks (tests, style checks, etc.) pass before merging your PR.
+- **Ensure smooth merge**: Ensure all checks (tests, style checks, etc.) pass before merging your PR.
 
 ### 4. **Receive an invitation to become a Maintainer 🎉**
 
