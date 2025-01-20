@@ -94,23 +94,22 @@
 		"github": "fmvilas",
 		"slack": "U34F2JRRS",
 		"availableForHire": false,
-		"company": "Postman",
 		"linkedin": "fmvilas",
 		"repos": [
 			"raml-dt-schema-parser",
-			"avro-schema-parser",
 			"openapi-schema-parser",
 			"asyncapi-react",
 			"glee",
-			"generator",
-			"nodejs-template",
 			"nodejs-ws-template",
-			"parser-js",
-			"playground",
 			"spec",
 			"spec-json-schemas",
-			"website",
-			"bindings"
+			"bindings",
+			"brand",
+			"html-template",
+			"markdown-template",
+			"converter-js",
+			"extensions-catalog",
+			"enterprise-patterns"
 		]
 	},
 	{
