@@ -26,8 +26,12 @@ We are also available on the [AsyncAPI slack](https://asyncapi.com/slack-invite)
 
 ## Program Statistics
 
-| Year | Program                          | Internships | Total (per year) |
+| Year | Program                          | Participants | Total (per year) |
 | ---- | -------------------------------- | ----------- | ---------------- |
+| 2023 | AsyncAPI Mentorship                   | 13          | 40              |
+|      | GSoD                             | 5          |                  |
+|      | GSoC                             | 4          |                  |
+|      | Hacktoberfest                             | 18
 | 2022 | AsyncAPI Mentorship                   | 10          | 41              |
 |      | GSoD                             | 6          |                  |
 |      | Hacktoberfest                             | 12
