@@ -6,9 +6,9 @@ To become a GB member, you need to be a member of Technical Steering Committee (
 
 ### Election of the Governance Board
 
-Election takes place every 12-months. First time 3 board members are elected, then after 12-months another 2 members are elected. Then again, since board members are elected for 24-months, we run election to reelect or pick new board members, and so on.
+Elections are conducted every 12 months. Initially, 3 board members will be elected. After a period of 12 months, two additional members will be elected. This cycle recurs every 24 months. The elections will serve to either re-elect incumbent members or appoint new individuals to the board.
 
-- At least 60 days prior to elections, the Governance Board (GB) must invite the community to suggest candidates. It shoudl be done through a blog post that will be promoted via the current AsyncAPI communication channels.
+- At least 60 days prior to elections, the Governance Board (GB) must invite the community to suggest candidates. It must be done through a blog post that will be promoted via the current AsyncAPI communication channels.
 - People can also submit their application on their own. 
 - Information about candidate must be sent to info@asyncapi.io not later than 30 days before elections.
 - Nominee must agree to be nominated.
@@ -31,7 +31,7 @@ Staggered Elections:
 Continuous Cycle:
 
 - After the initial 24 months, the terms of the first 3 members come to an end. These positions are up for re-election or reappointment.
-- One year later (after the 24-month period of the second group ends), the positions of the remaining 2 members are up for re-election or reappointment.
+- One year later (after the 24-months period of the second group ends), the positions of the remaining 2 members are up for re-election or reappointment.
 
 This system ensures a staggered rotation of board members, maintaining continuity in governance while allowing periodic introduction of fresh perspectives.
 
