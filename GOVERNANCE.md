@@ -14,10 +14,8 @@ Elections are conducted every 12 months. Initially, 3 board members will be elec
 - Nominee must agree to be nominated.
 - List of candidates must be published at least on AsyncAPI Website not later than 2 weeks before elections.
 - Concerns about candidates should be reported to Code of Conduct Committee. 
-
-GB calls out for voting by presenting the candidates and instructing how people should vote. Voting is private because we need to respect candidates and possible issues related to public rejection. Candidates know their results. Only winners and their votes are presented to public.
-
-TSC members are free to share publicly who they voted on.
+- GB calls out for voting by presenting the candidates and instructing how people should vote. Voting is private because we need to respect candidates and possible issues related to public rejection. Candidates know their results. Only winners and their votes are presented to public.
+- TSC members are free to share publicly who they voted on.
 
 #### Explanation of the Board Election and Term Cycle
 
@@ -88,8 +86,6 @@ We no longer have Executive Directors in the project
 | Mastodon       | https://social.fmvilas.me/@fran    |
 
 ### Lukasz Gornicki
-
-The current Executive Director is Lukasz Gornicki.
 
 |                |                                        |
 | -------------- | -------------------------------------- |
