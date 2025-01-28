@@ -73,7 +73,6 @@ jobs:
           rm -r ./markdown/docs/community/onboarding-guide
           mkdir -p ./markdown/docs/community/onboarding-guide
           rm ../community/docs/README.md
-          printf "%s\ntitle: Onboarding guide\nweight: 10\n%s" "---" "---"> ../community/docs/onboarding-guide/_section.md
           mv ./community/docs/* ./markdown/docs/community/
       - name: Commit and push
         working-directory: ./website
