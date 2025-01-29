@@ -2,7 +2,7 @@
 
 Welcome to the AsyncAPI Maintainer Onboarding Guide! 
 
-This document provides you with guidelines about everything you need to know to begin your journey as a maintainer within the AsyncAPI ecosystem. Maintainers are the backbone of any open-source project, helping with different activities that help the project to stay on track and foster a healthy, productive community.
+This document provides you with guidelines about everything you need to know to begin your journey as a maintainer within the AsyncAPI ecosystem. Maintainers are the backbone of any open-source project, helping with different activities that help the project stay on track and foster a healthy, productive community.
 
 Before we go into getting you started, let's try and clarify just *who* a maintainer is.
 
@@ -17,6 +17,10 @@ A maintainer is an individual who plays a crucial role in overseeing and guiding
 - Identifying and appointing new maintainers
 - Mentoring new contributors and helping them navigate their journey
 - Recognizing and rewarding contributions to foster community engagement
+
+But being a maintainer goes beyond these responsibilities—it’s about **ownership** and **leadership**. You’re not just merging code; you’re shaping the project’s future. This means stepping up to unblock contributors stuck on a PR, advocating for improvements in the roadmap, or leading releases to ensure smooth deployments. You’ll proactively identify risks, mediate discussions to align decisions with AsyncAPI’s vision, and celebrate wins to keep the community motivated.  
+
+Maintainers also **lead by example**. You’ll mentor others not just by answering questions, but by teaching contributors *why* coding standards matter or *how* to structure a feature. You’ll balance technical rigor with empathy, ensuring decisions serve both the project’s goals and its people.  
 
 Essentially, you serve as a person that binds the project together and guarantees that everything runs smoothly.
 
@@ -33,7 +37,7 @@ Before you can become a **maintainer**, you need to start as a **contributor**. 
 - **Participate in live streams**: AsyncAPI maintainers sometimes host [live streams](https://www.asyncapi.com/community/events) where they walk through parts of the project. You can request a session on the specific area you want to contribute to.
 
 > [!NOTE]
-> Make sure whatever issue you pick isn't marked "Do-not-merge" else your PR won't be merged.
+> Make sure whatever issue you pick isn't marked "Do-not-merge," or else your PR won't be merged.
 
 ### 2. **Open a PR**
 
@@ -57,6 +61,6 @@ For a comprehensive guide on how to create a fork and start contributing, refer 
 
 ### 4. **Receive an invitation to become a Maintainer 🎉**
 
-- **Recognition**: After contributing consistently, the maintainers will invite you to join the team. This invitation is a recognition of your contributions and dedication.
+- **Recognition**: After contributing consistently and demonstrating leadership — whether through code, reviews, mentorship, or strategic input — the maintainers will invite you to join the team. This invitation is a recognition of your ownership and dedication to AsyncAPI’s success.
 
 - If you haven't received an invitation despite contributing consistently, you can open an issue in the corresponding repository to discuss your contributions with the maintainers. You can see an example of such an issue [here](https://github.com/asyncapi/cli/issues/1616). 
