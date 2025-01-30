@@ -8,7 +8,7 @@ Your tenure as an ambassador begins on the date you are accepted. For example, i
 
 As an ambassador, you are expected to make a minimum of four contributions per year. Contributions can include articles, talks, videos, podcasts, driving initiatives, and more.
 
-- Articles, videos, and podcasts can be published on the AsyncAPI blog or other platforms.
+- Articles, videos, and podcasts can be published on the [AsyncAPI blog](https://www.asyncapi.com/blog) or other platforms.
 - Talks and presentations should focus primarily on AsyncAPI.
 - Contributions to improve the visibility of the community.
 - Volunteering at booths during events.
@@ -27,9 +27,10 @@ Examples:
 
 ### Ambassador benefits
 - Invitation to [AsyncAPI Initiative organization](https://github.com/orgs/asyncapi/people).
-- A special swag pack for Ambassadors (valued at approximately $150, including shipping).
-- Swag for conference or workshop participants (valued at approximately $70, including shipping).
+- A special swag pack for Ambassadors.
 - Free entry to AsyncAPI conferences.
 - Community-wide recognition.
 - Our sincere gratitude and respect for your contributions!
 
+### Additional resources
+[AsyncAPI Ambassador Program](https://github.com/asyncapi/community/blob/master/AMBASSADOR_ORGANIZATION.md)
