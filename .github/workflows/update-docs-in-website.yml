@@ -73,7 +73,7 @@ jobs:
         run: |
           find "./markdown/docs/community" -mindepth 1 -maxdepth 1 -type d -exec rm -rf {} +
           rm ../community/docs/README.md
-          mv ./community/docs/* ./markdown/docs/community/
+          mv ../community/docs/* ./markdown/docs/community/
       - name: Commit and push
         working-directory: ./website
         run: |
