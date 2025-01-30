@@ -1,6 +1,7 @@
 name: Update latest Community documentation in the website
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - 'master'
@@ -70,10 +71,9 @@ jobs:
       - name: Copy community folder from Current Repo to Another
         working-directory: ./website
         run: |
-          rm -r ./markdown/docs/community/onboarding-guide
-          mkdir -p ./markdown/docs/community/onboarding-guide
+          find "./markdown/docs/community" -mindepth 1 -maxdepth 1 -type d -exec rm -rf {} +
           rm ../community/docs/README.md
-          mv ./community/docs/* ./markdown/docs/community/
+          mv ../community/docs/* ./markdown/docs/community/
       - name: Commit and push
         working-directory: ./website
         run: |
