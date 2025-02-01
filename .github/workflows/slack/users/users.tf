@@ -17,14 +17,14 @@ locals {
   repos = setunion(flatten([for maintainer in local.maintainers_data : maintainer.repos]))
   repo_maintainers = {
     for repo in local.repos : repo => 
-      [for maintainer in local.maintainers_data : maintainer.slack if contains(maintainer.repos, repo)]
+      [for maintainer in local.maintainers_data : lookup(maintainer, "slack", null) if contains(maintainer.repos, repo)]
   }
 }
 
 output "data_sources" {
   value = {
-    maintainers_user_ids = [for maintainer in local.maintainers_data : maintainer.slack]
-    tsc_members_user_ids = [for tsc_member in local.tsc_members_data : tsc_member.slack]
+    maintainers_user_ids = [for maintainer in local.maintainers_data : lookup(maintainer, "slack", null)]
+    tsc_members_user_ids = [for tsc_member in local.tsc_members_data : lookup(maintainer, "slack", null)]
     repo_maintainers = local.repo_maintainers
   }
 }
