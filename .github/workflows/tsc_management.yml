@@ -4,7 +4,7 @@ on:
   pull_request:
     types: [closed]
     paths:
-      - 'MAINTAINERS.yaml'
+      - "MAINTAINERS.yaml"
 
 jobs:
   detect_tsc_membership_changes:
@@ -50,17 +50,17 @@ jobs:
             function hasIsTscMemberChanged(maintainerGithub) {
                 const mainMaintainer = mainFile.find(m => m.github === maintainerGithub);
                 const prMaintainer = prFile.find(m => m.github === maintainerGithub);
-            
+
                 core.info(`Checking for ${maintainerGithub}`);
-            
+
                 if (!mainMaintainer || !prMaintainer) {
                     console.error('Maintainer not found:', maintainerGithub);
                     return;
                 }
-            
+
                 core.info(`${maintainerGithub} in mainFile has isTscMember as:`, mainMaintainer.isTscMember);
                 core.info(`${maintainerGithub} in prFile has isTscMember as:`, prMaintainer.isTscMember);
-            
+
                 if (mainMaintainer.isTscMember !== prMaintainer.isTscMember) {
                     core.info(`isTscMember value changed for ${maintainerGithub}`);
                     updatedMaintainers.push({ githubUser: maintainerGithub, updatedValue: mainMaintainer.isTscMember });
@@ -70,15 +70,15 @@ jobs:
 
             // Loop over all maintainers and find the changes
             mainFile.forEach(maintainer => hasIsTscMemberChanged(maintainer.github));
-            
+
             // Log final results
             core.info("Final updatedValue:", updatedValue);
             core.info("Final updatedMaintainers:", JSON.stringify(updatedMaintainers));
-            
+
             // Set outputs
             core.setOutput("updatedValue", updatedValue);
             core.setOutput("updatedMaintainers", JSON.stringify(updatedMaintainers));
-    outputs: 
+    outputs:
       updatedValue: ${{ steps.compare-files.outputs.updatedValue }}
       updatedMaintainers: ${{ steps.compare-files.outputs.updatedMaintainers }}
 
@@ -165,6 +165,24 @@ jobs:
                 core.setFailed(`Failed to remove ${maintainer.githubUser} from the team: ${error.message}`);
               }
             }
+      - name: Update voteTrackingFile.json
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{ secrets.GH_TOKEN }}
+          script: |
+            const fs = require('fs');
+            const path = './voteTrackingFile.json';
+            const removedMaintainers = JSON.parse('${{ needs.detect_tsc_membership_changes.outputs.updatedMaintainers }}');
+
+            let voteTrackingData = JSON.parse(fs.readFileSync(path, 'utf8'));
+
+            removedMaintainers.forEach(maintainer => {
+              voteTrackingData = voteTrackingData.filter(vote => vote.name !== maintainer.githubUser);
+            });
+
+            fs.writeFileSync(path, JSON.stringify(voteTrackingData, null, 2));
+
+            console.log('Updated voteTrackingFile.json:\n', JSON.stringify(voteTrackingData, null, 2));
     outputs:
       removedMaintainers: ${{ needs.detect_tsc_membership_changes.outputs.updatedMaintainers }}
 
@@ -230,7 +248,7 @@ jobs:
 
             // Log the updated content to the console
             console.log('Updated Emeritus.yaml:\n', content);
-      
+
       - name: Create new branch
         run: |
           git checkout -b update-emeritus-${{ github.run_id }}
@@ -247,13 +265,21 @@ jobs:
 
   notify_slack_on_failure:
     if: always() && (needs.detect_tsc_membership_changes.result == 'failure' || needs.add_tsc_member.result == 'failure' || needs.display_message.result == 'failure' || needs.update_emeritus.result == 'failure' || needs.remove_tsc_member.result == 'failure' || needs.remove_tsc_goodbye.result == 'failure')
-    needs: [detect_tsc_membership_changes,  add_tsc_member, display_message, update_emeritus,remove_tsc_goodbye, remove_tsc_member]
+    needs:
+      [
+        detect_tsc_membership_changes,
+        add_tsc_member,
+        display_message,
+        update_emeritus,
+        remove_tsc_goodbye,
+        remove_tsc_member,
+      ]
     runs-on: ubuntu-latest
     steps:
-    - name: Report workflow run status to Slack
-      uses: rtCamp/action-slack-notify@v2
-      env:
-        SLACK_WEBHOOK: ${{secrets.SLACK_CI_FAIL_NOTIFY}}
-        SLACK_TITLE: 🚨 TSC Management Workflow failed 🚨
-        SLACK_MESSAGE: Failed to post a message to new TSC member
-        MSG_MINIMAL: true
+      - name: Report workflow run status to Slack
+        uses: rtCamp/action-slack-notify@v2
+        env:
+          SLACK_WEBHOOK: ${{secrets.SLACK_CI_FAIL_NOTIFY}}
+          SLACK_TITLE: 🚨 TSC Management Workflow failed 🚨
+          SLACK_MESSAGE: Failed to post a message to new TSC member
+          MSG_MINIMAL: true
