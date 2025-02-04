@@ -1,0 +1,86 @@
+name: Update latest Community documentation in the website
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - 'master'
+    paths:
+      - 'docs/*.md'
+
+jobs:
+  Make-PR:
+    name: Make PR on website repository with updated latest Community documentation
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+    steps:
+      - name: Checkout Current repository
+        uses: actions/checkout@v4
+        with:
+          path: community
+      - name: Checkout Another repository
+        uses: actions/checkout@v4
+        with:
+          repository: asyncapi/website
+          path: website
+          token: ${{ env.GITHUB_TOKEN }}
+      - name: Config git
+        run: |
+          git config --global user.name asyncapi-bot
+          git config --global user.email info@asyncapi.io
+      - name: Create branch
+        working-directory: ./website
+        run: |
+          git checkout -b update-community-docs-${{ github.sha }}
+      - name: Update edit-page-config.json
+        uses: actions/github-script@v4
+        with:
+          script: |
+                const fs = require('fs').promises;
+                const configPath = './website/config/edit-page-config.json';
+                const configData = require(configPath);
+                const docsDir = 'community/docs';
+                
+                async function readDirectories(dirPath) {
+                    const entries = await fs.readdir(dirPath, { withFileTypes: true });
+                    const subdirectories = entries.filter(entry => entry.isDirectory()).map(entry => entry.name);
+                    return subdirectories;
+                }
+                
+                async function updateConfigData() {
+                    const subfolders = await readDirectories(docsDir);
+                    
+                    for (const subfolder of subfolders) {
+                        const checkSlug = `community/${subfolder}`;
+                        const slug = {
+                            "value": checkSlug,
+                            "href": `https://github.com/asyncapi/community/tree/master/docs/${subfolder}`
+                        };
+                
+                        const entryExists = configData.some(entry => entry.value === checkSlug);
+                        if (!entryExists) {
+                            configData.push(slug);
+                        }
+                    }
+                
+                    await fs.writeFile(configPath, JSON.stringify(configData, null, 2));
+                }
+                updateConfigData();
+
+      - name: Copy community folder from Current Repo to Another
+        working-directory: ./website
+        run: |
+          find "./markdown/docs/community" -mindepth 1 -maxdepth 1 -type d -exec rm -rf {} +
+          rm ../community/docs/README.md
+          mv ../community/docs/* ./markdown/docs/community/
+      - name: Commit and push
+        working-directory: ./website
+        run: |
+          git add .
+          git commit -m "docs(community): update latest community docs"
+          git push https://${{ env.GITHUB_TOKEN }}@github.com/asyncapi/website
+      - name: Create PR
+        working-directory: ./website
+        run: |
+          gh pr create --title "docs(community): update latest community documentation" --body "Updated community documentation is available and this PR introduces update to community folder on the website" --head "update-community-docs-${{ github.sha }}"
