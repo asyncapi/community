@@ -104,7 +104,7 @@ AsyncAPI will host a series of webinars and workshops designed to educate the co
 ### Marketing Monthly Blog and Community Newsletter
 
 
-Give appropraite support to the community manager:
+Give appropriate support to the community manager:
 - By adding neccessary information from the Marketing Working Group.
 - Promote the newsletter in the community for more visibility.
 - Encourage community subscription and participation
