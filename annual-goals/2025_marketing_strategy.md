@@ -41,7 +41,7 @@ The primary goal of our AsyncAPI community strategy is to foster the adoption an
 
 
 - Drive initiatives to promote AsyncAPI and Increase adoption of EDA
-- Showcase Innovation and Promote Mentainership
+- Showcase Innovation and Promote Maintainership
 - Strengthen Community Engagement and Contribution
 
 
