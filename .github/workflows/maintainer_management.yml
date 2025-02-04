@@ -73,11 +73,11 @@ jobs:
 
       - name: Debug newMaintainers output
         run: |
-          echo "newMaintainers = $newMaintainers"
+          echo "newMaintainers = ${{ steps.compare-files.outputs.newMaintainers }}"
 
       - name: Debug removedMaintainers output
         run: |
-          echo "removedMaintainers = $removedMaintainers"
+          echo "removedMaintainers = ${{ steps.compare-files.outputs.removedMaintainers }}"
 
     outputs:
       newMaintainers: ${{ steps.compare-files.outputs.newMaintainers }}
@@ -167,7 +167,8 @@ jobs:
             const removedMaintainers = '${{ needs.detect_maintainer_changes.outputs.removedMaintainers }}'.split(',');
             for (const maintainer of removedMaintainers) {
               try {
-                await github.request('DELETE /orgs/asyncapi/memberships/{username}', {
+                await github.request('DELETE /orgs/{org}/memberships/{username}', {
+                  org: 'asyncapi',
                   username: maintainer
                 });
                 core.info(`Successfully removed ${maintainer} from the organization.`);
