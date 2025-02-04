@@ -6,6 +6,11 @@ on:
     paths: 
       - 'MAINTAINERS.yaml'
 
+env:
+  GH_TOKEN: ${{ secrets.GH_TOKEN }}
+
+permissions: write-all
+
 jobs:
   detect_maintainer_changes:
     if: github.event.pull_request.merged 
@@ -92,14 +97,15 @@ jobs:
       - name: Invite new maintainers to the organization
         uses: actions/github-script@v6
         with:
-          github-token: ${{ secrets.GH_TOKEN }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
+            const ghToken = process.env.GH_TOKEN;
             const newMaintainers = '${{ needs.detect_maintainer_changes.outputs.newMaintainers }}'.split(',');
             for (const maintainer of newMaintainers) {
               try {
                 await github.request('PUT /orgs/{org}/memberships/{username}', {
                   headers: {
-                    authorization: 'token ${{ secrets.GH_TOKEN }}',
+                    authorization: `token ${ghToken}`,
                   },
                   org: 'asyncapi',
                   username: maintainer
