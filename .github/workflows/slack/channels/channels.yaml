@@ -1,0 +1,255 @@
+# Channels:
+#
+# name - (Required) name of the public or private channel.
+# topic - (Optional) topic for the channel.
+# purpose - (Optional) purpose of the channel.
+# permanent_members - (Optional) user IDs to add to the channel.
+# is_private - (Optional) create a private channel instead of a public one.
+# is_archived - (Optional) indicates a conversation is archived. Frozen in time.
+# action_on_destroy - (Optional, Default archive) indicates whether the conversation should be archived or left behind on destroy. Valid values are archive | none. Note that when set to none the conversation will be left as it is and as a result any subsequent runs of terraform apply with the same name will fail.
+# data_source - (Optional) data_source source to use for the list of user IDs to add to the channel. Valid values are maintainers_user_ids | tsc_user_ids right now.
+
+# NOTE:-
+# 1. The channel name should be unique.
+# 2. The user IDs should be valid and should be present in the workspace.
+# 3. Either permanent_members or data_source should be provided to add users to the channel.
+# 4. The default value for change in permanent_members is kick for private channels and nothing for public channels.
+# 5. The default value for adopt_current_channels is true.
+
+- name: 01_introductions
+  topic: Welcome to our AsyncAPI Slack! Take a moment to introduce yourself.
+  purpose: Welcome to our AsyncAPI Slack! Take a moment to introduce yourself.
+  is_private: false
+  is_archived: false
+  action_on_destroy: archive
+
+- name: 02_general
+  topic: 'Talk here if your topic is not only about the spec, nor tools but kinda mix and involves AsyncAPI :slightly_smiling_face:'
+  purpose: This channel is for team-wide communication and announcements. All team members are in this channel.
+  is_private: false
+  is_archived: false
+  action_on_destroy: archive
+
+- name: 03_specification
+  topic: All around the spec discussions. It is ok to ask for support here.
+  purpose: All around the spec discussions. It is ok to ask for support here.
+  is_private: false
+  is_archived: false
+  action_on_destroy: archive
+
+- name: 04_tooling
+  topic: All around the specs tooling discussions. It is ok to ask for support here.
+  purpose: Chat about the AsyncAPI tooling
+  is_private: false
+  is_archived: false
+  action_on_destroy: archive
+
+- name: 05_promotion-marketing
+  topic: Purpose of this channel is to help us with AsyncAPI promotion. Share your ideas for marketing and learn what we are working on at the moment. We use “channel” annotation here when we want to ask you to share our specific resources on different media.
+  purpose: Present launch plans for coordinated launches and to measure engagement and adoption
+  is_private: false
+  is_archived: false
+  action_on_destroy: archive
+
+- name: 06_training
+  topic: All about trainings, workshops, courses, etc. — <https://github.com/asyncapi/training>
+  purpose: All about trainings, workshops, courses, etc.
+  is_private: false
+  is_archived: false
+  action_on_destroy: archive
+
+- name: 07_events
+  topic: This is the place where we regroup and discuss organization of AsyncAPI-related events. This is also a place where you can always let others know what events are you involved in, where and when do you present a topic related to AsyncAPI.
+  purpose: This is the place where we regroup and discuss organization of AsyncAPI-related events. This is also a place where you can always let others know what events are you involved in, where and when do you present a topic related to AsyncAPI.
+  is_private: false
+  is_archived: false
+  action_on_destroy: archive
+
+- name: 08_jobs
+  topic: Looking for a job that will let you work on AsyncAPI? Let others know. Looking for AsyncAPI expert to join your company, post your offer here and also on the AsyncAPI website <https://www.asyncapi.com/jobs>.
+  purpose: Looking for a job that will let you work on AsyncAPI? Let others know. Looking for AsyncAPI expert to join your company, post your offer here and also on the AsyncAPI website <https://www.asyncapi.com/jobs>.
+  is_private: false
+  is_archived: false
+  action_on_destroy: archive
+
+- name: 09_mentorships
+  topic: We participate in many different external programs, and also have our own that will evolve in next years. This is the place where we talk about these and coordinate.
+  purpose: We participate in many different external programs, and also have our own that will evolve in next years. This is the place where we talk about these and coordinate.
+  is_private: false
+  is_archived: false
+  action_on_destroy: archive
+
+- name: 10_watercooler
+  topic: Non-AsyncAPI topics. When you have a need to talk to someone “in person”, type “/zoom” in channel and start a meeting and let others know you are there. Talking to another human solves many problems.
+  purpose: A place for non-work-related flimflam, faffing, hodge-podge or jibber-jabber you'd prefer to keep out of more focused work-related channels.
+  is_private: false
+  is_archived: false
+  action_on_destroy: archive
+
+- name: 11_contributing
+  topic: Learn how to contribute. Ask contribution-related questions. Tell us what you want to learn through contribution and we will find you a good spot. Remember that you can contribute not only by pushing code.
+  purpose: Learn how to contribute. Share what you would like to learn and we will find for you a good place to start contributing
+  is_private: false
+  is_archived: false
+  action_on_destroy: archive
+
+- name: 12_design
+  topic: Discuss design-related topics such as branding, design system, UI kit, and any other misc. design projects. Have a design request? Use this channel to propose and discuss your request!
+  purpose: Discuss design-related topics such as branding, design system, UI kit, and any other misc. design projects. Have a design request? Use this channel to propose and discuss your request!
+  is_private: false
+  is_archived: false
+  action_on_destroy: archive
+
+- name: 13_docs
+  topic: null
+  purpose: ':bookmark_tabs: Discuss AsyncAPI Docs: Feel free to open issues for documentation requests and to share ideas/feedback on open issues. <https://github.com/orgs/asyncapi/projects/8>'
+  is_private: false
+  is_archived: false
+  action_on_destroy: archive
+
+- name: 14_accessibility
+  topic: Accessibility throughout the asyncAPI Initiative
+  purpose: Accessibility throughout the AsyncAPI Initiative
+  is_private: false
+  is_archived: false
+  action_on_destroy: archive
+
+- name: 15_ambassadors
+  topic: null
+  purpose: All about the Ambassador Program. Feel free to participate!
+  is_private: false
+  is_archived: false
+  action_on_destroy: archive
+
+- name: 16_news
+  topic: null
+  purpose: Share links to news you find about AsyncAPI (or related stuff) on the internet. Did you write something and want us to help you promote it? Use the <#CH44ZMJAZ|05_promotion-marketing> channel instead.
+  is_private: false
+  is_archived: false
+  action_on_destroy: archive
+
+- name: 17_bounty
+  topic: All about the AsyncAPI Bounty Program discussions.
+  purpose: This is the place where we discuss everything related to the Bounty Program.
+  is_private: false
+  is_archived: false
+  action_on_destroy: archive
+
+- name: 18_asyncapi-v3
+  topic: This is the channel where we talk about AsyncAPI v3. From announcements, blogs, and livestreams.
+  purpose: null
+  is_private: false
+  is_archived: false
+  action_on_destroy: archive
+
+- name: 19_coc
+  topic: null
+  purpose: Feel free to openly ask the Code of Conduct Committee if you have any questions.
+  is_private: false
+  is_archived: false
+  action_on_destroy: archive
+
+- name: 93_bot-infra-alerts
+  topic: null
+  purpose: Alerts on infrastructure monitoring (New Relic by now)
+  is_private: false
+  is_archived: false
+  action_on_destroy: archive
+
+- name: 94_bot-failing-ci
+  topic: null
+  purpose: When something wrong happens in CI and we configure Slack alerts - these should end up in this channel
+  is_private: false
+  is_archived: false
+  action_on_destroy: archive
+
+- name: 95_bot-tsc-members-mentioned
+  topic: This channel is here to mainly help TSC members to get notifications other than email or GitHub notifications, every time TSC GitHub team is mentioned in issues, PRs and discussions
+  purpose: This channel is here to mainly help TSC members to get notifications other than email or GitHub notifications, every time TSC GitHub team is mentioned in issues, PRs and discussions
+  is_private: false
+  is_archived: false
+  action_on_destroy: archive
+
+- name: 96_bot-stackoverflow-questions
+  topic: Stackoverflow questions tagged asyncapi from the RSS feed
+  purpose: Stackoverflow questions tagged `asyncapi` from the RSS feed
+  is_private: false
+  is_archived: false
+  action_on_destroy: archive
+
+- name: 97_bot-github-new-issues-prs
+  topic: Bot sends notifications about every new issue and pull request in any AsyncAPI repository.
+  purpose: Notifications about all new issues and PR except of bots
+  is_private: false
+  is_archived: false
+  action_on_destroy: archive
+
+- name: 98_bot-github-releases
+  topic: Bot sends notifications about every new release in any AsyncAPI repository.
+  purpose: Notifications about new GitHub releases
+  is_private: false
+  is_archived: false
+  action_on_destroy: archive
+
+- name: glee-demos
+  topic: null
+  purpose: null
+  is_private: false
+  is_archived: false
+  action_on_destroy: archive
+
+- name: gsoc2021-students-mentors-collaboration
+  topic: null
+  purpose: null
+  is_private: false
+  is_archived: false
+  action_on_destroy: archive
+
+- name: help-
+  topic: null
+  purpose: null
+  is_private: false
+  is_archived: false
+  action_on_destroy: archive
+
+- name: jsonschema
+  topic: 'Need help with JSON Schema? This channel is connected with the JSON Schema Slack workspace. Here you can talk with the JSON Schema community directly :raised_hands:'
+  purpose: null
+  is_private: false
+  is_archived: false
+  action_on_destroy: archive
+
+- name: libopenapi-speakeasy
+  topic: null
+  purpose: null
+  is_private: false
+  is_archived: false
+  action_on_destroy: archive
+
+- name: linux
+  topic: null
+  purpose: null
+  is_private: false
+  is_archived: false
+  action_on_destroy: archive
+
+- name: salemfr1100
+  topic: null
+  purpose: null
+  is_private: false
+  is_archived: false
+  action_on_destroy: archive
+
+- name: status-updates
+  topic: null
+  purpose: null
+  is_private: false
+  is_archived: false
+  action_on_destroy: archive
+
+- name: test-bot-public
+  topic: null
+  purpose: null
+  is_private: false
+  is_archived: false
+  action_on_destroy: archive

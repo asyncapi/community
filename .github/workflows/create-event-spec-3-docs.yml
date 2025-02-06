@@ -23,7 +23,7 @@ jobs:
       meeting_name: Spec 3.0 Docs Meeting
       meeting_desc: This is a open meeting to plan and write Spec 3.0 Docs.
       host: alejandra.olvera.novack@gmail.com
-      alternative_host: 'fmvilas@gmail.com,devlopergene@gmail.com,sibanda.thulie@gmail.com,jonas-lt@live.dk,lpgornicki@gmail.com'
+      alternative_host: 'devlopergene@gmail.com,sibanda.thulie@gmail.com,jonas-lt@live.dk,lpgornicki@gmail.com'
       issue_template_path: .github/workflows/create-event-helpers/issues_templates/spec-3-docs.md
       create_zoom: true
     secrets:

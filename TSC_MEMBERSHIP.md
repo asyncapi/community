@@ -49,3 +49,12 @@ Joining the TSC is something that you are allowed to do as a maintainer by defau
 
 See current [TSC members](https://www.asyncapi.com/community/tsc).
 
+## How to reach out to the TSC
+
+There are several ways to reach out to the TSC members:
+
+* Join the [AsyncAPI Slack](https://www.asyncapi.com/slack-invite) and ping the `@tsc` group to ask questions or share your thoughts.
+* Do a GitHub team mention `@asyncapi/tsc_members` in any issue, discussion or pull request. This will also send a message in the `95_bot-tsc-members-mentioned` channel in the Slack.
+
+> [!IMPORTANT]
+> Please note that the TSC members are volunteers and may not be able to respond immediately. Please be patient and respectful. Also it will be helpful if there is as less spam as possible. For more information, please refer to the [Slack Etiquette](./slack-etiquette.md) document.

@@ -3,7 +3,8 @@ title: Add new AsyncAPI tool to website
 description: Learn how to add your tool to the AsyncAPI website using the .asyncapi-tool file.
 ---
 
-## Introduction 
+## Introduction
+
 Learn how to add your tool to the AsyncAPI website using the `.asyncapi-tool` file. Make sure to structure your `.asyncapi-tool` file correctly to render your tool on the AsyncAPI website with customized tags and information for users to filter tools according to different categories.
 
 > The entire AsyncAPI Tools list is under the [AsyncAPI Tools Dashboard](https://www.asyncapi.com/tools) page.
@@ -12,11 +13,11 @@ Learn how to add your tool to the AsyncAPI website using the `.asyncapi-tool` fi
 
 The [`.asyncapi-tool` file](https://github.com/asyncapi/website/blob/master/scripts/tools/tools-schema.json) requires a specific schema to describe the type and details of your AsyncAPI tool; this file automatically adds your tool to our website's [Tools Dashboard](https://www.asyncapi.com/tools) within a week. Every Monday, we run our workflow to add new tools or update existing tools in our website and thus, notifies us regarding the wrong format of the file used somewhere in Github using Slack notifications. You can even ask the maintainers to manually trigger workflow by [Creating a Github issue](https://github.com/asyncapi/website/issues/new/choose) or contact us via [AsyncAPI Slack](https://asyncapi.com/slack-invite).
 
-You must create and maintain your `.asyncapi-tool` file in your tool's repository, as it doesn't require AsyncAPI approval. There is no restriction on the directory in which the file has to be created. In case, you need to create 2 or more `.asyncapi-tool` files in same repository, you can do the same, just make sure you provide correct `repoUrl` for each of them. Same case applies for monorepo as well. 
+You must create and maintain your `.asyncapi-tool` file in your tool's repository, as it doesn't require AsyncAPI approval. There is no restriction on the directory in which the file has to be created. In case, you need to create 2 or more `.asyncapi-tool` files in same repository, you can do the same, just make sure you provide correct `repoUrl` for each of them. Same case applies for monorepo as well.
 
 ## Tool file structure
 
-Let's look at a sample `.asyncapi-tool` file in `JSON` and `YAML` structures. You'll use these file structures to insert your tool into the website's [Tools Dashboard](https://www.asyncapi.com/tools). 
+Let's look at a sample `.asyncapi-tool` file in `JSON` and `YAML` structures. You'll use these file structures to insert your tool into the website's [Tools Dashboard](https://www.asyncapi.com/tools).
 
 ### JSON format file structure
 
@@ -118,3 +119,26 @@ Here's what a sample JSON object for an AsyncAPI tool should look like after it 
 ```
 
 > If your tool's information isn't showing up correctly in this file, please [create a new AsyncAPI GitHub issue](https://github.com/asyncapi/website/issues/new/choose) or contact us via [AsyncAPI Slack](https://asyncapi.com/slack-invite).
+
+## Adding New Category
+
+The category list is available in the [`categorylist.js` file](https://github.com/asyncapi/website/blob/master/scripts/tools/categorylist.js) from where you can opt the best category for your tools. Moreoever, if you don't find any, you can send us a request to add a new category that goes best with your requirements.
+
+You can also create a [Pull Request](https://github.com/asyncapi/website/pulls) by adding a new category object in the `categorylist.js` file providing all the details/information about the new category, as follows:
+
+```js
+{
+  name: "Sample category name",
+  tag: "sample-tag",
+  description: "Description providing some information about the category and other nitty-gritty things about the category."
+}
+```
+
+Also, add the new category details in the [`tools-manual.json` file](https://github.com/asyncapi/website/blob/master/config/tools-manual.json) with proper json schema, as well.
+
+```JSON
+  "Sample category name": {
+    "description": "Description that provides some information about the category and other nitty-gritty things about the category.",
+    "toolsList": []
+  }
+```
