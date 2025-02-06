@@ -2,7 +2,7 @@
 
 Welcome to the AsyncAPI Maintainer Onboarding Guide! 
 
-This document provides you with guidelines about everything you need to know to begin your journey as a maintainer within the AsyncAPI ecosystem. Maintainers are the backbone of any open-source project, helping with different activities that help the project stay on track and foster a healthy, productive community.
+This document aims to provide comprehensive guidelines about everything you need to know to begin your journey as a maintainer within the AsyncAPI ecosystem. Maintainers are the backbone of any open-source project, helping with different activities that help the project stay on track and foster a healthy, productive community.
 
 Before we go into getting you started, let's try and clarify just *who* a maintainer is.
 
