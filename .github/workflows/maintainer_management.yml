@@ -5,6 +5,7 @@ on:
     types: [closed]
     paths: 
       - 'MAINTAINERS.yaml'
+
 env:
   GH_TOKEN: ${{ secrets.GH_TOKEN }}
 
@@ -75,11 +76,11 @@ jobs:
 
       - name: Debug newMaintainers output
         run: |
-          echo "newMaintainers = $newMaintainers"
+          echo "newMaintainers = ${{ steps.compare-files.outputs.newMaintainers }}"
 
       - name: Debug removedMaintainers output
         run: |
-          echo "removedMaintainers = $removedMaintainers"
+          echo "removedMaintainers = ${{ steps.compare-files.outputs.removedMaintainers }}"
 
     outputs:
       newMaintainers: ${{ steps.compare-files.outputs.newMaintainers }}
@@ -94,15 +95,23 @@ jobs:
       - name: Invite new maintainers to the organization
         uses: actions/github-script@v6
         with:
-          github-token: ${{ env.GH_TOKEN }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
+            console.log(process.env)
+            const ghToken = process.env.GH_TOKEN;
             const newMaintainers = '${{ needs.detect_maintainer_changes.outputs.newMaintainers }}'.split(',');
+
             for (const maintainer of newMaintainers) {
               try {
-                await github.request('PUT /orgs/{org}/memberships/{username}', {
-                  org: 'asyncapi',
-                  username: maintainer
-                });
+                (async () => {
+                  await fetch(`https://api.github.com/orgs/asyncapi/teams/maintainers/memberships/${maintainer}`, {
+                    method: 'PUT',
+                    headers: {
+                      'Authorization': `token ${ghToken}`,
+                    },
+                  }).then(response => response.json())
+                    .then(data => console.log(data));
+                })()
               } catch (error) {
                 core.setFailed(`Failed to add ${maintainer} to the organization: ${error.message}`);
               }
@@ -111,7 +120,7 @@ jobs:
       - name: Add new maintainers to the team
         uses: actions/github-script@v6
         with:
-          github-token: ${{ env.GH_TOKEN }}
+          github-token: ${{ secrets.GH_TOKEN }}
           script: |
             const newMaintainers = '${{ needs.detect_maintainer_changes.outputs.newMaintainers }}'.split(',');
             for (const maintainer of newMaintainers) {
@@ -161,12 +170,13 @@ jobs:
       - name: Remove maintainers from the organization
         uses: actions/github-script@v6
         with:
-          github-token: ${{ env.GH_TOKEN }}
+          github-token: ${{ secrets.GH_TOKEN }}
           script: |
             const removedMaintainers = '${{ needs.detect_maintainer_changes.outputs.removedMaintainers }}'.split(',');
             for (const maintainer of removedMaintainers) {
               try {
-                await github.request('DELETE /orgs/asyncapi/memberships/{username}', {
+                await github.request('DELETE /orgs/{org}/memberships/{username}', {
+                  org: 'asyncapi',
                   username: maintainer
                 });
                 core.info(`Successfully removed ${maintainer} from the organization.`);
@@ -187,7 +197,7 @@ jobs:
       - name: Display goodbye message to removed maintainers
         uses: actions/github-script@v6
         with:
-          github-token: ${{ env.GH_TOKEN }}
+          github-token: ${{ secrets.GH_TOKEN }}
           script: |
               const removedMaintainers = "${{ needs.remove_maintainer.outputs.removedMaintainers }}".split(",");
               const removedTscMembers = "${{ needs.remove_maintainer.outputs.removedTscMembers }}".split(",");
@@ -218,7 +228,7 @@ jobs:
       - name: Add TSC members to Emeritus.yaml and print
         uses: actions/github-script@v6
         with:
-          github-token: ${{ env.GH_TOKEN }}
+          github-token: ${{ secrets.GH_TOKEN }}
           script: |
             const fs = require('fs');
             const path = './Emeritus.yaml';
