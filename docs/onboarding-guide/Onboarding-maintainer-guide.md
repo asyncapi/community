@@ -14,6 +14,7 @@ A maintainer is an individual who plays a crucial role in overseeing and guiding
 - Helping with reviewing and resolving issues and pull requests (PR)
 - Managing workflows and GitHub Actions to automate tasks
 - Enforcing coding standards
+- Enforcing relevant and up-to-date documentation
 - Identifying and appointing new maintainers
 - Mentoring new contributors and helping them navigate their journey
 - Recognizing and rewarding contributions to foster community engagement
