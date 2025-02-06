@@ -9,8 +9,6 @@ on:
 env:
   GH_TOKEN: ${{ secrets.GH_TOKEN }}
 
-permissions: write-all
-
 jobs:
   detect_maintainer_changes:
     if: github.event.pull_request.merged 
@@ -99,17 +97,21 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
+            console.log(process.env)
             const ghToken = process.env.GH_TOKEN;
             const newMaintainers = '${{ needs.detect_maintainer_changes.outputs.newMaintainers }}'.split(',');
+
             for (const maintainer of newMaintainers) {
               try {
-                await github.request('PUT /orgs/{org}/memberships/{username}', {
-                  headers: {
-                    authorization: `token ${ghToken}`,
-                  },
-                  org: 'asyncapi',
-                  username: maintainer
-                });
+                (async () => {
+                  await fetch(`https://api.github.com/orgs/asyncapi/teams/maintainers/memberships/${maintainer}`, {
+                    method: 'PUT',
+                    headers: {
+                      'Authorization': `token ${ghToken}`,
+                    },
+                  }).then(response => response.json())
+                    .then(data => console.log(data));
+                })()
               } catch (error) {
                 core.setFailed(`Failed to add ${maintainer} to the organization: ${error.message}`);
               }
