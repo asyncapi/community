@@ -227,7 +227,6 @@
     - java-spring-template
     - github-action-for-cli
     - .github
-    - jasyncapi
     - vs-asyncapi-preview
     - template-for-generator-templates
     - community
@@ -760,3 +759,13 @@
   repos:
     - conference-website
   githubID: 69006513
+- name: HariKrishnan
+  github: harikrishnan83
+  twitter: harikrishnan83
+  linkedin: harikrishnan83
+  slack: U067JPY0UH5
+  availableForHire: false
+  isTscMember: true
+  repos:
+    - jasyncapi
+  githubID: 126087
