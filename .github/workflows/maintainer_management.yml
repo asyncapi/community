@@ -8,6 +8,7 @@ on:
 
 env:
   GH_TOKEN: ${{ secrets.GH_TOKEN }}
+  GH_TOKEN_ORG_ADMIN: ${{ secrets.GH_TOKEN_ORG_ADMIN }}
 
 jobs:
   detect_maintainer_changes:
@@ -97,8 +98,8 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
-            console.log(process.env)
-            const ghToken = process.env.GH_TOKEN;
+            console.log(process.env);
+            const ghTokenOrgAdmin = process.env.GH_TOKEN_ORG_ADMIN;
             const newMaintainers = '${{ needs.detect_maintainer_changes.outputs.newMaintainers }}'.split(',');
 
             for (const maintainer of newMaintainers) {
@@ -107,7 +108,7 @@ jobs:
                   await fetch(`https://api.github.com/orgs/asyncapi/teams/maintainers/memberships/${maintainer}`, {
                     method: 'PUT',
                     headers: {
-                      'Authorization': `token ${ghToken}`,
+                      'Authorization': `token ${ghTokenOrgAdmin}`,
                     },
                   }).then(response => response.json())
                     .then(data => console.log(data));
