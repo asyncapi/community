@@ -6,10 +6,6 @@ on:
     paths: 
       - 'MAINTAINERS.yaml'
 
-env:
-  GH_TOKEN: ${{ secrets.GH_TOKEN }}
-  GH_TOKEN_ORG_ADMIN: ${{ secrets.GH_TOKEN_ORG_ADMIN }}
-
 jobs:
   detect_maintainer_changes:
     if: github.event.pull_request.merged 
@@ -96,27 +92,26 @@ jobs:
       - name: Invite new maintainers to the organization
         uses: actions/github-script@v6
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
             console.log(process.env);
-            const ghTokenOrgAdmin = process.env.GH_TOKEN_ORG_ADMIN;
             const newMaintainers = '${{ needs.detect_maintainer_changes.outputs.newMaintainers }}'.split(',');
 
-            for (const maintainer of newMaintainers) {
+            const promises = newMaintainers.map(async (maintainer) => {
               try {
-                (async () => {
-                  await fetch(`https://api.github.com/orgs/asyncapi/teams/maintainers/memberships/${maintainer}`, {
-                    method: 'PUT',
-                    headers: {
-                      'Authorization': `token ${ghTokenOrgAdmin}`,
-                    },
-                  }).then(response => response.json())
-                    .then(data => console.log(data));
-                })()
+                const response = await fetch(`https://api.github.com/orgs/asyncapi/teams/maintainers/memberships/${maintainer}`, {
+                  method: 'PUT',
+                  headers: {
+                    'Authorization': 'token ${{ secrets.GH_TOKEN_ORG_ADMIN }}',
+                  },
+                });
+                const data = await response.json();
+                console.log(data);
               } catch (error) {
                 core.setFailed(`Failed to add ${maintainer} to the organization: ${error.message}`);
               }
-            }
+            });
+
+            await Promise.all(promises);
 
       - name: Add new maintainers to the team
         uses: actions/github-script@v6
