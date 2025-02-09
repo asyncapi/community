@@ -43,6 +43,8 @@ jobs:
       - name: Fetch Current State
         id: fetch
         run: |
+          # This file comes from the branch vote_state which is created by the stateful-action
+          # Eg: https://github.com/ash17290/asyncapi-community/tree/vote_state
           cd .vote_state
           
           if [ ! -f vote_status.json ]; then
@@ -99,6 +101,7 @@ jobs:
             );
 
             const tscMembers = yaml.load(fs.readFileSync('MAINTAINERS.yaml', 'utf8'));
+            const failingSlackIds = new Set();
 
             for (const issue of issuesToNotify) {
               const { data: comments } = await github.rest.issues.listComments({
@@ -122,7 +125,8 @@ jobs:
 
               const validReactions = reactions.filter(reaction => reaction.content === '+1' || reaction.content === '-1');
 
-              const leftToVote = tscMembers.filter(member => !validReactions.find(reaction => reaction.user.login === member.github));
+              // Filter out the TSC members who have not voted yet and who have a Slack account (in the MAINTAINERS.yaml file)
+              const leftToVote = tscMembers.filter(member => member.slack && !validReactions.find(reaction => reaction.user.login === member.github));
 
               for (const member of leftToVote) {
                 console.log(`Notifying ${member.name} about issue #${issue.number}`);
@@ -130,23 +134,44 @@ jobs:
                 const message = `👋 Hi ${member.name},\nWe need your vote on the following topic: *${issue.title}*.\n*Issue Details*: ${issue.html_url}\nYour input is crucial to our decision-making process. Please take a moment to review the voting topic and share your thoughts.\nThank you for your contribution! 🙏`;
 
                 // Sending Slack DM via API
-                const response = await axios.post('https://slack.com/api/chat.postMessage', {
-                  channel: member.slack,
-                  text: message,
-                }, {
-                  headers: {
-                    'Authorization': `Bearer ${{ secrets.SLACK_TOKEN }}`,
-                    'Content-Type': 'application/json',
-                  },
-                });
+                try {
+                  const response = await axios.post('https://slack.com/api/chat.postMessage', {
+                    channel: member.slack,
+                    text: message,
+                  }, {
+                    headers: {
+                      'Authorization': `Bearer ${{ secrets.SLACK_DM_TSC }}`,
+                      'Content-Type': 'application/json',
+                    },
+                  });
 
-                console.log(`Slack DM sent to ${member.name}`);
+                  console.log(`Slack DM sent to ${member.name}`);
+                } catch (error) {
+                  console.error(`Error sending Slack DM to ${member.name}: ${error.message}`);
+                  failingSlackIds.add(member.slack);
+                }
               }
               state[issue.number].last_notified = new Date().toISOString();
             }
 
+            // Store the failing Slack IDs in GITHUB_ENV
+            if (failingSlackIds.size > 0) {
+              process.env.FAILED_SLACK_IDS = Array.from(failingSlackIds).join(',');
+              core.exportVariable('FAILED_SLACK_IDS', JSON.stringify(Array.from(failingSlackIds)));
+            }
+
+            // Store the state back
             return JSON.stringify(state);
 
       - name: Update State
         run: |
           echo ${{ steps.notify.outputs.result }} | jq > ./.vote_state/vote_status.json
+
+      - name: Notify about failing Slack DMs
+        if: env.FAILED_SLACK_IDS
+        uses: rtCamp/action-slack-notify@v2
+        env:
+          SLACK_WEBHOOK: ${{secrets.SLACK_CI_FAIL_NOTIFY}}
+          SLACK_TITLE: 🚨 Vote notifications could'nt be sent to following IDs 🚨
+          SLACK_MESSAGE: ${{ env.FAILED_SLACK_IDS }}
+          MSG_MINIMAL: true
