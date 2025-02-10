@@ -20,6 +20,7 @@ jobs:
       #     "last_notified": "2021-09-01T00:00:00Z"
       #   }
       # }
+      # Example: https://github.com/ash17290/asyncapi-community/blob/vote_state/vote_status.json
       - uses: jorgebg/stateful-action@bd279992190b64c6a5906c3b75a6f2835823ab46
         id: state
         with:
@@ -47,10 +48,13 @@ jobs:
           # Eg: https://github.com/ash17290/asyncapi-community/tree/vote_state
           cd .vote_state
           
-          if [ ! -f vote_status.json ]; then
+          # Check if the file exists, not empty and readable and create if not
+          if [ ! -f vote_status.json ] || [ ! -s vote_status.json ] || [ ! -r vote_status.json ]; then
+            echo "Intializing vote_status.json"
             echo "{}" > vote_status.json
           fi
 
+          # Read the file and export it as JSON
           export json=$(cat vote_status.json | jq -c)
 
           echo "::debug::vote_status=$json"
@@ -58,12 +62,12 @@ jobs:
           # Store in GitHub Output
           echo "vote_status=$json" >> $GITHUB_OUTPUT
       
+      # Needed as axios and js-yaml are not available in the default environment
       - name: Install the dependencies
         run: npm install js-yaml@4.1.0 axios@1.7.4
         shell: bash
-
+      
       - name: Notify TSC Members
-        # if: steps.list.outputs.result.length > 0
         uses: actions/github-script@v7
         id: notify
         with:
@@ -72,82 +76,30 @@ jobs:
             const fs = require('fs');
             const axios = require('axios');
 
+            // Creates list of issues for which the TSC members need to be notified
+            // The number of buffer days is easily configurable by changing the value of the days variable
+            const { filterIssues, getTSCLeftToVote, sendSlackNotification } = require('./.github/workflows/vote-notify-helpers/index.js');
+
             const issues = ${{ steps.list.outputs.result }};
-            const state = ${{ steps.fetch.outputs.vote_status }};
-
-            // Add new issues and close old ones
-            const newIssues = issues.filter(issue => !state[issue.number]);
-            const closedIssues = Object.keys(state).filter(issue => !issues.find(i => i.number === parseInt(issue)));
-
-            // Update state
-            for (const issue of newIssues) {
-              state[issue.number] = {
-                status: 'open',
-                last_notified: null, 
-              }
+            const initialState = ${{ steps.fetch.outputs.vote_status }};
+            const config = {
+              days: 7
             }
 
-            for (const issue of closedIssues) {
-              state[issue] = {
-                ...state[issue],
-                status: 'closed',
-              }
-            }
-
-            const issuesToNotify = issues.filter(issue => 
-              state[issue.number].status === 'open' && 
-              (!state[issue.number].last_notified ||
-              new Date(state[issue.number].last_notified) + 7 * 24 * 60 * 60 * 1000 < new Date() || true)
-            );
+            const { issuesToNotify, state } = filterIssues(issues, initialState, config);
 
             const tscMembers = yaml.load(fs.readFileSync('MAINTAINERS.yaml', 'utf8'));
             const failingSlackIds = new Set();
 
+            console.log(`Issues to notify: ${JSON.stringify(issuesToNotify.map(issue => issue.number))}`);
+
             for (const issue of issuesToNotify) {
-              const { data: comments } = await github.rest.issues.listComments({
-                owner: context.repo.owner,
-                repo: context.repo.repo,
-                issue_number: issue.number,
-              });
-
-              const voteOpeningComment = comments.findLast(comment => comment.body.includes('Vote created') && comment.user.login === 'git-vote[bot]');
-
-              if (!voteOpeningComment) {
-                console.log(`Vote Opening Comment not found for issue #${issue.number}`);
-                continue;
-              }
-
-              const { data: reactions } = await github.rest.reactions.listForIssueComment({
-                owner: context.repo.owner,
-                repo: context.repo.repo,
-                comment_id: voteOpeningComment.id,
-              });
-
-              const validReactions = reactions.filter(reaction => reaction.content === '+1' || reaction.content === '-1');
-
-              // Filter out the TSC members who have not voted yet and who have a Slack account (in the MAINTAINERS.yaml file)
-              const leftToVote = tscMembers.filter(member => member.slack && !validReactions.find(reaction => reaction.user.login === member.github));
+              const leftToVote = await getTSCLeftToVote(issue, tscMembers, github, context);
 
               for (const member of leftToVote) {
                 console.log(`Notifying ${member.name} about issue #${issue.number}`);
 
-                const message = `👋 Hi ${member.name},\nWe need your vote on the following topic: *${issue.title}*.\n*Issue Details*: ${issue.html_url}\nYour input is crucial to our decision-making process. Please take a moment to review the voting topic and share your thoughts.\nThank you for your contribution! 🙏`;
-
-                // Sending Slack DM via API
-                try {
-                  const response = await axios.post('https://slack.com/api/chat.postMessage', {
-                    channel: member.slack,
-                    text: message,
-                  }, {
-                    headers: {
-                      'Authorization': `Bearer ${{ secrets.SLACK_DM_TSC }}`,
-                      'Content-Type': 'application/json',
-                    },
-                  });
-
-                  console.log(`Slack DM sent to ${member.name}`);
-                } catch (error) {
-                  console.error(`Error sending Slack DM to ${member.name}: ${error.message}`);
+                if (!await sendSlackNotification(member, issue, `${{ secrets.SLACK_DM_TSC }}`)) {
                   failingSlackIds.add(member.slack);
                 }
               }
@@ -164,6 +116,7 @@ jobs:
             return JSON.stringify(state);
 
       - name: Update State
+        if: ${{ steps.notify.outputs.result }}
         run: |
           echo ${{ steps.notify.outputs.result }} | jq > ./.vote_state/vote_status.json
 
