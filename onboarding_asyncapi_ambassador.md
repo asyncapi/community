@@ -3,12 +3,12 @@ Welcome to the AsyncAPI Ambassador Program!
 
 We are happy you chose to join the ambassador program in making valuable contributions to promote AsyncAPI.
 
-Your tenure as an ambassador begins on the date you are accepted. For example, if you were accepted as an ambassador on January 11, 2025, your tenure would end on January 10, 2026. At the end of your tenure, we will review your performance to determine if you can continue as an ambassador.
+Your tenure as an ambassador begins on the date you are accepted and shall be renewed annually. For example, if you were accepted as an ambassador on January 11, 2025, your tenure would end on January 10, 2026. At the end of your tenure, we will review your performance to determine if you can continue as an ambassador.
 
 
 As an ambassador, you are expected to make a minimum of four contributions per year. Contributions can include articles, talks, videos, podcasts, driving initiatives, and more.
 
-- Articles, videos, and podcasts can be published on the [AsyncAPI blog](https://www.asyncapi.com/blog) or other platforms.
+- Articles, videos, and podcasts can be published on the [AsyncAPI blog](https://www.asyncapi.com/blog) or other platforms. Please note that we do not encourage blogs or articles that promote/market certain other products or tools.
 - Talks and presentations should focus primarily on AsyncAPI.
 - Contributions to improve the visibility of the community.
 - Volunteering at booths during events.
