@@ -20,7 +20,7 @@ Build an AI-powered assistant fine-tuned on AsyncAPI to provide accurate answers
 - ⏳ **Length:** 175 Hours
 
 ## 3) [AsyncAPI Generator Maintainership](https://github.com/asyncapi/generator/issues/1360)
-This initiative aims to guide you on a journey from being a contributor to becoming a maintainer of the project. You'll gain insight into the responsibilities of a maintainer, involving tasks beyond mere coding.
+This initiative aims to guide you from contributing to maintaining the project. You'll gain insight into the responsibilities of a maintainer, which involve tasks beyond mere coding.
 
 - 🎯 **Outcome:** Taking responsibility for the project's future and continuous improvement.
 - 🛠️ **Skills:** JavaScript/TypeScript, testing libraries, Docker, virtualization, and test automation.
