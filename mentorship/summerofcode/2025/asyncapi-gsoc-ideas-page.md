@@ -38,7 +38,7 @@ Develop a comprehensive UI Kit to enhance design consistency, modularity, and ma
 - ⏳ **Length:** 175 Hours
 
 ## 5) [VS Code Extension Maintainership](https://github.com/asyncapi/conference-website/issues/551)
-This initiative will guide you from being a contributor to becoming a maintainer of the [VS Code AsyncAPI Preview extension](https://github.com/asyncapi/vs-asyncapi-preview). You'll learn the responsibilities of a maintainer, including code contributions, issue triaging, release management, and community engagement.
+This initiative will guide you from contributing to becoming a maintainer of the [VS Code AsyncAPI Preview extension](https://github.com/asyncapi/vs-asyncapi-preview). You'll learn the responsibilities of a maintainer, including code contributions, issue triaging, release management, and community engagement.
 
 - 🎯 **Outcome:** Taking ownership of the VS Code extension to ensure its long-term stability and improvement.
 - 🛠️ **Skills Required:** TypeScript/JavaScript, VS Code Extensions, Spectral Linting, Testing, and Open Source Contribution.
