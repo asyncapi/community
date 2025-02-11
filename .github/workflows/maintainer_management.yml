@@ -5,8 +5,9 @@ on:
     types: [closed]
     paths: 
       - 'MAINTAINERS.yaml'
+
 env:
-  GH_TOKEN: ${{ secrets.GH_TOKEN }}
+  GH_TOKEN_ORG_ADMIN: ${{ secrets.GH_TOKEN_ORG_ADMIN }}
 
 jobs:
   detect_maintainer_changes:
@@ -75,11 +76,11 @@ jobs:
 
       - name: Debug newMaintainers output
         run: |
-          echo "newMaintainers = $newMaintainers"
+          echo "newMaintainers = ${{ steps.compare-files.outputs.newMaintainers }}"
 
       - name: Debug removedMaintainers output
         run: |
-          echo "removedMaintainers = $removedMaintainers"
+          echo "removedMaintainers = ${{ steps.compare-files.outputs.removedMaintainers }}"
 
     outputs:
       newMaintainers: ${{ steps.compare-files.outputs.newMaintainers }}
@@ -94,7 +95,7 @@ jobs:
       - name: Invite new maintainers to the organization
         uses: actions/github-script@v6
         with:
-          github-token: ${{ env.GH_TOKEN }}
+          github-token: ${{ env.GH_TOKEN_ORG_ADMIN }}
           script: |
             const newMaintainers = '${{ needs.detect_maintainer_changes.outputs.newMaintainers }}'.split(',');
             for (const maintainer of newMaintainers) {
@@ -111,7 +112,7 @@ jobs:
       - name: Add new maintainers to the team
         uses: actions/github-script@v6
         with:
-          github-token: ${{ env.GH_TOKEN }}
+          github-token: ${{ env.GH_TOKEN_ORG_ADMIN }}
           script: |
             const newMaintainers = '${{ needs.detect_maintainer_changes.outputs.newMaintainers }}'.split(',');
             for (const maintainer of newMaintainers) {
@@ -137,7 +138,7 @@ jobs:
       - name: Display welcome message for new maintainers
         uses: actions/github-script@v6
         with:
-          github-token: ${{ secrets.GH_TOKEN }}
+          github-token: ${{ env.GH_TOKEN_ORG_ADMIN }}
           script: |
             const newMaintainers = "${{ needs.add_maintainer.outputs.newMaintainers }}".split(",");
             console.log(`New maintainers: ${newMaintainers}`);
@@ -161,12 +162,13 @@ jobs:
       - name: Remove maintainers from the organization
         uses: actions/github-script@v6
         with:
-          github-token: ${{ env.GH_TOKEN }}
+          github-token: ${{ env.GH_TOKEN_ORG_ADMIN }}
           script: |
             const removedMaintainers = '${{ needs.detect_maintainer_changes.outputs.removedMaintainers }}'.split(',');
             for (const maintainer of removedMaintainers) {
               try {
-                await github.request('DELETE /orgs/asyncapi/memberships/{username}', {
+                await github.request('DELETE /orgs/{org}/memberships/{username}', {
+                  org: 'asyncapi',
                   username: maintainer
                 });
                 core.info(`Successfully removed ${maintainer} from the organization.`);
@@ -187,7 +189,7 @@ jobs:
       - name: Display goodbye message to removed maintainers
         uses: actions/github-script@v6
         with:
-          github-token: ${{ env.GH_TOKEN }}
+          github-token: ${{ env.GH_TOKEN_ORG_ADMIN }}
           script: |
               const removedMaintainers = "${{ needs.remove_maintainer.outputs.removedMaintainers }}".split(",");
               const removedTscMembers = "${{ needs.remove_maintainer.outputs.removedTscMembers }}".split(",");
@@ -218,7 +220,7 @@ jobs:
       - name: Add TSC members to Emeritus.yaml and print
         uses: actions/github-script@v6
         with:
-          github-token: ${{ env.GH_TOKEN }}
+          github-token: ${{ env.GH_TOKEN_ORG_ADMIN }}
           script: |
             const fs = require('fs');
             const path = './Emeritus.yaml';
@@ -249,8 +251,9 @@ jobs:
       - name: Commit and push
         run: |
           git add .
-          git commit -m "Update Emeritus.yaml"
-          git push https://${{ secrets.GH_TOKEN}}@github.com/asyncapi/community update-emeritus-${{ github.run_id }}
+          git commit -m "chore: update Emeritus.yaml"
+          git remote set-url origin https://x-access-token:${{ env.GH_TOKEN_ORG_ADMIN }}@github.com/asyncapi/community.git
+          git push origin update-emeritus-${{ github.run_id }}
 
       - name: Create PR
         run: |
