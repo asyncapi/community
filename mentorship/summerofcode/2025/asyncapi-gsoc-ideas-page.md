@@ -61,7 +61,7 @@ Develop a new AsyncAPI Generator template for Java with Quarkus, leveraging its 
 
 ## FAQ
 
-1. **How active are previous GSoC contributors in AsyncAPI?** AsyncAPI participated as a standalone organization in GSoC for the first time in 2024, after previously collaborating with Postman. Many contributors from that cohort remain actively involved in the community, including:
+1. **How active are previous GSoC contributors in AsyncAPI?** AsyncAPI participated as a standalone organization in GSoC for the first time in 2024 after previously collaborating with Postman. Many contributors from that cohort remain actively involved in the community, including:
 
    - **[@ashmit-coder](https://github.com/ashmit-coder)**: Now a maintainer of the [conference-website](https://github.com/asyncapi/conference-website) repository.
    - **[@helios2003](https://github.com/helios2003)**: Actively contributing to the [CLI](https://github.com/asyncapi/cli) and [Studio](https://github.com/asyncapi/studio) repositories.
