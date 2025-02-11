@@ -22,7 +22,7 @@ Build an AI-powered assistant fine-tuned on AsyncAPI to provide accurate answers
 ## 3) [AsyncAPI Generator Maintainership](https://github.com/asyncapi/generator/issues/1360)
 This initiative aims to guide you from contributing to maintaining the project. You'll gain insight into the responsibilities of a maintainer, which involve tasks beyond mere coding.
 
-- 🎯 **Outcome:** Taking responsibility for the project's future and continuous improvement.
+- 🎯 **Outcome:** Responsible for the project's future and continuous improvement.
 - 🛠️ **Skills:** JavaScript/TypeScript, testing libraries, Docker, virtualization, and test automation.
 - 🧩 **Difficulty:** Medium/Hard
 - 👩🏿‍🏫 **Mentor(s):** [@derberg](https://github.com/derberg)
