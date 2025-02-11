@@ -1,4 +1,4 @@
-# AsyncAPI Ideas Page: Google Summer of Code 2024
+# AsyncAPI Ideas Page: Google Summer of Code 2025
 Welcome to the **AsyncAPI Ideas Page** with our proposed projects for Google Summer of Code (GSoC) 2024! If you are an interested student/contributor, please don't hesitate to contact our mentors directly to discuss project ideas.
 
 ## 1) [Enhancing Performance and Reliability of AsyncAPI CLI](https://github.com/asyncapi/cli/issues/1657)
