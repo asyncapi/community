@@ -55,6 +55,33 @@ Develop a new AsyncAPI Generator template for Java with Quarkus, leveraging its 
 - 👩🏿‍🏫 **Mentor(s):** [@AayushSaini101](https://github.com/AayushSaini101), [@Souvikns](https://github.com/Souvikns)
 - ⏳ **Length:** 350 Hours
 
+## 7) [Refactor the Scripts inside the website and add Integration tests](https://github.com/asyncapi/website/issues/3670)
+Add the script execution to a new folder inside the website, and add integration tests for those scripts.
+
+- 🎯 **Outcome:** A full Unit + Integration tests setup will be added for the scripts to fully test the functionalities
+- 🛠️ **Skills Required:** Typescript, Node js, Jest, Github actions
+- 🧩 **Difficulty:** Medium/Hard
+- 👩🏿‍🏫 **Mentor(s):** [@akshatnema](https://github.com/akshatnema)
+- ⏳ **Length:** 350 Hours
+
+## 8) [Add E2E tests for the Website critical flows](https://github.com/asyncapi/website/issues/3671)
+Add E2E tests for the website where some of the critical flows (that are centered around user experience are tested thoroughly).
+
+- 🎯 **Outcome:** This project will ensure that we are not breaking any critical flows where user experience is our topmost priority
+- 🛠️ **Skills Required:** Typescript, Node js, E2E Testing, Github actions
+- 🧩 **Difficulty:** Medium/Hard
+- 👩🏿‍🏫 **Mentor(s):** [@sambhavgupta0705](https://github.com/sambhavgupta0705)
+- ⏳ **Length:** 175 hours
+
+## 9) [Redesign of website and addition of Dark theme](https://github.com/asyncapi/website/issues/3669)
+Create new designs for the website pages based on the theme chosen by [@Mayaleeeee](https://github.com/Mayaleeeee) and replicate those designs inside the website, along with the Dark mode theme.
+
+- 🎯 **Outcome:** This project will ensure that we are not breaking any critical flows where user experience is our topmost priority
+- 🛠️ **Skills Required:** Typescript, Node js, Figma, TailwindCSS
+- 🧩 **Difficulty:** Medium/Hard
+- 👩🏿‍🏫 **Mentor(s):** [@Mayaleeeee](https://github.com/Mayaleeeee), [@devilkiller-ag](https://github.com/devilkiller-ag)
+- ⏳ **Length:** 350 hours
+
 ## Contact AsyncAPI Mentors
 - Join [our Slack workspace](https://www.asyncapi.com/slack-invite).  Observe our [Slack etiquette](https://github.com/asyncapi/.github/blob/master/slack-etiquette.md) and [AsyncAPI code of conduct](https://github.com/asyncapi/.github/blob/master/CODE_OF_CONDUCT.md).
 - Join the dedicated Mentorship channel `#09_mentorships` to meet all other GSoC mentees and mentors.
