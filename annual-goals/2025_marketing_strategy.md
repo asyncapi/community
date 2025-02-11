@@ -1,10 +1,6 @@
 # Community Marketing Strategy for AsyncAPI Initiative
 
 
-**AsyncAPI Initiative**
-
-
-**Community Marketing Strategy**
 
 
 | **Community name** | AsyncAPI Initiative         |
