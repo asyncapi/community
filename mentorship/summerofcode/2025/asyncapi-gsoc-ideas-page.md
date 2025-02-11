@@ -72,7 +72,7 @@ Develop a new AsyncAPI Generator template for Java with Quarkus, leveraging its 
 
 
 2. **Is using ChatGPT for GSoC project proposals allowed?**
-   We advise against using ChatGPT or similar AI tools for your GSoC project proposals with AsyncAPI. Should you choose to use such tools, we require that this be fully disclosed in your application.
+  We advise against using ChatGPT or similar AI tools for your GSoC project proposals with AsyncAPI. If you choose to use such tools, we require that you fully disclose this in your application.
 
 3. **Where is the AsyncAPI source code located?**
    You can find all AsyncAPI source code on GitHub under our organization: [https://github.com/asyncapi](https://github.com/asyncapi).
