@@ -251,7 +251,7 @@ jobs:
       - name: Commit and push
         run: |
           git add .
-          git commit -m "Update Emeritus.yaml"
+          git commit -m "chore: update Emeritus.yaml"
           git remote set-url origin https://x-access-token:${{ env.GH_TOKEN_ORG_ADMIN }}@github.com/asyncapi/community.git
           git push origin update-emeritus-${{ github.run_id }}
 
