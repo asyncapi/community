@@ -76,8 +76,9 @@ async function getTSCLeftToVote(issue, tscMembers, github, context) {
       comment_id: voteOpeningComment.id,
     });
 
-    // Only 👍 and 👎 are valid votes
-    const validReactions = reactions.filter(reaction => reaction.content === '+1' || reaction.content === '-1');
+    // Only 👍,👎, and 👀 are valid votes
+    const validEmojis = ['+1', '-1', 'eyes'];
+    const validReactions = reactions.filter(reaction => validEmojis.includes(reaction.content));
 
     // Filter out the TSC members who have not voted yet and who have a Slack account (in the MAINTAINERS.yaml file)
     const leftToVote = tscMembers.filter(member => member.slack && !validReactions.find(reaction => reaction.user.login === member.github));
