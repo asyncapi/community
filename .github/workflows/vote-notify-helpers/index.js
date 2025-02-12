@@ -82,7 +82,12 @@ async function getTSCLeftToVote(issue, tscMembers, github, context) {
 
     // Filter out the TSC members who have not voted yet and who have a Slack account (in the MAINTAINERS.yaml file)
     const leftToVote = tscMembers.filter(member => member.slack && !validReactions.find(reaction => reaction.user.login === member.github));
-    return leftToVote;
+    return {
+      leftToVote,
+
+      // Currently we have 4 weeks deadline for voting from creation of voting comment (28 days)
+      daysBeforeDeadline: 28 - Math.ceil((new Date().getTime() - new Date(voteOpeningComment.created_at).getTime()) / (1000 * 60 * 60 * 24)),
+    }
   } catch (error) {
     console.log(`Error fetching comments and reactions for issue #${issue.number}: ${error}`);
     return [];
@@ -97,8 +102,8 @@ async function getTSCLeftToVote(issue, tscMembers, github, context) {
  * 
  * @returns {Boolean} true if Slack notification sent successfully, false otherwise
  */
-async function sendSlackNotification(member, issue, slackToken) {
-  const message = `👋 Hi ${member.name},\nWe need your vote on the following topic: *${issue.title}*.\n*Issue Details*: ${issue.html_url}\nYour input is crucial to our decision-making process. Please take a moment to review the voting topic and share your thoughts.\nThank you for your contribution! 🙏`;
+async function sendSlackNotification(member, issue, daysBeforeDeadline, slackToken) {
+  const message = `👋 Hi ${member.name},\nWe need your vote on the following topic: *${issue.title}*.\n*Issue Details*: ${issue.html_url}\n*Days left before voting closes: ${daysBeforeDeadline}*\nYour input is crucial to our decision-making process. Please take a moment to review the voting topic and share your thoughts.\nThank you for your contribution! 🙏`;
 
   // Sending Slack DM via API
   try {

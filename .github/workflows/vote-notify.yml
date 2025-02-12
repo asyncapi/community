@@ -94,12 +94,12 @@ jobs:
             console.log(`Issues to notify: ${JSON.stringify(issuesToNotify.map(issue => issue.number))}`);
 
             for (const issue of issuesToNotify) {
-              const leftToVote = await getTSCLeftToVote(issue, tscMembers, github, context);
+              const { leftToVote, daysBeforeDeadline } = await getTSCLeftToVote(issue, tscMembers, github, context);
 
               for (const member of leftToVote) {
                 console.log(`Notifying ${member.name} about issue #${issue.number}`);
 
-                if (!await sendSlackNotification(member, issue, `${{ secrets.SLACK_DM_TSC }}`)) {
+                if (!await sendSlackNotification(member, issue, daysBeforeDeadline, `${{ secrets.SLACK_DM_TSC }}`)) {
                   failingSlackIds.add(member.slack);
                 }
               }
