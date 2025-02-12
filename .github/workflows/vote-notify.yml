@@ -83,7 +83,7 @@ jobs:
             const issues = ${{ steps.list.outputs.result }};
             const initialState = ${{ steps.fetch.outputs.vote_status }};
             const config = {
-              days: 7
+              days: 5
             }
 
             const { issuesToNotify, state } = filterIssues(issues, initialState, config);
