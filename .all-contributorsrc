@@ -459,6 +459,19 @@
         "blog",
         "promotion"
       ]
+    },
+    {
+      "login": "Shurtu-gal",
+      "name": "Ashish Padhy",
+      "avatar_url": "https://avatars.githubusercontent.com/u/100484401?v=4",
+      "profile": "http://ashishpadhy.live",
+      "contributions": [
+        "infra",
+        "review",
+        "question",
+        "ideas",
+        "maintenance"
+      ]
     }
   ],
   "commitConvention": "angular",
