@@ -143,9 +143,9 @@ In case the Bounty Program Participant has not provided critical fixes during th
 
 ## Extension Of Bounty Issue's Timeline
 
-In case a response critical for the technical resolution of the Bounty Issue is delayed in [GitHub](https://github.com) and/or [Slack](https://asyncapi.slack.com) for a period of three or more consecutive working days, all remaining target dates of the Bounty Issue's Timeline are increased by one calendar week per each of the three consecutive working days the critically important response was delayed. 'Working days' are weekdays, from Monday through Friday. Friday and Monday are considered consecutive.
+In case a response critical for the technical resolution of the Bounty Issue is delayed in [GitHub](https://github.com) and/or [Slack](https://asyncapi.slack.com) for a period of three or more consecutive working days, all remaining target dates of the Bounty Issue's Timeline are shifted by one calendar week per each of the three consecutive working days the critically important response was delayed. 'Working days' are weekdays, from Monday through Friday. Friday and Monday are considered consecutive.
 
-In case of unpredicted [force majeure](https://iccwbo.org/wp-content/uploads/sites/3/2020/03/icc-forcemajeure-hardship-clauses-march2020.pdf) and/or circumstances that could not be foreseen and/or that are beyond the control of both the Bounty Program Participant and the AsyncAPI Maintainer, the Bounty Issue Timeline can be increased by a fixed or indefinite amount of time, with a fair explanation in the Bounty Issue's or Pull Request's comments.
+In case of unpredicted [force majeure](https://iccwbo.org/wp-content/uploads/sites/3/2020/03/icc-forcemajeure-hardship-clauses-march2020.pdf) and/or circumstances that could not be foreseen and/or that are beyond the control of both the Bounty Program Participant and the AsyncAPI Maintainer, the Bounty Issue Timeline can be extended by a fixed or indefinite amount of time, with a fair explanation in the Bounty Issue's or Pull Request's comments.
 
 Communication on the necessity of the Bounty Issue Timeline extension should happen prior to any current milestone of the Bounty Issue's Timeline approaching, with a reflection of the start of such communication in the Bounty Issue's or Pull Request's comments, in case a communication platform other than GitHub is used.
 
