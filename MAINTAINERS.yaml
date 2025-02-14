@@ -78,7 +78,6 @@
   isTscMember: true
   repos:
     - studio
-    - github-action-for-cli
     - cli
   githubID: 100484401
 - name: Cameron Rushton
@@ -225,7 +224,6 @@
     - nodejs-template
     - nodejs-ws-template
     - java-spring-template
-    - github-action-for-cli
     - .github
     - vs-asyncapi-preview
     - template-for-generator-templates
@@ -241,7 +239,6 @@
   company: Travelping GmbH
   isTscMember: true
   repos:
-    - website
     - generator
     - asyncapi-react
     - parser-go
@@ -251,7 +248,6 @@
     - studio
     - html-template
     - markdown-template
-    - github-action-for-cli
     - template-for-generator-templates
     - generator-react-sdk
     - modelina
@@ -610,26 +606,12 @@
   repos:
     - website
   githubID: 108233235
-- name: 'Bhaswati Roy '
-  github: BhaswatiRoy
-  twitter: swiftiebhaswati
-  isTscMember: false
-  repos:
-    - website
-  githubID: 78029145
 - name: 'Vaishnavi '
   github: VaishnaviNandakumar
   isTscMember: false
   repos:
     - website
   githubID: 41518119
-- name: Joy Almeida
-  github: J0SAL
-  twitter: _j0sal
-  isTscMember: false
-  repos:
-    - website
-  githubID: 52382282
 - name: Mihael Bosnjak
   github: mboss37
   isTscMember: false
@@ -770,3 +752,11 @@
   repos:
     - jasyncapi
   githubID: 126087
+- name: Prince Onyeanuna
+  github: Aahil13
+  twitter: OnyeanunaE
+  availableForHire: true
+  isTscMember: false
+  repos:
+    - website
+  githubID: 63567230
