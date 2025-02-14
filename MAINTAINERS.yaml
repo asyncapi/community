@@ -332,16 +332,6 @@
     - spec-json-schemas
     - bindings
   githubID: 30902631
-- name: Rohit T
-  github: TRohit20
-  linkedin: rohit-t-0124a4242
-  slack: U05174ZKGQ6
-  twitter: TRRohit20
-  availableForHire: true
-  isTscMember: true
-  repos:
-    - website
-  githubID: 108233235
 - name: Samir AMZANI
   github: Amzani
   slack: U01N6AW5V5G
@@ -609,10 +599,13 @@
     - optimizer
     - bundler
   githubID: 16149591
-- name: Rohit
+- name: Rohit T
   github: TRohit20
+  linkedin: rohit-t-0124a4242
+  slack: U05174ZKGQ6
   twitter: TRRohit20
-  isTscMember: false
+  availableForHire: true
+  isTscMember: true
   repos:
     - website
   githubID: 108233235
