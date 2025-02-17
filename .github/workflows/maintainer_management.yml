@@ -143,7 +143,7 @@ jobs:
             
                       Please take a moment to verify if you would like to provide more details for your account, such as your LinkedIn profile, Twitter handle, or company affiliation. In case there is anything you want to add, please open up a separate pull request for the \`MAINTAINERS.yaml\` file.\n
                       
-                      Additionally, if you are interested in becoming a [TSC member](https://github.com/amadeus4dev-examples/amadeus-async-flight-status) and contributing to the direction of the AsyncAPI Initiative, let us know, and we'll be happy to guide you through the process. Every maintainer has the right to become a TSC member, just open a pull request to modify your entry in \`MAINTAINER.yaml\` file and make sure \`isTscMember\` property is set to \`true\`. You can find some basic information about TSC membership in [this TSC-related guide](https://github.com/asyncapi/community/blob/master/TSC_MEMBERSHIP.md). Feel free to reach out to us for more help by dropping a comment in this pull request, or by asking for help in our Slack.\n
+                      Additionally, if you are interested in becoming a [TSC member](https://www.youtube.com/watch?v=MfVUUbW2aos) and contributing to the direction of the AsyncAPI Initiative, let us know, and we'll be happy to guide you through the process. Every maintainer has the right to become a TSC member, just open a pull request to modify your entry in \`MAINTAINER.yaml\` file and make sure \`isTscMember\` property is set to \`true\`. You can find some basic information about TSC membership in [this TSC-related guide](https://github.com/asyncapi/community/blob/master/TSC_MEMBERSHIP.md). Feel free to reach out to us for more help by dropping a comment in this pull request, or by asking for help in our Slack.\n
                       
                       Welcome aboard! We are excited to have you as part of the team.`).join("\n");
             
@@ -217,7 +217,6 @@ jobs:
       - name: Add TSC members to Emeritus.yaml and print
         uses: actions/github-script@v6
         with:
-          github-token: ${{ secrets.GH_TOKEN_ORG_ADMIN }}
           script: |
             const fs = require('fs');
             const path = './Emeritus.yaml';
@@ -249,7 +248,7 @@ jobs:
         run: |
           git add .
           git commit -m "chore: update Emeritus.yaml"
-          git remote set-url origin https://x-access-token:${{ secrets.GH_TOKEN_ORG_ADMIN }}@github.com/asyncapi/community.git
+          git remote set-url origin https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/asyncapi/community.git
           git push origin update-emeritus-${{ github.run_id }}
 
       - name: Create PR
