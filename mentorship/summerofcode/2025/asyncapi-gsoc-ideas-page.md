@@ -7,7 +7,7 @@ Improve the AsyncAPI CLI by optimizing performance, enhancing test reliability, 
 - 🎯 **Outcome:** Achieve a faster CLI execution, stable tests, file sync/publish support, and enhanced validation.
 - 🛠️ **Skills Required:** JavaScript/TypeScript, Node.js, Testing Frameworks, API, and testing automation.
 - 🧩 **Difficulty:** Medium/Hard
-- 👩🏿‍🏫 **Mentor(s):** [@AayushSaini101](https://github.com/AayushSaini101) | [@Souvikns](https://github.com/Souvikns) | [#Shurtu-gal](https://github.com/Shurtu-gal)  
+- 👩🏿‍🏫 **Mentor(s):** [@AayushSaini101](https://github.com/AayushSaini101) | [@Souvikns](https://github.com/Souvikns) | [@Shurtu-gal](https://github.com/Shurtu-gal)  
 - ⏳ **Length:** 175 Hours
 
 ## 2) [AI-Powered Assistant for AsyncAPI](https://github.com/asyncapi/chatbot/issues/109)
