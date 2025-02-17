@@ -82,6 +82,16 @@ Create new designs for the website pages based on the theme chosen by [@Mayaleee
 - 👩🏿‍🏫 **Mentor(s):** [@Mayaleeeee](https://github.com/Mayaleeeee), [@devilkiller-ag](https://github.com/devilkiller-ag)
 - ⏳ **Length:** 350 hours
 
+## 10) [AsyncAPI Studio Maintainership and Complete UI Overhaul](https://github.com/asyncapi/studio/issues/634)  
+
+Replicate the UI components from the [Figma design](https://www.figma.com/proto/bPMB3lkMTOOMuKk0oGLuNm/Studio?type=design&node-id=96-2392&scaling=contain&page-id=0%3A1&starting-point-node-id=2%3A2) in the `studio-ui` package, ensuring proper integration and adding core functionalities. This project will provide deep insights into the AsyncAPI Studio ecosystem and serve as a pathway to becoming a **maintainer** at [AsyncAPI Studio](https://github.com/asyncapi/studio).  
+
+- 🎯 **Outcome:** Enhances developer experience by modernizing the UI, improving usability, and streamlining the workflow for managing AsyncAPI specifications in the browser. This update will also enable seamless sharing, storage, and updates of spec files.  
+- 🛠️ **Skills Required:** TypeScript, Node.js, TailwindCSS  
+- 🧩 **Difficulty:** Medium/Hard  
+- 👩🏿‍🏫 **Mentor(s):** [@Shurtu-gal](https://github.com/Shurtu-gal)  
+- ⏳ **Length:** 350 hours  
+
 ## Contact AsyncAPI Mentors
 - Join [our Slack workspace](https://www.asyncapi.com/slack-invite).  Observe our [Slack etiquette](https://github.com/asyncapi/.github/blob/master/slack-etiquette.md) and [AsyncAPI code of conduct](https://github.com/asyncapi/.github/blob/master/CODE_OF_CONDUCT.md).
 - Join the dedicated Mentorship channel `#09_mentorships` to meet all other GSoC mentees and mentors.
