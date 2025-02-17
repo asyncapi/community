@@ -7,7 +7,7 @@ Improve the AsyncAPI CLI by optimizing performance, enhancing test reliability, 
 - 🎯 **Outcome:** Achieve a faster CLI execution, stable tests, file sync/publish support, and enhanced validation.
 - 🛠️ **Skills Required:** JavaScript/TypeScript, Node.js, Testing Frameworks, API, and testing automation.
 - 🧩 **Difficulty:** Medium/Hard
-- 👩🏿‍🏫 **Mentor(s):** [@AayushSaini101](https://github.com/AayushSaini101) | [@Souvikns](https://github.com/Souvikns)
+- 👩🏿‍🏫 **Mentor(s):** [@AayushSaini101](https://github.com/AayushSaini101) | [@Souvikns](https://github.com/Souvikns) | [#Shurtu-gal](https://github.com/Shurtu-gal)  
 - ⏳ **Length:** 175 Hours
 
 ## 2) [AI-Powered Assistant for AsyncAPI](https://github.com/asyncapi/chatbot/issues/109)
@@ -16,8 +16,7 @@ Build an AI-powered assistant fine-tuned on AsyncAPI to provide accurate answers
 - 🎯 **Outcome:** A fine-tuned LLM-powered chatbot integrated with AsyncAPI’s ecosystem for enhanced developer support.
 - 🛠️ **Skills Required:** Javascript/Typescript, Machine Learning (LLMs), NLP, OpenAI/Llama, Chatbot Integration.
 - 🧩 **Difficulty:** Medium/Hard
-- 👩🏿‍🏫 **Mentor(s):** [@AceTheCreator](https://github.com/AceTheCreator)
-- ⏳ **Length:** 175 Hours
+- 👩🏿‍🏫 **Mentor(s):** [@AceTheCreator](https://github.com/AceTheCreator) [@AayushSaini101](https://github.com/AayushSaini101) 
 
 ## 3) [AsyncAPI Generator Maintainership](https://github.com/asyncapi/generator/issues/1360)
 This initiative aims to guide you from contributing to maintaining the project. You'll gain insight into the responsibilities of a maintainer, which involve tasks beyond mere coding.
