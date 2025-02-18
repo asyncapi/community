@@ -1,0 +1,130 @@
+name: Notify TSC Members about Voting Status
+
+on:
+  schedule:
+    # Daily at 9:00 UTC
+    - cron: '0 9 * * *'
+
+jobs:
+  notify-tsc-members:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      # To store the state of the votes and the last time the TSC members were notified
+      # The format of the file is:
+      # {
+      #   "issue_number": {
+      #     "status": "open" | "closed",
+      #     "last_notified": "2021-09-01T00:00:00Z"
+      #   }
+      # }
+      # Example: https://github.com/ash17290/asyncapi-community/blob/vote_state/vote_status.json
+      - uses: jorgebg/stateful-action@bd279992190b64c6a5906c3b75a6f2835823ab46
+        id: state
+        with:
+          branch: vote_state
+
+      # List all the open issues with the label "vote open"
+      - name: List current open issues
+        uses: actions/github-script@v7
+        id: list
+        with:
+          script: |
+            const { data: issues } = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              labels: 'vote open'
+            });
+            return issues;
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+
+      # Fetch the current state from the vote_status.json file
+      - name: Fetch Current State
+        id: fetch
+        run: |
+          # This file comes from the branch vote_state which is created by the stateful-action
+          # Eg: https://github.com/ash17290/asyncapi-community/tree/vote_state
+          cd .vote_state
+          
+          # Check if the file exists, not empty and readable and create if not
+          if [ ! -f vote_status.json ] || [ ! -s vote_status.json ] || [ ! -r vote_status.json ]; then
+            echo "Intializing vote_status.json"
+            echo "{}" > vote_status.json
+          fi
+
+          # Read the file and export it as JSON
+          export json=$(cat vote_status.json | jq -c)
+
+          echo "::debug::vote_status=$json"
+
+          # Store in GitHub Output
+          echo "vote_status=$json" >> $GITHUB_OUTPUT
+      
+      # Needed as axios and js-yaml are not available in the default environment
+      - name: Install the dependencies
+        run: npm install js-yaml@4.1.0 axios@1.7.4
+        shell: bash
+      
+      - name: Notify TSC Members
+        uses: actions/github-script@v7
+        id: notify
+        with:
+          script: |
+            const yaml = require('js-yaml');
+            const fs = require('fs');
+            const axios = require('axios');
+
+            // Creates list of issues for which the TSC members need to be notified
+            // The number of buffer days is easily configurable by changing the value of the days variable
+            const { filterIssues, getTSCLeftToVote, sendSlackNotification } = require('./.github/workflows/vote-notify-helpers/index.js');
+
+            const issues = ${{ steps.list.outputs.result }};
+            const initialState = ${{ steps.fetch.outputs.vote_status }};
+            const config = {
+              days: 5
+            }
+
+            const { issuesToNotify, state } = filterIssues(issues, initialState, config);
+
+            const tscMembers = yaml.load(fs.readFileSync('MAINTAINERS.yaml', 'utf8')).filter(member => member.isTscMember);
+            const failingSlackIds = new Set();
+
+            console.log(`Issues to notify: ${JSON.stringify(issuesToNotify.map(issue => issue.number))}`);
+
+            for (const issue of issuesToNotify) {
+              const { leftToVote, daysSinceStart } = await getTSCLeftToVote(issue, tscMembers, github, context);
+
+              for (const member of leftToVote) {
+                console.log(`Notifying ${member.name} about issue #${issue.number}`);
+
+                if (!await sendSlackNotification(member, issue, daysSinceStart, `${{ secrets.SLACK_DM_TSC }}`)) {
+                  failingSlackIds.add(member.slack);
+                }
+              }
+              state[issue.number].last_notified = new Date().toISOString();
+            }
+
+            // Store the failing Slack IDs in GITHUB_ENV
+            if (failingSlackIds.size > 0) {
+              process.env.FAILED_SLACK_IDS = Array.from(failingSlackIds).join(',');
+              core.exportVariable('FAILED_SLACK_IDS', JSON.stringify(Array.from(failingSlackIds)));
+            }
+
+            // Store the state back
+            return JSON.stringify(state);
+
+      - name: Update State
+        if: ${{ steps.notify.outputs.result }}
+        run: |
+          echo ${{ steps.notify.outputs.result }} | jq > ./.vote_state/vote_status.json
+
+      - name: Notify about failing Slack DMs
+        if: env.FAILED_SLACK_IDS
+        uses: rtCamp/action-slack-notify@v2
+        env:
+          SLACK_WEBHOOK: ${{secrets.SLACK_CI_FAIL_NOTIFY}}
+          SLACK_TITLE: 🚨 Vote notifications could'nt be sent to following IDs 🚨
+          SLACK_MESSAGE: ${{ env.FAILED_SLACK_IDS }}
+          MSG_MINIMAL: true

@@ -57,7 +57,7 @@ locals {
       purpose = lookup(lookup(lookup(wg_data, "slack", {}), "channel", {}), "description", lookup(wg_data, "description", ""))
       topic = lookup(lookup(lookup(wg_data, "slack", {}), "channel", {}), "topic", "")
 
-      permanent_members = concat([for member in wg_data.chairpersons : member.slack], [for member in wg_data.members : member.slack])
+      permanent_members = concat([for member in wg_data.chairpersons : lookup(member, "slack", null)], [for member in wg_data.members : lookup(member, "slack", null)])
       is_private = false
 
       action_on_destroy = "archive"
