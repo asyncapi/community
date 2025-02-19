@@ -203,7 +203,6 @@ jobs:
       - name: Add Former TSC members to Emeritus.yaml and print
         uses: actions/github-script@v6
         with:
-          github-token: ${{ secrets.GH_TOKEN }}
           script: |
             const fs = require('fs');
             const path = './Emeritus.yaml';
@@ -239,7 +238,8 @@ jobs:
         run: |
           git add .
           git commit -m "Update Emeritus.yaml"
-          git push https://${{ secrets.GH_TOKEN}}@github.com/asyncapi/community update-emeritus-${{ github.run_id }}
+          git remote set-url origin https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/asyncapi/community.git
+          git push origin update-emeritus-${{ github.run_id }}
 
       - name: Create PR
         run: |
