@@ -90,7 +90,7 @@ jobs:
       - name: Add new TSC members to the team
         uses: actions/github-script@v6
         with:
-          github-token: ${{ secrets.GH_TOKEN }}
+          github-token: ${{ secrets.GH_TOKEN_ORG_ADMIN }}
           script: |
             const newTscMembers = ${{ needs.detect_tsc_membership_changes.outputs.updatedMaintainers }};
             for (const tscMember of newTscMembers) {
@@ -152,7 +152,7 @@ jobs:
       - name: Remove TSC members from the team
         uses: actions/github-script@v6
         with:
-          github-token: ${{ secrets.GH_TOKEN }}
+          github-token: ${{ secrets.GH_TOKEN_ORG_ADMIN }}
           script: |
             const removedMaintainers = ${{ needs.detect_tsc_membership_changes.outputs.updatedMaintainers }};
             for (const maintainer of removedMaintainers) {
