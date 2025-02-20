@@ -12,3 +12,4 @@ Technical writer contributor responsibilities include:
 * Support fellow technical writers and community members.
 * Engage in documentation review processes and incorporate feedback.
 * Join documentation community meetings/streams to connect with the community.
+* Adhere to the [AsyncAPI Style Guide](https://github.com/asyncapi/community/pulls?q=is%3Apr+is%3Aopen+style+guide) to ensure consistency and clarity in our documentation.

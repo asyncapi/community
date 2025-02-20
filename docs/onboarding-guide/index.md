@@ -18,5 +18,6 @@ The goal is providing docs contributors with the necessary tools and knowledge t
 * Obtain and incorporate reviewers' feedback.
 * Publish changes successfully.
 
+## AsyncAPI Style Guide
 
-
+To ensure consistency and clarity in our documentation, please follow the [AsyncAPI Style Guide](https://github.com/asyncapi/community/pulls?q=is%3Apr+is%3Aopen+style+guide). The style guide includes guidelines on accessibility, code examples, content organization, inclusive language, voice and tone, grammar, numbers, punctuation, formatting, internalization, links, SEO, styling, version control, and glossary.

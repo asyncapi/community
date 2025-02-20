@@ -13,3 +13,7 @@ Create and submit a docs pull request (PR) via the following steps:
 - Tag other technical writers to review your document. 
 - Tag an engineer or subject matter expert (SME) to review the technical details.
 - After implementing all the feedback you requested, please update your PR and wait for further feedback before it can be merged.
+
+### Ensure Compliance with the AsyncAPI Style Guide
+
+To ensure consistency and clarity in our documentation, please follow the [AsyncAPI Style Guide](https://github.com/asyncapi/community/pulls?q=is%3Apr+is%3Aopen+style+guide). The style guide includes guidelines on accessibility, code examples, content organization, inclusive language, voice and tone, grammar, numbers, punctuation, formatting, internalization, links, SEO, styling, version control, and glossary.

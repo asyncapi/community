@@ -22,6 +22,6 @@ Stay tuned for new opportunities on our [Docs’ Community discussions](https://
 
 | Docs Roadmap | Ongoing Docs Projects | Timeline | Contribution Type |
 |--------------|-----------------------|----------|---------------------|
-| AsyncAPI Style Guide | [AsyncAPI Style Guide](https://github.com/asyncapi/website/issues/1240) | Ongoing | Regular contribution |
+| AsyncAPI Style Guide | [AsyncAPI Style Guide](https://github.com/asyncapi/website/issues/1240) | Completed | Regular contribution |
 | AsyncAPI Tools’ Docs | <li>[Modelina Docs](https://github.com/asyncapi/modelina/tree/master/docs) </li>  <li>[Parser Docs](https://github.com/asyncapi/parser-js/tree/master/docs) </li> <li>[GitHub Actions Docs](https://github.com/asyncapi/github-action-for-generator)</li> <li>[Studio Docs](https://github.com/asyncapi/studio/tree/master/doc/adr)</li> <li>[Generator Docs](https://github.com/asyncapi/generator/tree/master/docs)</li> <li>[CLI Docs](https://github.com/asyncapi/cli/tree/master/docs)</li> | Ongoing | Regular contribution |
 | Technical Writer Onboarding Guide | Onboarding Guide for new docs contributors | Ongoing | Regular contribution |
