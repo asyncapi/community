@@ -22,3 +22,7 @@ flowchart LR
     B[new Folder] --> E[example-doc-1.md]
     B[new Folder] --> F[example-doc-2.md]
 ```
+
+### Follow the AsyncAPI Style Guide
+
+To ensure consistency and clarity in our documentation, please follow the [AsyncAPI Style Guide](https://github.com/asyncapi/community/pulls?q=is%3Apr+is%3Aopen+style+guide). The style guide includes guidelines on accessibility, code examples, content organization, inclusive language, voice and tone, grammar, numbers, punctuation, formatting, internalization, links, SEO, styling, version control, and glossary.
