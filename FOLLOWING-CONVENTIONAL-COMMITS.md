@@ -4,17 +4,18 @@ When you contribute to a project, you're not just adding code or docs — you're
 
 In this guide, we'll explore how to write effective commit messages that follow the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) standard. This standard helps us create clear, consistent commit messages that are easy to understand and navigate.
 
+## TL;DR
+
+- **Why**: Show *what* changed and *why* it matters.
+- **Types**: Prefix with `feat`, `fix`, etc. (PR titles too).
+- **How**: Use imperative, clear text; body for extras.
+- **Tips**: Keep it short, standalone, in plain English.
+
 ## Overview
 
 Conventional Commits is a specification for writing commit messages that are easy to read and understand. It provides a set of guidelines for structuring commit messages, including the use of commit types and a consistent format.
 
-A well-written commit message explains what you did, why you did it, and how it impacts the project. This clarity helps *everyone*, whether you're reviewing a pull request (PR) or digging into the history later on.
-
-### Understand the purpose of a commit
-
-A commit message is like a *mini-story* that explains the change you're making. It should be clear, concise, and informative.
-
-When you write a commit message, you should think about *what* you changed and *why* that change was necessary.
+A well-written commit message explains *what* you did, *why* you did it, and *how* it impacts the project. This clarity helps *everyone*, whether you're reviewing a pull request (PR) or digging into the history later on.
 
 Since this is a message that others will read, it's important to provide enough context to understand the change. Therefore, you should avoid vague messages like "fixed bug." Instead, try to be specific.
 
@@ -26,7 +27,7 @@ For example:
 
 The *good* example tells you exactly **what** was fixed and **why** that fix was important.
 
-### Choose the right commit type
+### Choosing the right commit type
 
 We use a set of commit types to quickly communicate the nature of a change. These types help us understand the impact of a commit at a glance.
 
@@ -50,8 +51,6 @@ Therefore, you can use the following examples to guide you:
 | --- | --- |
 | `Add user avatar upload feature` | `feat: add user avatar upload feature` |
 | `Fix login issue` | `fix: resolve timeout issue on login by renewing session tokens` |
-| `Update README` | `docs:  add installation instructions to README` |
-| `Update formatting` | `style: update indentation in main.js` |
 
 If you're not sure which type to use, ask yourself what the main *purpose* of your change is. That should help you pick the right type.
 
@@ -82,27 +81,13 @@ To create this, add a blank line after your commit message and then write your a
 **Example:**
 
 > `feat: add user avatar upload feature to improve user experience on profile pages` <br> <br> This change adds a new feature that allows users to upload an avatar image to their profile. The feature includes a new form field, validation checks, and a new API endpoint to handle the image upload. This will help users personalize their profiles and make the platform more engaging.
+>
 
-### Keep messages brief but informative
+Some additional tips to keep in mind when writing commit messages include:
 
-A good commit message is like a headline — it should be short and to the point, but it should also provide enough information to understand the change.
-
-When you write your commit message, aim for a balance between brevity and clarity. If you find yourself writing a long message, consider whether you can break it up into smaller commits or use the commit body to provide more context.
-
-### Check for consistency and completeness
-
-Before you submit your commit, take a moment to review your message. Ask yourself:
-
-- Does my message stand alone and make sense?
-- Have I included enough context to explain the change?
-
-Standing alone means that someone who reads your commit message should be able to understand what you did and why you did it without needing to look at other commits or PRs.
-
-### Use English and avoid jargon
-
-The goal of a commit message is to communicate your changes clearly and effectively. To achieve this, we advise that you stick to plain English.
-
-This keeps your commit messages accessible to everyone, even those who might not be familiar with all the technical terms.
+- **Be concise:** Keep your messages brief but informative.
+- **Check for consistency and completeness:** Make sure your message stands alone and provides enough context.
+- **Use English and avoid jargon:** Stick to plain English to make your messages accessible to everyone.
 
 ## Final Thoughts
 
