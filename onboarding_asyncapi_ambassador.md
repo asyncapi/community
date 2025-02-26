@@ -1,7 +1,7 @@
 # Onboarding Guide for AsyncAPI Ambassadors
 Welcome to the AsyncAPI Ambassador Program! 
 
-We are happy you chose to join the ambassador program in making valuable contributions to promote AsyncAPI.
+We are happy you chose to join the ambassador program and make valuable contributions to promote AsyncAPI.
 
 Your tenure as an ambassador begins on the date you are accepted and shall be renewed annually. For example, if you were accepted as an ambassador on January 11, 2025, your tenure would end on January 10, 2026. At the end of your tenure, we will review your performance to determine if you can continue as an ambassador.
 
