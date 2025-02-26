@@ -21,9 +21,9 @@ A maintainer is an individual who plays a crucial role in overseeing and guiding
 
 But being a maintainer goes beyond these responsibilities—it’s about **ownership** and **leadership**. You’re not just merging code; you’re shaping the project’s future. This means stepping up to unblock contributors stuck on a PR, advocating for improvements in the roadmap, or leading releases to ensure smooth deployments. You’ll proactively identify risks, mediate discussions to align decisions with AsyncAPI’s vision, and celebrate wins to keep the community motivated.  
 
-Maintainers also **lead by example**. You’ll mentor others not just by answering questions, but by teaching contributors *why* coding standards matter or *how* to structure a feature. You’ll balance technical rigor with empathy, ensuring decisions serve both the project’s goals and its people.  
+Maintainers also **lead by example**. You’ll mentor others not just by answering questions but by teaching contributors *why* coding standards matter or *how* to structure a feature. You’ll balance technical rigor with empathy, ensuring decisions serve both the project’s goals and its people.  
 
-Essentially, you serve as a person that binds the project together and guarantees that everything runs smoothly.
+Essentially, you serve as a person who binds the project together and guarantees that everything runs smoothly.
 
 ## Steps to becoming a Maintainer
 
