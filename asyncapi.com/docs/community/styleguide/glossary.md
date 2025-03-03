@@ -145,7 +145,7 @@ All contributions must follow the [AsyncAPI Code of Conduct](https://github.com/
 
 | Date | Version | Description |
 |---|---|---|
-| March 2025 | 1.0 | Initial creation of AsyncAPI Style Guide - Glossary section |
+| March 2025 | 1.0 | AsyncAPI New Style Guide - Glossary |
 
 ---
 
