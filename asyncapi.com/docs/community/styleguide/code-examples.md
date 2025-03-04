@@ -1,6 +1,11 @@
-# Code Examples
+---
+title: Code Examples
+description: This style guide provides guidelines for writing, formatting, and styling code examples in AsyncAPI documentation. 
+---
 
-This style guide provides guidelines for writing, formatting, and styling code examples in AsyncAPI documentation. Following these guidelines ensures that all code examples are easy to understand, well-structured, and consistent.
+
+# Code Examples Guidelines
+Following these guidelines ensures that all code examples are easy to understand, well-structured, and consistent.
 
 ## 1. General Guidelines 
 The general guidelines to follow are clarity and brevity.
