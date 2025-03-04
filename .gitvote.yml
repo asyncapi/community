@@ -1,0 +1,9 @@
+profiles:
+  default:
+    duration: 4w
+    pass_threshold: 51
+    periodic_status_check: "1 week"
+    close_on_passing: true
+    allowed_voters:
+      teams:
+        - tsc_members

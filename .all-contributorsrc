@@ -430,6 +430,48 @@
         "blog",
         "promotion"
       ]
+    },
+    {
+      "login": "akkshitgupta",
+      "name": "Akshit Gupta",
+      "avatar_url": "https://avatars.githubusercontent.com/u/96991785?v=4",
+      "profile": "https://github.com/akkshitgupta",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "nikhilkalburgi",
+      "name": "nikhilkalburgi",
+      "avatar_url": "https://avatars.githubusercontent.com/u/70331875?v=4",
+      "profile": "https://github.com/nikhilkalburgi",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "gvensan",
+      "name": "Giri Venkatesan",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4477169?v=4",
+      "profile": "https://github.com/gvensan",
+      "contributions": [
+        "talk",
+        "blog",
+        "promotion"
+      ]
+    },
+    {
+      "login": "Shurtu-gal",
+      "name": "Ashish Padhy",
+      "avatar_url": "https://avatars.githubusercontent.com/u/100484401?v=4",
+      "profile": "http://ashishpadhy.live",
+      "contributions": [
+        "infra",
+        "review",
+        "question",
+        "ideas",
+        "maintenance"
+      ]
     }
   ],
   "commitConvention": "angular",

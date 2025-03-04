@@ -23,13 +23,13 @@ jobs:
       meeting_name: Community Meeting
       meeting_desc: This is a community meeting to regularly talk in open about important topics around AsyncAPI Initiative.
       host: lpgornicki@gmail.com
-      alternative_host: 'fmvilas@gmail.com,devlopergene@gmail.com,sibanda.thulie@gmail.com'
+      alternative_host: 'devlopergene@gmail.com,sibanda.thulie@gmail.com'
       issue_template_path: .github/workflows/create-event-helpers/issues_templates/community.md
       create_zoom: true
     secrets:
       GH_TOKEN: ${{ secrets.GH_TOKEN }}
-      ZOOM_API_KEY: ${{ secrets.ZOOM_API_KEY }}
-      ZOOM_API_SECRET: ${{ secrets.ZOOM_API_SECRET }}
+      ZOOM_ACCOUNT_ID: ${{ secrets.ZOOM_ACCOUNT_ID }}
+      ZOOM_TOKEN: ${{ secrets.ZOOM_TOKEN }}
       STREAM_URL: ${{ secrets.STREAM_URL }}
       STREAM_KEY: ${{ secrets.STREAM_KEY }}
       CALENDAR_ID: ${{ secrets.CALENDAR_ID }}

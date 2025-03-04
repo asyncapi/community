@@ -27,13 +27,13 @@ jobs:
       meeting_banner: ${{ github.event.inputs.meeting_banner }}
       meeting_desc: The purpose of this meeting is to focus on contributors, focus on people that want to contribute to AsyncAPI Initiative but do not know how to do it.
       host: lpgornicki@gmail.com
-      alternative_host: 'fmvilas@gmail.com,devlopergene@gmail.com,sibanda.thulie@gmail.com'
+      alternative_host: 'devlopergene@gmail.com,sibanda.thulie@gmail.com'
       issue_template_path: .github/workflows/create-event-helpers/issues_templates/lets-talk-about-contrib.md
       create_zoom: false
     secrets:
       GH_TOKEN: ${{ secrets.GH_TOKEN }}
-      ZOOM_API_KEY: ${{ secrets.ZOOM_API_KEY }}
-      ZOOM_API_SECRET: ${{ secrets.ZOOM_API_SECRET }}
+      ZOOM_ACCOUNT_ID: ${{ secrets.ZOOM_ACCOUNT_ID }}
+      ZOOM_TOKEN: ${{ secrets.ZOOM_TOKEN }}
       STREAM_URL: ${{ secrets.STREAM_URL }}
       STREAM_KEY: ${{ secrets.STREAM_KEY }}
       CALENDAR_ID: ${{ secrets.CALENDAR_ID }}
