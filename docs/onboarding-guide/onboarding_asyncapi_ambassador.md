@@ -1,4 +1,9 @@
-# Onboarding Guide for AsyncAPI Ambassadors
+---
+title: Onboarding Guide for AsyncAPI Ambassadors
+weight: 110
+---
+
+
 Welcome to the AsyncAPI Ambassador Program! 
 
 We are happy you chose to join the ambassador program and make valuable contributions to promote AsyncAPI.
