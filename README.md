@@ -2,63 +2,6 @@
  
  [![AsyncAPI Logo](./assets/github-repobanner-community.png)](https://www.asyncapi.com)
 
-<h4 align="left">Building the future of event-driven architectures</h4>
-<h6 align="left">We're on a mission to standardize message-based communication and increase interoperability of the different systems out there.</h6>
-<p align="left">
-  <a href="https://www.github.com/asyncapi/spec">Specification</a>
-  |
-  <a href="https://studio.asyncapi.com/">Studio</a>
-  |
-  <a href="https://www.asyncapi.com/roadmap">Roadmap</a>
-  |
-  <a href="./CONTRIBUTING.md">Contributing</a>
-  |
-  <a href="https://www.asyncapi.com/slack-invite">Slack</a>
-  |
-  <a href="https://www.youtube.com/channel/UCIz9zGwDLbrYQcDKVXdOstQ">Youtube</a>
-  |
-  <a href="https://opencollective.com/asyncapi">Donate 🙌🏾</a>
-</p>
-
-## 💰 Platinum sponsors
-<p align="left">
-  <a href="https://iqvia.com">
-    <img src="./assets/iqvia.png" alt="IQVIA logo" height="40">
-  </a>
-  &nbsp;&nbsp;&nbsp;&nbsp;
-  <a href="https://mulesoft.com">
-    <img src="./assets/mulesoft.png" alt="Mulesoft logo" height="40">
-  </a>
-  &nbsp;&nbsp;&nbsp;&nbsp;
-  <a href="https://salesforce.com">
-    <img src="./assets/salesforce.png" alt="Salesforce logo" height="40">
-  </a>
-  &nbsp;&nbsp;&nbsp;&nbsp;
-  <a href="https://sap.com">
-    <img src="./assets/sap.svg" alt="SAP logo" height="40">
-  </a>
-  &nbsp;
-  <a href="https://slack.com">
-    <img src="./assets/slack-white-bg.png" alt="Slack logo" height="40">
-  </a>
-  &nbsp;
-  <a href="https://solace.com">
-    <img src="./assets/solace.png" alt="Solace logo" height="40">
-  </a>
-  &nbsp;
-  <a href="https://tibco.com">
-    <img src="./assets/tibco.png" alt="TIBCO logo" height="40">
-  </a>
-</p>
-
-<p align="left">
-  🙌🏾 <a href="https://opencollective.com/asyncapi">Become a sponsor</a> 🙌🏾
-</p>
-
-## 🤗 AsyncAPI meetings
-AsyncAPI hosts different meetings every week. Each meeting focuses on different topics; sometimes purely technical, community building, and more. Pick one and join us! [Learn more about our meetings.](https://www.asyncapi.com/community/meetings)
-
-To learn more about meetings setup and automation, [read our FAQ](https://github.com/asyncapi/community/blob/master/MEETINGS_ORGANIZATION.md)
 
 
 ## Contributors
