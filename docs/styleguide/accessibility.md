@@ -23,7 +23,7 @@ At AsyncAPI, we strive to make our documentation/content inclusive, accessible, 
 - Structure your text in a uniform format. 
 
 ## Links
-- Use descriptive and meaningful link text. For example, do not use phrases like *click here* or *follow this link* instead use *see*.
+- Use descriptive and meaningful link text. For example, do not use phrases like *click here* or *follow this link* instead use *Read the accessibility guidelines* or *Explore best practices for inclusivity*.
 - Always use an external link icon if a link opens up in a new tab.
 - Make sure your links or URLs are valid and redirect to the correct destination.
 
