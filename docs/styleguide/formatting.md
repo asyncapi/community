@@ -6,7 +6,7 @@ weight: 11
 
 ## Documentation formatting
 
-Documentation formatting refers to how the document appears on the page and how the content is organized, which includes font selection, font size and presentation (such as bold or italics), spacing, margins, alignment, columns, indentation, and lists. Formatting helps the reader perceive the information and makes it more accessible. 
+Documentation formatting refers to how the document appears on the page and how the content is organized, which includes font selection, font size, and presentation (such as bold or italics), spacing, margins, alignment, columns, indentation, and lists. Formatting helps the reader perceive the information and makes it more accessible. 
 
 ### Notes and warning blocks
 
@@ -49,7 +49,7 @@ Code blocks are used to display code examples or snippets.
   
 - Use code style for filenames, directories, and paths. For example: Go to the `/docs/tutorials` directory.
 - Choose a consistent number of spaces for indentation, such as 2 or 4 spaces, and use it consistently throughout the document.
-- Indent the code properly to show the structure and hierarchy of the code. Each level of indentation should align with the appropriate scope.
+- Indent the code properly to show its structure and hierarchy. Each level of indentation should align with the appropriate scope.
 - Avoid using tabs for indentation, as they may not render consistently across different platforms or text editors.
 For example, when writing code in Markdown, use four spaces for each level of indentation:
 ```
@@ -66,7 +66,7 @@ function myFunction() {
 - Use triple backticks to enclose YAML code blocks. Specify the language as "yaml" within the backticks. This syntax is specifically for displaying code blocks that contain YAML content.
   * Use this syntax:
   ` ```yaml
-  asyncapi: '2.5.0'
+  asyncapi: '3.0.0'
   info:
   title: Account Service
   version: 1.0.0
