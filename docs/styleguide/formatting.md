@@ -1,7 +1,7 @@
 ---
 title: Formatting
 description: This guide illustrates the standards for formatting and writing our documentation.
-weight: 11
+weight: 110
 ---
 
 ## Documentation formatting
