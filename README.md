@@ -2,45 +2,74 @@
  
  [![AsyncAPI Logo](./assets/github-repobanner-community.png)](https://www.asyncapi.com)
 
-## Contributing
+# 📘 AsyncAPI Community Guide
 
-We believe that code is cool, but great docs make all the difference.
+Welcome to the AsyncAPI Community! 🚀 We believe in the power of open-source collaboration and appreciate your interest in contributing. Whether you're improving the documentation, fixing bugs, or adding new features, your contributions help make AsyncAPI better for everyone. 💙
 
-## Code of Conduct
+We believe that **code is cool**, but **great docs make all the difference**!
 
-AsyncAPI has adopted a [Code of Conduct docs.](https://github.com/asyncapi/.github/blob/master/CODE_OF_CONDUCT.md) Please read the full CoC to understand the expected behavior.
+### 🔖 Code of Conduct
+Before you begin, please **go through our [Code of Conduct](https://github.com/asyncapi/.github/blob/master/CODE_OF_CONDUCT.md)** to ensure a respectful and welcoming community.
 
-## Contribution Flow 🚀
+---
 
-We highly recommend following our [contribution flow](https://github.com/asyncapi/website/blob/master/CONTRIBUTING.md#contribution-flow) to streamline your contributions. Here's a summary of the process:
+## 🛠 How to Contribute to Our docs
+
+1. Read the [AsyncAPI Code of Conduct](https://github.com/asyncapi/.github/blob/master/CODE_OF_CONDUCT.md).
+2. Go through the [AsyncAPI Slack etiquette](https://github.com/asyncapi/community/blob/master/slack-etiquette.md).
+3. Join the [AsyncAPI Slack workspace](https://asyncapi.slack.com/ssb/redirect).
+4. Add the AsyncAPI calendar from the [AsyncAPI events](https://www.asyncapi.com/community/events) page to stay updated on meetings and events.
+5. Review the list of [technical writer contributor](https://www.asyncapi.com/docs/community/onboarding-guide/technical-writer-contributor-responsibilities) responsibilities to understand your role.
+6. Familiarize yourself with [prerequisite knowledge topics](https://www.asyncapi.com/docs/community/onboarding-guide/prerequisite-knowledge) required for contributing.
+7. Check out the work-in-progress [AsyncAPI Style Guide](https://github.com/asyncapi/community/pulls?q=is%3Apr+is%3Aopen+style+guide) to ensure consistency in documentation.
+8. Read all documentation under the following content buckets:
+    - Concepts
+    - Tutorials (take time to go through each tutorial)
+    - Reference
+9. Set up your local environment following the [AsyncAPI git workflow](https://github.com/asyncapi/community/blob/master/git-workflow.md).
+10. Introduce yourself in AsyncAPI Slack in the #01_introductions channel and the #13_docs channel. Ask docs-related questions in #13_docs.
+11. Request a good first docs issue in the #13_docs [Slack channel](https://asyncapi.slack.com/ssb/redirect).
+12. Attend [OPEN docs meetings](https://www.asyncapi.com/community/events) to chat with other maintainers, ask docs questions, and request help on docs blockers.
+
+
+## 🛠 Contribution Flow
+
+Go through our **[Contribution Flow](https://github.com/asyncapi/website/blob/master/CONTRIBUTING.md#contribution-flow)** document to better understand.
+
+Follow these steps to make your contribution count!
 
 ```markdown
-┌─────────────────────────────┐
-│  Open an issue 🐞💡         │
-│  (Bug report or feature)    │
-└─────────────────────────────┘
-           ⇩
-┌─────────────────────────────┐
-│  Open a Pull Request 🚀      │
-│  (After issue approval)     │
-└─────────────────────────────┘
-           ⇩
-┌─────────────────────────────┐
+┌───────────────────────────────┐
+│    Open an issue 🐞💡         │
+│    (Bug report or feature)    │
+└───────────────────────────────┘
+               ⇩
+┌───────────────────────────────┐
+│    Open a Pull Request 🚀     │
+│    (After issue approval)     │
+└───────────────────────────────┘
+               ⇩
+┌───────────────────────────────┐
 │ Your changes will be merged 🎉│
-│   and released soon 🚢      │
-└─────────────────────────────┘
+│   and released soon 🚢        │
+└───────────────────────────────┘
+```
 
-## Explore Our Community Resources 🌟
+## 🌟 Explore Our Community Resources
 
-Everything we do is built on openness and collaboration. Check out these awesome resources:
+Everything we do is built on **openness and collaboration**. Check out these awesome resources:
 
-- **GitHub Organization**: Peek into our [GitHub organization](https://github.com/asyncapi) and see what we're all about.
-- **Slack Workspace**: Join our friendly [Slack workspace](https://asyncapi.com/slack-invite) and be part of the conversation.
-- **Technical Steering Committee (TSC)**: Learn who's guiding our ship, find out how you can become a TSC member, and meet our current crew [here](https://www.asyncapi.com/community/tsc).
-- **Ambassadors**: If you're passionate about APIs, consider becoming an [AsyncAPI Ambassador](https://www.asyncapi.com/community/ambassadors) and help us spread the word.
-- **Dashboard**: Looking for a fun first issue or hot topics in discussion? Our [Dashboard](https://www.asyncapi.com/community/dashboard) is the place to start.
-- **Events**: Don't miss out on our exciting [events and meetings](https://www.asyncapi.com/community/events)—there's always something happening!
-- **Newsroom**: Stay updated with all the latest buzz in our [Newsroom](https://www.asyncapi.com/community/newsroom).
+- 🏛️ **[GitHub](https://github.com/asyncapi)** - Dive into our open-source projects.
+- 💬 **[Slack Workspace](https://asyncapi.com/slack-invite)** - Chat, collaborate, and ask questions.
+- 🧭 **[Technical Steering Committee (TSC)](https://www.asyncapi.com/community/tsc)** - Meet the leaders guiding our journey. 
+- 🌍 **[Ambassadors Program](https://www.asyncapi.com/community/ambassadors)** - Become a voice for AsyncAPI.
+- 📊 **[Dashboard](https://www.asyncapi.com/community/dashboard)** - Find beginner-friendly issues & ongoing discussions.
+- 🎉 **[Events & Meetings](https://www.asyncapi.com/community/events)** - Join webinars, meetings, and more.
+- 📰 **[Newsroom](https://www.asyncapi.com/community/newsroom)** - Stay up to date with our latest news and updates.
+
+## 🤝 Need Help?
+
+If you have any questions or need guidance, feel free to reach out through our **[Community Discussions](https://asyncapi.com/slack-invite)**.
 
 ## Contributors
 
