@@ -1,21 +1,21 @@
 ---
 title: "Voice and Tone"
-weight: 60
+weight: 70
 ---
 
 ## Introduction
-Voice and tone are essential parts of writing effective documentation for AsyncAPI. The way we write significantly impacts how our readers perceive and interact with our documentation. To help readers understand complex technical concepts and feel confident in using the AsyncAPI specification, we communicate in a clear, instructive voice and a friendly tone.
+Voice and tone are essential parts of writing effective documentation for AsyncAPI. How we write significantly impacts how our readers perceive and interact with our documentation. We communicate in a clear, instructive voice and a friendly tone to help readers understand complex technical concepts and feel confident in using the AsyncAPI specification.
 
 
 ## Our Voice
 At AsyncAPI, we consider our voice to be:
 
-- Clear and concise throughout the documentation. This way readers can get helpful information quickly even at a glance.
+- Clear and concise throughout the documentation. This way, readers can get helpful information quickly, even at a glance.
 
 **Example**
 "A protocol is a set of rules that specifies how information is exchanged between applications and/or servers."
 
-The above sentence uses clear and straightforward language to define what a protocol is in the context of the AsyncAPI specification.
+The above sentence uses clear and straightforward language to define a protocol in the context of the AsyncAPI specification.
 
 - An active voice to make the documentation more engaging and easier to understand.
 
@@ -37,7 +37,7 @@ While your voice remains constant, your tone may vary based on the audience's ne
 </Remember>
 At AsyncAPI, we consider our tone to be:
 
-- Friendly and approachable that puts the reader at ease.
+- Friendly and approachable, which puts the reader at ease.
 
 - A helpful tone that addresses the reader's concerns or questions.
 
@@ -59,4 +59,4 @@ Here are a few key elements of writing AsyncAPI's voice:
 
 - Use examples and code snippets to illustrate concepts and provide practical guidance.
 
-- Use contractions to make the language more conversational e.g., "You've now added a new section called servers in your AsyncAPI document."
+- Use contractions to make the language more conversational, e.g., "You've now added a new section called servers in your AsyncAPI document."
