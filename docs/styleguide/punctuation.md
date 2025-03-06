@@ -1,11 +1,12 @@
 ---
 title: Punctuation style guide
-Description: This style guide outlines the guideline for using punctuation in the documentation.
+description: The style guide outlines the guidelines for using punctuation in the documentation.
+weight: 100
 ---
 
 # Punctuation
 
-Writing documentation is important because it allows us to indirectly communicate with many people around the world. Punctuation is a crucial part of writing because it helps us to make our message clear and consistent. To make sure our documents follow the same standards and are consistent with others in the industry, it's important to use the style guides that have already been recognised.
+Writing documentation is important because it allows us to communicate indirectly with many people around the world. Punctuation is a crucial part of writing because it helps us make our message clear and consistent. To ensure our documents follow the same standards and are consistent with others in the industry, it's important to use the style guides that have already been recognised.
 
 ## 1. Period (.)
 
@@ -25,7 +26,7 @@ Note: The **Oxford comma** is the optional comma before the conjunction in a lis
 
 ## 3. Semi-colon (;)
 
-Use a semi-colon to separate two independent clauses that are closely related but could be separate sentences.
+Use a semicolon to separate two independent clauses that are closely related but could be separate sentences.
 Some examples include:
 - "She finished her work; then she went home."
 - "I need to buy groceries; I'm running out of food."
@@ -39,12 +40,12 @@ Some examples include:
 
 ## 5. Dash (— or -)
 
-An em Dash (—) is used to indicate a sudden break or interruption in a sentence or to provide emphasis.
+An em Dash (—) indicates a sudden break or interruption in a sentence or provides emphasis.
 Some examples include:
 - "She went to the store—despite the rain—to buy some groceries."
 - "She received an unexpected gift—a brand new car!"
 
-A **hyphen** (-) is used to join compound words or prefixes.
+A **hyphen** (-) joins compound words or prefixes.
 Example:
 - "The well-known actor starred in the movie."
 
