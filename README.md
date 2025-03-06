@@ -2,12 +2,35 @@
  
  [![AsyncAPI Logo](./assets/github-repobanner-community.png)](https://www.asyncapi.com)
 
-We believe that code is cool, but great docs make all the difference. Here's how you can jump in:
+## Contributing
 
-- **Get Started Right**: Check out our [Contribution Guide](https://github.com/asyncapi/community/blob/master/CONTRIBUTING.md) and [Code of Conduct](https://github.com/asyncapi/.github/blob/master/CODE_OF_CONDUCT.md) to learn the ropes.
-- **Join the Conversation**: Find issues you're excited about on our [Issues Board](https://github.com/asyncapi/community/issues) and introduce yourself with a comment.
-- **Slack It Up**: Connect with us on Slack in the [`#13_docs` channel](https://asyncapi.com/slack-invite)—we love chatting and sharing ideas!
-- **Make Your Mark**: Submit a PR and see your contributions come to life in AsyncAPI docs.
+We believe that code is cool, but great docs make all the difference.
+
+## Code of Conduct
+
+AsyncAPI has adopted a [Code of Conduct docs.](https://github.com/asyncapi/.github/blob/master/CODE_OF_CONDUCT.md) Please read the full CoC to understand the expected behavior.
+
+## Contribution Flow
+
+We highly recommend following our [contribution flow](https://github.com/asyncapi/website/blob/master/CONTRIBUTING.md#contribution-flow) to streamline your contributions. Here's a summary of the ideal process:
+
+# Contribution Flow 🚀
+
+```markdown
+┌─────────────────────────────┐
+│  Open an issue 🐞💡         │
+│  (Bug report or feature)    │
+└─────────────────────────────┘
+           ⇩
+┌─────────────────────────────┐
+│  Open a Pull Request 🚀      │
+│  (After issue approval)     │
+└─────────────────────────────┘
+           ⇩
+┌─────────────────────────────┐
+│ Your changes will be merged 🎉│
+│   and released soon 🚢      │
+└─────────────────────────────┘
 
 ## Explore Our Community Resources 🌟
 
@@ -20,15 +43,6 @@ Everything we do is built on openness and collaboration. Check out these awesome
 - **Dashboard**: Looking for a fun first issue or hot topics in discussion? Our [Dashboard](https://www.asyncapi.com/community/dashboard) is the place to start.
 - **Events**: Don't miss out on our exciting [events and meetings](https://www.asyncapi.com/community/events)—there's always something happening!
 - **Newsroom**: Stay updated with all the latest buzz in our [Newsroom](https://www.asyncapi.com/community/newsroom).
-
-## Let's Talk Docs & Community 🤝
-
-We love connecting with our community, and we know you do too!
-
-- **Meetups & Zoom Sessions**: Join our docs meetings via [Zoom](https://www.asyncapi.com/community/events) and connect with fellow contributors.
-- **Watch & Learn**: Catch past meetings and insights on our [AsyncAPI YouTube channel](https://www.youtube.com/c/AsyncAPI).
-- **Share Your Thoughts**: Got ideas for improvements? Join the discussion on our [Docs & Education discussion board](https://github.com/asyncapi/community/discussions).
-- **Keep the Chat Alive**: Continue the conversation in our Slack [`#13_docs` channel](https://asyncapi.com/slack-invite) and let's make AsyncAPI even better together!
 
 ## Contributors
 
