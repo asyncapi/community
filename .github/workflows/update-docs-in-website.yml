@@ -6,7 +6,7 @@ on:
     branches:
       - 'master'
     paths:
-      - 'docs/*.md'
+      - 'docs/**/*.md'
 
 jobs:
   Make-PR:
