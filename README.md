@@ -27,8 +27,8 @@ We believe that **code is cool**, but **great docs make all the difference**!
     - Tutorials (take time to go through each tutorial)
     - Reference
 9. Set up your local environment following the [AsyncAPI git workflow](https://github.com/asyncapi/community/blob/master/git-workflow.md).
-10. Introduce yourself in AsyncAPI Slack in the #01_introductions channel and the #13_docs channel. Ask docs-related questions in #13_docs.
-11. Request a good first docs issue in the #13_docs [Slack channel](https://asyncapi.slack.com/ssb/redirect).
+10. Introduce yourself in AsyncAPI Slack in the **#01_introductions channel** and the #13_docs channel. Ask docs-related questions in #13_docs.
+11. Request a good first docs issue in the **#13_docs** [Slack channel](https://asyncapi.slack.com/ssb/redirect).
 12. Attend [OPEN docs meetings](https://www.asyncapi.com/community/events) to chat with other maintainers, ask docs questions, and request help on docs blockers.
 
 
