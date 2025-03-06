@@ -10,11 +10,9 @@ We believe that code is cool, but great docs make all the difference.
 
 AsyncAPI has adopted a [Code of Conduct docs.](https://github.com/asyncapi/.github/blob/master/CODE_OF_CONDUCT.md) Please read the full CoC to understand the expected behavior.
 
-## Contribution Flow
+## Contribution Flow 🚀
 
-We highly recommend following our [contribution flow](https://github.com/asyncapi/website/blob/master/CONTRIBUTING.md#contribution-flow) to streamline your contributions. Here's a summary of the ideal process:
-
-# Contribution Flow 🚀
+We highly recommend following our [contribution flow](https://github.com/asyncapi/website/blob/master/CONTRIBUTING.md#contribution-flow) to streamline your contributions. Here's a summary of the process:
 
 ```markdown
 ┌─────────────────────────────┐
