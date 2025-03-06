@@ -6,18 +6,18 @@
 
 Welcome to the AsyncAPI Community! 🚀 We believe in the power of open-source collaboration and appreciate your interest in contributing. Whether you're improving the documentation, fixing bugs, or adding new features, your contributions help make AsyncAPI better for everyone. 💙
 
-We believe that **code is cool**, but **great docs make all the difference**!
-
 ### 🔖 Code of Conduct
-Before you begin, please **go through our [Code of Conduct](https://github.com/asyncapi/.github/blob/master/CODE_OF_CONDUCT.md)** to ensure a respectful and welcoming community.
+Before you begin, please **go through our [Code of Conduct](https://github.com/asyncapi/.github/blob/master/CODE_OF_CONDUCT.md)** to ensure a respectful and welcoming community. Find more about contributing to our Docs at **[AsyncAPI Docs Communtiy](https://www.asyncapi.com/docs/community)**.
 
 ---
 
 ## 🛠 How to Contribute to Our docs
 
+We believe that **code is cool**, but **great docs make all the difference**!
+
 1. Read the [AsyncAPI Code of Conduct](https://github.com/asyncapi/.github/blob/master/CODE_OF_CONDUCT.md).
 2. Go through the [AsyncAPI Slack etiquette](https://github.com/asyncapi/community/blob/master/slack-etiquette.md).
-3. Join the [AsyncAPI Slack workspace](https://asyncapi.slack.com/ssb/redirect).
+3. Join our [AsyncAPI Docs Community](https://www.asyncapi.com/docs/community).
 4. Add the AsyncAPI calendar from the [AsyncAPI events](https://www.asyncapi.com/community/events) page to stay updated on meetings and events.
 5. Review the list of [technical writer contributor](https://www.asyncapi.com/docs/community/onboarding-guide/technical-writer-contributor-responsibilities) responsibilities to understand your role.
 6. Familiarize yourself with [prerequisite knowledge topics](https://www.asyncapi.com/docs/community/onboarding-guide/prerequisite-knowledge) required for contributing.
