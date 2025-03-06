@@ -20,6 +20,16 @@
   repos:
     - diff
   githubID: 54525741
+- name: Aayush Saini
+  github: AayushSaini101
+  linkedin: aayush-saini-0a25931b1
+  slack: U04RN9LRV97
+  twitter: Aayush__Saini_
+  availableForHire: true
+  isTscMember: true
+  repos:
+    - cli
+  githubID: 60972989
 - name: Abir Pal
   linkedin: imabp
   slack: U01S8EQ9LQ2
@@ -55,7 +65,7 @@
   linkedin: anand-sunderraman-a6b7a131
   slack: U0231F9KXNK
   availableForHire: false
-  isTscMember: true
+  isTscMember: false
   repos:
     - go-watermill-template
   githubID: 4500774
@@ -67,7 +77,7 @@
   availableForHire: true
   isTscMember: true
   repos:
-    - github-action-for-cli
+    - studio
     - cli
   githubID: 100484401
 - name: Cameron Rushton
@@ -125,7 +135,7 @@
     - html-template
     - markdown-template
     - nodejs-ws-template
-    - generator-hooks
+    - glee
     - brand
   githubID: 242119
 - name: Gerald Loeffler
@@ -142,16 +152,14 @@
   github: jonaslagoni
   linkedin: jonaslagoni
   slack: UQ2ANBG1E
+  company: EventStack
   availableForHire: false
-  company: Postman
   isTscMember: true
   repos:
     - spec-json-schemas
     - generator
     - parser-js
     - converter-js
-    - ts-nats-template
-    - dotnet-nats-template
     - generator-react-sdk
     - modelina
     - simulator
@@ -192,7 +200,7 @@
   twitter: ldussart
   availableForHire: false
   company: zatsit
-  isTscMember: true
+  isTscMember: false
   repos:
     - avro-schema-parser
   githubID: 5501911
@@ -201,15 +209,13 @@
   linkedin: lukasz-gornicki-a621914
   slack: UD698Q5LM
   twitter: derberq
-  availableForHire: false
-  company: Postman
+  availableForHire: true
   isTscMember: true
   repos:
     - spec
     - website
     - spec-json-schemas
     - generator
-    - asyncapi-react
     - extensions-catalog
     - bindings
     - enterprise-patterns
@@ -218,16 +224,12 @@
     - nodejs-template
     - nodejs-ws-template
     - java-spring-template
-    - github-action-for-cli
     - .github
-    - jasyncapi
-    - generator-hooks
     - vs-asyncapi-preview
     - template-for-generator-templates
     - community
     - diff
     - chatbot
-    - infra
   githubID: 6995927
 - name: Maciej Urbańczyk
   github: magicmatatjahu
@@ -237,7 +239,6 @@
   company: Travelping GmbH
   isTscMember: true
   repos:
-    - website
     - generator
     - asyncapi-react
     - parser-go
@@ -247,9 +248,6 @@
     - studio
     - html-template
     - markdown-template
-    - github-action-for-cli
-    - ts-nats-template
-    - dotnet-nats-template
     - template-for-generator-templates
     - generator-react-sdk
     - modelina
@@ -265,10 +263,10 @@
   github: AceTheCreator
   twitter: _acebuild
   slack: U01RWDD69PZ
-  company: Postman
   availableForHire: false
   isTscMember: true
   repos:
+    - asyncapi-react
     - conference-website
     - chatbot
   githubID: 40604284
@@ -288,7 +286,7 @@
   linkedin: nektarios-fifes-372740220
   slack: U01SE93Q48N
   availableForHire: true
-  isTscMember: true
+  isTscMember: false
   repos:
     - simulator
   githubID: 61620751
@@ -339,8 +337,8 @@
   slack: U01N6AW5V5G
   twitter: amzani
   linkedin: amzani
+  company: Apideck
   availableForHire: false
-  company: Postman
   isTscMember: true
   repos:
     - studio
@@ -351,8 +349,8 @@
   linkedin: smoya
   slack: UN22ZTLHG
   twitter: smoyac
+  company: Timescale
   availableForHire: false
-  company: Postman
   isTscMember: true
   repos:
     - spec
@@ -368,7 +366,6 @@
     - template-for-go-projects
     - parser-api
     - server-api
-    - infra
   githubID: 1083296
 - name: Souvik De
   github: Souvikns
@@ -376,7 +373,7 @@
   twitter: souvik_ns
   linkedin: souvik-de-a2b941169
   availableForHire: false
-  company: Postman
+  company: Codemate
   isTscMember: true
   repos:
     - cli
@@ -388,11 +385,11 @@
   twitter: QuetzalliWrites
   slack: U02AKC14WAJ
   linkedin: quetzalli-writes
-  availableForHire: false
-  company: Postman
+  availableForHire: true
   isTscMember: true
   repos:
     - website
+    - community
   githubID: 19964402
 - name: David Pereira
   github: BOLT04
@@ -580,6 +577,7 @@
   availableForHire: true
   isTscMember: true
   repos:
+    - website
     - modelina
   githubID: 43639341
 - name: Sambhav Gupta
@@ -601,33 +599,22 @@
     - optimizer
     - bundler
   githubID: 16149591
-- name: Rohit
+- name: Rohit T
   github: TRohit20
+  linkedin: rohit-t-0124a4242
+  slack: U05174ZKGQ6
   twitter: TRRohit20
-  isTscMember: false
+  availableForHire: true
+  isTscMember: true
   repos:
     - website
   githubID: 108233235
-- name: 'Bhaswati Roy '
-  github: BhaswatiRoy
-  twitter: swiftiebhaswati
-  isTscMember: false
-  repos:
-    - website
-  githubID: 78029145
 - name: 'Vaishnavi '
   github: VaishnaviNandakumar
   isTscMember: false
   repos:
     - website
   githubID: 41518119
-- name: Joy Almeida
-  github: J0SAL
-  twitter: _j0sal
-  isTscMember: false
-  repos:
-    - website
-  githubID: 52382282
 - name: Mihael Bosnjak
   github: mboss37
   isTscMember: false
@@ -710,22 +697,6 @@
   repos:
     - modelina
   githubID: 743192
-- name: Vinit Shahdeo
-  github: vinitshahdeo
-  twitter: Vinit_Shahdeo
-  availableForHire: true
-  isTscMember: false
-  repos:
-    - diff
-  githubID: 20594326
-- name: Anubhav Vats
-  github: onbit-uchenik
-  twitter: postmanlabs
-  availableForHire: true
-  isTscMember: false
-  repos:
-    - diff
-  githubID: 46771418
 - name: Akshaya Gurlhosur
   github: AGurlhosur
   isTscMember: false
@@ -750,3 +721,45 @@
   repos:
     - learning-paths
   githubID: 77982319
+- name: Lorenz Simon
+  github: lorenzsimon
+  isTscMember: false
+  repos:
+    - kotlin-asyncapi
+  githubID: 39913716
+- name: Andrei
+  github: gimlet2
+  twitter: gimlet2
+  availableForHire: true
+  isTscMember: false
+  repos:
+    - kotlin-asyncapi
+  githubID: 758568
+- name: Ashmit Jagtap
+  github: ashmit-coder
+  linkedin: ashmit-jagtap
+  twitter: AshmitJagtap
+  slack: U06RA7GDHU1
+  availableForHire: true
+  isTscMember: true
+  repos:
+    - conference-website
+  githubID: 69006513
+- name: HariKrishnan
+  github: harikrishnan83
+  twitter: harikrishnan83
+  linkedin: harikrishnan83
+  slack: U067JPY0UH5
+  availableForHire: false
+  isTscMember: true
+  repos:
+    - jasyncapi
+  githubID: 126087
+- name: Prince Onyeanuna
+  github: Aahil13
+  twitter: OnyeanunaE
+  availableForHire: true
+  isTscMember: false
+  repos:
+    - website
+  githubID: 63567230
