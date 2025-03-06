@@ -58,13 +58,13 @@ jobs:
                     return;
                 }
             
-                core.info(`${maintainerGithub} in mainFile has isTscMember as:`, mainMaintainer.isTscMember);
-                core.info(`${maintainerGithub} in prFile has isTscMember as:`, prMaintainer.isTscMember);
+                core.info(`${maintainerGithub} in mainFile has isTscMember as: ${mainMaintainer.isTscMember}`);
+                core.info(`${maintainerGithub} in prFile has isTscMember as: ${prMaintainer.isTscMember}`);
             
                 if (mainMaintainer.isTscMember !== prMaintainer.isTscMember) {
-                    core.info(`isTscMember value changed for ${maintainerGithub}`);
                     updatedMaintainers.push({ githubUser: maintainerGithub, updatedValue: mainMaintainer.isTscMember });
                     updatedValue = mainMaintainer.isTscMember;
+                    core.info(`isTscMember value changed for ${maintainerGithub}: ${updatedValue}`);
                 }
             }
 
@@ -72,8 +72,8 @@ jobs:
             mainFile.forEach(maintainer => hasIsTscMemberChanged(maintainer.github));
             
             // Log final results
-            core.info("Final updatedValue:", updatedValue);
-            core.info("Final updatedMaintainers:", JSON.stringify(updatedMaintainers));
+            core.info(`Final updatedValue: ${updatedValue}`);
+            core.info(`Final updatedMaintainers: ${JSON.stringify(updatedMaintainers, null, 2)}`);
             
             // Set outputs
             core.setOutput("updatedValue", updatedValue);
