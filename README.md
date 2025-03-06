@@ -15,21 +15,21 @@ Before you begin, please **go through our [Code of Conduct](https://github.com/a
 
 We believe that **code is cool**, but **great docs make all the difference**!
 
-1. Read the [AsyncAPI Code of Conduct](https://github.com/asyncapi/.github/blob/master/CODE_OF_CONDUCT.md).
-2. Go through the [AsyncAPI Slack etiquette](https://github.com/asyncapi/community/blob/master/slack-etiquette.md).
-3. Join our [AsyncAPI Docs Community](https://www.asyncapi.com/docs/community).
-4. Add the AsyncAPI calendar from the [AsyncAPI events](https://www.asyncapi.com/community/events) page to stay updated on meetings and events.
-5. Review the list of [technical writer contributor](https://www.asyncapi.com/docs/community/onboarding-guide/technical-writer-contributor-responsibilities) responsibilities to understand your role.
-6. Familiarize yourself with [prerequisite knowledge topics](https://www.asyncapi.com/docs/community/onboarding-guide/prerequisite-knowledge) required for contributing.
-7. Check out the work-in-progress [AsyncAPI Style Guide](https://github.com/asyncapi/community/pulls?q=is%3Apr+is%3Aopen+style+guide) to ensure consistency in documentation.
-8. Read all documentation under the following content buckets:
+- Read the [AsyncAPI Code of Conduct](https://github.com/asyncapi/.github/blob/master/CODE_OF_CONDUCT.md).
+- Go through the [AsyncAPI Slack etiquette](https://github.com/asyncapi/community/blob/master/slack-etiquette.md).
+- Join our [AsyncAPI Docs Community](https://www.asyncapi.com/docs/community).
+- Add the AsyncAPI calendar from the [AsyncAPI events](https://www.asyncapi.com/community/events) page to stay updated on meetings and events.
+- Review the list of [technical writer contributor](https://www.asyncapi.com/docs/community/onboarding-guide/technical-writer-contributor-responsibilities) responsibilities to understand your role.
+- Familiarize yourself with [prerequisite knowledge topics](https://www.asyncapi.com/docs/community/onboarding-guide/prerequisite-knowledge) required for contributing.
+- Check out the work-in-progress [AsyncAPI Style Guide](https://github.com/asyncapi/community/pulls?q=is%3Apr+is%3Aopen+style+guide) to ensure consistency in documentation.
+- Read all documentation under the following content buckets:
     - Concepts
     - Tutorials (take time to go through each tutorial)
     - Reference
-9. Set up your local environment following the [AsyncAPI git workflow](https://github.com/asyncapi/community/blob/master/git-workflow.md).
-10. Introduce yourself in AsyncAPI Slack in the **#01_introductions channel** and the #13_docs channel. Ask docs-related questions in #13_docs.
-11. Request a good first docs issue in the **#13_docs** [Slack channel](https://asyncapi.slack.com/ssb/redirect).
-12. Attend [OPEN docs meetings](https://www.asyncapi.com/community/events) to chat with other maintainers, ask docs questions, and request help on docs blockers.
+- Set up your local environment following the [AsyncAPI git workflow](https://github.com/asyncapi/community/blob/master/git-workflow.md).
+- Introduce yourself in AsyncAPI Slack in the **#01_introductions channel** and the #13_docs channel. Ask docs-related questions in #13_docs.
+- Request a good first docs issue in the **#13_docs** [Slack channel](https://asyncapi.slack.com/ssb/redirect).
+- Attend [OPEN docs meetings](https://www.asyncapi.com/community/events) to chat with other maintainers, ask docs questions, and request help on docs blockers.
 
 
 ## 🛠 Contribution Flow
