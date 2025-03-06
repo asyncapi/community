@@ -1,12 +1,10 @@
 name: Verify tsc and maintainers changes by human and bot
 
 on:
-  pull_request:
+  pull_request_target:
     types: [synchronize, opened, reopened]
     paths:
       - "MAINTAINERS.yaml"
-env:
-  GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
 
 jobs:
   verify-changes-if-tsc-if-maintainers:
@@ -35,7 +33,7 @@ jobs:
         id: verify-changes
         uses: actions/github-script@v6
         with:
-          github-token: ${{ env.GITHUB_TOKEN }}
+          github-token: ${{ secrets.GH_TOKEN }}
           script: |
             const yaml = require("js-yaml");
             const fs = require("fs");
@@ -125,7 +123,7 @@ jobs:
       - name: Comment and close the PR if there are any critical changes done by human
         uses: actions/github-script@v6
         with:
-          github-token: ${{ env.GITHUB_TOKEN }}
+          github-token: ${{ secrets.GH_TOKEN }}
           script: |
             const errorMessagesString = `${{ needs.verify-changes-if-tsc-if-maintainers.outputs.errorMessages }}`;
             const errorMessages = errorMessagesString ? JSON.parse(errorMessagesString) : [];
@@ -161,7 +159,7 @@ jobs:
         if: steps.verify-changes-if-tsc-if-maintainers.outputs.removedTscMembers != ''
         uses: actions/github-script@v6
         with:
-          github-token: ${{ env.GITHUB_TOKEN }}
+          github-token: ${{ secrets.GH_TOKEN }}
           script: |
               const issueComment = {
                   owner: github.context.repo.owner,
