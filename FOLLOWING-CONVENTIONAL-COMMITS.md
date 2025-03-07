@@ -66,11 +66,11 @@ When writing your commit message, remember to:
 
 **Examples:**
 
-> `feat: add user avatar upload feature to improve user experience on profile pages`
+> `feat(profile): add user avatar upload feature`
 
-> `docs: reorganize README for better readability`
+> `docs: reorganize README structure and content for easier navigation`
 
-> `chore: update build scripts to improve performance`
+> `chore(build): update scripts to reduce build time by 30%`
 
 ### Use the commit body for additional context
 
