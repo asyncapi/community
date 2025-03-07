@@ -1,3 +1,10 @@
+---
+title: Onboarding Guide for AsyncAPI Maintainers
+weight: 100
+---
+
+
+
 # Onboarding Guide for AsyncAPI Maintainers
 
 Welcome to the AsyncAPI Maintainer Onboarding Guide! 
