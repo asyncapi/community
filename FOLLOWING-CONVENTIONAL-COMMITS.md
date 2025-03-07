@@ -76,7 +76,7 @@ When writing your commit message, remember to:
 
 Most times, a one-liner is all you need. But when you need to provide more context, use the commit body to explain the reasoning behind the change, how it was implemented, or any nuances that might help others understand the decision.
 
-To create this, add a blank line after your commit message and then write your additional context.
+To add the commit body, add one blank line after the commit message and then specify the details you want to communicate about the commit.
 
 **Example:**
 
