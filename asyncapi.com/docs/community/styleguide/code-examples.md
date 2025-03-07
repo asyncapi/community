@@ -1,6 +1,7 @@
 ---
 title: Code Examples
 description: This style guide provides guidelines for writing, formatting, and styling code examples in AsyncAPI documentation. 
+weight: 30
 ---
 
 
