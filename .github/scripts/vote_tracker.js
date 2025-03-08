@@ -233,19 +233,16 @@ module.exports = async ({ github, context, botCommentURL }) => {
     // Check if voting duration is within the last three months
     function isVotingWithinLastThreeMonths(voteInfo) {
       const currentDate = new Date();
-      let previousDate;
-      if (
-        voteInfo.isVotedInLast3Months ===
-        "Member has not voted in all previous voting process."
-      ) {
-        previousDate = new Date(voteInfo.firstVoteClosedTime);
-      } else {
-        previousDate = new Date(voteInfo.lastVoteClosedTime);
-      }
-      const diffInMs = currentDate - previousDate;
-      const diffInDays = diffInMs / (1000 * 60 * 60 * 24);
+      let lastVoteDate;
 
-      return diffInDays <= 90; // 90 days ≈ 3 months
+      if (voteInfo.lastParticipatedVoteTime && !voteInfo.lastParticipatedVoteTime.includes("Member has not")) {
+        lastVoteDate = new Date(voteInfo.lastParticipatedVoteTime);
+      } else {
+        return false; // No valid voting history
+      }
+
+      const diffInDays = (currentDate - lastVoteDate) / (1000 * 60 * 60 * 24);
+      return diffInDays <= 90; // 90 days = 3 months
     }
 
     // Function to update the voteTrackingFile with updated TSC Members
@@ -329,7 +326,7 @@ module.exports = async ({ github, context, botCommentURL }) => {
 
       if (updatedTSCMembers.length > 0) {
         try {
-          updatedVoteDetails.concat(...updatedTSCMembers);
+          updatedVoteDetails = updatedVoteDetails.concat(...updatedTSCMembers);
           await writeFile(
             voteTrackingFile,
             JSON.stringify(updatedVoteDetails, null, 2)
