@@ -2,7 +2,7 @@
 
 When you contribute to a project, you're not just adding code or docs — you're also adding context. Your changes become part of the project's history, and your commit messages explain why those changes were made.
 
-In this guide, you'll explore how to write effective commit messages that follow the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) standard. This standard helps us create clear, consistent commit messages that are easy to understand and navigate.
+In this guide, you'll explore how to write effective commit messages that follow the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) standard. This standard helps you create clear, consistent, and semantically meaningful commit messages that are easy to understand and navigate.
 
 ## TL;DR
 
