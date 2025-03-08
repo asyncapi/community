@@ -31,7 +31,7 @@ The following are some of the most commonly used commit types:
 - **feat:** Choose `feat` for new features. If your change adds functionality or improves our project in some way, use this type.
 - **fix:** This type is for bug fixes. If your change corrects an issue or resolves a problem, you should use the `fix` type.
 - **docs:** `docs` is for documentation changes. If you update a README, add comments, or make other documentation changes, use this type.
-- **style:** The `style` type is for changes that don't affect the code's meaning. Use this type for formatting updates, such as adjusting indentation, spacing, or other non-functional changes.
+- **style:** The `style` type is for changes that don't affect the code's meaning. For example, white-space, formatting, missing semi-colons, etc.
 - **refactor:** Use the `refactor` type for code changes that neither fix a bug nor add a feature. If you reorganize code, rename variables, or make other changes that don't affect the code's behavior, use this type.
 - **test:** If your change adds or modifies tests, use the `test` type.
 - **chore:** The `chore` type is for changes that don't affect the codebase. If you update build scripts, make tooling changes, or perform other maintenance tasks, use this type.
