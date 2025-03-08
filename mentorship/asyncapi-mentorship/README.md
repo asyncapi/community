@@ -5,7 +5,10 @@ The AsyncAPI Mentorship makes it easy to sponsor and help train the next generat
 ## Program Cycles and Archive data
 | Year | Term   | Status    | Announcement                                                                                                                                                         | Details                                 |
 | ---- | ------ | --------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------- |
+docs
+| 2024 | Sept-Jan | In Progress |       | [Sept-Jan](2024/README.md)|
 | 2024 | Sep-Mar | In Progress  |       | In Progress |
+master
 | 2023 | Jan-Nov | Completed   |       | [Jan-Nov](2023/README.md) |
 | 2022 | Jan-Nov | Completed   |       | [Jan-Nov](2022/README.md) |
 
