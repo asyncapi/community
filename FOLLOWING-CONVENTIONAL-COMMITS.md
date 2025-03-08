@@ -57,7 +57,9 @@ To add the commit body, add one blank line after the commit message and then spe
 
 **Example:**
 
-> `feat: add user avatar upload feature to improve user experience on profile pages` <br> <br> Adds a form field, validation checks, and an API endpoint for avatar uploads. Enhances profile customization. 
+> feat: add user avatar upload feature to improve user experience on profile pages
+> (blank line)
+> Adds a form field, validation checks, and an API endpoint for avatar uploads. Enhances profile customization. 
 >  
 
 Some additional tips to keep in mind when writing commit messages include:
