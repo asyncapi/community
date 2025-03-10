@@ -76,7 +76,7 @@ As a TSC member, you will enjoy the following benefits:
 * Involvement in the voting process on topics concerning the entire Initiative
 * Being a part of key decision-making for the Initiative. Especially related to finance.
 * A unique experience in shaping the initiative's future and open-source development.
-* TSC members form the base for different initiatives and programs, known as "sub-committees".
+* TSC is the most trusted group in the community and it is the first group of people to choose from when forming [Working Groups](https://github.com/asyncapi/community/blob/master/WORKING_GROUPS.md).
 
 ## How to become a TSC member
 To become a TSC member, you must be a project maintainer or an Ambassador within the AsyncAPI Initiative.
