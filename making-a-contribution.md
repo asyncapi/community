@@ -1,77 +1,48 @@
 # Contributor - Simple Contribution Flow
-This article covers how to make a contribution on AsyncAPI. It walks you through the basic contribution flow and workflow processes you need to setup in order to make a contribution.
+This article explains how to contribute effectively to AsyncAPI. It guides you through the contribution process and provides a checklist to ensure high-quality contributions. 
 
-## Contents
-- [Contributor - Simple Contribution Flow](#contributor---simple-contribution-flow)
-  - [Contents](#contents)
-  - [Making a contribution](#making-a-contribution)
-  - [Setting up a workflow](#setting-up-a-workflow)
-    - [Setting up the `master` branch](#setting-up-the-master-branch)
-    - [Setting up a new branch](#setting-up-a-new-branch)
-  - [Making a pull request](#making-a-pull-request)
-  - [Making further commits](#making-further-commits)
-  - [Additional Information](#additional-information)
 
-## Making a contribution
-You are welcome to making a contribution at AsyncAPI. We would love to get your suggestions, improvements, and ideas. You are encouraged to make quality contributions either by making a PR(Pull Request) for an already existing issue or creating an issue. To make a successful contribution, you are required to work on a forked repository and create a branch on the forked repository where you can make your changes(do not work directly on the `master` branch).
+## Making a Contribution
+We welcome your contributions to AsyncAPI! Whether you have suggestions, improvements, or new ideas, we encourage you to participate.
 
-## Setting up a workflow
-### Setting up the `master` branch 
-- Fork the repository by clicking on the fork icon  
-- Clone the forked repo in your local terminal
-```git clone <the link you copied>```
-- Run ```git remote -v```. This will list the URLs of the remote repository for your fork.
-The result is as follows:
-    ```
-    origin  https://github.com/{your-username}/{your-fork}.git (fetch)
-    origin  https://github.com/{your-username}/{your-fork}.git (push)
-    ```
+At AsyncAPI, we value **quality over quantity**. This guide will help you make meaningful contributions that benefit the community.
 
-    See the example:
-    ```
-    origin	https://github.com/i000000/asyncapi.git (fetch)
-    origin	https://github.com/i000000/asyncapi.git (push)
-    ```
-- Run ```git remote add upstream https://github.com/{original-owner}/{original-repository}.git```
-  - This adds a new remote named `upstream` to your local repository. 
-  - The `upstream` name refers to the original repository while `origin` refers to the forked repository.
-  - The `https://github.com/{original-owner}/{original-repository}.git` refers to the URL of the main repo.
-   
-    See the example: ```git remote add upstream https://github.com/asyncapi/asyncapi.git```
+### Before You Start Contributing
+- If you are joining AsyncAPI through [Slack](https://asyncapi.com/slack-invite) or an event, take your time to explore the [AsyncAPI website](https://www.asyncapi.com/).  
+- Read our [Code of Conduct](https://github.com/asyncapi/.github/blob/master/CODE_OF_CONDUCT.md).  
+- [Attend meetings](https://www.asyncapi.com/community/events) and engage in discussions in the [Slack channel](https://asyncapi.com/slack-invite).
+- Read the [documentation](https://www.asyncapi.com/docs) to learn more about AsyncAPI.
 
-- Run ```git fetch upstream master``` to download the latest changes from the master branch of the upstream remote (the original repository you forked from).
-- Set up the local branch to track the remote branch from the upstream repo: ```git branch -u upstream/master master```
-- Run ```git branch -vv``` to verify that your local `master` branch points to the `upstream/master` branch.
-The result is similar to the following:
-```
-* master           c2226e0 [upstream/master] Update the README.md document
-```
+### Before Making a Contribution
+- Read the [onboarding contributor guide](https://www.asyncapi.com/docs/community/onboarding-guide).
+- If you are contributing to documentation, review the [documentation onboarding checklist](https://www.asyncapi.com/docs/community/onboarding-guide/docs-onboarding-checklist). 
+- For other repositories, refer to the [general contribution guidelines](https://github.com/asyncapi/community/blob/master/CONTRIBUTING.md).
+- Look through existing issues and pull requests to gain a better understanding of the repository.
+- You can also check the [general roadmap](https://www.asyncapi.com/roadmap).
 
-### Setting up a new branch
-Before you begin to make changes, create a new branch 
-- Run `git checkout -b <branchname>` 
+### Steps to making a good contribution
+- Once you are ready to contribute, set up your workflow environment using the [git workflow guide](https://github.com/asyncapi/community/blob/master/git-workflow.md).
+- Search for [good first issues](https://github.com/issues?page=1&q=is%3Aopen+org%3Aasyncapi+sort%3Aupdated-desc+label%3A%22good+first+issue%22). 
+- When you do find one, request to be assigned.
+- However, if you notice a bug, typo, or improvement, feel free to create an issue.
+- Make a PR only when you have been assigned by a maintainer.
+- Even if you created the issue yourself, wait to be assigned by a maintainer before you make a PR.
+- Follow the [conventional commits guide](https://github.com/asyncapi/community/pull/1733) to write a good PR title.
+- Remember to follow the [git workflow document](https://github.com/asyncapi/community/blob/master/git-workflow.md) when making a PR.
+- After making a PR, patiently wait for reviews.
+- Make sure all your PR checks pass (turn green) to speed up the merging process.  
+- If your PR hasn’t been reviewed after a certain period, you can gently remind a maintainer on Slack or GitHub. Delays can happen for various reasons, but no one is ignoring you! 🙏🏼 .
 
-## Making a pull request 
-After making contributions and you are set to make a PR.
 
-- Run `git add <file name>` if you created a new file as part of your changes and commit with a meaningful message. `git commit -m "Meaningful commit message"`. Else, commit your changes with `git commit -am "Meaningful commit message"`.
-- Push the changes
-  
-```
-git push --set-upstream origin <branchname>
-```
-- Make a pull request and wait for the maintainers to review.
+## Contribution Checklist
+Before submitting your contribution, ask yourself:
+- [x] Is my contribution relevant to AsyncAPI?
+- [x] Have I explained why this contribution is necessary?
+- [x] Is my writing clear, concise, and well-structured?
+- [x] Did I follow the [documentation style guide](https://github.com/asyncapi/community/tree/master/docs/styleguide)?
+- [x] Are my code examples tested and functional?
+- [x] Have I linked any relevant issues, discussions, or existing docs?
+- [x] Did I provide a description of the changes in my PR?
+- [x] Am I open to feedback and revisions?
 
-## Making further commits
-Normally, when a maintainer requests changes on your PR, there may have been previous commits from other contributors on that repository. Before you begin to add those changes, make sure you sync your branches (both the master and custom branch you are using).
-After doing that, in your local machine terminal run `git pull` to download and merge the changes to your local machine then you can start making the changes.
-
-To make further commits on that same repository and branch.
-Simply run,
-- `git add <filename>` and `git commit -m "Meaningful commit message"` (if you created a new file).
-- But if you are making modifications, run `git commit -am "Meaningful commit message"`.
-- Run `git push` to push your changes.
-
-## Additional Information
-- [Git workflow document](https://github.com/asyncapi/community/blob/master/git-workflow.md)
-- [Conventional commit messages](https://github.com/asyncapi/website/blob/master/CONTRIBUTING.md)
+If you answered **yes** to all these questions, you are ready to submit your PR or create an issue! 🚀  
