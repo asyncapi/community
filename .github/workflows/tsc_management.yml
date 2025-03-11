@@ -1,7 +1,7 @@
 name: TSC Management Workflow
 
 on:
-  pull_request:
+  pull_request_target:
     types: [closed]
     paths:
       - 'MAINTAINERS.yaml'
@@ -58,13 +58,13 @@ jobs:
                     return;
                 }
             
-                core.info(`${maintainerGithub} in mainFile has isTscMember as:`, mainMaintainer.isTscMember);
-                core.info(`${maintainerGithub} in prFile has isTscMember as:`, prMaintainer.isTscMember);
+                core.info(`${maintainerGithub} in mainFile has isTscMember as: ${mainMaintainer.isTscMember}`);
+                core.info(`${maintainerGithub} in prFile has isTscMember as: ${prMaintainer.isTscMember}`);
             
                 if (mainMaintainer.isTscMember !== prMaintainer.isTscMember) {
-                    core.info(`isTscMember value changed for ${maintainerGithub}`);
                     updatedMaintainers.push({ githubUser: maintainerGithub, updatedValue: mainMaintainer.isTscMember });
                     updatedValue = mainMaintainer.isTscMember;
+                    core.info(`isTscMember value changed for ${maintainerGithub}: ${updatedValue}`);
                 }
             }
 
@@ -72,8 +72,8 @@ jobs:
             mainFile.forEach(maintainer => hasIsTscMemberChanged(maintainer.github));
             
             // Log final results
-            core.info("Final updatedValue:", updatedValue);
-            core.info("Final updatedMaintainers:", JSON.stringify(updatedMaintainers));
+            core.info(`Final updatedValue: ${updatedValue}`);
+            core.info(`Final updatedMaintainers: ${JSON.stringify(updatedMaintainers, null, 2)}`);
             
             // Set outputs
             core.setOutput("updatedValue", updatedValue);
@@ -90,7 +90,7 @@ jobs:
       - name: Add new TSC members to the team
         uses: actions/github-script@v6
         with:
-          github-token: ${{ secrets.GH_TOKEN }}
+          github-token: ${{ secrets.GH_TOKEN_ORG_ADMIN }}
           script: |
             const newTscMembers = ${{ needs.detect_tsc_membership_changes.outputs.updatedMaintainers }};
             for (const tscMember of newTscMembers) {
@@ -152,7 +152,7 @@ jobs:
       - name: Remove TSC members from the team
         uses: actions/github-script@v6
         with:
-          github-token: ${{ secrets.GH_TOKEN }}
+          github-token: ${{ secrets.GH_TOKEN_ORG_ADMIN }}
           script: |
             const removedMaintainers = ${{ needs.detect_tsc_membership_changes.outputs.updatedMaintainers }};
             for (const maintainer of removedMaintainers) {
@@ -203,7 +203,6 @@ jobs:
       - name: Add Former TSC members to Emeritus.yaml and print
         uses: actions/github-script@v6
         with:
-          github-token: ${{ secrets.GH_TOKEN }}
           script: |
             const fs = require('fs');
             const path = './Emeritus.yaml';
@@ -239,7 +238,8 @@ jobs:
         run: |
           git add .
           git commit -m "Update Emeritus.yaml"
-          git push https://${{ secrets.GH_TOKEN}}@github.com/asyncapi/community update-emeritus-${{ github.run_id }}
+          git remote set-url origin https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/asyncapi/community.git
+          git push origin update-emeritus-${{ github.run_id }}
 
       - name: Create PR
         run: |
