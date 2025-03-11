@@ -10,9 +10,9 @@
     "docs: add instruction how voting automation works$$1155": "In favor",
     "lastParticipatedVoteTime": "2025-02-14",
     "isVotedInLast3Months": true,
-    "lastVoteClosedTime": "2025-02-21",
+    "lastVoteClosedTime": "2025-03-11",
     "firstVoteClosedTime": "2024-04-12",
-    "agreeCount": 6,
+    "agreeCount": 7,
     "disagreeCount": 0,
     "abstainCount": 0,
     "notParticipatingCount": 1
@@ -28,9 +28,9 @@
     "docs: add instruction how voting automation works$$1155": "Not participated",
     "lastParticipatedVoteTime": "2025-02-14",
     "isVotedInLast3Months": true,
-    "lastVoteClosedTime": "2025-02-21",
+    "lastVoteClosedTime": "2025-03-11",
     "firstVoteClosedTime": "2024-04-12",
-    "agreeCount": 5,
+    "agreeCount": 6,
     "disagreeCount": 0,
     "abstainCount": 0,
     "notParticipatingCount": 2
@@ -46,12 +46,12 @@
     "docs: add instruction how voting automation works$$1155": "In favor",
     "lastParticipatedVoteTime": "2024-11-11",
     "isVotedInLast3Months": true,
-    "lastVoteClosedTime": "2025-02-21",
+    "lastVoteClosedTime": "2025-03-11",
     "firstVoteClosedTime": "2024-04-12",
     "agreeCount": 4,
     "disagreeCount": 0,
     "abstainCount": 0,
-    "notParticipatingCount": 3
+    "notParticipatingCount": 4
   },
   {
     "name": "akshatnema",
@@ -64,9 +64,9 @@
     "docs: add instruction how voting automation works$$1155": "In favor",
     "lastParticipatedVoteTime": "2025-02-14",
     "isVotedInLast3Months": true,
-    "lastVoteClosedTime": "2025-02-21",
+    "lastVoteClosedTime": "2025-03-11",
     "firstVoteClosedTime": "2024-04-12",
-    "agreeCount": 7,
+    "agreeCount": 8,
     "disagreeCount": 0,
     "abstainCount": 0,
     "notParticipatingCount": 0
@@ -82,9 +82,9 @@
     "docs: add instruction how voting automation works$$1155": "Not participated",
     "lastParticipatedVoteTime": "2025-02-14",
     "isVotedInLast3Months": true,
-    "lastVoteClosedTime": "2025-02-21",
+    "lastVoteClosedTime": "2025-03-11",
     "firstVoteClosedTime": "2024-04-12",
-    "agreeCount": 6,
+    "agreeCount": 7,
     "disagreeCount": 0,
     "abstainCount": 0,
     "notParticipatingCount": 1
@@ -100,12 +100,12 @@
     "docs: add instruction how voting automation works$$1155": "In favor",
     "lastParticipatedVoteTime": "2024-07-23",
     "isVotedInLast3Months": true,
-    "lastVoteClosedTime": "2025-02-21",
+    "lastVoteClosedTime": "2025-03-11",
     "firstVoteClosedTime": "2024-04-12",
     "agreeCount": 3,
     "disagreeCount": 0,
     "abstainCount": 0,
-    "notParticipatingCount": 4
+    "notParticipatingCount": 5
   },
   {
     "name": "Shurtu-gal",
@@ -118,9 +118,9 @@
     "docs: add instruction how voting automation works$$1155": "In favor",
     "lastParticipatedVoteTime": "2025-02-14",
     "isVotedInLast3Months": true,
-    "lastVoteClosedTime": "2025-02-21",
+    "lastVoteClosedTime": "2025-03-11",
     "firstVoteClosedTime": "2024-04-12",
-    "agreeCount": 7,
+    "agreeCount": 8,
     "disagreeCount": 0,
     "abstainCount": 0,
     "notParticipatingCount": 0
@@ -136,12 +136,12 @@
     "docs: add instruction how voting automation works$$1155": "In favor",
     "lastParticipatedVoteTime": "2024-11-29",
     "isVotedInLast3Months": true,
-    "lastVoteClosedTime": "2025-02-21",
+    "lastVoteClosedTime": "2025-03-11",
     "firstVoteClosedTime": "2024-04-12",
     "agreeCount": 3,
     "disagreeCount": 0,
     "abstainCount": 1,
-    "notParticipatingCount": 3
+    "notParticipatingCount": 4
   },
   {
     "name": "dalelane",
@@ -154,12 +154,12 @@
     "docs: add instruction how voting automation works$$1155": "Not participated",
     "lastParticipatedVoteTime": "2024-11-26",
     "isVotedInLast3Months": true,
-    "lastVoteClosedTime": "2025-02-21",
+    "lastVoteClosedTime": "2025-03-11",
     "firstVoteClosedTime": "2024-04-12",
     "agreeCount": 1,
     "disagreeCount": 1,
     "abstainCount": 2,
-    "notParticipatingCount": 3
+    "notParticipatingCount": 4
   },
   {
     "name": "fmvilas",
@@ -172,9 +172,9 @@
     "docs: add instruction how voting automation works$$1155": "In favor",
     "lastParticipatedVoteTime": "2025-02-14",
     "isVotedInLast3Months": true,
-    "lastVoteClosedTime": "2025-02-21",
+    "lastVoteClosedTime": "2025-03-11",
     "firstVoteClosedTime": "2024-04-12",
-    "agreeCount": 6,
+    "agreeCount": 7,
     "disagreeCount": 0,
     "abstainCount": 0,
     "notParticipatingCount": 1
@@ -190,12 +190,12 @@
     "docs: add instruction how voting automation works$$1155": "In favor",
     "lastParticipatedVoteTime": "2024-11-12",
     "isVotedInLast3Months": true,
-    "lastVoteClosedTime": "2025-02-21",
+    "lastVoteClosedTime": "2025-03-11",
     "firstVoteClosedTime": "2024-04-12",
     "agreeCount": 5,
     "disagreeCount": 0,
     "abstainCount": 0,
-    "notParticipatingCount": 2
+    "notParticipatingCount": 3
   },
   {
     "name": "KhudaDad414",
@@ -208,12 +208,12 @@
     "docs: add instruction how voting automation works$$1155": "In favor",
     "lastParticipatedVoteTime": "2024-11-18",
     "isVotedInLast3Months": true,
-    "lastVoteClosedTime": "2025-02-21",
+    "lastVoteClosedTime": "2025-03-11",
     "firstVoteClosedTime": "2024-04-12",
     "agreeCount": 4,
     "disagreeCount": 0,
     "abstainCount": 0,
-    "notParticipatingCount": 3
+    "notParticipatingCount": 4
   },
   {
     "name": "lbroudoux",
@@ -226,12 +226,12 @@
     "docs: add instruction how voting automation works$$1155": "Not participated",
     "lastParticipatedVoteTime": "2024-07-16",
     "isVotedInLast3Months": true,
-    "lastVoteClosedTime": "2025-02-21",
+    "lastVoteClosedTime": "2025-03-11",
     "firstVoteClosedTime": "2024-04-12",
     "agreeCount": 3,
     "disagreeCount": 0,
     "abstainCount": 0,
-    "notParticipatingCount": 4
+    "notParticipatingCount": 5
   },
   {
     "name": "M3lkior",
@@ -244,12 +244,12 @@
     "docs: add instruction how voting automation works$$1155": "In favor",
     "lastParticipatedVoteTime": "2024-04-12",
     "isVotedInLast3Months": true,
-    "lastVoteClosedTime": "2025-02-21",
+    "lastVoteClosedTime": "2025-03-11",
     "firstVoteClosedTime": "2024-04-12",
     "agreeCount": 1,
     "disagreeCount": 0,
     "abstainCount": 0,
-    "notParticipatingCount": 6
+    "notParticipatingCount": 7
   },
   {
     "name": "derberg",
@@ -262,9 +262,9 @@
     "docs: add instruction how voting automation works$$1155": "In favor",
     "lastParticipatedVoteTime": "2025-02-20",
     "isVotedInLast3Months": true,
-    "lastVoteClosedTime": "2025-02-21",
+    "lastVoteClosedTime": "2025-03-11",
     "firstVoteClosedTime": "2024-04-12",
-    "agreeCount": 7,
+    "agreeCount": 8,
     "disagreeCount": 0,
     "abstainCount": 0,
     "notParticipatingCount": 0
@@ -280,9 +280,9 @@
     "docs: add instruction how voting automation works$$1155": "In favor",
     "lastParticipatedVoteTime": "2025-02-18",
     "isVotedInLast3Months": true,
-    "lastVoteClosedTime": "2025-02-21",
+    "lastVoteClosedTime": "2025-03-11",
     "firstVoteClosedTime": "2024-04-12",
-    "agreeCount": 4,
+    "agreeCount": 5,
     "disagreeCount": 0,
     "abstainCount": 1,
     "notParticipatingCount": 2
@@ -298,12 +298,12 @@
     "docs: add instruction how voting automation works$$1155": "Not participated",
     "lastParticipatedVoteTime": "2024-12-03",
     "isVotedInLast3Months": true,
-    "lastVoteClosedTime": "2025-02-21",
+    "lastVoteClosedTime": "2025-03-11",
     "firstVoteClosedTime": "2024-04-12",
     "agreeCount": 3,
     "disagreeCount": 0,
     "abstainCount": 0,
-    "notParticipatingCount": 4
+    "notParticipatingCount": 5
   },
   {
     "name": "NektariosFifes",
@@ -316,12 +316,12 @@
     "docs: add instruction how voting automation works$$1155": "Not participated",
     "lastParticipatedVoteTime": "Member has not participated in all previous voting process.",
     "isVotedInLast3Months": "Member has not participated in all previous voting process.",
-    "lastVoteClosedTime": "2025-02-21",
+    "lastVoteClosedTime": "2025-03-11",
     "firstVoteClosedTime": "2024-04-12",
     "agreeCount": 0,
     "disagreeCount": 0,
     "abstainCount": 0,
-    "notParticipatingCount": 7
+    "notParticipatingCount": 8
   },
   {
     "name": "Pakisan",
@@ -334,9 +334,9 @@
     "docs: add instruction how voting automation works$$1155": "In favor",
     "lastParticipatedVoteTime": "2025-02-14",
     "isVotedInLast3Months": true,
-    "lastVoteClosedTime": "2025-02-21",
+    "lastVoteClosedTime": "2025-03-11",
     "firstVoteClosedTime": "2024-04-12",
-    "agreeCount": 6,
+    "agreeCount": 7,
     "disagreeCount": 0,
     "abstainCount": 0,
     "notParticipatingCount": 1
@@ -352,12 +352,12 @@
     "docs: add instruction how voting automation works$$1155": "In favor",
     "lastParticipatedVoteTime": "2024-11-14",
     "isVotedInLast3Months": true,
-    "lastVoteClosedTime": "2025-02-21",
+    "lastVoteClosedTime": "2025-03-11",
     "firstVoteClosedTime": "2024-04-12",
     "agreeCount": 2,
     "disagreeCount": 1,
     "abstainCount": 0,
-    "notParticipatingCount": 4
+    "notParticipatingCount": 5
   },
   {
     "name": "princerajpoot20",
@@ -370,9 +370,9 @@
     "docs: add instruction how voting automation works$$1155": "In favor",
     "lastParticipatedVoteTime": "2025-02-14",
     "isVotedInLast3Months": true,
-    "lastVoteClosedTime": "2025-02-21",
+    "lastVoteClosedTime": "2025-03-11",
     "firstVoteClosedTime": "2024-04-12",
-    "agreeCount": 4,
+    "agreeCount": 5,
     "disagreeCount": 0,
     "abstainCount": 1,
     "notParticipatingCount": 2
@@ -388,12 +388,12 @@
     "docs: add instruction how voting automation works$$1155": "Not participated",
     "lastParticipatedVoteTime": "2024-11-29",
     "isVotedInLast3Months": true,
-    "lastVoteClosedTime": "2025-02-21",
+    "lastVoteClosedTime": "2025-03-11",
     "firstVoteClosedTime": "2024-04-12",
     "agreeCount": 1,
     "disagreeCount": 0,
     "abstainCount": 2,
-    "notParticipatingCount": 4
+    "notParticipatingCount": 5
   },
   {
     "name": "Amzani",
@@ -406,12 +406,12 @@
     "docs: add instruction how voting automation works$$1155": "Not participated",
     "lastParticipatedVoteTime": "2024-11-27",
     "isVotedInLast3Months": true,
-    "lastVoteClosedTime": "2025-02-21",
+    "lastVoteClosedTime": "2025-03-11",
     "firstVoteClosedTime": "2024-04-12",
     "agreeCount": 4,
     "disagreeCount": 0,
     "abstainCount": 0,
-    "notParticipatingCount": 3
+    "notParticipatingCount": 4
   },
   {
     "name": "smoya",
@@ -424,9 +424,9 @@
     "docs: add instruction how voting automation works$$1155": "Not participated",
     "lastParticipatedVoteTime": "2025-02-14",
     "isVotedInLast3Months": true,
-    "lastVoteClosedTime": "2025-02-21",
+    "lastVoteClosedTime": "2025-03-11",
     "firstVoteClosedTime": "2024-04-12",
-    "agreeCount": 5,
+    "agreeCount": 6,
     "disagreeCount": 1,
     "abstainCount": 0,
     "notParticipatingCount": 1
@@ -442,9 +442,9 @@
     "docs: add instruction how voting automation works$$1155": "In favor",
     "lastParticipatedVoteTime": "2025-02-18",
     "isVotedInLast3Months": true,
-    "lastVoteClosedTime": "2025-02-21",
+    "lastVoteClosedTime": "2025-03-11",
     "firstVoteClosedTime": "2024-04-12",
-    "agreeCount": 6,
+    "agreeCount": 7,
     "disagreeCount": 0,
     "abstainCount": 0,
     "notParticipatingCount": 1
@@ -460,12 +460,12 @@
     "docs: add instruction how voting automation works$$1155": "In favor",
     "lastParticipatedVoteTime": "2024-11-30",
     "isVotedInLast3Months": true,
-    "lastVoteClosedTime": "2025-02-21",
+    "lastVoteClosedTime": "2025-03-11",
     "firstVoteClosedTime": "2024-04-12",
     "agreeCount": 4,
     "disagreeCount": 0,
     "abstainCount": 0,
-    "notParticipatingCount": 3
+    "notParticipatingCount": 4
   },
   {
     "name": "BOLT04",
@@ -478,12 +478,12 @@
     "docs: add instruction how voting automation works$$1155": "Not participated",
     "lastParticipatedVoteTime": "2024-11-13",
     "isVotedInLast3Months": true,
-    "lastVoteClosedTime": "2025-02-21",
+    "lastVoteClosedTime": "2025-03-11",
     "firstVoteClosedTime": "2024-04-12",
     "agreeCount": 2,
     "disagreeCount": 0,
     "abstainCount": 1,
-    "notParticipatingCount": 4
+    "notParticipatingCount": 5
   },
   {
     "name": "dan-r",
@@ -496,9 +496,9 @@
     "docs: add instruction how voting automation works$$1155": "Not participated",
     "lastParticipatedVoteTime": "2025-02-17",
     "isVotedInLast3Months": true,
-    "lastVoteClosedTime": "2025-02-21",
+    "lastVoteClosedTime": "2025-03-11",
     "firstVoteClosedTime": "2024-04-12",
-    "agreeCount": 3,
+    "agreeCount": 4,
     "disagreeCount": 0,
     "abstainCount": 0,
     "notParticipatingCount": 4
@@ -514,9 +514,9 @@
     "docs: add instruction how voting automation works$$1155": "Not participated",
     "lastParticipatedVoteTime": "2025-02-20",
     "isVotedInLast3Months": true,
-    "lastVoteClosedTime": "2025-02-21",
+    "lastVoteClosedTime": "2025-03-11",
     "firstVoteClosedTime": "2024-04-12",
-    "agreeCount": 3,
+    "agreeCount": 4,
     "disagreeCount": 0,
     "abstainCount": 1,
     "notParticipatingCount": 3
@@ -532,12 +532,12 @@
     "docs: add instruction how voting automation works$$1155": "In favor",
     "lastParticipatedVoteTime": "2024-11-30",
     "isVotedInLast3Months": true,
-    "lastVoteClosedTime": "2025-02-21",
+    "lastVoteClosedTime": "2025-03-11",
     "firstVoteClosedTime": "2024-04-12",
     "agreeCount": 4,
     "disagreeCount": 0,
     "abstainCount": 0,
-    "notParticipatingCount": 3
+    "notParticipatingCount": 4
   },
   {
     "name": "ivangsa",
@@ -550,12 +550,12 @@
     "docs: add instruction how voting automation works$$1155": "In favor",
     "lastParticipatedVoteTime": "2024-11-12",
     "isVotedInLast3Months": true,
-    "lastVoteClosedTime": "2025-02-21",
+    "lastVoteClosedTime": "2025-03-11",
     "firstVoteClosedTime": "2024-04-12",
     "agreeCount": 2,
     "disagreeCount": 1,
     "abstainCount": 0,
-    "notParticipatingCount": 4
+    "notParticipatingCount": 5
   },
   {
     "name": "Florence-Njeri",
@@ -568,12 +568,12 @@
     "docs: add instruction how voting automation works$$1155": "In favor",
     "lastParticipatedVoteTime": "2024-11-27",
     "isVotedInLast3Months": true,
-    "lastVoteClosedTime": "2025-02-21",
+    "lastVoteClosedTime": "2025-03-11",
     "firstVoteClosedTime": "2024-04-12",
     "agreeCount": 6,
     "disagreeCount": 0,
     "abstainCount": 0,
-    "notParticipatingCount": 1
+    "notParticipatingCount": 2
   },
   {
     "name": "whitlockjc",
@@ -586,9 +586,9 @@
     "docs: add instruction how voting automation works$$1155": "Not participated",
     "lastParticipatedVoteTime": "2025-02-14",
     "isVotedInLast3Months": true,
-    "lastVoteClosedTime": "2025-02-21",
+    "lastVoteClosedTime": "2025-03-11",
     "firstVoteClosedTime": "2024-04-12",
-    "agreeCount": 4,
+    "agreeCount": 5,
     "disagreeCount": 0,
     "abstainCount": 0,
     "notParticipatingCount": 3
@@ -604,9 +604,9 @@
     "docs: add instruction how voting automation works$$1155": "In favor",
     "lastParticipatedVoteTime": "2025-02-14",
     "isVotedInLast3Months": true,
-    "lastVoteClosedTime": "2025-02-21",
+    "lastVoteClosedTime": "2025-03-11",
     "firstVoteClosedTime": "2024-04-12",
-    "agreeCount": 5,
+    "agreeCount": 6,
     "disagreeCount": 0,
     "abstainCount": 1,
     "notParticipatingCount": 1
@@ -622,12 +622,12 @@
     "docs: add instruction how voting automation works$$1155": "In favor",
     "lastParticipatedVoteTime": "2024-07-23",
     "isVotedInLast3Months": true,
-    "lastVoteClosedTime": "2025-02-21",
+    "lastVoteClosedTime": "2025-03-11",
     "firstVoteClosedTime": "2024-04-12",
     "agreeCount": 4,
     "disagreeCount": 0,
     "abstainCount": 0,
-    "notParticipatingCount": 3
+    "notParticipatingCount": 4
   },
   {
     "name": "GreenRover",
@@ -640,9 +640,9 @@
     "docs: add instruction how voting automation works$$1155": "In favor",
     "lastParticipatedVoteTime": "2025-02-14",
     "isVotedInLast3Months": true,
-    "lastVoteClosedTime": "2025-02-21",
+    "lastVoteClosedTime": "2025-03-11",
     "firstVoteClosedTime": "2024-04-12",
-    "agreeCount": 2,
+    "agreeCount": 3,
     "disagreeCount": 1,
     "abstainCount": 0,
     "notParticipatingCount": 4
@@ -658,9 +658,9 @@
     "docs: add instruction how voting automation works$$1155": "In favor",
     "lastParticipatedVoteTime": "2025-02-14",
     "isVotedInLast3Months": true,
-    "lastVoteClosedTime": "2025-02-21",
+    "lastVoteClosedTime": "2025-03-11",
     "firstVoteClosedTime": "2024-04-12",
-    "agreeCount": 7,
+    "agreeCount": 8,
     "disagreeCount": 0,
     "abstainCount": 0,
     "notParticipatingCount": 0
@@ -676,9 +676,9 @@
     "docs: add instruction how voting automation works$$1155": "In favor",
     "lastParticipatedVoteTime": "2025-02-14",
     "isVotedInLast3Months": true,
-    "lastVoteClosedTime": "2025-02-21",
+    "lastVoteClosedTime": "2025-03-11",
     "firstVoteClosedTime": "2024-04-12",
-    "agreeCount": 4,
+    "agreeCount": 5,
     "disagreeCount": 0,
     "abstainCount": 0,
     "notParticipatingCount": 3
@@ -694,9 +694,9 @@
     "docs: add instruction how voting automation works$$1155": "In favor",
     "lastParticipatedVoteTime": "2025-02-17",
     "isVotedInLast3Months": true,
-    "lastVoteClosedTime": "2025-02-21",
+    "lastVoteClosedTime": "2025-03-11",
     "firstVoteClosedTime": "2024-04-12",
-    "agreeCount": 6,
+    "agreeCount": 7,
     "disagreeCount": 0,
     "abstainCount": 0,
     "notParticipatingCount": 1
