@@ -91,7 +91,7 @@ module.exports = async ({ github, context, botCommentURL }) => {
 			console.log("content of voteInfo:", JSON.stringify(voteInfo, null, 2));
 
 			if (userInfo) {
-				voteInfo.isVotedInLast3Months = true;
+				voteInfo.isVotedInLast3Months = isVotingWithinLastThreeMonths(voteInfo);
 				voteInfo.lastParticipatedVoteTime = currentTime;
 				voteInfo[
 					voteChoice === "In favor"
@@ -102,7 +102,7 @@ module.exports = async ({ github, context, botCommentURL }) => {
 				]++;
 			} else {
 				voteInfo.notParticipatingCount++;
-				if (isVotingWithinLastThreeMonths(voteInfo)) {
+				if (!isVotingWithinLastThreeMonths(voteInfo)) {
 					voteInfo.isVotedInLast3Months = false;
 				}
 			}
@@ -235,22 +235,17 @@ module.exports = async ({ github, context, botCommentURL }) => {
 		// Check if voting duration is within the last three months
 		function isVotingWithinLastThreeMonths(voteInfo) {
 			const currentDate = new Date();
-			let previousDate;
-			if (
-				voteInfo.isVotedInLast3Months ===
-				"Member has not voted in all previous voting process."
-			) {
-				previousDate = new Date(voteInfo.firstVoteClosedTime);
+			let lastVoteDate;
+			if (voteInfo.lastParticipatedVoteTime && !voteInfo.lastParticipatedVoteTime.includes("Member has not")) {
+				lastVoteDate = new Date(voteInfo.lastParticipatedVoteTime);
 			} else {
-				previousDate = new Date(voteDetails.lastVoteClosedTime);
+				return false; // No valid voting history
 			}
-			const yearDiff = currentDate.getFullYear() - previousDate.getFullYear();
-			const monthDiff = currentDate.getMonth() - previousDate.getMonth();
-			const totalMonthsDiff = yearDiff * 12 + monthDiff;
-
-			return totalMonthsDiff > 3;
+			
+			const diffInDays = (currentDate - lastVoteDate) / (1000 * 60 * 60 * 24);
+			return diffInDays <= 90; // 90 days = 3 months
 		}
-
+		
 		// Function to update the voteTrackingFile with updated TSC Members
 		async function updateVoteTrackingFile() {
 			const tscMembers = maintainerInformation.filter(
@@ -332,8 +327,8 @@ module.exports = async ({ github, context, botCommentURL }) => {
 
 			if (updatedTSCMembers.length > 0) {
 				try {
-					updatedVoteDetails.concat(...updatedTSCMembers);
-					await writeFile(
+					updatedVoteDetails = updatedVoteDetails.concat(...updatedTSCMembers);
+          await writeFile(
 						voteTrackingFile,
 						JSON.stringify(updatedVoteDetails, null, 2)
 					);
