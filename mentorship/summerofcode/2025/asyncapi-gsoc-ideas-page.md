@@ -50,7 +50,14 @@ This initiative will guide you from contributing to becoming a maintainer of the
 Develop a new AsyncAPI Generator template for Java with Quarkus, leveraging its growing adoption in cloud-native development.
 
 - 🎯 **Outcome:** A fully functional Java + Quarkus template for generating AsyncAPI-based applications.
-- 🛠️ **Skills Required:** Java, Quarkus, Templating Engines (Nunjucks/Handlebars), AsyncAPI Generator.
+- 🛠️ **Skills Required:** Java, Quarkus, React Components, AsyncAPI Generator.
+- 📝  **Planning:** 
+     1. The new template should be developed in the [Generator Project](https://github.com/asyncapi/generator).
+     2. Familiarity with the project: https://github.com/asyncapi/generator and its documentation: https://www.asyncapi.com/docs/tools/generator - you figure out how to do it
+     3. This is the proposed [structure](https://github.com/asyncapi/generator/blob/master/packages/README.md) and location of developement for the every template in the Generator Project.
+     4. Completion of this tutorial: https://www.asyncapi.com/docs/tools/generator/generator-template and providing a link of the template in your GSoC proposal. This tutorial will help you to understand how to create new template. 
+     5. In proposal, mention all the features that you can implement in java + Quarkus template. Reference to understand the exiting features in [Java + Spring](https://github.com/asyncapi/java-spring-template) template.
+         
 - 🧩 **Difficulty:** Medium/Hard
 - 👩🏿‍🏫 **Mentor(s):** [@AayushSaini101](https://github.com/AayushSaini101), [@Souvikns](https://github.com/Souvikns)
 - ⏳ **Length:** 350 Hours
