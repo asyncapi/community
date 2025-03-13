@@ -1,10 +1,10 @@
 ---
-title : Following Conventional Commits
+title: Following Conventional Commits
 description: This guide teaches you how to write clear and structured commit messages using the Conventional Commits standard.
-weight : 120
+weight: 120
 ---
 
-When you contribute to a project, you're not just adding code or docs — you're also adding context. Your changes become part of the project's history, and your commit messages explain why those changes were made.
+When you contribute to a project, you're not just adding code or docs but also context. Your changes become part of the project's history, and your commit messages explain why the changes were made.
 
 In this guide, you'll explore how to write effective commit messages that follow the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) standard. This standard helps you create clear, consistent, and semantically meaningful commit messages that are easy to understand and navigate.
 
@@ -18,7 +18,7 @@ In this guide, you'll explore how to write effective commit messages that follow
 
 A clear, well-crafted commit message is like a signpost that guides us through the project's evolution. It helps us understand the context of your change, why you made it, and how it fits into the bigger picture.
 
-Since this is a message that others will read, it's important to provide enough context to understand the change. Therefore, you should avoid vague messages like "fixed bug." Instead, try to be specific.
+Since this is a message that others will read, it is important to provide enough context to understand the change. Therefore, you should avoid vague messages like "fixed bug." Instead, try to be specific.
 
 For example:
 
