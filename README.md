@@ -4,85 +4,46 @@
 
 # 📘 AsyncAPI Community Guide
 
-Welcome to the AsyncAPI Community! 🚀 We believe in the power of open-source collaboration and appreciate your interest in contributing. Whether you're improving the documentation, fixing bugs, or adding new features, your contributions help make AsyncAPI better for everyone. 💙
+Welcome to the AsyncAPI Initiative! Our mission is to improve the current state of Event-Driven Architectures (EDAs) and the tooling ecosystem around them.
+Join us in shaping the future of how you work with Event-Driven Architectures.
 
----
-### Our Mission
-AsyncAPI is dedicated to creating open-source, vendor-neutral specifications and tools that help develop and govern APIs. Our community thrives on collaboration and a shared vision of making API development more accessible, efficient, and innovative. We embrace diversity, ensuring that every voice is heard and every contribution matters.
+## Table of Contents
 
----
+- [Community Goals](#community-goals-🎯)
+- [Contributing to Async API Initiative](#contributing-to-asyncapi-initiative-❤️)
+  - [Getting Started](#getting-started)
+  - [Code of Conduct](#code-of-conduct-🔖)
+- [Contributing to Async API Docs](#how-to-contribute-to-our-docs-🛠)
+- [Our Charter](#our-charter-📜)
+- [Community Governance](#community-governance-🏛️)
+- [Technical Steering Committee (TSC)](#async-api-technical-steering-committee-tsc-👥)
+    - [How to Be a part of TSC](#how-to-be-a-part-of-tsc-🤝)
+    - [Meet AsyncAPI's TSC](#meet-async-apis-current-tsc-members)
+- [Ambassador Program](#asyncapi-ambassador-program-🌟)
+- [Community Discussions](#community-discussions-💬)
 
-### Community Governance & Leadership
-Our community is steered by a transparent governance model designed to empower collaboration. 
-Learn about our transparent governance and decision-making process [here](./GOVERNANCE.md).
-
----
-
-### Our Charter
-Our [Charter](./CHARTER.md) sets the foundation for our technical contributions and community collaboration. It outlines:
-
-  - Mission and Scope: Our commitment to creating open, vendor-neutral API tools and specifications.
-  - Technical Steering Committee (TSC): Guidelines on the TSC's composition, decision-making, and participation expectations.
-  - Contributor and Committer Guidelines: How we manage contributions, intellectual property, and compliance with our policies.
-
----
-
-### 🔖 Code of Conduct
-Read our [Code of Conduct](./CODE_OF_CONDUCT.md) to understand our community values and expected behavior.
 
 ---
 
-### Technical Steering Committee (TSC)
-Meet our [TSC](https://www.asyncapi.com/community/tsc), the group of core maintainers responsible for high-level decisions and project direction.
+## Community Goals 🎯
+Join us in 2025 as we boost maintainers, streamline onboarding, and create a structured Community Working Group Umbrella. Let's grow together through exciting initiatives like the AsyncAPI Grant Program, conferences, and mentorship. <br>
+
+Be a part of our vibrant, evolving community!
+
+**[More details »](./annual-goals/2025_Community_Goals.md)**
 
 ---
 
-### Ambassador Program
-Learn how our **AsyncAPI Ambassador Program** brings AsyncAPI closer to users by empowering community members—whether you contribute code, write blog posts, or speak at events—to help spread knowledge and foster growth.
+## Contributing to AsyncAPI Initiative ❤️
+#### We love your input ! Contributing is easy and transparent.
 
-[More details »](./AMBASSADOR_ORGANIZATION.md)
-
-## 🛠 How to Contribute to Our docs
-
-We believe that **code is cool**, but **great docs make all the difference**!
-
- Find more about contributing to our Docs at **[AsyncAPI Docs](https://www.asyncapi.com/docs/community)**.
-
----
-
-### Become a Maintainer
-Not sure how to make your first contribution? Follow our to be a part of [TSC](./TSC_MEMBERSHIP.md).
-
----
-
-### Contribution Guidelines
-
-We want your input! Our [Contribution Guidelines](./CONTRIBUTING.md) provide a clear roadmap for submitting pull requests, engaging with reviews, and ensuring your contributions meet community standards.
-
----
-
-### Working Groups
-
-Working Groups are sub-communities formed around common interests. Each group (with at least 3 founding members) has a chairperson elected by its members, and their details are maintained in the [WORKING_GROUPS](./WORKING_GROUPS.md). They collaborate openly, using tools like GitHub Projects and our Slack channels.
-
----
-
-### Technical Writer Onboarding
-- Review the list of [technical writer contributor](https://www.asyncapi.com/docs/community/onboarding-guide/technical-writer-contributor-responsibilities) responsibilities to understand your role.
-
----
-
-### Slack Etiquette
-
-Our Slack workspace is vital for real-time conversations. Please refer to our [Slack Etiquette](https://github.com/asyncapi/community/blob/master/slack-etiquette.md) guidelines to ensure respectful, productive, and spam-free interactions.
-
----
-
-### 🛠 Contribution Flow
-
-Go through our **[Contribution Flow](./CONTRIBUTING.md#contribution-flow)** document to better understand.
-
-Follow these steps to make your contribution count!
+   - ### Getting Started
+      - **Spec Contribution:** [AsyncAPI Spec Guide](https://github.com/asyncapi/spec/blob/master/CONTRIBUTING.md)
+      - **Tools Contribution:** [AsyncAPI Tools Guide](https://github.com/asyncapi/.github/blob/master/CONTRIBUTING.md)
+   - ### Code of Conduct 🔖
+      - Read our [Code of Conduct](./CODE_OF_CONDUCT.md) to understand our community values and expected behavior.
+   
+#### Follow these steps to make your contribution count!
 
 ```markdown
 ┌───────────────────────────────┐
@@ -100,22 +61,102 @@ Follow these steps to make your contribution count!
 │   and released soon 🚢        │
 └───────────────────────────────┘
 ```
+---
+## Community Documentation 📚
 
-## 🌟 Explore Our Community Resources
+Welcome to the Community Documentation directory! Our goal is to collaboratively maintain a collection of helpful community-related documentation, from becoming an AsyncAPI contributor to becoming a TSC member, and beyond.
 
-Everything we do is built on **openness and collaboration**. Check out these awesome resources:
+  ### How to Contribute to Our Docs 🛠
 
-- 🏛️ **[GitHub](https://github.com/asyncapi)** - Dive into our open-source projects.
-- 💬 **[Slack Workspace](https://asyncapi.com/slack-invite)** - Chat, collaborate, and ask questions.
-- 🧭 **[Technical Steering Committee (TSC)](https://www.asyncapi.com/community/tsc)** - Meet the leaders guiding our journey. 
-- 🌍 **[Ambassadors Program](https://www.asyncapi.com/community/ambassadors)** - Become a voice for AsyncAPI.
-- 📊 **[Dashboard](https://www.asyncapi.com/community/dashboard)** - Find beginner-friendly issues & ongoing discussions.
-- 🎉 **[Events & Meetings](https://www.asyncapi.com/community/events)** - Join webinars, meetings, and more.
-- 📰 **[Newsroom](https://www.asyncapi.com/community/newsroom)** - Stay up to date with our latest news and updates.
+  We believe that **code is cool**, but **great docs make all the difference**! Find more about contributing to our Docs at **[AsyncAPI Docs](https://www.asyncapi.com/docs/community)**.
 
-## 🤝 Need Help?
+  ### Getting Started 🚀
 
-If you have any questions or need guidance, feel free to reach out through our **[Community Discussions](https://asyncapi.com/slack-invite)**.
+1. **Familiarize Yourself**: Review our [Contribution Guide](https://github.com/asyncapi/community/blob/master/CONTRIBUTING.md) and [Code of Conduct](https://github.com/asyncapi/.github/blob/master/CODE_OF_CONDUCT.md).
+2. **Check the Docs Board**: Visit our [AsyncAPI Docs Board](https://github.com/orgs/asyncapi/projects/12).
+3. **Pick an Issue**: Choose an issue to work on and leave a comment introducing yourself. Feel free to ask questions if you're unsure how to get started.
+4. **Open a PR**: If no work has been done on the chosen issue, open a PR and start contributing!
+
+### Technical Writer Onboarding ✍️
+
+- Review the list of [technical writer contributor responsibilities](https://www.asyncapi.com/docs/community/onboarding-guide/technical-writer-contributor-responsibilities) to understand your role.
+
+---
+## Our Charter 📜
+
+The **[Async API Charter](./CHARTER.md)** outlines the structure, responsibilities, and procedures for contributions and oversight of the AsyncAPI open project. <br>
+
+ #### Key sections include:
+
+  - **Mission and Scope**: Defines the project's mission to provide open-source, vendor-neutral API specifications and tools.
+  - **Technical Steering Committee (TSC)**: Describes the TSC's role in project oversight, member composition, and voting procedures.
+  - **Committers and Contributors**: Details the roles and responsibilities of contributors and committers.
+  - **TSC Voting**: Explains the voting process for decision-making.
+  - **Amendments**: Procedures for amending the charter.
+  - **Intellectual Property Policy**: Governs the handling of intellectual property.
+  - **Compliance with Policies**: Ensures adherence to LF Projects policies.
+  - **General Rules and Operations**: Sets professional and ethical standards.
+  - **Community Assets**: Manages trademarks and assets.
+
+---
+
+## Community Governance 🏛️
+Our community is steered by a transparent governance. Learn about our  **[Governance](./GOVERNANCE.md)** and decision-making process.
+
+   - ### Executive Director
+       Our Current Executive Director is **Lukasz Gornicki**. 📧 [Email](mailto:lpgornicki@gmail.com) | 💬 AsyncAPI Slack: Lukasz Gornicki (User ID: UD698Q5LM) | 🐙 [GitHub](https://github.com/derberg) | 🐦 [Twitter](https://twitter.com/derberq)
+
+   - ### Past Directors
+      **Fran Mendez** 📧 [Email](mailto:fmvilas@gmail.com) | 💬 AsyncAPI Slack: Fran Méndez (User ID: U34F2JRRS) | 🐙 [GitHub](https://github.com/fmvilas) | 🐘 [Mastodon](https://social.fmvilas.me/@fran)
+
+---
+
+## Async API Technical Steering Committee (TSC) 👥
+The TSC is a group of maintainers responsible for the maintenance and decision-making of the AsyncAPI Initiative. It was formed to ensure open governance and neutrality.
+
+- ### How to Be a part of TSC 🤝
+  - **Become a Maintainer**: Initiate, donate, or support projects in the AsyncAPI GitHub organization.
+  - **Join the TSC**: Maintainers automatically become TSC members without voting.
+
+    If you prefer video, watch our **[YouTube video on how to become a TSC member](https://www.youtube.com/watch?v=uG_aLF9Z1F0)**. <br>
+
+    #### Find out more about **[TSC Membership](./TSC_MEMBERSHIP.md)**. <br>
+
+- ### **Meet Async API's current **[TSC](https://www.asyncapi.com/community/tsc)** members**.
+
+---
+
+## AsyncAPI Ambassador Program 🌟
+
+Welcome to the AsyncAPI Ambassador Program! This program is designed to bring AsyncAPI closer to both current users and potential new users. 
+
+### What is the AsyncAPI Ambassador Program? ✨
+
+The AsyncAPI Ambassador Program provides tools and resources to:
+- Promote user cooperation and share necessary tools.
+- Engage with the project as a contributor, blogger, speaker, etc.
+- Speak at community events or write technical content.
+- Nurture community growth and spread knowledge about the project.
+
+### Explore more at [Async API Ambassador Program](./AMBASSADOR_ORGANIZATION.md)
+---
+
+## Community Discussions 💬
+
+AsyncAPI Community uses **Slack as the source of communication**. It helps us stay closer to each other and to know each other better through discussions.
+
+ For more details, refer to our **[Slack Etiquette](./slack-etiquette.md)** guidelines.
+
+
+
+  ### Need Help? 🤝
+
+  If you have any questions or need guidance, feel free to reach out through our **[Community Discussions](https://asyncapi.com/slack-invite)**.
+
+
+🚀 [GitHub](https://github.com/asyncapi) | 💬 [Slack Workspace](https://asyncapi.com/slack-invite) | 🧭 [Technical Steering Committee (TSC)](https://www.asyncapi.com/community/tsc) | 🌍 [Ambassadors Program](https://www.asyncapi.com/community/ambassadors) | 📊 [Dashboard](https://www.asyncapi.com/community/dashboard) | 🎉 [Events & Meetings](https://www.asyncapi.com/community/events) | 📰 [Newsroom](https://www.asyncapi.com/community/newsroom)
+
+---
 
 ## Contributors
 
