@@ -51,7 +51,7 @@ Develop a new AsyncAPI Generator template for Java with Quarkus, leveraging its 
 
 - 🎯 **Outcome:** A fully functional Java + Quarkus template for generating AsyncAPI-based applications.
 - 🛠️ **Skills Required:** Java, Quarkus, React Components, AsyncAPI Generator.
-- 📝  **Planning:** 
+- 📝 **Overview:** 
      1. The new template should be developed in the [Generator Project](https://github.com/asyncapi/generator).
      2. Familiarity with the project: https://github.com/asyncapi/generator and its documentation: https://www.asyncapi.com/docs/tools/generator - you figure out how to do it
      3. This is the proposed [structure](https://github.com/asyncapi/generator/blob/master/packages/README.md) and location of developement for the every template in the Generator Project.
