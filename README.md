@@ -14,12 +14,12 @@ AsyncAPI is dedicated to creating open-source, vendor-neutral specifications and
 
 ### Community Governance & Leadership
 Our community is steered by a transparent governance model designed to empower collaboration. 
-Learn about our transparent governance and decision-making process [here](https://github.com/asyncapi/community/blob/master/GOVERNANCE.md).
+Learn about our transparent governance and decision-making process [here](./GOVERNANCE.md).
 
 ---
 
 ### Our Charter
-Our [Charter](https://github.com/asyncapi/community/blob/master/CHARTER.md) sets the foundation for our technical contributions and community collaboration. It outlines:
+Our [Charter](./CHARTER.md) sets the foundation for our technical contributions and community collaboration. It outlines:
 
   - Mission and Scope: Our commitment to creating open, vendor-neutral API tools and specifications.
   - Technical Steering Committee (TSC): Guidelines on the TSC's composition, decision-making, and participation expectations.
@@ -28,7 +28,7 @@ Our [Charter](https://github.com/asyncapi/community/blob/master/CHARTER.md) sets
 ---
 
 ### 🔖 Code of Conduct
-Read our [Code of Conduct](https://github.com/asyncapi/.github/blob/master/CODE_OF_CONDUCT.md) to understand our community values and expected behavior.
+Read our [Code of Conduct](./CODE_OF_CONDUCT.md) to understand our community values and expected behavior.
 
 ---
 
@@ -40,7 +40,7 @@ Meet our [TSC](https://www.asyncapi.com/community/tsc), the group of core mainta
 ### Ambassador Program
 Learn how our **AsyncAPI Ambassador Program** brings AsyncAPI closer to users by empowering community members—whether you contribute code, write blog posts, or speak at events—to help spread knowledge and foster growth.
 
-[More details »](https://github.com/asyncapi/community/blob/master/AMBASSADOR_ORGANIZATION.md)
+[More details »](./AMBASSADOR_ORGANIZATION.md)
 
 ## 🛠 How to Contribute to Our docs
 
@@ -51,19 +51,19 @@ We believe that **code is cool**, but **great docs make all the difference**!
 ---
 
 ### Become a Maintainer
-Not sure how to make your first contribution? Follow our to be a part of [TSC](https://github.com/asyncapi/community/blob/master/TSC_MEMBERSHIP.md).
+Not sure how to make your first contribution? Follow our to be a part of [TSC](./TSC_MEMBERSHIP.md).
 
 ---
 
 ### Contribution Guidelines
 
-We want your input! Our [Contribution Guidelines](https://github.com/asyncapi/community/blob/master/CONTRIBUTING.md) provide a clear roadmap for submitting pull requests, engaging with reviews, and ensuring your contributions meet community standards.
+We want your input! Our [Contribution Guidelines](./CONTRIBUTING.md) provide a clear roadmap for submitting pull requests, engaging with reviews, and ensuring your contributions meet community standards.
 
 ---
 
 ### Working Groups
 
-Working Groups are sub-communities formed around common interests. Each group (with at least 3 founding members) has a chairperson elected by its members, and their details are maintained in the [WORKING_GROUPS](https://github.com/asyncapi/community/blob/master/WORKING_GROUPS.md). They collaborate openly, using tools like GitHub Projects and our Slack channels.
+Working Groups are sub-communities formed around common interests. Each group (with at least 3 founding members) has a chairperson elected by its members, and their details are maintained in the [WORKING_GROUPS](./WORKING_GROUPS.md). They collaborate openly, using tools like GitHub Projects and our Slack channels.
 
 ---
 
@@ -80,7 +80,7 @@ Our Slack workspace is vital for real-time conversations. Please refer to our [S
 
 ### 🛠 Contribution Flow
 
-Go through our **[Contribution Flow](https://github.com/asyncapi/website/blob/master/CONTRIBUTING.md#contribution-flow)** document to better understand.
+Go through our **[Contribution Flow](./CONTRIBUTING.md#contribution-flow)** document to better understand.
 
 Follow these steps to make your contribution count!
 
