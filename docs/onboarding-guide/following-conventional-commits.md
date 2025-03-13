@@ -1,5 +1,5 @@
 ---
-title : Following Conventional Commits
+title: Following Conventional Commits
 description: This guide teaches you how to write clear and structured commit messages using the Conventional Commits standard.
 weight : 120
 ---
