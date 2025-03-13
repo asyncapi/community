@@ -18,7 +18,7 @@ In this guide, you'll explore how to write effective commit messages that follow
 
 A clear, well-crafted commit message is like a signpost that guides us through the project's evolution. It helps us understand the context of your change, why you made it, and how it fits into the bigger picture.
 
-Since this is a message that others will read, it's important to provide enough context to understand the change. Therefore, you should avoid vague messages like "fixed bug." Instead, try to be specific.
+Since this is a message that others will read, it is important to provide enough context to understand the change. Therefore, you should avoid vague messages like "fixed bug." Instead, try to be specific.
 
 For example:
 
