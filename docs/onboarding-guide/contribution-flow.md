@@ -1,9 +1,13 @@
-# Contributor - Simple Contribution Flow
-This article explains how to contribute effectively to AsyncAPI. It guides you through the contribution process and provides a checklist to ensure high-quality contributions. 
+---
+title: Simple contribution flow for contributors
+weight: 130
+---
 
+# Contributor - Simple Contribution Flow
+This guide explains how to contribute effectively to AsyncAPI. It guides you through the contribution process and provides a checklist to ensure high-quality contributions. 
 
 ## Making a Contribution
-We welcome your contributions to AsyncAPI! Whether you have suggestions, improvements, or new ideas, we encourage you to participate.
+We welcome your contributions to AsyncAPI, whether you have suggestions, improvements, or new ideas. 
 
 At AsyncAPI, we value **quality over quantity**. This guide will help you make meaningful contributions that benefit the community.
 
@@ -17,7 +21,7 @@ At AsyncAPI, we value **quality over quantity**. This guide will help you make m
 - Read the [onboarding contributor guide](https://www.asyncapi.com/docs/community/onboarding-guide).
 - If you are contributing to documentation, review the [documentation onboarding checklist](https://www.asyncapi.com/docs/community/onboarding-guide/docs-onboarding-checklist). 
 - For other repositories, refer to the [general contribution guidelines](https://github.com/asyncapi/community/blob/master/CONTRIBUTING.md).
-- Look through existing issues and pull requests to gain a better understanding of the repository.
+- Look through existing issues and pull requests to understand the repository better.
 - You can also check the [general roadmap](https://www.asyncapi.com/roadmap).
 
 ### Steps to making a good contribution
@@ -25,13 +29,13 @@ At AsyncAPI, we value **quality over quantity**. This guide will help you make m
 - Search for [good first issues](https://github.com/issues?page=1&q=is%3Aopen+org%3Aasyncapi+sort%3Aupdated-desc+label%3A%22good+first+issue%22). 
 - When you do find one, request to be assigned.
 - However, if you notice a bug, typo, or improvement, feel free to create an issue.
-- Make a PR only when you have been assigned by a maintainer.
-- Even if you created the issue yourself, wait to be assigned by a maintainer before you make a PR.
-- Follow the [conventional commits guide](https://github.com/asyncapi/community/pull/1733) to write a good PR title.
+- Make a PR only when a maintainer has assigned you.
+- Even if you created the issue yourself, wait for it to be assigned by a maintainer before you make a PR.
+- Follow the [conventional commits guide](community/pull/1733) to write a good PR title.
 - Remember to follow the [git workflow document](https://github.com/asyncapi/community/blob/master/git-workflow.md) when making a PR.
 - After making a PR, patiently wait for reviews.
 - Make sure all your PR checks pass (turn green) to speed up the merging process.  
-- If your PR hasn’t been reviewed after a certain period, you can gently remind a maintainer on Slack or GitHub. Delays can happen for various reasons, but no one is ignoring you! 🙏🏼 .
+- If your PR hasn’t been reviewed after a week and half, you can gently remind a maintainer on Slack or GitHub. Delays can happen for various reasons, but no one is ignoring you! 🙏🏼 .
 
 
 ## Contribution Checklist
