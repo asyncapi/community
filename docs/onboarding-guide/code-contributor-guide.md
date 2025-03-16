@@ -1,3 +1,7 @@
+---
+title: Code Contributor Guide
+weight: 90
+---
 # AsyncAPI Onboarding Code Contributor Guide  
 
 Welcome to the AsyncAPI community! We're excited to have you here. Think of AsyncAPI as a collaborative puzzle - your contributions are essential to completing it. This guide will help you get started smoothly.  
