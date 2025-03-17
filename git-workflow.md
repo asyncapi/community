@@ -4,7 +4,7 @@ This document is the best practice guide that contains the rules to follow when 
 
 ## Overview
 
-AsyncAPI uses a fork model to allow contributions to the organization's repositories. In this model, you push changes to your own working copy (a fork, a so-called `origin`) of the original repository (a so-called `upstream`), and then create one or more pull requests (PRs) to incorporate changes from the `origin` to `upstream`. This unified workflow allows both members and external contributors to contribute through the same process, keeping the main repository branches clean.
+AsyncAPI uses a fork model for all community members, including maintainers. In this model, you push changes to your own working copy of the original (`upstream`) repository, and then create one or more pull requests (PRs) to incorporate changes from your fork to `upstream`. This unified workflow allows both members and external contributors to contribute through the same process, keeping the main repository branches clean.
 
 ### Rules
 
@@ -42,7 +42,7 @@ Each contributor and maintainer in AsyncAPI must follow this workflow:
 
 ## Configure your fork
 
-Configure a remote repository that points to the `upstream` repository. This allows you to synchronize changes you make on the fork with the original repository. Configuration can be done manually or using the GitHub UI.
+Configure a remote repository that points to the `upstream` repository (from which you forked). This allows you to synchronize changes you make on the fork with the original repository. Configuration can be done manually or using the GitHub UI.
 
 > [!TIP]
 > If you perform fork configuration for the first time, it is recommended to do it manually to understand all the steps.
@@ -64,7 +64,7 @@ In the terminal, navigate to your fork's location and perform the following step
     origin  https://github.com/YOUR-USERNAME/FORK-NAME.git (push)
     ```
 
-2. Add the `upstream` repository:
+2. Add the `upstream` repository. In other words, point to the main project located in AsyncAPI GitHub organization:
 
     ```bash
     # Command
@@ -90,9 +90,6 @@ In the terminal, navigate to your fork's location and perform the following step
 
     ```bash
     # Command
-    git fetch upstream BRANCH-NAME
-    
-    # Example
     git fetch upstream master
     ```
 
@@ -111,7 +108,7 @@ By setting the `upstream` branch, you can simplify your workflow. For example, y
 
 ### Using GitHub UI
 
-For minor changes via GitHub UI, use a [Pull bot](https://probot.github.io/apps/pull) to keep your fork up to date.
+You can follow the steps from the [GitHub documentation](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork) to sync your fork and keep it up-to-date with the `upstream` repository.
 
 ## Start Contributing
 
@@ -129,5 +126,5 @@ For minor changes via GitHub UI, use a [Pull bot](https://probot.github.io/apps/
     git push
     ```
 
-4. Create a pull request from your branch of the `origin` repository to the `master` branch of the `upstream` repository and await review.
+4. Create a pull request from your branch of the fork repository to the `master` branch of the `upstream` repository and await review.
 
