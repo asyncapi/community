@@ -39,5 +39,5 @@ At AsyncAPI, we strive to make our documentation/content inclusive, accessible, 
 ## UI 
 - Use the correct terminologies for UI elements.
 - Format tables correctly and keep the text within the grid.
--  Use basic HTML for button elements.
--  Add icons to describe a function. Use the aria-label attribute when unsure of the icon name.
+- Use basic HTML for button elements.
+- Add icons to describe a function. Use the aria-label attribute when unsure of the icon name.
