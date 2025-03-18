@@ -11,6 +11,7 @@ At AsyncAPI, we strive to make our documentation/content inclusive, accessible, 
 ## Language
 - Be clear and concise when writing. Avoid the use of complex language, technical jargon, and verbose explanations.
 - Keep paragraphs and sentences short, simple, and to the point.
+- Keep your sentences as crisp as possible, avoid having nested sentences. 
 - Always maintain a uniform structure. Use descriptive headings and subheadings to make navigation easy.
 - Use inclusive language and always keep the reader in mind when writing. 
 
