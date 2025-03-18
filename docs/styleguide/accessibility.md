@@ -6,7 +6,7 @@ weight: 20
 
 # Accessibility
 
-At AsyncAPI, we strive to make our documentation/content inclusive, accessible, and unbiased to everyone. We encourage all contributors to have diversity and inclusivity in mind when writing. To ensure this, we have provided an overview of general guidelines to follow.
+At AsyncAPI, we strive to make our documentation/content inclusive, accessible, and unbiased to everyone. We encourage all contributors to have diversity and inclusivity in mind when writing. To ensure this, we have provided an overview of general guidelines to follow that will help you write inclusive and accessible documents.
 
 ## Language
 - Be clear and concise when writing. Avoid the use of complex language, technical jargon, and verbose explanations.
