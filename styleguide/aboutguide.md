@@ -20,7 +20,7 @@ This will help you in strategizing and simplifying your writing process.
 Before creating your first draft, it is beneficial to research similar resources and use them as references. Avoid plagiarism or copying and pasting from other websites unless the content already exists on our site.
 
 ### Plagiarism
-Plagiarism can be defined as an act of using someone else's work as your own, without giving any acknowledgment or credit. Below are some scenarios that show plagiarism:
+Plagiarism can be defined as an act of using someone else's work as your own, without giving any acknowledgment or credit. Below are some scenarios that can be considered as plagiarism:
 
 **Scenario 1**
 
