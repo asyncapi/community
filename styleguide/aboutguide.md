@@ -7,7 +7,7 @@ weight: 10
 ## Introduction
 Welcome to the AsyncAPI Style Guide. This page guides contributors on how to write, structure, and format content in documentation.
 
-These guidelines help us maintain language, tone, and voice throughout the website. It also makes it easier for multiple contributors to work together on a single doc while ensuring consistency, accuracy, and clarity. 
+These guidelines help us maintain language, tone, and voice throughout the website, also making it easier for multiple contributors to collaborate and work together on a single document, while ensuring consistency, accuracy, and clarity. 
 
 ## Writing Style
 Below are some recommendations to consider when writing your pages.
