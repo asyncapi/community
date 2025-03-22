@@ -1,4 +1,4 @@
-module.exports = { filterIssues, getTSCLeftToVote, sendSlackNotification };
+module.exports = { filterIssues, getTSCLeftToVote, sendSlackNotification, sendMailNotification };
 
 const axios = require('axios');
 
@@ -125,6 +125,49 @@ async function sendSlackNotification(member, issue, daysSinceStart, slackToken) 
   } catch (error) {
     console.error(`Error sending Slack DM to ${member.name}: ${error.message}`);
 
+    return false;
+  }
+}
+
+/**
+ * 
+ * @param {Object} member  TSC member object
+ * @param {Object} issue  Issue object
+ * @param {String} slackToken  Slack token
+ * @param {Function} sendMail  Mail function
+ * 
+ * @returns {Boolean} true if mail notification sent successfully, false otherwise
+ */
+async function sendMailNotification(member, issue, slackToken, sendMail) {
+  const title = `TSC Voting for #${issue.number}`;
+  const link = issue.html_url
+  const SLACK_URL = `https://slack.com/api/users.info?user=${member.slack}`
+
+  try {
+    // Fetch email from slack
+    const response = await axios.get(SLACK_URL, {
+      headers: {
+        'Authorization': `Bearer ${slackToken}`,
+        'Content-Type': 'application/json',
+      },
+    });
+
+    if (!response.data.ok) {
+      console.error(`Error fetching email from Slack for ${member.name}: ${response.data.error}`);
+      return false;
+    }
+
+    const { real_name_normalized, email } = response.data.user.profile;
+    const { success, message } = await sendMail(email, 'voting', real_name_normalized, link, title);
+
+    if (!success) {
+      console.error(`Error sending mail to ${member.name}: ${message}`);
+      return false;
+    }
+
+    return true;
+  } catch (error) {
+    console.error(`Error sending mail to ${member.name}: ${error.message}`);
     return false;
   }
 }
