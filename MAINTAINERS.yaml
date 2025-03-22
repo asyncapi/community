@@ -776,3 +776,10 @@
   repos:
     - net-sdk
   githubID: 72747835
+- name: Vishvamsinh Vaghela
+  github: vishvamsinh28
+  twitter: Vishvamsinh28
+  isTscMember: false
+  repos:
+    - website
+  githubID: 90895835
