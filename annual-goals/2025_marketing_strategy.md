@@ -83,7 +83,7 @@ To encourage hands-on learning and adoption of AsyncAPI, we will organize hackat
 ## Communications
 
 
-### Marketing Monthly Blog and Community Newsletter
+### Blog and Community Newsletter Communication
 
 Give appropriate support to the community manager:
 - By adding neccessary information from the Marketing Working Group.
