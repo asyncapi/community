@@ -207,59 +207,9 @@ jobs:
                   github.rest.issues.createComment({ owner, repo, issue_number, body: message });
               }
 
-
-  update_emeritus:
-    needs: detect_maintainer_changes
-    if: needs.detect_maintainer_changes.outputs.removedTscMembers != ''
-    runs-on: ubuntu-latest
-    steps:
-      - name: Check out code
-        uses: actions/checkout@v3
-
-      - name: Add TSC members to Emeritus.yaml and print
-        uses: actions/github-script@v6
-        with:
-          script: |
-            const fs = require('fs');
-            const path = './Emeritus.yaml';
-
-            // Read the current content of the file
-            let content = fs.readFileSync(path, 'utf8').trim(); // remove any trailing whitespaces
-
-            // Split the removed maintainers and prepare them for the yaml format
-            const removedTscMembers = "${{ needs.detect_maintainer_changes.outputs.removedTscMembers }}".split(',')
-              .map(maintainer => `  - ${maintainer.trim()}`)
-              .join('\n');
-
-            // Append the removed maintainers to the file content
-            if (removedTscMembers) {
-              content = content + '\n' + removedTscMembers;
-            }
-
-            // Write the updated content back to the file
-            fs.writeFileSync(path, content);
-
-            // Log the updated content to the console
-            core.info('Updated Emeritus.yaml:\n', content);
-      
-      - name: Create new branch
-        run: |
-          git checkout -b update-emeritus-${{ github.run_id }}
-
-      - name: Commit and push
-        run: |
-          git add .
-          git commit -m "chore: update Emeritus.yaml"
-          git remote set-url origin https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/asyncapi/community.git
-          git push origin update-emeritus-${{ github.run_id }}
-
-      - name: Create PR
-        run: |
-          gh pr create --title "docs(community): update latest emeritus list" --body "Updated Emeritus list is available and this PR introduces changes with latest information about Emeritus" --head update-emeritus-${{ github.run_id }}
-
   notify_slack_on_failure:
-    if: always() && (needs.detect_maintainer_changes.result == 'failure' || needs.add_maintainer.result == 'failure' || needs.display_message.result == 'failure' || needs.remove_maintainer.result == 'failure' || needs.update_emeritus.result == 'failure' || needs.remove_maintainer_goodbye.result == 'failure')
-    needs: [detect_maintainer_changes, add_maintainer, display_message, remove_maintainer, remove_maintainer_goodbye, update_emeritus]
+    if: always() && (needs.detect_maintainer_changes.result == 'failure' || needs.add_maintainer.result == 'failure' || needs.display_message.result == 'failure' || needs.remove_maintainer.result == 'failure' || needs.remove_maintainer_goodbye.result == 'failure')
+    needs: [detect_maintainer_changes, add_maintainer, display_message, remove_maintainer, remove_maintainer_goodbye]
     runs-on: ubuntu-latest
     steps:
     - name: Report workflow run status to Slack
