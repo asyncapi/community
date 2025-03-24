@@ -89,8 +89,7 @@ Give appropriate support to the community manager:
 - By adding neccessary information from the Marketing Working Group.
 - Promote the newsletter in the community for more visibility.
 - Encourage community subscription and participation
-- Publish marketing blog every quater detailing the activity and update of the working group and have a more robust end of the year report.
-
+Publish marketing blog every quater detailing the activity and update of the marketing working group.
 
 ### Social Media
 
