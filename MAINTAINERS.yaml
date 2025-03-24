@@ -779,7 +779,8 @@
 - name: Vishvamsinh Vaghela
   github: vishvamsinh28
   twitter: Vishvamsinh28
-  isTscMember: false
+  availableForHire: true
+  isTscMember: true
   repos:
     - website
   githubID: 90895835
