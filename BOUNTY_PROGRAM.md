@@ -18,7 +18,7 @@ The reward for completion of the Bounty Issue of Complexity Level `Medium` is tw
 
 The reward for completion of the Bounty Issue of Complexity Level `Advanced` is four hundred US dollars and 00 cents (USD 400.00).
 
-Approximate maximum quantity of Bounty Issues per calendar quarter round varies from thirteen to twenty five (from ((12 * 400) + (1 * 200)) to (25 * 200)).
+The approximate maximum quantity of Bounty Issues per calendar quarter round varies from thirteen to twenty-five (from ((12 * 400) + (1 * 200)) to (25 * 200)).
 
 
 ## Prioritization Of Participants
