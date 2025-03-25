@@ -52,7 +52,7 @@ Due to asynchronous nature of the AsyncAPI Initiative itself and thus its Bounty
 
 ## Bounty Issue's Submission
 
-GitHub issues for participation in the upcoming calendar quarter round of the Bounty Program that are candidates to become Bounty Issues, are submitted during the first and second full (seven-day) calendar weeks of the last month of the current calendar quarter, after the call for such submission, in the comments of the dedicated [AsyncAPI Organization's Discussion](https://github.com/orgs/asyncapi/discussions), by an AsyncAPI Maintainer who will be responsible for the resolution of the given Bounty Issue from the AsyncAPI's side, containing the following five fields:
+GitHub issues for participation in the upcoming calendar quarter round of the Bounty Program that are candidates to become Bounty Issues are submitted during the first and second full (seven-day) calendar weeks of the last month of the current calendar quarter after the call for such submission, in the comments of the dedicated [AsyncAPI Organization's Discussion](https://github.com/orgs/asyncapi/discussions), by an AsyncAPI Maintainer who will be responsible for the resolution of the given Bounty Issue from the AsyncAPI's side, containing the following five fields:
 
 1. Number: `cli#361`
 
@@ -66,13 +66,13 @@ GitHub issues for participation in the upcoming calendar quarter round of the Bo
 
 Submitted GitHub issues undergo public pre-moderation by the AsyncAPI Community to ensure adherence to the values of the AsyncAPI Initiative. In case a GitHub issue does not pass pre-moderation, it is not accepted for participation in the upcoming calendar quarter round of the Bounty Program.
 
-In case documentation must be provided together with solution requested in the Bounty Issue, such requirement should be explicitly stated in the Scope.
+In case documentation must be provided together with the solution requested in the Bounty Issue, such requirement should be explicitly stated in the Scope.
 
 In case two Bounty Issues are inextricably linked and cannot be completed separately from each other, such connection must be explicitly stated in the Scope.
 
-In case the total reward for all submitted Bounty Issues exceeds the budget allocated for the upcoming calendar quarter round of the Bounty Program, full list of submitted Bounty Issues undergoes randomization using the randomization service provided by [random.org](https://random.org). Inextricably linked Bounty Issues in this case get joined into one generic issue (e.g., `cli#361-cli#38`) for the sake of randomization. After randomization the resulted randomized list is crawled from the beginning until total reward for the Bounty Issues reaches the amount of the budget allocated for the upcoming calendar quarter round of the Bounty Program.
+In case the total reward for all submitted Bounty Issues exceeds the budget allocated for the upcoming calendar quarter round of the Bounty Program, a full list of submitted Bounty Issues undergoes randomization using the randomization service provided by [random.org](https://random.org). Inextricably linked Bounty Issues, in this case, get joined into one generic issue (e.g., `cli#361-cli#38`) for the sake of randomization. After randomization, the resulting randomized list is crawled from the beginning until the total reward for the Bounty Issues reaches the amount of the budget allocated for the upcoming calendar quarter round of the Bounty Program.
 
-In case reward for the last Bounty Issue in the resulted randomized list generates excess of the budget, this and all following issues until the end of the resulted randomized list are excluded from participation in the upcoming calendar quarter round of the Bounty Program. Such Bounty Issues are allowed to be submitted during submission of Bounty Issues for the next calendar quarter round of the Bounty Program.
+In case the reward for the last Bounty Issue in the resulted randomized list generates an excess of the budget, this and all following issues until the end of the resulted randomized list are excluded from participation in the upcoming calendar quarter round of the Bounty Program. Such Bounty Issues are allowed to be submitted during the submission of Bounty Issues for the next calendar quarter round of the Bounty Program.
 
 All GitHub issues selected as Bounty Issues get labels on GitHub:
 
@@ -92,19 +92,19 @@ This project view is also visible to non-logged-in/non-GitHub users.
 
 Start date in Bounty Program is counted from Monday of the next week when assignment of the Bounty Issue on GitHub happened.
 
-In case assignment of the Bounty Issue on GitHub happened during third or fourth full (seven-day) calendar week of the last month of the calendar quarter, start date in Bounty Program is counted from the first Monday of the new calendar quarter round.
+In case the Bounty Issue on GitHub was assigned during the third or fourth full (seven-day) calendar week of the last month of the calendar quarter, the start date in the Bounty Program is counted from the first Monday of the new calendar quarter round.
 
 For Bounty Issues of Complexity Level `Medium`:
 
 - Draft Pull Request, [linked to the Bounty Issue using a keyword](https://docs.github.com/en/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue) if applicable, must be submitted no later than Sunday of the second week from the start date and updated every week no later than Sunday, until submission of Final Pull Request and the start of its merging process
 
-- Final Pull Request must be submitted, and its merging process started no later than Sunday of the fourth week from the start date, with the merging process' successful ending no later than Sunday of the sixth week from the start date
+- Final Pull Request must be submitted, and its merging process must start no later than Sunday of the fourth week from the start date, with the merging process' successful ending no later than Sunday of the sixth week from the start date
 
 For Bounty Issues of Complexity Level `Advanced`:
 
 - Draft Pull Request, [linked to the Bounty Issue using a keyword](https://docs.github.com/en/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue) if applicable, must be submitted no later than Sunday of the third week from the start date and updated every week no later than Sunday, until submission of Final Pull Request and the start of its merging process
 
-- Final Pull Request must be submitted, and its merging process started no later than Sunday of the sixth week from the start date, with the merging process' successful ending no later than Sunday of the eighth week from the start date
+- Final Pull Request must be submitted, and its merging process must start no later than Sunday of the sixth week from the start date, with the merging process' successful ending no later than Sunday of the eighth week from the start date
 
 Updates to the Draft Pull Request are determined by:
 
@@ -118,11 +118,11 @@ If no Pull Request is involved, updates on the Bounty Issue are determined by:
 
 In case the Bounty Program Participant has not provided a weekly update to the Draft Pull Request and/or on the Bounty Issue (on Monday, the last activity of any of the abovementioned types was four or more calendar days before, e.g., on `2024-05-20`, the last activity of any type was on `2024-05-16` or earlier,) they are pinged as a reminder to do so.
 
-In case the Bounty Program Participant has not provided an update to the Draft Pull Request and/or on the Bounty Issue after two pings over two consecutive Mondays, on the third consecutive Monday it is assumed that the task cannot be completed within the rest of the time, and the Bounty Program Participant has silently dropped the Bounty Issue. Suspension rules are applied to such Bounty Program Participants, and the End Of Life rules to such Bounty Issues.
+In case the Bounty Program Participant has not provided an update to the Draft Pull Request and/or on the Bounty Issue after two pings over two consecutive Mondays, on the third consecutive Monday, it is assumed that the task cannot be completed within the rest of the time. The Bounty Program Participant has silently dropped the Bounty Issue. Suspension rules are applied to such Bounty Program Participants, and the End Of Life rules are applied to such Bounty Issues.
 
 In case the Bounty Program Participant has not provided the critical fixes required to make the Final Pull Request merging possible during the last week of the Timeline, they are pinged on Thursday, four days before the last day of the Timeline, to do so.
 
-In case the Bounty Program Participant has not provided critical fixes during the next four days, on Monday, after the last day of the Bounty Issues' Timeline, it is considered that the Bounty Program Participant did not complete the Bounty Issue within the assigned Timeline due to their own misperformance. Suspension rules are applied to such Bounty Program Participants, and the End Of Life rules to such Bounty Issues.
+In case the Bounty Program Participant has not provided critical fixes during the next four days, on Monday, after the last day of the Bounty Issues' Timeline, it is considered that the Bounty Program Participant did not complete the Bounty Issue within the assigned Timeline due to their own misperformance. Suspension rules are applied to such Bounty Program Participants and the End Of Life rules to such Bounty Issues.
 
 
 ### Bounty Issue's Timeline Example
@@ -144,9 +144,9 @@ Communication on the necessity of the Bounty Issue Timeline extension should hap
 
 ## Bounty Issue's Reclassification
 
-Upon request of the AsyncAPI Maintainer who is responsible for the resolution of the given Bounty Issue from the AsyncAPI's side in the Bounty Issue's comments in the process of resolution, the Complexity Level of the Bounty Issue can be reclassified in any direction (both lowered to `Medium` and heightened to `Advanced`,) with corresponding changes to the Bounty Issue's Timeline in case of a need.
+Upon request of the AsyncAPI Maintainer, who is responsible for the resolution of the given Bounty Issue from the AsyncAPI's side in the Bounty Issue's comments in the process of resolution, the Complexity Level of the Bounty Issue can be reclassified in any direction (both lowered to `Medium` and heightened to `Advanced`), with corresponding changes to the Bounty Issue's Timeline in case of a need.
 
-Reclassified Bounty Issue gets one of historical text labels `bounty/downgraded` or `bounty/upgraded` accordingly.
+Reclassified Bounty Issue gets one of the historical text labels `bounty/downgraded` or `bounty/upgraded` accordingly.
 
 
 ## Bounty Issue's Completion
@@ -164,17 +164,17 @@ GitHub issue participates in the Bounty Program and is considered a Bounty Issue
 
 In case a Bounty Issue gets an assignee before the End Of Life and continues to have an assignee after the End Of Life, it continues to be a Bounty Issue until completion.
 
-In case a Bounty Issue does not get an assignee before the End Of Life, after reaching End Of Life it gets the historical text label `bounty/unpicked` and is considered the one that reached End Of Life.
+In case a Bounty Issue does not get an assignee before the End Of Life, after reaching End Of Life, it gets the historical text label `bounty/unpicked` and is considered the one that reached End Of Life.
 
-In case a Bounty Issue gets an assignee before the End Of Life and is dropped after the End Of Life, it gets the historical text label `bounty/dropped` and is considered the one that reached End Of Life.
+In case a Bounty Issue gets an assignee before the End Of Life and is dropped after the End Of Life, it gets the historical text label `bounty/dropped` and is considered the one that reached the End Of Life.
 
-In case a Bounty Issue gets an assignee before the End Of Life and does not get completed within the assigned Timeline after the End Of Life due to Bounty Program Participant's misperformance, it gets the historical text label `bounty/misperformed` and is considered the one that reached End Of Life.
+In case a Bounty Issue gets an assignee before the End Of Life and does not get completed within the assigned Timeline after the End Of Life due to the Bounty Program Participant's misperformance, it gets the historical text label `bounty/misperformed` and is considered the one that reached End Of Life.
 
 In case a Bounty Issue gets an assignee before the End Of Life and during its technical resolution it becomes clear that this Bounty Issue cannot be completed due to unpredicted [force majeure](https://iccwbo.org/wp-content/uploads/sites/3/2020/03/icc-forcemajeure-hardship-clauses-march2020.pdf) and/or circumstances that could not be foreseen and/or that are beyond the control of both the Bounty Program Participant and the AsyncAPI Maintainer, it gets the historical text label `bounty/canceled` and is considered the one that reached End Of Life.
 
-Bounty Issue that reached End Of Life gets the historical text label `bounty/eol`, reward for this Bounty Issue gets excluded from the budget allocated for the corresponding calendar quarter round of the Bounty Program, and this Bounty Issue becomes a regular GitHub issue, which can be submitted again as a Bounty Issue Candidate.
+Bounty Issue that reached End Of Life gets the historical text label `bounty/eol`, the reward for this Bounty Issue gets excluded from the budget allocated for the corresponding calendar quarter round of the Bounty Program, and this Bounty Issue becomes a regular GitHub issue, which can be submitted again as a Bounty Issue Candidate.
 
-Dropped Bounty Issue can not be assigned again to the same Bounty Program Participant who dropped it in the next calendar quarter rounds of the Bounty Program.
+A dropped Bounty Issue can not be assigned again to the same Bounty Program Participant who dropped it in the next calendar quarter rounds of the Bounty Program.
 
 
 ## Additional Conditions
@@ -200,24 +200,24 @@ Claiming the reward for the completed Bounty Issue is done via the submission of
 
 Requirements for the invoice:
 
-- Make sure that your `Full Name` on GitHub, as well as `Legal Name` and `Full name of the account holder` on the invoice, **are the same** and are YOUR REAL LEGAL NAME according to the passport/ID (on Open Collective, nicknames are allowed only in `Settings / Public profile / Display name`, and it is **this** name that will be displayed publicly throughout all https://opencollective.com, if you have privacy concerns)
+- Make sure that your `Full Name` on GitHub, as well as `Legal Name` and `Full name of the account holder` on the invoice, **are the same** and are YOUR REAL LEGAL NAME according to the passport/ID (on Open Collective, nicknames are allowed only in `Settings / Public profile / Display name`, and it is **this** name that will be displayed publicly throughout all https://opencollective.com if you have privacy concerns)
 
 - **Expense title**: '`Bounty [repo]#[issue]`' (e.g., '`Bounty cli#38`' or '`Bounty cli#38, cli#361`' in case of two rewards being joined into one sum)
 
 - **Tag**: '`bounty`'
 
-- **Set invoice details / Description**: mention full URL of the GitHub issue which served as the Bounty Issue
+- **Set invoice details / Description**: mention the full URL of the GitHub issue which served as the Bounty Issue
 
 AsyncAPI does not perform financial transactions itself and relies on Open Collective's Fiscal Host 'Open Source Collective' to service payments and, thus, [comply with global sanctions](https://docs.oscollective.org/how-it-works/basics/expense-policies-and-limitations#permitted-countries-ofac-checks-and-payments-to-certain-countries). However, it has been empirically proven that even if the Bounty Program Participant is a citizen of a sanctioned jurisdiction, they can still receive the financial payment made to a payee in a non-sanctioned jurisdiction. Taking this into account, **potential Bounty Program Participants must [check themselves](https://wise.com/help/articles/2978049/which-countries-can-i-use-wise-in) to see whether they will be able to receive payment prior to starting participation in the Bounty Program**. AsyncAPI will not take any action if Open Source Collective refuses to relay the payment due to US or global sanctions imposed on a jurisdiction or an individual.
 
 Also, note that if a Bounty Program Participant submits invoice expenses for more than six hundred US dollars and 00 cents (USD 600.00) per calendar year to a Collective at Open Collective with a Fiscal Host in the US (AsyncAPI fits this description,) they will be asked to fill out an IRS tax information form, which will be either a `W-8BEN` or a `W-8BEN-E` depending on whether the Bounty Program Participant has the legal status of an individual or of a sole proprietor, **supplying a local Tax ID**, **regardless** of their US citizenship status.
 
-At the time of writing (2023-10-01) Open Collective supports `ACH`, `International SWIFT through Wise` (limitations of financial technology company 'Wise' are applied) and `PayPal` as automated payout methods. In rare cases (once per calendar year) Bounty Program Participant in personal communication with Open Collective can request them to perform a payout using a custom payment method to a non-sanctioned jurisdiction.
+At the time of writing (2023-10-01), Open Collective supports `ACH`, `International SWIFT through Wise` (limitations of financial technology company 'Wise' are applied), and `PayPal` as automated payout methods. In rare cases (once per calendar year), Bounty Program Participant in personal communication with Open Collective can request them to perform a payout using a custom payment method to a non-sanctioned jurisdiction.
 
 
 ## Suspension
 
-Each new Bounty Program Participant starts participation in the Bounty Program with the quantity of Suspensions equal to zero.
+Each new Bounty Program Participant starts participation in the Bounty Program with a quantity of Suspensions equal to zero.
 
 In case a Bounty Program Participant stops rendering services directed toward resolution of the (**one**) Bounty Issue without any communication on the subject ('silently dropped') and/or fails to complete the (**one**) Bounty Issue within the assigned Timeline due to their own misperformance, for the **first time**, they receive a **First Suspension** and will be prohibited from participating in the Bounty Program **starting from the current moment and during two calendar months from the beginning of the next full (three-month) calendar quarter**. After this period, the First Suspension expires.
 
