@@ -3,7 +3,7 @@
 
 ## Overview
 
-The AsyncAPI Bounty Program is a specification of the software development process, customized to meet the needs of the AsyncAPI Initiative.
+The AsyncAPI Bounty Program is a specification of the software development process customized to meet the needs of the AsyncAPI Initiative.
 
 The AsyncAPI Bounty Program operates exclusively on donated funds, does not seek financial profit, uses publicly and freely available tools only, and has as its main purpose rewarding individual open source maintainers and contributors of **Middle** and **Senior** professional levels while creating an artificial set of time constraints to make the schedule for achieving assigned targets predictable.
 
