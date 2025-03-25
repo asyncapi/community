@@ -90,7 +90,7 @@ This project view is also visible to non-logged-in/non-GitHub users.
 
 ## Bounty Issue's Timeline
 
-Start date in Bounty Program is counted from Monday of the next week when assignment of the Bounty Issue on GitHub happened.
+The start date in the Bounty Program is counted from Monday of the next week when assignment of the Bounty Issue on GitHub happened.
 
 In case the Bounty Issue on GitHub was assigned during the third or fourth full (seven-day) calendar week of the last month of the calendar quarter, the start date in the Bounty Program is counted from the first Monday of the new calendar quarter round.
 
@@ -153,7 +153,7 @@ Reclassified Bounty Issue gets one of the historical text labels `bounty/downgra
 
 To avoid half-merges, unmet dependencies on the completion of other (inextricably linked) issues, waiting for merges of other separate PRs that provide critically important functionality for the given task, etc., and to avoid situations where AsyncAPI has already acquired an obligation to pay but factually the conditions of the Bounty Issue completion are not met yet, a system of double control with separation of concerns is exercised on the Bounty Issues:
 
-- After Bounty Issue's closure on GitHub, the AsyncAPI Maintainer, who was responsible for the resolution of the given Bounty Issue from the AsyncAPI's side, confirms the Bounty Issue's technical resolution by posting a separate confirming comment in this Bounty Issue's comments (followed by another confirming comment from the AsyncAPI Maintainer of this specific repository, if these were two different persons.)
+- After the Bounty Issue's closure on GitHub, the AsyncAPI Maintainer, who was responsible for the resolution of the given Bounty Issue from the AsyncAPI's side, confirms the Bounty Issue's technical resolution by posting a separate confirming comment in this Bounty Issue's comments (followed by another confirming comment from the AsyncAPI Maintainer of this specific repository, if these were two different persons.)
 
 - The Bounty Program Participant proceeds with the process of claiming the reward only after the second comment from the Bounty Program Coordinator, confirming the Bounty Issue completion and readiness to perform the payout.
 
