@@ -118,7 +118,7 @@ If no Pull Request is involved, updates on the Bounty Issue are determined by:
 
 In case the Bounty Program Participant has not provided a weekly update to the Draft Pull Request and/or on the Bounty Issue (on Monday, the last activity of any of the abovementioned types was four or more calendar days before, e.g., on `2024-05-20`, the last activity of any type was on `2024-05-16` or earlier,) they are pinged as a reminder to do so.
 
-In case the Bounty Program Participant has not provided an update to the Draft Pull Request and/or on the Bounty Issue after two pings over two consecutive Mondays, on the third consecutive Monday, it is assumed that the task cannot be completed within the rest of the time. The Bounty Program Participant has silently dropped the Bounty Issue. Suspension rules are applied to such Bounty Program Participants, and the End Of Life rules are applied to such Bounty Issues.
+In case the Bounty Program Participant has not provided an update to the Draft Pull Request and/or on the Bounty Issue after two pings over two consecutive Mondays, on the third consecutive Monday it is assumed that the task cannot be completed within the rest of the time, and that the Bounty Program Participant has silently dropped the Bounty Issue. Suspension rules are applied to such Bounty Program Participants, and the End Of Life rules are applied to such Bounty Issues.
 
 In case the Bounty Program Participant has not provided the critical fixes required to make the Final Pull Request merging possible during the last week of the Timeline, they are pinged on Thursday, four days before the last day of the Timeline, to do so.
 
