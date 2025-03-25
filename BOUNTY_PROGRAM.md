@@ -38,7 +38,7 @@ Assignment of the Bounty Issue on GitHub to users that fall under the second and
 
 ## Bounty Issues' Numbering
 
-To ensure ease of referencing, searching and automation, strictly defined format of Bounty Issues' numbering is used:
+To ensure ease of referencing, searching, and automation, a strictly defined format of Bounty Issues' numbering is used:
 
 1. In submissions of GitHub issues for the Bounty Program: `[repo]#[issue]` (`cli#38`)
 
