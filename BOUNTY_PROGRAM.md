@@ -47,7 +47,7 @@ To ensure ease of referencing, searching, and automation, a strictly defined for
 
 ## Clarification Of Time Periods
 
-Due to asynchronous nature of the AsyncAPI Initiative itself and thus its Bounty Program, UTC offset in Bounty Program Issues' starting and ending dates is used. Starting dates should be considered having start at `00:00:00 UTC+12:00`, ending dates should be considered having end at `23:59:59 UTC-12:00` (inclusive.)
+Due to the asynchronous nature of the AsyncAPI Initiative itself and thus its Bounty Program, UTC offset in Bounty Program Issues' starting and ending dates is used. Starting dates should be considered to have started at `00:00:00 UTC+12:00`, and ending dates should be considered to have ended at `23:59:59 UTC-12:00` (inclusive.)
 
 
 ## Bounty Issue's Submission
@@ -170,7 +170,7 @@ In case a Bounty Issue gets an assignee before the End Of Life and is dropped af
 
 In case a Bounty Issue gets an assignee before the End Of Life and does not get completed within the assigned Timeline after the End Of Life due to the Bounty Program Participant's misperformance, it gets the historical text label `bounty/misperformed` and is considered the one that reached End Of Life.
 
-In case a Bounty Issue gets an assignee before the End Of Life and during its technical resolution it becomes clear that this Bounty Issue cannot be completed due to unpredicted [force majeure](https://iccwbo.org/wp-content/uploads/sites/3/2020/03/icc-forcemajeure-hardship-clauses-march2020.pdf) and/or circumstances that could not be foreseen and/or that are beyond the control of both the Bounty Program Participant and the AsyncAPI Maintainer, it gets the historical text label `bounty/canceled` and is considered the one that reached End Of Life.
+In case a Bounty Issue gets an assignee before the End Of Life and, during its technical resolution, it becomes clear that this Bounty Issue cannot be completed due to unpredicted [force majeure](https://iccwbo.org/wp-content/uploads/sites/3/2020/03/icc-forcemajeure-hardship-clauses-march2020.pdf) and/or circumstances that could not be foreseen and/or that are beyond the control of both the Bounty Program Participant and the AsyncAPI Maintainer, it gets the historical text label `bounty/canceled` and is considered the one that reached End Of Life.
 
 Bounty Issue that reached End Of Life gets the historical text label `bounty/eol`, the reward for this Bounty Issue gets excluded from the budget allocated for the corresponding calendar quarter round of the Bounty Program, and this Bounty Issue becomes a regular GitHub issue, which can be submitted again as a Bounty Issue Candidate.
 
