@@ -472,6 +472,15 @@
         "ideas",
         "maintenance"
       ]
+    },
+    {
+      "login": "CBID2",
+      "name": "Christine Belzie",
+      "avatar_url": "https://avatars.githubusercontent.com/u/105683440?v=4",
+      "profile": "https://christinebelzie.carrd.co/",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "commitConvention": "angular",
