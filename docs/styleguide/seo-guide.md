@@ -4,6 +4,7 @@ description: This guide gives advice on how to implement SEO when creating tutor
 ---
 
 ## What is SEO?
+
 Search Engine Optimization (SEO) encompasses various techniques and strategies to improve a website's visibility in search engine results. Effective SEO can increase organic traffic by ensuring relevant content reaches the intended audience.
 
 ## Why is SEO important in technical documentation?
