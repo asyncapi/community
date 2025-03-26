@@ -1,6 +1,11 @@
 # AsyncAPI Bounty Program
 
 
+## Preface
+
+The main motivation behind the AsyncAPI Bounty Program at its time was to create a sustainable model for [redistributing sponsor-contributed funds](https://github.com/orgs/asyncapi/discussions/541) directly to maintainers, ensuring they are financially rewarded for their work. The Program's approach helps provide at least a little compensation for the rendered selfless service and meaningful contributions.
+
+
 ## Overview
 
 The AsyncAPI Bounty Program is a specification of the software development process customized to meet the needs of the AsyncAPI Initiative.
@@ -25,7 +30,7 @@ The approximate maximum quantity of Bounty Issues per calendar quarter round var
 
 Bounty Program Participants are prioritized in the following order:
 
-1. AsyncAPI Maintainers (from any repository) checked at https://github.com/asyncapi/community/blob/master/MAINTAINERS.yaml
+1. AsyncAPI Maintainers (from the Bounty Issue's repository), checked at https://github.com/asyncapi/community/blob/master/MAINTAINERS.yaml
 
 2. Regular contributors (GitHub users who have three or more Pull Requests merged throughout the AsyncAPI GitHub Organization, checked with https://github.com/search?q=org%3Aasyncapi+is%3Apr+is%3Amerged+author%3Agh_username).
 
@@ -52,7 +57,7 @@ Due to the asynchronous nature of the AsyncAPI Initiative itself and thus its Bo
 
 ## Bounty Issue's Submission
 
-GitHub issues for participation in the upcoming calendar quarter round of the Bounty Program that are candidates to become Bounty Issues are submitted during the first and second full (seven-day) calendar weeks of the last month of the current calendar quarter after the call for such submission, in the comments of the dedicated [AsyncAPI Organization's Discussion](https://github.com/orgs/asyncapi/discussions), by an AsyncAPI Maintainer who will be responsible for the resolution of the given Bounty Issue from the AsyncAPI's side, containing the following five fields:
+GitHub issues for participation in the upcoming calendar quarter round of the Bounty Program that are candidates to become Bounty Issues, and are agreed upon for participation in the Bounty Program by all active Maintainers of the given repository, are submitted during the first and second full (seven-day) calendar weeks of the last month of the current calendar quarter after the call for such submission, in the comments of the dedicated [AsyncAPI Organization's Discussion](https://github.com/orgs/asyncapi/discussions), by an AsyncAPI Maintainer who will be responsible for the resolution of the given Bounty Issue from the AsyncAPI's side, containing the following five fields:
 
 1. Number: `cli#361`
 
