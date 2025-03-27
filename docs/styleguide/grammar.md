@@ -9,8 +9,8 @@ weight: 100
 
 When using abbreviations and acronyms, write the full word with the acronym or abbreviation in parenthesis. After that, use the abbreviation and acronym for them. Here's an example:
 
- An application can be a micro-service, IoT (Internet of things) device (for example, a sensor), mainframe process, and more.
- That aspect is particularly beneficial in setups like IoT, where topics are often assigned per device or device segment.
+ "An application can be a micro-service, IoT (Internet of things) device (for example, a sensor), mainframe process, and more.
+ That aspect is particularly beneficial in setups like IoT, where topics are often assigned per device or device segment."
  
  By using acronyms and abbreviations effectively, users would easily understand the context and meaning of the abbreviation or acronym and how it relates to the tutorial or guide.
 
@@ -45,6 +45,8 @@ When writing documentation and other forms of content for AsyncAPI, use the pres
 ✅ **DO:** "The dynamic segment of each channel address, which corresponds to the device identifier, is then articulated through the use of parameters."
 ❌ **DON'T:** "The dynamic segment of each channel address, which corresponds to the device identifier, was then articulated through the use of parameters."
 
+By using present tense, the content stays engaging and easier to understand.
+
 ## Personal Pronouns
 
  Use personal pronouns sparingly when writing tutorials and other forms of content for AsyncAPI to make them more human and approachable to users.  Here's an example:
@@ -54,7 +56,7 @@ When writing documentation and other forms of content for AsyncAPI, use the pres
 
  ## Additional Resources 
 
- If you're looking for more information on grammar and style, consider checking out the following guides:
+ Looking for more information on grammar and style? Consider checking out the following guides:
 
  - [Google Style Guide](https://developers.google.com/style)
  - [Microsoft Style Guide](https://developers.google.com/style)
