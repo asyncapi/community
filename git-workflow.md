@@ -64,7 +64,7 @@ In the terminal, navigate to your fork's location and perform the following step
     origin  https://github.com/YOUR-USERNAME/FORK-NAME.git (push)
     ```
 
-2. Add the `upstream` repository. In other words, point to the main project located in AsyncAPI GitHub organization:
+2. Add the `upstream` repository. In other words, point to the main project located in the AsyncAPI GitHub organization:
 
     ```bash
     # Command
