@@ -47,7 +47,7 @@ The Git Vote bot adds a comment that voting is completed.
 
 ### Tracking Voting 
 
-We store [the voting history of entire TSC](TSC_VOTING_OVERVIEW.md) since voting automation was introduces.
+We store [the voting history of entire TSC](../../TSC_VOTING_OVERVIEW.md) since voting automation was introduces.
 
 * 🔕 indicates that the member did not vote.
 * 👍 indicates that the member was in favor.
@@ -58,6 +58,6 @@ Tracking file is automatically updated by a bot after each vote is completed. It
 
 ### Note
 
-* As per the [Charter](./CHARTER.md), a quorum is not needed. However, Git Vote has technical limitations, and a quorum should be reached. That's why we allocate 4 weeks for voting, and it's important to actively encourage participation to ensure that the quorum (where votes cast exceed 50% of eligible voters) is met.
+* As per the [Charter](../../CHARTER.md), a quorum is not needed. However, Git Vote has technical limitations, and a quorum should be reached. That's why we allocate 4 weeks for voting, and it's important to actively encourage participation to ensure that the quorum (where votes cast exceed 50% of eligible voters) is met.
 * The abstain votes are included in the total number of votes; they are not removed.
 * At present, Git Vote is enabled in the community repo only, and the Git Vote bot handles all voting processes. We will add Git Vote to other projects in the future.

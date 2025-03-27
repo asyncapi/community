@@ -57,4 +57,4 @@ There are several ways to reach out to the TSC members:
 * Do a GitHub team mention `@asyncapi/tsc_members` in any issue, discussion or pull request. This will also send a message in the `95_bot-tsc-members-mentioned` channel in the Slack.
 
 > [!IMPORTANT]
-> Please note that the TSC members are volunteers and may not be able to respond immediately. Please be patient and respectful. Also it will be helpful if there is as less spam as possible. For more information, please refer to the [Slack Etiquette](./slack-etiquette.md) document.
+> Please note that the TSC members are volunteers and may not be able to respond immediately. Please be patient and respectful. Also it will be helpful if there is as less spam as possible. For more information, please refer to the [Slack Etiquette](../060-meetings-and-communication/slack-etiquette.md) document.

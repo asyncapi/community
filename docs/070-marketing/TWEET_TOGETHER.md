@@ -21,7 +21,7 @@ To create a new tweet, create a new `*.tweet` file in the `tweets/` folder. Once
 
 > Automation at a Pull Request level will validate if your tweet is valid and can be published to Twitter. 
 
-<kbd>[Create new tweet](../../new/master/?filename=tweets/<your-tweet-name>.tweet)</kbd>
+<kbd>[Create new tweet](../../../../new/master)</kbd>
 
 > If it is your first time interacting with the **community** repo, you will be asked to fork it. If you plan to contribute more than once, then setup your fork with [these instructions](https://github.com/asyncapi/.github/blob/master/git-workflow.md).
 
@@ -37,7 +37,7 @@ You can also use subfolders (e.g. `tweets/2019-02/hello-world.tweet`) as long as
 ## Create a recurring tweet
 
 1. Create `*.tweet` file with your tweet content in the `.github/scripts/recurring_tweets` directory.
-2. Create new GitHub Action workflow based on [this example](.github/workflows/twitter-ideas.yml). That example provides comments for sections that need to be modified in your version of the workflow. The name of the workflow should start with a `twitter-recurring-` prefix.
+2. Create new GitHub Action workflow based on [this example](../../.github/workflows/twitter-ideas.yml). That example provides comments for sections that need to be modified in your version of the workflow. The name of the workflow should start with a `twitter-recurring-` prefix.
 
 
 ## When is my tweet published to twitter?
@@ -55,4 +55,4 @@ Once your PR with your new tweet submission is merged, a dedicated workflow trig
 
 ## Questions? Ideas?
 
-If you have any more questions or suggestions, please create an issue [here](../issues/new). 🙂
+If you have any more questions or suggestions, please create an issue [here](../../../issues/new). 🙂
