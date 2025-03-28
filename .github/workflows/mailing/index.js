@@ -4,8 +4,8 @@ const { htmlMailContent, htmlToText } = require('./content');
 mailer.setApiKey(process.env.SENDGRID_API_KEY);
 const from = 'info@asyncapi.io';
 
-const sendMail = async (to, type, name, link, title, custom = {}) => {
-  const { subject, html } = htmlMailContent(type, name, link, title, custom);
+const sendMail = async (to, type, name, links, title, custom = {}) => {
+  const { subject, html } = htmlMailContent(type, name, links, title, custom);
   const text = htmlToText(html);
 
   const msg = {

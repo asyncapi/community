@@ -1,32 +1,44 @@
 const typeToContent = {
   voting: {
     subject: "TSC Voting Required",
-    content: (name, link, title, custom = {}) => `
+    content: (name, links, title, custom = {}) => `
       <p>👋 Hi ${name},</p>
       <p>We need your vote on the following topic: <strong>${title}</strong>.</p>
-      <p><strong>Issue Details</strong>: <a href="${link}" style="color:#007c89;font-weight:normal;text-decoration:underline" target="_blank">${link}</a></p>
+      <p><strong>Issue Details</strong>: </p>
+      <ul>
+      ${
+        links.map(link => `<li><strong>${link.title}</strong>: <a href="${link.url}" style="color:#007c89;font-weight:normal;text-decoration:underline" target="_blank">${link.url}</a></li>`).join('')
+      }
+      </ul>
       <p><strong>Days since started</strong>: ${custom.days}</p>
       <p>Your input is crucial to our decision-making process. Please take a moment to review the voting topic and share your thoughts.</p>
       <p>Thank you for your contribution! 🙏</p>
+      <p style="font-size: 10px; color: #999999; margin-top: 20px;">Note: Please react on the vote comment to indicate your vote.</p>
     `,
   },
   warning: {
     subject: "TSC Voting Warning",
-    content: (name, link, title, custom = {}) => `
+    content: (name, links, title, custom = {}) => `
       <p>Hey ${name},</p>
       <p>We've noticed you haven't participated in TSC voting for the past 3 months.</p>
       <p>As per our governance guidelines, active participation is essential for maintaining your TSC membership.</p>
-      <p>Please review our <a href="${link}" style="color:#007c89;font-weight:normal;text-decoration:underline" target="_blank">${title}</a> and resume your participation.</p>
+      <p>Please review our <a href="${links[0].url}" style="color:#007c89;font-weight:normal;text-decoration:underline" target="_blank">${links[0].url}</a> and resume your participation.</p>
       <p>If you're facing any challenges or need assistance, please reach out to the team.</p>
     `,
   },
   removal: {
     subject: "TSC Membership Removal",
-    content: (name, link, title, custom = {}) => `
+    content: (name, links, title, custom = {}) => `
       <p>Hey ${name},</p>
       <p>Following our previous communication and in accordance with AsyncAPI's governance policies, we regret to inform you that your TSC membership status has been changed due to extended inactivity.</p>
-      <p>Details regarding this decision can be found here: <a href="${link}" style="color:#007c89;font-weight:normal;text-decoration:underline" target="_blank">${title}</a>.</p>
-      <p>We value your contributions and would welcome your active participation again in the future.</p>
+      <p>Details regarding this decision can be found here: <p>
+      <ul>
+      ${
+        links.map(link => `<li><strong>${link.title}</strong>: <a href="${link.url}" style="color:#007c89;font-weight:normal;text-decoration:underline" target="_blank">${link.url}</a></li>`).join('')
+      }
+      </ul>
+      <p>We appreciate your past contributions and hope to see you re-engage with the community in the future.</p>
+      <p>If you have any questions or concerns, please feel free to reach out.</p> 
     `,
   },
 };
@@ -35,7 +47,7 @@ const htmlToText = (html) => {
   return html.replace(/<[^>]*>?/gm, '');
 };
 
-const htmlMailContent = (type, name, link, title, custom = {}) => {
+const htmlMailContent = (type, name, links, title, custom = {}) => {
   const { subject, content } = typeToContent[type];
 
   return {
@@ -99,7 +111,7 @@ const htmlMailContent = (type, name, link, title, custom = {}) => {
             </div>
             
             <div class="content">
-                ${content(name, link, title, custom)}
+                ${content(name, links, title, custom)}
                 
                 <p style="margin-top: 30px;">
                     Regards,<br>
