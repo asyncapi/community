@@ -138,8 +138,8 @@ async function sendSlackNotification(member, issue, daysSinceStart, slackToken) 
  * 
  * @returns {Boolean} true if mail notification sent successfully, false otherwise
  */
-async function sendMailNotification(member, issue, slackToken, sendMail) {
-  const title = `TSC Voting for #${issue.number}`;
+async function sendMailNotification(member, issue, daysSinceStart, slackToken, sendMail) {
+  const title = issue.title;
   const link = issue.html_url
   const SLACK_URL = `https://slack.com/api/users.info?user=${member.slack}`
 
@@ -158,7 +158,7 @@ async function sendMailNotification(member, issue, slackToken, sendMail) {
     }
 
     const { real_name_normalized, email } = response.data.user.profile;
-    const { success, message } = await sendMail(email, 'voting', real_name_normalized, link, title);
+    const { success, message } = await sendMail(email, 'voting', real_name_normalized, link, title, { days: daysSinceStart });
 
     if (!success) {
       console.error(`Error sending mail to ${member.name}: ${message}`);

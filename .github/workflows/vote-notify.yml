@@ -105,7 +105,7 @@ jobs:
                   failingSlackIds.add(member.slack);
                 }
 
-                if (!await sendMailNotification(member, issue, `${{ secrets.SLACK_DM_TSC }}`, sendMail)) {
+                if (!await sendMailNotification(member, issue, daysSinceStart, `${{ secrets.SLACK_DM_TSC }}`, sendMail)) {
                   failingEmails.add(member.email);
                 }
               }
