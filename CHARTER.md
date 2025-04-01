@@ -69,7 +69,7 @@ This Charter sets forth the responsibilities and procedures for technical contri
 9. The Board chairperson coordinates work of the board and ensures it operates efficiently.
 10. The Board is responsible for presenting votes to the TSC. The Board must prepare and manage high-sensitivity issues before the vote, especially in cases involving sponsorships, external partnerships, or policy considerations. 
 11. The Board must assure efficient voting processes, participation and vote conclusions.
-12. Board members are expected to hold private monthly meetings under `Chatham House Rule` guidelines, with meeting summaries made available publicly. Additional details, such as the timing and method of publication, but not limited to, will be outlined in the GOVERNANCE document.
+12. Board members are expected to hold public monthly meetings, with meeting summaries and recording made available publicly. Additional details, such as the timing and method of publication, but not limited to, will be outlined in the GOVERNANCE document.
 13. Details on Board roles, duties, and operational processes must be documented in a separate GOVERNANCE document for clarity and flexibility. They should cover:
     - Management of finances to ensure sustainability;
     - Engagement with external companies and sponsorships;
