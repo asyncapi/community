@@ -152,9 +152,9 @@
     "bio": "Hugo Guerrero is a developer advocate for APIs and Event-driven Architecture. He assists organizations in this role by creating, editing, and curating product content shared with the community through webinars, conferences, and other activities. He works on open source software with major private and federal public sector clients looking to connect and extend their system architecture. He has over 20 years of experience as a developer, consultant, architect, and software development manager.",
     "github": "hguerrero",
     "twitter": "hguerreroo",
-    "title": "Chief Software Architect @Red Hat",
-    "linkedin": "hugo-guerrero",
-    "company": "Red Hat",
+    "title": "Head of Technical Marketing",
+    "linkedin": "hugoguerrero",
+    "company": "Kong",
     "contributions": [
       {
         "type": "presentation",
@@ -586,7 +586,7 @@
     "github": "lbroudoux",
     "twitter": "lbroudoux",
     "country": "🇫🇷",
-    "bio": "Laurent is a Cloud-Native Architecture expert and Enterprise Integration problem lover. He is the founder and lead developer of the Microcks.io open source project: a cloud-native tool for API mocking and testing. For this, he is using his 10+ years experience as an architect in Financial Services where he defined API transformation strategies, including governance and delivery process.",
+    "bio": "Laurent is a Cloud-Native Architecture expert and Enterprise Integration problem lover. He is the founder and lead developer of the Microcks.io open-source project: a cloud-native tool for API mocking and testing. For this, he is using his 10+ years experience as an architect in Financial Services where he defined API transformation strategies, including governance and delivery process.",
     "linkedin": "laurentbroudoux",
     "company": "Postman",
     "title": "Solutions Architect / DevRel",
@@ -598,7 +598,8 @@
         "date": {
           "year": 2024,
           "month": "December"
-        }
+        },
+	"link": ""
       },
       {
         "type": "talk",
@@ -606,7 +607,8 @@
         "date": {
           "year": 2024,
           "month": "September"
-        }
+        },
+	"link": ""
       },
       {
         "type": "presentation",
