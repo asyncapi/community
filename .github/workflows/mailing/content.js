@@ -13,7 +13,7 @@ const typeToContent = {
       <p><strong>Days since started</strong>: ${custom.days}</p>
       <p>Your input is crucial to our decision-making process. Please take a moment to review the voting topic and share your thoughts.</p>
       <p>Thank you for your contribution! 🙏</p>
-      <p style="font-size: 10px; color: #999999; margin-top: 20px;">Note: Please react on the vote comment to indicate your vote.</p>
+      <p style="font-size: 10px; color: #999999; margin-top: 20px;">Note: Please react to the vote comment to indicate your vote.</p>
     `,
   },
   warning: {

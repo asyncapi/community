@@ -146,7 +146,7 @@ async function sendSlackNotification(member, issue, daysSinceStart, slackToken, 
 async function sendMailNotification(member, issue, daysSinceStart, slackToken, sendMail, voteCommentURL) {
   const title = issue.title;
   const links = [
-    { title: 'Issue Details', url: issue.html_url },
+    { title: 'Issue Link', url: issue.html_url },
     { title: 'Vote Comment URL', url: voteCommentURL },
   ]
   const SLACK_URL = `https://slack.com/api/users.info?user=${member.slack}`
