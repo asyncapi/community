@@ -1,84 +1,130 @@
+# Git Workflow
+
 This document is the best practice guide that contains the rules to follow when working with AsyncAPI repositories.
 
-### Basic rules
+## Overview
+
+AsyncAPI uses a fork model for all community members, including maintainers. In this model, you push changes to your own working copy of the original (`upstream`) repository, and then create one or more pull requests (PRs) to incorporate changes from your fork to `upstream`. This unified workflow allows both members and external contributors to contribute through the same process, keeping the main repository branches clean.
+
+### Rules
 
 Each contributor and maintainer in AsyncAPI must follow this workflow:
 
-* Work on forked repositories.
-* Create branches on the fork and avoid working directly on the `master` branch.
+- Work on forked repositories.
+- Create branches on the fork.
+- Avoid working directly on the `master` branch of the fork.
+- Create pull requests from the fork to the upstream repository.
 
-## Prepare the fork
+## Fork a repository
 
-A fork is a copy of the repository from which you raise pull requests to propose changes to the original repository.
-The unified AsyncAPI contribution workflow that bases on forks allows both the members of the AsyncAPI organization and the external contributors to contribute code and content through the same process. This keeps the main repositories branches clean as contributors create branches only on the forked repositories.
+1. On GitHub, navigate to the AsyncAPI repository you want to fork.
+2. In the top-right corner of the page, click **Fork**.
+3. Under **Owner**, select the dropdown menu and click an owner for the forked repository.
+4. Ensure that the **Copy the `DEFAULT` branch only** is selected.
+5. Click **Create fork**.
+
+## Clone the forked repository
+
+1. On GitHub, navigate to the forked repository.
+2. Click the **Code** button.
+3. Copy the URL.
+4. In the terminal, navigate to the directory where you want to clone the repository.
+5. Run the following command:
+    
+    ```bash
+    # Command syntax
+    git clone URL
+    
+    # Examples
+    git clone https://github.com/YOUR-USERNAME/asyncapi-community.git
+    git clone git@github.com:YOUR-USERNAME/asyncapi-community.git
+    ```
 
 ## Configure your fork
 
-The document refers to the original repository as the upstream repository and to the forked repository as the origin repository. We assume you already have a fork of the upstream and you `git clone` it already.
+Configure a remote repository that points to the `upstream` repository (from which you forked). This allows you to synchronize changes you make on the fork with the original repository. Configuration can be done manually or using the GitHub UI.
 
-### Working on a Fork on local
+> [!TIP]
+> If you perform fork configuration for the first time, it is recommended to do it manually to understand all the steps.
+>
+> Next time you can write a script to synchronize master branch of your fork with the master branch of upstream git repository. Check [this script](https://gist.github.com/derberg/87319e9c486e4a6c9bef5b629ab0d386) as an example to get started.
 
-> If you perform such configuration for the first time, it is recommended to do it manually to understand all the steps. Next time you do it you can write a script for it or use something like [this](https://gist.github.com/derberg/87319e9c486e4a6c9bef5b629ab0d386)
+### Manual configuration
 
-Configure a `remote` repository that points to the upstream repository. This allows you to synchronize changes you make on the fork with the original repository.
+In the terminal, navigate to your fork's location and perform the following steps:
 
-In the terminal, navigate to the location of your fork and perform the following steps:
-
-1.  Run the `git remote -v` command to list the current configured remote repository for your fork.
-The result is as follows:
-    ```
-    origin  https://github.com/{your-username}/{your-fork}.git (fetch)
-    origin  https://github.com/{your-username}/{your-fork}.git (push)
-    ```
-    See the example:
-    ```
-    origin	https://github.com/i000000/asyncapi.git (fetch)
-    origin	https://github.com/i000000/asyncapi.git (push)
+1. Check the current list of remotes:
+    
+    ```bash
+    # Command
+    git remote -v
+    
+    # Output
+    origin  https://github.com/YOUR-USERNAME/FORK-NAME.git (fetch)
+    origin  https://github.com/YOUR-USERNAME/FORK-NAME.git (push)
     ```
 
-2. Specify a new remote upstream repository to synchronize with the fork:
+2. Add the `upstream` repository. In other words, point to the main project located in the AsyncAPI GitHub organization:
+
+    ```bash
+    # Command
+    git remote add upstream https://ORIGINAL-OWNER/ORIGINAL-REPOSITORY-NAME.git
+    
+    # Example
+    git remote add upstream https://github.com/asyncapi/community.git
     ```
-    git remote add upstream https://github.com/{original-owner}/{original-repository}.git
+    
+    Verify that the `upstream` has been added:
+    
+    ```bash
+    git remote -v
+    
+    # Output
+    origin https://github.com/YOUR-USERNAME/FORK-NAME.git (fetch)
+    origin https://github.com/YOUR-USERNAME/FORK-NAME.git (push)
+    upstream       git@github.com:asyncapi/asyncapi-community.git (fetch)
+    upstream       git@github.com:asyncapi/asyncapi-community.git (push)
     ```
-    See the example:
+
+3. Fetch changes from the `upstream`:
+
+    ```bash
+    # Command
+    git fetch upstream master
     ```
-    git remote add upstream https://github.com/asyncapi/asyncapi.git
-    ```
-3. Run the `git fetch upstream master` command to fetch all the changes from upstream/master branch.
-4. Set up the local `master` branch to track the remote `master` branch from the upstream repository:
-    ```
+
+4. Set the `master` branch of your fork to track the `master` branch of the `upstream` repository:
+
+    ```bash
     git branch -u upstream/master master
     ```
+    
+    Verify with `git branch -vv`:
+    ```bash
+    * master           c2226e0 [upstream/master] Update the README.md document
+    ```
 
-Now, each time you rebase or check out the `master` branch, you refer to the `master` branch of the upstream repository. In other words, when you create a branch from local up-to-date `master` means creating a branch from latest upstream `master`.
+By setting the `upstream` branch, you can simplify your workflow. For example, you can use `git pull` and `git push` without specifying the remote and branch names, as Git will automatically use the `upstream` branch you have set. This is particularly useful when you frequently need to synchronize your local branch with a remote branch.
 
-To verify that your local `master` branch points to the `upstream/master`, run the `git branch -vv` command. The result is similar to the following:
-```
-* master           c2226e0 [upstream/master] Update the README.md document
-```
+### Using GitHub UI
 
-### Working on a Fork in GitHub UI
-
-In case you are a contributor who suggests minor changes using GitHub UI, it is recommended to use a [Pull bot](https://probot.github.io/apps/pull). This bot keeps your fork up to date by creating and merging a pull request with latest changes into the `master `branch of your fork.
+You can follow the steps from the [GitHub documentation](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork) to sync your fork and keep it up-to-date with the `upstream` repository.
 
 ## Start Contributing
 
-After you set up your fork, start contributing code and content.
-
-Follow these steps:
-
 1. Create a branch on your fork.
+2. Commit changes with clear messages. Use the [Conventional Commits](https://github.com/asyncapi/community/pull/1733) format.
+3. Push changes to your fork:
 
-2. Commit changes. Always provide clear commit messages to track commit changes easier.
-
-3. Push the changes to the remote forked repository.
-
-    >**NOTE:** Before you push local changes, make sure you are on the branch you are currently working on. Do not push any changes from the `master` branch.
-
-    If you push local changes from the terminal to your remote fork for the first time, use this command:
+    ```bash
+    git push -u origin BRANCH-NAME
     ```
-    git push -u origin {branch-name}
+    
+    For subsequent pushes, use the shorthand:
+    
+    ```bash
+    git push
     ```
-    Use the `git push` command to push any further commits made on your local branch to a remote repository.  
 
-4. Create a pull request from the branch of your forked repository to the `master` branch of the upstream repository and wait for the maintainers' review.
+4. Create a pull request from your branch of the fork repository to the `master` branch of the `upstream` repository and await review.
+
