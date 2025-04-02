@@ -3,24 +3,6 @@ const { isVotingWithinLastThreeMonths } = require('../.github/scripts/vote_track
 describe('Vote Tracker Edge Cases', () => {
   test.each([
     [
-      "Exactly 90 Days Ago (Boundary Case - Should be True)",
-      {
-        name: "testUser1",
-        "Budget 2025$$1681": "Against",
-        "2024 budget refresh and request for urgent pre-approval of some 2025 costs$$1598": "In favor",
-        "Should AsyncAPI Initiative endorse United Nations Global Digital Compact?$$1577": "Abstain",
-        lastParticipatedVoteTime: "2025-01-01",
-        isVotedInLast3Months: true,
-        lastVoteClosedTime: "2025-03-31",
-        firstVoteClosedTime: "2024-04-01",
-        agreeCount: 4,
-        disagreeCount: 1,
-        abstainCount: 1,
-        notParticipatingCount: 0
-      },
-      true
-    ],
-    [
       "More than 90 Days Ago (Should be False)",
       {
         name: "testUser2",

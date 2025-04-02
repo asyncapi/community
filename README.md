@@ -130,3 +130,33 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
+
+<!--Development-->
+
+## Development
+
+The AsyncAPI Community repository includes extensive automation powered by custom scripts. To ensure these scripts function correctly, proper testing is essential. This section explains how to run existing tests and how to add new ones.
+
+### Running Tests
+We use **Jest** for testing automation scripts. To run the tests locally, follow these steps:
+
+1. Install dependencies:
+   ```sh
+   npm install
+   ```
+2. Run all tests:
+   ```sh
+   npm test
+   ```
+
+### Adding New Tests
+If you are contributing new automation scripts, ensure they are covered by tests. To add a new test:
+
+1. Create or update the relevant test file in the `testing/` directory.
+2. Follow the existing Jest structure for consistency.
+3. Ensure your test covers edge cases and different scenarios.
+4. Run the tests locally before pushing your changes.
+
+All contributions to automation should include proper test coverage to maintain reliability.
+
+
