@@ -784,4 +784,5 @@
   isTscMember: true
   repos:
     - website
+    - conference-website
   githubID: 90895835
