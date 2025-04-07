@@ -14,4 +14,4 @@ These are the recommended tools:-
 - Command-line terminal, such as the one included in your OS, or the terminal integrated in your code editor or IDE, to run commands.
 - [Node.js and npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) to build and run the website locally.
 - A web browser, such as Google Chrome, Firefox or Microsoft Edge to preview your changes. 
-- Markdown All-In-One VS Code extension to preview markdown documents.
+- To preview minor changes in Markdown documents without spinning up a dev server, you can use out-of-the-box capabilities of your code editor, or install the corresponding extension. For more information, please consult your code editor's documentation.
