@@ -75,7 +75,7 @@ To ensure consistency and readability across all documentation:
 
 4. **Readable Naming Conventions:** Use descriptive variable and function names in examples (e.g., connectToServer instead of c2s).
 
-5. Use [Preetier](https://prettier.io/) or its VSCode extension for consistent code formatting.
+5. Use [Prettier](https://prettier.io/) or its VSCode extension for consistent code formatting.
 
 
 ## 4. Color and Syntax Styling
@@ -92,7 +92,7 @@ To improve readability, apply appropriate colors and formatting to code examples
 
 Example (Color Formatting Guidelines):
 
-- **Keywords (e.g., const, function, if):** Blue or bolded
+- **Keywords (e.g., const, function, if):** Blue or bold text
 
 - **Strings:** Green or orange
 
