@@ -106,7 +106,7 @@ There are several ways to reach out to the TSC members:
 
 > [!IMPORTANT]
 > Please remember that the TSC members are volunteers and may not respond immediately.
-> Please be patient and respectful. Also, it will be helpful if there is as little spam as possible. For more information, please refer to the [Slack Etiquette](./slack-etiquette.md) document.
+> Please be patient and respectful. Also, it will be helpful if there is as little spam as possible. For more information, please refer to the [Slack Etiquette](../060-meetings-and-communication/slack-etiquette.md) document.
 
 
 [code-owners]: https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
