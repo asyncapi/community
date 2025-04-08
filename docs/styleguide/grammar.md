@@ -26,14 +26,22 @@ As shown in the above sentence, active voice makes the concept more engaging and
 ## Capitalization
 
 When capitalizing titles, headings, and certain words and terms, use the following rules:
-- Capitalize the first word of a sentence
-- Capitalize the first word in a heading and title
-- Capitalize all nouns, pronouns, adjectives, verbs, adverbs, prepositions (in, on, at, by, for, with, to, from, of, about, through, between, among, under, over, after, before, during) and some subordinating conjunctions (if, unless, while, until, since, as, because, that, which, who, whom, whose, what, where, when, how, why)
-- Avoid using all capital letters for emphasizing a term or concept(use italics sparingly)
-- Avoid capitalizing spelled-out acronyms unless they are proper nouns ( API, HTTP, URL), articles(a, an, the), or conjunctions(and, but, or, nor, for, so, yet) unless they are part of a title or heading("Parameters in channel address"). 
-
+- Capitalize the first word of a sentence.
+- Capitalize the first word in a heading and title.
+- Capitalize all:
+  * Nouns
+  * Pronouns
+  * Adjectives
+  * Verbs
+  * Adverbs
+  * Prepositions (in, on, at, by, for, with, to, from, of, about, through, between, among, under, over, after, before, during)
+  * Some subordinating conjunctions (if, unless, while, until, since, as, because, that, which, who, whom, whose, what, where, when, how, why)
+- Avoid using all capital letters for emphasizing a term or concept (use italics sparingly).
+- Avoid capitalizing:
+  * Spelled-out acronyms unless they are proper nouns (API, HTTP, URL)
+  * Articles (a, an, the)
+  * Conjunctions (and, but, or, nor, for, so, yet) unless they are part of a title or heading ("Parameters in channel address")
 ## Spelling
-
 AsyncAPI's content and documentation follows American English spelling standards. Here are some preferred spelling of certain words:
 - Use "color" instead of "colour"
 - Use "center" instead of "centre".
@@ -47,14 +55,12 @@ When writing documentation and other forms of content for AsyncAPI, use the pres
 
 ## Personal Pronouns
 
- Use personal pronouns sparingly when writing tutorials and other forms of content for AsyncAPI to make them more human and approachable to users.  Here's an example:
-
+ Use personal pronouns sparingly when writing tutorials and other forms of content for AsyncAPI to make them more human and approachable to users. Here's an example: 
  ✅ **DO:** "You can add parameters to the `channel.address` by adding a parameter between curly braces like {`braces`}. Next, use `channel.parameters` to define your parameters. Finally, leverage the `components.parameters` to enable reusable parameters' definitions across multiple channels."
  ❌ **DON'T:** "You can add parameters to the `channel.address` by adding a parameter between curly braces like {`braces`}. Next, use `channel.parameters` to define your parameters. Finally, leverage the `components.parameters` to enable reusable parameters' definitions across multiple channels."
 
  ## Additional Resources 
 
  If you're looking for more information on grammar and style, consider checking out the following guides:
-
- - [Google Style Guide](https://developers.google.com/style)
- - [Microsoft Style Guide](https://learn.microsoft.com/en-us/style-guide/welcome/)
+- [Google Style Guide](https://developers.google.com/style)
+- [Microsoft Style Guide](https://learn.microsoft.com/en-us/style-guide/welcome/)
