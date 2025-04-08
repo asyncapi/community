@@ -9,13 +9,13 @@ weight: 100
 
 When using abbreviations and acronyms, write the full word with the acronym or abbreviation in parenthesis. After that, use the abbreviation and acronym for them. Here's an example:
 
-"An application can be a microservice, IoT (Internet of things) device (for example, a sensor), mainframe process, and more.
- That aspect is particularly beneficial in setups like IoT, where topics are often assigned per device or device segment."
+> An application can be a microservice, IoT (Internet of things) device (for example, a sensor), mainframe process, and more.
+> That aspect is particularly beneficial in setups like IoT, where topics are often assigned per device or device segment.
  
  By using acronyms and abbreviations effectively, users would easily understand the context and meaning of the abbreviation or acronym and how it relates to the tutorial or guide.
 
- ## Active Voice 
-
+## Active Voice
+ 
  When writing documentation and other forms of content for AsyncAPI, use active voice whenever possible. Here's an example:
 
 ✅ **DO:** "In the context of channel addresses within AsyncAPI documents, parameters play a crucial role in defining the dynamic components of an address."  
@@ -29,19 +29,18 @@ When capitalizing titles, headings, and certain words and terms, use the followi
 - Capitalize the first word of a sentence.
 - Capitalize the first word in a heading and title.
 - Capitalize all:
-  * Nouns
-  * Pronouns
-  * Adjectives
-  * Verbs
-  * Adverbs
-  * Prepositions (in, on, at, by, for, with, to, from, of, about, through, between, among, under, over, after, before, during)
-  * Some subordinating conjunctions (if, unless, while, until, since, as, because, that, which, who, whom, whose, what, where, when, how, why)
+  - Nouns
+  - Pronouns
+  - Adjectives
+  - Verbs
+  - Adverbs
+  - Prepositions (in, on, at, by, for, with, to, from, of, about, through, between, among, under, over, after, before, during)
+  - Some subordinating conjunctions (if, unless, while, until, since, as, because, that, which, who, whom, whose, what, where, when, how, why)
 - Avoid using all capital letters for emphasizing a term or concept (use italics sparingly).
 - Avoid capitalizing:
-  * Spelled-out acronyms unless they are proper nouns (API, HTTP, URL)
-  * Articles (a, an, the)
-  * Conjunctions (and, but, or, nor, for, so, yet) unless they are part of a title or heading ("Parameters in channel address")
-## Spelling
+  - Spelled-out acronyms unless they are proper nouns (API, HTTP, URL)
+  - Articles (a, an, the)
+  - Conjunctions (and, but, or, nor, for, so, yet) unless they are part of a title or heading ("Parameters in channel address")## Spelling
 AsyncAPI's content and documentation follows American English spelling standards. Here are some preferred spelling of certain words:
 - Use "color" instead of "colour"
 - Use "center" instead of "centre".
@@ -59,8 +58,8 @@ When writing documentation and other forms of content for AsyncAPI, use the pres
  ✅ **DO:** "You can add parameters to the `channel.address` by adding a parameter between curly braces like {`braces`}. Next, use `channel.parameters` to define your parameters. Finally, leverage the `components.parameters` to enable reusable parameters' definitions across multiple channels."
 ❌ **DON'T:** "You should add parameters to the `channel.address` by placing a parameter between curly braces like {braces}. After that, you need to use `channel.parameters` to define your parameters. Finally, you should leverage `components.parameters` to enable reusable parameters' definitions across multiple channels."
  
- ## Additional Resources 
+## Additional Resources 
 
- If you're looking for more information on grammar and style, consider checking out the following guides:
+  If you're looking for more information on grammar and style, consider checking out the following guides:
 - [Google Style Guide](https://developers.google.com/style)
 - [Microsoft Style Guide](https://learn.microsoft.com/en-us/style-guide/welcome/)
