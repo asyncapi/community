@@ -19,7 +19,7 @@ When using abbreviations and acronyms, write the full word with the acronym or a
  When writing documentation and other forms of content for AsyncAPI, use active voice whenever possible. Here's an example:
 
 ✅ **DO:** "In the context of channel addresses within AsyncAPI documents, parameters play a crucial role in defining the dynamic components of an address."  
-❌ **DON'T:** "In the context of channel addresses within AsyncAPI documents, parameters play a crucial role in defining the dynamic components of an address."
+❌ **DON'T:** "In the context of channel addresses within AsyncAPI documents, parameters played a crucial role in defining the dynamic components of an address."
 
 As shown in the above sentence, active voice makes the concept more engaging and easier to understand.
 
