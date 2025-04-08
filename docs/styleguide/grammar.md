@@ -9,8 +9,8 @@ weight: 100
 
 When using abbreviations and acronyms, write the full word with the acronym or abbreviation in parenthesis. After that, use the abbreviation and acronym for them. Here's an example:
 
- An application can be a micro-service, IoT (Internet of things) device (for example, a sensor), mainframe process, and more.
- That aspect is particularly beneficial in setups like IoT, where topics are often assigned per device or device segment.
+"An application can be a micro-service, IoT (Internet of things) device (for example, a sensor), mainframe process, and more.
+ That aspect is particularly beneficial in setups like IoT, where topics are often assigned per device or device segment."
  
  By using acronyms and abbreviations effectively, users would easily understand the context and meaning of the abbreviation or acronym and how it relates to the tutorial or guide.
 
