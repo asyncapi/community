@@ -1,6 +1,7 @@
 const yaml = require("js-yaml");
 const { readFile, writeFile } = require("fs").promises;
 const path = require("path");
+const { isVotingWithinLastThreeMonths } = require("./vote_tracker_utils");
 module.exports = async ({ github, context, botCommentURL }) => {
 	try {
 		let message, eventNumber, eventTitle, orgName, repoName;
@@ -231,21 +232,7 @@ module.exports = async ({ github, context, botCommentURL }) => {
 				: "";
 			return bindingVotesSection.match(/\| @\w+.*?\|.*?\|.*?\|/g) || [];
 		}
-
-		// Check if voting duration is within the last three months
-		function isVotingWithinLastThreeMonths(voteInfo) {
-			const currentDate = new Date();
-			let lastVoteDate;
-			if (voteInfo.lastParticipatedVoteTime && !voteInfo.lastParticipatedVoteTime.includes("Member has not")) {
-				lastVoteDate = new Date(voteInfo.lastParticipatedVoteTime);
-			} else {
-				return false; // No valid voting history
-			}
-			
-			const diffInDays = (currentDate - lastVoteDate) / (1000 * 60 * 60 * 24);
-			return diffInDays <= 90; // 90 days = 3 months
-		}
-		
+	
 		// Function to update the voteTrackingFile with updated TSC Members
 		async function updateVoteTrackingFile() {
 			const tscMembers = maintainerInformation.filter(
