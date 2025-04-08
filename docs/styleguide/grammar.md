@@ -34,7 +34,7 @@ When capitalizing titles, headings, and certain words and terms, use the followi
 
 ## Spelling
 
-Asyncapi's content and documentation follows American English spelling standards. Here are some preferred spelling of certain words:
+AsyncAPI's content and documentation follows American English spelling standards. Here are some preferred spelling of certain words:
 - Use "color" instead of "colour"
 - Use "center" instead of "centre".
 - Use "organization" instead of "organisation". 
