@@ -57,4 +57,4 @@ When writing documentation and other forms of content for AsyncAPI, use the pres
  If you're looking for more information on grammar and style, consider checking out the following guides:
 
  - [Google Style Guide](https://developers.google.com/style)
- - [Microsoft Style Guide](https://developers.google.com/style)
+ - [Microsoft Style Guide](https://learn.microsoft.com/en-us/style-guide/welcome/)
