@@ -78,9 +78,7 @@ Are you working on something exciting related to AsyncAPI? Do you have a unique 
 
 ## Potential Speakers
 
-We are actively reaching out to experts and thought leaders in the space. Some of the speakers 
-
-we’d love to feature include:
+We are actively reaching out to experts and thought leaders in the space. Some of the speakers we’d love to feature include:
 - AsyncAPI Maintainers & Contributors
 - Industry Experts in Event-Driven Architecture
 - Engineers from Companies Using AsyncAPI in Production
