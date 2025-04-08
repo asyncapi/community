@@ -2,7 +2,7 @@
 
 ## Introduction
 
-The AsyncAPI Community has always been about collaboration, innovation, and knowledge-sharing. To further strengthen our ecosystem, we’re thrilled to introduce the AsyncAPI Webinar Series—a platform where experts, enthusiasts, and contributors can come together to discuss everything related to event-driven architectures, messaging protocols, and AsyncAPI best practices. Whether you're new to AsyncAPI or a seasoned professional, this series is designed to bring valuable insights and engaging discussions straight to you.
+The AsyncAPI Community has always been about collaboration, innovation, and knowledge-sharing. To further strengthen our ecosystem, we’re thrilled to introduce the "AsyncAPI Webinar Series" — a platform where experts, enthusiasts, and contributors can come together to discuss everything related to event-driven architectures, messaging protocols, and AsyncAPI best practices. Whether you're new to AsyncAPI or a seasoned professional, this series is designed to bring valuable insights and engaging discussions straight to you.
 
 ## Why We Are Doing This
 
