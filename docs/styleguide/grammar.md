@@ -50,7 +50,7 @@ When writing documentation and other forms of content for AsyncAPI, use the pres
  Use personal pronouns sparingly when writing tutorials and other forms of content for AsyncAPI to make them more human and approachable to users.  Here's an example:
 
  ✅ **DO:** "You can add parameters to the `channel.address` by adding a parameter between curly braces like {`braces`}. Next, use `channel.parameters` to define your parameters. Finally, leverage the `components.parameters` to enable reusable parameters' definitions across multiple channels."
- ❌ **DON'T:** "You can add parameters to the `channel.address` by adding a parameter between curly braces like {`braces`}. Next, use `channel.parameters` to define your parameters. Finally, you can leverage the `components.parameters` to enable reusable parameters' definitions across multiple channels."
+ ❌ **DON'T:** "You can add parameters to the `channel.address` by adding a parameter between curly braces like {`braces`}. Next, use `channel.parameters` to define your parameters. Finally, leverage the `components.parameters` to enable reusable parameters' definitions across multiple channels."
 
  ## Additional Resources 
 
