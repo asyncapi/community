@@ -112,10 +112,29 @@ Awarded to members who label, comment, and manage issues and pull requests for a
 ---
 
 ## Sponsor Badge
+These badges are awarded to organizations or individuals who financially support the AsyncAPI Initiative at various tiers. Their contributions help sustain and grow the community, tools, and events.
+
+### Platinum
+
 ![Platinum](https://github.com/user-attachments/assets/90a8f96a-0588-4112-a988-5d3feddf171e)
+
+
+### Gold
+
 ![Gold](https://github.com/user-attachments/assets/c6b6eb5d-fec2-4a45-9b88-55d8c007f36e)
+
+
+### Bronze
+
 ![Bronze](https://github.com/user-attachments/assets/cdbb4645-718b-4c11-9a99-a6975068357e)
+
+### Diamond
+
 ![Diamond](https://github.com/user-attachments/assets/6b0d4259-c3aa-429a-bcfe-e585969ad134)
+
+
+### Silver
+
 ![Silver](https://github.com/user-attachments/assets/08ebb418-9be1-44c2-8bde-c136a636eed4)
 
 
