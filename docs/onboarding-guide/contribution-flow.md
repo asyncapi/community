@@ -19,20 +19,19 @@ At AsyncAPI, we value **quality over quantity**. This guide will help you make m
 
 ### Before Making a Contribution
 - Read the [onboarding contributor guide](https://www.asyncapi.com/docs/community/onboarding-guide).
-- If you are contributing to documentation, review the [documentation onboarding checklist](https://www.asyncapi.com/docs/community/onboarding-guide/docs-onboarding-checklist). 
+- If you are contributing to the community repository, review the [documentation onboarding checklist](https://www.asyncapi.com/docs/community/onboarding-guide/docs-onboarding-checklist). 
 - For other repositories, refer to the [general contribution guidelines](https://github.com/asyncapi/community/blob/master/CONTRIBUTING.md).
 - Look through existing issues and pull requests to understand the repository better.
-- You can also check the [general roadmap](https://www.asyncapi.com/roadmap).
+- Check the [general roadmap](https://www.asyncapi.com/roadmap).
 
 ### Steps to making a good contribution
-- Once you are ready to contribute, set up your workflow environment using the [git workflow guide](/asyncapi/community/blob/master/git-workflow.md).
+- Set up your workflow environment using the [git workflow guide](/asyncapi/community/blob/master/git-workflow.md).
 - Search for [good first issues](https://github.com/issues?page=1&q=is%3Aopen+org%3Aasyncapi+sort%3Aupdated-desc+label%3A%22good+first+issue%22). 
 - When you do find one, request to be assigned.
-- However, if you notice a bug, typo, or improvement, feel free to create an issue.
-- Make a PR only when a maintainer has assigned you.
-- Even if you created the issue yourself, wait for it to be assigned by a maintainer before you make a PR.
+- If you noticed a bug, typo, or improvement, feel free to create an issue.
+- **Make a PR only after a maintainer assigned the issue to you** even if you created the issue yourself.
 - Follow the [conventional commits guide](/asyncapi/community/pull/1733) to write a good PR title.
-- Remember to follow the [git workflow document](/asyncapi/community/blob/master/git-workflow.md) when making a PR.
+- Follow the [git workflow document](/asyncapi/community/blob/master/git-workflow.md) when working on your changes and making a PR.
 - After making a PR, patiently wait for reviews.
 - Make sure all your PR checks pass (turn green) to speed up the merging process.  
 - If your PR hasn’t been reviewed after a week and half, you can gently remind a maintainer on Slack or GitHub. Delays can happen for various reasons, but no one is ignoring you! 🙏🏼 .
