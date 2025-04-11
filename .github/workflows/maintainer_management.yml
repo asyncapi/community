@@ -172,7 +172,11 @@ jobs:
                 });
                 core.info(`Successfully removed ${maintainer} from the organization.`);
               } catch (error) {
-                core.setFailed(`Failed to remove ${maintainer} from the organization: ${error.message}`);
+                if (error.message.startsWith('Cannot find')) {
+                  core.info(`Failed to remove ${maintainer} from the organization: ${error.message}`);
+                } else {
+                  core.setFailed(`Failed to remove ${maintainer} from the organization: ${error.message}`);
+                }
               }
             }
 
@@ -193,12 +197,9 @@ jobs:
               const removedMaintainers = "${{ needs.remove_maintainer.outputs.removedMaintainers }}".split(",");
               const removedTscMembers = "${{ needs.remove_maintainer.outputs.removedTscMembers }}".split(",");
 
-              // Goodbye message to removed maintainers and notification to TSC members
+              // Goodbye message to removed maintainers
               const combinedMessages = removedMaintainers.map((maintainer) => {
-                const tscNotification = removedTscMembers.includes(maintainer)
-                  ? `@asyncapi/tsc_members We want to inform you that @${maintainer.trim().replace(/^@/, '')} is no longer a maintainer of any repository under AsyncAPI Initiative. It means this maintainer is also no longer a member of TSC.`
-                  : '';
-                return `@${maintainer.trim().replace(/^@/, '')} We wanted to express our gratitude for your contributions as a maintainer of AsyncAPI Initiative. Your efforts have been immensely valuable to us, and we truly appreciate your dedication. Thank you once again, and we wish you all the best in your future endeavors!\n\n${tscNotification}`;
+                return `@${maintainer.trim().replace(/^@/, '')} We would like to express our gratitude for your contributions as a maintainer of AsyncAPI Initiative. Your efforts have been immensely valuable to us, and we truly appreciate your dedication. Thank you once again, and we wish you all the best in your future endeavors!\n\n`;
               });
 
               const { owner, repo } = context.repo;
