@@ -195,7 +195,6 @@ jobs:
           github-token: ${{ secrets.GH_TOKEN_ORG_ADMIN }}
           script: |
               const removedMaintainers = "${{ needs.remove_maintainer.outputs.removedMaintainers }}".split(",");
-              const removedTscMembers = "${{ needs.remove_maintainer.outputs.removedTscMembers }}".split(",");
 
               // Goodbye message to removed maintainers
               const combinedMessages = removedMaintainers.map((maintainer) => {
