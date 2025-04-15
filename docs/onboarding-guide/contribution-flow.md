@@ -30,7 +30,7 @@ At AsyncAPI, we value **quality over quantity**. This guide will help you make m
 - When you do find one, request to be assigned.
 - If you noticed a bug, typo, or improvement, feel free to create an issue.
 - **Make a PR only after a maintainer assigned the issue to you** even if you created the issue yourself.
-- Follow the [conventional commits guide](/asyncapi/community/pull/1733) to write a good PR title.
+- Follow the [conventional commits guide](/asyncapi/community/blob/master/docs/onboarding-guide/conventional-commits.md) to write a good PR title.
 - Follow the [git workflow document](/asyncapi/community/blob/master/git-workflow.md) when working on your changes and making a PR.
 - After making a PR, patiently wait for reviews.
 - Make sure all your PR checks pass (turn green) to speed up the merging process.  
