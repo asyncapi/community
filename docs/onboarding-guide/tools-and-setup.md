@@ -6,8 +6,6 @@ weight: 60
 This article covers the recommended tools you should have as a contributor and how to set up AsyncAPI website in your local environment.
 
 ## Recommended Tools
-These are the recommended tools:
-
 - [Git](https://git-scm.com) to work with the organization's repositories.
 - [A GitHub account](https://github.com) to fork AsyncAPI repositories, create issues, submit pull requests, and participate in discussions. If you're new to GitHub, familiarize yourself with [basic GitHub functionalities and workflows](https://docs.github.com/en/get-started).
 - A code editor, such as [VS Code](https://code.visualstudio.com) to work on your changes.
