@@ -196,6 +196,8 @@ jobs:
     needs: remove_tsc_member
     if: needs.remove_tsc_member.outputs.removedMaintainers != ''
     runs-on: ubuntu-latest
+    env:
+      GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
     steps:
       - name: Check out code
         uses: actions/checkout@v2
@@ -242,6 +244,7 @@ jobs:
         run: |
           git config --global user.name asyncapi-bot
           git config --global user.email info@asyncapi.io
+
       - name: Create new branch
         run: |
           git checkout -b update-emeritus-${{ github.run_id }}
