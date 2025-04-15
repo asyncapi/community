@@ -183,7 +183,7 @@ jobs:
 
             // Goodbye message to removed TSC members
             const tscMessages = removedTscMembers.map(tscMember => {
-              return `@asyncapi/tsc_members We want to inform you that @${tscMember.trim().replace(/^@/, '')} is no longer a member of the TSC. This might be because of various reasons. Might be that @${tscMember.trim().replace(/^@/, '')} is no longer a maintainer of any repository under AsyncAPI Initiative. Might be also that @${tscMember.trim().replace(/^@/, '')} is still a maintainer but cannot commit to support entire organization and wants to focus only on the maintained repository. Might be also that @${tscMember.trim().replace(/^@/, '')}  did not participate in voting for a long time and was removed due to inactivity and no communication.`;
+              return `@${tscMember.trim().replace(/^@/, '')} We would like to express our gratitude for your contributions as a member of the Technical Steering Committee at the AsyncAPI Initiative. Your efforts have been immensely valuable to us, and we truly appreciate your dedication. Thank you once again, and we wish you all the best in your future endeavors!\n\n`;
             });
 
             const { owner, repo } = context.repo;
