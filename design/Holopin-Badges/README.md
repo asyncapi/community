@@ -12,7 +12,7 @@ These badges are created for use on [Holopin](https://www.holopin.io), a platfor
 
 ## Design Concept
 
-The AsyncAPI Holopin Badges were created as part of the AsyncAPI 2024 Mentorship Program, designed by Olumide under Maya's mentorship and with support from Thulie. This project explores how visual design can be used to celebrate contributions across an open-source ecosystem, turning recognition into something that feels personal, collectible, and proudly displayable.
+The AsyncAPI Holopin Badges were created as part of the AsyncAPI 2024 Mentorship Program, designed by Olumide under [Aishat Muibudeen's (Maya)](https://github.com/Mayaleeeee) mentorship and with support from [Thulisile Sibanda](https://github.com/thulieblack). This project explores how visual design can be used to celebrate contributions across an open-source ecosystem, turning recognition into something that feels personal, collectible, and proudly displayable.
 
 Inspired by Holopin’s digital badge aesthetic, the designs aim to strike a balance between playful and purposeful. Each badge is crafted to be clear, expressive, and cohesive with the AsyncAPI brand, rewarding contributions while staying visually consistent across a growing and diverse community.
 
@@ -140,4 +140,4 @@ These badges are awarded to organizations or individuals who financially support
 ---
 
 ## Acknowledgments
-A huge thank you to [Aishat Muibudeen](https://github.com/Mayaleeeee) for her mentorship, guidance, and support throughout the design process, and to [Thulie](https://github.com/thulieblack) for her valuable feedback that helped shape this badge series. Additionally, feedback from the AsyncAPI community played a key role in refining these designs and ensuring they align with the community’s values.
+A huge thank you to [Aishat Muibudeen](https://github.com/Mayaleeeee) for her mentorship, guidance, and support throughout the design process, and to [Thulisile Sibanda](https://github.com/thulieblack) for her valuable feedback that helped shape this badge series. Additionally, feedback from the AsyncAPI community played a key role in refining these designs and ensuring they align with the community’s values.
