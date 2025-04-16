@@ -12,7 +12,7 @@ These badges are created for use on [Holopin](https://www.holopin.io), a platfor
 
 ## Design Concept
 
-The AsyncAPI Holopin Badges were created as part of the AsyncAPI 2024 Mentorship Program, designed by Olumide under [Aishat Muibudeen's (Maya)](https://github.com/Mayaleeeee) mentorship and with support from [Thulisile Sibanda](https://github.com/thulieblack). This project explores how visual design can be used to celebrate contributions across an open-source ecosystem, turning recognition into something that feels personal, collectible, and proudly displayable.
+The AsyncAPI Holopin Badges were created as part of the AsyncAPI 2024 Mentorship Program, designed by [Oloso Surur Olumide](https://github.com/Oloso-surur) under [Aishat Muibudeen's (Maya)](https://github.com/Mayaleeeee) mentorship and with support from [Thulisile Sibanda](https://github.com/thulieblack). This project explores how visual design can be used to celebrate contributions across an open-source ecosystem, turning recognition into something that feels personal, collectible, and proudly displayable.
 
 Inspired by Holopin’s digital badge aesthetic, the designs aim to strike a balance between playful and purposeful. Each badge is crafted to be clear, expressive, and cohesive with the AsyncAPI brand, rewarding contributions while staying visually consistent across a growing and diverse community.
 
