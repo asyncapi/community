@@ -3,7 +3,7 @@ title: Recommended tools and setup
 weight: 60
 ---
 
-This article covers the recommended tools you should have as a contributor and how to set up AsyncAPI website in your local environment.
+These are the recommended tools for contributors, as well as instructions for setting up the AsyncAPI website in your local environment.
 
 ## Recommended Tools
 - [Git](https://git-scm.com) to work with the organization's repositories.
