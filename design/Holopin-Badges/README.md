@@ -1,4 +1,4 @@
-![badgesss](https://github.com/user-attachments/assets/2357a778-05c1-4680-87bd-ee131d7603ee)
+![AsyncAPI Holopin Badges](https://github.com/user-attachments/assets/2357a778-05c1-4680-87bd-ee131d7603ee)
 
 # AsyncAPI Holopin Badges
 
