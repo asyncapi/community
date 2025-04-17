@@ -3,7 +3,6 @@ title: Grammar
 description: The style guide gives advice on how to implement grammar when creating tutorials and other forms of content for AsyncAPI.
 weight: 100
 ---
-# AsyncAPI Style Guide: Grammar
 
 ## Abbreviations and acronyms
 
@@ -40,7 +39,9 @@ When capitalizing titles, headings, and certain words and terms, use the followi
 - Avoid capitalizing:
   - Spelled-out acronyms unless they are proper nouns (API, HTTP, URL)
   - Articles (a, an, the)
-  - Conjunctions (and, but, or, nor, for, so, yet) unless they are part of a title or heading ("Parameters in channel address")## Spelling
+  - Conjunctions (and, but, or, nor, for, so, yet) unless they are part of a title or heading ("Parameters in channel address")
+  
+ ## Spelling
 AsyncAPI's content and documentation follows American English spelling standards. Here are some preferred spelling of certain words:
 - Use "color" instead of "colour"
 - Use "center" instead of "centre".
@@ -49,12 +50,14 @@ AsyncAPI's content and documentation follows American English spelling standards
 
 ## Verb Tense
 When writing documentation and other forms of content for AsyncAPI, use the present tense. Here's an example:
+
 ✅ **DO:** "The dynamic segment of each channel address, which corresponds to the device identifier, is then articulated through the use of parameters."
 ❌ **DON'T:** "The dynamic segment of each channel address, which corresponds to the device identifier, was then articulated through the use of parameters."
 
 ## Personal Pronouns
 
  Use personal pronouns sparingly when writing tutorials and other forms of content for AsyncAPI to make them more human and approachable to users. Here's an example: 
+ 
  ✅ **DO:** "You can add parameters to the `channel.address` by adding a parameter between curly braces like {`braces`}. Next, use `channel.parameters` to define your parameters. Finally, leverage the `components.parameters` to enable reusable parameters' definitions across multiple channels."
 ❌ **DON'T:** "You should add parameters to the `channel.address` by placing a parameter between curly braces like {braces}. After that, you need to use `channel.parameters` to define your parameters. Finally, you should leverage `components.parameters` to enable reusable parameters' definitions across multiple channels."
  
