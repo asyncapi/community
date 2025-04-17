@@ -42,7 +42,7 @@ When capitalizing titles, headings, and certain words and terms, use the followi
   - Conjunctions (and, but, or, nor, for, so, yet) unless they are part of a title or heading ("Parameters in channel address")
   
  ## Spelling
-AsyncAPI's content and documentation follows American English spelling standards. Here are some preferred spelling of certain words:
+Here are some preferred spellings of certain words:
 - Use "color" instead of "colour"
 - Use "center" instead of "centre".
 - Use "organization" instead of "organisation". 
