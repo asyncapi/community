@@ -1,5 +1,6 @@
 ---
 title: Code Contributor Guide
+description: A guide for new contributors looking to contribute code to the AsyncAPI project.
 weight: 90
 ---
 # AsyncAPI Onboarding Code Contributor Guide  
@@ -12,7 +13,7 @@ Welcome to the AsyncAPI community! We're excited to have you here. Think of Asyn
 ## Tools You’ll Need  
 - Git and GitHub: Your tools for collaboration. Get familiar with forking, branching, and pull requests.  
 - Code Editor: Your tool to work with the source code of our repositories and version control. For example, VS Code, Sublime Text, JetBrains IDEs, or any other tool you prefer.
-- Node.js & npm: AsyncAPI relies on JavaScript/Typescript, so ensure these are installed and configured.  
+- Node.js & npm: AsyncAPI relies on JavaScript/TypeScript, so ensure these are installed and configured.  
 
 ## Contribution Etiquette  
 1. Follow the [Code of Conduct](https://github.com/asyncapi/community/blob/master/CODE_OF_CONDUCT.md)
