@@ -135,15 +135,17 @@ jobs:
       - name: Display welcome message for new maintainers
         uses: actions/github-script@v6
         with:
-          github-token: ${{ secrets.GH_TOKEN_ORG_ADMIN }}
+          github-token: ${{ secrets.GH_TOKEN }}
           script: |
             const newMaintainers = "${{ needs.add_maintainer.outputs.newMaintainers }}".split(",");
             console.log(`New maintainers: ${newMaintainers}`);
-            const welcomeMessage = newMaintainers.map((maintainer) => `@${maintainer.trim().replace(/^@/, '')} I have invited you to join the AsyncAPI organization, and you are added to the team that lists all Maintainers.\n
+            const welcomeMessage = newMaintainers.map((maintainer) => `@${maintainer.trim().replace(/^@/, '')} We invited you to join the AsyncAPI organization, and you are added to the team that lists all Maintainers.\n
             
-                      Please take a moment to verify if you would like to provide more details for your account, such as your LinkedIn profile, Twitter handle, or company affiliation. In case there is anything you want to add, please open up a separate pull request for the \`MAINTAINERS.yaml\` file.\n
+                      Please take a moment to verify if you would like to provide more details for your account, such as your LinkedIn profile, Twitter handle, or company affiliation. In case there is anything you want to add, please open up a separate pull request for the \`MAINTAINERS.yaml\` file.\n\n
                       
-                      Additionally, if you are interested in becoming a [TSC member](https://www.youtube.com/watch?v=MfVUUbW2aos) and contributing to the direction of the AsyncAPI Initiative, let us know, and we'll be happy to guide you through the process. Every maintainer has the right to become a TSC member, just open a pull request to modify your entry in \`MAINTAINER.yaml\` file and make sure \`isTscMember\` property is set to \`true\`. You can find some basic information about TSC membership in [this TSC-related guide](https://github.com/asyncapi/community/blob/master/TSC_MEMBERSHIP.md). Feel free to reach out to us for more help by dropping a comment in this pull request, or by asking for help in our Slack.\n
+                      Additionally, if you are interested in becoming a [TSC member](https://www.youtube.com/watch?v=MfVUUbW2aos) and contributing to the direction of the AsyncAPI Initiative, let us know, and we'll be happy to guide you through the process. Every maintainer has the right to become a [TSC member](https://www.asyncapi.com/community/tsc), just open a pull request to modify your entry in \`MAINTAINER.yaml\` file and make sure \`isTscMember\` property is set to \`true\`. Consider also adding \`slack\` information with your Slack Member ID. We use it in our automation to drop you reminders to participate in voting. To find your Member ID, click on your profile photo in Slack and click "Profile". In the right side of their profile section, click on the three dots and click "Copy Member ID".\n\n
+                      
+                      You can find some basic information about TSC membership in [this TSC-related guide](https://github.com/asyncapi/community/blob/master/TSC_MEMBERSHIP.md). Feel free to reach out to us for more help by dropping a comment in this pull request, or by asking for help in our Slack.\n\n
                       
                       Welcome aboard! We are excited to have you as part of the team.`).join("\n");
             
@@ -170,7 +172,11 @@ jobs:
                 });
                 core.info(`Successfully removed ${maintainer} from the organization.`);
               } catch (error) {
-                core.setFailed(`Failed to remove ${maintainer} from the organization: ${error.message}`);
+                if (error.message.startsWith('Cannot find')) {
+                  core.info(`Failed to remove ${maintainer} from the organization: ${error.message}`);
+                } else {
+                  core.setFailed(`Failed to remove ${maintainer} from the organization: ${error.message}`);
+                }
               }
             }
 
@@ -189,14 +195,10 @@ jobs:
           github-token: ${{ secrets.GH_TOKEN_ORG_ADMIN }}
           script: |
               const removedMaintainers = "${{ needs.remove_maintainer.outputs.removedMaintainers }}".split(",");
-              const removedTscMembers = "${{ needs.remove_maintainer.outputs.removedTscMembers }}".split(",");
 
-              // Goodbye message to removed maintainers and notification to TSC members
+              // Goodbye message to removed maintainers
               const combinedMessages = removedMaintainers.map((maintainer) => {
-                const tscNotification = removedTscMembers.includes(maintainer)
-                  ? `@asyncapi/tsc_members We want to inform you that @${maintainer.trim().replace(/^@/, '')} is no longer a maintainer of any repository under AsyncAPI Initiative. It means this maintainer is also no longer a member of TSC.`
-                  : '';
-                return `@${maintainer.trim().replace(/^@/, '')} We wanted to express our gratitude for your contributions as a maintainer of AsyncAPI Initiative. Your efforts have been immensely valuable to us, and we truly appreciate your dedication. Thank you once again, and we wish you all the best in your future endeavors!\n\n${tscNotification}`;
+                return `@${maintainer.trim().replace(/^@/, '')} We would like to express our gratitude for your contributions as a maintainer of AsyncAPI Initiative. Your efforts have been immensely valuable to us, and we truly appreciate your dedication. Thank you once again, and we wish you all the best in your future endeavors!\n\n`;
               });
 
               const { owner, repo } = context.repo;
@@ -205,59 +207,9 @@ jobs:
                   github.rest.issues.createComment({ owner, repo, issue_number, body: message });
               }
 
-
-  update_emeritus:
-    needs: detect_maintainer_changes
-    if: needs.detect_maintainer_changes.outputs.removedTscMembers != ''
-    runs-on: ubuntu-latest
-    steps:
-      - name: Check out code
-        uses: actions/checkout@v3
-
-      - name: Add TSC members to Emeritus.yaml and print
-        uses: actions/github-script@v6
-        with:
-          script: |
-            const fs = require('fs');
-            const path = './Emeritus.yaml';
-
-            // Read the current content of the file
-            let content = fs.readFileSync(path, 'utf8').trim(); // remove any trailing whitespaces
-
-            // Split the removed maintainers and prepare them for the yaml format
-            const removedTscMembers = "${{ needs.detect_maintainer_changes.outputs.removedTscMembers }}".split(',')
-              .map(maintainer => `  - ${maintainer.trim()}`)
-              .join('\n');
-
-            // Append the removed maintainers to the file content
-            if (removedTscMembers) {
-              content = content + '\n' + removedTscMembers;
-            }
-
-            // Write the updated content back to the file
-            fs.writeFileSync(path, content);
-
-            // Log the updated content to the console
-            core.info('Updated Emeritus.yaml:\n', content);
-      
-      - name: Create new branch
-        run: |
-          git checkout -b update-emeritus-${{ github.run_id }}
-
-      - name: Commit and push
-        run: |
-          git add .
-          git commit -m "chore: update Emeritus.yaml"
-          git remote set-url origin https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/asyncapi/community.git
-          git push origin update-emeritus-${{ github.run_id }}
-
-      - name: Create PR
-        run: |
-          gh pr create --title "docs(community): update latest emeritus list" --body "Updated Emeritus list is available and this PR introduces changes with latest information about Emeritus" --head update-emeritus-${{ github.run_id }}
-
   notify_slack_on_failure:
-    if: always() && (needs.detect_maintainer_changes.result == 'failure' || needs.add_maintainer.result == 'failure' || needs.display_message.result == 'failure' || needs.remove_maintainer.result == 'failure' || needs.update_emeritus.result == 'failure' || needs.remove_maintainer_goodbye.result == 'failure')
-    needs: [detect_maintainer_changes, add_maintainer, display_message, remove_maintainer, remove_maintainer_goodbye, update_emeritus]
+    if: always() && (needs.detect_maintainer_changes.result == 'failure' || needs.add_maintainer.result == 'failure' || needs.display_message.result == 'failure' || needs.remove_maintainer.result == 'failure' || needs.remove_maintainer_goodbye.result == 'failure')
+    needs: [detect_maintainer_changes, add_maintainer, display_message, remove_maintainer, remove_maintainer_goodbye]
     runs-on: ubuntu-latest
     steps:
     - name: Report workflow run status to Slack

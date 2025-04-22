@@ -183,7 +183,7 @@ jobs:
 
             // Goodbye message to removed TSC members
             const tscMessages = removedTscMembers.map(tscMember => {
-              return `@asyncapi/tsc_members We want to inform you that @${tscMember.trim().replace(/^@/, '')} is no longer a maintainer of any repository under AsyncAPI Initiative. It means this maintainer is also no longer a member of TSC.`;
+              return `@${tscMember.trim().replace(/^@/, '')} We would like to express our gratitude for your contributions as a member of the Technical Steering Committee at the AsyncAPI Initiative. Your efforts have been immensely valuable to us, and we truly appreciate your dedication. Thank you once again, and we wish you all the best in your future endeavors!\n\n`;
             });
 
             const { owner, repo } = context.repo;
@@ -196,6 +196,8 @@ jobs:
     needs: remove_tsc_member
     if: needs.remove_tsc_member.outputs.removedMaintainers != ''
     runs-on: ubuntu-latest
+    env:
+      GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
     steps:
       - name: Check out code
         uses: actions/checkout@v2
@@ -213,23 +215,36 @@ jobs:
             // Parse the removedMaintainers JSON string to an array of objects
             const removedMaintainers = JSON.parse('${{ needs.remove_tsc_member.outputs.removedMaintainers }}');
 
-            // Filter the maintainers whose updatedValue is false and prepare them for the yaml format
+            // Extract existing names from the file
+            const existingNames = new Set(
+              content
+                .split('\n')
+                .map(line => line.trim().replace('- ', '')) // Normalize names
+                .filter(line => line && !line.startsWith('#') && !line.includes(':')) // Filter out comments and section headers
+            );
+
+            // Filter maintainers who should be added and are not already in the list
             const removedTscMembers = removedMaintainers
               .filter(maintainer => maintainer.updatedValue === false)
-              .map(maintainer => `  - ${maintainer.githubUser.trim()}`)
+              .map(maintainer => maintainer.githubUser.trim())
+              .filter(name => !existingNames.has(name)) // Ensure name is not already in the list
+              .map(name => `  - ${name}`) // Format for YAML
               .join('\n');
 
-            // Append the added maintainers to the file content
+            // Append new maintainers if there are any new ones
             if (removedTscMembers) {
               content = content + '\n' + removedTscMembers;
+              fs.writeFileSync(path, content);
+              console.log('Updated Emeritus.yaml:\n', content);
+            } else {
+              console.log('No new names to add. Emeritus TSC already in the list.');
             }
-
-            // Write the updated content back to the file
-            fs.writeFileSync(path, content);
-
-            // Log the updated content to the console
-            console.log('Updated Emeritus.yaml:\n', content);
       
+      - name: Config git
+        run: |
+          git config --global user.name asyncapi-bot
+          git config --global user.email info@asyncapi.io
+
       - name: Create new branch
         run: |
           git checkout -b update-emeritus-${{ github.run_id }}
