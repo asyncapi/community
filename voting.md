@@ -18,11 +18,11 @@ In the majority of cases, topics we vote on introduce new rules or ways of doing
 ### Voting Rules
 
 - Only votes from [TSC members](https://www.asyncapi.com/community/tsc) are counted. You are still encouraged to participate in voting, even if your vote is not binding.
-- TSC members have at least 7 calendar days to vote. We have 4 weeks to reach quorum otherwise voting topic needs reassesment by the Governance Board.
+- TSC members have at least 7 calendar days to vote. We have 4 weeks to reach quorum, otherwise the voting topic needs reassessment by the Governance Board.
 - TSC members can skip some votes, although, if you do not have an opinion, please participate with 👀 to indicate that you saw a vote but you have no opinion, or cannot make public statement about it and abstain. There is one strict rule, though: if you do not participate in voting within three months, you will stop being a TSC member. It has nothing to do, though, with your maintainer responsibilities.
 - The vote is completed when more than 50% of the voting is in favor.
-- Only Govenance Board members can start the vote and close the vote.
-- Quorum is required. The number depends on a current number of TSC members. We require majority to pass the vote. If TSC has 40 members, than we calculate quorum like: 51% multiply by 40. Assuming all votes are positive, we must have at least 21 people taking the vote.
+- Only Governance Board members can start the vote and close the vote.
+- Quorum is required. The number depends on the current number of TSC members. We require majority to pass the vote. If TSC has 40 members, than we calculate quorum like: 51% multiply by 40. Assuming all votes are positive, we must have at least 21 people taking the vote.
 
 ### Voting Process
 

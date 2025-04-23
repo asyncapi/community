@@ -1,18 +1,18 @@
 ## Governance Board (GB) members
 
-You can determine who are the current GB members by filtering the [maintainers](MAINTAINERS.yaml) and the [ambassadors](AMBASSADORS_MEMBERS.json) with the ìsBoardMember` set to `true`. We also transparently list all the GB members in [AsyncAPI Website](`https://asyncapi.com/community/board`)
+You can determine who are the current GB members by filtering the [MAINTAINERS.yaml](MAINTAINERS.yaml) and the [AMBASSADORS_MEMBERS.json](AMBASSADORS_MEMBERS.json) with the `isBoardMember` set to `true`. We also transparently list all the GB members in [AsyncAPI Website](`https://asyncapi.com/community/board`)
 
-To become a GB member, you need to be a member of Technical Steering Committee (TSC). To become a member of TSC, you need to be either Ambassador or Maintainer. 
+To become a GB member, you need to be a member of the Technical Steering Committee (TSC). To become a member of TSC, you need to be either Ambassador or Maintainer. 
 
 ### Election of the Governance Board
 
 Elections are conducted every 12 months. Initially, 3 board members will be elected. After a period of 12 months, two additional members will be elected. This cycle recurs every 24 months. The elections will serve to either re-elect incumbent members or appoint new individuals to the board.
 
 - At least 60 days prior to elections, the Governance Board (GB) must invite the community to suggest candidates. It must be done through a blog post that will be promoted via the current AsyncAPI communication channels.
-- People can also submit their application on their own. 
-- Information about candidate must be sent to info@asyncapi.io not later than 30 days before elections.
+- Community members may also submit their own applications. 
+- Information about a candidate must be sent to info@asyncapi.io no later than 30 days before elections.
 - Nominee must agree to be nominated.
-- List of candidates must be published at least on AsyncAPI Website not later than 2 weeks before elections.
+- The list of candidates must be published on the AsyncAPI website no later than 2 weeks before elections.
 - Concerns about candidates should be reported to Code of Conduct Committee. 
 - GB calls out for voting by presenting the candidates and instructing how people should vote. Voting is private because we need to respect candidates and possible issues related to public rejection. Candidates know their results. Only winners and their votes are presented to public.
 - TSC members are free to share publicly who they voted on.
@@ -39,17 +39,17 @@ In the event that a board member's term is terminated prior to its scheduled end
 
 ### Duties and Responsibilities
 
-Among others, the duties and responsibilities of the GB are the following:
+Among others, the duties and responsibilities of the GB include:
 
-- Make sure the [charter](./CHARTER.md) is respected.
-- Make sure AsyncAPI is a safe and inclusive community for everyone to thrive.
-- Make sure AsyncAPI is economically viable, i.e., get more sponsors or other ways of funding.
-- Safely hold all the passwords of the services AsyncAPI uses.
-- Manage AsyncAPI Initiative employees and hiring process.
-- Guarantee everyone who needs it (and has the right to) has access to the services AsyncAPI uses.
-- Make sure that regularly sucessions of the GB are done through a transparent voting process.
-- Takes care of the funding management, e.g., Open Collective, Github Sponsors, etc.
-- Must be a servant leader and has no power other than the specified in the [charter](./CHARTER.md). Everything that is proposed should be voted by the TSC.
+- Ensure compliance with the [charter](./CHARTER.md).
+- Maintain a safe and inclusive environment for all AsyncAPI participants.
+- Sustain AsyncAPI’s economic viability, including sponsorship and funding strategies.
+- Securely manage credentials for all AsyncAPI services.
+- Oversee AsyncAPI employees and hiring.
+- Ensure authorized access to AsyncAPI services.
+- Conduct regular GB succession via a transparent voting process.
+- Manage funding streams (e.g., Open Collective, GitHub Sponsors).
+- Serve as a servant leader with authority limited to what is specified in the [charter](./CHARTER.md); all proposals require TSC approval.
 
 Please note that the list above is not an exhaustive list and should not be treated as a legal document but just for reference.
 
