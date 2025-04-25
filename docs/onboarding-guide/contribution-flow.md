@@ -14,7 +14,7 @@ At AsyncAPI, we value **quality over quantity**. This guide will help you make m
 ### Before You Start Contributing
 - If you are joining AsyncAPI through [Slack](https://asyncapi.com/slack-invite) or an event, take your time to explore the [AsyncAPI website](https://www.asyncapi.com/).  
 - Read our [Code of Conduct](https://github.com/asyncapi/.github/blob/master/CODE_OF_CONDUCT.md).  
-- [Attend meetings](https://www.asyncapi.com/community/events) and engage in discussions in the [Slack channel](https://asyncapi.com/slack-invite).
+- [Attend meetings](https://www.asyncapi.com/community/events) and engage in discussions in the [`#11_contributing` Slack channel](https://asyncapi.com/slack-invite).
 - Read the [documentation](https://www.asyncapi.com/docs) to learn more about AsyncAPI.
 
 ### Before Making a Contribution
@@ -30,7 +30,7 @@ At AsyncAPI, we value **quality over quantity**. This guide will help you make m
 - When you do find one, request to be assigned.
 - If you noticed a bug, typo, or improvement, feel free to create an issue.
 - **Make a PR only after a maintainer assigned the issue to you** even if you created the issue yourself.
-- Follow the [conventional commits guide](/asyncapi/community/blob/master/docs/onboarding-guide/conventional-commits.md) to write a good PR title.
+- Follow the [conventional commits guide](conventional-commits) to write a good PR title.
 - Follow the [git workflow document](/asyncapi/community/blob/master/git-workflow.md) when working on your changes and making a PR.
 - After making a PR, patiently wait for reviews.
 - Make sure all your PR checks pass (turn green) to speed up the merging process.  
@@ -39,31 +39,11 @@ At AsyncAPI, we value **quality over quantity**. This guide will help you make m
 ## Contribution Flow
 This is a summary of the ideal contribution flow.
 
-```
-    ┌───────────────────────┐
-    │                       │
-    │    Open an issue      │
-    │  (a bug report or a   │
-    │   feature request)    │
-    │                       │
-    └───────────────────────┘
-               ⇩
-    ┌───────────────────────┐
-    │                       │
-    │  Open a Pull Request  │
-    │   (only after issue   │
-    │     is approved)      │
-    │                       │
-    └───────────────────────┘
-               ⇩
-    ┌───────────────────────┐
-    │                       │
-    │   Your changes will   │
-    │     be merged and     │
-    │ published on the next │
-    │        release        │
-    │                       │
-    └───────────────────────┘
+```mermaid
+flowchart TD
+    A[Open an issue - a bug report or a feature request]
+    A --> B[Open a Pull Request - only after issue is approved]
+    B --> C[Your changes will be merged and published on the next release]
 ```
 
 
