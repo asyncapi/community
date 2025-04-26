@@ -48,7 +48,7 @@ git add .
 ```
 Commit your changes with a meaningful message:
 ```bash
-git commit -m "Fix unit tests"
+git commit -m "fix: update unit tests"
 ```
 
 ### 4. Push Your Changes
