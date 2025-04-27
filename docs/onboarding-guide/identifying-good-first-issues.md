@@ -1,3 +1,11 @@
+---
+id: identifying-good-first-issues
+title: Identifying Good First Issues
+sidebar_label: Identifying Good First Issues
+description: A guide to help new contributors find and work on beginner-friendly issues in AsyncAPI projects
+weight: 50
+---
+
 # Start Contributing to AsyncAPI
 Welcome to the AsyncAPI community! Not sure where to make your first contribution? This guide is a treasure map to help you navigate the process, find the right issues, and get started with contributing to AsyncAPI.
 
