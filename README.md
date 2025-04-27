@@ -84,7 +84,7 @@ Welcome to the Community Documentation directory! Our goal is to collaboratively
 ---
 ## Our Charter 📜
 
-The **[Async API Charter](./CHARTER.md)** outlines the structure, responsibilities, and procedures for contributions and oversight of the AsyncAPI open project. <br>
+The **[AsyncAPI Charter](./CHARTER.md)** outlines the structure, responsibilities, and procedures for contributions and oversight of the AsyncAPI open project. <br>
 
  #### Key sections include:
 
