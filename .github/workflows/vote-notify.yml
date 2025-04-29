@@ -102,9 +102,11 @@ jobs:
             // The number of buffer days is easily configurable by changing the value of the days variable
             const issues = ${{ steps.list.outputs.result }};
             const initialState = ${{ steps.fetch.outputs.vote_status }};
-            const config = {
-              days: 0
-            }
+
+            // On manual dispatch, override to 0; on schedule keep 5
+            // If workflow_dispatch is used (manual workflow trigger) then we want to set 0 to force notification sending, even if it was just sent or the other day
+            const daysBuffer = context.eventName === 'workflow_dispatch' ? 0 : 5;
+            const config = { days: daysBuffer };
 
             const { issuesToNotify, state } = filterIssues(issues, initialState, config);
 
@@ -114,7 +116,6 @@ jobs:
             const failingEmails = new Set();
 
             const method = process.env.NOTIFY_METHOD; // 'email' | 'slack' | 'both'
-            
 
             console.log(`Notification method: ${method}`);
             console.log(`Issues to notify: ${JSON.stringify(issuesToNotify.map(issue => issue.number))}`);
@@ -128,14 +129,14 @@ jobs:
                 // Only send Slack if requested
                 if (method === 'slack' || method === 'both') {
                   if (!await sendSlackNotification(member, issue, daysSinceStart, process.env.SLACK_DM, voteCommentURL)) {
-                    failingIds.add(member.slack);
+                    failingSlackIds.add(member.slack);
                   }
                 }
 
                 // Only send Email if requested
                 if (method === 'email' || method === 'both') {
                   if (!await sendMailNotification(member, issue, daysSinceStart, process.env.SLACK_DM, sendMail, voteCommentURL)) {
-                    failingIds.add(member.email);
+                    failingEmails.add(member.email);
                   }
                 }
               }
@@ -147,8 +148,8 @@ jobs:
             // Store the failing IDs in GITHUB_ENV
             const failingIds = [...failingSlackIds, ...failingEmails];
             if (failingIds.length > 0) {
-              process.env.FAILED_IDS = Array.from(failingIds).join(',');
-              core.exportVariable('FAILED_IDS', JSON.stringify(Array.from(failingIds)));
+              process.env.FAILED_IDS = failingIds.join(',');
+              core.exportVariable('FAILED_IDS', JSON.stringify(failingIds));
             }
 
             // Store the state back
