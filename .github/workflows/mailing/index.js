@@ -8,6 +8,10 @@ const sendMail = async (to, type, name, links, title, custom = {}) => {
   const { subject, html } = htmlMailContent(type, name, links, title, custom);
   const text = htmlToText(html);
 
+  console.debug(`Sending mail with subject: ${subject}`);
+  console.debug(`Sending mail with text: ${text}`);
+  console.debug(`Sending mail with text in html: ${html}`);
+
   const msg = {
     to,
     from,
