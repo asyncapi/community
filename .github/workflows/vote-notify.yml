@@ -1,6 +1,17 @@
 name: Notify TSC Members about Voting Status
 
 on:
+  workflow_dispatch:
+    inputs:
+      notification_method:
+        description: 'Which channel(s) to notify on manual dispatch'
+        required: true
+        default: 'both'
+        type: choice
+        options:
+          - email
+          - slack
+          - both
   schedule:
     # Daily at 9:00 UTC
     - cron: '0 9 * * *'
@@ -47,52 +58,65 @@ jobs:
           # This file comes from the branch vote_state which is created by the stateful-action
           # Eg: https://github.com/ash17290/asyncapi-community/tree/vote_state
           cd .vote_state
-          
+
           # Check if the file exists, not empty and readable and create if not
           if [ ! -f vote_status.json ] || [ ! -s vote_status.json ] || [ ! -r vote_status.json ]; then
-            echo "Intializing vote_status.json"
+            echo "Initializing vote_status.json"
             echo "{}" > vote_status.json
           fi
 
           # Read the file and export it as JSON
           export json=$(cat vote_status.json | jq -c)
-
           echo "::debug::vote_status=$json"
 
           # Store in GitHub Output
           echo "vote_status=$json" >> $GITHUB_OUTPUT
-      
+
       # Needed as axios and js-yaml are not available in the default environment
       - name: Install the dependencies
         run: npm install js-yaml@4.1.0 axios@1.7.4 @sendgrid/mail@8.1.4
         shell: bash
-      
+
       - name: Notify TSC Members
         uses: actions/github-script@v7
         id: notify
         env:
           SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}
+          # default to 'both' if inputs.notification_method is undefined (schedule runs)
+          NOTIFY_METHOD: ${{ github.event.inputs.notification_method || 'both' }}
+          SLACK_DM: ${{ secrets.SLACK_DM_TSC }}
         with:
           script: |
             const yaml = require('js-yaml');
             const fs = require('fs');
-            const axios = require('axios');
+            const {
+              filterIssues,
+              getTSCLeftToVote,
+              sendSlackNotification,
+              sendMailNotification
+            } = require('./.github/workflows/vote-notify-helpers/index.js');
+            const { sendMail } = require('./.github/workflows/mailing/index.js');
 
             // Creates list of issues for which the TSC members need to be notified
             // The number of buffer days is easily configurable by changing the value of the days variable
-            const { filterIssues, getTSCLeftToVote, sendSlackNotification, sendMailNotification } = require('./.github/workflows/vote-notify-helpers/index.js');
-            const { sendMail } = require('./.github/workflows/mailing/index.js');
             const issues = ${{ steps.list.outputs.result }};
             const initialState = ${{ steps.fetch.outputs.vote_status }};
-            const config = {
-              days: 5
-            }
+
+            // On manual dispatch, override to 0; on schedule keep 5
+            // If workflow_dispatch is used (manual workflow trigger) then we want to set 0 to force notification sending, even if it was just sent or the other day
+            const daysBuffer = context.eventName === 'workflow_dispatch' ? 0 : 5;
+            const config = { days: daysBuffer };
 
             const { issuesToNotify, state } = filterIssues(issues, initialState, config);
 
+            // Read TSC members from MAINTAINERS.yaml
             const tscMembers = yaml.load(fs.readFileSync('MAINTAINERS.yaml', 'utf8')).filter(member => member.isTscMember);
             const failingSlackIds = new Set();
             const failingEmails = new Set();
+
+            const method = process.env.NOTIFY_METHOD; // 'email' | 'slack' | 'both'
+
+            console.log(`Notification method: ${method}`);
             console.log(`Issues to notify: ${JSON.stringify(issuesToNotify.map(issue => issue.number))}`);
 
             for (const issue of issuesToNotify) {
@@ -101,22 +125,30 @@ jobs:
               for (const member of leftToVote) {
                 console.log(`Notifying ${member.name} about issue #${issue.number}`);
 
-                if (!await sendSlackNotification(member, issue, daysSinceStart, `${{ secrets.SLACK_DM_TSC }}`, voteCommentURL)) {
-                  failingSlackIds.add(member.slack);
+                // Only send Slack if requested
+                if (method === 'slack' || method === 'both') {
+                  if (!await sendSlackNotification(member, issue, daysSinceStart, process.env.SLACK_DM, voteCommentURL)) {
+                    failingSlackIds.add(member.slack);
+                  }
                 }
 
-                if (!await sendMailNotification(member, issue, daysSinceStart, `${{ secrets.SLACK_DM_TSC }}`, sendMail, voteCommentURL)) {
-                  failingEmails.add(member.email);
+                // Only send Email if requested
+                if (method === 'email' || method === 'both') {
+                  if (!await sendMailNotification(member, issue, daysSinceStart, process.env.SLACK_DM, sendMail, voteCommentURL)) {
+                    failingEmails.add(member.email);
+                  }
                 }
               }
+
+              // Update last_notified timestamp
               state[issue.number].last_notified = new Date().toISOString();
             }
 
             // Store the failing IDs in GITHUB_ENV
             const failingIds = [...failingSlackIds, ...failingEmails];
             if (failingIds.length > 0) {
-              process.env.FAILED_IDS = Array.from(failingIds).join(',');
-              core.exportVariable('FAILED_IDS', JSON.stringify(Array.from(failingIds)));
+              process.env.FAILED_IDS = failingIds.join(',');
+              core.exportVariable('FAILED_IDS', JSON.stringify(failingIds));
             }
 
             // Store the state back
@@ -127,11 +159,12 @@ jobs:
         run: |
           echo ${{ steps.notify.outputs.result }} | jq > ./.vote_state/vote_status.json
 
+      # Always alert on any failures, regardless of method
       - name: Notify about failing Slack DMs
-        if: env.FAILED_IDS
+        if: ${{ env.FAILED_IDS }}
         uses: rtCamp/action-slack-notify@v2
         env:
-          SLACK_WEBHOOK: ${{secrets.SLACK_CI_FAIL_NOTIFY}}
-          SLACK_TITLE: 🚨 Vote notifications could'nt be sent to following IDs 🚨
-          SLACK_MESSAGE: ${{ env.FAILED_SLACK_IDS }}
+          SLACK_WEBHOOK: ${{ secrets.SLACK_CI_FAIL_NOTIFY }}
+          SLACK_TITLE: 🚨 Vote notifications couldn’t be sent 🚨
+          SLACK_MESSAGE: ${{ env.FAILED_IDS }}
           MSG_MINIMAL: true
