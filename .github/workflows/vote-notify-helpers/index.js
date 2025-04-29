@@ -165,6 +165,8 @@ async function sendMailNotification(member, issue, daysSinceStart, slackToken, s
       return false;
     }
 
+	console.debug(`Fetched email from Slack for ${response.data.user.profile.real_name_normalized}: ${response.data.user.profile.email}`);
+
     const { real_name_normalized, email } = response.data.user.profile;
     const { success, message } = await sendMail(email, 'voting', real_name_normalized, links, title, { days: daysSinceStart });
 
