@@ -1,6 +1,7 @@
 name: Notify TSC Members about Voting Status
 
 on:
+  workflow_dispatch:
   schedule:
     # Daily at 9:00 UTC
     - cron: '0 9 * * *'
@@ -47,7 +48,7 @@ jobs:
           # This file comes from the branch vote_state which is created by the stateful-action
           # Eg: https://github.com/ash17290/asyncapi-community/tree/vote_state
           cd .vote_state
-          
+
           # Check if the file exists, not empty and readable and create if not
           if [ ! -f vote_status.json ] || [ ! -s vote_status.json ] || [ ! -r vote_status.json ]; then
             echo "Intializing vote_status.json"
@@ -61,12 +62,12 @@ jobs:
 
           # Store in GitHub Output
           echo "vote_status=$json" >> $GITHUB_OUTPUT
-      
+
       # Needed as axios and js-yaml are not available in the default environment
       - name: Install the dependencies
         run: npm install js-yaml@4.1.0 axios@1.7.4 @sendgrid/mail@8.1.4
         shell: bash
-      
+
       - name: Notify TSC Members
         uses: actions/github-script@v7
         id: notify
@@ -85,7 +86,7 @@ jobs:
             const issues = ${{ steps.list.outputs.result }};
             const initialState = ${{ steps.fetch.outputs.vote_status }};
             const config = {
-              days: 5
+              days: 0
             }
 
             const { issuesToNotify, state } = filterIssues(issues, initialState, config);
