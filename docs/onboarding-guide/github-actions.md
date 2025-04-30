@@ -14,8 +14,6 @@ This document outlines how AsyncAPI utilizes GitHub Actions to automate and opti
 - [Global workflows overview](#global-workflows-overview)
 - [Global replicator workflow](#global-replicator-workflow)
 - [How to opt in or out of global workflows](#how-to-opt-in-or-out-of-global-workflows)
-  - [Opt-In](#opt-in)
-  - [Opt-Out](#opt-out)
 - [Semantic release and automation](#semantic-release-and-automation)
 - [Slash commands](#slash-commands)
 - [Basic requirements to use global workflows](#basic-requirements-to-use-global-workflows)
