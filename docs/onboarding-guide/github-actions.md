@@ -6,7 +6,6 @@ weight: 120
 This document outlines how AsyncAPI utilizes GitHub Actions to automate and optimize workflows. It provides a comprehensive guide for maintainers and contributors, explaining global and local workflows, common commands, repository setup, and best practices.
 
 ## Table of Contents
-- [Table of Contents](#table-of-contents)
 - [TL;DR](#tldr)
 - [Introduction to GitHub Actions](#introduction-to-github-actions)
 - [Types of GitHub Actions workflows](#types-of-github-actions-workflows)
