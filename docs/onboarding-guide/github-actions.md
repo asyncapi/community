@@ -3,35 +3,26 @@ title: 'Utilizing GitHub Actions'
 weight: 120
 ---
 
-This document outlines how AsyncAPI utilizes GitHub Actions to automate and optimize workflows. It provides a comprehensive guide for maintainers and contributors, explaining global and local workflows, common commands, repository setup, and best practices.
-
-## Table of Contents
-- [TL;DR](#tldr)
-- [Introduction to GitHub Actions](#introduction-to-github-actions)
+- [Overview](#overview)
 - [Types of GitHub Actions workflows](#types-of-github-actions-workflows)
   - [Local workflows](#local-workflows)
   - [Global workflows](#global-workflows)
 - [Global workflows overview](#global-workflows-overview)
 - [Global replicator workflow](#global-replicator-workflow)
 - [How to opt in or out of global workflows](#how-to-opt-in-or-out-of-global-workflows)
+  - [Opt-in](#opt-in)
+  - [Opt-out](#opt-out)
 - [Semantic release and automation](#semantic-release-and-automation)
 - [Slash commands](#slash-commands)
 - [Basic requirements to use global workflows](#basic-requirements-to-use-global-workflows)
 
-## TL;DR
-
-- Understand the difference between **local** and **global** workflows.  
-- Use **global workflows** to standardize CI/CD and reduce duplication.  
-- **Opt in** to workflows via repository topics or manual triggers.  
-- Follow **Semantic Release** and **Conventional Commits** for automatic versioning.  
-- Use **slash commands** like `/help` and `/rmt` to automate common PR tasks.  
-- Ensure basic setup: add the bots team as maintainers and Eve to CODEOWNERS.
-
-## Introduction to GitHub Actions
+## Overview
 
 [GitHub Actions](https://docs.github.com/actions) is a continuous integration and continuous delivery (CI/CD) platform that automates software development workflows directly within a GitHub repository.
 
 At AsyncAPI, GitHub Actions is crucial for maintaining consistency, efficiency, and quality across our projects by handling repetitive tasks automatically.
+
+This document outlines how AsyncAPI utilizes GitHub Actions to automate and optimize workflows. It provides a comprehensive guide for maintainers and contributors, explaining global and local workflows, common commands, repository setup, and best practices.
 
 ## Types of GitHub Actions workflows
 
@@ -122,13 +113,13 @@ The [Global Replicator Workflow](https://github.com/asyncapi/.github/blob/master
 
 ## How to opt in or out of global workflows
 
-### Opt-In  
+### Opt-in  
 
   To opt in to a global workflow managed in the AsyncAPI `.github` repository, you can either add a specific topic to your repository (via GitHub settings or the GitHub CLI) or ask a maintainer to trigger it manually for you.
   
   To do this, reach out on Slack or open an issue, and a maintainer can run the “Global workflow to rule them all” from the **Actions** tab, optionally targeting your repo by name.
 
-### Opt-Out
+### Opt-out
 
   Some workflows are applied automatically to all repositories. If you’d like to opt out of one of those, your repository must be added to the `repos_to_ignore` list in the relevant job. This change has to be made in the global workflow by a maintainer, so just ask in Slack or open an issue if you'd like to be excluded.
 
