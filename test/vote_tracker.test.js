@@ -1,4 +1,4 @@
-const { isVotingWithinLastThreeMonths } = require('../.github/scripts/vote_tracker_utils.js');
+const { isVotingWithinLastThreeMonths } = require('../.github/scripts/vote_tracker/utils.js');
 
 describe('Vote Tracker Edge Cases', () => {
   test.each([
