@@ -35,7 +35,7 @@ At AsyncAPI, GitHub Actions is crucial for maintaining consistency, efficiency, 
 
 ## Types of GitHub Actions workflows
 
-At AsyncAPI, there are two types of workflows:
+At AsyncAPI, there are two types of workflows: [local](#local-workflows) and [global](#global-workflows).
 
 ### Local workflows
 
