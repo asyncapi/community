@@ -1,4 +1,4 @@
-module.exports = { filterIssues, getTSCLeftToVote, sendSlackNotification };
+module.exports = { filterIssues, getTSCLeftToVote, sendSlackNotification, sendMailNotification };
 
 const axios = require('axios');
 
@@ -52,7 +52,7 @@ function filterIssues(issues, state, config) {
  * @param {Array} tscMembers  List of TSC members
  * @param {Object} github  GitHub object
  * @param {Object} context  GitHub context object
- * @returns 
+ * @returns {Object} leftToVote, daysSinceStart, voteCommentURL
  */
 async function getTSCLeftToVote(issue, tscMembers, github, context) {
   try {
@@ -85,6 +85,7 @@ async function getTSCLeftToVote(issue, tscMembers, github, context) {
     return {
       leftToVote,
       daysSinceStart: Math.floor((new Date().getTime() - new Date(voteOpeningComment.created_at).getTime()) / (1000 * 60 * 60 * 24)),
+      voteCommentURL: voteOpeningComment.html_url,
     }
   } catch (error) {
     console.log(`Error fetching comments and reactions for issue #${issue.number}: ${error}`);
@@ -96,12 +97,14 @@ async function getTSCLeftToVote(issue, tscMembers, github, context) {
  * 
  * @param {Object} member  TSC member object
  * @param {Object} issue  Issue object
+ * @param {Number} daysSinceStart  Days since voting started
  * @param {String} slackToken  Slack token
+ * @param {String} voteCommentURL  Vote comment URL
  * 
  * @returns {Boolean} true if Slack notification sent successfully, false otherwise
  */
-async function sendSlackNotification(member, issue, daysSinceStart, slackToken) {
-  const message = `👋 Hi ${member.name},\nWe need your vote on the following topic: *${issue.title}*.\n*Issue Details*: ${issue.html_url}\n*Days since voting started: ${daysSinceStart}*\nYour input is crucial to our decision-making process. Please take a moment to review the voting topic and share your thoughts.\nThank you for your contribution! 🙏`;
+async function sendSlackNotification(member, issue, daysSinceStart, slackToken, voteCommentURL) {
+  const message = `👋 Hi ${member.name},\nWe need your vote on the following topic: *${issue.title}*.\n*Issue Details*: \nIssue URL: ${issue.html_url}\nVote Comment URL: ${voteCommentURL}\n*Days since voting started: ${daysSinceStart}*\nYour input is crucial to our decision-making process. Please take a moment to review the voting topic and share your thoughts.\nThank you for your contribution! 🙏`;
 
   // Sending Slack DM via API
   try {
@@ -125,6 +128,57 @@ async function sendSlackNotification(member, issue, daysSinceStart, slackToken) 
   } catch (error) {
     console.error(`Error sending Slack DM to ${member.name}: ${error.message}`);
 
+    return false;
+  }
+}
+
+/**
+ * 
+ * @param {Object} member  TSC member object
+ * @param {Object} issue  Issue object
+ * @param {Number} daysSinceStart  Days since voting started
+ * @param {String} slackToken  Slack token
+ * @param {Function} sendMail  Mail function
+ * @param {String} voteCommentURL  Vote comment URL
+ * 
+ * @returns {Boolean} true if mail notification sent successfully, false otherwise
+ */
+async function sendMailNotification(member, issue, daysSinceStart, slackToken, sendMail, voteCommentURL) {
+  const title = issue.title;
+  const links = [
+    { title: 'Issue Link', url: issue.html_url },
+    { title: 'Vote Comment URL', url: voteCommentURL },
+  ]
+  const SLACK_URL = `https://slack.com/api/users.info?user=${member.slack}`
+
+  try {
+    // Fetch email from slack
+    const response = await axios.get(SLACK_URL, {
+      headers: {
+        'Authorization': `Bearer ${slackToken}`,
+        'Content-Type': 'application/json',
+      },
+    });
+
+    if (!response.data.ok) {
+      console.error(`Error fetching email from Slack for ${member.name}: ${response.data.error}`);
+      return false;
+    }
+
+	//logging only type of email value to identify if undefined or string so we know if API responds with data or there are some scopes issues and API returns undefined
+	console.debug(`Fetched email from Slack for ${response.data.user.profile.real_name_normalized} and data is: ${typeof response.data.user.profile.email}`);
+
+    const { real_name_normalized, email } = response.data.user.profile;
+    const { success, message } = await sendMail(email, 'voting', real_name_normalized, links, title, { days: daysSinceStart });
+
+    if (!success) {
+      console.error(`Error sending mail to ${member.name}: ${message}`);
+      return false;
+    }
+
+    return true;
+  } catch (error) {
+    console.error(`Error sending mail to ${member.name}: ${error.message}`);
     return false;
   }
 }
