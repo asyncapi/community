@@ -1,5 +1,6 @@
 ---
 title: Strategies for mentoring new maintainers
+description: This onboarding guide suggests important strategies that are helpful in mentoring new maintainers.
 weight: 150
 ---
 
