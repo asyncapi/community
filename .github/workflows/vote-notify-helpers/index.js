@@ -165,6 +165,9 @@ async function sendMailNotification(member, issue, daysSinceStart, slackToken, s
       return false;
     }
 
+	//logging only type of email value to identify if undefined or string so we know if API responds with data or there are some scopes issues and API returns undefined
+	console.debug(`Fetched email from Slack for ${response.data.user.profile.real_name_normalized} and data is: ${typeof response.data.user.profile.email}`);
+
     const { real_name_normalized, email } = response.data.user.profile;
     const { success, message } = await sendMail(email, 'voting', real_name_normalized, links, title, { days: daysSinceStart });
 
