@@ -3,7 +3,7 @@
 <p align="center">
   for</br>
   AsyncAPI Project a Series of LF Projects, LLC</br>
-  Adopted 03-19-2021, Amended [TODO:set a date once agreed with LF]
+  Adopted 03-19-2021, Amended 05-05-2025
 </p>
 
 <!-- TOC -->
