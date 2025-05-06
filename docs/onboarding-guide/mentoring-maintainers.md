@@ -24,7 +24,7 @@ Here are strategies that help new maintainers onboard successfully:
 
 - **Encourage questions early and often:** Make it clear that questions are welcome at any time—not just during meetings. Create a safe space for learning.
 
-- **Recorded Breakthroughs:** Share video walkthroughs of project architecture, common workflows, or release processes. These become reusable training resources.
+- **Recorded Walkthroughs:** Share video walkthroughs of project architecture, common workflows, or release processes. These become reusable training resources.
 
 - **Regular Check-Ins:** Weekly or bi-weekly syncs are useful for tracking progress, giving feedback, and offering encouragement. These meetings don’t replace async communication—both are important.
 
