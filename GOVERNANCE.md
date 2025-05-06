@@ -1,8 +1,8 @@
 ## Governance Board (GB) members
 
-You can determine who are the current GB members by filtering the [MAINTAINERS.yaml](MAINTAINERS.yaml) and the [AMBASSADORS_MEMBERS.json](AMBASSADORS_MEMBERS.json) with the `isBoardMember` set to `true`. We also transparently list all the GB members in [AsyncAPI Website](`https://asyncapi.com/community/board`)
+You can determine who the current GB members are by filtering the [MAINTAINERS.yaml](MAINTAINERS.yaml) and the [AMBASSADORS_MEMBERS.json](AMBASSADORS_MEMBERS.json) with the `isBoardMember` set to `true`. We also transparently list all the GB members in [AsyncAPI Website](`https://asyncapi.com/community/board`)
 
-To become a GB member, you need to be a member of the Technical Steering Committee (TSC). To become a member of TSC, you need to be either Ambassador or Maintainer. 
+To become a GB member, you need to be a member of the Technical Steering Committee (TSC). To become a member of TSC, you need to be either an Ambassador or a Maintainer. 
 
 ### Election of the Governance Board
 
@@ -13,9 +13,9 @@ Elections are conducted every 12 months. Initially, 3 board members will be elec
 - Information about a candidate must be sent to info@asyncapi.io no later than 30 days before elections.
 - Nominee must agree to be nominated.
 - The list of candidates must be published on the AsyncAPI website no later than 2 weeks before elections.
-- Concerns about candidates should be reported to Code of Conduct Committee. 
-- GB calls out for voting by presenting the candidates and instructing how people should vote. Voting is private because we need to respect candidates and possible issues related to public rejection. Candidates know their results. Only winners and their votes are presented to public.
-- TSC members are free to share publicly who they voted on.
+- Concerns about candidates should be reported to the Code of Conduct Committee. 
+- GB calls out for voting by presenting the candidates and instructing people how to vote. Voting is private because we need to respect candidates and possible issues related to public rejection. Candidates know their results. Only winners and their votes are presented to the public.
+- TSC members are free to share publicly who they voted for.
 
 #### Explanation of the Board Election and Term Cycle
 
@@ -29,7 +29,7 @@ Staggered Elections:
 Continuous Cycle:
 
 - After the initial 24 months, the terms of the first 3 members come to an end. These positions are up for re-election or reappointment.
-- One year later (after the 24-months period of the second group ends), the positions of the remaining 2 members are up for re-election or reappointment.
+- One year later (after the 24-month period of the second group ends), the positions of the remaining 2 members are up for re-election or reappointment.
 
 This system ensures a staggered rotation of board members, maintaining continuity in governance while allowing periodic introduction of fresh perspectives.
 
@@ -51,7 +51,7 @@ Among others, the duties and responsibilities of the GB include:
 - Manage funding streams (e.g., Open Collective, GitHub Sponsors).
 - Serve as a servant leader with authority limited to what is specified in the [charter](./CHARTER.md); all proposals require TSC approval.
 
-Please note that the list above is not an exhaustive list and should not be treated as a legal document but just for reference.
+Please note that the list above is not an exhaustive list and should not be treated as a legal document, but just for reference.
 
 
 ### Governance Board Chairperson
@@ -60,21 +60,21 @@ Board members will appoint a chairperson during the first board meeting followin
 
 ## Technical Steering Committee (TSC) members
 
-You can determine who is TSC member and has right to vote from [MAINTAINERS.yaml](MAINTAINERS.yaml) and [AMBASSADORS_MEMBERS.json](AMBASSADORS_MEMBERS.json), `isTSCMember` properties. We also transparently list all the TSC members in [AsyncAPI Website](`https://asyncapi.com/community/tsc`).
+You can determine who is a TSC member and has the right to vote from [MAINTAINERS.yaml](MAINTAINERS.yaml) and [AMBASSADORS_MEMBERS.json](AMBASSADORS_MEMBERS.json), `isTSCMember` properties. We also transparently list all the TSC members in [AsyncAPI Website](`https://asyncapi.com/community/tsc`).
 
 Any maintainer and any ambassador can change their status by editing `isTSCMember` properties.
 
 ## Voting
 
-TSC Voting process and all related rules are describe in detail in [voting procedure document](voting.md).
+TSC Voting process and all related rules are described in detail in [voting procedure document](voting.md).
 
 GB election voting is a separate manual process run by current GB members:
-- Vote should be sent to info@asyncapi.io not later than two weeks after elections start
-- Vote should be a list of candidates that voter want to be GB members. If there are 2 slots available, voter should send 2 names, if 3 then voter should send 3 names. We follow [first-past-the-post](https://en.wikipedia.org/wiki/First-past-the-post_voting) voting process. Candidates with the highest number of votes win.
+- The vote should be sent to info@asyncapi.io not later than two weeks after the elections start
+- The vote should be a list of candidates that voters want to be GB members. If there are 2 slots available, the voter should send 2 names; if 3, then the voter should send 3 names. We follow [first-past-the-post](https://en.wikipedia.org/wiki/First-past-the-post_voting) voting process. Candidates with the highest number of votes win.
 
 ## Past directors
 
-We no longer have Executive Directors in the project
+We no longer have Executive Directors in the project.
 
 #### Fran Mendez
 
