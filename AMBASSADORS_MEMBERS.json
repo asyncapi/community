@@ -56,8 +56,9 @@
     "github": "danielkocot",
     "twitter": "dk_1977",
     "linkedin": "danielkocot",
-    "company": "Codecentric AG",
+    "company": "codecentric AG",
     "country": "🇩🇪",
+    "isTscMember": true,	  
     "contributions": [
       {
 	"type": "article",
