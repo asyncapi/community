@@ -28,7 +28,7 @@ At AsyncAPI, we value **quality over quantity**. This guide will help you make m
 1. Set up your workflow environment using the [git workflow guide](/asyncapi/community/blob/master/git-workflow.md).
 2. Search for [good first issues](https://github.com/issues?page=1&q=is%3Aopen+org%3Aasyncapi+sort%3Aupdated-desc+label%3A%22good+first+issue%22). 
 3. When you do find one, request to be assigned.
-4. If you noticed a bug, typo, or improvement, feel free to create an issue.
+4. If you noticed a bug, typo, or a needed improvement, feel free to create an issue.
 5. **Make a PR only after a maintainer assigned the issue to you** even if you created the issue yourself.
 6. Follow the [conventional commits guide](conventional-commits) to write a good PR title.
 7. Follow the [git workflow document](/asyncapi/community/blob/master/git-workflow.md) when working on your changes and making a PR.
@@ -37,6 +37,37 @@ At AsyncAPI, we value **quality over quantity**. This guide will help you make m
 10. If your PR hasn’t been reviewed after **a week and half**, you can gently remind a maintainer on Slack or GitHub. Delays can happen for various reasons, but no one is ignoring you! 🙏🏼 .
 
 ## Important Contribution Rules
+To help maintain a welcoming and productive environment, we have outlined a few important contribution rules that all contributors—especially new ones—must follow.
+
+These rules are here to help you succeed and to support the maintainers and community as we all work together. Not following them can lead to consequences, such as being blocked from submitting PRs or being removed from the community.
+
+### ✅ What You Should Always Do
+
+- **Be patient**. Maintainers are volunteers with jobs, families, and responsibilities. It may take time for your pull request (PR) or issue to be reviewed.
+- **Use the right Slack channels**. If you’re unsure where to post, ask politely or take a moment to check.
+- **Keep Slack tidy**. Use threads for conversations, avoid tagging `@maintainers` unless truly necessary, and don’t spam.
+- **Follow our [Slack etiquette](https://github.com/asyncapi/community/blob/master/slack-etiquette.md)** **and [Code of Conduct](https://github.com/asyncapi/.github/blob/master/CODE_OF_CONDUCT.md)**.
+- **Respect others**. Treat everyone with kindness and patience. We are all here to learn and grow together.
+
+### ❌ What You Should Never Do
+
+- Don’t tag maintainers repeatedly or demand attention.
+- Don’t post the same message in multiple places.
+- Don’t expect instant replies.
+- Don’t ignore the onboarding materials and contribution guidelines.
+
+### ⚠️ What Happens If You Break the Rules
+
+We’re friendly and welcoming, but we also value focus and respect. If rules are ignored:
+
+- You may be muted or temporarily removed from Slack.
+- Repeated behavior could lead to permanent removal from the community.
+- PRs or issues may be closed or rejected if the behavior affects maintainers or the community.
+
+These rules are not meant to scare anyone—they’re here to make sure everyone can enjoy a healthy and respectful space. When in doubt, be thoughtful, ask questions politely, and refer to our onboarding and etiquette docs.
+
+Let’s keep AsyncAPI a community where people enjoy contributing. 👏🏼
+
 
 
 ## Contribution Checklist
