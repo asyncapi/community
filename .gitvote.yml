@@ -4,6 +4,7 @@ profiles:
     pass_threshold: 51
     periodic_status_check: "1 week"
     close_on_passing: true
+    close_on_passing_min_wait: "7 days"
     allowed_voters:
       teams:
         - tsc_members
