@@ -5,37 +5,63 @@ weight: 150
 ---
 
 # Introduction
+
 This guide outlines strategies for mentoring and supporting new maintainers within the AsyncAPI project. By documenting and adopting these strategies, we aim to promote long-term sustainability, reduce the burden on existing maintainers, and ensure new maintainers thrive in their roles.
 
 As we continue to emphasize the importance of onboarding new maintainers, we must also provide them with the necessary tools, guidance, and support to ensure their success. While this document is primarily intended for new maintainers, it also serves as a valuable resource for existing maintainers, contributors, and the broader AsyncAPI community.
 
-## How to do mentoring to get best results
-These are some strategies to guide maintainers as they begin their journey.
-- **One-on-One Mentorship:** New maintainers are paired with experienced ones for personalized guidance. This allows for direct support, fosters trust, and creates a space for open questions and learning.
-- **Shadowing:** Before fully stepping into the role, new maintainers can observe experienced maintainers reviewing code, observing decision-making processes, and attending community meetings. This hands-on exposure helps them build confidence and context.
-- **Recorded Breakthroughs:** Experienced maintainers can record video walkthroughs of the project architecture, common workflows, and publishing releases. These videos can serve as a guide for new maintainers and contributors in general.
-- **Regular Sync-ups:** Weekly/bi-weekly meetings offer an open forum for discussion, updates, and mentorship. New maintainers are encouraged to attend, ask questions, share challenges, and contribute ideas.
+## How to Do Mentoring to Get the Best Results
 
-> **Note:** A side effect of having meetings is that it makes mentees reserve their questions for only meeting days. However, async communication is encouraged. New maintainers can ask questions whenever they want.
+The goal of mentoring is to guide, support, and empower—not to micromanage. A successful mentorship is built on clear expectations, shared goals, and consistent communication.
 
-## Roles and responsibilities of a maintainer
-As an AsyncAPI maintainer, your responsibilities include:
+Here are strategies that help new maintainers onboard successfully:
 
-1. Guiding the technical direction of the project
+- **Start with clear goals:** Help new maintainers define what success looks like in their role. Set achievable short-term and long-term goals together.
 
-2. Reviewing and resolving issues and pull requests
+- **One-on-One Mentorship:** Pair new maintainers with experienced ones for dedicated guidance. Build trust and encourage open, judgment-free conversations.
 
-3. Managing CI/CD workflows and GitHub automation
+- **Shadowing:** Let new maintainers observe key activities such as PR reviews, issue triaging, and community calls. This builds confidence and real-world context.
 
-4. Enforcing coding standards and architectural consistency
+- **Encourage questions early and often:** Make it clear that questions are welcome at any time—not just during meetings. Create a safe space for learning.
 
-5. Maintaining and improving documentation
+- **Recorded Breakthroughs:** Share video walkthroughs of project architecture, common workflows, or release processes. These become reusable training resources.
 
-6. Identifying and mentoring new maintainers
+- **Regular Check-Ins:** Weekly or bi-weekly syncs are useful for tracking progress, giving feedback, and offering encouragement. These meetings don’t replace async communication—both are important.
 
-7. Supporting contributors and nurturing community involvement
+- **Use challenges as learning opportunities:** When mistakes happen (they will!), treat them as learning moments. Debrief together and guide the next steps.
 
-8. Recognizing and celebrating contributions
+- **Celebrate milestones:** Acknowledge small wins and progress. Positive reinforcement helps build momentum and confidence.
+
+> 💡 Mentoring is a commitment. It requires patience, consistency, and empathy. Be supportive, but also encourage ownership and independence.
+
+## Roles and Responsibilities of a Maintainer
+
+Maintainers are trusted stewards of the project. Their responsibilities include:
+
+1. **Guiding the technical direction of the project**  
+   _Example: Propose and discuss new features, decide on major architectural changes, or push forward RFCs (Request for Comments)._
+
+2. **Reviewing and resolving issues and pull requests**  
+   _Example: Offer constructive feedback on a contributor’s PR, merge well-tested contributions, or close stale issues with a clear reason._
+
+3. **Managing CI/CD workflows and automation**  
+   _Example: Configure GitHub Actions to run tests or deploy documentation automatically when changes are pushed._
+
+4. **Enforcing code quality and architectural consistency**  
+   _Example: Ensure that all merged PRs follow the linting rules, use proper folder structures, and adhere to design patterns agreed upon by the team._
+
+5. **Maintaining and improving documentation**  
+   _Example: Update the README when project setup changes, or add diagrams and examples to explain new features in the docs._
+
+6. **Identifying and mentoring future maintainers**  
+   _Example: Invite an active contributor to shadow PR reviews or gradually assign them bigger responsibilities like triaging issues._
+
+7. **Supporting contributors and nurturing participation**  
+   _Example: Answer a contributor’s question in Slack, help them understand project conventions, or guide them through their first issue._
+
+8. **Recognizing and celebrating contributions**  
+   _Example: Publicly thank contributors in Slack or GitHub, highlight notable contributions in community meetings, or nominate someone for GitHub Stars._
+
 
 But being a maintainer is more than just fulfilling tasks; it's about **ownership and leadership**.
 
@@ -46,25 +72,30 @@ Maintainers also lead by example by not only solving issues, but also explaining
 Ultimately, maintainers are the glue that holds everything together, ensuring smooth operations, maintaining community trust, and advancing AsyncAPI’s vision.
 
 ## Best Practices for Maintainers
-Here are a few principles to guide maintainers in their day-to-day:
 
-- 💬 Communicate openly and clearly. Prefer public discussions to private ones so others can learn too.
+Keep these best practices in mind as you mentor and lead:
 
-- ⚙️ Automate repetitive tasks. Use bots and CI tools to handle routine checks.
+- 💬 **Communicate clearly and publicly**. Use public channels so others can learn and contribute.
 
-- 📝 Document everything. From decisions to ideas,write things down for others to follow.
+- ⚙️ **Automate what you can**. Use bots and CI to handle routine tasks and reduce manual overhead.
 
-- 🧑‍🏫 Mentor contributors. Offer feedback, pair programming, or walkthroughs where needed.
+- 📝 **Write things down**. Document decisions, workflows, and open questions.
 
-- 🙌 Foster participation. Encourage contributors to take ownership and submit improvements.
+- 🧑‍🏫 **Be an active mentor**. Provide feedback, do code walkthroughs, and encourage learning moments.
 
-- ✅ Promote quality. Guide contributors toward thoughtful, well-tested code.
+- 🙌 **Inspire contribution**. Invite others to take ownership of issues or features.
 
-- 📅 Join or host regular meetings. Stay in sync with the rest of the team and community.
+- ✅ **Set a high bar for quality**. Encourage contributors to write clean, tested, and thoughtful code.
 
-- 💚 Take care of yourself. Burnout helps no one. Set boundaries and ask for help when needed.
+- 📅 **Show up consistently**. Attend meetings or community check-ins to stay aligned.
 
+- 💚 **Avoid burnout**. Ask for help when needed and model healthy work boundaries.
 
-## Additional resources
-- https://www.asyncapi.com/docs/community/onboarding-guide/maintainer-guide
-- https://opensource.guide/best-practices/
+> “You are not just reviewing PRs—you are building people.”  
+> — Adapted from GSoC Mentor Guide
+
+## Additional Resources
+
+- [AsyncAPI Maintainer Guide](https://www.asyncapi.com/docs/community/onboarding-guide/maintainer-guide)
+- [GSoC Mentor Guide](https://google.github.io/gsocguides/mentor/)
+- [Open Source Best Practices](https://opensource.guide/best-practices/)
