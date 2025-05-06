@@ -13,16 +13,16 @@ To make the voting process easier with proper automation, we use [**Git Vote**](
 
 The Discussions should only be used for initial discussion, brainstorming ideas, or seeking initial support.
 
-In the majority of cases, topics we vote on introduce new rules or ways of doing things. This implies that proper community documentation is needed for these topics. We recommend using Pull Requests instead of Issues to conduct voting on a topic, as it allows you to provide context and finalize documentation.
+In the majority of cases, the topics we vote on introduce new rules or ways of doing things. This implies that proper community documentation is needed for these topics. We recommend using Pull Requests instead of Issues to conduct voting on a topic, as it allows you to provide context and finalize documentation.
 
 ### Voting Rules
 
 - Only votes from [TSC members](https://www.asyncapi.com/community/tsc) are counted. You are still encouraged to participate in voting, even if your vote is not binding.
 - TSC members have at least 7 calendar days to vote. We have 4 weeks to reach quorum, otherwise the voting topic needs reassessment by the Governance Board.
-- TSC members can skip some votes, although, if you do not have an opinion, please participate with 👀 to indicate that you saw a vote but you have no opinion, or cannot make public statement about it and abstain. There is one strict rule, though: if you do not participate in voting within three months, you will stop being a TSC member. It has nothing to do, though, with your maintainer responsibilities.
-- The vote is completed when more than 50% of the voting is in favor.
+- TSC members can skip some votes, although if you do not have an opinion, please participate with 👀 to indicate that you saw a vote but you have no opinion, or cannot make a public statement about it, and abstain. There is one strict rule, though: if you do not participate in voting within three months, you will stop being a TSC member. It has nothing to do, though, with your maintainer responsibilities.
+- The vote is completed when more than 50% of the votes are in favor.
 - Only Governance Board members can start the vote and close the vote.
-- Quorum is required. The number depends on the current number of TSC members. We require majority to pass the vote. If TSC has 40 members, than we calculate quorum like: 51% multiply by 40. Assuming all votes are positive, we must have at least 21 people taking the vote.
+- Quorum is required. The number depends on the current number of TSC members. We require a majority to pass the vote. If TSC has 40 members, then we calculate quorum like: 51% multiplied by 40. Assuming all votes are positive, we must have at least 21 people taking the vote.
 
 ### Voting Process
 
@@ -30,16 +30,16 @@ In the majority of cases, topics we vote on introduce new rules or ways of doing
 
 1. Create an issue in the [community](https://github.com/asyncapi/community) repository.
 2. Describe the topic of the vote and provide as much context as possible.
-3. Tag GB members by mentioning `@asyncapi/gb` team asking for running a vote.
+3. Tag GB members by mentioning `@asyncapi/gb` team, asking to run a vote.
 4. GB members will review the request:
- - Check if vote is needed,
+ - Check if the vote is needed,
  - What context is missing,
  - Is larger debate with TSC is needed first.
 
 #### Start Voting
 
 1. The GB member adds a `/vote` comment to an Issue or a Pull Request.
-2. The Git Vote bot creates a comment with instructions on how the voting should be done. It is based on 👍🏼 , 👎🏼 and 👀 emojis. You can still put comments or suggestions.
+2. The Git Vote bot creates a comment with instructions on how the voting should be done. It is based on 👍🏼 , 👎🏼, and 👀 emojis. You can still put comments or suggestions.
 3. The AsyncAPI bot adds a `vote` label, making it easier to extract information about voted topics and participation.
 
 #### Check Status
@@ -61,14 +61,14 @@ The Git Vote bot adds a comment that voting is completed.
 
 ### Tracking Voting
 
-We store [the voting history of entire TSC](TSC_VOTING_OVERVIEW.md) since voting automation was introduces.
+We store [the voting history of the entire TSC](TSC_VOTING_OVERVIEW.md) since voting automation was introduced.
 
 - 🔕 indicates that the member did not vote.
 - 👍 indicates that the member was in favor.
 - 👎 indicates that the member was against.
 - 👀 indicates that the member abstained from voting.
 
-Tracking file is automatically updated by a bot after each vote is completed. It also records whether the member has voted in the last 3 months, helping to identify inactive TSC Members.
+The tracking file is automatically updated by a bot after each vote is completed. It also records whether the member has voted in the last 3 months, helping to identify inactive TSC Members.
 
 ### Note
 
