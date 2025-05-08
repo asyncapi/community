@@ -28,16 +28,16 @@ At AsyncAPI, we value **quality over quantity**. This guide will help you make m
 1. Set up your workflow environment using the [git workflow guide](/asyncapi/community/blob/master/git-workflow.md).
 2. Search for [good first issues](https://github.com/issues?page=1&q=is%3Aopen+org%3Aasyncapi+sort%3Aupdated-desc+label%3A%22good+first+issue%22). 
 3. When you do find one, request to be assigned.
-4. If you noticed a bug, typo, or a needed improvement, feel free to create an issue.
+4. If you noticed a bug, typo, or needed improvement, feel free to create an issue.
 5. **Make a PR only after a maintainer assigned the issue to you** even if you created the issue yourself.
 6. Follow the [conventional commits guide](conventional-commits) to write a good PR title.
 7. Follow the [git workflow document](/asyncapi/community/blob/master/git-workflow.md) when working on your changes and making a PR.
 8. After making a PR, patiently wait for reviews.
 9. Make sure all your PR checks pass (turn green) to speed up the merging process.  
-10. If your PR hasn’t been reviewed after **a week and half**, you can gently remind a maintainer on Slack or GitHub. Delays can happen for various reasons, but no one is ignoring you! 🙏🏼 .
+10. If your PR hasn’t been reviewed after **a week and a half**, you can gently remind a maintainer on Slack or GitHub. Delays can happen for various reasons, but no one is ignoring you! 🙏🏼 .
 
 ## Important Contribution Rules
-To help maintain a welcoming and productive environment, we have outlined a few important contribution rules that all contributors—especially new ones—must follow.
+To help maintain a welcoming and productive environment, we have outlined a few important contribution rules that all contributors, especially new ones, must follow.
 
 These rules are here to help you succeed and to support the maintainers and community as we all work together. Not following them can lead to consequences, such as being blocked from submitting PRs or being removed from the community.
 
@@ -50,10 +50,10 @@ These rules are here to help you succeed and to support the maintainers and comm
 - **Respect others**. Treat everyone with kindness and patience. We are all here to learn and grow together.
 
 ### ❌ What You Should Never Do
-- Don’t ignore the onboarding materials and contribution guidelines.
-- Don’t tag maintainers repeatedly or demand attention.
-- Don’t post the same message in multiple places.
-- Don’t expect instant replies.
+- Ignore essential onboarding materials and contribution guidelines.
+- Tagging maintainers repeatedly or demanding attention.
+- Posting the same message in multiple places.
+- Expecting instant replies.
 
 ### ⚠️ What Happens If You Break the Rules
 
@@ -70,13 +70,13 @@ Let’s keep AsyncAPI a community where people enjoy contributing. 👏🏼
 
 ## Contribution Checklist
 Before submitting your contribution, ask yourself:
-- [x] Is my contribution relevant to AsyncAPI?
-- [x] Have I explained why this contribution is necessary?
-- [x] Is my writing clear, concise, and well-structured?
-- [x] Did I follow the [documentation style guide](https://github.com/asyncapi/community/tree/master/docs/styleguide)?
-- [x] Are my code examples tested and functional?
-- [x] Have I linked any relevant issues, discussions, or existing docs?
-- [x] Did I provide a description of the changes in my PR?
-- [x] Am I open to feedback and revisions?
+- [] Is my contribution relevant to AsyncAPI?
+- [] Have I explained why this contribution is necessary?
+- [] Is my writing clear, concise, and well-structured?
+- [] Did I follow the [documentation style guide](https://github.com/asyncapi/community/tree/master/docs/styleguide)?
+- [] Are my code examples tested and functional?
+- [] Have I linked any relevant issues, discussions, or existing docs?
+- [] Did I provide a description of the changes in my PR?
+- [] Am I open to feedback and revisions?
 
 If you answered **yes** to all these questions, you are ready to submit your PR or create an issue! 🚀  
