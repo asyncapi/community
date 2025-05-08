@@ -3,18 +3,19 @@ title: 'Utilizing GitHub Actions'
 weight: 120
 ---
 
+## Table of Contents
+
+- [Table of Contents](#table-of-contents)
 - [Overview](#overview)
 - [Types of GitHub Actions workflows](#types-of-github-actions-workflows)
   - [Local workflows](#local-workflows)
   - [Global workflows](#global-workflows)
-- [Global workflows overview](#global-workflows-overview)
+    - [Global workflows overview](#global-workflows-overview)
+    - [Basic requirements to use global workflows](#basic-requirements-to-use-global-workflows)
+    - [How to opt in or out of global workflows](#how-to-opt-in-or-out-of-global-workflows)
 - [Global replicator workflow](#global-replicator-workflow)
-- [How to opt in or out of global workflows](#how-to-opt-in-or-out-of-global-workflows)
-  - [Opt-in](#opt-in)
-  - [Opt-out](#opt-out)
 - [Semantic release and automation](#semantic-release-and-automation)
 - [Slash commands](#slash-commands)
-- [Basic requirements to use global workflows](#basic-requirements-to-use-global-workflows)
 
 ## Overview
 
@@ -57,7 +58,7 @@ They help:
 
 Changes made to global workflows can automatically propagate to opted-in repositories.
 
-## Global workflows overview
+#### Global workflows overview
 
 The table below provides an overview of all the global workflows available in the AsyncAPI organization:
 
@@ -95,6 +96,31 @@ The table below provides an overview of all the global workflows available in th
 
 (For a detailed breakdown of each, see [AsyncAPI Global Workflows](https://github.com/asyncapi/.github/tree/master/.github/workflows)).
 
+#### Basic requirements to use global workflows
+
+Before a repository can start using the global workflows managed through the `.github` repository, a few setup steps are required. This ensures that bots can properly push and merge workflow files. Without these steps, the automation will not work as expected.
+
+The basic requirements are:
+
+- **Add the bots team as maintainers**: In the repository settings, under *Collaborators and Teams*, add the bots team with maintainer permissions.
+- **Add Eve to code owners**: Ensure that the Eve bot account is listed as a code owner to allow automatic approval of bot-generated pull requests.
+- **Trigger initial setup**: Reach out to the maintainers of the `.github` repository and ask them to manually run the "Global Workflow to Rule Them All" action, providing your repository name.
+- **Manually approve initial PRs**: The first set of workflow-related pull requests must be manually merged, as the automation for merging only becomes available after the necessary workflows are installed.
+
+Once these steps are complete, the repository will start automatically receiving and merging global workflow updates as expected.
+
+#### How to opt in or out of global workflows
+
+**Opt-in**
+
+To opt in to a global workflow managed in the AsyncAPI `.github` repository, you can either add a specific topic to your repository (via GitHub settings or the GitHub CLI) or ask a maintainer to trigger it manually for you.
+  
+To do this, reach out on Slack or open an issue, and a maintainer can run the “Global workflow to rule them all” from the **Actions** tab, optionally targeting your repo by name.
+
+**Opt-out**
+
+Some workflows are applied automatically to all repositories. If you’d like to opt out of one of those, your repository must be added to the `repos_to_ignore` list in the relevant job. This change has to be made in the global workflow by a maintainer, so just ask in Slack or open an issue if you'd like to be excluded.
+
 ## Global replicator workflow
 
 The [Global Replicator Workflow](https://github.com/asyncapi/.github/blob/master/.github/workflows/global-replicator.yml) keeps key files in sync across AsyncAPI repositories.
@@ -109,19 +135,6 @@ The [Global Replicator Workflow](https://github.com/asyncapi/.github/blob/master
 | `replicate_generic_workflows`    | Pushes utility workflows like stale labeling| Multiple `.github/workflows/*.yml`             | All AsyncAPI repos            |
 | `replicate_docker_workflows`     | Pushes Docker PR testing workflows          | `.github/workflows/if-docker-pr-testing.yml`   | Repos with `docker` topic     |
 | `replicate_validate_workflow_schema`| Adds YAML validation workflows             | `.github/workflows/validate-workflow-schema.yml`| Repos with validation topic  |
-
-
-## How to opt in or out of global workflows
-
-### Opt-in  
-
-  To opt in to a global workflow managed in the AsyncAPI `.github` repository, you can either add a specific topic to your repository (via GitHub settings or the GitHub CLI) or ask a maintainer to trigger it manually for you.
-  
-  To do this, reach out on Slack or open an issue, and a maintainer can run the “Global workflow to rule them all” from the **Actions** tab, optionally targeting your repo by name.
-
-### Opt-out
-
-  Some workflows are applied automatically to all repositories. If you’d like to opt out of one of those, your repository must be added to the `repos_to_ignore` list in the relevant job. This change has to be made in the global workflow by a maintainer, so just ask in Slack or open an issue if you'd like to be excluded.
 
 ## Semantic release and automation
 
@@ -142,15 +155,3 @@ These commands allow users to type a slash command (like `/something`) directly 
 To make it easy, the most important command to remember is `/help`, which shows a list of all available commands whenever you need it.
 
 For example, the `/rtm` command lets you merge a PR without worrying about manually adjusting the commit message.
-## Basic requirements to use global workflows
-
-Before a repository can start using the global workflows managed through the `.github` repository, a few setup steps are required. This ensures that bots can properly push and merge workflow files. Without these steps, the automation will not work as expected.
-
-The basic requirements are:
-
-- **Add the bots team as maintainers**: In the repository settings, under *Collaborators and Teams*, add the bots team with maintainer permissions.
-- **Add Eve to code owners**: Ensure that the Eve bot account is listed as a code owner to allow automatic approval of bot-generated pull requests.
-- **Trigger initial setup**: Reach out to the maintainers of the `.github` repository and ask them to manually run the "Global Workflow to Rule Them All" action, providing your repository name.
-- **Manually approve initial PRs**: The first set of workflow-related pull requests must be manually merged, as the automation for merging only becomes available after the necessary workflows are installed.
-
-Once these steps are complete, the repository will start automatically receiving and merging global workflow updates as expected.
