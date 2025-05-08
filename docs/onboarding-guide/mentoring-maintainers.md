@@ -12,7 +12,7 @@ As we continue to emphasize the importance of onboarding new maintainers, we mus
 
 ## How to Do Mentoring to Get the Best Results
 
-The goal of mentoring is to guide, support, and empower—not to micromanage. A successful mentorship is built on clear expectations, shared goals, and consistent communication.
+The goal of mentoring is to guide, support, and empower, not to micromanage. A successful mentorship is built on clear expectations, shared goals, and consistent communication.
 
 Here are strategies that help new maintainers onboard successfully:
 
@@ -22,11 +22,11 @@ Here are strategies that help new maintainers onboard successfully:
 
 - **Shadowing:** Let new maintainers observe key activities such as PR reviews, issue triaging, and community calls. This builds confidence and real-world context.
 
-- **Encourage questions early and often:** Make it clear that questions are welcome at any time—not just during meetings. Create a safe space for learning.
+- **Encourage questions early and often:** Make it clear that questions are welcome at any time, and not only during meetings. Create a safe space for learning.
 
 - **Recorded Walkthroughs:** Share video walkthroughs of project architecture, common workflows, or release processes. These become reusable training resources.
 
-- **Regular Check-Ins:** Weekly or bi-weekly syncs are useful for tracking progress, giving feedback, and offering encouragement. These meetings don’t replace async communication—both are important.
+- **Regular Check-Ins:** Weekly or bi-weekly syncs are useful for tracking progress, giving feedback, and offering encouragement. These meetings don't replace async communication, both are important.
 
 - **Use challenges as learning opportunities:** When mistakes happen (they will!), treat them as learning moments. Debrief together and guide the next steps.
 
@@ -42,7 +42,7 @@ Maintainers are trusted stewards of the project. Their responsibilities include:
    _Example: Propose and discuss new features, decide on major architectural changes, or push forward RFCs (Request for Comments)._
 
 2. **Reviewing and resolving issues and pull requests**  
-   _Example: Offer constructive feedback on a contributor’s PR, merge well-tested contributions, or close stale issues with a clear reason._
+   _Example: Offer constructive feedback on a contributor's PR, merge well-tested contributions, or close stale issues with a clear reason._
 
 3. **Managing CI/CD workflows and automation**  
    _Example: Configure GitHub Actions to run tests or deploy documentation automatically when changes are pushed._
@@ -57,19 +57,19 @@ Maintainers are trusted stewards of the project. Their responsibilities include:
    _Example: Invite an active contributor to shadow PR reviews or gradually assign them bigger responsibilities like triaging issues._
 
 7. **Supporting contributors and nurturing participation**  
-   _Example: Answer a contributor’s question in Slack, help them understand project conventions, or guide them through their first issue._
+   _Example: Answer a contributor's question in Slack, help them understand project conventions, or guide them through their first issue._
 
 8. **Recognizing and celebrating contributions**  
    _Example: Publicly thank contributors in Slack or GitHub, highlight notable contributions in community meetings, or nominate someone for GitHub Stars._
 
 
-But being a maintainer is more than just fulfilling tasks; it's about **ownership and leadership**.
+Being a maintainer is more than just fulfilling tasks; it's about **ownership and leadership**.
 
 You're not just reviewing PRs; you're shaping the future of the project. Whether it's unblocking a stuck contributor, advocating for improvements in the roadmap, or leading releases, maintainers play a crucial role in keeping the project active and healthy.
 
-Maintainers also lead by example by not only solving issues, but also explaining why decisions are made, and guiding others to think critically and collaboratively. It’s about striking a balance between technical excellence and community empathy.
+Maintainers also lead by example not only by solving issues, but also explaining why decisions are made, and guiding others to think critically and collaboratively. It's about striking a balance between technical excellence and community empathy.
 
-Ultimately, maintainers are the glue that holds everything together, ensuring smooth operations, maintaining community trust, and advancing AsyncAPI’s vision.
+Ultimately, maintainers are the glue that holds everything together, ensuring smooth operations, maintaining community trust, and advancing AsyncAPI's vision.
 
 ## Best Practices for Maintainers
 
@@ -91,7 +91,7 @@ Keep these best practices in mind as you mentor and lead:
 
 - 💚 **Avoid burnout**. Ask for help when needed and model healthy work boundaries.
 
-> “You are not just reviewing PRs—you are building people.”  
+> "You are not just reviewing PRs, you are building people."  
 > — Adapted from GSoC Mentor Guide
 
 ## Additional Resources
