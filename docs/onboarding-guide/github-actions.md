@@ -141,8 +141,7 @@ These commands allow users to type a slash command (like `/something`) directly 
 
 To make it easy, the most important command to remember is `/help`, which shows a list of all available commands whenever you need it.
 
-For example, the `/rmt` command lets you merge a PR without worrying about manually adjusting the commit message.
-
+For example, the `/rtm` command lets you merge a PR without worrying about manually adjusting the commit message.
 ## Basic requirements to use global workflows
 
 Before a repository can start using the global workflows managed through the `.github` repository, a few setup steps are required. This ensures that bots can properly push and merge workflow files. Without these steps, the automation will not work as expected.
