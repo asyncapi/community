@@ -372,8 +372,7 @@
   slack: U01SGCZMJKW
   twitter: souvik_ns
   linkedin: souvik-de-a2b941169
-  availableForHire: false
-  company: Codemate
+  availableForHire: True
   isTscMember: true
   repos:
     - cli
