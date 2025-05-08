@@ -19,7 +19,7 @@ When adding a new term to the glossary, updating the definition of an existing t
 
 ## Formatting Guidelines
 
-When referencing & writing terms and concepts in the glossary, use the following formatting guidelines:
+When referencing terms and concepts in tutorials and other forms of content or adding new terms to the glossary, use the following formatting guidelines:
 
 - ✅ Use `### Term Name` as the heading for each term.
 - ✅ Add hyperlinks to terms and concepts mentioned in tutorials and other forms of documentation.
@@ -28,10 +28,10 @@ When referencing & writing terms and concepts in the glossary, use the following
 
 ### Examples
 
-| Term         | Example Definition                                                                                                                                              | Concept    | Example Description                                                                                              |
-|--------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|------------|------------------------------------------------------------------------------------------------------------------|
-| **AsyncAPI** | An open-source initiative and specification for defining asynchronous APIs to support the design, documentation, and development of event-driven architectures. | *Channel*  | A *channel* is a mechanism created by the server that facilitates the organization and transmission of messages. |
-| **Message**  | A structured piece of data transmitted between systems, typically containing an event, command, or response.                                                    | *Protocol* | A *protocol* is a set of rules that governs the exchange of information between applications and/or servers.     |
+| Term         | Example Definition                                                                                                                                              | Concept    | Example Description                                                                                                    |
+|--------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|------------|------------------------------------------------------------------------------------------------------------------------|
+| **AsyncAPI** | An open-source initiative and specification for defining asynchronous APIs to support the design, documentation, and development of event-driven architectures. | *Channel*  | A *channel* is a mechanism created by the server that facilitates the organization and transmission of messages.       |
+| **Message**  | A structured piece of data transmitted between systems, typically containing an event, command, or response.                                                    | *Protocol* | A {'{'}`protocol`{'}'} is a set of rules that governs the exchange of information between applications and/or servers. |
 
 ## Additional Resources
 
