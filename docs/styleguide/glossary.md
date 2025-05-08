@@ -11,7 +11,7 @@ weight: 100
 
 When adding a new term to the glossary, updating the definition of an existing term, or adding a new concept to the glossary, consider doing the following:
 
--  ✅ **Propose new terms by [raising an issue on the website's repository on GitHub](): This would help maintainers ensure that they fit AsyncAPI's documentation. 
+-  ✅ **Propose new terms by [raising an issue on the website's repository on GitHub](https://github.com/asyncapi/website/issues): This would help maintainers ensure that they fit AsyncAPI's documentation. 
 -  ✅ **Provide clear yet specific definitions and descriptions**: This helps ensure that the glossary is easy to understand and use.
 - ✅ **Keep it plain and simple**: Avoid using jargon or technical terms in the descriptions. This ensures that the glossary is accessible to a wide audience that may not be familiar to everyone.
 - ✅ **Use sentence case for definitions**: This makes the glossary easier to read and navigate.
