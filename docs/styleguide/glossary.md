@@ -15,10 +15,13 @@ When adding a new term to the glossary, updating the definition of an existing t
 - ✅ **Keep it plain and simple**: Avoid using jargon or technical terms in the descriptions. This ensures that the glossary is accessible to a wide audience that may not be familiar to everyone.
 - ✅ **Use sentence case for definitions**: This makes the glossary easier to read and navigate.
 - ✅ **Present them in alphabetical order**: This makes it easier for users to find the term or concept they're looking for.
-- ✅ **Use bold and italics**:  This makes it easier to distinguish between terms and concepts.
+
 
 ## Formatting Guidelines
 
-When writing terms and concepts in the glossary, use the following formatting guidelines:
+When referencing & writing terms and concepts in the glossary, use the following formatting guidelines:
 
 - ✅ Use `###Term Name` for as the term's headings.
+- ✅ Add hyperlinks to terms and concepts mentioned in tutorials and other forms of documentation.
+- ✅ Use backticks to referenced terms and concepts.
+- ✅ Italicize the names of concepts and bold the terms to make them distinctive from each other. 
