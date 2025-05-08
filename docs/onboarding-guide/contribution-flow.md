@@ -43,18 +43,17 @@ These rules are here to help you succeed and to support the maintainers and comm
 
 ### ✅ What You Should Always Do
 
-- **Be patient**. Maintainers are volunteers with jobs, families, and responsibilities. It may take time for your pull request (PR) or issue to be reviewed.
+- **Be patient**. Maintainers are volunteers with their jobs, families, and responsibilities. It may take time for your PR or issue to be reviewed.
 - **Use the right Slack channels**. If you’re unsure where to post, ask politely or take a moment to check.
 - **Keep Slack tidy**. Use threads for conversations, avoid tagging `@maintainers` unless truly necessary, and don’t spam.
-- **Follow our [Slack etiquette](https://github.com/asyncapi/community/blob/master/slack-etiquette.md)** **and [Code of Conduct](https://github.com/asyncapi/.github/blob/master/CODE_OF_CONDUCT.md)**.
+- **Follow our [Slack etiquette](/asyncapi/community/blob/master/slack-etiquette.md)** **and [Code of Conduct](/asyncapi/.github/blob/master/CODE_OF_CONDUCT.md)**.
 - **Respect others**. Treat everyone with kindness and patience. We are all here to learn and grow together.
 
 ### ❌ What You Should Never Do
-
+- Don’t ignore the onboarding materials and contribution guidelines.
 - Don’t tag maintainers repeatedly or demand attention.
 - Don’t post the same message in multiple places.
 - Don’t expect instant replies.
-- Don’t ignore the onboarding materials and contribution guidelines.
 
 ### ⚠️ What Happens If You Break the Rules
 
@@ -64,10 +63,9 @@ We’re friendly and welcoming, but we also value focus and respect. If rules ar
 - Repeated behavior could lead to permanent removal from the community.
 - PRs or issues may be closed or rejected if the behavior affects maintainers or the community.
 
-These rules are not meant to scare anyone—they’re here to make sure everyone can enjoy a healthy and respectful space. When in doubt, be thoughtful, ask questions politely, and refer to our onboarding and etiquette docs.
+These rules are not meant to scare anyone - they’re here to make sure everyone can enjoy a healthy and respectful space. When in doubt, be thoughtful, ask questions politely, and refer to our onboarding and etiquette docs.
 
 Let’s keep AsyncAPI a community where people enjoy contributing. 👏🏼
-
 
 
 ## Contribution Checklist
