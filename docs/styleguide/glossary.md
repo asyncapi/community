@@ -22,9 +22,9 @@ When adding a new term to the glossary, updating the definition of an existing t
 
 When referencing & writing terms and concepts in the glossary, use the following formatting guidelines:
 
-- ✅ Use `###Term Name` for as the term's headings.
+- ✅ Use `### Term Name` as the heading for each term.
 - ✅ Add hyperlinks to terms and concepts mentioned in tutorials and other forms of documentation.
-- ✅ Use backticks to referenced terms and concepts.
+- ✅ Use backticks for concepts mentioned in tutorials.
 - ✅ Italicize the names of concepts and bold the terms to make them distinctive from each other.
 
   ### Examples
