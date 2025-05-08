@@ -70,13 +70,13 @@ Let’s keep AsyncAPI a community where people enjoy contributing. 👏🏼
 
 ## Contribution Checklist
 Before submitting your contribution, ask yourself:
-- [] Is my contribution relevant to AsyncAPI?
-- [] Have I explained why this contribution is necessary?
-- [] Is my writing clear, concise, and well-structured?
-- [] Did I follow the [documentation style guide](https://github.com/asyncapi/community/tree/master/docs/styleguide)?
-- [] Are my code examples tested and functional?
-- [] Have I linked any relevant issues, discussions, or existing docs?
-- [] Did I provide a description of the changes in my PR?
-- [] Am I open to feedback and revisions?
+- [ ] Is my contribution relevant to AsyncAPI?
+- [ ] Have I explained why this contribution is necessary?
+- [ ] Is my writing clear, concise, and well-structured?
+- [ ] Did I follow the [documentation style guide](https://github.com/asyncapi/community/tree/master/docs/styleguide)?
+- [ ] Have my code examples been tested, and are they functional?
+- [ ] Have I linked any relevant issues, discussions, or existing docs?
+- [ ] Did I provide a description of the changes in my PR?
+- [ ] Am I open to feedback and revisions?
 
 If you answered **yes** to all these questions, you are ready to submit your PR or create an issue! 🚀  
