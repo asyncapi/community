@@ -372,7 +372,7 @@
   slack: U01SGCZMJKW
   twitter: souvik_ns
   linkedin: souvik-de-a2b941169
-  availableForHire: True
+  availableForHire: true
   isTscMember: true
   repos:
     - cli
@@ -384,7 +384,7 @@
   twitter: QuetzalliWrites
   slack: U02AKC14WAJ
   linkedin: quetzalli-writes
-  availableForHire: True
+  availableForHire: true
   isTscMember: true
   repos:
     - website
