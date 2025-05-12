@@ -63,18 +63,18 @@ Are you working on something exciting related to AsyncAPI? Do you have a unique 
 
 ### Pre-Event
 
-- Confirm speaker and topic.
-- Promote the webinar on social media, community channels, and mailing lists.
-- Prepare slides, demo materials, and discussion points.
-- Set up the webinar platform and do a tech check.
-- Send out reminder to the speakers and the audience.
+- [ ] Confirm speaker and topic.
+- [ ] Promote the webinar on social media, community channels, and mailing lists.
+- [ ] Prepare slides, demo materials, and discussion points.
+- [ ] Set up the webinar platform and do a tech check.
+- [ ] Send out reminder to the speakers and the audience.
 
 ### Post-Event
 
-- Share a recap blog post and recording.
-- Gather feedback from attendees and speakers.
-- Follow up with additional resources and discussions.
-- Plan the next session based on feedback and insights.
+- [ ] Share a recap blog post and recording.
+- [ ] Gather feedback from attendees and speakers.
+- [ ] Follow up with additional resources and discussions.
+- [ ] Plan the next session based on feedback and insights.
 
 ## Potential Speakers
 
@@ -87,6 +87,6 @@ If you or someone you know would be a great fit, reach out to us!
 
 ## What’s Next?
 
-The AsyncAPI Webinar Series is just getting started! Stay tuned for upcoming sessions, and if you have suggestions for topics or speakers, we’d love to hear from you.
+The AsyncAPI Webinar Series is just getting started! Stay tuned for upcoming sessions, and if you have suggestions for topics or speakers, [we’d love to hear from you](https://join.slack.com/t/asyncapi/shared_invite/zt-32hejdicx-NrD~boRq71gpCBJAM8mFoA).
 
-Want to attend the next session? Follow our updates and turn on notifications! 📢 Interested in speaking? Reach out to us—we’d love to have you!
+Want to attend the next session? Follow our updates on LinkedIn, [subcribe to our YouTube page and turn on notifications!](https://www.youtube.com/@AsyncAPI) Interested in speaking? Reach out to us, we’d love to have you!
