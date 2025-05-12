@@ -85,15 +85,8 @@ We are actively reaching out to experts and thought leaders in the space. Some o
 - API Enthusiasts and Technical Writers
 If you or someone you know would be a great fit, reach out to us!
 
-## Recap: First Session Highlight
-
-Our first session featured Eduardo Maldonado Fonseca Silva, who provided incredible insights into event-driven architectures and how AsyncAPI enhances interoperability. We had an engaging discussion on real-world use cases, best practices, and how developers can get started with AsyncAPI. The Q&A session was particularly lively, with attendees asking thought-provoking questions about implementation challenges and solutions.
-
-[▶️ Watch the replay of the first session here](https://www.youtube.com/watch?v=awfB_mwUp1c&t=264s)
-
 ## What’s Next?
 
 The AsyncAPI Webinar Series is just getting started! Stay tuned for upcoming sessions, and if you have suggestions for topics or speakers, we’d love to hear from you.
 
 Want to attend the next session? Follow our updates and turn on notifications! 📢 Interested in speaking? Reach out to us—we’d love to have you!
-
