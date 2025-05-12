@@ -151,7 +151,7 @@ AsyncAPI Community uses **Slack as the source of communication**. It helps us st
 
   ### Need Help? 🤝
 
-  If you have any questions or need guidance, feel free to reach out through our **[Community Discussions](https://asyncapi.com/slack-invite)**.
+  If you have any questions or need guidance, feel free to reach out through our **[GitHub Discussions page](https://github.com/orgs/asyncapi/discussions)**.
 
 
 🚀 [GitHub](https://github.com/asyncapi) | 💬 [Slack Workspace](https://asyncapi.com/slack-invite) | 🧭 [Technical Steering Committee (TSC)](https://www.asyncapi.com/community/tsc) | 🌍 [Ambassadors Program](https://www.asyncapi.com/community/ambassadors) | 📊 [Dashboard](https://www.asyncapi.com/community/dashboard) | 🎉 [Events & Meetings](https://www.asyncapi.com/community/events) | 📰 [Newsroom](https://www.asyncapi.com/community/newsroom)
