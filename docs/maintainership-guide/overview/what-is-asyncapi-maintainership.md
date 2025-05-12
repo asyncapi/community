@@ -20,4 +20,4 @@ To ensure a smooth and supportive experience for everyone involved, we prioritiz
 - Offering flexible timelines and deadlines
 - Promoting self-care and mental well-being
 
-Beyond technical skills, the program provides a realistic view into what it means to maintain an open source project, the rewarding moments as well as the tough ones, and equips contributors with tools to navigate both the technical and emotional aspects of open source work.
+Beyond technical skills, the program provides a realistic view into what it means to maintain an open source project, the rewarding moments as well as the tough ones, and equips contributors with ways to navigate both the technical and emotional aspects of open source work.

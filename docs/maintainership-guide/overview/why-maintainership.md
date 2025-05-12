@@ -11,3 +11,5 @@ With over 50 projects and more than 2,000 active contributors, the demand for pr
 The Maintainership Program provides a structured pathway for bridging that gap. By pairing experienced maintainers with active contributors over a defined period, the program offers mentorship, support, and hands-on experience — all with the goal of developing new maintainers who can help guide the initiative forward. It's a long-term investment in the health, scalability, and future of the AsyncAPI ecosystem.
 
 More than just a mentorship opportunity, the program fosters a culture of continuous learning, collaboration, and authentic career development. It creates meaningful connections between contributors and mentors, encourages knowledge sharing across projects, and builds a stronger, more resilient community — one maintainer at a time.
+
+As Sir Isaac Newton once said, "If I have seen further than others, it is by standing on the shoulders of giants." This program embodies that spirit, empowering the next generation of maintainers to rise by learning from those who came before them.
