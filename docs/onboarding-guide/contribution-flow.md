@@ -27,9 +27,9 @@ At AsyncAPI, we value **quality over quantity**. This guide will help you make m
 ### Steps to making a good contribution
 1. Set up your workflow environment using the [git workflow guide](/asyncapi/community/blob/master/git-workflow.md).
 2. Search for [good first issues](https://github.com/issues?page=1&q=is%3Aopen+org%3Aasyncapi+sort%3Aupdated-desc+label%3A%22good+first+issue%22). 
-3. When you do find one, request to be assigned.
+3. When you do find one, comment your interest(please don't ask to be assigned as it could be flagged as spam).
 4. If you noticed a bug, typo, or needed improvement, feel free to create an issue.
-5. **Make a PR only after a maintainer assigned the issue to you** even if you created the issue yourself.
+5. **Make a PR only after a maintainer assigned the issue to you or asks you to work on it** even if you created the issue yourself.
 6. Follow the [conventional commits guide](conventional-commits) to write a good PR title.
 7. Follow the [git workflow document](/asyncapi/community/blob/master/git-workflow.md) when working on your changes and making a PR.
 8. After making a PR, patiently wait for reviews.
@@ -51,7 +51,7 @@ These rules are here to help you succeed and to support the maintainers and comm
 
 ### ❌ What You Should Never Do
 - Ignore essential onboarding materials and contribution guidelines.
-- Tag maintainers repeatedly or demanding attention.
+- Tag maintainers repeatedly or demand attention.
 - Post the same message in multiple places.
 - Expect instant replies.
 
