@@ -46,7 +46,8 @@ These rules are here to help you succeed and to support the maintainers and comm
 - **Be patient**. Maintainers are volunteers with their jobs, families, and responsibilities. It may take time for your PR or issue to be reviewed.
 - **Use the right Slack channels**. If you're unsure where to post, ask politely or take a moment to check.
 - **Keep Slack tidy**. Use threads for conversations, avoid tagging `@maintainers` unless truly necessary, and don’t spam.
-- **Follow our [Slack etiquette](/asyncapi/community/blob/master/slack-etiquette.md)** **and [Code of Conduct](/asyncapi/.github/blob/master/CODE_OF_CONDUCT.md)**.
+- Follow our [Slack etiquette](/asyncapi/community/blob/master/slack-etiquette.md) and [Code of Conduct](/asyncapi/.github/blob/master/CODE_OF_CONDUCT.md).
++ Follow our [Slack etiquette](https://github.com/asyncapi/community/blob/master/slack-etiquette.md) and [Code of Conduct](https://github.com/asyncapi/.github/blob/master/CODE_OF_CONDUCT.md).
 - **Respect others**. Treat everyone with kindness and patience. We are all here to learn and grow together.
 
 ### ❌ What You Should Never Do
