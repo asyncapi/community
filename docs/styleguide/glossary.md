@@ -27,17 +27,20 @@ When referencing terms and concepts in tutorials and other forms of content or a
 - ✅ Italicize the names of concepts and bold the terms to make them distinctive from each other.
 
 ### Examples
-
-| Term         | Example Definition                                                                                                                                              | Concept    | Example Description                                                                                                    |
-|--------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|------------|------------------------------------------------------------------------------------------------------------------------|
-| **AsyncAPI** | An open-source initiative and specification for defining asynchronous APIs to support the design, documentation, and development of event-driven architectures. | *Channel*  | A *channel* is a mechanism created by the server that facilitates the organization and transmission of messages.       |
-| **Message**  | A structured piece of data transmitted between systems, typically containing an event, command, or response.                                                    | *Protocol* | A {'{'}`protocol`{'}'} is a set of rules that governs the exchange of information between applications and/or servers. |
-
+Here are some examples of terms being used in tutorials & written as headings:
+1. Term:
+```md
+### Channel
+```
+2. Concept being used in a sentence
+```md
+In the context of designing and setting up an event-driven application, servers are responsible for delivering asynchronous messages from the producer to the consumers through the use of {'{'}`**[channel]**(https://www.asyncapi.com/docs/concepts/channel)`{'}'}. 
+```
 ## Additional Resources
 
 For more tips on contributing to the glossary, consider consulting the following sources:
 
-- [Write the Docs: Style Guides](https://www.writethedocs.org/guide/writing/style-guides/)
+- [Write the Docs: Style Guides](
 - [Gatsby Style Guide](https://www.gatsbyjs.com/contributing/docs-and-triaging/#docs-style-guide)
 - [Gatsby Docs Structure & Documentation Types](https://www.gatsbyjs.com/docs/docs-structure/)
 - [Mozilla Style Guide](https://developer.mozilla.org/en-US/docs/MDN/Guidelines/Writing_style_guide)
