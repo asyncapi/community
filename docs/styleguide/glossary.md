@@ -13,7 +13,7 @@ When adding a new term to the glossary, updating the definition of an existing t
 
 - ✅ **Propose new terms by [raising an issue on the website's repository on GitHub](https://github.com/asyncapi/website/issues): This would help maintainers ensure that they fit AsyncAPI's documentation.
 - ✅ **Provide clear yet specific definitions and descriptions**: This helps ensure that the glossary is easy to understand and use.
-- ✅ **Keep it plain and simple**: Avoid using jargon or technical terms in the descriptions. This ensures that the glossary is accessible to a wide audience that may not be familiar to everyone.
+- ✅ **Keep it plain and simple**: Avoid using jargon or technical terms in the descriptions. This ensures that the glossary is accessible to a wide audience that may not be familiar with everyone.
 - ✅ **Use sentence case for definitions**: This makes the glossary easier to read and navigate.
 - ✅ **Present them in alphabetical order**: This makes it easier for users to find the term or concept they're looking for.
 
@@ -40,9 +40,7 @@ In the context of designing and setting up an event-driven application, servers 
 
 For more tips on contributing to the glossary, consider consulting the following sources:
 
-- [Write the Docs: Style Guides](
-- [Gatsby Style Guide](https://www.gatsbyjs.com/contributing/docs-and-triaging/#docs-style-guide)
-- [Gatsby Docs Structure & Documentation Types](https://www.gatsbyjs.com/docs/docs-structure/)
-- [Mozilla Style Guide](https://developer.mozilla.org/en-US/docs/MDN/Guidelines/Writing_style_guide)
-- [Google Developer Documentation Style Guide](https://developers.google.com/style)
-- [Microsoft Style Guide](https://learn.microsoft.com/en-us/style-guide/welcome/)
+- [Create a glossary for software documentation](https://indoc.pro/documentation-types/glossary/)
+- [API Glossary](https://idratherbewriting.com/learnapidoc/docapis_glossary_section.html)
+- [Glossaries aid clarity](https://www.techscribe.co.uk/techw/glossaries.htm)
+
