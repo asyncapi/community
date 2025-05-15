@@ -45,10 +45,15 @@
 function isVotingWithinLastThreeMonths(voteInfo) {
   const currentDate = new Date();
   let lastVoteDate;
-  if (voteInfo.lastParticipatedVoteTime && !voteInfo.lastParticipatedVoteTime.includes("Member has not")) {
+
+  if (
+    voteInfo.lastParticipatedVoteTime instanceof Date ||
+    (typeof voteInfo.lastParticipatedVoteTime === "string" &&
+      !voteInfo.lastParticipatedVoteTime.includes("Member has not"))
+  ) {
     lastVoteDate = new Date(voteInfo.lastParticipatedVoteTime);
   } else {
-    return false; // No valid voting history
+    return false;
   }
 
   if (lastVoteDate > currentDate) {

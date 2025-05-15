@@ -1,5 +1,10 @@
 const { isVotingWithinLastThreeMonths } = require('../.github/scripts/vote_tracker/utils.js');
 
+const curDate = new Date();
+const futureDate = new Date();
+futureDate.setDate(curDate.getDate() + 1);
+
+
 describe('Vote Tracker Edge Cases', () => {
   test.each([
     [
@@ -42,7 +47,7 @@ describe('Vote Tracker Edge Cases', () => {
         "Budget 2025$$1681": "In favor",
         "2024 budget refresh and request for urgent pre-approval of some 2025 costs$$1598": "Abstain",
         "Should AsyncAPI Initiative endorse United Nations Global Digital Compact?$$1577": "Against",
-        lastParticipatedVoteTime: "2025-04-10",
+        lastParticipatedVoteTime: futureDate,
         isVotedInLast3Months: true,
         lastVoteClosedTime: "2025-03-31",
         firstVoteClosedTime: "2024-04-01",
@@ -58,7 +63,7 @@ describe('Vote Tracker Edge Cases', () => {
       {
         name: "newActiveMember",
         "Budget 2025$$1681": "In favor",
-        lastParticipatedVoteTime: "2025-03-31",
+        lastParticipatedVoteTime: curDate,
         isVotedInLast3Months: true,
         lastVoteClosedTime: "2025-03-31",
         firstVoteClosedTime: "2025-03-31",
