@@ -152,7 +152,7 @@ We use **Jest** for testing automation scripts. To run the tests locally, follow
 ### Adding New Tests
 If you are contributing new automation scripts, ensure they are covered by tests. To add a new test:
 
-1. Create or update the relevant test file in the `testing/` directory.
+1. Create or update the relevant test file in the `test/` directory.
 2. Follow the existing Jest structure for consistency.
 3. Ensure your test covers edge cases and different scenarios.
 4. Run the tests locally before pushing your changes.
