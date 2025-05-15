@@ -30,7 +30,7 @@ Our community docs and onboarding section provides everything you need to get st
 
 ## 🏛️ Community Governance and Charter
 
-Our community is steered by a transparent governance board. You can learn more about our  **[Governance](./GOVERNANCE.md)** and decision-making process, and the **[AsyncAPI Charter](./CHARTER.md)** outlines the structure, responsibilities, and procedures for contributions and oversight of the AsyncAPI open project.
+Our community is steered by a transparent governance board. You can learn more about our  **[Community Governance](./GOVERNANCE.md)** and the **[AsyncAPI Charter](./CHARTER.md)**, which outlines the decision-making process, structure, responsibilities, and procedures for contributions and oversight of the AsyncAPI open project.
 
 
 ## AsyncAPI Technical Steering Committee (TSC) 👥
@@ -47,7 +47,7 @@ If you have any questions or need guidance, please reach out through our [GitHub
 
 ## Join our Community Calls
 
-We invite you to join our [Events & Meetings](https://www.asyncapi.com/community/events), and we hope to see you at one of the [AsyncAPI Conferences & Meetups](https://conference.asyncapi.com).
+We invite you to join our [Events & Meetings](https://www.asyncapi.com/community/events), and we hope to see you at one of the [AsyncAPI Conferences](https://conference.asyncapi.com).
 
 ---
 
