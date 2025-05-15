@@ -2,38 +2,38 @@
  
  [![AsyncAPI Logo](./assets/github-repobanner-community.png)](https://www.asyncapi.com)
 
-# 📘 AsyncAPI Community
+# AsyncAPI Community
 
 Welcome to the AsyncAPI Initiative! Our mission is to improve the current state of Event-Driven Architectures (EDAs) and the tooling ecosystem around them.
 Join us in shaping the future of how you work with Event-Driven Architectures.
 
-## 🎯 Community Goals 
+## Community Goals 🎯 
 
 We set annual community goals that guide our growth and initiatives every year. Join us as we enhance maintainers' support, simplify onboarding, and establish structured community initiatives and programs. 
 
 **[More details »](./annual-goals)**
 
 
-## 📚 Community Documentation & Onboarding
+## Community Documentation & Onboarding
 
-Our community docs and onboarding section provides everything you need to get started contributing to our organization.
+Find all the resources you need to start contributing to our organization.
 
-### 🚀 Getting Started
+### Getting Started
 
 1. Follow the [Code of Conduct](CODE_OF_CONDUCT.md) and help keep the community inclusive and respectful.
 
 2. Read the [Contribution Guide](docs/onboarding-guide/contribution-flow.md) and learn how to contribute effectively.
 
-3. Explore the [Community Contribution Onboarding Docs](docs/onboarding-guide), a step-by-step guide for new contributors, including technical writers onboarding.
+3. Explore the [Community Contribution Onboarding Docs](docs/onboarding-guide), a step-by-step guide for new contributors.
 
 4. Follow the [AsyncAPI Style Guide](docs/styleguide) to ensure consistency across all docs.
 
-## 🏛️ Community Governance and Charter
+## Community Governance and Charter
 
 Our community is steered by a transparent governance board. You can learn more about our  **[Community Governance](./GOVERNANCE.md)** and the **[AsyncAPI Charter](./CHARTER.md)**, which outlines the decision-making process, structure, responsibilities, and procedures for contributions and oversight of the AsyncAPI open project.
 
 
-## AsyncAPI Technical Steering Committee (TSC) 👥
+## AsyncAPI Technical Steering Committee (TSC) 
 
 The TSC is a group of maintainers and Ambassadors responsible for the maintenance and decision-making of the AsyncAPI Initiative. It was formed to ensure open governance and neutrality.
 
