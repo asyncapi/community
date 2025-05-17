@@ -37,7 +37,7 @@ When referencing sources that will take users outside of AsyncAPI, refer to the 
 When it comes to referring to other sections within the content being created for AsyncAPI, consider using the following methods:
 
 - **Use relative URLs**: Structure internal links with relative paths to maintain functionality when documentation is moved or deployed to different environments.
-- **Create hierarchy awareness**: Craft link text that helps users understand where the destination fits within your overall documentation structure.
+- **Show where things are**: Write link text that helps readers understand how content fits into the bigger picture of our docs.
 - **Be Contextual**: Ensure the link text provides enough context about where users will navigate within your documentation structure.
 - **Support exploration**: Design internal links that encourage progressive discovery of related concepts, creating logical reading paths through complex documentation.
 - **Maintain Consistency**: Use similar patterns for similar types of internal navigation to help users build mental models of your documentation structure.
