@@ -43,7 +43,7 @@ When it comes to referring to other sections within the content being created fo
 - **Maintain Consistency**: Use similar patterns for similar types of internal navigation to help users build mental models of your documentation structure.
 - **Consider anchor links**: For lengthy pages, use anchor links to direct users to specific sections rather than forcing them to scroll through content.
 
-## Examples and Best Practices
+## Examples
 
 ### Sample of a Text Link
 
