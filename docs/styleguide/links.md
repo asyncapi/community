@@ -22,13 +22,6 @@ Consider using the following tips to format links for files, images, and other f
 
 - **Use relative paths**: This will make it easier for readers to quick access the image or source embedded in the repository.
 - **Use recent version files**:  Check to see if assets being used in the content are up-to-date. This ensures that readers get the correct information.
-
-### Example of an External Link
-
-```markdown
-Visit the [AsyncAPI Blog](https://www.asyncapi.com/blog){:target="_blank" rel="noopener"} (external).
-```
-
 - **Use meaningful names for files**:  Make sure the file names for assets correspond to what they describe. This makes the tutorial, blog post, or documentation-related update more accessible, especially for users who use screen readers to navigate the site.  
 
 ## External Links
@@ -44,9 +37,6 @@ When referencing sources that will take users outside of AsyncAPI, refer to the 
 When it comes to referring to other sections within the content being created for AsyncAPI, consider using the following methods:
 
 - **Use relative URLs**: Structure internal links with relative paths to maintain functionality when documentation is moved or deployed to different environments.
-- **Show where things are**: Write link text that helps readers understand how content fits into the bigger picture of our docs.
-- **Be Contextual**: Ensure the link text provides enough context about where users will navigate within your documentation structure.
-- **Support exploration**: Design internal links that encourage progressive discovery of related concepts, creating logical reading paths through complex documentation.
 - **Maintain Consistency**: Use similar patterns for similar types of internal navigation to help users build mental models of your documentation structure.
 - **Consider anchor links**: For lengthy pages, use anchor links to direct users to specific sections rather than forcing them to scroll through content.
 
@@ -65,12 +55,6 @@ For more information, visit the [AsyncAPI website](https://www.asyncapi.com).
 ```
 
 ### Example of an Internal Link
-
-```markdown
- Read the [AsyncAPI Specification](../specifications/latest)
-```
-
-### Internal Link Example
 
 ```markdown
 Read the [AsyncAPI Specification]
