@@ -1,7 +1,7 @@
 ﻿---
-title: Glossary
-description: The style guide gives advice on how to effectively use terms and concepts when creating tutorials and other forms of content for AsyncAPI.
-weight: 180
+title: Links
+description: This style guide gives advice on how to create effective links when referencing outside sources and other forms of multimedia in AsyncAPI's content.
+weight: 181
 ---
 
 
@@ -60,8 +60,7 @@ For more information, visit the [AsyncAPI website](https://www.asyncapi.com).
 ### Example of an Internal Link
 
 ```markdown
-Read the [AsyncAPI Specification]
-(https://www.asyncapi.com/docs/specifications/latest).
+ Read the [AsyncAPI Specification](../specifications/latest)
 ```
 
 ### Internal Link Example
