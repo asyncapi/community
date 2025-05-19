@@ -1,4 +1,4 @@
-# AsyncAPI Webinar Initiative: Learning, Sharing, and Growing Together
+# AsyncAPI Webinar Series Initiative: Learning, Sharing, and Growing Together
 
 ## Introduction
 
@@ -37,15 +37,15 @@ Are you working on something exciting related to AsyncAPI? Do you have a unique 
 
 ## Format Guidelines for Host & Guest
 
-### For Hosts:
+### For Hosts
 
-- Get familarized with the hosting platform (Restream)
+- Get familiarized with the hosting platform (Restream)
 - Prepare an engaging introduction and closing.
 - Research and prepare relevant questions tailored to the speaker's topic.
 - Keep the session on time and moderate the Q&A effectively.
 - Coordinate with the speaker in advance to understand their presentation flow.
 
-### For Guests:
+### For Guests
 
 - Prepare slides or a live demo that fits the topic.
 - Share practical examples or case studies.
