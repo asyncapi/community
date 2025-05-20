@@ -1,0 +1,64 @@
+# This action update the list of Board members in the website repository.
+# List of all board members is later rendered on asyncapi.com/community/board website's path URL.
+
+name: Update list of Board members in the website repository
+
+on:
+  push:
+    branches:
+      - 'master'
+    paths:
+      - 'TSC_BOARD_MEMBERS.json'
+
+jobs:
+  generate-json:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - name: Installing dependencies...
+        run: npm install
+      - name: Generating the board members file...
+        run: npm run generate:board
+  update-website:
+    name: Make a pull request on website repository with updated board members list
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+    steps:
+      - name: Checkout Current repository
+        uses: actions/checkout@v2
+        with:
+          path: community
+      - name: Checkout Another repository
+        uses: actions/checkout@v2
+        with:
+          repository: asyncapi/website
+          path: website
+          token: ${{ env.GITHUB_TOKEN }}
+      - name: Configure Git
+        run: |
+          git config --global user.name asyncapi-bot
+          git config --global user.email info@asyncapi.io
+      - name: Create branch
+        working-directory: ./website
+        run: |
+          git checkout -b update-board-${{ github.sha }}
+      - name: Replicate TSC board members file from current to another repository
+        working-directory: ./website
+        run: |
+          cp ../community/TSC_BOARD_MEMBERS.json ./config/TSC_BOARD_MEMBERS.json
+      - name: Commit and push changes to the website repository
+        working-directory: ./website
+        run: |
+          git add .
+          git commit -m "docs(community): update latest Board members list"
+          git push https://${{ env.GITHUB_TOKEN }}@github.com/asyncapi/website
+      - name: Create PR
+        working-directory: ./website
+        run: |
+          gh pr create --title "docs(community): update latest Board members list" --body "Updated board members list is available; please review the pull request that introduces new board members to the list." --head "update-board-${{ github.sha }}"
