@@ -7,7 +7,9 @@
   },
   "dependencies": {
     "fs-extra": "^11.3.0",
-    "jest": "^29.7.0",
     "js-yaml": "^4.1.0"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
   }
 }
