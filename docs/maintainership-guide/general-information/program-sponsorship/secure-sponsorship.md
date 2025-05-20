@@ -33,7 +33,7 @@ Sponsorship isn’t just about giving — it’s about growing together. Here's 
 
 **Brand Visibility:**
 
-- Your logo featured on our website, contributor dashboards, newsletters, and livestream events.
+- Your logo featured on our website, maintainership blog post, newsletters, and livestream events.
 - Recognition at community calls, conferences, and AsyncAPI-hosted webinars.
 - Inclusion in contributor spotlight posts and public showcases.
 
