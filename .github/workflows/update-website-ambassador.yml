@@ -6,7 +6,7 @@ on:
     branches:
       - 'master'
     paths:
-      - 'AMBASSADORS_MEMBERS.json'
+      - 'AMBASSADORS_MEMBERS.yaml'
 
 jobs:
   update-website:
@@ -33,6 +33,10 @@ jobs:
         working-directory: ./website
         run: |
           git checkout -b update-ambassadors-${{ github.sha }}
+      - name: Convert YAML to JSON using Python
+        working-directory: ./community
+        run: |
+          python -c 'import sys, yaml, json; json.dump(yaml.safe_load(sys.stdin), sys.stdout, indent=4)' < AMBASSADORS_MEMBERS.yaml > AMBASSADORS_MEMBERS.json
       - name: Copy ambassadors file from Current Repo to Another
         working-directory: ./website
         run: |
