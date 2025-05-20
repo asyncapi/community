@@ -1,7 +1,7 @@
 ﻿---
 title: Links
 description: This style guide gives advice on how to create effective links when referencing outside sources and other forms of multimedia in AsyncAPI's content.
-weight: 181
+weight: 130
 ---
 
 
@@ -58,7 +58,7 @@ For more information, visit the [AsyncAPI website](https://www.asyncapi.com).
 
 ```markdown
 Read the [AsyncAPI Specification]
-(https://www.asyncapi.com/docs/specifications/latest).
+(../docs/specifications/latest).
 ```
 
 ## Additional Resources
