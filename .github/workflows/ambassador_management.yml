@@ -1,0 +1,272 @@
+name: Ambassador Management Workflow
+
+on:
+  pull_request_target:
+    types: [closed]
+    paths:
+      - 'AMBASSADORS_MEMBERS.yaml'
+
+jobs:
+  detect_ambassador_changes:
+    if: github.event.pull_request.merged
+    name: Update Ambassadors Members
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout main branch
+        uses: actions/checkout@v2
+        with:
+          ref: master
+          path: community-main
+
+      - name: Checkout one commit before last one
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 2
+          ref: master
+          path: community
+
+      - run: cd community && git checkout HEAD^
+
+      - name: Install js-yaml
+        run: npm install js-yaml@4.1.0
+
+      - name: Compare files
+        id: compare-files
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const fs = require('fs');
+            const yaml = require('js-yaml');
+            
+            const currentAmbassadors = yaml.load(fs.readFileSync('./community-main/AMBASSADORS_MEMBERS.yaml', 'utf8'));
+            const prAmbassadors = yaml.load(fs.readFileSync('./community/AMBASSADORS_MEMBERS.yaml', 'utf8'));
+
+            const removed = prAmbassadors.filter(
+              (newObj) => !currentAmbassadors.some((oldObj) => oldObj.github === newObj.github)
+            );
+            const added = currentAmbassadors.filter(
+              (oldObj) => !prAmbassadors.some((newObj) => newObj.github === oldObj.github)
+            );
+
+            if (added.length > 0) {
+              core.setOutput("newAmbassadors", added.map((obj) => obj.github).join(","));
+            }
+            if (removed.length > 0) {
+              core.setOutput("removedAmbassadors", removed.map((obj) => obj.github).join(","));
+            }
+
+            // Log information for debugging
+            core.info('Ambassadors in main branch:\n' + yaml.dump(currentAmbassadors));
+            core.info('Location of Ambassadors in main branch:');
+            core.info(fs.realpathSync('./community-main/AMBASSADORS_MEMBERS.yaml'));
+            core.info('Ambassadors in PR branch:\n' + yaml.dump(prAmbassadors));
+            core.info('Location of Ambassadors in PR branch:');
+            core.info(fs.realpathSync('./community/AMBASSADORS_MEMBERS.yaml'));
+
+      - name: Debug newAmbassadors output
+        run: |
+          echo "newAmbassadors = ${{ steps.compare-files.outputs.newAmbassadors }}"
+
+      - name: Debug removedAmbassadors output
+        run: |
+          echo "removedAmbassadors = ${{ steps.compare-files.outputs.removedAmbassadors }}"
+
+    outputs:
+      newAmbassadors: ${{ steps.compare-files.outputs.newAmbassadors }}
+      removedAmbassadors: ${{ steps.compare-files.outputs.removedAmbassadors }}
+      
+  add_ambassador:
+    needs: detect_ambassador_changes
+    if: needs.detect_ambassador_changes.outputs.newAmbassadors != ''
+    runs-on: ubuntu-latest
+    steps:
+      - name: Invite new ambassadors to the organization
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{ secrets.GH_TOKEN_ORG_ADMIN }}
+          script: |
+            const newAmbassadors = '${{ needs.detect_ambassador_changes.outputs.newAmbassadors }}'.split(',');
+            for (const ambassador of newAmbassadors) {
+              try {
+                await github.request('PUT /orgs/{org}/memberships/{username}', {
+                  org: 'asyncapi',
+                  username: ambassador
+                });
+              } catch (error) {
+                core.setFailed(`Failed to add ${ambassador} to the organization: ${error.message}`);
+              }
+            }
+
+      - name: Add new ambassadors to the team
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{ secrets.GH_TOKEN_ORG_ADMIN }}
+          script: |
+            const newAmbassadors = '${{ needs.detect_ambassador_changes.outputs.newAmbassadors }}'.split(',');
+            for (const ambassador of newAmbassadors) {
+              try {
+                await github.request('PUT /orgs/{org}/teams/{team_slug}/memberships/{username}', {
+                  org: 'asyncapi',
+                  team_slug: 'ambassadors',
+                  username: ambassador
+                });
+              } catch (error) {
+                core.setFailed(`Failed to add ${ambassador} to the team: ${error.message}`);
+              }
+            }
+
+    outputs:
+      newAmbassadors: ${{needs.detect_ambassador_changes.outputs.newAmbassadors }}
+
+  display_message:
+    needs: add_ambassador
+    if: needs.add_ambassador.outputs.newAmbassadors != ''
+    runs-on: ubuntu-latest
+    steps:
+      - name: Display welcome message for new ambassadors
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{ secrets.GH_TOKEN }}
+          script: |
+            const newAmbassadors = "${{ needs.add_ambassador.outputs.newAmbassadors }}".split(",");
+            console.log(`New ambassadors: ${newAmbassadors}`);
+            const welcomeMessage = newAmbassadors.map((ambassador) => `@${ambassador.trim().replace(/^@/, '')} We invited you to join the AsyncAPI organization, and you are added to the team that lists all Ambassadors.\n
+
+                      Welcome aboard! We are excited to have you as part of the team.`).join("\n");
+
+            const { owner, repo } = context.repo;
+            const { number: issue_number } = context.issue;
+            return github.rest.issues.createComment({ owner, repo, issue_number, body: welcomeMessage });
+
+  remove_ambassador:
+    needs: detect_ambassador_changes
+    if: needs.detect_ambassador_changes.outputs.removedAmbassadors != ''
+    runs-on: ubuntu-latest
+    steps:
+      - name: Remove ambassadors from the organization
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{ secrets.GH_TOKEN_ORG_ADMIN }}
+          script: |
+            const removedAmbassadors = '${{ needs.detect_ambassador_changes.outputs.removedAmbassadors }}'.split(',');
+            for (const ambassador of removedAmbassadors) {
+              try {
+                await github.request('DELETE /orgs/{org}/memberships/{username}', {
+                  org: 'asyncapi',
+                  username: ambassador
+                });
+                core.info(`Successfully removed ${ambassador} from the organization.`);
+              } catch (error) {
+                if (error.message.startsWith('Cannot find')) {
+                  core.info(`Failed to remove ${ambassador} from the organization: ${error.message}`);
+                } else {
+                  core.setFailed(`Failed to remove ${ambassador} from the organization: ${error.message}`);
+                }
+              }
+            }
+
+    outputs:
+      removedAmbassadors: ${{ needs.detect_ambassador_changes.outputs.removedAmbassadors }}
+
+  remove_ambassador_goodbye:
+    needs: remove_ambassador
+    if: needs.remove_ambassador.outputs.removedAmbassadors != ''
+    runs-on: ubuntu-latest
+    steps:
+      - name: Display goodbye message to removed ambassadors
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{ secrets.GH_TOKEN_ORG_ADMIN }}
+          script: |
+              const removedAmbassadors = "${{ needs.remove_ambassador.outputs.removedAmbassadors }}".split(",");
+
+              // Goodbye message to removed ambassadors
+              const combinedMessages = removedAmbassadors.map((ambassador) => {
+                return `@${ambassador.trim().replace(/^@/, '')} We would like to express our gratitude for your work as an Ambassador of AsyncAPI Initiative. Your efforts have been immensely valuable to us, and we truly appreciate your dedication. Thank you once again, and we wish you all the best in your future endeavors!\n\n`;
+              });
+
+              const { owner, repo } = context.repo;
+              const { number: issue_number } = context.issue;
+              for (const message of combinedMessages) {
+                  github.rest.issues.createComment({ owner, repo, issue_number, body: message });
+              }
+
+  update_emeritus:
+    needs: remove_ambassador
+    if: needs.remove_ambassador.outputs.removedAmbassadors != ''
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v2
+
+      - name: Add Former Ambassador to Emeritus.yaml and print
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const fs = require('fs');
+            const path = './Emeritus.yaml';
+
+            // Read the current content of the file
+            let content = fs.readFileSync(path, 'utf8').trim(); // remove any trailing whitespaces
+
+            // Parse the removedAmbassadors JSON string to an array of objects
+            const removedAmbassadors = JSON.parse('${{ needs.remove_ambassador.outputs.removedAmbassadors }}');
+
+            // Extract existing names from the file
+            const existingNames = new Set(
+              content
+                .split('\n')
+                .map(line => line.trim().replace('- ', '')) // Normalize names
+                .filter(line => line && !line.startsWith('#') && !line.includes(':')) // Filter out comments and section headers
+            );
+
+            // Filter ambassadors who should be added and are not already in the list
+            const removedAmbassadors = removedAmbassadors
+              .filter(ambassador => !existingNames.has(ambassador)) // Ensure name is not already in the list
+              .map(ambassador => `  - ${ambassador}`) // Format for YAML
+              .join('\n');
+
+            // Append new ambassadors if there are any new ones
+            if (removedAmbassadors) {
+              content = content + '\n' + removedAmbassadors;
+              fs.writeFileSync(path, content);
+              console.log('Updated Emeritus.yaml:\n', content);
+            } else {
+              console.log('No new names to add. Emeritus Ambassador is already in the list.');
+            }
+
+      - name: Config git
+        run: |
+          git config --global user.name asyncapi-bot
+          git config --global user.email info@asyncapi.io
+
+      - name: Create new branch
+        run: |
+          git checkout -b update-emeritus-${{ github.run_id }}
+
+      - name: Commit and push
+        run: |
+          git add .
+          git commit -m "Update Emeritus.yaml"
+          git remote set-url origin https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/asyncapi/community.git
+          git push origin update-emeritus-${{ github.run_id }}
+
+      - name: Create PR
+        run: |
+          gh pr create --title "docs(community): update latest emeritus list" --body "Updated Emeritus list is available and this PR introduces changes with latest information about Emeritus" --head update-emeritus-${{ github.run_id }}
+
+  notify_slack_on_failure:
+    if: always() && (needs.detect_ambassador_changes.result == 'failure' || needs.add_ambassador.result == 'failure' || needs.display_message.result == 'failure' || needs.update_emeritus.result == 'failure' || needs.remove_ambassador.result == 'failure' || needs.remove_ambassador_goodbye.result == 'failure')
+    needs: [detect_ambassador_changes,  add_ambassador, display_message, update_emeritus,remove_ambassador_goodbye, remove_ambassador]
+    runs-on: ubuntu-latest
+    steps:
+    - name: Report workflow run status to Slack
+      uses: rtCamp/action-slack-notify@v2
+      env:
+        SLACK_WEBHOOK: ${{secrets.SLACK_CI_FAIL_NOTIFY}}
+        SLACK_TITLE: 🚨 Ambassador Management Workflow failed 🚨
+        SLACK_MESSAGE: Failed to post a message to new Ambassador
+        MSG_MINIMAL: true
