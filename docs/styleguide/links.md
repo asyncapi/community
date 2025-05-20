@@ -1,5 +1,5 @@
 ﻿---
-title: Links
+title: Glossary
 description: This style guide gives advice on how to create effective links when referencing outside sources and other forms of multimedia in AsyncAPI's content.
 weight: 130
 ---
@@ -12,6 +12,7 @@ Links serve as pathways through resources referenced in AsyncAPI's content, and 
 
 Here are some ways to effectively design links when referencing sources in a tutorial, blog post, or making an update to AsyncAPI's documentation:
 
+- **Use clear and concise link text**: Make sure the link text accurately describes the destination or action, so users know what to expect when clicking.
 - **Be descriptive**: Using common phrases like "Click Here" or "Read More" makes it harder for users, especially those who use screen readers to navigate the web, to understand what will happen
 - **Be Relevant**:  It's best to ensure that the link's text describes the source in a way that connects to the content's topic. This helps users gain a better understanding of the material they are reading.
 - **Be Unique**: Avoid using the same text for sources' links. help screen reader users distinguish between different navigation options and prevent confusion for all readers.
