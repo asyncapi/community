@@ -26,6 +26,7 @@ jobs:
       - name: Generating the board members file...
         run: npm run generate:board
   update-website:
+    needs: generate-yaml
     name: Make a pull request on website repository with updated board members list
     runs-on: ubuntu-latest
     env:
