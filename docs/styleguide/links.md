@@ -1,4 +1,4 @@
-﻿---
+---
 title: Links
 description: This style guide gives advice on creating effective internal, external, and asset links in AsyncAPI content.
 weight: 130
@@ -15,7 +15,7 @@ Here are some ways to effectively design links when referencing sources in a tut
 - **Use clear and concise link text**: Make sure the link text accurately describes the destination or action, so users know what to expect when clicking.
 - **Be descriptive**: Using common phrases like "Click Here" or "Read More" makes it harder for users, especially those who use screen readers to navigate the web, to understand what will happen.
 - **Be Relevant**:  It's best to ensure that the link's text describes the source in a way that connects to the content's topic. This helps users gain a better understanding of the material they are reading.
-- **Be Unique**: Avoid using the same text for sources' links. help screen reader users distinguish between different navigation options and prevent confusion for all readers.
+- **Be Unique**: Avoid using the same text for sources' links. This helps screen reader users distinguish between different navigation options and prevent confusion for all readers.
 
 ## Asset Links
 
