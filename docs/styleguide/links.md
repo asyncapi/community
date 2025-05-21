@@ -57,9 +57,6 @@ For more information, visit the [AsyncAPI website](https://www.asyncapi.com).
 
 ### Example of an Internal Link
 
-```markdown
-Read the [AsyncAPI Specification](../docs/specifications/latest).
-```
 
 ## Additional Resources
 
