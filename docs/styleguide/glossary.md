@@ -32,15 +32,11 @@ Here are some examples of terms being used in tutorials & written as headings:
 
 1. Term:
 
-```md
-### Channel
-```
+`### Channel`
 
-2. Concept being used in a sentence
+1. Concept being used in a sentence
 
-```md
-In the context of designing and setting up an event-driven application, servers are responsible for delivering asynchronous messages from the producer to the consumers through the use of {'{'}`**[channel]**(https://www.asyncapi.com/docs/concepts/channel)`{'}'}. 
-```
+`In the context of designing and setting up an event-driven application, servers are responsible for delivering asynchronous messages from the producer to the consumers through the use of {'{'}`**[channel]**(https://www.asyncapi.com/docs/concepts/channel)`{'}'}.`
 
 ## Additional Resources
 
