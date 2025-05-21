@@ -58,7 +58,8 @@ For more information, visit the [AsyncAPI website](https://www.asyncapi.com).
 ### Example of an Internal Link
 
 ```markdown
-Read the [AsyncAPI Specification](../specifications/latest).```
+Read the [AsyncAPI Specification](../specifications/latest).
+```
 ## Additional Resources
 
  For more tips on creating effective links, consider consulting the following sources:
