@@ -36,7 +36,7 @@ Here are some examples of terms being used in tutorials & written as headings:
 ### Channel
 ```
 
-1. Concept being used in a sentence
+2. Concept being used in a sentence
 
 ```md
 In the context of designing and setting up an event-driven application, servers are responsible for delivering asynchronous messages from the producer to the consumers through the use of {'{'}`**[channel]**(https://www.asyncapi.com/docs/concepts/channel)`{'}'}. 
