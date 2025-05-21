@@ -1,4 +1,4 @@
----
+﻿---
 title: Links
 description: This style guide gives advice on creating effective internal, external, and asset links in AsyncAPI content.
 weight: 130
@@ -32,6 +32,7 @@ When referencing sources that will take users outside AsyncAPI, refer to the fol
 - **Use absolute URLs:** Always include the full URL, starting with `https://`, for external resources.
 - **Clearly signal external destinations:** Enhance user awareness by explicitly indicating when a link will take users away from AsyncAPI's website.
 - **Provide contextual link anchors:** Embed links within the surrounding sentence or paragraph in a way that naturally describes the external resource. This creates a smoother reading experience and provides immediate context for users.
+
 ## Internal Links
 
 When it comes to referring to other sections within the content being created for AsyncAPI, consider using the following methods:
@@ -39,6 +40,7 @@ When it comes to referring to other sections within the content being created fo
 - **Use relative URLs**: Structure internal links with relative paths to maintain functionality when documentation is moved or deployed to different environments.
 - **Maintain consistency**: Use similar patterns for internal navigation to help users build a mental model of the documentation structure.
 - **Consider anchor links**: For lengthy pages, use anchor links to direct users to specific sections rather than forcing them to scroll through content.
+
 ## Examples
 
 ### Sample of a Text Link
@@ -54,7 +56,6 @@ For more information, visit the [AsyncAPI website](https://www.asyncapi.com).
 ```
 
 ### Example of an Internal Link
-
 
 ## Additional Resources
 
