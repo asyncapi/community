@@ -12,7 +12,7 @@ on:
       - 'AMBASSADORS_MEMBERS.json'
 
 jobs:
-  generate-json:
+  generate-yaml:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -52,7 +52,7 @@ jobs:
       - name: Replicate TSC board members file from current to another repository
         working-directory: ./website
         run: |
-          cp ../community/TSC_BOARD_MEMBERS.json ./config/TSC_BOARD_MEMBERS.json
+          cp ../community/TSC_BOARD_MEMBERS.yaml ./config/TSC_BOARD_MEMBERS.yaml
       - name: Commit and push changes to the website repository
         working-directory: ./website
         run: |
