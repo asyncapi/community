@@ -27,12 +27,11 @@ Consider using the following tips to format links for files, images, and other f
 
 ## External Links
 
-When referencing sources that will take users outside of AsyncAPI, refer to the following tips:
+When referencing sources that will take users outside AsyncAPI, refer to the following tips:
 
-- **Use absolute URLs:** Always include the full URL, starting with {'{'}`https://`{'}'}, for external resources. This ensures the link will take users to the site being referenced.
-- **Clearly signal external destinations:** Enhance user awareness by explicitly indicating when a link will take users away from AsyncAPI's website .
+- **Use absolute URLs:** Always include the full URL, starting with `https://`, for external resources.
+- **Clearly signal external destinations:** Enhance user awareness by explicitly indicating when a link will take users away from AsyncAPI's website.
 - **Provide contextual link anchors:** Embed links within the surrounding sentence or paragraph in a way that naturally describes the external resource. This creates a smoother reading experience and provides immediate context for users.
-
 ### Internal Links
 
 When it comes to referring to other sections within the content being created for AsyncAPI, consider using the following methods:
