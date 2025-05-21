@@ -1,5 +1,5 @@
 const fs = require('fs-extra');
-const path = require('path');
+const yaml = require('js-yaml')
 const { writeJSON } = require('../scripts/helpers/writeJSON');
 const { 
   loadJson, 
@@ -8,8 +8,9 @@ const {
   generateTSCBoardMembersList 
 } = require('../scripts/tsc-board-member');
 
+jest.mock('js-yaml');
 jest.mock('fs-extra');
-jest.mock('../scripts/helpers/writeJSON');
+jest.mock('../scripts/helpers/writeJSON.js');
 
 describe('generateTSCBoardMembersList', () => {
   const maintainers = [
@@ -63,12 +64,14 @@ describe('generateTSCBoardMembersList', () => {
     });
 
     const logSpy = jest.spyOn(console, 'info').mockImplementation(() => {});
+    yaml.dump.mockReturnValue('yaml-content');
     await generateTSCBoardMembersList();
 
     expect(writeJSON).toHaveBeenCalledWith('MAINTAINERS.yaml', 'MAINTAINERS.json');
     expect(fs.writeFileSync).toHaveBeenCalledWith(
-      'TSC_BOARD_MEMBERS.json',
-      JSON.stringify(mergedExpected, null, 2)
+      'TSC_BOARD_MEMBERS.yaml',
+      'yaml-content',
+      'utf-8'
     );
     expect(logSpy).toHaveBeenCalledWith('✅ Generated 3 filtered TSC/Board members');
   });

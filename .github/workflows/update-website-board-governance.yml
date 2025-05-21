@@ -8,16 +8,17 @@ on:
     branches:
       - 'master'
     paths:
-      - 'TSC_BOARD_MEMBERS.json'
+      - 'MAINTAINERS.yaml'
+      - 'AMBASSADORS_MEMBERS.json'
 
 jobs:
   generate-json:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Setup Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: 18
       - name: Installing dependencies...
@@ -31,11 +32,11 @@ jobs:
       GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
     steps:
       - name: Checkout Current repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
           path: community
       - name: Checkout Another repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
           repository: asyncapi/website
           path: website

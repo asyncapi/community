@@ -1,6 +1,6 @@
 {
   "name": "@asyncapi/community",
-  "description": "Repository to access AsynAPI community assets & configs",
+  "description": "Repository to access AsyncAPI community assets & configs",
   "scripts": {
     "test": "jest",
     "generate:board": "node scripts/tsc-board-member.js"

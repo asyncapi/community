@@ -1,11 +1,11 @@
 const fs = require('fs-extra');
-const path = require('path');
+const yaml = require('js-yaml');
 const { writeJSON } = require('./helpers/writeJSON');
 
 const MAINTAINERS_YAML_PATH = 'MAINTAINERS.yaml';
 const MAINTAINERS_JSON_PATH = 'MAINTAINERS.json';
 const AMBASSADORS_PATH = 'AMBASSADORS_MEMBERS.json';
-const OUTPUT_PATH = 'TSC_BOARD_MEMBERS.json';
+const OUTPUT_PATH = 'TSC_BOARD_MEMBERS.yaml';
 
 /**
  * @typedef {Object} Member
@@ -58,7 +58,7 @@ function mergeUniqueMembers(membersA, membersB) {
 }
 
 /**
- * Generates and writes the filtered list of TSC and Board members.
+ * Generates a YAML file of TSC and Board members.
  */
 async function generateTSCBoardMembersList() {
   try {
@@ -73,7 +73,8 @@ async function generateTSCBoardMembersList() {
     const filteredMembers = mergeUniqueMembers(maintainers, ambassadors);
 
     // Step 4: Write final list
-    fs.writeFileSync(OUTPUT_PATH, JSON.stringify(filteredMembers, null, 2));
+    const yamlData = yaml.dump(filteredMembers);
+    fs.writeFileSync(OUTPUT_PATH, yamlData, 'utf-8');
 
     console.info(`✅ Generated ${filteredMembers.length} filtered TSC/Board members`);
   } catch (err) {
@@ -81,9 +82,11 @@ async function generateTSCBoardMembersList() {
   }
 }
 
-generateTSCBoardMembersList();
+if (require.main === module) {
+  generateTSCBoardMembersList();
+}
 
-// export for test coverage
+// Export for test coverage
 module.exports = {
   loadJson,
   hasRelevantFlag,
