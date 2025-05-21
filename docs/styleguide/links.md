@@ -60,6 +60,7 @@ For more information, visit the [AsyncAPI website](https://www.asyncapi.com).
 ```markdown
 Read the [AsyncAPI Specification](../specifications/latest).
 ```
+
 ## Additional Resources
 
  For more tips on creating effective links, consider consulting the following sources:
