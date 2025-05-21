@@ -1,6 +1,6 @@
-﻿---
-title: Links 
-description: This style guide gives advice on how to create effective links when referencing outside sources and other forms of multimedia in AsyncAPI's content.
+---
+title: Links
+description: This style guide gives advice on creating effective internal, external, and asset links in AsyncAPI content.
 weight: 130
 ---
 
