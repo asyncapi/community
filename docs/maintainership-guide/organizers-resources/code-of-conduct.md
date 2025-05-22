@@ -1,5 +1,5 @@
 ---
-title: Organizers Resources
+title: Code of Conduct
 weight: 100
 ---
 

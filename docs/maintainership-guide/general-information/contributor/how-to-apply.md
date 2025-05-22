@@ -12,7 +12,6 @@ To qualify for a chance to participate in the Maintainership Program, contributo
 - Have made **at least two contributions** to any AsyncAPI project (e.g., code, documentation, community support).
 - Be a **student** or a **beginner in open-source** software development.
 - **Not currently serving** as a Project Administrator or Mentor in this program cycle.
-- Only participated in the Program once
 - Have **only participated once** in the AMP previously.
 - Not participating in any **paid open-source** mentorship.
 

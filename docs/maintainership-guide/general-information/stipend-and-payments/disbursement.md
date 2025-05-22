@@ -3,7 +3,7 @@ title: Payment Disbursement
 weight: 80
 ---
 
->_The AMP participants may receive stipends from AsyncAPI, which are at AsyncAPI's sole discretion and are not adjusted to the cost of living. All participants will receive an equal amount of stipends during the program participation._
+> _The AMP participants may receive stipends from AsyncAPI, which are at AsyncAPI's sole discretion and are not adjusted to the cost of living. All participants will receive an equal amount of stipends during the program participation._
 
 The **AsyncAPI Maintainership Program (AMP)** offers stipends as a token of appreciation for the time and effort invested by contributors and mentors. These stipends are disbursed upon successful completion of key milestones and evaluations.
 ## Contributor Stipends
@@ -42,7 +42,7 @@ Follow these steps to request your payment:
 
 4. Toggle to **Invoice** mode
 
-![Open Collective Actions Tab](../../../../assets/open-collective-invoice.png)
+![Open Collective Actions Invoice Toggle](../../../../assets/open-collective-invoice.png)
 
 5. Fill in the required information for payment and submit your request
 

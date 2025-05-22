@@ -1,6 +1,6 @@
 ---
 title: Why a Maintainership Program Matters?
-description: This overview page outlines the AsyncAPI Maintainership Program matters
+description: This overview page outlines why the AsyncAPI Maintainership Program matters
 weight: 30
 ---
 

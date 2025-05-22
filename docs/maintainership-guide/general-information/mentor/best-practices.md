@@ -54,7 +54,7 @@ Your goal as a mentor is to help contributors become independent problem-solvers
 
    Effective mentorship is a two-way street. Feedback helps contributors grow, but it also helps you grow as a mentor.
    
-- Provide honest, actionable, and timely feedback throughout the 
-- Evaluate your mentee as a long term prospects to become successful open source developer.
+- Provide honest, actionable, and timely feedback throughout the program.
+- Evaluate your mentee as a long-term prospect to become a successful open-source developer.
 - Invite feedback on your mentorship style and be open to adapting.
 - View mentorship as a two-way learning opportunity.
