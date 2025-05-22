@@ -1,65 +1,55 @@
-<br>
+
  
  [![AsyncAPI Logo](./assets/github-repobanner-community.png)](https://www.asyncapi.com)
 
-<h4 align="left">Building the future of event-driven architectures</h4>
-<h6 align="left">We're on a mission to standardize message-based communication and increase interoperability of the different systems out there.</h6>
-<p align="left">
-  <a href="https://www.github.com/asyncapi/spec">Specification</a>
-  |
-  <a href="https://studio.asyncapi.com/">Studio</a>
-  |
-  <a href="https://www.asyncapi.com/roadmap">Roadmap</a>
-  |
-  <a href="./CONTRIBUTING.md">Contributing</a>
-  |
-  <a href="https://www.asyncapi.com/slack-invite">Slack</a>
-  |
-  <a href="https://www.youtube.com/channel/UCIz9zGwDLbrYQcDKVXdOstQ">Youtube</a>
-  |
-  <a href="https://opencollective.com/asyncapi">Donate 🙌🏾</a>
-</p>
+# AsyncAPI Community
 
-## 💰 Platinum sponsors
-<p align="left">
-  <a href="https://iqvia.com">
-    <img src="./assets/iqvia.png" alt="IQVIA logo" height="40">
-  </a>
-  &nbsp;&nbsp;&nbsp;&nbsp;
-  <a href="https://mulesoft.com">
-    <img src="./assets/mulesoft.png" alt="Mulesoft logo" height="40">
-  </a>
-  &nbsp;&nbsp;&nbsp;&nbsp;
-  <a href="https://salesforce.com">
-    <img src="./assets/salesforce.png" alt="Salesforce logo" height="40">
-  </a>
-  &nbsp;&nbsp;&nbsp;&nbsp;
-  <a href="https://sap.com">
-    <img src="./assets/sap.svg" alt="SAP logo" height="40">
-  </a>
-  &nbsp;
-  <a href="https://slack.com">
-    <img src="./assets/slack-white-bg.png" alt="Slack logo" height="40">
-  </a>
-  &nbsp;
-  <a href="https://solace.com">
-    <img src="./assets/solace.png" alt="Solace logo" height="40">
-  </a>
-  &nbsp;
-  <a href="https://tibco.com">
-    <img src="./assets/tibco.png" alt="TIBCO logo" height="40">
-  </a>
-</p>
+Welcome to the AsyncAPI Initiative! Our mission is to improve the current state of Event-Driven Architectures (EDAs) and the tooling ecosystem around them.
+Join us in shaping the future of how you work with Event-Driven Architectures.
 
-<p align="left">
-  🙌🏾 <a href="https://opencollective.com/asyncapi">Become a sponsor</a> 🙌🏾
-</p>
+## Community Goals 🎯 
 
-## 🤗 AsyncAPI meetings
-AsyncAPI hosts different meetings every week. Each meeting focuses on different topics; sometimes purely technical, community building, and more. Pick one and join us! [Learn more about our meetings.](https://www.asyncapi.com/community/meetings)
+We set annual community goals that guide our growth and initiatives every year. Join us as we enhance maintainers' support, simplify onboarding, and establish structured community initiatives and programs. 
 
-To learn more about meetings setup and automation, [read our FAQ](https://github.com/asyncapi/community/blob/master/MEETINGS_ORGANIZATION.md)
+**[More details »](./annual-goals)**
 
+
+## Community Documentation & Onboarding
+
+Find all the resources you need to start contributing to our organization.
+
+### Getting Started
+
+1. Follow the [Code of Conduct](CODE_OF_CONDUCT.md) and help keep the community inclusive and respectful.
+
+2. Read the [Contribution Guide](docs/onboarding-guide/contribution-flow.md) and learn how to contribute effectively.
+
+3. Explore the [Community Contribution Onboarding Docs](docs/onboarding-guide), a step-by-step guide for new contributors.
+
+4. Follow the [AsyncAPI Style Guide](docs/styleguide) to ensure consistency across all docs.
+
+## Community Governance and Charter
+
+Our community is steered by a transparent governance board. You can learn more about our  **[Community Governance](./GOVERNANCE.md)** and the **[AsyncAPI Charter](./CHARTER.md)**, which outlines the decision-making process, structure, responsibilities, and procedures for contributions and oversight of the AsyncAPI open project.
+
+
+## AsyncAPI Technical Steering Committee (TSC) 
+
+The TSC is a group of maintainers and Ambassadors responsible for the maintenance and decision-making of the AsyncAPI Initiative. It was formed to ensure open governance and neutrality.
+
+### Want To Become a TSC Member?
+- Read the requirements and responsibilities on becoming a [TSC Member](./TSC_MEMBERSHIP.md) or watch our [YouTube video on how to become a TSC member](https://www.youtube.com/watch?v=uG_aLF9Z1F0). 
+- Or explore if you meet the requirements of becoming an [AsyncAPI Ambassador](./AMBASSADOR_ORGANIZATION.md).
+
+## Need Help? 🤝
+
+If you have any questions or need guidance, please reach out through our [GitHub Discussions page](https://github.com/orgs/asyncapi/discussions) or via [Slack](https://asyncapi.com/slack-invite).
+
+## Join our Community Calls
+
+We invite you to join our [Events & Meetings](https://www.asyncapi.com/community/events), and we hope to see you at one of the [AsyncAPI Conferences](https://conference.asyncapi.com).
+
+---
 
 ## Contributors
 
@@ -130,3 +120,33 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
+
+<!--Development-->
+
+## Development
+
+The AsyncAPI Community repository includes extensive automation powered by custom scripts. To ensure these scripts function correctly, proper testing is essential. This section explains how to run existing tests and how to add new ones.
+
+### Running Tests
+We use **Jest** for testing automation scripts. To run the tests locally, follow these steps:
+
+1. Install dependencies:
+   ```sh
+   npm install
+   ```
+2. Run all tests:
+   ```sh
+   npm test
+   ```
+
+### Adding New Tests
+If you are contributing new automation scripts, ensure they are covered by tests. To add a new test:
+
+1. Create or update the relevant test file in the `test/` directory.
+2. Follow the existing Jest structure for consistency.
+3. Ensure your test covers edge cases and different scenarios.
+4. Run the tests locally before pushing your changes.
+
+All contributions to automation should include proper test coverage to maintain reliability.
+
+
