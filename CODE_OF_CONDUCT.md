@@ -5,7 +5,7 @@ Welcome to our community! We are a diverse group of individuals united by our pa
 
 Our community promotes and supports inclusivity, welcoming individuals from all backgrounds and experiences. We believe that diversity is our strength, and we actively seek participation from those who enhance it.
 
-Our Code of Conduct governs how we behave publicly or privately when representing the project. It ensures that diverse groups collaborate for mutual advantage and enjoyment and challenges prejudice that could jeopardize anyone's participation in the project.
+Our Code of Conduct governs how we behave publicly when representing the project. It ensures that diverse groups collaborate for mutual advantage and enjoyment and challenges prejudice that could jeopardize anyone's participation in the project.
 
 We expect everyone in our community to treat each other with kindness, empathy, and respect. We believe fostering a welcoming and respectful environment can create a positive and successful community.
 
@@ -33,7 +33,9 @@ We pledge to encourage a diverse, healthy community that celebrates individualit
 - Publishing others' private information, such as a physical or electronic address, without explicit permission.
 - Publishing content or comments that promote illegal activities.
 - Violence, threats of violence, or violent language.
+- Carrying weapons(this includes fireworks, guns, knives and explosives) to any of our physical events.
 - Other conduct that could reasonably be considered inappropriate in a professional setting.
+
 
 ## Scope
 
@@ -45,13 +47,16 @@ The Code of Conduct Committee (CoC Committee) responds to, investigates, and res
 
 The Committee has the right and responsibility to remove, edit, or reject comments, commits, code, wiki edits, issues, and other contributions that do not align with this Code of Conduct. The Committee may also temporarily or permanently ban any contributor for inappropriate, threatening, offensive, or harmful behaviors to the community.
 
-For more details, please see the [CoC Committee and Incident Resolution Procedure](https://github.com/asyncapi/community/tree/master/code_of_conduct).
+For more details, please see the [CoC Incident Resolution Procedure](https://github.com/asyncapi/community/blob/master/code_of_conduct/coc-incident-resolution-procedures.md).
 
-## Enforcement
+## Reporting An Incident
 
-Instances of abusive, harassing, or otherwise unacceptable behavior may be reported to the community leaders responsible for enforcement at conduct@asyncapi.io. All complaints will be reviewed and investigated promptly and fairly.
+Instances of abusive, harassing, or otherwise unacceptable behavior may be reported to the community leaders responsible for enforcement at **conduct@asyncapi.io.** All complaints will be reviewed and investigated promptly and fairly.
 
 All community leaders are obligated to respect the privacy and security of the reporter of any incident.
+
+### Reporting Guidelines
+When making a report, please be detailed and share details such as your names, contact details, names of the people involved, where the incident occured(whether a physical or online platform), any witnesses involved, and any other info regarding that incident.
 
 ## Enforcement Guidelines
 Community leaders will follow these Community Impact Guidelines in determining the consequences for any action they deem in violation of this Code of Conduct:
@@ -85,3 +90,5 @@ Community Impact Guidelines were inspired by [Mozilla's code of conduct enforcem
 [homepage]: http://contributor-covenant.org
 [version]: https://www.contributor-covenant.org/version/2/1/code_of_conduct.html
 [Mozilla CoC]: https://github.com/mozilla/inclusion
+[Django CoC Reporting Guide] : https://www.djangoproject.com/conduct/reporting/
+
