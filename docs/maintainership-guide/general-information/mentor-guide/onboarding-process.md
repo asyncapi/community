@@ -1,6 +1,6 @@
 ---
 title: Mentors Onboarding Process
-weight: 10
+weight: 30
 ---
 
 The success of the AsyncAPI Maintainership Program depends heavily on thoughtful mentor-mentee pairing. Mentorship is more than guidance, it’s a shared commitment to growth, for both the contributor and the mentor. To help mentors start strong, we’ve designed an onboarding experience that brings clarity, alignment, and confidence.

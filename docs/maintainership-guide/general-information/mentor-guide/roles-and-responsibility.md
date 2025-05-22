@@ -1,6 +1,6 @@
 ---
-title: Mentors Rules And Responsibilty
-weight: 10
+title: Mentors Roles And Responsibilty
+weight: 40
 ---
 
 > _At AsyncAPI, we believe mentorship is one of the most effective ways to teach, upskill, and empower contributors in open source. When done right, it creates not just transformative learning experiences for contributors, but also long-lasting value and growth for mentors._
@@ -18,11 +18,13 @@ Below are the key responsibilities and expectations for mentors:
 - Break the project into milestones that align with the program timeline.
 - Prepare a list of actionable tasks/issues for contributors to work on.
 - Set up the development environment and share necessary tools, documentation, and onboarding resources.
+
 ## Contributor Onboarding
 
 - Create a welcoming, inclusive, and supportive space for learning.
 - Provide a clear introduction to the project — including codebase structure, contribution guidelines, and documentation.
 - Clarify expectations around communication cadence, feedback loops, and availability.
+
 ## Communication
 
 - Review contributor eligibility and project fit early on.
@@ -39,6 +41,7 @@ Below are the key responsibilities and expectations for mentors:
 - Encourage independent thinking while being available for support.
 - Promote transparency, collaboration, and ethical contribution practices.
 - Encourage long-term involvement in the open source ecosystem beyond the program.
+
 ### Evaluation & Recognition
 
 - Track contributor progress consistently throughout the program.
