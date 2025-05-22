@@ -1,6 +1,6 @@
 ---
 title: Contributor Expectations
-weight: 70
+weight: 80
 ---
 
 A successful mentorship program doesn't just happen —like any learning and development program, it depends on intentional planning, mutual trust, and active participation. While the program is designed to support and empower contributors, its success hinges on your commitment and accountability.

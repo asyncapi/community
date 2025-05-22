@@ -1,4 +1,4 @@
 ---
 title: AsyncAPI Maintainership Program Sponsorship
-weight: 20
+weight: 80
 ---

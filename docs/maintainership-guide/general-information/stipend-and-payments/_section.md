@@ -1,5 +1,5 @@
 ---
 title: Stipends And Payments
-weight: 50
+weight: 70
 ---
 

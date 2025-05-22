@@ -1,7 +1,7 @@
 ---
 title: AsyncAPI Maintainership Program Timeline
 description: This overview page outlines the AsyncAPI Maintainership Program Timeline and Schedule
-weight: 5
+weight: 20
 ---
 
 The **AsyncAPI Maintainership Program** is an 18-week annual mentorship initiative that kicks off every summer. It follows a carefully structured timeline designed to foster steady growth, hands-on experience, and long-term mentorship that empowers contributors to become maintainers.

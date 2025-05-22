@@ -1,6 +1,6 @@
 ---
 title: Successful Project Ideas Tips
-weight: 90
+weight: 100
 ---
 
 The project idea you mentor is the backbone of your AMP experience. A well-scoped, impactful idea not only attracts the right contributor but also ensures a smoother, more rewarding mentorship journey. Here’s what mentors should know and follow when proposing and managing project ideas:

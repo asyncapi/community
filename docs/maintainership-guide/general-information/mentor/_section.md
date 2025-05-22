@@ -1,4 +1,4 @@
 ---
 title: Maintainership Program Mentor's Guide
-weight: 30
+weight: 40
 ---

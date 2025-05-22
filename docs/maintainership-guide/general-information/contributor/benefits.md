@@ -1,6 +1,6 @@
 ---
 title: Contributor Benefits
-weight: 80
+weight: 90
 ---
 
 You might be thinking isn’t access to world-class mentorship and a generous stipend enough? While those are core parts of the AMP experience, the **AsyncAPI Mentorship Program offers so much more**.

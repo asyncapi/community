@@ -1,7 +1,7 @@
 ---
 title: How to Secure Sponsorship
 description: This overview page outlines the how to be a sponsor/partner in the maintainership program
-weight: 20
+weight: 80
 ---
 
 The AsyncAPI Maintainership Program is actively seeking mission-aligned partners who are passionate about growing the next generation of open source maintainers and ensuring the long-term sustainability of key AsyncAPI projects.
@@ -59,4 +59,4 @@ Sponsorship isn’t just about giving — it’s about growing together. Here's 
 **Sponsor via Open Collective:** Visit our AsyncAPI Open Collective and select the Maintainership Program fund.
 
 
-Sponsorship isn’t just a transaction—it’s an investment in people, purpose, and the future of open source. Thank you for considering joining us on this journey.
+Sponsorship isn’t just a transaction, it’s an investment in people, purpose, and the future of open source. Thank you for considering joining us on this journey.

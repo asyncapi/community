@@ -1,7 +1,7 @@
 ---
 title: AsyncAPI Maintainership Program Sponsorship
 description: This overview page outlines the reason why the Maintainership Program needs sponsorship
-weight: 30
+weight: 90
 ---
 
 

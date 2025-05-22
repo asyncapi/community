@@ -1,6 +1,6 @@
 ---
 title: Mentors Roles And Responsibilty
-weight: 40
+weight: 50
 ---
 
 > _At AsyncAPI, we believe mentorship is one of the most effective ways to teach, upskill, and empower contributors in open source. When done right, it creates not just transformative learning experiences for contributors, but also long-lasting value and growth for mentors._

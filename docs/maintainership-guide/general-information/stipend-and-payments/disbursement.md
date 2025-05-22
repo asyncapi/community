@@ -1,6 +1,6 @@
 ---
 title: Payment Disbursement
-weight: 60
+weight: 80
 ---
 
 >_The AMP participants may receive stipends from AsyncAPI, which are at AsyncAPI's sole discretion and are not adjusted to the cost of living. All participants will receive an equal amount of stipends during the program participation._

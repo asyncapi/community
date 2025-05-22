@@ -1,6 +1,6 @@
 ---
 title: Mentors General Tips
-weight: 80
+weight: 90
 ---
 
 Being a mentor is incredibly rewarding, but it also comes with its own set of challenges. Here are some tips to help you make the most of your mentorship experience while maintaining balance and boundaries:

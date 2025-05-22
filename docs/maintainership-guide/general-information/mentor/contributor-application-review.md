@@ -1,6 +1,6 @@
 ---
 title: Contributor Application Review
-weight: 50
+weight: 60
 ---
 
 The AsyncAPI Maintainership Program features a two-step contributor application process: the **Initial Application Phase** and the **Final Selection Phase**.

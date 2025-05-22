@@ -1,5 +1,5 @@
 ---
 title: Organizers Resources
-weight: 80
+weight: 100
 ---
 
