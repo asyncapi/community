@@ -1,11 +1,6 @@
-const fs = require('fs-extra');
+const path = require('path');
 const yaml = require('js-yaml');
-const { writeJSON } = require('./helpers/writeJSON');
-
-const MAINTAINERS_YAML_PATH = 'MAINTAINERS.yaml';
-const MAINTAINERS_JSON_PATH = 'MAINTAINERS.json';
-const AMBASSADORS_PATH = 'AMBASSADORS_MEMBERS.json';
-const OUTPUT_PATH = 'TSC_BOARD_MEMBERS.yaml';
+const { readFile, writeFile } = require('fs/promises');
 
 /**
  * @typedef {Object} Member
@@ -15,14 +10,28 @@ const OUTPUT_PATH = 'TSC_BOARD_MEMBERS.yaml';
  * @property {boolean} [isBoardChair]
  */
 
+const MAINTAINERS_YAML_PATH = path.resolve(__dirname, '..', 'MAINTAINERS.yaml');
+const AMBASSADORS_JSON_PATH = path.resolve(__dirname, '..', 'AMBASSADORS_MEMBERS.json');
+const OUTPUT_YAML_PATH = path.resolve(__dirname, '..', 'TSC_BOARD_MEMBERS.yaml');
+
 /**
  * Reads and parses a JSON file from the given path.
  * @param {string} filePath
- * @returns {Member[]}
+ * @returns {Promise<Member[]>}
  */
-function loadJson(filePath) {
-  const raw = fs.readFileSync(filePath, 'utf-8');
+async function loadJson(filePath) {
+  const raw = await readFile(filePath, 'utf-8');
   return JSON.parse(raw);
+}
+
+/**
+ * Reads and parses a YAML file from the given path.
+ * @param {string} filePath
+ * @returns {Promise<Member[]>}
+ */
+async function loadYaml(filePath) {
+  const raw = await readFile(filePath, 'utf-8');
+  return yaml.load(raw);
 }
 
 /**
@@ -47,11 +56,7 @@ function mergeUniqueMembers(membersA, membersB) {
     const key = member.github;
     if (!key) return;
 
-    if (merged[key]) {
-      merged[key] = { ...merged[key], ...member };
-    } else {
-      merged[key] = member;
-    }
+    merged[key] = merged[key] ? { ...merged[key], ...member } : member;
   });
 
   return Object.values(merged).filter(hasRelevantFlag);
@@ -62,19 +67,16 @@ function mergeUniqueMembers(membersA, membersB) {
  */
 async function generateTSCBoardMembersList() {
   try {
-    // Step 1: Convert MAINTAINERS.yaml → MAINTAINERS.json
-    await writeJSON(MAINTAINERS_YAML_PATH, MAINTAINERS_JSON_PATH);
+    // Step 1: Load converted JSON + ambassadors list
+    const maintainers = await loadYaml(MAINTAINERS_YAML_PATH);
+    const ambassadors = await loadJson(AMBASSADORS_JSON_PATH);
 
-    // Step 2: Load converted JSON + ambassadors list
-    const maintainers = loadJson(MAINTAINERS_JSON_PATH);
-    const ambassadors = loadJson(AMBASSADORS_PATH);
-
-    // Step 3: Merge and filter members
+    // Step 2: Merge and filter members
     const filteredMembers = mergeUniqueMembers(maintainers, ambassadors);
 
-    // Step 4: Write final list
+    // Step 3: Write final list
     const yamlData = yaml.dump(filteredMembers);
-    fs.writeFileSync(OUTPUT_PATH, yamlData, 'utf-8');
+    await writeFile(OUTPUT_YAML_PATH, yamlData, 'utf-8');
 
     console.info(`✅ Generated ${filteredMembers.length} filtered TSC/Board members`);
   } catch (err) {
@@ -82,6 +84,7 @@ async function generateTSCBoardMembersList() {
   }
 }
 
+// Only execute the function when the script is run directly (not when imported)
 if (require.main === module) {
   generateTSCBoardMembersList();
 }
@@ -89,6 +92,7 @@ if (require.main === module) {
 // Export for test coverage
 module.exports = {
   loadJson,
+  loadYaml,
   hasRelevantFlag,
   mergeUniqueMembers,
   generateTSCBoardMembersList,

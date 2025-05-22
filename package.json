@@ -6,7 +6,7 @@
     "generate:board": "node scripts/tsc-board-member.js"
   },
   "dependencies": {
-    "fs-extra": "^11.3.0",
+    "fs": "^0.0.1-security",
     "js-yaml": "^4.1.0"
   },
   "devDependencies": {

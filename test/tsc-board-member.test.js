@@ -1,16 +1,15 @@
-const fs = require('fs-extra');
-const yaml = require('js-yaml')
-const { writeJSON } = require('../scripts/helpers/writeJSON');
-const { 
-  loadJson, 
-  hasRelevantFlag, 
-  mergeUniqueMembers, 
-  generateTSCBoardMembersList 
+const fs = require('fs/promises');
+const yaml = require('js-yaml');
+const {
+  loadJson,
+  loadYaml,
+  hasRelevantFlag,
+  mergeUniqueMembers,
+  generateTSCBoardMembersList
 } = require('../scripts/tsc-board-member');
 
 jest.mock('js-yaml');
-jest.mock('fs-extra');
-jest.mock('../scripts/helpers/writeJSON.js');
+jest.mock('fs/promises');
 
 describe('generateTSCBoardMembersList', () => {
   const maintainers = [
@@ -35,13 +34,23 @@ describe('generateTSCBoardMembersList', () => {
     jest.clearAllMocks();
   });
 
-  it('loadJson should parse JSON content', () => {
-    const json = JSON.stringify([{ github: 'test', isTscMember: true }]);
-    fs.readFileSync.mockReturnValueOnce(json);
+  it('loadYaml should parse YAML content', async () => {
+    fs.readFile.mockResolvedValueOnce('yaml-content');
+    yaml.load.mockReturnValueOnce([{ github: 'test', isTscMember: true }]);
 
-    const result = loadJson('path/to/file.json');
+    const result = await loadYaml('path/to/file.yaml');
     expect(result).toEqual([{ github: 'test', isTscMember: true }]);
-    expect(fs.readFileSync).toHaveBeenCalledWith('path/to/file.json', 'utf-8');
+    expect(fs.readFile).toHaveBeenCalledWith('path/to/file.yaml', 'utf-8');
+    expect(yaml.load).toHaveBeenCalledWith('yaml-content');
+  });
+
+  it('loadJson should parse JSON content', async () => {
+    const json = JSON.stringify([{ github: 'test', isTscMember: true }]);
+    fs.readFile.mockResolvedValueOnce(json);
+
+    const result = await loadJson('path/to/file.json');
+    expect(result).toEqual([{ github: 'test', isTscMember: true }]);
+    expect(fs.readFile).toHaveBeenCalledWith('path/to/file.json', 'utf-8');
   });
 
   it('hasRelevantFlag should return true for members with flags', () => {
@@ -56,28 +65,31 @@ describe('generateTSCBoardMembersList', () => {
     expect(result).toEqual(mergedExpected);
   });
 
-  it('generateTSCBoardMembersList should write filtered list and call writeJSON', async () => {
-    fs.readFileSync.mockImplementation((filePath) => {
-      if (filePath.includes('MAINTAINERS.json')) return JSON.stringify(maintainers);
-      if (filePath.includes('AMBASSADORS_MEMBERS.json')) return JSON.stringify(ambassadors);
-      return '[]';
+it('generateTSCBoardMembersList should write filtered list', async () => {
+    fs.readFile.mockImplementation((filePath) => {
+      if (filePath.includes('MAINTAINERS.yaml')) {
+        return Promise.resolve('maintainers-yaml-content');
+      }
+      if (filePath.includes('AMBASSADORS_MEMBERS.json')) {
+        return Promise.resolve(JSON.stringify(ambassadors));
+      }
+      return Promise.resolve('[]');
     });
 
-    const logSpy = jest.spyOn(console, 'info').mockImplementation(() => {});
+    yaml.load.mockReturnValue(maintainers);
     yaml.dump.mockReturnValue('yaml-content');
+
+    const logSpy = jest.spyOn(console, 'info').mockImplementation(() => {});
     await generateTSCBoardMembersList();
 
-    expect(writeJSON).toHaveBeenCalledWith('MAINTAINERS.yaml', 'MAINTAINERS.json');
-    expect(fs.writeFileSync).toHaveBeenCalledWith(
-      'TSC_BOARD_MEMBERS.yaml',
-      'yaml-content',
-      'utf-8'
-    );
+    expect(fs.readFile).toHaveBeenCalledWith('MAINTAINERS.yaml', 'utf-8');
+    expect(fs.readFile).toHaveBeenCalledWith('AMBASSADORS_MEMBERS.json', 'utf-8');
+    expect(fs.writeFile).toHaveBeenCalledWith('TSC_BOARD_MEMBERS.yaml', 'yaml-content', 'utf-8');
     expect(logSpy).toHaveBeenCalledWith('✅ Generated 3 filtered TSC/Board members');
   });
 
   it('generateTSCBoardMembersList should handle errors and log them', async () => {
-    writeJSON.mockRejectedValueOnce(new Error('Failed to convert YAML'));
+    fs.readFile.mockRejectedValueOnce(new Error('YAML read failure'));
     const errorSpy = jest.spyOn(console, 'error').mockImplementation(() => {});
 
     await generateTSCBoardMembersList();
