@@ -1,7 +1,7 @@
 ---
 title: Program Goals and Outcomes
 description: This overview page outlines the AsyncAPI Maintainership Program Goals
-weight: 10
+weight: 20
 ---
 
 The AsyncAPI Maintainership Program is built around a clear and impactful vision: to transform and upskill open source contributors into confident maintainers capable of leading and sustaining the future of AsyncAPI projects. More than just a short-term mentorship effort, the program is a strategic initiative focused on fostering long-term project health across the ecosystem through meaningful technical contributions in code, design, documentation, and beyond.

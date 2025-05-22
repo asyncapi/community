@@ -1,7 +1,7 @@
 ---
 title: Why a Maintainership Program Matters?
 description: This overview page outlines the AsyncAPI Maintainership Program matters
-weight: 10
+weight: 30
 ---
 
 At AsyncAPI, giving back to the community is more than a value, it’s part of our identity as a community-first open source initiative. The Maintainership Program was born from our desire to support the very contributors who have helped make AsyncAPI successful. It's a way of investing in people, nurturing their growth, and ensuring they’re equipped to make a lasting impact in the open source ecosystem.

@@ -1,7 +1,7 @@
 ---
 title: AsyncAPI Maintainership Program Community Values
 description: This overview page outlines the AsyncAPI Maintainership Program Community Values
-weight: 10
+weight: 40
 ---
 
 At AsyncAPI, we believe that growing and sustaining open source depends on empowering contributors, not just through code, but through connection, mentorship, and responsibility. The AsyncAPI Maintainership Program (AMP) is our structured pathway to help contributors become skilled maintainers who can help steward AsyncAPI’s mission and projects.
