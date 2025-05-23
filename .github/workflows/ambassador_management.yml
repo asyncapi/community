@@ -280,7 +280,7 @@ jobs:
 
   notify_slack_on_failure:
     if: always() && (needs.detect_ambassador_changes.result == 'failure' || needs.add_ambassador.result == 'failure' || needs.display_message.result == 'failure' || needs.update_emeritus.result == 'failure' || needs.remove_ambassador.result == 'failure' || needs.remove_ambassador_goodbye.result == 'failure')
-    needs: [detect_ambassador_changes,  add_ambassador, display_message, update_emeritus,remove_ambassador_goodbye, remove_ambassador]
+    needs: [detect_ambassador_changes, add_ambassador, display_message, update_emeritus, remove_ambassador_goodbye, remove_ambassador]
     runs-on: ubuntu-latest
     steps:
       - name: Report workflow run status to Slack
