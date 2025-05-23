@@ -194,7 +194,7 @@ jobs:
               const { owner, repo } = context.repo;
               const { number: issue_number } = context.issue;
               for (const message of combinedMessages) {
-                  github.rest.issues.createComment({ owner, repo, issue_number, body: message });
+                  await github.rest.issues.createComment({ owner, repo, issue_number, body: message });
               }
 
   update_emeritus:
