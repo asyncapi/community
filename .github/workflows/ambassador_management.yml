@@ -42,10 +42,10 @@ jobs:
             const currentAmbassadors = yaml.load(fs.readFileSync('./community-main/AMBASSADORS_MEMBERS.yaml', 'utf8'));
             const prAmbassadors = yaml.load(fs.readFileSync('./community/AMBASSADORS_MEMBERS.yaml', 'utf8'));
 
-            const removed = prAmbassadors.filter(
+            const added = prAmbassadors.filter(
               (newObj) => !currentAmbassadors.some((oldObj) => oldObj.github === newObj.github)
             );
-            const added = currentAmbassadors.filter(
+            const removed = currentAmbassadors.filter(
               (oldObj) => !prAmbassadors.some((newObj) => newObj.github === oldObj.github)
             );
 
