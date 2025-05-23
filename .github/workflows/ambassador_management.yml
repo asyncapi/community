@@ -142,7 +142,7 @@ jobs:
 
             const { owner, repo } = context.repo;
             const { number: issue_number } = context.issue;
-            return github.rest.issues.createComment({ owner, repo, issue_number, body: welcomeMessage });
+            await github.rest.issues.createComment({ owner, repo, issue_number, body: welcomeMessage });
 
   remove_ambassador:
     needs: detect_ambassador_changes
