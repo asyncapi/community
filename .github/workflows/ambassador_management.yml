@@ -207,33 +207,47 @@ jobs:
         with:
           script: |
             const fs = require('fs');
+            const yaml = require('js-yaml');
             const path = './Emeritus.yaml';
 
+            const yamlContent = [];
+
             // Read the current content of the file
-            let content = fs.readFileSync(path, 'utf8').trim(); // remove any trailing whitespaces
+            const content = fs.readFileSync(path, 'utf8').trim(); // remove any trailing whitespaces
 
             // Parse the removedAmbassadors JSON string to an array of objects
-            const removedAmbassadors = JSON.parse('${{ needs.remove_ambassador.outputs.removedAmbassadors }}');
-
-            // Extract existing names from the file
-            const existingNames = new Set(
-              content
-                .split('\n')
-                .map(line => line.trim().replace('- ', '')) // Normalize names
-                .filter(line => line && !line.startsWith('#') && !line.includes(':')) // Filter out comments and section headers
+            const removedAmbassadors = JSON.parse(
+              '${{ needs.remove_ambassador.outputs.removedAmbassadors }}',
             );
 
+            // Strip the first line that contains a comment
+            yamlContent[0] = content
+              .split('\n')
+              .filter((line) => line && line.startsWith('#'));
+
+            // Get the actual YAML data
+            yamlContent[1] = yaml.load(content);
+
+            // Extract existing names of Emeritus Ambassadors from the file
+            const existingEmeritusAmbassadors = new Set(yamlContent[1].emeritus_ambassadors);
+
             // Filter ambassadors who should be added and are not already in the list
-            const removedAmbassadors = removedAmbassadors
-              .filter(ambassador => !existingNames.has(ambassador)) // Ensure name is not already in the list
-              .map(ambassador => `  - ${ambassador}`) // Format for YAML
-              .join('\n');
+            const emeritusAmbassadorsDiffList = removedAmbassadors.filter(
+              (ambassador) => !existingEmeritusAmbassadors.has(ambassador),
+            );
 
             // Append new ambassadors if there are any new ones
-            if (removedAmbassadors) {
-              content = content + '\n' + removedAmbassadors;
-              fs.writeFileSync(path, content);
-              console.log('Updated Emeritus.yaml:\n', content);
+            if (emeritusAmbassadorsDiffList.length > 0) {
+              yamlContent[1].emeritus_ambassadors.push(...emeritusAmbassadorsDiffList);
+
+              // Merge the comment and the programmatically changed YAML into new content
+              // that will be written to `Emeritus.yaml`
+              const newContent = `${yamlContent[0].join('\n')}\n\n${yaml.dump(yamlContent[1])}`;
+
+              // Write the new content back into the YAML file
+              fs.writeFileSync(path, newContent);
+
+              console.log('Updated Emeritus.yaml:\n', fs.readFileSync(path, 'utf8'));
             } else {
               console.log('No new names to add. Emeritus Ambassador is already in the list.');
             }
