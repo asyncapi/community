@@ -38,7 +38,7 @@ jobs:
           script: |
             const fs = require('fs');
             const yaml = require('js-yaml');
-            
+
             const currentAmbassadors = yaml.load(fs.readFileSync('./community-main/AMBASSADORS_MEMBERS.yaml', 'utf8'));
             const prAmbassadors = yaml.load(fs.readFileSync('./community/AMBASSADORS_MEMBERS.yaml', 'utf8'));
 
@@ -80,7 +80,7 @@ jobs:
     outputs:
       newAmbassadors: ${{ steps.compare-files.outputs.newAmbassadors }}
       removedAmbassadors: ${{ steps.compare-files.outputs.removedAmbassadors }}
-      
+
   add_ambassador:
     needs: detect_ambassador_changes
     if: needs.detect_ambassador_changes.outputs.newAmbassadors != ''
