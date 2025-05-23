@@ -16,7 +16,7 @@ jobs:
       - name: Checkout main branch
         uses: actions/checkout@v3
         with:
-          ref: master
+          ref: ${{ github.event.repository.default_branch }}
           path: community-main
 
       - name: Checkout one commit before last one
