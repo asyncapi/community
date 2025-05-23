@@ -1,6 +1,6 @@
-﻿---
+---
 title: Links
-description: This style guide gives advice on creating effective internal, external, and asset links in AsyncAPI content.
+description: This style guide gives advice on creating effective text, internal, external, and asset links in AsyncAPI content.
 weight: 130
 ---
 
@@ -38,7 +38,7 @@ When referencing sources that will take users outside AsyncAPI, refer to the fol
 When it comes to referring to other sections within the content being created for AsyncAPI, consider using the following methods:
 
 - **Use relative URLs**: When linking to other pages in the documentation, use easy-to-read paths that work no matter where the docs are moved or viewed. This makes it easier for users to navigate the content and ensures that the links remain functional.
-- **Keep it consistent**: Use the same style for links within the documentation so readers can easily find navigate the content and know what to expect.
+- **Keep it consistent**: Use the same style for links within the documentation so readers can easily find and navigate the content and know what to expect.
 - **Consider using anchor links**: For lengthy pages, use anchor links (links that point to specific headings or sections within the same page) to direct users to specific sections rather than forcing them to scroll through content.
 
 ## Examples
