@@ -65,6 +65,7 @@ Read the [AsyncAPI Specification](../specifications/latest).
 
 ```markdown
 For more details, visit the [AsyncAPI Blog](https://www.asyncapi.com/blog){:target="_blank" rel="noopener"}.
+```
 ## Additional Resources
 
  For more tips on creating effective links, consider consulting the following sources:
