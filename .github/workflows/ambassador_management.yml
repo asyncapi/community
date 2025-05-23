@@ -51,9 +51,14 @@ jobs:
 
             if (added.length > 0) {
               core.setOutput("newAmbassadors", added.map((obj) => obj.github).join(","));
+            } else {
+              core.setOutput("newAmbassadors", "");
             }
+
             if (removed.length > 0) {
               core.setOutput("removedAmbassadors", removed.map((obj) => obj.github).join(","));
+            } else {
+              core.setOutput("removedAmbassadors", "");
             }
 
             // Log information for debugging
