@@ -215,10 +215,11 @@ jobs:
             // Read the current content of the file
             const content = fs.readFileSync(path, 'utf8').trim(); // remove any trailing whitespaces
 
-            // Parse the removedAmbassadors JSON string to an array of objects
-            const removedAmbassadors = JSON.parse(
-              '${{ needs.remove_ambassador.outputs.removedAmbassadors }}',
-            );
+            // Parse the removedAmbassadors comma-separated string to an array
+            const removedAmbassadors = '${{ needs.remove_ambassador.outputs.removedAmbassadors }}'
+              .split(',')
+              .map((ambassador) => ambassador.trim())
+              .filter(Boolean);
 
             // Strip the first line that contains a comment
             yamlContent[0] = content
