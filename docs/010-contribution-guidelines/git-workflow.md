@@ -127,4 +127,3 @@ You can follow the steps from the [GitHub documentation](https://docs.github.com
     ```
 
 4. Create a pull request from your branch of the fork repository to the `master` branch of the `upstream` repository and await review.
-
