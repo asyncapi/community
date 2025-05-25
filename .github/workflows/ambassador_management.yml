@@ -288,6 +288,6 @@ jobs:
         uses: rtCamp/action-slack-notify@v2
         env:
           SLACK_WEBHOOK: ${{secrets.SLACK_CI_FAIL_NOTIFY}}
-          SLACK_TITLE: 🚨 Ambassador Management Workflow failed 🚨
-          SLACK_MESSAGE: Failed to post a message to new Ambassador
+          SLACK_TITLE: '🚨 Ambassador Management Workflow failed 🚨'
+          SLACK_MESSAGE: 'Failed to post a message to new Ambassador'
           MSG_MINIMAL: true
