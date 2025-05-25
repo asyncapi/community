@@ -269,10 +269,14 @@ jobs:
 
       - name: Commit and push
         run: |
-          git add .
-          git commit -m "Update Emeritus.yaml"
-          git remote set-url origin https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/asyncapi/community.git
-          git push origin update-emeritus-${{ github.run_id }}
+          git add Emeritus.yaml
+          if ! git diff --cached --quiet; then
+            git commit -m "Update Emeritus.yaml"
+            git remote set-url origin https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/asyncapi/community.git
+            git push origin update-emeritus-${{ github.run_id }}
+          else
+            echo "No updates to Emeritus.yaml; skipping commit/push."
+          fi
 
       - name: Create PR
         run: |
