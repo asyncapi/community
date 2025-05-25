@@ -204,6 +204,9 @@ jobs:
       - name: Check out code
         uses: actions/checkout@v4
 
+      - name: Install js-yaml
+        run: npm install js-yaml@4.1.0
+
       - name: Add Former Ambassador to Emeritus.yaml and print
         uses: actions/github-script@v7
         with:
