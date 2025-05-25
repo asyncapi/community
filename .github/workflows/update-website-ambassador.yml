@@ -36,7 +36,7 @@ jobs:
       - name: Convert YAML to JSON using Python
         working-directory: ./community
         run: |
-          pip install pyyaml
+          pip install pyyaml==6.0.1
           python -c 'import sys, yaml, json; json.dump(yaml.safe_load(sys.stdin), sys.stdout, indent=4)' < AMBASSADORS_MEMBERS.yaml > AMBASSADORS_MEMBERS.json
       - name: Copy ambassadors file from Current Repo to Another
         working-directory: ./website
