@@ -13,20 +13,17 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout main branch
+      - name: Checkout base commit
         uses: actions/checkout@v4
         with:
-          ref: ${{ github.event.repository.default_branch }}
+          ref: ${{ github.event.pull_request.base.sha }}
           path: community-main
 
-      - name: Checkout one commit before last one
+      - name: Checkout head commit
         uses: actions/checkout@v4
         with:
-          fetch-depth: 2
-          ref: master
+          ref: ${{ github.event.pull_request.head.sha }}
           path: community
-
-      - run: cd community && git checkout HEAD^
 
       - name: Install js-yaml
         run: npm install js-yaml@4.1.0
