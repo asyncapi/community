@@ -53,18 +53,18 @@ Examples:
 
 ### Become an AsyncAPI Ambassador
 
-The process of becoming an ambassador is very simple. Go to the **community** repository and open a PR to edit the `AMBASSADORS_MEMBERS.json` file. The TSC will then evaluate your candidacy!
+The process of becoming an ambassador is very simple. Go to the **community** repository and open a PR to edit the `AMBASSADORS_MEMBERS.yaml` file. The TSC will then evaluate your candidacy!
 
 > **The process of obtaining the GitHub ID number**
 > - The Ambassador Candidate adds their GitHub handle to `https://api.github.com/users/` to form link similar to https://api.github.com/users/derberg and puts into the browser's address bar.
 > - Presses Enter.
-> - API returns a JSON object in which property `id` equals a number (in the case of the example, the number is `6995927`). This is the number that the Ambassador Candidate needs to insert as the value of the property `githubID` in the `AMBASSADORS_MEMBERS.json` file.
+> - API returns a JSON object in which property `id` equals a number (in the case of the example, the number is `6995927`). This is the number that the Ambassador Candidate needs to insert as the value of the property `githubID` in the `AMBASSADORS_MEMBERS.yaml` file.
 
 > **The process of obtaining the Slack ID number**
 > - The Ambassador Candidate finds themselves in the members list of the Slack channel `02_general`.
 > - Presses on their handle.
 > - In the opened `Profile` window, presses the button with three dots.
-> - Chooses the option `Copy member ID`. This is the sequence of characters that the Ambassador Candidate needs to insert as the value of the property `slack` in the `AMBASSADORS_MEMBERS.json` file.
+> - Chooses the option `Copy member ID`. This is the sequence of characters that the Ambassador Candidate needs to insert as the value of the property `slack` in the `AMBASSADORS_MEMBERS.yaml` file.
 
 That PR doesn't have to be created by the ambassador candidate; any community member may open a PR to submit someone's application to the AsyncAPI Ambassador Program. 
 
