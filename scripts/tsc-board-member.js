@@ -81,6 +81,7 @@ async function generateTSCBoardMembersList() {
     console.info(`✅ Generated ${filteredMembers.length} filtered TSC/Board members`);
   } catch (err) {
     console.error('❌ Failed to generate TSC members list:', err);
+    throw err;
   }
 }
 

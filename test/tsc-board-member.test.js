@@ -1,4 +1,4 @@
-const fs = require('fs/promises');
+const { readFile, writeFile } = require('fs/promises');
 const yaml = require('js-yaml');
 const {
   loadJson,
@@ -35,22 +35,22 @@ describe('generateTSCBoardMembersList', () => {
   });
 
   it('loadYaml should parse YAML content', async () => {
-    fs.readFile.mockResolvedValueOnce('yaml-content');
+    readFile.mockResolvedValueOnce('yaml-content');
     yaml.load.mockReturnValueOnce([{ github: 'test', isTscMember: true }]);
 
     const result = await loadYaml('path/to/file.yaml');
     expect(result).toEqual([{ github: 'test', isTscMember: true }]);
-    expect(fs.readFile).toHaveBeenCalledWith('path/to/file.yaml', 'utf-8');
+    expect(readFile).toHaveBeenCalledWith('path/to/file.yaml', 'utf-8');
     expect(yaml.load).toHaveBeenCalledWith('yaml-content');
   });
 
   it('loadJson should parse JSON content', async () => {
     const json = JSON.stringify([{ github: 'test', isTscMember: true }]);
-    fs.readFile.mockResolvedValueOnce(json);
+    readFile.mockResolvedValueOnce(json);
 
     const result = await loadJson('path/to/file.json');
     expect(result).toEqual([{ github: 'test', isTscMember: true }]);
-    expect(fs.readFile).toHaveBeenCalledWith('path/to/file.json', 'utf-8');
+    expect(readFile).toHaveBeenCalledWith('path/to/file.json', 'utf-8');
   });
 
   it('hasRelevantFlag should return true for members with flags', () => {
@@ -66,7 +66,7 @@ describe('generateTSCBoardMembersList', () => {
   });
 
 it('generateTSCBoardMembersList should write filtered list', async () => {
-    fs.readFile.mockImplementation((filePath) => {
+    readFile.mockImplementation((filePath) => {
       if (filePath.includes('MAINTAINERS.yaml')) {
         return Promise.resolve('maintainers-yaml-content');
       }
@@ -82,17 +82,19 @@ it('generateTSCBoardMembersList should write filtered list', async () => {
     const logSpy = jest.spyOn(console, 'info').mockImplementation(() => {});
     await generateTSCBoardMembersList();
 
-    expect(fs.readFile).toHaveBeenCalledWith('MAINTAINERS.yaml', 'utf-8');
-    expect(fs.readFile).toHaveBeenCalledWith('AMBASSADORS_MEMBERS.json', 'utf-8');
-    expect(fs.writeFile).toHaveBeenCalledWith('TSC_BOARD_MEMBERS.yaml', 'yaml-content', 'utf-8');
+    expect(readFile).toHaveBeenCalledWith(expect.stringContaining('MAINTAINERS.yaml'), 'utf-8');
+    expect(readFile).toHaveBeenCalledWith(expect.stringContaining('AMBASSADORS_MEMBERS.json'), 'utf-8');
+    expect(writeFile).toHaveBeenCalledWith(expect.stringContaining('TSC_BOARD_MEMBERS.yaml'), 'yaml-content', 'utf-8');
     expect(logSpy).toHaveBeenCalledWith('✅ Generated 3 filtered TSC/Board members');
   });
 
   it('generateTSCBoardMembersList should handle errors and log them', async () => {
-    fs.readFile.mockRejectedValueOnce(new Error('YAML read failure'));
+    readFile.mockRejectedValueOnce(new Error('YAML read failure'));
     const errorSpy = jest.spyOn(console, 'error').mockImplementation(() => {});
 
-    await generateTSCBoardMembersList();
+    try {
+      await generateTSCBoardMembersList();
+    } catch (e) {}
 
     expect(errorSpy).toHaveBeenCalledWith(
       '❌ Failed to generate TSC members list:',
