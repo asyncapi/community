@@ -45,27 +45,20 @@ When it comes to referring to other sections within the content being created fo
 
 ### Example of a Text Link
 
-```markdown
-For more information, visit the [AsyncAPI website](https://www.asyncapi.com).
-```
+`For more information, visit the [AsyncAPI website](https://www.asyncapi.com).`
 
 ### Example of an Asset Link
 
-```markdown
-![AsyncAPI Logo](../assets/asyncapi-logo.png)
-```
+`![AsyncAPI Logo](../assets/asyncapi-logo.png)`
 
 ### Example of an Internal Link
 
-```markdown
-Read the [AsyncAPI Specification](../specifications/latest).
-```
+`Read the [AsyncAPI Specification](../specifications/latest).`
 
 ### Example of an External Link
 
-```markdown
-For more details, visit the [AsyncAPI Blog](https://www.asyncapi.com/blog){:target="_blank" rel="noopener"}.
-```
+`For more details, visit the [AsyncAPI Blog](https://www.asyncapi.com/blog){:target="_blank" rel="noopener"}.`
+
 ## Additional Resources
 
  For more tips on creating effective links, consider consulting the following sources:
