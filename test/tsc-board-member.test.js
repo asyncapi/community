@@ -88,17 +88,11 @@ it('generateTSCBoardMembersList should write filtered list', async () => {
     expect(logSpy).toHaveBeenCalledWith('✅ Generated 3 filtered TSC/Board members');
   });
 
-  it('generateTSCBoardMembersList should handle errors and log them', async () => {
+  it('generateTSCBoardMembersList should handle errors and throw formatted error', async () => {
     readFile.mockRejectedValueOnce(new Error('YAML read failure'));
-    const errorSpy = jest.spyOn(console, 'error').mockImplementation(() => {});
 
-    try {
-      await generateTSCBoardMembersList();
-    } catch (e) {}
-
-    expect(errorSpy).toHaveBeenCalledWith(
-      '❌ Failed to generate TSC members list:',
-      expect.any(Error)
+    await expect(generateTSCBoardMembersList()).rejects.toThrow(
+      '❌ Failed to generate TSC members list: Error: YAML read failure'
     );
   });
 });
