@@ -58,7 +58,7 @@ The process of becoming an ambassador is very simple. Go to the **community** re
 > **The process of obtaining the GitHub ID number**
 > - The Ambassador Candidate adds their GitHub handle to `https://api.github.com/users/` to form link similar to https://api.github.com/users/derberg and puts into the browser's address bar.
 > - Presses Enter.
-> - API returns a JSON object in which property `id` equals a number (in the case of the example, the number is `6995927`). This is the number that the Ambassador Candidate needs to insert as the value of the property `githubID` in the `AMBASSADORS_MEMBERS.yaml` file.
+> - The API returns a JSON object in which property `id` equals a number (in the case of the example, the number is `6995927`). This is the number that the Ambassador Candidate needs to insert as the value of the property `githubID` in the `AMBASSADORS_MEMBERS.yaml` file.
 
 > **The process of obtaining the Slack ID number**
 > - The Ambassador Candidate finds themselves in the members list of the Slack channel `02_general`.

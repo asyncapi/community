@@ -29,7 +29,7 @@
           year: 2021
           month: "December"
         link: "https://www.asyncapi.com/blog/changes-coming-docs"
-      - type: "iniciative_driver"
+      - type: "initiative_driver"
         title: "Driver and promoter of Google Season of Docs at AsyncAPI"
         date:
           year: 2022
@@ -160,13 +160,13 @@
     title: "Java Architect. Speaker. Building ZenWave 360°."
     img: "https://avatars.githubusercontent.com/u/1246876?v=4"
     contributions:
-      - type: "iniciative_driver"
+      - type: "initiative_driver"
         title: "AsyncAPI Conference On Tour 2023 - Madrid"
         date:
           year: 2023
           month: "October"
         link: "https://www.youtube.com/playlist?list=PLbi1gRlP7pihD-7XYb6c9wcTdkavDzF3_"
-      - type: "iniciative_driver"
+      - type: "initiative_driver"
         title: "ZenWave SDK - Code Generator for AsyncAPI with Spring Cloud Streams"
         date:
           year: 2024
