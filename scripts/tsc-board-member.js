@@ -11,7 +11,7 @@ const { readFile, writeFile } = require('fs/promises');
  */
 
 const MAINTAINERS_YAML_PATH = path.resolve(__dirname, '..', 'MAINTAINERS.yaml');
-const AMBASSADORS_JSON_PATH = path.resolve(__dirname, '..', 'AMBASSADORS_MEMBERS.json');
+const AMBASSADORS_JSON_PATH = path.resolve(__dirname, '..', 'AMBASSADORS_MEMBERS.yaml');
 const OUTPUT_YAML_PATH = path.resolve(__dirname, '..', 'TSC_BOARD_MEMBERS.yaml');
 
 /**
@@ -69,7 +69,7 @@ async function generateTSCBoardMembersList() {
   try {
     // Step 1: Load converted JSON + ambassadors list
     const maintainers = await loadYaml(MAINTAINERS_YAML_PATH);
-    const ambassadors = await loadJson(AMBASSADORS_JSON_PATH);
+    const ambassadors = await loadYaml(AMBASSADORS_JSON_PATH);
 
     // Step 2: Merge and filter members
     const filteredMembers = mergeUniqueMembers(maintainers, ambassadors);

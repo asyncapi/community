@@ -9,7 +9,7 @@ on:
       - 'master'
     paths:
       - 'MAINTAINERS.yaml'
-      - 'AMBASSADORS_MEMBERS.json'
+      - 'AMBASSADORS_MEMBERS.yaml'
   workflow_dispatch:
 jobs:
   update-board-and-website:

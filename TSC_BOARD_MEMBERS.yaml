@@ -283,7 +283,7 @@
   repos:
     - website
     - community
-  githubID: '19964402'
+  githubID: 19964402
   img: https://avatars.githubusercontent.com/u/19964402?v=4
   bio: >-
     Quetzalli Writes is an author of the book titled 'Docs-as-Ecosystem', which
@@ -315,7 +315,7 @@
         year: 2021
         month: December
       link: https://www.asyncapi.com/blog/changes-coming-docs
-    - type: iniciative_driver
+    - type: initiative_driver
       title: Driver and promoter of Google Season of Docs at AsyncAPI
       date:
         year: 2022
@@ -369,7 +369,7 @@
   isTscMember: true
   repos:
     - vs-asyncapi-preview
-  githubID: '1246876'
+  githubID: 1246876
   twitter: ivangsa
   bio: >-
     Java Architect with a deep understanding of Java, Spring-Boot, Spring-Cloud
@@ -381,13 +381,13 @@
   title: Java Architect. Speaker. Building ZenWave 360°.
   img: https://avatars.githubusercontent.com/u/1246876?v=4
   contributions:
-    - type: iniciative_driver
+    - type: initiative_driver
       title: AsyncAPI Conference On Tour 2023 - Madrid
       date:
         year: 2023
         month: October
       link: https://www.youtube.com/playlist?list=PLbi1gRlP7pihD-7XYb6c9wcTdkavDzF3_
-    - type: iniciative_driver
+    - type: initiative_driver
       title: ZenWave SDK - Code Generator for AsyncAPI with Spring Cloud Streams
       date:
         year: 2024
@@ -551,7 +551,7 @@
   isTscMember: true
   repos:
     - jasyncapi
-  githubID: '126087'
+  githubID: 126087
   country: 🇮🇳
   bio: >-
     Co-creator of Specmatic and Perfiz. I also advise organizations, both large
@@ -637,7 +637,7 @@
     speaker at conferences.
   title: Senior Solution Architect / Head of API Experience and Operations
   github: danielkocot
-  githubID: '466609'
+  githubID: 466609
   slack: U029F3XUYM8
   twitter: dk_1977
   linkedin: danielkocot
@@ -673,7 +673,7 @@
       link: https://www.youtube.com/watch?v=_wTcV63jrnU
 - name: Naresh Jain
   github: nashjain
-  githubID: '38799'
+  githubID: 38799
   slack: U07QPEBAC9Y
   twitter: nashjain
   linkedin: http://linkedin.com/in/nareshjain/

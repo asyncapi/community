@@ -44,15 +44,6 @@ describe('generateTSCBoardMembersList', () => {
     expect(yaml.load).toHaveBeenCalledWith('yaml-content');
   });
 
-  it('loadJson should parse JSON content', async () => {
-    const json = JSON.stringify([{ github: 'test', isTscMember: true }]);
-    readFile.mockResolvedValueOnce(json);
-
-    const result = await loadJson('path/to/file.json');
-    expect(result).toEqual([{ github: 'test', isTscMember: true }]);
-    expect(readFile).toHaveBeenCalledWith('path/to/file.json', 'utf-8');
-  });
-
   it('hasRelevantFlag should return true for members with flags', () => {
     expect(hasRelevantFlag({ isTscMember: true })).toBe(true);
     expect(hasRelevantFlag({ isBoardMember: true })).toBe(true);
@@ -70,20 +61,22 @@ it('generateTSCBoardMembersList should write filtered list', async () => {
       if (filePath.includes('MAINTAINERS.yaml')) {
         return Promise.resolve('maintainers-yaml-content');
       }
-      if (filePath.includes('AMBASSADORS_MEMBERS.json')) {
-        return Promise.resolve(JSON.stringify(ambassadors));
+      if (filePath.includes('AMBASSADORS_MEMBERS.yaml')) {
+        return Promise.resolve('ambassadors-yaml-content');
       }
       return Promise.resolve('[]');
     });
 
-    yaml.load.mockReturnValue(maintainers);
+    yaml.load
+      .mockReturnValue(maintainers)
+      .mockReturnValueOnce(ambassadors);
     yaml.dump.mockReturnValue('yaml-content');
 
     const logSpy = jest.spyOn(console, 'info').mockImplementation(() => {});
     await generateTSCBoardMembersList();
 
     expect(readFile).toHaveBeenCalledWith(expect.stringContaining('MAINTAINERS.yaml'), 'utf-8');
-    expect(readFile).toHaveBeenCalledWith(expect.stringContaining('AMBASSADORS_MEMBERS.json'), 'utf-8');
+    expect(readFile).toHaveBeenCalledWith(expect.stringContaining('AMBASSADORS_MEMBERS.yaml'), 'utf-8');
     expect(writeFile).toHaveBeenCalledWith(expect.stringContaining('TSC_BOARD_MEMBERS.yaml'), 'yaml-content', 'utf-8');
     expect(logSpy).toHaveBeenCalledWith('✅ Generated 3 filtered TSC/Board members');
   });
