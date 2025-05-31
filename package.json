@@ -1,8 +1,14 @@
 {
+  "name": "@asyncapi/community",
+  "description": "Repository to access AsyncAPI community assets & configs",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "generate:board": "node scripts/tsc-board-member.js"
+  },
+  "dependencies": {
+    "js-yaml": "^4.1.0"
   },
   "devDependencies": {
-    "jest": "^29.0.0"
+    "jest": "^29.7.0"
   }
 }

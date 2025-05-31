@@ -4,7 +4,7 @@ on:
   pull_request_target:
     types: [closed]
     paths:
-      - 'MAINTAINERS.yaml'
+      - 'TSC_BOARD_MEMBERS.yaml'
 
 jobs:
   detect_tsc_membership_changes:
@@ -39,8 +39,8 @@ jobs:
             const fs = require('fs');
             const yaml = require('js-yaml');
 
-            const mainFile = yaml.load(fs.readFileSync('./community-main/MAINTAINERS.yaml', 'utf8'));
-            const prFile = yaml.load(fs.readFileSync('./community/MAINTAINERS.yaml', 'utf8')); 
+            const mainFile = yaml.load(fs.readFileSync('./community-main/TSC_BOARD_MEMBERS.yaml', 'utf8'));
+            const prFile = yaml.load(fs.readFileSync('./community/TSC_BOARD_MEMBERS.yaml', 'utf8')); 
 
             // Variables to store the updated value and GitHub user
             let updatedMaintainers = [];
