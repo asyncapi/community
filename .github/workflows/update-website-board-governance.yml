@@ -72,7 +72,6 @@ jobs:
       - name: Create PR
         working-directory: ./website
         run: |
-          gh auth login --with-token <<< "${{ env.GITHUB_TOKEN }}"
           gh pr create --title "docs(community): update latest Board and TSC members list" \
                         --body "Updated board and TSC members list is available; please review the pull request that introduces new board members to the list." \
                         --head "update-board-${{ github.sha }}"
