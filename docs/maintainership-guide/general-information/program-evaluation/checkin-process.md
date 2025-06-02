@@ -21,4 +21,4 @@ These reminders will include key deadlines, evaluation links, and submission gui
 
 If a contributor or mentor hasn’t submitted their evaluation within the **first 3 days** of the evaluation period, organizers will follow up via **Slack DM** to check in. This gives us time to understand any blockers, provide support, and take action where necessary to keep the program on track.
 
->_We strongly encourage all contributors and mentors to make this a priority. If you’re unclear on any part of the process, please contact the program organizers as early as possible.
+>_We strongly encourage all contributors and mentors to make this a priority. If you’re unclear on any part of the process, please get in touch with the program organizers as early as possible.

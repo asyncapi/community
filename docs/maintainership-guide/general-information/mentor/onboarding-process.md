@@ -3,12 +3,12 @@ title: Mentors Onboarding Process
 weight: 40
 ---
 
-The success of the AsyncAPI Maintainership Program depends heavily on thoughtful mentor-mentee pairing. Mentorship is more than guidance, it’s a shared commitment to growth, for both the contributor and the mentor. To help mentors start strong, we’ve designed an onboarding experience that brings clarity, alignment, and confidence.
+The success of the AsyncAPI Maintainership Program depends heavily on the thoughtful pairing of mentors and mentees. Mentorship is more than guidance; it’s a shared commitment to growth for both the contributor and the mentor. To help mentors get started on the right foot, we’ve designed an onboarding experience that brings clarity, alignment, and confidence.
 
 ### Project Idea & Mentor Application
 
 - **Contribute to Project Ideation:**  
-     Participation in our open Github discussion to propose a new project idea or express interest in mentoring one from the existing list.
+     Participation in our open GitHub discussion to propose a new project idea or express interest in mentoring one from the existing list.
 
 - **Submit Your Mentor Application:**  
     Complete the online mentor application form to formally express your interest and help us better understand your availability, expertise, and preferred mentorship style.
@@ -44,7 +44,7 @@ AsyncAPI mentors are experienced contributors who actively shape the community a
 To be eligible for the program, mentors must:
 
 - Be a current contributor or maintainer of an AsyncAPI project.
-- Must be 18years and above.
+- Must be 18 years and above.
 - Not be enrolled as a mentee in this or any other mentorship program.
 - Demonstrate strong communication, patience, and interpersonal skills.
 - Be accessible and responsive to contributors throughout the program.

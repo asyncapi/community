@@ -3,13 +3,13 @@ title: Mentoring Best Practices
 weight: 80
 ---
 
-Mentors play a significant role in the success of any mentorship program—without them, mentorship simply doesn’t exist. By offering meaningful guidance, you're not just empowering contributors; you're also growing as a leader, setting the tone for future contributors, and modeling resilience, curiosity, and collaboration.
+Mentors play a significant role in the success of any mentorship program; without them, mentorship doesn’t exist. By offering meaningful guidance, you're not just empowering contributors; you're also growing as a leader, setting the tone for future contributors, and modeling resilience, curiosity, and collaboration.
 
 When a contributor is assigned to you, your role is to create an experience that is both supportive and transformative. To help you thrive in this role and get the most out of the program, here are some essential best practices:
 
 ### 1. **Lead with Empathy and Respect**
 
-   Open source brings together people from a wide range of backgrounds, cultures, and personalities. As a mentor, you may work with contributors whose traits or communication styles differ from your own. This is where empathy plays a critical role, it helps you meet contributors where they are and navigate challenges with compassion.
+Open source brings together people from diverse backgrounds, cultures, and personalities. As a mentor, you may work with contributors whose traits or communication styles differ from your own. This is where empathy plays a critical role; it helps you meet contributors where they are and navigate challenges with compassion.
    
   - Foster a welcoming, inclusive, and non-judgmental environment.
   - Respect contributors’ backgrounds, learning curves, and personal ethics.
@@ -18,11 +18,11 @@ When a contributor is assigned to you, your role is to create an experience that
 
 ### 2. **Set Clear Expectations Early**
 
-   A successful mentorship begins with clear alignment. Setting expectations from the start ensures everyone is on the same page and minimizes confusion down the line.
+A successful mentorship begins with clear alignment. Setting expectations from the start ensures everyone is on the same page and minimizes confusion down the line.
 
-- Define goals, milestones, and communication cadence at the start.
+- Define goals, milestones, and a communication cadence at the outset.
 - Clarify what success looks like, both technically and behaviorally.
-- Make sure contributors understand their responsibilities, and yours.
+- Ensure contributors understand their responsibilities, as well as yours.
 
 ### 3. **Be Consistently Present and Approachable**
 
@@ -38,8 +38,8 @@ Reliability builds trust. Being consistently available even for quick check-ins 
 Your goal as a mentor is to help contributors become independent problem-solvers. Give them the space to grow by gradually shifting from instruction to guidance.
 
 - Guide rather than instruct, let contributors explore and problem-solve.
-- Encourage contributors to lead meetings or learnings occasionally. 
-- Challenge them with meaningful tasks, while providing the right level of support.
+- Encourage contributors to occasionally lead meetings or learning sessions. 
+- Challenge them with meaningful tasks while providing the right level of support.
 - Share constructive feedback that empowers and motivates.
 
 ### 5. **Model Open Source Best Practices**
@@ -55,6 +55,6 @@ Your goal as a mentor is to help contributors become independent problem-solvers
    Effective mentorship is a two-way street. Feedback helps contributors grow, but it also helps you grow as a mentor.
    
 - Provide honest, actionable, and timely feedback throughout the program.
-- Evaluate your mentee as a long-term prospect to become a successful open-source developer.
+- Evaluate your mentee as a long-term prospect for becoming a successful open source developer.
 - Invite feedback on your mentorship style and be open to adapting.
 - View mentorship as a two-way learning opportunity.

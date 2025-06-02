@@ -24,7 +24,7 @@ During this phase, contributor applications are reviewed collaboratively by prog
 
 ## Final Application Phase
 
-This phase serves as the final review stage where mentors evaluate contributors who advanced to the contribution period. The goal is to assess each contributor’s performance and suitability for the main program phase.
+This phase serves as the final review stage where mentors evaluate contributors who have advanced to the contribution period. The goal is to assess each contributor’s performance and suitability for the main program phase.
 
  - If a mentor has **multiple contributors**, this phase helps determine which applicant is best suited to continue in the program.
  - If a mentor has **only one contributor**, this phase acts as a final checkpoint to decide whether the contributor meets the expectations to proceed.

@@ -4,7 +4,7 @@ description: This overview page outlines the AsyncAPI Maintainership Program Com
 weight: 40
 ---
 
-At AsyncAPI, we believe that growing and sustaining open source depends on empowering contributors, not just through code, but through connection, mentorship, and responsibility. The AsyncAPI Maintainership Program (AMP) is our structured pathway to help contributors become skilled maintainers who can help steward AsyncAPI’s mission and projects.
+At AsyncAPI, we believe that growing and sustaining open source depends on empowering contributors, not just through code, but through connection, mentorship, and responsibility. The AsyncAPI Maintainership Program (AMP) is our structured pathway to help contributors develop the skills necessary to become skilled maintainers who can help steward AsyncAPI’s mission and projects.
 
 Rooted in values of inclusion, collaboration, and growth, this program ensures a safe, welcoming, and enriching environment for both mentees and mentors. By upholding the standards below, we aim to build an open-source culture that thrives for years to come.
 
@@ -41,4 +41,4 @@ Rooted in values of inclusion, collaboration, and growth, this program ensures a
 - Celebrates **all forms of contribution** including code, documentation, design, community, and more.
 - Enforces a zero-tolerance policy for **Code of Conduct violations or misconduct**.
 
-**Creating an empowering open source environment where contributors of all experience levels can grow into maintainers is the heart of the AsyncAPI Maintainership Program.** These principles reflect the experience we strive to create within the program, and the contributor culture we are building across the AsyncAPI ecosystem: one which is rooted in continuous learning, inclusivity, and long-term sustainability.
+**Creating an empowering open source environment where contributors of all experience levels can grow into maintainers is at heart of the AsyncAPI Maintainership Program.** These principles reflect the experience we strive to create within the program, and the contributor culture we are building across the AsyncAPI ecosystem: one that is rooted in continuous learning, inclusivity, and long-term sustainability.

@@ -1,9 +1,9 @@
 ---
-title: Support And Escalation Path
+title: Support and Escalation Path
 weight: 70
 ---
 
-Mentorship is a rewarding but often demanding journey. At AsyncAPI, we understand that challenges can arise, whether it's dealing with unresponsive contributors, managing conflicting schedules, or navigating tough feedback moments. That’s why we’ve built a support system to help you handle these situations with clarity, and care.
+Mentorship is a rewarding but often demanding journey. At AsyncAPI, we understand that challenges can arise, whether it's dealing with unresponsive contributors, managing conflicting schedules, or navigating tough feedback moments. That’s why we’ve built a support system to help you handle these situations with clarity and care.
 
 To ensure our mentors feel supported and empowered, here’s how we help you navigate the mentoring process:
 ### 1. **AsyncAPI Mentor Support Channel**
@@ -18,9 +18,9 @@ To ensure our mentors feel supported and empowered, here’s how we help you nav
 
 ### 3. **Conflict Resolution Path**
 
-- If you face interpersonal challenges, such as an uncooperative/non-chalant contributor or community conflicts, escalate early:
+- If you face interpersonal challenges, such as an uncooperative/nonchalant contributor or community conflicts, escalate early:
     - First, attempt a private conversation with the mentee, framed around constructive feedback.
-    - If unresolved, report the issue to the program organizers via Slack DM or email.
+    - If the issue remains unresolved, report it to the program organizers via Slack DM or email.
 
 ### 4. **Time or Commitment Challenges**
 
@@ -30,7 +30,7 @@ To ensure our mentors feel supported and empowered, here’s how we help you nav
 
 - If a contributor is showing signs of non-commitment during the program phase:
     - Reach out to the contributor privately to understand the reason for no commitment.
-    - If there's no response within a week, kindly inform the program organizers as soon as possible. 
+    - If there is no response within a week, please inform the program organizers as soon as possible. 
 
 ### 5. **Code of Conduct & Reporting**
 - All mentors and contributors are expected to uphold the AsyncAPI Code of Conduct.

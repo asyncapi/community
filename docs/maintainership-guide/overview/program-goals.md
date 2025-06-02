@@ -18,10 +18,10 @@ The AsyncAPI Maintainership Program is built around a clear and impactful vision
     Enable maintainers to pass on project-specific context, workflows, and best    practices to contributors in a structured way.
     
 - **Improve Project Scalability & Sustainability**
-    Help distribute project's workload by onboarding more hands to support project  maintenance, roadmap execution, and community support.
+    Help distribute the project's workload by onboarding more hands to support project  maintenance, roadmap execution, and community support.
     
 - **Strengthen Community Culture**  
-    Promote empathy, communication, and mentorship as essential qualities in open source ecosystem.
+    Promote empathy, communication, and mentorship as essential qualities within the open source ecosystem.
 
 ## Program Outcomes
 
@@ -33,11 +33,11 @@ By the end of the program, participants will have:
 
 - Demonstrated a clear understanding of what it means to be an open-source maintainer, technically and socially.
   
-- Enough knowledge to onboard new aspiring contributors to the AsyncAPI organization where they can learn, grow and contribute to exciting projects.
+- Enough knowledge to onboard new aspiring contributors to the AsyncAPI organization, where they can learn, grow, and contribute to exciting projects.
   
 - Built meaningful connections within the AsyncAPI community and developed career-impacting skills.
   
-- For mentors, refined mentorship and coaching abilities, and shared ownership of projects roadmap and responsibilities.
+- For mentors, refined mentorship and coaching abilities, and shared ownership of the project roadmap and responsibilities.
 
 
-The ultimate outcome is a more resilient and scalable AsyncAPI ecosystem led by a growing network of capable maintainers who cares.
+The ultimate outcome is a more resilient and scalable AsyncAPI ecosystem led by a growing network of capable maintainers who care.

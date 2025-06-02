@@ -11,7 +11,7 @@ Every AMP project idea is intended for **one dedicated contributor**, with the *
 
 ## Prioritize Interest & Alignment
 
-Some contributors may flock to a popular idea, while others apply without genuine interest or understanding. As a mentor, it’s important to identify applicants who truly resonate with the project. Look for passion, curiosity, and alignment with the project’s purpose.
+Some contributors may be drawn to a popular idea, while others apply without genuine interest or a proper understanding. As a mentor, it’s important to identify applicants who genuinely align with the project. Look for passion, curiosity, and alignment with the project’s purpose.
 
 ## Talk Before You Accept
 
@@ -19,7 +19,7 @@ Some contributors may flock to a popular idea, while others apply without genuin
 
 ## Request a Contribution
 
-If you find a candidate worthy of acceptance, ask contributors to submit a small, relevant contribution to your project. This serves as a practical skill check and helps you assess their familiarity with the stack, tooling, and codebase not just what they say in their application.
+If you find a candidate worthy of acceptance, ask contributors to submit a small, relevant contribution to your project. This serves as a practical skill check, helping you assess their familiarity with the stack, tooling, and codebase, not just what they say in their application.
 
 ## Stick to the Plan
 

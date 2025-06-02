@@ -8,7 +8,7 @@ The AsyncAPI Maintainership Program (AMP) is the official mentorship initiative 
 
 The main goal of the maintainership program is to foster knowledge transfer, skills, and experience from existing maintainers to contributors. This not only helps contributors grow into maintainers but also ensures the long-term sustainability and health of the AsyncAPI initiative.
 
-At AsyncAPI, the Maintainership Program serves as a practical framework for teaching, upskilling, and empowering contributors — creating meaningful growth for mentees and lasting impact for mentors.
+At AsyncAPI, the Maintainership Program serves as a practical framework for teaching, upskilling, and empowering contributors, creating meaningful growth for mentees and lasting impact for mentors.
 
 To ensure a smooth and supportive experience for everyone involved, we prioritize a healthy, human-centered approach to open source. Some of the measures we take to support both contributors and mentors include:
 
@@ -20,4 +20,4 @@ To ensure a smooth and supportive experience for everyone involved, we prioritiz
 - Offering flexible timelines and deadlines
 - Promoting self-care and mental well-being
 
-Beyond technical skills, the program provides a realistic view into what it means to maintain an open source project, the rewarding moments as well as the tough ones, and equips contributors with ways to navigate both the technical and emotional aspects of open source work.
+Beyond technical skills, the program offers a realistic perspective on what it means to maintain an open-source project, encompassing both the rewarding and challenging aspects. It equips contributors with the skills to navigate the technical and emotional aspects of open-source work.

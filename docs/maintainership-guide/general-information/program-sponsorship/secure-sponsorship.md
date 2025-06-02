@@ -1,6 +1,6 @@
 ---
 title: How to Secure Sponsorship
-description: This overview page outlines the how to be a sponsor/partner in the maintainership program
+description: This overview page outlines how to be a sponsor/partner in the maintainership program
 weight: 80
 ---
 
@@ -25,7 +25,7 @@ Contribute mentors from your team, sponsor event swag, or provide tools and reso
 ### For Individuals
 
 **One-Time or Recurring Donations:**
-Every contribution, big or small directly supports contributor stipends and mentor honorariums. Your support helps make open source mentorship more accessible and equitable.
+Every contribution, big or small, directly supports contributor stipends and mentor honorariums. Your support helps make open source mentorship more accessible and equitable.
 
 ## Key Benefits for Sponsors
 
@@ -58,5 +58,4 @@ Sponsorship isn’t just about giving — it’s about growing together. Here's 
 
 **Sponsor via Open Collective:** Visit our AsyncAPI Open Collective and select the Maintainership Program fund.
 
-
-Sponsorship isn’t just a transaction, it’s an investment in people, purpose, and the future of open source. Thank you for considering joining us on this journey.
+Sponsorship isn’t just a transaction; it’s an investment in people, purpose, and the future of open source. Thank you for considering joining us on this journey.

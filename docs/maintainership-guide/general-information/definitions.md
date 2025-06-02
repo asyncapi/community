@@ -3,7 +3,7 @@ title: Definitions
 weight: 90
 ---
 
-This section outlines key terms and phrases used(will be used) throughout the AsyncAPI Mentorship Program (AMP) documentation. Understanding these definitions will help you navigate the program more effectively.
+This section outlines key terms and phrases used throughout the AsyncAPI Mentorship Program (AMP) documentation. Understanding these definitions will help you navigate the program more effectively.
 
 - **AMP**
     The Abbreviation for the term AsyncAPI Maintainership Program.
@@ -15,7 +15,7 @@ This section outlines key terms and phrases used(will be used) throughout the As
     The designated timeframe during which participants work on and complete their projects.
 
 - **Contribution Period**  
-    A period before the program, where mentors access the quality of a contributor to determine if they're a good fit for the program. 
+    A period before the program, where mentors assess the quality of a contributor to determine if they're a good fit for the program. 
 
 - **Community Bonding Period**  
     A period before the project work begins where selected contributors engage with their mentors, explore project resources, and become familiar with the community and tools.
@@ -24,13 +24,13 @@ This section outlines key terms and phrases used(will be used) throughout the As
     The window during which mentors assess contributor progress. This includes the midterm and final evaluation checkpoints.
 
 - **Midterm Evaluation**  
-    The first half of the Execution Period, typically concluding with the Midterm Evaluation.
+    The first half of the Execution Period typically concludes with the Midterm Evaluation.
 
 - **Final Evaluation**  
     The second half of the Execution Period, ending with the submission of the final deliverables and Final Evaluation.
 
 - **Final Project Material**  
-    The completed project deliverables, including source code, design files, documentation, or other work as outlined in the project proposal.
+    The completed project deliverables include source code, design files, documentation, or other work as outlined in the project proposal.
 
 - **AsyncAPI Mentee (Contributor)**  
     An individual who applies to and is accepted into the AMP program to contribute to a selected project.

@@ -34,7 +34,7 @@ By sponsoring the AsyncAPI Maintainership Program, you're not just funding a coh
 
  - **Operations & Infrastructure:** Sponsorship supports coordination, onboarding resources, platform tooling, and post-program recognition.
 
- - **Global & Inclusive Participation:** With your support, we can reach underrepresented and underserved contributors across the globe—breaking down financial and geographic barriers.
+ - **Global & Inclusive Participation:** With your support, we can reach underrepresented and underserved contributors across the globe, breaking down financial and geographic barriers.
 
 Your sponsorship helps maintain a program that’s inclusive, sustainable, and high-impact—for contributors, mentors, and the broader open source ecosystem.
 

@@ -17,7 +17,7 @@ To qualify for a chance to participate in the Maintainership Program, contributo
 
 ## How to Apply? 
 
-Before drafting and submitting your application, make sure to carefully review the **official list of approved project ideas**. Proposals that are not aligned with listed projects will not be considered.
+Before drafting and submitting your application, carefully review the **official list of approved project ideas**. Proposals that are not aligned with listed projects will not be considered.
 
 Here’s what the application process looks like:
 
