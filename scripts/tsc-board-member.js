@@ -15,16 +15,6 @@ const AMBASSADORS_JSON_PATH = path.resolve(__dirname, '..', 'AMBASSADORS_MEMBERS
 const OUTPUT_YAML_PATH = path.resolve(__dirname, '..', 'TSC_BOARD_MEMBERS.yaml');
 
 /**
- * Reads and parses a JSON file from the given path.
- * @param {string} filePath
- * @returns {Promise<Member[]>}
- */
-async function loadJson(filePath) {
-  const raw = await readFile(filePath, 'utf-8');
-  return JSON.parse(raw);
-}
-
-/**
  * Reads and parses a YAML file from the given path.
  * @param {string} filePath
  * @returns {Promise<Member[]>}
@@ -91,7 +81,6 @@ if (require.main === module) {
 
 // Export for test coverage
 module.exports = {
-  loadJson,
   loadYaml,
   hasRelevantFlag,
   mergeUniqueMembers,

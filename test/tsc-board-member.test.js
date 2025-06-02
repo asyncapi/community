@@ -1,7 +1,6 @@
 const { readFile, writeFile } = require('fs/promises');
 const yaml = require('js-yaml');
 const {
-  loadJson,
   loadYaml,
   hasRelevantFlag,
   mergeUniqueMembers,
