@@ -1,4 +1,4 @@
 ---
-title: Maintainership program guide
+title: Maintainership Program Guide
 weight: 5
 ---
