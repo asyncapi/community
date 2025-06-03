@@ -44,12 +44,12 @@ module.exports = async ({ github, context, botCommentURL }) => {
       JSON.stringify(latestVotes, null, 2)
     );
 
-    let maintainerInformation;
+    let tscBoardMembersInformation;
     try {
-      const maintainerInfo = await readFile("MAINTAINERS.yaml", "utf8");
-      maintainerInformation = yaml.load(maintainerInfo);
+      const tscBoardMembersInfo = await readFile("TSC_BOARD_MEMBERS.yaml", "utf8");
+      tscBoardMembersInformation = yaml.load(tscBoardMembersInfo);
     } catch (readError) {
-      console.error("Error reading MAINTAINERS.yaml:", readError);
+      console.error("Error reading TSC_BOARD_MEMBERS.yaml:", readError);
       throw readError;
     }
 
@@ -233,7 +233,7 @@ module.exports = async ({ github, context, botCommentURL }) => {
 
     // Function to update the voteTrackingFile with updated TSC Members
     async function updateVoteTrackingFile() {
-      const tscMembers = maintainerInformation.filter(
+      const tscMembers = tscBoardMembersInformation.filter(
         (entry) => entry.isTscMember
       );
       let voteDetails = [];
