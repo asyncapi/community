@@ -22,6 +22,7 @@ Ready to help improve the docs? Here's how to get started:
 #### Step 1: Choose Your Branch Name
 
 Pick a clear name that tells others what you're working on:
+
 * **Adding new content?** Use `docs/feature/your-topic` (like `docs/feature/kafka-tutorial`)
 * **Fixing something?** Use `docs/fix/what-youre-fixing` (like `docs/fix/broken-links`)
 * **General improvements?** Use `docs/your-topic` (like `docs/getting-started-clarity`)
@@ -29,6 +30,7 @@ Pick a clear name that tells others what you're working on:
 #### Step 2: Write Clear Commit Messages
 
  Commit messages are like leaving notes for future contributors. Make them helpful by:
+
 * **Describe the changes:** `docs(tutorials): add step-by-step Kafka examples`
 * **Keep it short:** Aim for under 50 characters in the first line
 * **Add details if needed:** Use the description area for more context
@@ -37,6 +39,7 @@ Pick a clear name that tells others what you're working on:
 #### Step 3: Update the Changelog
 
 Help others understand what changed by updating `CHANGELOG.md` in the following ways:
+
 * Add the changes under the right version: `## Version X.Y.Z (2024-01-15)`
 * Use clear categories: "Added," "Changed," "Fixed," "Removed"
 * Include issue numbers: "Added Kafka tutorial examples (#123)"
@@ -44,3 +47,56 @@ Help others understand what changed by updating `CHANGELOG.md` in the following 
 ### Understanding the Branch Setup
 
 AsyncAPI organizes the work by using different branches (think of them as different workspaces). Here is what they are:
+
+* **`master`** - The live documentation that everyone sees
+* **`release-X.Y.Z`** - Documentation for specific AsyncAPI versions
+* **`docs/*`** - Where all documentation improvements happen
+* **`feature/*`** - For changes that include both code and documentation
+* **`hotfix/*`** - For urgent fixes that can't wait
+
+### When Submitting  Changes
+
+When writing a pull request, consider doing the following to make it easier for maintainers to review and merge it:
+
+1. **Describe the changes clearly** - Explain what is being changed and why it helps solve the issue.
+2. **Ask for the right reviewers** - Tag maintainers & other contributors who are knowledgeable about the topic that the contribution pertains to
+3. **Link to related issues** - Use "Closes #123" to automatically link the pull request
+4. **Be patient** - Good reviews take time, and feedback makes everything better
+
+### Dealing with Old Content
+
+Sometimes information gets outdated. Here's how it is handled at AsyncAPI :
+
+* **Not all information is not deleted** - Someone might still need that information
+* **Mark it clearly** - Look for [DEPRECATED] tags on outdated content
+* **We provide alternatives** - Deprecated content includes links to current recommendations
+* **We keep it accessible** - Old versions stay available for people who need them
+
+### Keeping Track of Changes
+
+For important documents, a "Version History" section is maintained and shows the following information:
+
+* What is changed and when
+* Who made the changes
+* Why the changes were needed
+* Links to discussions that led to the changes
+
+This creates a story of how AsyncAPI’s documentation evolved, making it easier for others to understand decisions and learn from the past.
+
+### Quick Tips for Success
+
+When contributing to documentation, keep the following in mind:
+
+* **Update the fork correctly** - Be sure to update the right version of the docs
+* **Update multiple versions when needed** - If the change helps everyone, apply it broadly
+* **Ask questions** - Use GitHub issues or our the docs channel in Slack when facing problems with contributing
+* **Preview before submitting** - Test the pull request’s changes locally to make sure they look right
+* **Be consistent** - Follow the patterns shown  in existing documentation
+
+### Need Help?
+
+Contributing to documentation should be welcoming, not intimidating.  when facing an issue, consider doing the following:
+
+* Open a GitHub issue in the [docs repository](https://github.com/asyncapi/community/issues) with your question
+* Ask in our Slack #docs channel
+* Look at recent pull requests for examples
