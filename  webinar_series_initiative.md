@@ -85,6 +85,7 @@ Before the live session, hosts and guests should schedule a short planning call 
 ### For Hosts
 
 - Get familiarized with the hosting platform (Restream)
+- Ensure video is in 16:9 aspect ratio (1080p recommended) and demos are clearly visible (proper lighting and screen capture tools).
 - Prepare an engaging introduction and closing.
 - Research and prepare relevant questions tailored to the speaker's topic.
 - Keep the session on time and moderate the Q&A effectively.
