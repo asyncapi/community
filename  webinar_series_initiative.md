@@ -35,7 +35,52 @@ Are you working on something exciting related to AsyncAPI? Do you have a unique 
 - For Speakers: Exposure, recognition, and a platform to share ideas.
 - For the Community: A growing knowledge base, increased collaboration, and a more vibrant ecosystem.
 
+## How It Works
+
+Each webinar will be streamed live (via Restream) on AsyncAPI’s YouTube channel and promoted via our community channels. Sessions typically last 45–60 minutes, including:
+
+- A brief introduction
+- The main talk or demo
+- A live Q&A
+- Closing announcements
+
+Sessions are held monthly or bi-monthly based on availability of speakers and community demand.
+
+## Host & Speaker Alignment Process
+
+Before each session, it’s essential that the host and speaker connect to align on the webinar’s objectives, key results, and flow. This coordination ensures a smooth experience for the audience and maximizes the value of the session.
+
+Alignment Steps:
+
+1. Intro Call/Sync (One month before the session)
+Schedule a 30-minute call between the host and speaker to:
+
+- Discuss the topic’s relevance and audience expectations.
+- Align on the webinar objectives and desired outcomes.
+- Review the format and Q&A flow.
+- Go over any technical or content needs (demos, slides, etc.).
+
+2. Share the Webinar Planning Template
+A shared planning doc helps both parties stay on track. It includes:
+
+- Speaker bio and headshot
+- Session title and abstract
+- Key takeaways
+- Slide/demo links
+- Tech requirements and backup plans
+- Promotional blurbs and hashtags
+
+3. Final Check-in (1–2 days before the session)
+A short async or live check-in to confirm everything is ready:
+
+- Slides/demos are ready
+- Tech check passed
+- Socials are scheduled
+- Everyone knows the schedule
+
 ## Format Guidelines for Host & Guest
+
+Before the live session, hosts and guests should schedule a short planning call and fill out the [webinar planning template](https://docs.google.com/document/d/1uiEB3Fq2XE7rbnYqlgMr4_b1bvi4dMQj95wln3z3-qg/edit?tab=t.0) to align on goals, presentation flow, and audience engagement strategies.
 
 ### For Hosts
 
@@ -64,17 +109,20 @@ Are you working on something exciting related to AsyncAPI? Do you have a unique 
 ### Pre-Event
 
 - [ ] Confirm speaker and topic.
+- [ ] Host and speaker connect to align on topic goals, flow, and audience value.
+- [ ] Fill out and share the Webinar Planning Template.
 - [ ] Promote the webinar on social media, community channels, and mailing lists.
 - [ ] Prepare slides, demo materials, and discussion points.
 - [ ] Set up the webinar platform and do a tech check.
 - [ ] Send out reminder to the speakers and the audience.
+- [ ] Do a final tech check and content confirmation a day before the event.
 
 ### Post-Event
 
 - [ ] Share a recap blog post and recording.
 - [ ] Gather feedback from attendees and speakers.
 - [ ] Follow up with additional resources and discussions.
-- [ ] Plan the next session based on feedback and insights.
+- [ ] Plan the next session using feedback and insights.
 
 ## Potential Speakers
 
@@ -89,4 +137,4 @@ If you or someone you know would be a great fit, reach out to us!
 
 The AsyncAPI Webinar Series is just getting started! Stay tuned for upcoming sessions, and if you have suggestions for topics or speakers, [we’d love to hear from you](https://join.slack.com/t/asyncapi/shared_invite/zt-32hejdicx-NrD~boRq71gpCBJAM8mFoA).
 
-Want to attend the next session? Follow our updates on LinkedIn, [subcribe to our YouTube page and turn on notifications!](https://www.youtube.com/@AsyncAPI) Interested in speaking? Reach out to us, we’d love to have you!
+Want to attend the next session? Follow our updates on LinkedIn, [subscribe to our YouTube page and turn on notifications!](https://www.youtube.com/@AsyncAPI) Interested in speaking? Reach out to us, we’d love to have you!
