@@ -12,7 +12,7 @@ weight: 140
 Think of AsyncAPI documentation like a library with different editions of the same book:
 
 * Each AsyncAPI version (like 2.0.0 or 3.0.0) gets its own documentation
-* When you're reading docs, check the version number at the top to make sure it matches what you're using
+* When reading the docs, check the version number at the top to make sure it matches the one being used
 * Look for the "Last Updated" date to see how current the information is
 
 ### Contributing to Documentation
@@ -34,7 +34,7 @@ Pick a clear name that tells others what you're working on:
 * **Describe the changes:** `docs(tutorials): add step-by-step Kafka examples`
 * **Keep it short:** Aim for under 50 characters in the first line
 * **Add details if needed:** Use the description area for more context
-* **Link to issues in pull requests:** Add "Fixes #123" or "Related to #456" so maintainers & other can track the connection between the contribution & issue it solves
+* **Link to issues in pull requests:** Add "Fixes #123" or "Related to #456" so maintainers & others can track the connection between the contribution & issue it solves
 
 #### Step 3: Update the Changelog
 
