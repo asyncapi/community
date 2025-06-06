@@ -3,19 +3,6 @@ title: 'Utilizing GitHub Actions'
 weight: 140
 ---
 
-## Table of contents
-
-- [Table of contents](#table-of-contents)
-- [Overview](#overview)
-- [Types of GitHub Actions workflows](#types-of-github-actions-workflows)
-  - [Local workflows](#local-workflows)
-  - [Global workflows](#global-workflows)
-    - [How to understand global workflows](#how-to-understand-global-workflows)
-    - [Global replicator workflow](#global-replicator-workflow)
-    - [Basic requirements to use global workflows](#basic-requirements-to-use-global-workflows)
-    - [How to opt in or out of global workflows](#how-to-opt-in-or-out-of-global-workflows)
-- [Slash commands](#slash-commands)
-
 ## Overview
 
 [GitHub Actions](https://docs.github.com/actions) is a continuous integration and continuous delivery (CI/CD) platform that automates software development workflows directly within a GitHub repository.
@@ -114,13 +101,3 @@ To do this, reach out on Slack or open an issue, and a maintainer can run the â€
 **Opt-out**
 
 Some workflows are applied automatically to all repositories. If youâ€™d like to opt out of one of those, your repository must be added to the `repos_to_ignore` list in the relevant job. This change has to be made in the global workflow by a maintainer, so just ask in Slack or open an issue if you'd like to be excluded.
-
-## Slash commands
-
-Thanks to the shared workflows, repositories that opt in automatically get support for issue and pull request commands.
-
-These commands allow users to type a slash command (like `/something`) directly into an issue or PR to trigger helpful actions through a bot, reducing manual work.
-
-To make it easy, the most important command to remember is `/help`, which shows a list of all available commands whenever you need it.
-
-For example, the `/rtm` command lets you merge a PR without worrying about manually adjusting the commit message.
