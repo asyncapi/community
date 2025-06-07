@@ -1,6 +1,6 @@
 ---
-title: Upholding the code of conduct for new contributors
-description: This onboarding guide outlines how to uphold the code of conduct document for new contributors
+title: Upholding the Code of Conduct for new contributors
+description: This onboarding guide outlines how to uphold the Code of Conduct document for new contributors
 weight: 160
 ---
 
@@ -12,7 +12,7 @@ Welcome to the AsyncAPI community! As a contributor, you are an essential part o
 
 ## Why This Matters
 
-The Code of Conduct (CoC) sets expectations for behavior in all AsyncAPI spaces, including repositories, Github discussions, communication platforms (such as Slack), and online and physical events. 
+The Code of Conduct (CoC) sets expectations for behavior in all AsyncAPI spaces, including repositories, GitHub discussions, communication platforms (such as Slack), and online and physical events. 
 
 Following it helps:
 
@@ -29,7 +29,7 @@ Following it helps:
 - **Be community-oriented:** Encourage collaboration, help others when you can, and gracefully accept constructive criticism.
 - **Speak Up:** If you witness inappropriate behavior, report it.
 
-You are expected to read and understand the full [Code of Conduct](https://github.com/asyncapi/community/blob/master/CODE_OF_CONDUCT.md) before contributing.
+You are expected to read and understand the full [CoC](https://github.com/asyncapi/community/blob/master/CODE_OF_CONDUCT.md) before contributing.
 
 
 ## What to Do If You Experience or Witness a Violation
@@ -57,7 +57,7 @@ Not all disagreements are violations. When conflicts happen:
 - First, try a respectful discussion or ask a neutral contributor to help mediate.
 - If the situation escalates or becomes hostile, report the issue to the CoC Committee.
 
-The CoC Committee is trained to resolve conflicts fairly and ensure everyone feels safe.
+The Code of Conduct Committee is trained to resolve conflicts fairly and ensure everyone feels safe.
 
 
 ## Additional Resources
