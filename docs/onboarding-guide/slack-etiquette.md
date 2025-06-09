@@ -17,7 +17,7 @@ In our Slack workspace, most people contribute asynchronously, meaning that your
 
 ### Tips for better Slack collaboration
 
-* **Write with context, not just greetings:** Avoid sending “hi” or “anyone here?” by itself. Instead, go straight to your message, so others can help without needing to ask for more context.  
+* **Be specific and provide context:** Instead of just saying "hi", "I need help", or "anyone here?", make sure your message is clear and specific. This will help others understand what you're asking and provide better assistance.  
     > ❌ `hi`  
     > ✅ `Hi! I’m trying to generate an AsyncAPI spec from a Kafka service using the CLI, but I’m stuck on config. Any tips?`
 
