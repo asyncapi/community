@@ -29,7 +29,7 @@ In our Slack workspace, most people contribute asynchronously, meaning that your
 
 * **Use formatting to improve readability:** Break long posts into paragraphs or bullet points. Use backticks (`code`) for code snippets, and bold or emoji to highlight important points.
 
-* **Respect focus and availability:** People are often balancing time zones, meetings, or other tasks. Slack queues messages when someone is in Do Not Disturb mode—no need to follow up right away.
+* **Respect focus and availability:** People are often balancing time zones, meetings, or other tasks. Slack queues messages when someone is in "Do Not Disturb" mode, no need to follow up right away.
 
 * **Mute wisely, not blindly:** If a channel isn’t relevant to you all the time, mute it but consider setting up keyword alerts (like “website” or “docs”) to get notified only when needed. You can learn how to set up keyword alerts in [Slack’s guide](https://slack.com/intl/en-pl/slack-tips/get-notified-when-someone-mentions-a-topic-you-care-about).
 
