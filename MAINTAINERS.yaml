@@ -510,7 +510,6 @@
   repos:
     - spec-json-schemas
     - bindings
-    - saunter
   githubID: 5294032
 - name: Kenneth Aasan
   github: kennethaasan
