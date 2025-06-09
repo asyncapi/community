@@ -18,8 +18,7 @@ In our Slack workspace, most people contribute asynchronously, meaning that your
 ### Tips for better Slack collaboration
 
 * **Be specific and provide context:** Instead of just saying "hi", "I need help", or "anyone here?", make sure your message is clear and specific. This will help others understand what you're asking and provide better assistance.  
-    > ❌ hi
-
+    > ❌ hi  
     > ✅ Hi! I'm trying to generate an AsyncAPI spec from a Kafka service using the CLI, but I'm stuck on config. My current config looks as follows: `<your-current-config>` Any tips?
 
 * **Use threads for ongoing conversations:** Threads help keep topics organized and channels easier to browse. If someone replies to your question, respond in a thread—unless they've already moved it elsewhere intentionally.
@@ -28,7 +27,7 @@ In our Slack workspace, most people contribute asynchronously, meaning that your
 
 * **Default to public channels:** Public channels make information discoverable. If you're asking a question that others might have too, try asking it in a relevant channel instead of a direct message.
 
-* **Use formatting to improve readability:** Break long posts into paragraphs or bullet points. Use backticks (") for code snippets, and bold (or relevant emojis) to emphasize important points.
+* **Use formatting to improve readability:** Break long posts into paragraphs or bullet points. Use backticks (`) for code snippets, and bold (or relevant emojis) to emphasize important points.
 
 * **Respect focus and availability:** People are often balancing time zones, meetings, or other tasks. Slack queues messages when someone is in "Do Not Disturb" mode, no need to follow up right away.
 
