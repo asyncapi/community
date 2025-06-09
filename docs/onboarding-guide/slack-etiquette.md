@@ -31,7 +31,7 @@ In our Slack workspace, most people contribute asynchronously, meaning that your
 
 * **Respect focus and availability:** People are often balancing time zones, meetings, or other tasks. Slack queues messages when someone is in "Do Not Disturb" mode, no need to follow up right away.
 
-* **Mute wisely, not blindly:** If a channel isn’t relevant to you all the time, mute it but consider setting up keyword alerts (like “website” or “docs”) to get notified only when needed. You can learn how to set up keyword alerts in [Slack’s guide](https://slack.com/intl/en-pl/slack-tips/get-notified-when-someone-mentions-a-topic-you-care-about).
+* **Mute wisely, not blindly:** If you're interested only in specific topics within a channel (for example, related to website or docs), you can mute it and configure [keyword notifications](https://slack.com/help/articles/201355156-Configure-your-Slack-notifications#keyword-notifications) to get notified only when those keywords are mentioned.
 
 ### What we value
 
