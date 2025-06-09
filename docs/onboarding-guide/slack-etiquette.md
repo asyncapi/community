@@ -13,7 +13,7 @@ You don’t need to be perfect. These aren’t hard rules, but they’re good ha
 
 ### Why etiquette matters
 
-Most people in our Slack workspace contribute asynchronously. That means your message might be read hours after you send it, and it needs to be clear, self-contained, and easy to respond to. Keeping threads organized, reducing noise, and respecting others’ time helps create a space where everyone feels heard and informed.
+In our Slack workspace, most people contribute asynchronously, meaning that your message might not be seen immediately. So, make sure it's clear, concise, and easy to respond to. Keeping threads organized, reducing noise, and respecting others' time helps create a space where everyone feels heard and informed.
 
 ### Tips for better Slack collaboration
 
