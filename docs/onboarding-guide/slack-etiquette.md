@@ -9,7 +9,7 @@ As our community continues to expand, it's easy to forget that small habits like
 
 This guide outlines a few ways we can make Slack more respectful, organized, and inclusive for everyone.
 
-You don't need to be perfect. These aren't hard rules, but they’re good habits that help us collaborate better.
+You don't need to be perfect. These aren't hard rules, but they're good habits that help us collaborate better.
 
 ### Why etiquette matters
 
@@ -19,15 +19,16 @@ In our Slack workspace, most people contribute asynchronously, meaning that your
 
 * **Be specific and provide context:** Instead of just saying "hi", "I need help", or "anyone here?", make sure your message is clear and specific. This will help others understand what you're asking and provide better assistance.  
     > ❌ hi
+
     > ✅ Hi! I'm trying to generate an AsyncAPI spec from a Kafka service using the CLI, but I'm stuck on config. My current config looks as follows: `<your-current-config>` Any tips?
 
-* **Use threads for ongoing conversations:** Threads help keep topics organized and channels easier to browse. If someone replies to your question, respond in a thread—unless they’ve already moved it elsewhere intentionally.
+* **Use threads for ongoing conversations:** Threads help keep topics organized and channels easier to browse. If someone replies to your question, respond in a thread—unless they've already moved it elsewhere intentionally.
 
-* **Minimize notifications:** Avoid tagging `@channel` or `@here` unless it’s truly important for everyone. Use emoji reactions instead of “+1” or “I agree” messages.
+* **Minimize notifications:** Avoid tagging `@channel` or `@here` unless it’s truly important for everyone. Use emoji reactions instead of "+1" or "I agree" messages.
 
 * **Default to public channels:** Public channels make information discoverable. If you're asking a question that others might have too, try asking it in a relevant channel instead of a direct message.
 
-* **Use formatting to improve readability:** Break long posts into paragraphs or bullet points. Use backticks (``) for code snippets, and bold (or relevant emojis) to emphasize important points.
+* **Use formatting to improve readability:** Break long posts into paragraphs or bullet points. Use backticks (") for code snippets, and bold (or relevant emojis) to emphasize important points.
 
 * **Respect focus and availability:** People are often balancing time zones, meetings, or other tasks. Slack queues messages when someone is in "Do Not Disturb" mode, no need to follow up right away.
 
@@ -37,10 +38,10 @@ In our Slack workspace, most people contribute asynchronously, meaning that your
 
 Above all, our community values respectful, thoughtful conversation.
 
-If you’re ever unsure how to engage, ask yourself: *Is this clear, kind, and useful?* If yes, you’re on the right track.
+If you're ever unsure how to participate in a conversation or respond to a message, ask yourself: *Is my response clear, kind, and useful?* If it is, you're likely on the right track.
 
 For more guidance, check out:
 
-* [AsyncAPI’s Code of Conduct](https://github.com/asyncapi/.github/blob/master/CODE_OF_CONDUCT.md)
-* [Slack’s own etiquette tips](https://slack.com/blog/collaboration/etiquette-tips-in-slack)
+* [AsyncAPI's Code of Conduct](https://github.com/asyncapi/.github/blob/master/CODE_OF_CONDUCT.md)
+* [Slack's own etiquette tips](https://slack.com/blog/collaboration/etiquette-tips-in-slack)
 * For earlier versions of our etiquette guidelines, see the [original document](https://github.com/asyncapi/community/blob/master/slack-etiquette.md) in the community repo.
