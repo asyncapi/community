@@ -9,7 +9,7 @@ As our community continues to expand, it's easy to forget that small habits like
 
 This guide outlines a few ways we can make Slack more respectful, organized, and inclusive for everyone.
 
-You don’t need to be perfect. These aren’t hard rules, but they’re good habits that help us collaborate better.
+You don't need to be perfect. These aren't hard rules, but they’re good habits that help us collaborate better.
 
 ### Why etiquette matters
 
