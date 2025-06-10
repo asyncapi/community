@@ -23,9 +23,9 @@ In our Slack workspace, most people contribute asynchronously, meaning that your
 
 * **Use threads for ongoing conversations:** Threads help keep topics organized and channels easier to browse. If someone replies to your question, respond in a thread unless they've already moved it elsewhere intentionally.
 
-* **Minimize notifications:** Avoid tagging `@channel` or `@here` unless it’s truly important for everyone. Use emoji reactions instead of "+1" or "I agree" messages.
+* **Minimize notification triggers:** Ensure you know who you want to address your message to. If you need to get the attention of someone specific, you can mention that person directly. Use the `@everyone`, `@channel`, `@here` mentions sparingly, only when attention of a large portion of the channel participants is crucial. Avoid "+1" or "I agree" messages at all costs, use emoji reactions instead.
 
-* **Default to public channels:** Public channels make information discoverable. If you're asking a question that others might have too, try asking it in a relevant channel instead of a direct message.
+* **Prefer public channels:** Public channels make information easier to find. Ask questions in relevant channels because it helps others learn from the discussion and find answers later. Additionally, it promotes a culture of knowledge sharing and collaboration.
 
 * **Use formatting to improve readability:** Break long posts into paragraphs or bullet points. Use backticks (``) for code snippets, and bold (or relevant emojis) to emphasize important points.
 
