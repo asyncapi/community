@@ -21,7 +21,7 @@ In our Slack workspace, most people contribute asynchronously, meaning that your
     > ❌ hi  
     > ✅ Hi! I'm trying to generate an AsyncAPI spec from a Kafka service using the CLI, but I'm stuck on config. My current config looks as follows: `<your-current-config>` Any tips?
 
-* **Use threads for ongoing conversations:** Threads help keep topics organized and channels easier to browse. If someone replies to your question, respond in a thread—unless they've already moved it elsewhere intentionally.
+* **Use threads for ongoing conversations:** Threads help keep topics organized and channels easier to browse. If someone replies to your question, respond in a thread unless they've already moved it elsewhere intentionally.
 
 * **Minimize notifications:** Avoid tagging `@channel` or `@here` unless it’s truly important for everyone. Use emoji reactions instead of "+1" or "I agree" messages.
 
