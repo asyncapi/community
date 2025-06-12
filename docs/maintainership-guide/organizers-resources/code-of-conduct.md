@@ -52,4 +52,3 @@ All reports will be handled with confidentiality, empathy, and care. Action will
 ## Final Note
 
 Our diversity makes us stronger. Our mentorship thrives when everyone feels safe, respected, and valued. Let’s build something meaningful together, collaboratively, inclusively, and respectfully.
-

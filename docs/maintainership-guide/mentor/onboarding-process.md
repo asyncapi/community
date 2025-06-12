@@ -25,7 +25,8 @@ The success of the AsyncAPI Maintainership Program depends heavily on the though
     You’ll be added to the dedicated `#maintainership-mentors` Slack channel to stay updated, ask questions, and connect with fellow mentors throughout the program.
 
 - **Kickoff Call:**  
-    You’ll be invited to a Mentor Kickoff Call (optional for returning mentors) to align on goals, timelines, expectations, and answer any early questions before the program begins.
+    You’ll be invited to a Mentor Kickoff Call (mandatory for all mentors) to align on goals, timelines, expectations, and answer any early questions before the program begins.
+    
 ### Mentor Orientation
 
 - **Live Orientation Session:**  

@@ -1,11 +1,12 @@
 ---
 title: Support and Escalation Path
-weight: 70
+weight: 80
 ---
 
 Mentorship is a rewarding but often demanding journey. At AsyncAPI, we understand that challenges can arise, whether it's dealing with unresponsive contributors, managing conflicting schedules, or navigating tough feedback moments. That’s why we’ve built a support system to help you handle these situations with clarity and care.
 
 To ensure our mentors feel supported and empowered, here’s how we help you navigate the mentoring process:
+
 ### 1. **AsyncAPI Mentor Support Channel**
 
    - You’ll have access to a dedicated Slack channel exclusively for mentors.

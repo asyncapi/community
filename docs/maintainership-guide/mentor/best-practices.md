@@ -1,6 +1,6 @@
 ---
 title: Mentoring Best Practices
-weight: 80
+weight: 90
 ---
 
 Mentors play a significant role in the success of any mentorship program; without them, mentorship doesn’t exist. By offering meaningful guidance, you're not just empowering contributors; you're also growing as a leader, setting the tone for future contributors, and modeling resilience, curiosity, and collaboration.

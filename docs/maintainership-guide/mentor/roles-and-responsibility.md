@@ -1,6 +1,6 @@
 ---
 title: Mentors Roles And Responsibilty
-weight: 50
+weight: 60
 ---
 
 > _At AsyncAPI, we believe mentorship is one of the most effective ways to teach, upskill, and empower contributors in open source. When done right, it creates not just transformative learning experiences for contributors, but also long-lasting value and growth for mentors._
@@ -12,6 +12,7 @@ All AMP mentors are, or should be, trusted members of the AsyncAPI community and
 Mentors' role goes beyond just technical guidance; they help shape a culture of inclusion, sustainability, and authentic contribution in open source.
 
 Below are the key responsibilities and expectations for mentors:
+
 ## Project Planning
 
 - Define a clear project scope with achievable and measurable goals.
@@ -35,6 +36,7 @@ Below are the key responsibilities and expectations for mentors:
 - Responsiveness towards contributors challenges and blockers.
 - Check in on the mentee periodically (especially if there has been no recent contact from the mentee).
 - Follow up periodically, especially if a contributor goes silent, to re-engage and offer support.
+
 ## Guidance & Growth
 
 - Mentor contributors on both technical skills and open source best practices (e.g., writing good issues, clean PRs, and performing reviews).
