@@ -5,16 +5,16 @@ weight: 50
 
 Submitting a Maintainership Program project idea is different from proposing a typical mentorship task in programs like Google Summer of Code. AMP `only accepts` ideas explicitly designed to guide contributors toward long-term maintainership, not general one-off assignments. Without a clear scope, concrete goals, and actionable milestones, “becoming a maintainer” can feel too vague, leaving contributors unsure where to begin. As a mentor, your first responsibility is to craft a proposal that:
 
-- **Support maintainership goals**
+- **Support maintainership goals:**
   Projects must be designed with the end goal of helping contributors take on responsibilities that reflect those of maintainer, such as triaging issues, reviewing PRs, leading discussions, owning releases, or driving adoption.
 
-- **Scoped for mentorship**
+- **Scoped for mentorship:**
   The project should have a defined achieveable timeline, with room for learning and iteration. It should include both technical and non-technical growth opportunities, such as writing documentation or engaging with the community.
 
-- **Have clear, actionable milestones**
+- **Have clear, actionable milestones:**
   Vague goals like `become a maintainer` can leave contributors confused. Instead, break down the path into 3-5 concrete phases like onboarding, first PRs, managing a repo, or leading a release cycle.
 
-- **Align with AsyncAPI's community goals**
+- **Align with AsyncAPI's community goals:**
   Good project ideas should move the AsyncAPI initiative forward, whether through toolings, documentation, community development, or improving standards adoption.
 
 ## Your Role as a mentor
