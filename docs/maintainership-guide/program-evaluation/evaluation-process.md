@@ -44,11 +44,9 @@ At the end of the AsyncAPI Maintainership term, contributors are required to pro
 - Any unfinished tasks
 - Plans for continued contribution
 
-For projects with multiple contributors, which falls under only **documentation-related project ideas**, stipends are disbursed **only after final evaluations** are completed. This is because:
+For projects with multiple contributors, which falls under only **documentation-related project ideas**, stipends are shared equally among approved contributors after project completion.
 
-- The $1500 stipend is shared equally among approved contributors.
-- Single disbursement simplifies calculation and distribution.
-- If one or more contributors do not pass, their portion is redistributed among those who did.
+_Note: If one or more contributors do not pass, their portion is redistributed among those who did._
 
 ## Payments - Be Patient
 

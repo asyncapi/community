@@ -5,14 +5,11 @@ weight: 80
 
 > _The AMP participants may receive stipends from AsyncAPI, which are at AsyncAPI's sole discretion and are not adjusted to the cost of living. All participants will receive an equal amount of stipends during the program participation._
 
-The **AsyncAPI Maintainership Program (AMP)** offers stipends as a token of appreciation for the time and effort invested by contributors and mentors. These stipends are disbursed upon successful completion of key milestones and evaluations.
+The **AsyncAPI Maintainership Program (AMP)** offers stipends as a token of appreciation for the time and effort invested by contributors and mentors. These stipends are disbursed upon successful completion the project.
+
 ## Contributor Stipends
 
-Contributors receive their stipend in **two installments**:
-
-- **50% after passing the Midterm Evaluation**
-
-- **50% after passing the Final Evaluation**
+Contributors receive their stipend in **full** after successfully passing the Final Evaluation.
 
 To be eligible, contributors must meet all evaluation criteria and submit the required deliverables on time.
 
