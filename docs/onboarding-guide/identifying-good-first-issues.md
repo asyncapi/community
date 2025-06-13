@@ -21,9 +21,6 @@ Imagine you're a detective searching for clues. In open-source, your clues are G
 ### Look for Issue Labels
 If none of the above resonates with you, check out issues labeled `good first issue` or `help wanted` in the repositories. These labels indicate tasks that are well-scoped for new contributors.
 
-- good first issue – These issues usually come with clear instructions and are easy to implement.
-- help wanted – These issues can have detailed instructions as well but may require more extensive implementation effort.
-
 To find good first issues, follow these steps:
 
 1. Navigate to the [AsyncAPI GitHub organization](https://github.com/asyncapi).
@@ -38,9 +35,6 @@ To find good first issues, follow these steps:
 3. Use the search bar or label filters to locate issues labeled like: `good first issue` or `help wanted`.
 
 ![Screenshot 2025-05-24 020450](https://github.com/user-attachments/assets/49dab98c-2b51-4374-8abe-130c2c269110)
-
-
-These labels indicate tasks that are ideal starting points for new contributors. Think of them as Level 1 quests - easy enough to get started, but important to the project's progress.
 
 ### Understanding Issue Labels
 When looking at issues, you might see different labels. Here's what they mean:
