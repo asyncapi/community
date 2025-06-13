@@ -1,11 +1,11 @@
 ---
 title: Version Control
 description: A guide to using version control in AsyncAPI
-weight: 140
+weight: 170
 ---
 ## Version Control
 
- At AsyncAPI, version control is done to keep track of what's changed, who changed it, and why. This helps maintainers, contributors, and users understand how the documentation has evolved and makes it easier for everyone to contribute.
+ At AsyncAPI, version control is used to keep track of what has changed, who made the change, and why. This helps maintainers, contributors, and users understand how the documentation has evolved, making it easier for everyone to contribute.
 
 ### How Documentation Versions Work
 
@@ -89,13 +89,13 @@ When contributing to documentation, keep the following in mind:
 
 * **Update the fork correctly** - Be sure to update the right version of the docs
 * **Update multiple versions when needed** - If the change helps everyone, apply it broadly
-* **Ask questions** - Use GitHub issues or our the docs channel in Slack when facing problems with contributing
+* **Ask questions** - Use GitHub issues or the `#11_contributing` channel in Slack when facing problems with contributing
 * **Preview before submitting** - Test the pull request’s changes locally to make sure they look right
 * **Be consistent** - Follow the patterns shown  in existing documentation
 
 ### Need Help?
 
-Contributing to documentation should be welcoming, not intimidating.  when facing an issue, consider doing the following:
+Contributing to documentation should be welcoming, not intimidating. When facing an issue, consider doing the following:
 
 * Open a GitHub issue in the [docs repository](https://github.com/asyncapi/community/issues) with your question
 * Ask in our Slack #docs channel
