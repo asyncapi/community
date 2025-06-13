@@ -44,34 +44,34 @@ This is what you need to do to kick it off:
 
 1. Log into [Restream.io](https://app.restream.io/home) and select `Set up for OBS, Zoom, etc.` option:
 
-    <img src="assets/meetings/restream1.png" width="50%">
+    <img src="../../assets/meetings/restream1.png" width="50%">
 
 1. Click `Update Titles` card:
 
-    <img src="assets/meetings/restream2.png" width="50%">
+    <img src="../../assets/meetings/restream2.png" width="50%">
 
 1. Provide title and description:
 
     - Title for the live stream that corresponds with the meeting you just started,
     - Meeting description must be provided even if the field is empty; otherwise, the old one from other streams will be used.
 
-    <img src="assets/meetings/restream3.png" width="50%">
+    <img src="../../assets/meetings/restream3.png" width="50%">
 
 1. In Zoom, click the `Live Transcript` button to start transcribing the meeting:
 
-    ![](assets/meetings/zoom1.png)
+    ![](../../assets/meetings/zoom1.png)
 
 1. Confirm transcriptions with `Enable` button:
 
-    ![](assets/meetings/zoom2.png)
+    ![](../../assets/meetings/zoom2.png)
 
 1. Click `More`:
 
-    ![](assets/meetings/zoom3.png)
+    ![](../../assets/meetings/zoom3.png)
 
 1. Select `Live on Custom Live Stream Service` option to start streaming to Restream and, therefore, to official AsyncAPI social networks:
 
-    ![](assets/meetings/zoom4.png)
+    ![](../../assets/meetings/zoom4.png)
 
 #### Restream-first
 
@@ -81,48 +81,48 @@ This is what you need to do to kick it off:
 
 1. In [YouTube](https://youtube.com), click on your profile picture and select `Switch account`:
 
-    <img src="assets/meetings/yt1.png" width="40%">
+    <img src="../../assets/meetings/yt1.png" width="40%">
 
 1. Select `AsyncAPI`. If you do not see it on the list, it means you did not have all the access rights needed to set up a live stream:
 
-    <img src="assets/meetings/yt2.png" width="40%">
+    <img src="../../assets/meetings/yt2.png" width="40%">
 
 1. Click on `Create` and select `Go live`:
 
-    <img src="assets/meetings/yt3.png" width="40%">
+    <img src="../../assets/meetings/yt3.png" width="40%">
 
-1. Once a new live stream is created, in the list of `Upcoming` streams, click `View in Live Control Room` <img src="assets/meetings/yt5.png" width="3%"> icon next to your live stream:
+1. Once a new live stream is created, in the list of `Upcoming` streams, click `View in Live Control Room` <img src="../../assets/meetings/yt5.png" width="3%"> icon next to your live stream:
 
-    <img src="assets/meetings/yt4.png" width="50%">
+    <img src="../../assets/meetings/yt4.png" width="50%">
 
 1. Enable `Closed captions`:
 
-    <img src="assets/meetings/yt6.png" width="50%">
+    <img src="../../assets/meetings/yt6.png" width="50%">
 
 1. Log into [Restream.io](https://app.restream.io/home) and select `Start with Studio` option:
 
-    <img src="assets/meetings/restream1.png" width="50%">
+    <img src="../../assets/meetings/restream1.png" width="50%">
 
 1. After enabling the audio, video and providing the name, you will see a Restream Studio. 
 
 1. `Edit` the title and description of the stream:
 
-    <img src="assets/meetings/restream4.png" width="50%">
+    <img src="../../assets/meetings/restream4.png" width="50%">
 
 1. Provide title and description and click `Next`:
 
     - Title for the live stream that corresponds with the meeting you just started,
     - Meeting description must be provided even if the field is empty; otherwise, the old one from other streams will be used.
 
-    <img src="assets/meetings/restream5.png" width="50%">
+    <img src="../../assets/meetings/restream5.png" width="50%">
 
 1. `Edit` YouTube destination:
 
-    <img src="assets/meetings/restream6.png" width="40%">
+    <img src="../../assets/meetings/restream6.png" width="40%">
 
 1. Make sure you do not create a new event, but select the one you already created on YouTube, with closed captions on:
 
-    <img src="assets/meetings/restream7.png" width="40%">
+    <img src="../../assets/meetings/restream7.png" width="40%">
 
 1. You are ready to `Go Live`
 
@@ -160,7 +160,7 @@ We have an automated workflow in place:
 
 Start [discussion in community repository](https://github.com/asyncapi/community/discussions). Explain the idea and justify why it requires a separate meeting. We currently have [approval from the Technical Steering Commitee](https://github.com/asyncapi/community/discussions/295) to pay for up to 8 Zoom licenses.
 
-Once a new meeting is approved, add a [new workflow like this one](.github/workflows/create-event-community-meeting.yml) and a [new GitHub issue template like this one](.github/workflows/create-event-helpers/issues_templates/community.md).
+Once a new meeting is approved, add a [new workflow like this one](../../.github/workflows/create-event-community-meeting.yml) and a [new GitHub issue template like this one](../../.github/workflows/create-event-helpers/issues_templates/community.md).
 
 
 ### How can I become a host?
