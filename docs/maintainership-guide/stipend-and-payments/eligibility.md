@@ -3,13 +3,13 @@ title: Stipend Eligibility
 weight: 70
 ---
 
->_The AMP participants may receive stipends from AsyncAPI, which are at AsyncAPI's sole discretion and are not adjusted to the cost of living. All participants will receive an equal amount of stipends during the program participation._
+>_AMP participants may receive stipends from AsyncAPI at AsyncAPI's sole discretion; these stipends are not adjusted for cost of living. All participants will receive equal stipend amounts during program participation._
 
 The AsyncAPI Maintainership Program (AMP) provides stipends to recognize the time, effort, and impact of contributors and mentors who fulfill program requirements and demonstrate commitment throughout the program.
 
 ## Eligibility for Contributors
 
-To qualify for stipend payments as contributor, you must:
+To qualify for stipend payments as a contributor, you must:
 
 - Be officially **accepted** into the AMP program
 

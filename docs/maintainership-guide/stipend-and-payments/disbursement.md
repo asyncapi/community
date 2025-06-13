@@ -3,9 +3,9 @@ title: Payment Disbursement
 weight: 80
 ---
 
-> _The AMP participants may receive stipends from AsyncAPI, which are at AsyncAPI's sole discretion and are not adjusted to the cost of living. All participants will receive an equal amount of stipends during the program participation._
+>_AMP participants may receive stipends from AsyncAPI at AsyncAPI's sole discretion; these stipends are not adjusted for cost of living. All participants will receive equal stipend amounts during program participation._
 
-The **AsyncAPI Maintainership Program (AMP)** offers stipends as a token of appreciation for the time and effort invested by contributors and mentors. These stipends are disbursed upon successful completion the project.
+The **AsyncAPI Maintainership Program (AMP)** offers stipends as a token of appreciation for the time and effort invested by contributors and mentors. These stipends are disbursed upon successful completion of the project.
 
 ## Contributor Stipends
 

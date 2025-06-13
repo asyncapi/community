@@ -3,14 +3,14 @@ title: Maintainership Program Contributor's Guide
 weight: 50
 ---
 
-Applying to the AsyncAPI Maintainership Program(AMP) is simple, but before you get started, we recommend reviewing the [program timeline](../timeline-and-schedule.md) to ensure you’re aware of all key dates and deadlines.
+Applying to the AsyncAPI Maintainership Program (AMP) is simple, but before you get started, we recommend reviewing the [program timeline](../timeline-and-schedule.md) to ensure you’re aware of all key dates and deadlines.
 
 ## Eligibility
 
 To qualify for a chance to participate in the Maintainership Program, contributors must meet the following requirements:
 
 - Have made **at least two contributions** to any AsyncAPI project (e.g., code, documentation, community support).
-- Must have being an active contributor for at least 4-6 months.
+- Must have been an active contributor for at least 4–6 months.
 - Be a **student** or a **beginner in open-source** software development.
 - **Not currently serving** as a Project Administrator or Mentor in this program cycle.
 - Have **only participated once** in the AMP previously.
