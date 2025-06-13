@@ -31,9 +31,9 @@ The success of the AsyncAPI Maintainership Program depends heavily on the though
 
 - **Live Orientation Session:**  
     You’ll join a live virtual orientation where program leads will walk you through:
-    - The program’s structure, timeline, and key milestones
-    - The support system available to mentors (e.g., async help, escalation paths)
-    - Mentorship best practices, communication tips, and how to address contributor challenges.
+  - The program’s structure, timeline, and key milestones
+  - The support system available to mentors (e.g., async help, escalation paths)
+  - Mentorship best practices, communication tips, and how to address contributor challenges.
 
 - **Program Resources & Insights:**  
     Gain practical insights from past editions and receive access to useful resources like evaluation rubrics, messaging templates, and the AsyncAPI Mentorship Playbook to support your journey.

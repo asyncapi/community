@@ -19,7 +19,7 @@ Submitting a Maintainership Program project idea is different from proposing a t
 
 ## Your Role as a mentor
 
-As a mentor, your first responsibility is to shape a project idea that sets your contributor up for long-term success. This include:
+As a mentor, your first responsibility is to shape a project idea that sets your contributor up for long-term success. This includes:
 
 - Writing a clear and descriptive project summary
 - Listing expected outcomes and learning goals

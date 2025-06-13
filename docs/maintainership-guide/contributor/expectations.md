@@ -22,9 +22,9 @@ Clear and consistent communication is non-negotiable. In fact, it's one of the f
 Open source thrives on teamwork, and your project isn’t a solo mission.
 
 - **Engage with the community:** Participate during the Community Bonding Period. Join discussions on GitHub, Slack, and AMP sync calls to stay in the loop and connected.
-- **Work in the open:** Publish your project code in a publicly accessible repository under an [OSI-approved open source license](http://www.opensource.org/licenses/alphabetical), as specified by your mentor or organization.
+- **Work in the open:** Publish your project code in a publicly accessible repository under an [OSI-approved open source license](https://www.opensource.org/licenses/alphabetical), as specified by your mentor or organization.
 - **Follow standards:** Adhere to the AsyncAPI organization's coding, contribution, and documentation guidelines to maintain quality and consistency.
--  **Be open to feedback:** Embrace constructive input from mentors, peers, and community members to refine your work.
+- **Be open to feedback:** Embrace constructive input from mentors, peers, and community members to refine your work.
 - **Support fellow contributors:** Celebrate each other’s wins, and offer help when possible. Collaboration over competition is the AMP way.
 
 ### Commitment

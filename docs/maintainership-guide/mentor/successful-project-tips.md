@@ -27,7 +27,7 @@ You are not expected to be available 24/7. Setting clear boundaries helps both y
 
 - Scheduling weekly or bi-weekly check-ins to track progress and offer guidance.
 - Setting up a routine work review to evaluate deliverables.
-- Defining your working and non-working hours so expectations are clear from the start.
+- Defining your working and non-working hours, so expectations are clear from the start.
 
 ## Project Idea Tips
 
@@ -35,7 +35,7 @@ The project idea you mentor is the backbone of your AMP experience. A well-scope
 
 ### One Idea, One Contributor
 
-Every AMP project idea is intended for **one dedicated contributor**, with the **exception of documentation-related** projects, which may allow for more than one collaborative effort if clearly scoped. While several applicants may express interest in the same project, **only one proposal will be accepted per idea**. Team-based submissions are not allowed for technical projects; each contributor is solely responsible for their project's execution and success.
+Every AMP project idea is intended for **one dedicated contributor**, with the **exception for documentation-related** projects, which may allow for more than one collaborative effort if clearly scoped. While several applicants may express interest in the same project, **only one proposal will be accepted per idea**. Team-based submissions are not allowed for technical projects; each contributor is solely responsible for their project's execution and success.
 
 ### Prioritize Interest & Alignment
 

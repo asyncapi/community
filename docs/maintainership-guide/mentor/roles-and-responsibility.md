@@ -1,5 +1,5 @@
 ---
-title: Mentors Roles And Responsibilty
+title: Mentors Roles And Responsibility
 weight: 60
 ---
 
@@ -34,7 +34,7 @@ Below are the key responsibilities and expectations for mentors:
 - Be inclusive, empathetic, and open to feedback from contributors.
 - Proactively support contributors through blockers or challenges.
 - Responsiveness towards contributors challenges and blockers.
-- Check in on the mentee periodically (especially if there has been no recent contact from the mentee).
+- Check in on silent contributors periodically to re-engage and offer support.
 - Follow up periodically, especially if a contributor goes silent, to re-engage and offer support.
 
 ## Guidance & Growth

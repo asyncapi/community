@@ -11,8 +11,7 @@ The pass or fail decision from an evaluation should not come as a surprise. You 
 - Your project progress
 - Contribution quality and deliverables
 - Community engagement
-- Any blockers or support needed
-prior to the evaluation period. 
+- Any blockers or support needed before the evaluation period. 
 
 >_If you aren't getting pre-evaluation feedback from your mentor or contributor, kindly ask for it early and often.
 
@@ -22,12 +21,12 @@ Evaluations are a survey that both the mentor and the contributor fill out durin
 
 The form takes roughly **10–15 minutes** to fill out and includes questions related to:
 
- - Scope of project
- - Quality of interaction
- - Skills and responsiveness
- - Program contribution to learning
- - Passing or failing mentor or contributor
- - Quality of program organization
+- Scope of project
+- Quality of interaction
+- Skills and responsiveness
+- Program contribution to learning
+- Passing or failing mentor or contributor
+- Quality of program organization
 
 After the evaluation window closes, you’ll receive an email from the organizers with your result — pass or fail.
 
@@ -37,14 +36,14 @@ Organizers will keep evaluation responses **confidential**, except for specific 
 
 ## Final Evaluations 
 
-At the end of the AsyncAPI Maintainership term, contributors are required to provide link to the work they've done during the current AM program participation. This includes:
+At the end of the AsyncAPI Maintainership term, contributors are required to provide a link to the work they've done during the current AM program participation. This includes:
 
 - A link to your project repository or documentation
 - A brief description of completed work
 - Any unfinished tasks
 - Plans for continued contribution
 
-For projects with multiple contributors, which falls under only **documentation-related project ideas**, stipends are shared equally among approved contributors after project completion.
+For **documentation-related** projects with multiple contributors, stipends are shared equally among approved contributors after project completion.
 
 _Note: If one or more contributors do not pass, their portion is redistributed among those who did._
 
@@ -52,4 +51,4 @@ _Note: If one or more contributors do not pass, their portion is redistributed a
 
 Once your evaluation is marked as “pass,” you will be eligible to request your stipend via the [AsyncAPI Mentorship Open Collective](https://opencollective.com/asyncapi/projects/asyncapi-mentorship) page.
 
-Please allow **a few business days** for your payment to be processed after submission. If you’re unsure how to submit your expense, [refer to this guide here](../stipend-and-payments/disbursement.md).
+Please allow **a few business days** for your payment to be processed after submission. If you’re unsure how to submit your expense, [refer to this guide](../stipend-and-payments/disbursement.md).

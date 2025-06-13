@@ -17,7 +17,7 @@ Sponsor one or more project slots. Each slot costs $2,000 and directly funds a c
 Collaborate with us on curated program content, gain community visibility, and enjoy opportunities for brand-aligned speaking engagements.
 
 **Internship Pathways:**
-Offer internship placements to our contributors, giving them real-world experience while tapping into motivated, open source talent.
+Offer internship placements to our contributors, giving them real-world experience while tapping into motivated, open-source talent.
 
 **In-Kind Contributions:**
 Contribute mentors from your team, sponsor event swag, or provide tools and resources to enrich the learning experience.
@@ -25,7 +25,7 @@ Contribute mentors from your team, sponsor event swag, or provide tools and reso
 ### For Individuals
 
 **One-Time or Recurring Donations:**
-Every contribution, big or small, directly supports contributor stipends and mentor honorariums. Your support helps make open source mentorship more accessible and equitable.
+Every contribution, big or small, directly supports contributor stipends and mentor honorariums. Your support helps make open-source mentorship more accessible and equitable.
 
 ## Key Benefits for Sponsors
 
@@ -33,7 +33,7 @@ Sponsorship isn’t just about giving — it’s about growing together. Here's 
 
 **Brand Visibility:**
 
-- Your logo featured on our website, maintainership blog post, newsletters, and livestream events.
+- Your logo featured on our website, maintainership blog posts, newsletters, and livestream events.
 - Recognition at community calls, conferences, and AsyncAPI-hosted webinars.
 - Inclusion in contributor spotlight posts and public showcases.
 
@@ -58,4 +58,4 @@ Sponsorship isn’t just about giving — it’s about growing together. Here's 
 
 **Sponsor via Open Collective:** Visit our AsyncAPI Open Collective and select the Maintainership Program fund.
 
-Sponsorship isn’t just a transaction; it’s an investment in people, purpose, and the future of open source. Thank you for considering joining us on this journey.
+Sponsorship isn’t just a transaction; it’s an investment in people, purpose, and the future of open-source. Thank you for considering joining us on this journey.

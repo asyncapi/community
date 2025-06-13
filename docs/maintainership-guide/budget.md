@@ -4,7 +4,7 @@ description: This overview page outlines the AsyncAPI Maintainership Program Bud
 weight: 30
 ---
 
-Piloting an in-house mentorship program, such as the AsyncAPI Maintainership Program involves thoughtful financial planning. Thanks to generous donations through our [Open Collective](https://opencollective.com/asyncapi), the AsyncAPI Initiative has been able to allocate a fixed portion of its annual funds to support this program.
+Piloting an in-house mentorship program, such as the AsyncAPI Maintainership Program, involves thoughtful financial planning. Thanks to generous donations through our [Open Collective](https://opencollective.com/asyncapi), the AsyncAPI Initiative has been able to allocate a fixed portion of its annual funds to support this program.
 
 To ensure long-term sustainability, transparency, and impact, we annually evaluate our budget to determine the number of projects we can support, which includes providing fair stipends for contributors, recognizing mentor efforts, and covering essential administrative costs.
 
@@ -14,7 +14,7 @@ We’ve also created a dedicated [**Open Collective page**](https://opencollecti
 
 Each project accepted into the AsyncAPI Maintainership Program is funded with a **fixed $2,000 budget**, designed to fairly support both contributors and mentors. Whether a project is led by one contributor or a small team, the budget remains consistent to encourage scope discipline, collaboration, and resource sharing.
 
-### Cost Breakdown(Per Project)
+### Cost Breakdown (Per Project)
 
 | **Expense Item**                | **Amount (USD)** | **Notes**                                                                   |
 | ------------------------------- | ---------------- | --------------------------------------------------------------------------- |

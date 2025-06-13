@@ -25,53 +25,53 @@ Here’s the general timeline for each yearly cohort:
 
 Below is a detailed breakdown of the AsyncAPI Maintainership Program timeline. Each phase is carefully designed to ensure transparency, fairness, and a high-impact learning experience for everyone involved.
 
-**Program announcement period — [July 1 - 7]:**
+**Program announcement period — [July 1-7]:**
 
-   - Program coordinators begin volunteer outreach.
-   - Program organizers begin the process of securing sponsorships to support  contributor stipends and program operations.
-   - A breakdown of the yearly budget is shared to determine the number of contributor slots.
+- Program coordinators begin volunteer outreach.
+- Program organizers begin the process of securing sponsorships to support  contributor stipends and program operations.
+- A breakdown of the yearly budget is shared to determine the number of contributor slots.
    
 **Call for mentors & project proposals period — [July 8 - 22]:**
 
-   - Mentors sign up to participate by submitting their interest form.
-   - Program organizers actively reach out to potential mentors and past participants.
-   - New mentors are reviewed for eligibility and alignment with the program values.
-   - Mentors propose project ideas.
-   - Selected mentors attend a short onboarding session to align expectations.
-   - Selected mentors list tasks for contributors to work on during the Contribution Period.
-   - Program organizers review projects and approve or reject them.
+- Mentors sign up to participate by submitting their interest form.
+- Program organizers actively reach out to potential mentors and past participants.
+- New mentors are reviewed for eligibility and alignment with the program values.
+- Mentors propose project ideas.
+- Selected mentors attend a short onboarding session to align expectations.
+- Selected mentors list tasks for contributors to work on during the Contribution Period.
+- Program organizers review projects and approve or reject them.
  
 **Contributor Application Period — [July 24 - August 7]:**
 
-   - Contributors submit applications, selecting one or more project(s) of interest.
-   - Program organizers begin reviewing contributor applications.
-   - Applicants will receive an email confirming whether they’ve moved forward to the Contribution Period.
-   - Rejection emails are also sent to applicants who aren’t selected.
-   - Mentors’ task lists and requirements are shared with selected applicants.
+- Contributors submit applications, selecting one or more project(s) of interest.
+- Program organizers begin reviewing contributor applications.
+- Applicants will receive an email confirming whether they’ve moved forward to the Contribution Period.
+- Rejection emails are also sent to applicants who aren’t selected.
+- Mentors’ task lists and requirements are shared with selected applicants.
 
 **Contribution Period — [August 8 - August 29]:**
 
-   - Approved applicants begin contributing to the selected projects.
-   - Program organizers match applicants with mentors and share contribution guidelines.
-   - Mentors host virtual onboarding calls to introduce applicants to the project and the AsyncAPI community.
-   - Mentors help applicants set up development environments and guide their contributions.
-   - Mentors provide feedback and request improvements as needed on contributions.
-   - Applicants must submit a final project application summarizing their work by **August 25**.
-   - Rejection emails are sent to applicants not moving forward to the mentorship cohort.
-   - Contributions and final applications are due **August 25**
+- Approved applicants begin contributing to the selected projects.
+- Program organizers match applicants with mentors and share contribution guidelines.
+- Mentors host virtual onboarding calls to introduce applicants to the project and the AsyncAPI community.
+- Mentors help applicants set up development environments and guide their contributions.
+- Mentors provide feedback and request improvements as needed on contributions.
+- Applicants must submit a final project application summarizing their work by **August 25**.
+- Rejection emails are sent to applicants not moving forward to the mentorship cohort.
+- Contributions and final applications are due **August 25**
 
 **Mentee Selection Period — [August 30 - September 8 ]:**
 
-   - Mentors evaluate contributions and final applications to select their mentee.
-   - Program organizers review and approve all mentee selections.
-   - Final selections are kept confidential until the public announcement.
+- Mentors evaluate contributions and final applications to select their mentee.
+- Program organizers review and approve all mentee selections.
+- Final selections are kept confidential until the public announcement.
 
 **Program Kickoff — [September 9 - September 16 ]:**
 
-   - Public announcement of selected mentees.
-   - Mentees are added to project Slack channels and introduced to mentors and fellow cohort members.
-   - Mentors and mentees align on weekly plans, goals, and expectations.
-   - Cohort-wide welcome call and orientation hosted by program organizers.
+- Public announcement of selected mentees.
+- Mentees are added to project Slack channels and introduced to mentors and fellow cohort members.
+- Mentors and mentees align on weekly plans, goals, and expectations.
+- Cohort-wide welcome call and orientation hosted by program organizers.
 
 **Midterm Evaluations — [October 21 – 25]:**
 

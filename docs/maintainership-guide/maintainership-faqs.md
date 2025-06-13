@@ -69,8 +69,8 @@ No. To ensure focus and quality, each mentee is expected to commit to **one proj
 
 ## Can I participate as a volunteer mentee?
 
-Absolutely! We encourage volunteer participation from contributors who want to learn, gain experience, and grow with the community without receiving a stipend. Volunteer mentees receive the same mentorship and guidance as sponsored participants.
+Absolutely! We encourage volunteer participation from contributors who are eager to learn, gain experience, and grow with the community without receiving a stipend. Volunteer mentees receive the same mentorship and guidance as sponsored participants.
 
 ## Have more questions?
 
-Reach out to us on Slack in the `#mentorships` channel or check our [Maintainership Guide](#) for detailed information about timelines, expectations, and how to apply.
+Reach out to us on Slack in the `#mentorships` channel or check our [Maintainership Guide](./index.md) for detailed information about timelines, expectations, and how to apply.
