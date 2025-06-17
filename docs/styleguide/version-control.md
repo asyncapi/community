@@ -95,8 +95,4 @@ When contributing to documentation, keep the following in mind:
 
 ### Need Help?
 
-Contributing to documentation should be welcoming, not intimidating. When facing an issue, consider doing the following:
-
-* Open a GitHub issue in the [docs repository](https://github.com/asyncapi/community/issues) with your question
-* Ask in our Slack #docs channel
-* Look at recent pull requests for examples
+Need more assistance with contributing to documentation, check out the [AsyncAPI contribution flow guidelines](https://github.com/asyncapi/community/blob/master/docs/010-contribution-guidelines/contribution-flow.md).
