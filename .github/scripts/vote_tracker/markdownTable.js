@@ -1,13 +1,9 @@
-function normalizeTableData(data, keys) {
-  return data.map((item) => {
-    const normalized = {};
-    keys.forEach((key) => {
-      normalized[key] = item[key] !== undefined ? item[key] : "N/A";
-    });
-    return normalized;
-  });
-}
-
+/**
+ * Replaces voting status values with corresponding emoji icons wrapped in a tooltip span.
+ *
+ * @param {string} value - The vote status (e.g., "In favor", "Abstain", etc.)
+ * @returns {string} - HTML string with emoji and tooltip
+ */
 function renderVoteIcon(value) {
   const icons = {
     "In favor": "👍",
@@ -18,6 +14,15 @@ function renderVoteIcon(value) {
   return `<span style="position: relative; cursor: pointer;" title="${value}">${icons[value] || value}</span>`;
 }
 
+/**
+ * Generates a Markdown table header cell, optionally with a tooltip or GitHub issue link.
+ *
+ * @param {string} key - The key to display in the header
+ * @param {Object} titles - A mapping of keys to human-readable descriptions
+ * @param {string} orgName - GitHub organization name
+ * @param {string} repoName - GitHub repository name
+ * @returns {string} - Markdown/HTML string for header cell
+ */
 function renderHeaderCell(key, titles, orgName, repoName) {
   if (key.includes("$$")) {
     const [title, issueNumber] = key.split("$$");
@@ -28,12 +33,28 @@ function renderHeaderCell(key, titles, orgName, repoName) {
   return `<span style="position: relative; cursor: pointer;" title="${tooltip}">${key}</span>`;
 }
 
+/**
+ * Generates the Markdown header row and separator row for a table.
+ *
+ * @param {string[]} keys - The list of keys to include as columns
+ * @param {Object} titles - Tooltip descriptions for each key
+ * @param {string} orgName - GitHub organization name
+ * @param {string} repoName - GitHub repository name
+ * @returns {string} - Markdown header and separator rows
+ */
 function generateMarkdownHeader(keys, titles, orgName, repoName) {
   const headerRow = "| " + keys.map(key => renderHeaderCell(key, titles, orgName, repoName)).join(" | ") + " |";
   const separatorRow = "| " + keys.map(() => "---").join(" | ") + " |";
   return `${headerRow}\n${separatorRow}`;
 }
 
+/**
+ * Generates all Markdown table rows for the given data.
+ *
+ * @param {Object[]} data - Array of objects representing table rows
+ * @param {string[]} keys - Keys to render as columns
+ * @returns {string} - Markdown table body
+ */
 function generateMarkdownRows(data, keys) {
   return data.map(row => {
     const rowStr = keys.map(key => {
@@ -49,7 +70,32 @@ function generateMarkdownRows(data, keys) {
   }).join("\n");
 }
 
-export async function jsonToMarkdownTable(data, orgName, repoName) {
+/**
+ * Normalizes each object in the dataset to ensure all keys are present.
+ *
+ * @param {Object[]} data - The array of raw data objects
+ * @param {string[]} keys - The expected keys for the table
+ * @returns {Object[]} - Normalized data with missing keys set to "N/A"
+ */
+function normalizeTableData(data, keys) {
+  return data.map((item) => {
+    const normalized = {};
+    keys.forEach((key) => {
+      normalized[key] = item[key] !== undefined ? item[key] : "N/A";
+    });
+    return normalized;
+  });
+}
+
+/**
+ * Converts an array of voting records into a Markdown-formatted table.
+ *
+ * @param {Object[]} data - The voting data array (each item is a row)
+ * @param {string} orgName - GitHub organization name
+ * @param {string} repoName - GitHub repository name
+ * @returns {Promise<string>} - A Promise resolving to the complete Markdown table
+ */
+async function jsonToMarkdownTable(data, orgName, repoName) {
   if (!data || data.length === 0) {
     console.error("Data is empty or undefined");
     return "";
@@ -76,3 +122,11 @@ export async function jsonToMarkdownTable(data, orgName, repoName) {
 
   return markdown;
 }
+
+module.exports = {
+  jsonToMarkdownTable,
+  renderVoteIcon,
+  renderHeaderCell,
+  generateMarkdownHeader,
+  generateMarkdownRows,
+};
