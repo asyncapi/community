@@ -1,0 +1,75 @@
+# Recognizing Contributors & Appointing New Maintainers
+
+AsyncAPI is built on the passion, ideas, and time of its contributors. From reviewing PRs to improving documentation or running community calls, we recognize that every contribution helps us grow. This document outlines how we recognize contributors and how we appoint and onboard new maintainers across AsyncAPI projects.
+
+## Recognizing contributors
+
+Contributions come in many forms, not just code. This is how we recognize and celebrate the many ways people help move AsyncAPI forward:
+
+### What counts as a contribution?
+
+Contributions can include, but are not limited to, any of the following:
+
+- Submitting issues, PRs, or feedback
+- Reviewing and testing pull requests
+- Writing or editing documentation
+- Participating in design discussions
+- Creating community content (blogs, talks, tutorials)
+- Supporting others in Slack or GitHub issues
+- Proposing ideas that influence roadmap or architecture
+
+Basically, if it makes the project better, it counts.
+
+### Recognition process
+
+We use the [All Contributors](https://allcontributors.org/) specification to credit contributors across all AsyncAPI repositories.
+
+To recognize someone:
+
+1. Add a comment on the related issue or PR. For example:
+
+    ```
+    @all-contributors please add @username for doc, review
+    ```
+
+2. Use the appropriate contribution types (like `code`, `doc`, `review`, `ideas`, etc.).
+
+If you notice a contribution that wasn't acknowledged, speak up in Slack or GitHub. We'll gladly fix it.
+
+## Appointing new maintainers
+
+The role of a maintainer is about demonstrating ownership, consistency, and care for the project and its people. In this section, we outline how we identify potential maintainers, the nomination process, and the onboarding steps.
+
+### Selection criteria
+
+Potential maintainers typically demonstrate:
+
+- **Consistent Contributions**: Quality contributions (code, documentation, reviews, etc.) across multiple PRs/issues.
+- **Responsiveness**: Participating in discussions, resolving feedback, and collaborating with others.
+- **Initiative**: Proactively suggesting or leading improvements, not just reacting to tasks.
+- **Community Mindset**: Supporting others, offering constructive feedback, and engaging in community spaces (like Slack or streams).
+- **Technical Alignment**: Understanding of project structure, workflows, and coding/documentation standards.
+
+### Nomination process
+
+Anyone can nominate a contributor for maintainership, including self-nominations.
+
+1. **Raise a GitHub issue**: In the relevant repo, open an issue titled `Nomination for Maintainer: @username`.
+2. **Summarize contributions**: Include links to PRs, issues, reviews, or community engagement.
+3. **Gather feedback**: Allow 5–7 days for community/maintainer feedback on the nomination.
+4. **Decision**: Core maintainers or TSC will reach a consensus and respond on the issue.
+
+### Onboarding checklist
+
+When someone is approved as a new maintainer:
+
+- [ ] Invite them as a GitHub maintainer with appropriate repo permissions
+- [ ] Add them to the [MAINTAINERS.yaml](https://github.com/asyncapi/community/blob/master/MAINTAINERS.yaml) file
+- [ ] Share the Maintainer Onboarding Guide
+- [ ] Schedule a short onboarding call or Slack chat
+- [ ] Encourage joining TSC calls (if applicable)
+- [ ] Introduce them in the relevant Slack channels
+
+Maintainers are leaders. But leadership isn't about gatekeeping but rather about helping others grow while keeping the project healthy and welcoming. Let's keep celebrating contributions of all shapes and sizes, and support new maintainers as they take on more responsibility.
+
+Have a name in mind? Or would you like to nominate yourself? Head to the relevant repo and open a Maintainer Nomination issue. Let's grow together.
