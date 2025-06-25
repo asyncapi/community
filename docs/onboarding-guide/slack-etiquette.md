@@ -27,7 +27,7 @@ In our Slack workspace, most people contribute asynchronously, meaning that your
 
 * **Prefer public channels:** Public channels make information easier to find. Ask questions in relevant channels because it helps others learn from the discussion and find answers later. Additionally, it promotes a culture of knowledge sharing and collaboration.
 
-* **Use formatting to improve readability:** Break long posts into paragraphs or bullet points. Use backticks (`) for code snippets, and bold (or relevant emojis) to emphasize important points.
+* **Use formatting to improve readability:** Break long posts into paragraphs or bullet points. Use backticks (``) for code snippets, and bold (or relevant emojis) to emphasize important points.
 
 * **Respect focus and availability:** People are often balancing time zones, meetings, or other tasks. Slack queues messages when someone is in "Do Not Disturb" mode, no need to follow up right away.
 
