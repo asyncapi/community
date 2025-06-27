@@ -67,7 +67,7 @@ When writing a pull request, consider doing the following to make it easier for 
 
 Sometimes information gets outdated. Here's how it is handled at AsyncAPI :
 
-* **Not all information is not deleted** - Someone might still need that information
+* **Not all old information is deleted** - Someone might still need that information
 * **Mark it clearly** - Look for [DEPRECATED] tags on outdated content
 * **We provide alternatives** - Deprecated content includes links to current recommendations
 * **We keep it accessible** - Old versions stay available for people who need them
