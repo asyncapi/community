@@ -3,7 +3,7 @@ title: 'Adhering to Slack Etiquette'
 weight: 170
 ---
 
-Slack helps us stay connected, ask questions, collaborate on issues, and learn from one another. But like any communication tool, the way we use it affects the experience of everyone else.
+AsyncAPI Community uses Slack for real-time conversations. It helps us stay connected, ask questions, collaborate on issues, and learn from each other. Join us by following [this invitation](https://www.asyncapi.com/slack-invite/). Also, take a look at our community etiquette below to make sure you're on the right page.
 
 As our community continues to expand, it's easy to forget that small habits like saying just "hi" before your actual message or sending multiple back-to-back replies can make conversations harder to follow. 
 
