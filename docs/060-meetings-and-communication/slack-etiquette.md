@@ -62,4 +62,4 @@ For more guidance, check out:
 
 * [AsyncAPI's Code of Conduct](https://github.com/asyncapi/.github/blob/master/CODE_OF_CONDUCT.md)
 * [Slack's own etiquette tips](https://slack.com/blog/collaboration/etiquette-tips-in-slack)
-* For context on common Slack pitfalls, see this [community note on etiquette during GSoC](https://asyncapi.slack.com/archives/C02FK3YDPCL/p1741676407399789) and similar high-traffic events.
+* [Community note](https://asyncapi.slack.com/archives/C02FK3YDPCL/p1741676407399789) on etiquette with the most important points that you can check right in Slack.
