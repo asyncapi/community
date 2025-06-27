@@ -43,7 +43,7 @@ Following Slack etiquette isn't just about being polite, but also, it helps buil
 
 ### How to ask questions thoughtfully
 
-AsyncAPI Slack channels are full of mentors, contributors, and potential collaborators. Think of them as your audience—people who want to help but appreciate clarity.
+AsyncAPI Slack channels are like treasure havens full of mentors, contributors, and potential collaborators. Think of them as your audience - people who are eager to lend a hand but value clear communication.
 
 Here's how to get the most out of them:
 
