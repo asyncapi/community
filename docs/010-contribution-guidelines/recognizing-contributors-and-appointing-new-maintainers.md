@@ -61,7 +61,7 @@ Anyone can nominate a contributor for maintainership, including self-nominations
 
 ### Onboarding checklist
 
-When someone is approved as a new maintainer:
+When someone is approved as a new maintainer, ensure to do the following:
 
 - [ ] Invite them as a GitHub maintainer with appropriate repo permissions
 - [ ] Add them to the [MAINTAINERS.yaml](https://github.com/asyncapi/community/blob/master/MAINTAINERS.yaml) file
