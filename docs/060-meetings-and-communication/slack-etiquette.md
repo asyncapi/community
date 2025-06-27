@@ -33,7 +33,7 @@ Following Slack etiquette isn't just about being polite, but also, it helps buil
 
 * **Remove link previews:** When posting links, remove Slack's auto-generated previews unless they add useful context. This keeps conversations tidy.
 
-* **Know your channels:** Channels with a `N_` prefix (e.g., `1_`, `10_`) are officially maintained. Contributors and maintainers are encouraged to join them. If you create a new channel for discussion, avoid using numeric prefixes—they're reserved for official spaces.
+* **Know your channels:** Channels with a `N_` prefix (e.g., `1_`, `10_`) are officially maintained. Contributors and maintainers are always encouraged to join them. If you need a dedicated channel for some discussion, feel free to create it but don't use numeric prefixes that are only allowed for officially maintained channels.
 
 * **Respect focus and availability:** Contributors are spread across time zones and may be in meetings or deep work. If someone's in "Do Not Disturb" mode, Slack queues messages—there's no need to follow up immediately.
 
