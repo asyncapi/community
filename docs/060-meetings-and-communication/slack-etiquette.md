@@ -15,7 +15,7 @@ You don't need to be perfect. These aren't hard rules, but they're good habits t
 
 In our Slack workspace, most people contribute asynchronously, meaning your message might not be seen immediately. So, make sure it's clear, concise, and easy to respond to. Keeping threads organized, reducing noise, and respecting others' time helps create a space where everyone feels heard and informed.
 
-Following Slack etiquette isn't just about being polite, but also, it helps build trust and maintain a respectful community. Disregarding these norms may lead to warnings or, in persistent cases, removal from the community. Respect people's time, especially during high-contributor periods like GSoC. We're here to collaborate, not compete for attention.
+Following Slack etiquette isn't just about being polite, but also, it helps build trust and maintain a respectful community. Disregarding these norms may lead to warnings or, in persistent cases, removal from the community. Respect people's time, especially during high-contributor periods like [Google Summer of Code (GSoC)](https://summerofcode.withgoogle.com/how-it-works). We're here to collaborate, not compete for attention.
 
 ### Tips for better Slack collaboration
 
