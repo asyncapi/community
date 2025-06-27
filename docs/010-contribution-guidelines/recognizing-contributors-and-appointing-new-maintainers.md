@@ -34,7 +34,7 @@ To recognize someone:
 
 2. Use the appropriate contribution types (like `code`, `doc`, `review`, `ideas`, etc.).
 
-If you notice a contribution that wasn't acknowledged, speak up in Slack or GitHub. We'll gladly fix it.
+If you notice a contribution that wasn't acknowledged, speak up in [Slack ](https://asyncapi.com/slack-invite)or [GitHub](https://github.com/asyncapi). We'll gladly fix it.
 
 ## Appointing new maintainers
 
