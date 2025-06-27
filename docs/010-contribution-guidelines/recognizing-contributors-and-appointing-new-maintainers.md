@@ -65,7 +65,7 @@ When someone is approved as a new maintainer, ensure to do the following:
 
 - [ ] Invite them as a GitHub maintainer with appropriate repo permissions
 - [ ] Add them to the [MAINTAINERS.yaml](https://github.com/asyncapi/community/blob/master/MAINTAINERS.yaml) file
-- [ ] Share the Maintainer Onboarding Guide
+- [ ] Share [the Maintainer Onboarding Guide](https://www.asyncapi.com/docs/community/onboarding-guide/maintainer-guide)
 - [ ] Schedule a short onboarding call or Slack chat
 - [ ] Encourage joining TSC calls (if applicable)
 - [ ] Introduce them in the relevant Slack channels
