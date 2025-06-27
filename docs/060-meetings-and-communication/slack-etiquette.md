@@ -39,7 +39,7 @@ Following Slack etiquette isn't just about being polite, but also, it helps buil
 
 * **Mute wisely, not blindly:** If a channel is too noisy, you can mute it while still staying engaged. Use [keyword notifications](https://slack.com/help/articles/201355156-Configure-your-Slack-notifications#keyword-notifications) to get alerted when topics you care about (like `kafka`) are mentioned.
 
-* **Be mindful of visual content:** Avoid using flashing, blinking, or flickering emojis and GIFs. These can be distracting and, more seriously, can trigger photosensitive epilepsy.
+* **Be mindful of visual content:** Avoid using flashing, blinking, or flickering emojis and GIFs. These can be distracting and, worse, could trigger photosensitive epilepsy.
 
 ### How to ask questions thoughtfully
 
