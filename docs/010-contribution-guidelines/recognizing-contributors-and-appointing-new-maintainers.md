@@ -51,7 +51,7 @@ Potential maintainers typically demonstrate:
 
 Anyone can nominate a contributor for maintainership, including self-nominations.
 
-1. **Raise a GitHub issue**: In the relevant repo, open an issue titled `Nomination for Maintainer: @username`.
+1. **Raise a GitHub issue**: In the relevant repo, create a new issue titled `Nomination for Maintainer: @username`.
 2. **Summarize contributions**: Include links to PRs, issues, reviews, or community engagement.
 3. **Gather feedback**: Allow up to 7 days for community/maintainer feedback on the nomination.
 4. **Decision**: Core maintainers or TSC will reach a consensus and respond on the issue.
