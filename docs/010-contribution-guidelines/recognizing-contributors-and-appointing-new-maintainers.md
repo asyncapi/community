@@ -67,6 +67,6 @@ When someone is approved as a new maintainer, ensure to do the following:
 - [ ] Encourage joining TSC calls (if applicable)
 - [ ] Introduce them in the relevant Slack channels
 
-Maintainers are leaders. But leadership isn't about gatekeeping but rather about helping others grow while keeping the project healthy and welcoming. Let's keep celebrating contributions of all shapes and sizes, and support new maintainers as they take on more responsibility.
+Maintainers are leaders. But leadership isn't about gatekeeping but rather helping others grow while keeping the project healthy and welcoming. Let's keep celebrating contributions of all shapes and sizes, and support new maintainers as they take on more responsibility.
 
 Have a name in mind? Or would you like to nominate yourself? Head to the relevant repo and open a Maintainer Nomination issue. Let's grow together.
