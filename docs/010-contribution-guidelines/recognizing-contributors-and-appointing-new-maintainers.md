@@ -69,4 +69,4 @@ When someone is approved as a new maintainer, ensure to do the following:
 
 Maintainers are leaders. But leadership isn't about gatekeeping but rather helping others grow while keeping the project healthy and welcoming. Let's keep celebrating contributions of all shapes and sizes, and support new maintainers as they take on more responsibility.
 
-Have a name in mind? Or would you like to nominate yourself? Head to the relevant repo and open a Maintainer Nomination issue. Let's grow together.
+Have a name in mind? Or would you like to nominate yourself? Head to the relevant repo and create a new Maintainer Nomination issue. Let's grow together.
