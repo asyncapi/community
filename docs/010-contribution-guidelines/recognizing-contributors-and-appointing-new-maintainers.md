@@ -42,7 +42,7 @@ The role of a maintainer is about demonstrating ownership, consistency, and care
 Potential maintainers typically demonstrate:
 
 - **Consistent quality contributions** across multiple PRs/issues.
-- **Responsiveness**: Participating in discussions, resolving feedback, and collaborating with others.
+- **Responsiveness**: Participating in discussions, resolving feedback, and collaborating.
 - **Initiative**: Proactively suggesting or leading improvements, not just reacting to tasks.
 - **Community Mindset**: Supporting others, offering constructive feedback, and engaging in community spaces (like Slack or streams).
 - **Technical Alignment**: Understanding of project structure, workflows, and coding/documentation standards.
