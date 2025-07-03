@@ -4,7 +4,6 @@ AsyncAPI thrives on the passion, ideas, and time of its contributors. From revie
 
 ## Recognizing contributors
 
-Contributions come in many forms, not just code. This is how we recognize and celebrate the many ways people help move AsyncAPI forward.
 
 Contributions can include, but are not limited to, any of the following:
 
