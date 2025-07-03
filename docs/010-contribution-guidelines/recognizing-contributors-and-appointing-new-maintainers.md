@@ -15,7 +15,6 @@ Contributions can include, but are not limited to, any of the following:
 - Supporting others in Slack or GitHub issues
 - Proposing ideas that influence roadmap or architecture
 
-Basically, if it makes the project better, it counts.
 
 ### Recognition process
 
