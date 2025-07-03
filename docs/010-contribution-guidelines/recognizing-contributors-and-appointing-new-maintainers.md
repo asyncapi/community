@@ -11,7 +11,7 @@ Contributions can include, but are not limited to, any of the following:
 - Reviewing and testing pull requests
 - Writing or editing documentation
 - Participating in design discussions
-- Creating community content (blogs, talks, tutorials)
+- Creating community content (blogs, talks, onboardings)
 - Supporting others in Slack or GitHub issues
 - Proposing ideas that influence roadmap or architecture
 
