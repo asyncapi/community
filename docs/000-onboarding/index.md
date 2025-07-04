@@ -1,6 +1,6 @@
 ---
-title: 'Introduction'
-weight: 10
+title: Introduction
+weight: 5
 ---
 ## Technical writer onboarding guide
 

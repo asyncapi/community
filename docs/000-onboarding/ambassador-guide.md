@@ -1,6 +1,6 @@
 ---
 title: Onboarding Guide for AsyncAPI Ambassadors
-weight: 110
+weight: 50
 ---
 
 
@@ -38,4 +38,4 @@ Examples:
 - Our sincere gratitude and respect for your contributions!
 
 ### Additional resources
-[AsyncAPI Ambassador Program](https://github.com/asyncapi/community/blob/master/AMBASSADOR_ORGANIZATION.md)
+[AsyncAPI Ambassador Program](../050-mentorship-program/ambassador-program/AMBASSADOR_PROGRAM.md)

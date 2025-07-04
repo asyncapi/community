@@ -1,7 +1,7 @@
 ---
-title: Upholding the Code of Conduct for new contributors
+title: Upholding the Code of Conduct
 description: This onboarding guide outlines how to uphold the Code of Conduct document for new contributors
-weight: 160
+weight: 70
 ---
 
 # Contributor Guide to Upholding the Code of Conduct

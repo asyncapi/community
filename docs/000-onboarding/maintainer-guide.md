@@ -1,6 +1,6 @@
 ---
 title: Onboarding Guide for AsyncAPI Maintainers
-weight: 100
+weight: 40
 ---
 
 
