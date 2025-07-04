@@ -1,3 +1,8 @@
+---
+title: Become Maintainer in Existing Project
+weight: 140
+---
+
 ### Become Maintainer in Existing Project
 
 We know you are nervous about making your first contribution. In this section, we guide you on the steps towards becoming a TSC member:

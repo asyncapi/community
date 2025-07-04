@@ -1,3 +1,8 @@
+---
+title: Git Workflow
+weight: 50
+---
+
 # Git Workflow
 
 This document is the best practice guide that contains the rules to follow when working with AsyncAPI repositories.

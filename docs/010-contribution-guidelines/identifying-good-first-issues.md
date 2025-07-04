@@ -1,7 +1,7 @@
 ---
 title: Identifying Good First Issues
 description: A guide to help new contributors find and work on beginner-friendly issues in AsyncAPI projects
-weight: 50
+weight: 40
 ---
 
 # Identifying Good First Issues

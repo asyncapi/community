@@ -1,6 +1,6 @@
 ---
-title: Recommended tools and setup
-weight: 60
+title: Recommended Tools and Setup
+weight: 30
 ---
 
 These are the recommended tools for contributors, as well as instructions for setting up the AsyncAPI website in your local environment.

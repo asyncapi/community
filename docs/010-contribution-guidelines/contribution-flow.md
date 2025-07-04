@@ -1,6 +1,6 @@
 ---
-title: Simple contribution flow for contributors
-weight: 130
+title: Simple Contribution Flow
+weight: 20
 ---
 
 # Simple Contribution Flow

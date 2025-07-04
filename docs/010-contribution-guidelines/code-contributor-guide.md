@@ -1,7 +1,7 @@
 ---
 title: AsyncAPI Code Contributor Guide
 description: A guide for new contributors looking to contribute code to the AsyncAPI project.
-weight: 90
+weight: 70
 ---
 # AsyncAPI Code Contributor Guide  
 
