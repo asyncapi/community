@@ -1,6 +1,6 @@
 ---
 title: 'AsyncAPI docs community'
-weight: 50
+weight: 20
 ---
 
 Join OPEN docs community meetings via Zoom, a regular space for docs contributors to meet and help each other.
