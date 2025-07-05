@@ -1,3 +1,8 @@
+---
+title: AsyncAPI Mentorship Program
+weight: 30
+---
+
 # AsyncAPI Mentorship Program
 
 The AsyncAPI Mentorship makes it easy to sponsor and help train the next generation of open-source developers by serving the community's key needs. Invest in building a stronger, more diverse community of qualified contributors. 

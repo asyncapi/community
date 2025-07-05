@@ -1,3 +1,8 @@
+---
+title: Winter of Code 2023
+weight: 150
+---
+
 # Status: In Progress
 > Program participation annoucement can be found here https://github.com/orgs/asyncapi/discussions/556
 

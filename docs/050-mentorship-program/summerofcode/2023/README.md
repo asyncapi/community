@@ -1,3 +1,8 @@
+---
+title: Google Summer of Code 2023
+weight: 130
+---
+
 # Status: Completed 
 The summary of the program can be found at https://github.com/orgs/asyncapi/discussions/997
 

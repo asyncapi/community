@@ -1,3 +1,8 @@
+---
+title: GSoC Mentor's Guideline
+weight: 110
+---
+
 # GSoC Mentor's Guideline
 
 ##### Introduction

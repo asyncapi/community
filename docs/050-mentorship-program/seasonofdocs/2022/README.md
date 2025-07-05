@@ -1,3 +1,8 @@
+---
+title: Season of Docs 2022
+weight: 70
+---
+
 # Status: Completed
 
 # Season of Docs

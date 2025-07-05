@@ -1,3 +1,8 @@
+---
+title: Google Summer of Code 2021
+weight: 120
+---
+
 # Status: Completed
 
 ## Timeline
