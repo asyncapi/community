@@ -1,5 +1,5 @@
 ---
-title: 'Introduction'
+title: Introduction
 weight: 5
 ---
 ## AsyncAPI Style Guide

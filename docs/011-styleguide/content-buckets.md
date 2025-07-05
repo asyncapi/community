@@ -1,7 +1,7 @@
 ---
 title: Content Buckets
 Description: This style guide explains how and why we use content buckets in documentation.
-weight: 30
+weight: 40
 ---
 
 # Content Buckets

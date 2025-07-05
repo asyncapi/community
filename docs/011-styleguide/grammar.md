@@ -1,7 +1,7 @@
 ---
 title: Grammar
 description: The style guide gives advice on how to implement grammar when creating tutorials and other forms of content for AsyncAPI.
-weight: 100
+weight: 70
 ---
 
 ## Abbreviations and acronyms
