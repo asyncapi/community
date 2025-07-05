@@ -1,3 +1,8 @@
+---
+title: Working Groups
+weight: 70
+---
+
 ### Definition of a Working Group
 
 A Working Group is a group of people in our community who share a common interest beyond GitHub repositories.

@@ -1,4 +1,8 @@
 ---
+title: CHARTER
+weight: 10
+---
+
 <p align="center"><strong>Technical Charter (the “Charter”)</strong></p>
 <p align="center">
   for</br>
