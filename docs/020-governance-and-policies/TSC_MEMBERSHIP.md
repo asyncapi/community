@@ -40,7 +40,7 @@ The concept of the TSC was formed when AsyncAPI joined the Linux Foundation in 2
 The TSC is the core of the AsyncAPI Initiative's governance model. [Read the Finding a Good Open Governance Model for AsyncAPI article](https://www.asyncapi.com/blog/governance-motivation) to learn why we chose it.
 
 ## Governance principles
-* The Executive Director and the TSC help manage the project. The Executive Director role is temporary and will eventually disappear after the conclusion of the Startup Period. See the [Technical Steering Committee section](https://github.com/asyncapi/community/blob/master/CHARTER.md#2-technical-steering-committee) in the CHARTER for more information.
+* The Executive Director and the TSC help manage the project. The Executive Director role is temporary and will eventually disappear after the conclusion of the Startup Period. See the [Technical Steering Committee section](CHARTER.md#2-technical-steering-committee) in the CHARTER for more information.
 * Membership is unlimited. As long as you maintain a repository, you'll remain a TSC member.
 * Only 1/4 of the company can participate. For example, if there are 20 TSC members, only 5 can be from the same company to prevent a majority vote based on active contributions.
 * Radical transparency:
@@ -55,7 +55,7 @@ Check [this article](https://www.asyncapi.com/blog/radical-transparency) to lear
 
 TSC members have two primary duties:
 1. Regularly participate in TSC discussions and voting.
-2. Always behave with respect to [AsyncAPI Code of Conduct](https://github.com/asyncapi/community/blob/master/CODE_OF_CONDUCT.md).
+2. Always behave with respect to [AsyncAPI Code of Conduct](https://github.com/asyncapi/.github/blob/master/CODE_OF_CONDUCT.md).
 
 As TSC doesn't override maintainers' decisions, they are involved in topics affecting the entire organization.
 
@@ -90,7 +90,7 @@ As a TSC member, you will enjoy the following benefits:
 * Involvement in the voting process on topics concerning the entire Initiative
 * Being a part of key decision-making for the Initiative. Especially related to finance.
 * A unique experience in shaping the initiative's future and open-source development.
-* TSC is the most trusted group in the community and it is the first group of people to choose from when forming [Working Groups](https://github.com/asyncapi/community/blob/master/WORKING_GROUPS.md).
+* TSC is the most trusted group in the community and it is the first group of people to choose from when forming [Working Groups](../../WORKING_GROUPS.yaml).
 
 ## How to become a TSC member
 To become a TSC member, you must be a project maintainer within the AsyncAPI Initiative.
@@ -98,9 +98,9 @@ To become a TSC member, you must be a project maintainer within the AsyncAPI Ini
 You can become a maintainer by either:
 1. Initiating a new repository or project and becoming its maintainer.
 2. Donating to an existing repository or project and continuing to maintain it.
-3. Supporting and committing to existing projects and being invited by other maintainers to join them as a maintainer. For more information, refer to [Become a maintainer in an existing project](https://github.com/asyncapi/community/blob/master/Become-maintainer-in-existing-project.md).
+3. Supporting and committing to existing projects and being invited by other maintainers to join them as a maintainer. For more information, refer to [Become a maintainer in an existing project](../010-contribution-guidelines/Become-maintainer-in-existing-project.md).
 
-There's no invitation flow to join the TSC; it's something that you are allowed to do as a maintainer by default, as described in the [charter signed with the Linux Foundation when AsyncAPI joined the foundation](https://github.com/asyncapi/community/blob/master/CHARTER.md). Instead, there is an automation flow in place that adds a new maintainer to the [`community/MAINTAINERS.yaml`](https://github.com/asyncapi/community/blob/master/MAINTAINERS.yaml) list every time the [CODEOWNERS][code-owners] file is updated in any project. And the only thing you need to do is to find your name in the `MAINTAINERS.yaml` list and change `isTscMember` from `false` to `true` along with updating other missing information like, for example, your `slack` ID.
+There's no invitation flow to join the TSC; it's something that you are allowed to do as a maintainer by default, as described in the [charter signed with the Linux Foundation when AsyncAPI joined the foundation](CHARTER.md). Instead, there is an automation flow in place that adds a new maintainer to the [`community/MAINTAINERS.yaml`](../../MAINTAINERS.yaml) list every time the [CODEOWNERS][code-owners] file is updated in any project. And the only thing you need to do is to find your name in the `MAINTAINERS.yaml` list and change `isTscMember` from `false` to `true` along with updating other missing information like, for example, your `slack` ID.
 
 Check the current list of [TSC members](https://www.asyncapi.com/community/tsc) on the AsyncAPI website.
 

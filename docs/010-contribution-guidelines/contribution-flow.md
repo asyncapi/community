@@ -20,18 +20,18 @@ At AsyncAPI, we value **quality over quantity**. This guide will help you make m
 ### Before Making a Contribution
 - Read the [onboarding contributor guide](https://www.asyncapi.com/docs/community/onboarding-guide).
 - If you are contributing to the community repository, review the [documentation onboarding checklist](https://www.asyncapi.com/docs/community/onboarding-guide/docs-onboarding-checklist). 
-- For other repositories, refer to the [general contribution guidelines](https://github.com/asyncapi/community/blob/master/CONTRIBUTING.md).
+- For other repositories, refer to the [general contribution guidelines](../../CONTRIBUTING.md).
 - Look through existing issues and pull requests to understand the repository better.
 - Check the [general roadmap](https://www.asyncapi.com/roadmap).
 
 ### Steps to making a good contribution
-1. Set up your workflow environment using the [git workflow guide](/asyncapi/community/blob/master/git-workflow.md).
+1. Set up your workflow environment using the [git workflow guide](git-workflow.md).
 2. Search for [good first issues](https://github.com/issues?page=1&q=is%3Aopen+org%3Aasyncapi+sort%3Aupdated-desc+label%3A%22good+first+issue%22). 
 3. When you find one, comment on your interest and share the approach to solving the issue (please don't ask to be assigned, as it could be flagged as spam).
 4. If you noticed a bug, typo, or needed improvement, feel free to create an issue.
 5. **Make a PR only after a maintainer assigned the issue to you or asks you to work on it** even if you created the issue yourself.
-6. Follow the [conventional commits guide](https://github.com/asyncapi/community/blob/master/docs/010-contribution-guidelines/conventional-commits.md) to write a good PR title.
-7. Follow the [git workflow document](/asyncapi/community/blob/master/git-workflow.md) when working on your changes and making a PR.
+6. Follow the [conventional commits guide](conventional-commits.md) to write a good PR title.
+7. Follow the [git workflow document](git-workflow.md) when working on your changes and making a PR.
 8. After making a PR, patiently wait for reviews.
 9. Make sure all your PR checks pass (turn green) to speed up the merging process.  
 10. If your PR hasn’t been reviewed after **a week and a half**, you can gently remind a maintainer on Slack or GitHub. Delays can happen for various reasons, but no one is ignoring you! 🙏🏼 .
@@ -46,7 +46,7 @@ These rules are here to help you succeed and to support the maintainers and comm
 - **Be patient**. Maintainers are volunteers with their jobs, families, and responsibilities. It may take time for your PR or issue to be reviewed.
 - **Use the right Slack channels**. If you're unsure where to post, ask politely or take a moment to check.
 - **Keep Slack tidy**. Use threads for conversations, avoid tagging `@maintainers` unless truly necessary, and don’t spam.
--  Follow our [Slack etiquette](https://github.com/asyncapi/community/blob/master/slack-etiquette.md) and [Code of Conduct](https://github.com/asyncapi/.github/blob/master/CODE_OF_CONDUCT.md).
+-  Follow our [Slack etiquette](../060-meetings-and-communication/slack-etiquette.md) and [Code of Conduct](https://github.com/asyncapi/.github/blob/master/CODE_OF_CONDUCT.md).
 - **Respect others**. Treat everyone with kindness and patience. We are all here to learn and grow together.
 
 ### ❌ What You Should Never Do

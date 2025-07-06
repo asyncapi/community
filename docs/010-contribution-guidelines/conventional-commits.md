@@ -42,7 +42,7 @@ The following are some of the most commonly used commit types:
 
 To maintain a clear and structured commit history, all PR titles must follow the Conventional Commits format. This ensures that commit messages and PRs are semantically meaningful and easy to understand.  
 
-A PR title that does not follow this format will be rejected by our [Linting bot](https://github.com/asyncapi/community/blob/master/.github/workflows/lint-pr-title.yml), preventing the PR from being merged.  
+A PR title that does not follow this format will be rejected by our [Linting bot](../../.github/workflows/lint-pr-title.yml), preventing the PR from being merged.  
 
 Therefore, you can use the following examples to guide you:
 
