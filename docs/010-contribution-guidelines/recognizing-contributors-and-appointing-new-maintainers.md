@@ -1,9 +1,11 @@
-# Recognizing Contributors & Appointing New Maintainers
+---
+title: 'Recognizing Contributors & Appointing New Maintainers'
+weight: 170
+---
 
 AsyncAPI thrives on the passion, ideas, and time of its contributors. From reviewing PRs to improving documentation and hosting community calls, every contribution boosts our growth. This document outlines our process for recognizing contributors and appointing new maintainers across AsyncAPI projects.
 
 ## Recognizing contributors
-
 
 Contributions can include, but are not limited to, any of the following:
 
@@ -14,7 +16,6 @@ Contributions can include, but are not limited to, any of the following:
 - Creating community content (blogs, talks, onboardings)
 - Supporting others in Slack or GitHub issues
 - Proposing ideas that influence roadmap or architecture
-
 
 ### Recognition process
 
