@@ -93,6 +93,7 @@
   availableForHire: false
   linkedin: fmvilas
   isTscMember: true
+  isBoardMember: true
   repos:
     - spec
     - spec-json-schemas
@@ -497,6 +498,7 @@
   availableForHire: false
   company: AsyncAPI Initiative
   isTscMember: true
+  isBoardMember: true
   repos:
     - website
     - conference-website
@@ -691,6 +693,7 @@
   company: Kong
   country: 🇲🇽
   isTscMember: true
+  isBoardMember: true
   contributions:
     - type: presentation
       title: Speed-Up Kafka Delivery with AsyncAPI & Microcks
