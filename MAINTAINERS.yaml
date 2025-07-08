@@ -122,6 +122,7 @@
   availableForHire: false
   linkedin: fmvilas
   isTscMember: true
+  isBoardMember: true
   repos:
     - spec
     - spec-json-schemas
@@ -369,7 +370,8 @@
   slack: U01SGCZMJKW
   twitter: souvik_ns
   linkedin: souvik-de-a2b941169
-  availableForHire: true
+  company: xane.ai
+  availableForHire: false
   isTscMember: true
   repos:
     - cli
@@ -385,7 +387,6 @@
   isTscMember: true
   repos:
     - website
-    - community
   githubID: 19964402
 - name: David Pereira
   github: BOLT04
@@ -559,6 +560,7 @@
   availableForHire: false
   company: AsyncAPI Initiative
   isTscMember: true
+  isBoardMember: true
   repos:
     - website
     - conference-website
@@ -781,3 +783,17 @@
     - website
     - conference-website
   githubID: 90895835
+- name: Antonio
+  github: bandantonio
+  isTscMember: false
+  repos:
+    - community
+  githubID: 16765690
+- name: Christine Belzie
+  github: CBID2
+  twitter: CodesChrissy
+  availableForHire: true
+  isTscMember: false
+  repos:
+    - community
+  githubID: 105683440
