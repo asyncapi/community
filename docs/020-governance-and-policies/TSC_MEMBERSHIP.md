@@ -3,7 +3,7 @@ title: Become a Technical Steering Committee (TSC) Member
 weight: 30
 ---
 
-# Become a Technical Steering Committee (TSC) Member 
+# Become a Member of the Technical Steering Committee (TSC)
 
 This article walks you through the journey of becoming a member of the AsyncAPI Technical Steering Committee (TSC). This journey includes:
 * Actively contributing to the AsyncAPI Initiative projects

@@ -5,7 +5,7 @@ weight: 20
 
 ## Governance Board (GB) members
 
-You can determine who the current GB members are by filtering the [MAINTAINERS.yaml](../../MAINTAINERS.yaml) and the [AMBASSADORS_MEMBERS.yaml](../../AMBASSADORS_MEMBERS.yaml) with the `isBoardMember` set to `true`. We also transparently list all the GB members in [AsyncAPI Website](`https://asyncapi.com/community/board`)
+You can determine who the current GB members are by filtering the [MAINTAINERS.yaml](../../MAINTAINERS.yaml) and the [AMBASSADORS_MEMBERS.yaml](../../AMBASSADORS_MEMBERS.yaml) with the `isBoardMember` set to `true`. We also transparently list all the GB members in [AsyncAPI Website](https://asyncapi.com/community/board)
 
 To become a GB member, you need to be a member of the Technical Steering Committee (TSC). To become a member of TSC, you need to be either an Ambassador or a Maintainer. 
 
@@ -65,7 +65,7 @@ Board members will appoint a chairperson during the first board meeting followin
 
 ## Technical Steering Committee (TSC) members
 
-You can determine who is a TSC member and has the right to vote from [MAINTAINERS.yaml](../../MAINTAINERS.yaml) and [AMBASSADORS_MEMBERS.yaml](../../AMBASSADORS_MEMBERS.yaml), `isTSCMember` properties. We also transparently list all the TSC members in [AsyncAPI Website](`https://asyncapi.com/community/tsc`).
+You can determine who is a TSC member and has the right to vote from [MAINTAINERS.yaml](../../MAINTAINERS.yaml) and [AMBASSADORS_MEMBERS.yaml](../../AMBASSADORS_MEMBERS.yaml), `isTSCMember` properties. We also transparently list all the TSC members in [AsyncAPI Website](https://asyncapi.com/community/tsc).
 
 Any maintainer and any ambassador can change their status by editing `isTSCMember` properties.
 

@@ -1,5 +1,5 @@
 ---
-title: Community: Vision, Strategy, Goals for 2025
+title: "Community: Vision, Strategy, Goals for 2025"
 weight: 10
 ---
 

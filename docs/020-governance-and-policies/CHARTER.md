@@ -1,5 +1,5 @@
 ---
-title: CHARTER
+title: Charter
 weight: 10
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Content Buckets
-Description: This style guide explains how and why we use content buckets in documentation.
+description: This style guide explains how and why we use content buckets in documentation.
 weight: 40
 ---
 
