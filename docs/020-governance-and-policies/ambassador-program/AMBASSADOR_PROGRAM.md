@@ -1,6 +1,6 @@
 ---
 title: AsyncAPI Ambassador Program
-weight: 20
+weight: 100
 ---
 
 This document covers the organizational and operational aspects of the AsyncAPI Ambassador Program.
