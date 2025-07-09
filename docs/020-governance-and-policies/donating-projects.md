@@ -1,6 +1,6 @@
 ---
 title: Donating Projects
-weight: 80
+weight: 90
 ---
 
 ## Donating Your Project

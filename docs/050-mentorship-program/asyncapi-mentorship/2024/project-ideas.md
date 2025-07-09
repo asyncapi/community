@@ -1,3 +1,8 @@
+---
+title: AsyncAPI Mentorship 2024 Project Ideas
+weight: 80
+---
+
 # Projects ideas
 
 ### Ideas list 

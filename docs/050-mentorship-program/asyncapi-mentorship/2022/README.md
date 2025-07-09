@@ -1,6 +1,6 @@
 ---
 title: AsyncAPI Mentorship Program 2022
-weight: 40
+weight: 30
 ---
 
 # Status: Completed

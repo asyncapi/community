@@ -1,6 +1,6 @@
 ---
 title: GSoC Application Template
-weight: 100
+weight: 140
 ---
 
 # GSoC Application Template

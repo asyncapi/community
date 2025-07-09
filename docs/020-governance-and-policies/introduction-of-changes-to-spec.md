@@ -1,6 +1,6 @@
 ---
 title: How Changes in the Spec Are Introduced
-weight: 90
+weight: 70
 ---
 
 ## How changes in the spec are introduced

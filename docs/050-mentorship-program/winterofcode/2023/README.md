@@ -1,6 +1,6 @@
 ---
 title: Winter of Code 2023
-weight: 150
+weight: 200
 ---
 
 # Status: In Progress

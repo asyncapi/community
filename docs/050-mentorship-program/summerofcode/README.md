@@ -1,6 +1,6 @@
 ---
 title: Google Summer of Code - Getting Started
-weight: 90
+weight: 120
 ---
 
 # Google Summer of Code - Getting Started

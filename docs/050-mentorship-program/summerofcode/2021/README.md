@@ -1,6 +1,6 @@
 ---
 title: Google Summer of Code 2021
-weight: 120
+weight: 150
 ---
 
 # Status: Completed

@@ -1,6 +1,6 @@
 ---
 title: AsyncAPI Mentorship Program
-weight: 30
+weight: 20
 ---
 
 # AsyncAPI Mentorship Program

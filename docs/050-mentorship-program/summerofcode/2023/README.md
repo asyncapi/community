@@ -1,6 +1,6 @@
 ---
 title: Google Summer of Code 2023
-weight: 130
+weight: 160
 ---
 
 # Status: Completed 

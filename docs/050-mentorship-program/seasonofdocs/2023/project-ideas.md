@@ -1,6 +1,6 @@
 ---
 title: 2023 GSoD Accepted Projects
-weight: 100
+weight: 110
 ---
 
 # 2023 GSoD Accepted Projects 

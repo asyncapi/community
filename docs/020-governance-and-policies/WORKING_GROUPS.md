@@ -1,6 +1,6 @@
 ---
 title: Working Groups
-weight: 70
+weight: 60
 ---
 
 ### Definition of a Working Group

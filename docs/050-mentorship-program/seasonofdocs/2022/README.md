@@ -1,6 +1,6 @@
 ---
 title: Season of Docs 2022
-weight: 70
+weight: 90
 ---
 
 # Status: Completed

@@ -1,6 +1,6 @@
 ---
 title: Become a Technical Steering Committee (TSC) Member
-weight: 40
+weight: 30
 ---
 
 # Become a Technical Steering Committee (TSC) Member 

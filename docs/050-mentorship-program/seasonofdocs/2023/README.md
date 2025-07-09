@@ -1,6 +1,6 @@
 ---
 title: Season of Docs 2023
-weight: 80
+weight: 100
 ---
 
 # Status: Accepted and GSoD Program has Started
