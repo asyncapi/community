@@ -1,4 +1,7 @@
-## AsyncAPI Webinar Planning Template
+---
+title: "AsyncAPI Webinar Planning Template"
+weight: "50"
+---
 
 ### Basic Info
 
