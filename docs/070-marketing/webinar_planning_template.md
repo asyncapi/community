@@ -13,9 +13,9 @@
 
 - Session Goals (What should attendees leave with?):
 - Key Talking Points / Agenda:
-    - Point 1:
-    - Point 2:
-    - Point 3:
+  - Point 1:
+  - Point 2:
+  - Point 3:
 - Target Audience: (beginner, intermediate, advanced, etc.)
 
 ### Promo Info

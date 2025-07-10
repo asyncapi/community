@@ -80,7 +80,7 @@ A short async or live check-in to confirm everything is ready:
 
 ## Format Guidelines for Host & Guest
 
-Before the live session, hosts and guests should schedule a short planning call and fill out the [webinar planning template](https://docs.google.com/document/d/1uiEB3Fq2XE7rbnYqlgMr4_b1bvi4dMQj95wln3z3-qg/edit?tab=t.0) to align on goals, presentation flow, and audience engagement strategies.
+Before the live session, hosts and guests should schedule a short planning call and fill out the [webinar planning template](/Users/user/Desktop/AsyncAPIWebinar/community/docs/070-marketing/webinar_planning_template.md) to align on goals, presentation flow, and audience engagement strategies.
 
 ### For Hosts
 
