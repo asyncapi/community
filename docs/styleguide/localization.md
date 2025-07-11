@@ -51,7 +51,7 @@ When adapting AsyncAPI's content to a specific language and its corresponding au
 
 ## Additional Resources
 
-For more tips on contributing to the glossary, consider consulting the following sources:
+For more tips on internationalizing and localizing AsyncAPI's documentation, consider consulting the following sources:
 
 * [Internationalizing Technical Content](https://www.hireawriter.us/technical-content/internationalizing-technical-content)
 * [Best Practices for Writing Global-Ready Content for Localization](https://phrase.com/blog/posts/writing-10-best-practice-tips-on-how-to-write-global-ready-content-for-localization/)
