@@ -4,10 +4,9 @@ description: A guide to translating AsyncAPI's tutorials, guides, and other cont
 weight: 170
 ---
 
-## Internalization and Localization(i18n)
+## Internationalization and Localization
 
-As AsyncAPI gains more users worldwide, it has become crucial to create tutorials, guides, and other forms of documentation that is accessible and adaptable to different cultural contexts. Internalization (often abbreviated as i18n) is the process of designing and preparing content, software, or documentation so that it can be easily adapted for different languages and cultural contexts. Localization (l10n), on the other hand, is the actual process of adapting that content or software for a specific language, region, or culture. This includes translating text, adjusting images, formatting dates and numbers, and making other changes to suit local preferences. This guide provides recommendations and tips to help contributors achieve this goal.
-
+As AsyncAPI gains more users worldwide, it becomes crucial to create tutorials, guides, and other documentation that are accessible and adaptable to different cultures. Internationalization (i18n) is the process of designing and preparing content so it can be easily adapted to multiple languages and locales. Localization (l10n), on the other hand, is the actual process of adapting that content or software for a specific language, region, or culture. This guide provides recommendations and tips to help contributors achieve this goal.
 ## Key Principles of Internationalization
 
 When designing and AsyncAPI's documentation adaptable to different languages, consider applying the following principles:
