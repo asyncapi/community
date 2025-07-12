@@ -7,6 +7,49 @@ weight: 140
 # Styling Guidelines
 
 ## CSS Code Style
+
+### CSS Declarations
+A declaration is a single CSS instruction composed of a property-value pair. It is the core function of CSS.
+A property is an identifier for the feature to be styled (e.g., `color`). A value is a description of how the feature should be handled (e.g., `red`).
+
+The property and value are separated by a colon (`:`).
+
+**Example** `color: red;`
+
+### CSS Declaration Blocks
+A declaration block is a group of one or more declarations enclosed in curly braces (`{ }`).
+Declarations within a block are separated by semicolons (`;`).
+
+**Example**
+```css
+{
+  display: block;
+  background-color: green;
+  color: red;
+}
+```
+
+### CSS Rulesets
+A ruleset is the most common building block in a stylesheet. It associates a set of styling instructions with the elements they should apply to. A ruleset consists of two parts namely a selector and a declaration block. 
+A selector is a condition that "selects" which HTML element(s) to style (e.g., `.foo`, `h1`).
+A declaration block contains the styles to be applied to the selected elements.
+
+**Example of a complete ruleset**
+```css
+/* This entire structure is a ruleset */
+.foo { /* This is the selector */
+  /* This is the declaration block */
+  display: block;
+  color: red;
+  /* End of the declaration block */
+}
+```
+
+### CSS Statements
+A statement is a complete building block in a stylesheet. There are two primary kinds of statements namely the rulesets(already defined above) and at-rules.
+
+At-rules are used to convey metadata, import external resources, or apply conditional logic. They always begin with an at sign (`@`). Common examples include `@import`, `@media`, and `@font-face`.
+
 ### CSS Naming Convention
 To properly style your css code, use the [BEM(Block, Element, Modifier) methodology](https://getbem.com/introduction/) to name CSS classes. This approach helps to create clear, self-documenting class names. 
 - **Block**: A standalone component that is meaningful on its own. (`.card`, `.nav`, `.form`)
@@ -89,9 +132,9 @@ Use asterisks for italics (`*italic*`) and bold (`**bold**`). You can also use u
 ### Links
 Use square brackets to describe links and a parenthesis to insert the actual links. Always use descriptive link text. Avoid phrases like "click here."
 
-   - **✅ Good:** See our [Contribution Guide](/docs/community/contribution-guide) for more.
+- **✅ Good:** See our [Contribution Guide](/docs/community/contribution-guide) for more.
 
-   - **❌ Bad:** For more info, [click here](https://.../contribution-guide).
+- **❌ Bad:** For more info, [click here](https://.../contribution-guide).
 
 ### Code Blocks
 Use backticks for inline code (`const foo = 'bar';`). For code blocks, use triple backticks and specify the language for syntax highlighting.
@@ -134,24 +177,7 @@ Use Markdown's pipe table format for simplicity. Ensure columns are properly ali
 | Docs Overhaul  | Blocked     | @team/docs  |
 
 
-## Images
-They should be clear, optimized, and accessible.
-
-- **Format:**
-
-  - **SVG:** For logos, icons, and simple diagrams.
-
-  - **PNG:** For screenshots or images requiring transparency.
-
-  - **JPEG:** For photographs. Optimize for the web to balance quality and file size.
-
-- **Alt Text:** All `<img>` tags must have a descriptive alt attribute for screen readers. If an image is purely decorative, use `alt=""`. In markdown, use the exclamation mark, square brackets and parenthesis combo (`![]()`) to add images, ensure to use a decriptive alt text such as `![a blue bunny](bluebunny.png)`.
-
-- **Sizing:** Images should not exceed a maximum width of 800px to avoid overwhelming the content layout.
-
-- **Captions:** Use a small, centered text below an image for captions when necessary.
-
-## Diagrams
+### Diagrams
 They are crucial for explaining complex architectures, so consistency is key.
 
 - **Tool:** Whenever possible, use **Mermaid.js** to create diagrams directly within Markdown. This keeps them version-controlled and easy to update.
@@ -173,8 +199,26 @@ graph TD;
 ```
 
 
+## Images
+They should be clear, optimized, and accessible.
+
+- **Format:**
+
+  - **SVG:** For logos, icons, and simple diagrams.
+
+  - **PNG:** For screenshots or images requiring transparency.
+
+  - **JPEG:** For photographs. Optimize for the web to balance quality and file size.
+
+- **Alt Text:** All `<img>` tags must have a descriptive alt attribute for screen readers. If an image is purely decorative, use `alt=""`. In markdown, use the exclamation mark, square brackets and parenthesis combo (`![]()`) to add images, ensure to use a decriptive alt text such as `![a blue bunny](bluebunny.png)`.
+
+- **Sizing:** Images should not exceed a maximum width of 800px to avoid overwhelming the content layout.
+
+- **Captions:** Use a small, centered text below an image for captions when necessary.
+
 
 ## Additional Resources
+- [CSS Syntax](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_syntax/Syntax)
 - [BEM introduction](https://getbem.com/introduction/)
 - [Material Design – Typography](https://m2.material.io/design/typography/understanding-typography.html)
 - [Markdown Guide](https://www.markdownguide.org/basic-syntax/)
