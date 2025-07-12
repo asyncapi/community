@@ -120,6 +120,7 @@
     company: "Kong"
     country: "🇲🇽"
     isTscMember: true
+    isBoardMember: true
     contributions:
       - type: "presentation"
         title: "Speed-Up Kafka Delivery with AsyncAPI & Microcks"
