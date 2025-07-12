@@ -1,3 +1,8 @@
+---
+title: "Community: Vision, Strategy, Goals for 2025"
+weight: 10
+---
+
 ## AsyncAPI Community Building Goals and Objectives for 2025
 [Carrying on from Thulie](https://github.com/orgs/asyncapi/discussions/948), it's time to discuss the goals for building and maintaining the AsyncAPI community in 2025. These goals will include planned objectives that we will define together to sustain the AsyncAPI Community. The Community Manager will play an important role in ensuring that our goals are addressed and that each program or initiative has a dedicated person responsible.
 
@@ -68,7 +73,7 @@ We remain committed to supporting the following initiatives as they promote comm
 - [Maintainership Program](https://www.asyncapi.com/blog/beyond-boundaries) - Ace
 - [AsyncAPI Ambassador Program](https://www.asyncapi.com/community/ambassadors) - Thulie
 - Student Ambassador Program  - Bami
-- [Working Groups](https://github.com/asyncapi/community/blob/master/WORKING_GROUPS.md) - Bami
+- [Working Groups](../../WORKING_GROUPS.yaml) - Bami
 
 
 #### 1. AsyncAPI Conf 2025

@@ -1,3 +1,8 @@
+---
+title: Google Summer of Code 2024
+weight: 170
+---
+
 # Status: In Progress
 
 ## Timeline

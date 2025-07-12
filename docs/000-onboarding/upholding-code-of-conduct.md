@@ -1,12 +1,12 @@
 ---
-title: Upholding the Code of Conduct for new contributors
+title: Upholding the Code of Conduct
 description: This onboarding guide outlines how to uphold the Code of Conduct document for new contributors
-weight: 160
+weight: 70
 ---
 
 # Contributor Guide to Upholding the Code of Conduct
 
-Welcome to the AsyncAPI community! As a contributor, you are an essential part of building a safe, inclusive, and respectful environment for everyone. This guide will help you understand how to follow and uphold our [Code of Conduct](https://github.com/asyncapi/community/blob/master/CODE_OF_CONDUCT.md).
+Welcome to the AsyncAPI community! As a contributor, you are an essential part of building a safe, inclusive, and respectful environment for everyone. This guide will help you understand how to follow and uphold our [Code of Conduct](https://github.com/asyncapi/.github/blob/master/CODE_OF_CONDUCT.md).
 
 
 
@@ -29,7 +29,7 @@ Following it helps:
 - **Be community-oriented:** Encourage collaboration, help others when you can, and gracefully accept constructive criticism.
 - **Speak Up:** If you witness inappropriate behavior, report it.
 
-You are expected to read and understand the full [CoC](https://github.com/asyncapi/community/blob/master/CODE_OF_CONDUCT.md) before contributing.
+You are expected to read and understand the full [CoC](https://github.com/asyncapi/.github/blob/master/CODE_OF_CONDUCT.md) before contributing.
 
 
 ## What to Do If You Experience or Witness a Violation
@@ -44,7 +44,7 @@ If you experience or observe discrimination, harassment, or any behavior that vi
 ### 2. Report the Incident
 You can report a CoC violation by:
 
-- Emailing **conduct@asyncapi.io** – this forwards directly to the [Code of Conduct Committee](https://github.com/asyncapi/community/blob/master/code_of_conduct/code-of-conduct-committee.md)
+- Emailing **conduct@asyncapi.io** – this forwards directly to the [Code of Conduct Committee](../CODE_OF_CONDUCT_COMMITTEE.md)
 - Reaching out to a specific CoC Committee member if the issue involves someone on the committee
 
 All reports are handled with confidentiality, respect, and prompt action.
@@ -61,5 +61,5 @@ The Code of Conduct Committee is trained to resolve conflicts fairly and ensure 
 
 
 ## Additional Resources
-- [Incident Resolution Procedures](https://github.com/asyncapi/community/blob/master/code_of_conduct/coc-incident-resolution-procedures.md)
-- [Slack Etiquette Guidelines](https://github.com/asyncapi/community/blob/master/slack-etiquette.md)
+- [Incident Resolution Procedures](../COC-incident-resolution-procedures.md)
+- [Slack Etiquette Guidelines](../060-meetings-and-communication/slack-etiquette.md)

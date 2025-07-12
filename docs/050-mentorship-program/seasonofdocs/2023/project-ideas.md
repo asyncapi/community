@@ -1,3 +1,8 @@
+---
+title: 2023 GSoD Accepted Projects
+weight: 110
+---
+
 # 2023 GSoD Accepted Projects 
 
 # 🙌🏾  Bridge AsyncAPI Document Knowledge Gaps & Build Interactive Learning Paths

@@ -1,6 +1,6 @@
 ---
-title: 'Technical writer contributor responsibilities'
-weight: 20
+title: Technical Writer Contributor Responsibilities
+weight: 100
 ---
 
 In the AsyncAPI community, technical writers collaborate with other technical writers, Subject Matter Experts (SME), designers, engineers, and core maintainers. 

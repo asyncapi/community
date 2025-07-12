@@ -1,11 +1,11 @@
 ---
 title: Version Control
 description: A guide to using version control in AsyncAPI
-weight: 170
+weight: 150
 ---
 ## Version Control
 
- At AsyncAPI, version control is used to keep track of what has changed, who made the change, and why. This helps maintainers, contributors, and users understand how the documentation has evolved, making it easier for everyone to contribute.
+At AsyncAPI, version control is used to keep track of what has changed, who made the change, and why. This helps maintainers, contributors, and users understand how the documentation has evolved, making it easier for everyone to contribute.
 
 ### How Documentation Versions Work
 
@@ -95,4 +95,4 @@ When contributing to documentation, keep the following in mind:
 
 ### Need Help?
 
-Need more assistance with contributing to documentation, check out the [AsyncAPI contribution flow guidelines](https://github.com/asyncapi/community/blob/master/docs/010-contribution-guidelines/contribution-flow.md).
+Need more assistance with contributing to documentation, check out the [AsyncAPI contribution flow guidelines](../010-contribution-guidelines/contribution-flow.md).

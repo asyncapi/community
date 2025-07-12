@@ -1,3 +1,8 @@
+---
+title: Meetings Organization
+weight: 10
+---
+
 This document covers the aspects of different meeting organizations at AsyncAPI.
 
 ## FAQ

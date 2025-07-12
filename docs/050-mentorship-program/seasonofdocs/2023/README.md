@@ -1,3 +1,8 @@
+---
+title: Season of Docs 2023
+weight: 100
+---
+
 # Status: Accepted and GSoD Program has Started
 
 ## 🙌🏾  Bridge AsyncAPI Document Knowledge Gaps & Build Interactive Learning Paths

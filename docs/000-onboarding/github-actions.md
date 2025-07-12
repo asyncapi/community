@@ -1,6 +1,6 @@
 ---
-title: 'Utilizing GitHub Actions'
-weight: 140
+title: Utilizing GitHub Actions
+weight: 80
 ---
 
 ## Overview

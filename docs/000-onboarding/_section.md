@@ -1,4 +1,4 @@
 ---
-title: Onboarding guide
+title: Onboarding
 weight: 10
 ---

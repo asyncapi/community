@@ -1,3 +1,8 @@
+---
+title: AsyncAPI GSoC Ideas Page 2024
+weight: 180
+---
+
 # AsyncAPI Ideas Page: Google Summer of Code 2024
 Welcome to the **AsyncAPI Ideas Page** with our proposed projects for Google Summer of Code (GSoC) 2024! If you are an interested student/contributor, please don't hesitate to contact our mentors directly to discuss project ideas.
 

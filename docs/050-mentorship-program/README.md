@@ -1,3 +1,8 @@
+---
+title: AsyncAPI Mentoring Initiatives
+weight: 10
+---
+
 # AsyncAPI Mentoring Initiatives
 
 The AsyncAPI Initiative participates in a variety of mentoring programs. AsyncAPI is a great place to spend a summer learning, coding, participating, and contributing. We are an exciting open-source foundation with a vibrant community of projects, and we look forward to your application and project ideas!
