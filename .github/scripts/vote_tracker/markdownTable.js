@@ -87,6 +87,15 @@ function generateMarkdownHeader(keys, titles, orgName, repoName) {
  * // "| [user1](https://github.com/user1) | <span style=\"position: relative; cursor: pointer;\" title=\"In favor\">👍</span> |"
  */
 function generateMarkdownRows(data, keys) {
+  if (!data || data.length === 0) {
+    console.error("No data provided to generateMarkdownRows.");
+    return "";
+  } else {
+    console.log(
+      "Markdown table rows generation with the following data as input:",
+      JSON.stringify(data, null, 2)
+    );
+  }
   return data.map(row => {
     const rowStr = keys.map(key => {
       if (key === "name") {
@@ -156,6 +165,12 @@ async function jsonToMarkdownTable(data, orgName, repoName) {
     console.error("Data is empty or undefined");
     return "";
   }
+  else {
+    console.log(
+      "Working on markdown generation with the following data as input:",
+      JSON.stringify(data, null, 2)
+    )
+  }
 
   const titles = {
     name: "GitHub user name",
@@ -167,6 +182,12 @@ async function jsonToMarkdownTable(data, orgName, repoName) {
     abstainCount: "Number of times TSC member abstained from voting",
     notParticipatingCount: "Number of times TSC member did not participate in voting",
   };
+
+  // We extract all keys from the first row of data to determine the columns for the table.
+  // However, we explicitly **exclude "firstVoteClosedTime"** because:
+  // * It is likely a metadata field (e.g., the date when the first vote was closed) that is irrelevant for the table’s purpose of documenting TSC voting records.
+  // * Including it would clutter the table with information that does not contribute to the reader’s understanding of voting outcomes or participation.
+  // * Filtering it ensures that `normalizeTableData` only processes relevant keys, maintaining a consistent table structure and avoiding unnecessary columns.
 
   const keys = Object.keys(data[0]).filter(k => k !== "firstVoteClosedTime");
   const normalizedData = normalizeTableData(data, keys);

@@ -117,10 +117,6 @@ describe('jsonToMarkdownTable', () => {
   });
 
   it('should visualize input JSON and verify Markdown table', async () => {
-    // Log input for visualization
-    console.log('\n=== Visualization Test: Input JSON ===');
-    console.log(JSON.stringify(visualizationData, null, 2));
-    console.log('====================================\n');
 
     // Generate Markdown table
     const result = await jsonToMarkdownTable(visualizationData, "org", "repo");
