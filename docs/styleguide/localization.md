@@ -10,24 +10,22 @@ As AsyncAPI gains more users worldwide, it becomes crucial to create tutorials, 
 
 ## Key Principles of Internationalization
 
-When designing AsyncAPI's documentation to be adaptable to different languages, apply the following principles:
 
 ### Language Considerations
 
 * Write content in clear, simple English that can be easily translated
 * Avoid idiomatic expressions, colloquialisms, and region-specific references
 * Use straightforward sentence structures
-* Use complex grammatical constructions only when necessary
+* Avoid complex grammatical constructions where possible
 
 ### Cultural Sensitivity
 
 * Avoid using cultural references and humor that may not translate or be understood globally
 * Be mindful of cultural nuances when writing about specific topics
-* Use neutral, professional language that resonates across different cultures
+* Use neutral, commonly understood language that appeals to a diverse audience
 
 ## Localization Best Practices
 
-When adapting AsyncAPI's content to a specific language and its corresponding audience, consider doing the following:
 
 ### Translation Preparation
 
