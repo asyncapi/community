@@ -141,13 +141,13 @@ jobs:
             console.log(`New maintainers: ${newMaintainers}`);
             const welcomeMessage = newMaintainers.map((maintainer) => `@${maintainer.trim().replace(/^@/, '')} We invited you to join the AsyncAPI organization, and you are added to the team that lists all Maintainers.\n
             
-                      Please take a moment to verify if you would like to provide more details for your account, such as your LinkedIn profile, Twitter handle, or company affiliation. In case there is anything you want to add, please open up a separate pull request for the \`MAINTAINERS.yaml\` file.\n\n
-                      
-                      Additionally, if you are interested in becoming a [TSC member](https://www.youtube.com/watch?v=MfVUUbW2aos) and contributing to the direction of the AsyncAPI Initiative, let us know, and we'll be happy to guide you through the process. Every maintainer has the right to become a [TSC member](https://www.asyncapi.com/community/tsc), just open a pull request to modify your entry in \`MAINTAINER.yaml\` file and make sure \`isTscMember\` property is set to \`true\`. Consider also adding \`slack\` information with your Slack Member ID. We use it in our automation to drop you reminders to participate in voting. To find your Member ID, click on your profile photo in Slack and click "Profile". In the right side of their profile section, click on the three dots and click "Copy Member ID".\n\n
-                      
-                      You can find some basic information about TSC membership in [this TSC-related guide](https://github.com/asyncapi/community/blob/master/TSC_MEMBERSHIP.md). Feel free to reach out to us for more help by dropping a comment in this pull request, or by asking for help in our Slack.\n\n
-                      
-                      Welcome aboard! We are excited to have you as part of the team.`).join("\n");
+            Please take a moment to verify if you would like to provide more details for your account, such as your LinkedIn profile, Twitter handle, or company affiliation. In case there is anything you want to add, please open up a separate pull request for the \`MAINTAINERS.yaml\` file.\n\n
+            
+            Additionally, if you are interested in becoming a [TSC member](https://www.youtube.com/watch?v=MfVUUbW2aos) and contributing to the direction of the AsyncAPI Initiative, let us know, and we'll be happy to guide you through the process. Every maintainer has the right to become a [TSC member](https://www.asyncapi.com/community/tsc), just open a pull request to modify your entry in \`MAINTAINER.yaml\` file and make sure \`isTscMember\` property is set to \`true\`. Consider also adding \`slack\` information with your Slack Member ID. We use it in our automation to drop you reminders to participate in voting. To find your Member ID, click on your profile photo in Slack and click "Profile". In the right side of their profile section, click on the three dots and click "Copy Member ID".\n\n
+            
+            You can find some basic information about TSC membership in [this TSC-related guide](https://github.com/asyncapi/community/blob/master/TSC_MEMBERSHIP.md). Feel free to reach out to us for more help by dropping a comment in this pull request, or by asking for help in our Slack.\n\n
+            
+            Welcome aboard! We are excited to have you as part of the team.`).join("\n");
             
             const { owner, repo } = context.repo;
             const { number: issue_number } = context.issue;
@@ -192,7 +192,7 @@ jobs:
       - name: Display goodbye message to removed maintainers
         uses: actions/github-script@v6
         with:
-          github-token: ${{ secrets.GH_TOKEN_ORG_ADMIN }}
+          github-token: ${{ secrets.GH_TOKEN }}
           script: |
               const removedMaintainers = "${{ needs.remove_maintainer.outputs.removedMaintainers }}".split(",");
 
