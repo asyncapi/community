@@ -135,7 +135,7 @@ jobs:
             console.log(`New ambassadors: ${newAmbassadors}`);
             const welcomeMessage = newAmbassadors.map((ambassador) => `@${ambassador.trim().replace(/^@/, '')} We invited you to join the AsyncAPI organization, and you are added to the team that lists all Ambassadors.\n
 
-                      Welcome aboard! We are excited to have you as part of the team.`).join("\n");
+            Welcome aboard! We are excited to have you as part of the team.`).join("\n");
 
             const { owner, repo } = context.repo;
             const { number: issue_number } = context.issue;
@@ -179,7 +179,7 @@ jobs:
       - name: Display goodbye message to removed ambassadors
         uses: actions/github-script@v7
         with:
-          github-token: ${{ secrets.GH_TOKEN_ORG_ADMIN }}
+          github-token: ${{ secrets.GH_TOKEN }}
           script: |
               const removedAmbassadors = "${{ needs.remove_ambassador.outputs.removedAmbassadors }}".split(",");
 
