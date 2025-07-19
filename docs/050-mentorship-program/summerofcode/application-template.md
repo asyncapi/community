@@ -1,3 +1,8 @@
+---
+title: GSoC Application Template
+weight: 140
+---
+
 # GSoC Application Template
 
 This is the AsyncAPI Project's Google Summer of Code Application Template. We made it to assist contributors in crafting impressive proposals that will impress us. You can submit a draft proposal early to get feedback and iterate early. Be sure to read [Google's guide to writing a proposal](https://google.github.io/gsocguides/student/writing-a-proposal)

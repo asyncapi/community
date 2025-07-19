@@ -1,3 +1,8 @@
+---
+title: Contribute AsyncAPI Blog Posts
+weight: 90
+---
+
 ## Contribute AsyncAPI blog posts
 
 The AsyncAPI blog is open to everyone; any contribution is allowed, including reposting. You can share use cases, projects, or tools in the form of a blog post to reach out to the entire AsyncAPI community.

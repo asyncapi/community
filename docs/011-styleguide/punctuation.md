@@ -1,7 +1,7 @@
 ---
 title: Punctuation style guide
 description: The style guide outlines the guidelines for using punctuation in the documentation.
-weight: 100
+weight: 90
 ---
 
 # Punctuation

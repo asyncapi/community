@@ -1,7 +1,7 @@
 ---
 title: Links
 description: This style guide gives advice on creating effective text, internal, external, and asset links in AsyncAPI content.
-weight: 130
+weight: 120
 ---
 
 

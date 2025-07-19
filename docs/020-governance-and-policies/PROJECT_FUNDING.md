@@ -1,3 +1,8 @@
+---
+title: Enhancing Event-Driven Architectures: Support AsyncAPI Initiative
+weight: 80
+---
+
 ## Enhancing Event-Driven Architectures: Support AsyncAPI Initiative
 
 ### Overview

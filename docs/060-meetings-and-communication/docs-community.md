@@ -1,13 +1,13 @@
 ---
 title: 'AsyncAPI docs community'
-weight: 50
+weight: 20
 ---
 
 Join OPEN docs community meetings via Zoom, a regular space for docs contributors to meet and help each other.
 
 - Add the AsyncAPI calendar [in the AsyncAPI events page](https://www.asyncapi.com/community/events) to get docs meetings automatically added to your calendar of choice.
 - Watch past AsyncAPI docs meetings on the [AsyncAPI YouTube channel](https://www.youtube.com/AsyncAPI).
-- [Schedule your own docs meetings](https://github.com/asyncapi/community/blob/master/MEETINGS_ORGANIZATION.md).
+- [Schedule your own docs meetings](MEETINGS_ORGANIZATION.md).
 
 ### Docs and education community discussions
 Visit the [public AsyncAPI Docs & Education discussion board](https://github.com/orgs/asyncapi/discussions/categories/docs-education) to discuss docs-related issues and propose improvements.

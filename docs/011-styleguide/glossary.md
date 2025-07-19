@@ -1,7 +1,7 @@
 ---
 title: Glossary
 description: The style guide gives advice on how to effectively use terms and concepts when creating tutorials and other forms of content for AsyncAPI.
-weight: 180
+weight: 160
 ---
 ## What is the purpose of the glossary?
 

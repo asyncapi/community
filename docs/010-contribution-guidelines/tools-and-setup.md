@@ -1,6 +1,6 @@
 ---
-title: Recommended tools and setup
-weight: 60
+title: Recommended Tools and Setup
+weight: 30
 ---
 
 These are the recommended tools for contributors, as well as instructions for setting up the AsyncAPI website in your local environment.
@@ -20,7 +20,7 @@ These are the recommended tools for contributors, as well as instructions for se
 2. Open Command Prompt on your local computer.
 
 3. Clone the forked repository by adding your GitHub username instead of `<username>`.
-   For multiple contributions, follow the [proper configuration of a forked AsyncAPI repo](https://github.com/asyncapi/community/blob/master/git-workflow.md).
+   For multiple contributions, follow the [proper configuration of a forked AsyncAPI repo](git-workflow.md).
 
 ```bash
     git clone https://github.com/<username>/website/

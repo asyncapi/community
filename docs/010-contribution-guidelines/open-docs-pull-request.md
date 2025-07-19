@@ -1,6 +1,6 @@
 ---
-title : 'Create new docs pull request'
-weight : 90
+title: Create New Docs Pull Request
+weight: 110
 ---
 
 ## Create a new docs pull request 
