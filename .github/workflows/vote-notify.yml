@@ -46,7 +46,7 @@ jobs:
             const { data: issues } = await github.rest.issues.listForRepo({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              labels: 'vote open'
+              labels: 'gitvote/open'
             });
             return issues;
           github-token: ${{ secrets.GITHUB_TOKEN }}
