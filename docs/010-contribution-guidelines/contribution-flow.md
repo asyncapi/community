@@ -11,6 +11,22 @@ We welcome your contributions to AsyncAPI, whether you have suggestions, improve
 
 At AsyncAPI, we value **quality over quantity**. This guide will help you make meaningful contributions that benefit the community.
 
+### Types of Contributions
+
+Contrary to popular belief, **contributions are not limited to code**. At AsyncAPI, we encourage contributions in all areas of the project. Below is a table of contributions that you can make:
+
+| Emoji | Contribution Area  | Examples & How to Get Started                                                                                                                                                                                                          |
+|:-----:|:-------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|  💻   | Code               | Fix bugs, add features, improve performance. See [good first issues](https://github.com/issues?q=is%3Aopen+org%3Aasyncapi+label%3A%22good+first+issue%22) or [open an issue](https://github.com/asyncapi/community/issues/new/choose). |
+|  📝   | Documentation      | Improve docs, fix typos, clarify guides. Check [docs issues](https://github.com/asyncapi/community/issues) or suggest changes directly.                                                                                                |
+|  🧪   | Testing            | Test features, report bugs, improve test coverage.                                                                                                                                                                                     |
+|  🎨   | Design             | Propose UI/UX improvements, contribute graphics, review design discussions.                                                                                                                                                            |
+|  💬   | Community Support  | Answer questions on [Slack](https://asyncapi.com/slack-invite) or GitHub Discussions, help new contributors.                                                                                                                           |
+|  📢   | Advocacy           | Write blog posts, give talks, share AsyncAPI in your network.                                                                                                                                                                          |
+|  🗂️  | Project Management | Triage issues, review PRs, help organize tasks and workflows.                                                                                                                                                                          |
+|  🌐   | Localization       | Translate documentation or resources into other languages.                                                                                                                                                                             |
+|  🤝   | Outreach & Events  | Organize or participate in meetups, workshops, or community calls.                                                                                                                                                                     |
+
 ### Before You Start Contributing
 - If you are joining AsyncAPI through [Slack](https://asyncapi.com/slack-invite) or an event, take your time to explore the [AsyncAPI website](https://www.asyncapi.com/).  
 - Read our [Code of Conduct](https://github.com/asyncapi/.github/blob/master/CODE_OF_CONDUCT.md).  
