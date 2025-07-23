@@ -25,8 +25,8 @@ The AsyncAPI Mentorship makes it easy to sponsor and help train the next generat
 
 ## Program Maintainers
 
-- Azeez Elegbede ([@acethecreator](https://github.com/acethecreator)\): <https://twitter.com/_acebuild>
-- Thulisile Sibanda ([@thulieblack](https://github.com/thulieblack)\): <https://www.linkedin.com/in/v-thulisile-sibanda/>
+- Azeez Elegbede ([@acethecreator](https://github.com/acethecreator)): https://twitter.com/_acebuild
+- Thulisile Sibanda ([@thulieblack](https://github.com/thulieblack)): https://www.linkedin.com/in/v-thulisile-sibanda/
 
 The AsyncAPI initiative hosts the AsyncAPI mentorship program, an industry standard for defining asynchronous APIs.
 

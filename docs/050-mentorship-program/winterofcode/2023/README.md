@@ -8,8 +8,8 @@ weight: 200
 
 ## Program Maintainers
 
-- Azeez Elegbede ([@acethecreator](https://github.com/acethecreator)\): <https://twitter.com/_acebuild>
-- Lukasz Gornicki ([@derberg](https://github.com/derberg)\): <https://twitter.com/derberq>
+- Azeez Elegbede ([@acethecreator](https://github.com/acethecreator)): https://twitter.com/_acebuild
+- Lukasz Gornicki ([@derberg](https://github.com/derberg)): https://twitter.com/derberq
 
 ## Timeline
 
