@@ -210,7 +210,7 @@ They should be clear, optimized, and accessible.
 
   - **JPEG:** For photographs. Optimize for the web to balance quality and file size.
 
-- **Alt Text:** All `<img>` tags must have a descriptive alt attribute for screen readers. If an image is purely decorative, use `alt=""`. In markdown, use the exclamation mark, square brackets and parenthesis combo (`![]()`) to add images, ensure to use a decriptive alt text such as `![a blue bunny](bluebunny.png)`.
+- **Alt Text:** All `<img>` tags must have a descriptive alt attribute for screen readers. If an image is purely decorative, use `alt=""`. In markdown, use the exclamation mark, square brackets and parenthesis combo (`![]()`) to add images, ensure to use a descriptive alt text such as `![a blue bunny](bluebunny.png)`.
 
 - **Sizing:** Images should not exceed a maximum width of 800px to avoid overwhelming the content layout.
 

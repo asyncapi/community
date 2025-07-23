@@ -14,7 +14,7 @@ Here are the individual sections of an AsyncAPI document we need to cover:
 - **AsyncAPI structure** - Introduce all root elements, add short explanation of info, servers, channels, components, and their purpose.
 - **Adding variables to URL** - Explain how to add variables to the server URL when parts of the URL may be different per runtime. Explain how these can be reused between two servers via `components.serverVariables`.
 - **Adding channel** - Explain the purpose of channels, different names for it, and what users should put here. Add a simple channel there, and explain how it relates to the server. If you specify a channel and server, it is expected that a given channel is present on all servers. Explain that the channel can also specify that it is present only on server A or server B.
-- **Specifing dynamic parts of channel name** - Explain how to use and reuse parameters.
+- **Specifying dynamic parts of channel name** - Explain how to use and reuse parameters.
 - **Adding operations** - Introduce operations, how many there can be, what kind of, and their purpose, and explain pub/sub.
 - **Securing operations** - Explain that server security applies to all the operations in all channels. Still, if you have different security per operation, you can use the `security` prop at the operation level.
 - **Adding messages** - Add a simple message as in previous examples, explain the most important parts, and explain there can be one or multiple (`oneOf`) under operation. Talk about `contentType` and add a note about `defaultSchema`. Also, show how to reuse components.

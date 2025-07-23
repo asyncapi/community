@@ -8,12 +8,17 @@ weight: 20
 The AsyncAPI Mentorship makes it easy to sponsor and help train the next generation of open-source developers by serving the community's key needs. Invest in building a stronger, more diverse community of qualified contributors. 
 
 ## Program Cycles and Archive data
-| Year | Term   | Status    | Announcement                                                                                                                                                         | Details                                 |
-| ---- | ------ | --------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------- |
-docs
-| 2024 | Sept-Jan | In Progress |       | [Sept-Jan](2024/README.md)|
+
+### docs
+| Year | Term | Status | Announcement | Details |
+| ---- | ---- | ------ | ------------ | ------- |
+
+| 2024 | Sept-Jan | In Progress |       | [Sept-Jan](2024/README.md) |
 | 2024 | Sep-Mar | In Progress  |       | In Progress |
-master
+
+### master
+| Year | Term | Status | Announcement | Details |
+| ---- | ---- | ------ | ------------ | ------- |
 | 2023 | Jan-Nov | Completed   |       | [Jan-Nov](2023/README.md) |
 | 2022 | Jan-Nov | Completed   |       | [Jan-Nov](2022/README.md) |
 
@@ -76,7 +81,7 @@ Each Mentor for an accepted project will:
 - Use best efforts to respond to Contributor requests within forty-eight (48) hours.
 - Provide Evaluations of their Contributor(s)'’' work by the Project Criteria
 
-Suppose AsyncAPI reasonably believes that a Mentor still needs to meet the primary responsibilities. In that case, AsyncAPI may require the Progam Administrators to designate a replacement Mentor and remove the former Mentor from the Program.
+Suppose AsyncAPI reasonably believes that a Mentor still needs to meet the primary responsibilities. In that case, AsyncAPI may require the Program Administrators to designate a replacement Mentor and remove the former Mentor from the Program.
 
 ## Program Contributors/Mentees
 
