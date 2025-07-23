@@ -1,6 +1,6 @@
 ---
-title: 'Prerequisite knowledge'
-weight: 40
+title: Prerequisite Knowledge
+weight: 10
 ---
 
 The prerequisite knowledge section highlights the key technologies, concepts, and skills our technical writers need for working with AsyncAPI documentation. You must understand the main concepts behind our documentation processes, content classification, and the AsyncAPI specification.

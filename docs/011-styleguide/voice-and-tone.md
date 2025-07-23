@@ -1,7 +1,7 @@
 ---
 title: "Voice and Tone"
 description: Guidelines for voice and tone in the documentation.
-weight: 70
+weight: 60
 ---
 
 ## Introduction

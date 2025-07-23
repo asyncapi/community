@@ -1,7 +1,7 @@
 ---
 title: Inclusive Language style guide
 description: This style guide outlines the guidelines for using inclusive language in documentation.
-weight: 60
+weight: 50
 ---
 
 # Inclusive Language

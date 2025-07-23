@@ -1,7 +1,7 @@
 ---
 title: Numbers
 description: This style guide provides guidelines for writing numbers as words, number ranges, and so on in AsyncAPI documentation. 
-weight: 90
+weight: 80
 ---
 
 # Numbers Guidelines

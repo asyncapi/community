@@ -1,3 +1,8 @@
+---
+title: Become Maintainer in Existing Project
+weight: 140
+---
+
 ### Become Maintainer in Existing Project
 
 We know you are nervous about making your first contribution. In this section, we guide you on the steps towards becoming a TSC member:
@@ -18,7 +23,7 @@ Here's how to select an issue to contribute to:
 
 **Step 2: Open a Pull Request**
 
-To open a pull request successfully, follow our [Git workflows contributors guide](https://github.com/asyncapi/community/blob/master/git-workflow.md).
+To open a pull request successfully, follow our [Git workflows contributors guide](git-workflow.md).
 
 Use the following steps to open your pull request:
 1. Configure a fork
@@ -40,4 +45,4 @@ After making several contributions to AsyncAPI, maintainers will recognize you. 
 
 Once you become a maintainer in one of the repositories, you can apply to join a group of [TSC members](https://www.asyncapi.com/community/tsc).
 
-Open a PR in the **community** repository to add your name to the [list of TSC members](https://github.com/asyncapi/community/blob/master/TSC_MEMBERS.json). Specify your name, repositories that you maintain, and if you are sponsored by some company. For example [see this PR that introduced one of the new TSC members](https://github.com/asyncapi/community/pull/277).
+Open a PR in the **community** repository to add your name to the [list of TSC members](../../TSC_BOARD_MEMBERS.yaml). Specify your name, repositories that you maintain, and if you are sponsored by some company. For example [see this PR that introduced one of the new TSC members](https://github.com/asyncapi/community/pull/277).

@@ -1,7 +1,7 @@
 ---
 title: SEO
 description: This guide gives advice on how to implement SEO when creating tutorials and other forms of content for AsyncAPI.
-weight: 140
+weight: 130
 ---
 
 ## What is SEO?

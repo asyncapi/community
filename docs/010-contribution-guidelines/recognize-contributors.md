@@ -1,3 +1,8 @@
+---
+title: Recognize Contributors
+weight: 130
+---
+
 # Recognize Contributors
 
 We do our best to recognize every contribution to the project. We do it individually in every repository from the AsyncAPI GitHub organization.
