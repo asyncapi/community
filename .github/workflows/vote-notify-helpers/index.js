@@ -4,7 +4,7 @@ const axios = require('axios');
 
 /**
  * 
- * @param {Array} issues  list of issues having `vote open` label
+ * @param {Array} issues  list of issues having `gitvote/open` label
  * @param {Object} state  has the last notified date for each issue
  * @param {Object} config configuration object (e.g. days)
  * @returns {Object} state and issuesToNotify
