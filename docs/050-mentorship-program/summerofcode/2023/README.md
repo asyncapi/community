@@ -47,9 +47,9 @@ Easy-Medium
 **Expected Time Commitment**:
 175 Hour
 
-**Technical skills requried**
+**Technical skills required**
 
-Typescript, nodejs, websocket, EDA basics
+Typescript, Node.js, websocket, EDA basics
 
 
 ## 2) Automate listing of members of technical steering committee: Community

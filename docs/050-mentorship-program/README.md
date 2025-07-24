@@ -20,26 +20,26 @@ We are also available on the [AsyncAPI slack](https://asyncapi.com/slack-invite)
 
 ## Mentoring Programs
 
-| Program                                                                           | Purpose                                                                                                                                   | Details and historical data                |
-| --------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------ |
-| [AsyncAPI Mentorship](https://www.asyncapi.com/) | Mentoring initiative by AsyncAPI                                                                                           | [asyncapi-mentorship](asyncapi-mentorship/README.md) |
-| [Google Summer of Code](https://summerofcode.withgoogle.com/)                     | Mentoring program for the students                                                                                                        | [summerofcode](summerofcode/README.md)     |
-| [Google Season of Docs](https://developers.google.com/season-of-docs)             | Mentoring initiative for technical writers                                                                                            | [seasonofdocs](seasonofdocs/README.md)     |
-| [Winter of Code](https://www.winterofcode.com)                                            | Mentoring initiative aimed to increase participation for the Google Summer of Code program among students                                                          | [winterofcode](winterofcode/README.md)           |
-| [OpenForce](https://www.openforce.tech/)                            | The CROSS Research Experiences program provides support for undergraduate and graduate students contributing to CROSS incubator projects. | [openforce](openforce/README.md)
-| [Hacktoberfest](https://hacktoberfest.com/)                            |  The idea of Hacktoberfest is to encourage everyone, especially beginners, to contribute to projects that are dear to their hearts. | [hacktoberfest](hacktoberfest/README.md)
+| Program | Purpose | Details and historical data |
+|-------- | ------- | --------------------------- |
+| [AsyncAPI Mentorship](https://www.asyncapi.com/) | Mentoring initiative by AsyncAPI | [asyncapi-mentorship](asyncapi-mentorship/README.md) |
+| [Google Summer of Code](https://summerofcode.withgoogle.com/) | Mentoring program for the students | [summerofcode](summerofcode/README.md) |
+| [Google Season of Docs](https://developers.google.com/season-of-docs) | Mentoring initiative for technical writers | [seasonofdocs](seasonofdocs/README.md) |
+| [Winter of Code](https://www.winterofcode.com) | Mentoring initiative aimed to increase participation for the Google Summer of Code program among students | [winterofcode](winterofcode/README.md) |
+| [OpenForce](https://www.openforce.tech/) | The CROSS Research Experiences program provides support for undergraduate and graduate students contributing to CROSS incubator projects. | [openforce](openforce/README.md) |
+| [Hacktoberfest](https://hacktoberfest.com/) |  The idea of Hacktoberfest is to encourage everyone, especially beginners, to contribute to projects that are dear to their hearts. | [hacktoberfest](hacktoberfest/README.md) |
 
 ## Program Statistics
 
-| Year | Program                          | Participants | Total (per year) |
-| ---- | -------------------------------- | ----------- | ---------------- |
-| 2023 | AsyncAPI Mentorship                   | 13          | 40              |
-|      | GSoD                             | 5          |                  |
-|      | GSoC                             | 4          |                  |
-|      | Hacktoberfest                             | 18
-| 2022 | AsyncAPI Mentorship                   | 10          | 41              |
-|      | GSoD                             | 6          |                  |
-|      | Hacktoberfest                             | 12
-|      | OpenForce                             | 13           |                  |
-| 2021 | GSoC | 6          | 32              |
-|      | Hacktoberfest                             | 26          |                  |
+| Year | Program              | Participants | Total (per year) |
+| ---- | -------------------- | ------------ | ---------------- |
+| 2023 | AsyncAPI Mentorship  | 13           | 40               |
+|      | GSoD                 | 5            |                  |
+|      | GSoC                 | 4            |                  |
+|      | Hacktoberfest        | 18           |                  |    
+| 2022 | AsyncAPI Mentorship  | 10           | 41               |
+|      | GSoD                 | 6            |                  |
+|      | Hacktoberfest        | 12           |                  |  
+|      | OpenForce            | 13           |                  |
+| 2021 | GSoC                 | 6            | 32               |
+|      | Hacktoberfest        | 26           |                  |

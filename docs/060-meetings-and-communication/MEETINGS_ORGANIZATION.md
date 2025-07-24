@@ -49,18 +49,18 @@ This is what you need to do to kick it off:
 
 1. Log into [Restream.io](https://app.restream.io/home) and select `Set up for OBS, Zoom, etc.` option:
 
-    <img src="../../assets/meetings/restream1.png" width="50%">
+    <img src="../../assets/meetings/restream1.png" width="50%" />
 
 1. Click `Update Titles` card:
 
-    <img src="../../assets/meetings/restream2.png" width="50%">
+    <img src="../../assets/meetings/restream2.png" width="50%" />
 
 1. Provide title and description:
 
     - Title for the live stream that corresponds with the meeting you just started,
     - Meeting description must be provided even if the field is empty; otherwise, the old one from other streams will be used.
 
-    <img src="../../assets/meetings/restream3.png" width="50%">
+    <img src="../../assets/meetings/restream3.png" width="50%" />
 
 1. In Zoom, click the `Live Transcript` button to start transcribing the meeting:
 
@@ -86,48 +86,48 @@ This is what you need to do to kick it off:
 
 1. In [YouTube](https://youtube.com), click on your profile picture and select `Switch account`:
 
-    <img src="../../assets/meetings/yt1.png" width="40%">
+    <img src="../../assets/meetings/yt1.png" width="40%" />
 
 1. Select `AsyncAPI`. If you do not see it on the list, it means you did not have all the access rights needed to set up a live stream:
 
-    <img src="../../assets/meetings/yt2.png" width="40%">
+    <img src="../../assets/meetings/yt2.png" width="40%" />
 
 1. Click on `Create` and select `Go live`:
 
-    <img src="../../assets/meetings/yt3.png" width="40%">
+    <img src="../../assets/meetings/yt3.png" width="40%" />
 
-1. Once a new live stream is created, in the list of `Upcoming` streams, click `View in Live Control Room` <img src="../../assets/meetings/yt5.png" width="3%"> icon next to your live stream:
+1. Once a new live stream is created, in the list of `Upcoming` streams, click `View in Live Control Room` <img src="../../assets/meetings/yt5.png" width="3%" /> icon next to your live stream:
 
-    <img src="../../assets/meetings/yt4.png" width="50%">
+    <img src="../../assets/meetings/yt4.png" width="50%" />
 
 1. Enable `Closed captions`:
 
-    <img src="../../assets/meetings/yt6.png" width="50%">
+    <img src="../../assets/meetings/yt6.png" width="50%" />
 
 1. Log into [Restream.io](https://app.restream.io/home) and select `Start with Studio` option:
 
-    <img src="../../assets/meetings/restream1.png" width="50%">
+    <img src="../../assets/meetings/restream1.png" width="50%" />
 
 1. After enabling the audio, video and providing the name, you will see a Restream Studio. 
 
 1. `Edit` the title and description of the stream:
 
-    <img src="../../assets/meetings/restream4.png" width="50%">
+    <img src="../../assets/meetings/restream4.png" width="50%" />
 
 1. Provide title and description and click `Next`:
 
     - Title for the live stream that corresponds with the meeting you just started,
     - Meeting description must be provided even if the field is empty; otherwise, the old one from other streams will be used.
 
-    <img src="../../assets/meetings/restream5.png" width="50%">
+    <img src="../../assets/meetings/restream5.png" width="50%" />
 
 1. `Edit` YouTube destination:
 
-    <img src="../../assets/meetings/restream6.png" width="40%">
+    <img src="../../assets/meetings/restream6.png" width="40%" />
 
 1. Make sure you do not create a new event, but select the one you already created on YouTube, with closed captions on:
 
-    <img src="../../assets/meetings/restream7.png" width="40%">
+    <img src="../../assets/meetings/restream7.png" width="40%" />
 
 1. You are ready to `Go Live`
 
