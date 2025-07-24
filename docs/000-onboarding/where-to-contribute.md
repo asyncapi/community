@@ -1,6 +1,6 @@
 ---
 title: Where to Contribute
-weight: 10
+# weight: 10
 ---
 
 🚧 This document is under construction.
