@@ -1,3 +1,8 @@
+---
+title: AsyncAPI Bounty Program
+weight: 160
+---
+
 # AsyncAPI Bounty Program
 
 
@@ -30,7 +35,7 @@ The approximate maximum quantity of Bounty Issues per calendar quarter round var
 
 Bounty Program Participants are prioritized in the following order:
 
-1. AsyncAPI Maintainers (from the Bounty Issue's repository), checked at https://github.com/asyncapi/community/blob/master/MAINTAINERS.yaml
+1. AsyncAPI Maintainers (from the Bounty Issue's repository), checked at [MAINTAINERS.yaml](../../MAINTAINERS.yaml)
 
 2. Regular contributors (GitHub users who have three or more Pull Requests merged throughout the AsyncAPI GitHub Organization, checked with https://github.com/search?q=org%3Aasyncapi+is%3Apr+is%3Amerged+author%3Agh_username).
 

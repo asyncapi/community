@@ -1,7 +1,7 @@
 # AsyncAPI Code of Conduct - Incident Resolution Procedures
 
 ## Purpose and scope
-These Procedures address the following topics related to the resolution of potential violations of the [AsyncAPI Code of Conduct](https://github.com/asyncapi/community/blob/master/CODE_OF_CONDUCT.md):
+These Procedures address the following topics related to the resolution of potential violations of the [AsyncAPI Code of Conduct](https://github.com/asyncapi/.github/blob/master/CODE_OF_CONDUCT.md):
 
 - [How to submit a report](#how-to-submit-a-report)
   - [Submit in writing](#submit-in-writing)
@@ -37,7 +37,7 @@ These Procedures address the following topics related to the resolution of poten
 
 ## How to submit a report
 
-You may report a potential violation of the [AsyncAPI Code of Conduct](https://github.com/asyncapi/community/blob/master/CODE_OF_CONDUCT.md) in writing or in a spoken conversation as indicated below.
+You may report a potential violation of the [AsyncAPI Code of Conduct](https://github.com/asyncapi/.github/blob/master/CODE_OF_CONDUCT.md) in writing or in a spoken conversation as indicated below.
 
 ### Submit in writing
 
@@ -76,7 +76,7 @@ Once the report has been submitted, the AsyncAPI CoC Committee will confirm rece
 
 The Jurisdiction of the CoC Committee is as follows:
 - [AsyncAPI Initiative GitHub](https://github.com/asyncapi)
-- [AsyncAPI Slack](asyncapi.slack.com), including all external channels connected through [Slack Connect](https://slack.com/connect).
+- [AsyncAPI Slack](https://asyncapi.slack.com), including all external channels connected through [Slack Connect](https://slack.com/connect).
 - AsyncAPI social networks: [Twitter](https://twitter.com/AsyncAPISpec), [LinkedIn](https://www.linkedin.com/company/asyncapi), [YouTube](https://www.youtube.com/asyncapi), [Twitch](https://www.twitch.tv/asyncapi), and [Mastodon](https://fosstodon.org/@AsyncAPISpec)
 - AsyncAPI events: conferences, talks, workshops, etc.
 

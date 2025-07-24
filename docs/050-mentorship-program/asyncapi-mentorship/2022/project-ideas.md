@@ -1,3 +1,8 @@
+---
+title: AsyncAPI Mentorship 2022 Project Ideas
+weight: 40
+---
+
 # Projects ideas
 > We have 7 mentors from TSC and 2 mentees from the TSC, giving us 23 remaining TSC members able to vote. 
 
