@@ -74,14 +74,15 @@ jobs:
 
       # Needed as axios and js-yaml are not available in the default environment
       - name: Install the dependencies
-        run: npm install js-yaml@4.1.0 axios@1.7.4 @sendgrid/mail@8.1.4
+        run: npm install js-yaml@4.1.0 axios@1.7.4 node-mailjet@6.0.8
         shell: bash
 
       - name: Notify TSC Members
         uses: actions/github-script@v7
         id: notify
         env:
-          SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}
+          MAILJET_API_KEY: ${{ secrets.MAILJET_PUBLIC_KEY}}
+          MAILJET_API_SECRET: ${{ secrets.MAILJET_PRIVATE_KEY }}
           # default to 'both' if inputs.notification_method is undefined (schedule runs)
           NOTIFY_METHOD: ${{ github.event.inputs.notification_method || 'both' }}
           SLACK_DM: ${{ secrets.SLACK_DM_TSC }}
