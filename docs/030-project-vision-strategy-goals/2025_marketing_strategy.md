@@ -1,5 +1,5 @@
 ---
-title: Marketing: Vision, Strategy, Goals for 2025
+title: Marketing - Vision, Strategy, Goals for 2025
 weight: 20
 ---
 

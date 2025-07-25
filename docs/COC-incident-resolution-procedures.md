@@ -1,3 +1,8 @@
+---
+title: AsyncAPI Code of Conduct - Incident Resolution Procedures
+weight: 999
+---
+
 # AsyncAPI Code of Conduct - Incident Resolution Procedures
 
 ## Purpose and scope
