@@ -13,8 +13,6 @@ At AsyncAPI, we value **quality over quantity**. This guide will help you make m
 
 ### Types of Contributions
 
-### Types of Contributions
-
 Contrary to popular belief, **contributions are not limited to code**. At AsyncAPI, we encourage contributions in all areas of the project. Below is a table of contributions that you can make:
 
 | Emoji | Contribution Area    | Examples & How to Get Started                                                                                                                                                                                                                         |
