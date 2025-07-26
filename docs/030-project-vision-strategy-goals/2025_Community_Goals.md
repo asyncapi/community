@@ -39,7 +39,7 @@ To improve and streamline the onboarding process for new contributors joining th
 ### Community Working Group Umbrella
 I would like to introduce the Community Working Group, which serves as an umbrella for all community initiatives and programs at AsyncAPI. We have been functioning unofficially as a working group, but it’s time to reorganize, increase visibility for our current programs, and establish a structured approach to how we work.
 
-``` mermaid
+```mermaid
 flowchart LR
     A["**Community Working Group**"] -- Chair By --> B("**Community Manager**")
     B --> C("**Community Programs and Initiatives**")
@@ -58,8 +58,7 @@ flowchart LR
     classDef Rose stroke-width:1px, stroke-dasharray:none, stroke:#FF5978, fill:#FFDFE5, color:#8E2236
     classDef Sky stroke-width:1px, stroke-dasharray:none, stroke:#374D7C, fill:#E2EBFF, color:#374D7C
     classDef Aqua stroke-width:1px, stroke-dasharray:none, stroke:#46EDC8, fill:#DEFFF8, color:#378E7A
-
-   ```
+```
 
 The community manager will oversee and chair the working group, which includes community builders responsible for building, leading, and running the programs.
 With this structured setup, we will say goodbye to community meetings and hello to the Community WG meeting; this is where we will provide updates on the different programs and the progress the builders are making.

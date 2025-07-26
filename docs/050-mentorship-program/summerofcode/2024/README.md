@@ -3,7 +3,7 @@ title: Google Summer of Code 2024
 weight: 170
 ---
 
-# Status: In Progress
+# Status: Completed
 
 ## Timeline
 
@@ -35,4 +35,4 @@ weight: 170
 | 4 | [Markdown and MermaidJS Diagrams Preview: VS Code Extension](https://github.com/asyncapi/vs-asyncapi-preview/issues/161) | [Iván García Sainz-Aja](https://github.com/ivangsa), [Azeez Elegbede](https://github.com/acethecreator)  | Engineering | [NIKHIL CHAUDHARI](https://github.com/nikhil-3112)  |
 | 5 | [AsyncAPI Website UI Kit Development](https://github.com/asyncapi-archived-repos/design-system/issues/4) | [Azeez Elegbede](https://github.com/acethecreator), [Akshat Nema](https://github.com/akshatnema)  | Engineering | [Ashmit JaiSarita Gupta](https://github.com/devilkiller-ag)  |
 | 6 | [Dynamic Open Graph Preview for AsyncAPI Studio](https://github.com/asyncapi/studio/issues/224) | [Sergio Moya](https://github.com/smoya)  | Engineering | [Ankit Dash](https://github.com/helios2003) |
-| 7 | [Conference Website Maintainance](https://github.com/asyncapi/conference-website/issues/284) | [Azeez Elegbede](https://github.com/acethecreator), [Aishat Muibudeen](https://github.com/mayaleeeee), [Thulisile Sibanda](https://github.com/thulieblack) | Engineering | [Ashmit Jagtap](https://github.com/ashmit-coder) |
+| 7 | [Conference Website Maintenance](https://github.com/asyncapi/conference-website/issues/284) | [Azeez Elegbede](https://github.com/acethecreator), [Aishat Muibudeen](https://github.com/mayaleeeee), [Thulisile Sibanda](https://github.com/thulieblack) | Engineering | [Ashmit Jagtap](https://github.com/ashmit-coder) |

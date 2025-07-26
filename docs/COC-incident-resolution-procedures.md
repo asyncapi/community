@@ -1,3 +1,8 @@
+---
+title: AsyncAPI Code of Conduct - Incident Resolution Procedures
+weight: 999
+---
+
 # AsyncAPI Code of Conduct - Incident Resolution Procedures
 
 ## Purpose and scope
@@ -9,17 +14,17 @@ These Procedures address the following topics related to the resolution of poten
   - [How to report anonymously](#how-to-report-anonymously)
 - [What information to include in your report](#what-information-to-include-in-your-report)
 - [What happens after a report is submitted](#what-happens-after-a-report-is-submitted)
- - [Acknowledgement of Receipt](#acknowledgement-of-receipt)
- - [Confirmation and Jurisdiction](#confirmation-and-jurisdiction)
-  - [Who will have access to reports](#who-will-have-access-to-reports)
-  - [Investigation](#investigation)
-  - [Notification to the Accused Person](#notification-to-the-accused-person)
+  - [Acknowledgement of Receipt](#acknowledgement-of-receipt)
+  - [Confirmation and Jurisdiction](#confirmation-and-jurisdiction)
+    - [Who will have access to reports](#who-will-have-access-to-reports)
+    - [Investigation](#investigation)
+    - [Notification to the Accused Person](#notification-to-the-accused-person)
 - [Resolution](#resolution)
   - [Interim Protective Measures](#interim-protective-measures)
   - [Mediation and Resolution by Agreement](#mediation-and-resolution-by-agreement)
   - [Potential Remedies](#potential-remedies)
-  	- [Restorative Justice](#restorative-justice)
-	 - [Transformative Justice](#transformative-justice)
+    - [Restorative Justice](#restorative-justice)
+    - [Transformative Justice](#transformative-justice)
   - [Factors that the CoC Committee will consider](#factors-that-the-coc-committee-will-consider)
   - [Examples of Remedies](#examples-of-remedies)
   - [Accountability](#accountability)

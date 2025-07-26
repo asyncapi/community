@@ -38,4 +38,4 @@ Examples:
 - Our sincere gratitude and respect for your contributions!
 
 ### Additional resources
-[AsyncAPI Ambassador Program](../050-mentorship-program/ambassador-program/AMBASSADOR_PROGRAM.md)
+[AsyncAPI Ambassador Program](../020-governance-and-policies/ambassador-program/AMBASSADOR_PROGRAM.md)

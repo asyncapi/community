@@ -9,7 +9,7 @@ This is the AsyncAPI Project's Google Summer of Code Application Template. We ma
 
 Here's what we want to hear from you:
 
-### Contact information
+## Contact information
 
 Please provide your most basic contact information, such as:
 - Full name
@@ -17,7 +17,7 @@ Please provide your most basic contact information, such as:
 - GitHub handle
 - Contact Number(include your country code)
 
-### Project Information
+## Project Information
 
 This section is for you to provide all your understanding of the project, such as:
 - What is the aim of your project, and what problem does it aim to address?
@@ -27,7 +27,7 @@ This section is for you to provide all your understanding of the project, such a
 - What qualities should a suitable mentor for your project possess?
 - What are your plans for the project after completion? 
 
-### Your Understanding of AsyncAPI
+## Your Understanding of AsyncAPI
 
 AsyncAPI is an initiative with many projects and design patterns. In this section, we assess your familiarity with AsyncAPI. We encourage seasoned users and newcomers to explore and understand AsyncAPI during the application phase.
 
@@ -36,7 +36,7 @@ AsyncAPI is an initiative with many projects and design patterns. In this sectio
 - Please explain your knowledge of the AsyncAPI development infrastructure and Git(a plus if it's for your chosen project). If you're unfamiliar with them, what do you plan to learn? We'd like to encourage you to use the application period to familiarize yourself with these tools.
 -   Include or share links to a sample of code unrelated to AsyncAPI demonstrating your development abilities(Optional).
 
-### Your Involvement with the AsyncAPI community
+## Your Involvement with the AsyncAPI community
 
 We welcome applications from folks new to AsyncAPI. If you have previous experience with the AsyncAPI community, please share it. We encourage newcomers to use this application period to get involved with the AsyncAPI community.
 
@@ -45,6 +45,6 @@ We welcome applications from folks new to AsyncAPI. If you have previous experie
 - If you have not engaged with the AsyncAPI community, what are your plans for getting involved?
 - What are your intentions for contributing to AsyncAPI besides your project work? Do you anticipate continuing your involvement with AsyncAPI after finishing your project? If yes, how do you plan to do so?
 
-### Bio
+## Bio
 
 Share a bit about yourself. What are you studying and where? What activities do you enjoy? Why are you the right person for this project?

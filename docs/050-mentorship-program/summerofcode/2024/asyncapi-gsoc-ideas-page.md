@@ -60,7 +60,7 @@ Improve social sharing for [AsyncAPI Studio](https://studio.asyncapi.com/) by im
 - 👩🏿‍🏫 **Mentor(s):** [@smoya](https://github.com/smoya)
 - ⏳ **Length:** 175 Hours
 
-## 7) [Conference Website Maintainance](https://github.com/asyncapi/conference-website/issues/284)
+## 7) [Conference Website Maintenance](https://github.com/asyncapi/conference-website/issues/284)
 Ensure our conference website remains a dynamic and user-friendly for the upcoming 2024 AsyncAPI Conference.
 
 - 🎯 **Outcome:** Improve the website's efficiency and user-friendliness for an improved user experience. 

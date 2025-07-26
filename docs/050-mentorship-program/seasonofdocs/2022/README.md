@@ -11,8 +11,8 @@ weight: 90
 
 ## Program Maintainers
 
-- Alejandra Quetzalli ([@alequetzalli](https://github.com/alequetzalli)\): <https://twitter.com/QuetzalliWrites>
-- Lukasz Gornicki ([@derberg](https://github.com/derberg)\): <https://twitter.com/derberq>
+- Alejandra Quetzalli ([@alequetzalli](https://github.com/alequetzalli)): https://twitter.com/QuetzalliWrites
+- Lukasz Gornicki ([@derberg](https://github.com/derberg)): https://twitter.com/derberq
 ## 2022 participation
 
 AsyncAPI was a [successful participant in Season of Docs (GSoD) 2022](https://developers.google.com/season-of-docs/docs/2022/participants)!

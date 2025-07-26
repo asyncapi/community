@@ -1,3 +1,8 @@
+---
+title: AsyncAPI Code of Conduct Committee
+weight: 998
+---
+
 # AsyncAPI Code of Conduct Committee
 
 ## Purpose
