@@ -1,6 +1,6 @@
 ---
 title: "AsyncAPI Webinar Series Initiative: Learning, Sharing, and Growing Together"
-weight: "20"
+weight: 20
 ---
 
 ## Introduction

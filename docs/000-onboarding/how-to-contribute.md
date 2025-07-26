@@ -1,6 +1,6 @@
 ---
 title: How to Contribute
-# weight: 20
+weight: 20
 ---
 
 🚧 This document is under construction.
