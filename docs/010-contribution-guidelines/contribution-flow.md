@@ -31,7 +31,8 @@ Contrary to popular belief, **contributions are not limited to code**. At AsyncA
 |  👀   | Review               | Review PRs, give feedback, help maintain code quality.                                                                                                                                                                                                |
 |  📦   | Infrastructure       | Improve build tools, deployment scripts, or automation.                                                                                                                                                                                               |
 |  🔌   | Plugin/Tool Creation | Develop plugins, integrations, or tools for AsyncAPI ecosystem.                                                                                                                                                                                       |
-|  📝   | Examples             | Create or improve code examples, sample projects, or demos.   
+|  📝   | Examples             | Create or improve code examples, sample projects, or demos. |
+
 ### Before You Start Contributing
 - If you are joining AsyncAPI through [Slack](https://asyncapi.com/slack-invite) or an event, take your time to explore the [AsyncAPI website](https://www.asyncapi.com/).  
 - Read our [Code of Conduct](https://github.com/asyncapi/.github/blob/master/CODE_OF_CONDUCT.md).  
