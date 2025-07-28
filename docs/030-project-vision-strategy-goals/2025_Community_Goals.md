@@ -1,3 +1,8 @@
+---
+title: "Community: Vision, Strategy, Goals for 2025"
+weight: 10
+---
+
 ## AsyncAPI Community Building Goals and Objectives for 2025
 [Carrying on from Thulie](https://github.com/orgs/asyncapi/discussions/948), it's time to discuss the goals for building and maintaining the AsyncAPI community in 2025. These goals will include planned objectives that we will define together to sustain the AsyncAPI Community. The Community Manager will play an important role in ensuring that our goals are addressed and that each program or initiative has a dedicated person responsible.
 
@@ -34,7 +39,7 @@ To improve and streamline the onboarding process for new contributors joining th
 ### Community Working Group Umbrella
 I would like to introduce the Community Working Group, which serves as an umbrella for all community initiatives and programs at AsyncAPI. We have been functioning unofficially as a working group, but it’s time to reorganize, increase visibility for our current programs, and establish a structured approach to how we work.
 
-``` mermaid
+```mermaid
 flowchart LR
     A["**Community Working Group**"] -- Chair By --> B("**Community Manager**")
     B --> C("**Community Programs and Initiatives**")
@@ -53,8 +58,7 @@ flowchart LR
     classDef Rose stroke-width:1px, stroke-dasharray:none, stroke:#FF5978, fill:#FFDFE5, color:#8E2236
     classDef Sky stroke-width:1px, stroke-dasharray:none, stroke:#374D7C, fill:#E2EBFF, color:#374D7C
     classDef Aqua stroke-width:1px, stroke-dasharray:none, stroke:#46EDC8, fill:#DEFFF8, color:#378E7A
-
-   ```
+```
 
 The community manager will oversee and chair the working group, which includes community builders responsible for building, leading, and running the programs.
 With this structured setup, we will say goodbye to community meetings and hello to the Community WG meeting; this is where we will provide updates on the different programs and the progress the builders are making.
@@ -68,7 +72,7 @@ We remain committed to supporting the following initiatives as they promote comm
 - [Maintainership Program](https://www.asyncapi.com/blog/beyond-boundaries) - Ace
 - [AsyncAPI Ambassador Program](https://www.asyncapi.com/community/ambassadors) - Thulie
 - Student Ambassador Program  - Bami
-- [Working Groups](https://github.com/asyncapi/community/blob/master/WORKING_GROUPS.md) - Bami
+- [Working Groups](../../WORKING_GROUPS.yaml) - Bami
 
 
 #### 1. AsyncAPI Conf 2025

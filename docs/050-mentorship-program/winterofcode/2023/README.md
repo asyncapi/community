@@ -1,10 +1,15 @@
+---
+title: Winter of Code 2023
+weight: 200
+---
+
 # Status: In Progress
 > Program participation annoucement can be found here https://github.com/orgs/asyncapi/discussions/556
 
 ## Program Maintainers
 
-- Azeez Elegbede ([@acethecreator](https://github.com/acethecreator)\): <https://twitter.com/_acebuild>
-- Lukasz Gornicki ([@derberg](https://github.com/derberg)\): <https://twitter.com/derberq>
+- Azeez Elegbede ([@acethecreator](https://github.com/acethecreator)): [X: acebuild](https://twitter.com/_acebuild)
+- Lukasz Gornicki ([@derberg](https://github.com/derberg)): [X: derberq](https://twitter.com/derberq)
 
 ## Timeline
 

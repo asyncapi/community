@@ -1,3 +1,8 @@
+---
+title: Google Summer of Code 2023
+weight: 160
+---
+
 # Status: Completed 
 The summary of the program can be found at https://github.com/orgs/asyncapi/discussions/997
 
@@ -42,9 +47,9 @@ Easy-Medium
 **Expected Time Commitment**:
 175 Hour
 
-**Technical skills requried**
+**Technical skills required**
 
-Typescript, nodejs, websocket, EDA basics
+Typescript, Node.js, websocket, EDA basics
 
 
 ## 2) Automate listing of members of technical steering committee: Community

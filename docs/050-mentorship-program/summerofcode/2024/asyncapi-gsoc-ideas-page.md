@@ -1,3 +1,8 @@
+---
+title: AsyncAPI GSoC Ideas Page 2024
+weight: 180
+---
+
 # AsyncAPI Ideas Page: Google Summer of Code 2024
 Welcome to the **AsyncAPI Ideas Page** with our proposed projects for Google Summer of Code (GSoC) 2024! If you are an interested student/contributor, please don't hesitate to contact our mentors directly to discuss project ideas.
 
@@ -55,7 +60,7 @@ Improve social sharing for [AsyncAPI Studio](https://studio.asyncapi.com/) by im
 - 👩🏿‍🏫 **Mentor(s):** [@smoya](https://github.com/smoya)
 - ⏳ **Length:** 175 Hours
 
-## 7) [Conference Website Maintainance](https://github.com/asyncapi/conference-website/issues/284)
+## 7) [Conference Website Maintenance](https://github.com/asyncapi/conference-website/issues/284)
 Ensure our conference website remains a dynamic and user-friendly for the upcoming 2024 AsyncAPI Conference.
 
 - 🎯 **Outcome:** Improve the website's efficiency and user-friendliness for an improved user experience. 

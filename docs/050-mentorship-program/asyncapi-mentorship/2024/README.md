@@ -1,4 +1,9 @@
-# Status: In Progress
+---
+title: AsyncAPI Mentorship Program 2024
+weight: 70
+---
+
+# Status: Completed
 
 ## Timeline
 
@@ -11,8 +16,8 @@ Mentorship duration - 12 to 18weeks \(full-time schedule\)
 ## Accepted projects
 | No | Project Idea | Mentor/s | Category | Mentee/s |
 | --- | --- | --- | --- | --- |
-| 1 | [Enhancing Developer Experience in CLI](https://github.com/orgs/asyncapi/discussions/1361#discussioncomment-10498762) | [Souvik De](https://github.com/souvikns) | Engineering | [Aayush Saini](https://github.com/AayushSaini101) |
-| 2 | [Becoming a Maintainer of AsyncAPI Generator](https://github.com/orgs/asyncapi/discussions/1361#discussioncomment-10520123) | [Lukasz Gornicki](https://github.com/derberg) | Engineering | [Mohan Kumar](https://github.com/ItshMoh) |
+| 1 |[Enhancing Developer Experience in CLI](https://github.com/orgs/asyncapi/discussions/1361#discussioncomment-10498762) | [Souvik De](https://github.com/souvikns) | Engineering | [Aayush Saini](https://github.com/AayushSaini101) |
+| 2 |[Becoming a Maintainer of AsyncAPI Generator](https://github.com/orgs/asyncapi/discussions/1361#discussioncomment-10520123) | [Lukasz Gornicki](https://github.com/derberg) | Engineering | [Mohan Kumar](https://github.com/ItshMoh) |
 | 3 |[Migration of build + workflow scripts to typescript](https://github.com/orgs/asyncapi/discussions/1361#discussioncomment-10524236) | [Akshat Nema](https://github.com/AKSHATNEMA) | Engineering | [Zeel Rajodiya](https://github.com/JeelRajodiya)  |
 | 4 |[Holopin Design Project](https://github.com/orgs/asyncapi/discussions/1361#discussioncomment-10529752) | [Aishat Muibudeen](https://github.com/Mayaleeeee) | Design | [Olumide](https://github.com/Oloso-surur) |
 | 5 |[Onboarding Contributor Guides](https://github.com/orgs/asyncapi/discussions/1361#discussioncomment-10610947) | [Thulisile Sibanda](https://github.com/thulieblack), [Anton](https://github.com/bandantonio)  | Docs | [Anushka Saxena](https://github.com/SaxenaAnushka102), [Aahil](https://github.com/Aahil13), [Ezinne Anne Emilia](https://github.com/ezinneanne) |

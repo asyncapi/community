@@ -1,3 +1,8 @@
+---
+title: AsyncAPI GSoC Ideas Page 2025
+weight: 190
+---
+
 # AsyncAPI Ideas Page: Google Summer of Code 2025
 Welcome to the **AsyncAPI Ideas Page** with our proposed projects for Google Summer of Code (GSoC) 2025! If you are an interested contributor, please don't hesitate to contact our mentors directly to discuss project ideas.
 

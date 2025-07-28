@@ -1,6 +1,6 @@
 ---
-title : 'Create new docs directories'
-weight : 80
+title: Create New Docs Directories
+weight: 120
 ---
 
 ### Create new docs directories

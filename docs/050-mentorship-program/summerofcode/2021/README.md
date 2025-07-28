@@ -1,3 +1,8 @@
+---
+title: Google Summer of Code 2021
+weight: 150
+---
+
 # Status: Completed
 
 ## Timeline
@@ -15,21 +20,21 @@
 
 ## 1) AsyncAPI Diff
 
-A library that as the input gets two AsyncAPI documents and shows changes between them. As an output, you get json pointers to sections that are different. The main purpose of such a tool is a changelog where you can present to the user what has changed between v1 and v2 of the document. Some ideas can be picked up from https://github.com/OpenAPITools/openapi-diff  
+A library that as the input gets two AsyncAPI documents and shows changes between them. As an output, you get json pointers to sections that are different. The main purpose of such a tool is a changelog where you can present to the user what has changed between v1 and v2 of the document. Some ideas can be picked up from [OpenAPITools](https://github.com/OpenAPITools/openapi-diff)
 We basically need a library that can be later used to build such a UI
 Use case:
 The result of diff is a part of changelog/release notes, so users can easily spot what parts of the document changed so they can understand how affected they are by the change
 Diff is needed in a review process, so the reviewer gets an overview of specification changes
 Required knowledge:
 There is not much knowledge about the spec itself needed. It is about pointing out differences in 2 different files, but not as pointing what lines changed but in general what objects changed. So if there was an update in payload, the library must specify what channel in what message got updated (with json pointers most probably). You can familiarize with other tools that do it already for other specifications.
-We already started work on the CLI so before summer there will be enough to plug in this functionality https://github.com/asyncapi/cli
+We already started work on the [CLI](https://github.com/asyncapi/cli) so before summer there will be enough to plug in this functionality 
 
 ## 2) AsyncAPI Applications Relations Finder
 
 A library that as the input gets a list of AsyncAPI documents and analyzes them to get information about Applications described by those files:
 If they subscribe or publish to the same channels
 If one subscribes to a channel that the other one publishes to
-If there are apps that are subscribed to channels that no one publishes too
+If there are apps that are subscribed to channels that no one publishes to
 As an output, we should get a format that can be used to generate a diagram of relations between applications with additional metadata information about them (message, schemas).
 
 
@@ -40,7 +45,7 @@ Required knowledge:
 There is no need to have any experience in event-driven architecture. You do not even need to know AsyncAPI spec too much. It is a pure coding task where you will need to find matching patterns between different documents and return this information. You will have the full support of the mentor on the subject. Mentors will define requirements, etc.
 There is no decision yet if this is a library that will have to live in a separate repository or be a part of an existing CLI or UI project.
 We already started work on the CLI so before summer there will be enough to plug in this functionality
-[asyncapi/cli  ](https://github.com/asyncapi/cli)
+[asyncapi/cli](https://github.com/asyncapi/cli)
 
 ## 3) AsyncAPI Extensions registry
 

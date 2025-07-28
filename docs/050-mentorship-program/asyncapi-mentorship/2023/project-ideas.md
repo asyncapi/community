@@ -1,3 +1,8 @@
+---
+title: AsyncAPI Mentorship 2023 Project Ideas
+weight: 60
+---
+
 # Projects ideas
 
 
