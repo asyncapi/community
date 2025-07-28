@@ -1,4 +1,4 @@
 ---
-title: Contribution Guidelines
-weight: 20
+title: 'Contribution Guidelines'
+weight: 3
 ---

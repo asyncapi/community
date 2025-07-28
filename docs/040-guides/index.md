@@ -1,6 +1,6 @@
 ---
 title: How-to Guides
-weight: 5
+weight: 7
 ---
 
 This section contains step-by-step instructions and best practices for working on tasks within the AsyncAPI ecosystem, including tools, infrastructure, and community resources. These guides are designed to help maintainers, contributors, and community members perform common tasks efficiently and consistently.

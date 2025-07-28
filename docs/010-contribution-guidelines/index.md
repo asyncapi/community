@@ -1,6 +1,6 @@
 ---
 title: Getting Started with Contributions
-weight: 5
+weight: 3
 ---
 
 This section covers everything you need to know about contributing to AsyncAPI:

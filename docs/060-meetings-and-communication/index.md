@@ -1,6 +1,6 @@
 ---
 title: Community Meetings and Communication
-weight: 5
+weight: 9
 ---
 
 This section provides guidelines and resources for effective communication within our global community, including meeting organization, documentation discussions, and online etiquette.

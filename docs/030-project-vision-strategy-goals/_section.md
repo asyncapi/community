@@ -1,4 +1,4 @@
 ---
-title: Project Vision Strategy Goals
-weight: 50
+title: 'Project Vision Strategy Goals'
+weight: 6
 ---

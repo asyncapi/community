@@ -1,4 +1,4 @@
 ---
-title: Onboarding
-weight: 10
+title: 'Onboarding'
+weight: 2
 ---

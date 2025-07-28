@@ -1,4 +1,4 @@
 ---
-title: Marketing
-weight: 90
+title: 'Marketing'
+weight: 10
 ---

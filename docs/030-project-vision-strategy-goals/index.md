@@ -1,6 +1,6 @@
 ---
 title: Vision and Strategy
-weight: 5
+weight: 6
 ---
 
 This section outlines our long-term vision, strategic initiatives, and concrete goals that guide the project's direction and community efforts.
