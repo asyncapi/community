@@ -1,6 +1,6 @@
 ---
 title: Social Media Communication Guidelines
-# weight: 10
+weight: 10
 ---
 
 🚧 This document is under construction.
