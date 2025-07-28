@@ -74,7 +74,7 @@ jobs:
 
       # Needed as axios and js-yaml are not available in the default environment
       - name: Install the dependencies
-        run: npm install js-yaml@4.1.0 axios@1.7.4 node-mailjet@6.0.8
+        run: npm install js-yaml@4.1.0 axios@1.7.4 node-mailjet@6.0.9
         shell: bash
 
       - name: Notify TSC Members
