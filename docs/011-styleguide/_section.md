@@ -1,4 +1,3 @@
 ---
-title: Style Guide
-weight: 30
----
+title: 'Style Guide'
+weight: 4
