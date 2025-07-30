@@ -15,8 +15,8 @@ At AsyncAPI, we value **quality over quantity**. This guide will help you make m
 
 Contrary to popular belief, **contributions are not limited to code**. At AsyncAPI, we encourage contributions in all areas of the project. Below is a table of contributions you can make:
 
-| Emoji | Contribution Area    | Examples & How to Get Started                                                                                                                                                                                                                         |
-|:-----:|:---------------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Emoji   | Contribution Area  | Examples & How to Get Started |
+| :-----: | :----------------- | :---------------------------- |
 |  💻   | Code                 | Fix bugs, add features, refactor code, improve performance. See [good first issues](https://github.com/issues?q=is%3Aopen+org%3Aasyncapi+label%3A%22good+first+issue%22) or [open an issue](https://github.com/asyncapi/community/issues/new/choose). |
 |  📖   | Documentation        | Improve docs, fix typos, clarify guides, update README. Check [docs issues](https://github.com/asyncapi/community/issues) or suggest changes directly.                                                                                                |
 |  🐛   | Bug Reports          | Report bugs, help reproduce issues, suggest fixes. [Open a bug issue](https://github.com/asyncapi/community/issues/new?assignees=&labels=bug&template=bug_report.md).                                                                                 |
