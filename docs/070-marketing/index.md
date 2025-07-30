@@ -1,6 +1,6 @@
 ---
 title: Marketing
-weight: 5
+weight: 10
 ---
 
 This section provides resources, guidelines, and standards for representing the AsyncAPI brand, organizing community events, and effectively communicating about the project to various audiences.

@@ -1,4 +1,4 @@
 ---
-title: Governance And Policies
-weight: 40
+title: 'Governance And Policies'
+weight: 5
 ---

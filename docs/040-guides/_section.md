@@ -1,4 +1,4 @@
 ---
-title: Guides
-weight: 60
+title: 'Guides'
+weight: 7
 ---

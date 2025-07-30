@@ -1,6 +1,6 @@
 ---
 title: Introduction
-weight: 5
+weight: 2
 ---
 ## Technical writer onboarding guide
 
@@ -17,6 +17,3 @@ The goal is providing docs contributors with the necessary tools and knowledge t
 * Implement and propose updates to our documentation.
 * Obtain and incorporate reviewers' feedback.
 * Publish changes successfully.
-
-
-
