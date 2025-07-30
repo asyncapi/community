@@ -135,7 +135,7 @@ Easy-Medium
 **Expected Time Commitment**:
 175 Hour
 
-## 5) AsyncAPI: Add help/{command} endpoint: Server API
+## 5) AsyncAPI: Add `help/{command}` endpoint: Server API
 
 Suggested by Marc DiPasquale in Slack comment https://asyncapi.slack.com/archives/CQVJXFNQL/p1662141074739369?thread_ts=1661395911.924239&cid=CQVJXFNQL
 
