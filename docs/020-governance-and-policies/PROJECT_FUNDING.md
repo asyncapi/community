@@ -1,4 +1,9 @@
-## Enhancing Event-Driven Architectures: Support AsyncAPI Initiative
+---
+title: Enhancing Event-Driven Architectures - Support AsyncAPI Initiative
+weight: 80
+---
+
+## Enhancing Event-Driven Architectures - Support AsyncAPI Initiative
 
 ### Overview
 
@@ -29,7 +34,9 @@ Contribute funds to AsyncAPI through any of the following channels:
 
 <center>
 <a href="https://opencollective.com/asyncapi/contribute/platinum-sponsors-8119/checkout?interval=month&amount=2000" target="_blank">
-  <img src="https://opencollective.com/asyncapi/donate/button@2x.png?color=blue" width=300 />
+  <img src="https://opencollective.com/asyncapi/donate/button@2x.png?color=blue"
+       width="300"
+       alt="Donate to AsyncAPI via Open Collective" />
 </a>
 </center>
 
@@ -100,7 +107,9 @@ Every year we organize a conference that attracts many participants. Only last y
 
 
 <a href="https://opencollective.com/asyncapi/contribute/platinum-sponsors-8119/checkout?interval=month&amount=2000" target="_blank">
-  <img src="https://opencollective.com/asyncapi/donate/button@2x.png?color=blue" width=300 />
+  <img src="https://opencollective.com/asyncapi/donate/button@2x.png?color=blue"
+       width="300"
+       alt="Donate to AsyncAPI via Open Collective" />
 </a>
 
 ### Contact

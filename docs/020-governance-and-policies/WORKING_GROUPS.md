@@ -1,3 +1,8 @@
+---
+title: Working Groups
+weight: 60
+---
+
 ### Definition of a Working Group
 
 A Working Group is a group of people in our community who share a common interest beyond GitHub repositories.
@@ -19,7 +24,7 @@ A Working Group has no authority or power over the roadmap of the projects they 
 
 A Working Group must discuss ideas and solutions in public, and communicate through official channels all relevant discussions and implementations that want to suggest to others.
 
-It is recommended that the Working Group schedules meetings using the methods described at https://github.com/asyncapi/community/blob/master/MEETINGS_ORGANIZATION.md.
+It is recommended that the Working Group schedules meetings using the methods described at [MEETINGS_ORGANIZATION.md](../060-meetings-and-communication/MEETINGS_ORGANIZATION.md).
 
 Working Groups should be listed on the [AsyncAPI website](https://www.asyncapi.com), along with their description, goals, members, and anything the Working Group wants to include.
 

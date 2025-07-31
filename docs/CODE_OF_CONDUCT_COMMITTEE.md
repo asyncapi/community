@@ -1,8 +1,13 @@
+---
+title: AsyncAPI Code of Conduct Committee
+weight: 998
+---
+
 # AsyncAPI Code of Conduct Committee
 
 ## Purpose
 
-The AsyncAPI Code of Conduct Committee (CoC Committee) is a committee that responds to investigates, and resolves [AsyncAPI Code of Conduct](https://github.com/asyncapi/community/blob/master/CODE_OF_CONDUCT.md) incidents.
+The AsyncAPI Code of Conduct Committee (CoC Committee) is a committee that responds to investigates, and resolves [AsyncAPI Code of Conduct](https://github.com/asyncapi/.github/blob/master/CODE_OF_CONDUCT.md) incidents.
 
 The members of the CoC Committee are members of the [Technical Steering Committee](https://www.asyncapi.com/community/tsc) (TSC) [voted](https://github.com/orgs/asyncapi/discussions/682#discussioncomment-7498209) publicly by the community. The committee has a two-year term, after which re-election will take place.
 

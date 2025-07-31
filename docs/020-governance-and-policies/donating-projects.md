@@ -1,3 +1,8 @@
+---
+title: Donating Projects
+weight: 90
+---
+
 ## Donating Your Project
 
 Donating your open-source project to an open-source initiative involves transferring ownership or stewardship to an organization that supports and promotes open-source software. It ensures the project's sustainability, attracts more contributors, and aligns it with broader community goals.

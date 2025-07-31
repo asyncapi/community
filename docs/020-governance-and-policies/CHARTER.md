@@ -1,8 +1,12 @@
 ---
+title: Charter
+weight: 10
+---
+
 <p align="center"><strong>Technical Charter (the “Charter”)</strong></p>
 <p align="center">
-  for</br>
-  AsyncAPI Project a Series of LF Projects, LLC</br>
+  for<br />
+  AsyncAPI Project a Series of LF Projects, LLC<br />
   Adopted 03-19-2021, Amended 05-05-2025
 </p>
 

@@ -1,7 +1,7 @@
 ---
 title: Following Conventional Commits
 description: This guide teaches you how to write clear and structured commit messages using the Conventional Commits standard.
-weight: 120
+weight: 60
 ---
 
 When you contribute to a project, you're not just adding code or docs but also context. Your changes become part of the project's history, and your commit messages explain why the changes were made.

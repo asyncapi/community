@@ -1,6 +1,6 @@
 ---
 title: 'Adhering to Slack Etiquette'
-weight: 170
+weight: 30
 ---
 
 AsyncAPI Community uses Slack for real-time conversations. It helps us stay connected, ask questions, collaborate on issues, and learn from each other. Join us by following [this invitation](https://www.asyncapi.com/slack-invite/). Also, take a look at our community etiquette below to make sure you're on the right page.
