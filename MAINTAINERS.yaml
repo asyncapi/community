@@ -161,7 +161,6 @@
     - generator
     - parser-js
     - converter-js
-    - generator-react-sdk
     - modelina
     - simulator
     - parser-api
@@ -250,7 +249,6 @@
     - html-template
     - markdown-template
     - template-for-generator-templates
-    - generator-react-sdk
     - modelina
     - template-for-go-projects
     - diff
