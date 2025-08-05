@@ -42,4 +42,23 @@ Managed by LF.
 - Netlify: Our additional open source plan gives basic stats too
 - [LFX Insights](https://lfx.linuxfoundation.org/tools/insights/): Lots of GitHub-stats about the org. We can also manage some of the info.
 
-- 
+## Package Managers (TBD)
+
+For packages/libraries:
+- [npm](https://www.npmjs.com/) (JS and TS world): we own `@asyncapi` scope. Publishing is automated, and deprecation is manually done by https://github.com/derberg
+- [Maven Central](https://central.sonatype.com/) (Java world): we own `com.asyncapi` namespace. Manual publishing done by https://github.com/Pakisan
+- [NuGet](https://www.nuget.org/) (.NET world): `asyncapi` prefix is already reserved by LEGO. This needs to be solved at some point in time: https://github.com/orgs/asyncapi/discussions/1804. We have our account and https://github.com/asyncapi/saunter is published there manually. A project like https://github.com/asyncapi/net-sdk is not migrated atm.
+
+For plugins:
+- [VisualStudio Marketplace](https://marketplace.visualstudio.com/publishers/asyncapi): We have an account under which we publish https://github.com/asyncapi/vs-asyncapi-preview in automated way
+- [Open VSX Registry](https://open-vsx.org/namespace/asyncapi): We have an official account to publish https://github.com/asyncapi/vs-asyncapi-preview in automated way
+- [JetBrains](https://plugins.jetbrains.com/plugin/15673-asyncapi#): Not official account to publish https://github.com/asyncapi/jasyncapi-idea-plugin in manual way. Atm https://github.com/Pakisan takes care of it.
+
+## Amazing Humans
+
+People we hire through Open Collective contracts or pay for a specific job to be done in one of our official programs. All costs below are always planned in the budget and approved by TSC. For clarity and better budget planning goal is to have dedicated subprojects in Open Collective platform to secure funding more easily.
+
+- [Thulie](https://github.com/thulieblack): hired through official contract with Open Source Collective (on our behalf) to do community management ($2.5k monthly). Managed through https://opencollective.com/asyncapi/projects/community-manager-budget
+- [Ash](https://github.com/aeworxet): makes sure AsyncAPI Bounty program runs smoothly, organizes 4 rounds each quarter. We pay $400 for each round. We started to manage funding through https://opencollective.com/asyncapi/projects/asyncapi-bounty-program
+- [Bami](https://github.com/iambami): hired through official contract with Open Source Collective (on our behalf) to do community marketing ($2k monthly). Managed through https://opencollective.com/asyncapi/projects/community-marketing-specialist
+- [Ace](https://github.com/AceTheCreator): makes sure we participate in different mentorship programs and also host our own. We pay $2k for each program ($1 for all the work to kick off the program, get funding, communications, and then $1k at the end once completed and the summary is published). No single Open Collective subproject for securing funds. Till now, we did dedicated projects per mentorship, but with the introduction of [cohorts](https://www.asyncapi.com/blog/2024-mentorship-program-summary#refocus-setting-our-future-intentions) maybe makes sense to maintain one project for all mentorships, with funds secured for Ace payment too.
