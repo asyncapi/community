@@ -25,13 +25,13 @@ At AsyncAPI, we value **quality over quantity**. This guide will help you make m
 - Check the [general roadmap](https://www.asyncapi.com/roadmap).
 
 ### Steps to making a good contribution
-1. Set up your workflow environment using the [git workflow guide](git-workflow.md).
+1. Set up your workflow environment using the [git workflow guide](git-workflow).
 2. Search for [good first issues](https://github.com/issues?page=1&q=is%3Aopen+org%3Aasyncapi+sort%3Aupdated-desc+label%3A%22good+first+issue%22). 
 3. When you find one, comment on your interest and share the approach to solving the issue (please don't ask to be assigned, as it could be flagged as spam).
 4. If you noticed a bug, typo, or needed improvement, feel free to create an issue.
 5. **Make a PR only after a maintainer assigned the issue to you or asks you to work on it** even if you created the issue yourself.
 6. Follow the [conventional commits guide](conventional-commits.md) to write a good PR title.
-7. Follow the [git workflow document](git-workflow.md) when working on your changes and making a PR.
+7. Follow the [git workflow document](git-workflow) when working on your changes and making a PR.
 8. After making a PR, patiently wait for reviews.
 9. Make sure all your PR checks pass (turn green) to speed up the merging process.  
 10. If your PR hasn’t been reviewed after **a week and a half**, you can gently remind a maintainer on Slack or GitHub. Delays can happen for various reasons, but no one is ignoring you! 🙏🏼 .

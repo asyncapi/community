@@ -23,7 +23,7 @@ Here's how to select an issue to contribute to:
 
 **Step 2: Open a Pull Request**
 
-To open a pull request successfully, follow our [Git workflows contributors guide](git-workflow.md).
+To open a pull request successfully, follow our [Git workflows contributors guide](git-workflow).
 
 Use the following steps to open your pull request:
 1. Configure a fork

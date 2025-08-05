@@ -13,7 +13,7 @@ Welcome to the AsyncAPI community! We're excited to have you here. Think of Asyn
 ## Prerequisites
  Before you begin contributing code, make sure you're familiar with the following:
 
-- [Git Workflow Guide](git-workflow.md): Learn how to fork, branch, commit, and open pull requests.
+- [Git Workflow Guide](git-workflow): Learn how to fork, branch, commit, and open pull requests.
 - [Git](https://git-scm.com) and [GitHub](https://github.com): These are your primary tools for version control and collaboration. Learn the basics [here](https://docs.github.com/en/get-started).  
 - Code Editor: Your tool to work with the source code of our repositories and version control. For example, [VS Code](https://code.visualstudio.com), [Sublime Text](https://www.sublimetext.com), [JetBrains IDEs](https://www.jetbrains.com/ides/), or any other tool you prefer.
 - [Node.js & npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm): AsyncAPI relies on JavaScript/TypeScript, so ensure these are installed and configured.  
