@@ -27,7 +27,8 @@ Managed by LF.
 
 ## GitHub
 
-- Org: https://github.com/asyncapi
+- Main Org: https://github.com/asyncapi
+- Org with archived repos: https://github.com/asyncapi-archived-repos
 - Bots: https://github.com/asyncapi-bot and https://github.com/asyncapi-bot-eve used in GitHub Actions automation
 
 ## Deployments
