@@ -33,7 +33,7 @@ Managed by LF.
 ## Deployments
 
 - DigitalOcean: for deployment of https://github.com/asyncapi/server-api.
-- Netlify: for [website](https://github.com/asyncapi/website) and [conference website](https://github.com/asyncapi/conference-website) deployments.
+- Netlify: for [website](https://github.com/asyncapi/website), [conference website](https://github.com/asyncapi/conference-website), and [studio](https://github.com/asyncapi/studio) deployments.
 
 ## Analytics/Stats
 
