@@ -3,7 +3,7 @@ title: Volunteering as a Contributor
 weight: 100
 ---
 
-Not every contribution needs to be tied to a stipend. The AsyncAPI Maintainership Program(AMP) proudly welcomes volunteer mentees, contributors who are eager to learn, grow, and give back to open source, even without financial compensation. 
+Not every contribution needs to be tied to a stipend. The AsyncAPI Maintainership Program (AMP) proudly welcomes volunteer mentees, contributors who are eager to learn, grow, and give back to open source, even without financial compensation. 
 
 ## Why Volunteer?
 

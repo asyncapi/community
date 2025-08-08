@@ -20,7 +20,7 @@ During this phase, contributor applications are reviewed collaboratively by prog
     Applications that pass the initial screening are forwarded to the appropriate mentors. Mentors assess each submission based on its alignment with the project’s scope, clarity, feasibility, and the applicant’s relevant experience.
 
 - **Shortlisting Candidates:** 
-    Based on their evaluations, mentors can submit a shortlist of up to **three preferred contributors** per project to the program organizers for final consideration in the next phase(contribution period).
+    Based on their evaluations, mentors can submit a shortlist of up to **three preferred contributors** per project to the program organizers for final consideration in the next phase (contribution period).
 
 ## Final Application Phase
 

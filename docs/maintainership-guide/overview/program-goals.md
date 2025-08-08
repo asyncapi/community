@@ -29,7 +29,7 @@ By the end of the program, participants will have:
 
 - Successfully contributed to key issues, features, or processes within the AsyncAPI organization projects.
   
-- Gained practical experience in project maintainability, issue triaging, and release workflows(code-related projects).
+- Gained practical experience in project maintainability, issue triaging, and release workflows (code-related projects)
 
 - Demonstrated a clear understanding of what it means to be an open-source maintainer, technically and socially.
   

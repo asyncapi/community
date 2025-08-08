@@ -5,7 +5,7 @@ weight: 100
 
 ## General Tips
 
-Being a mentor is incredibly rewarding, but it also comes with its own set of challenges. Here are some tips to help you make the most of your mentorship experience while maintaining balance and boundaries:
+Being a mentor is incredibly rewarding, but it also comes with its own set of challenges. Below are tips to help you make the most of your mentorship experience while maintaining balance and boundaries.
 
 ### Take a break when needed
 
@@ -31,7 +31,7 @@ You are not expected to be available 24/7. Setting clear boundaries helps both y
 
 ## Project Idea Tips
 
-The project idea you mentor is the backbone of your AMP experience. A well-scoped, impactful idea not only attracts the right contributor but also ensures a smoother, more rewarding mentorship journey. Here’s what mentors should know and follow when proposing and managing project ideas:
+The project idea you mentor is the backbone of your AMP experience. A well-scoped, impactful idea not only attracts the right contributor but also ensures a smoother, more rewarding mentorship journey. Below are some key things mentors should know and follow when proposing and managing project ideas.
 
 ### One Idea, One Contributor
 

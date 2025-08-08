@@ -7,15 +7,15 @@ weight: 5
 
 **Welcome to the AsyncAPI Maintainership Program Guide! This is a community-driven resource that captures everything we've learned from organizing, mentoring, collaborating, and building with contributors across the globe all wrapped into one handy playbook for aspiring maintainers.**
 
-Whether you're new to open source or ready to level up your opensource skills, this guide will walk you through the principles, practices, and expectations of being a successful participant under the AsyncAPI Maintainership Program.
+Whether you're new to open source or ready to level up, this guide walks you through the principles, practices, and expectations of being a successful participant in the AsyncAPI Maintainership Program.
 
-> _Note: The Maintainership organizer guide is never finished. It's an ongoing project that we are always trying to update as we and the broader community of program organizers learn and grow together._
+> **Note**: The Maintainership organizer guide is an ongoing project that we continuously update as we and the broader community of program organizers learn and grow together.
 
 ## Introduction to Organizer Guide
 
 Are you ready to grow as an opensource contributor and give back to the ecosystem?
 
-Each cycle, maintainers/mentors drive AsyncAPI projects forward by mentoring contributors, defining meaningful work, and contributing to API standards and tooling that power real-world event-driven systems. Whether it’s your first time or you’ve mentored before, this guide aims to support your journey in experiencing the most of the maintainership program.
+Each cycle, maintainers/mentors drive AsyncAPI projects forward by mentoring contributors, defining meaningful work, and contributing to API standards and tooling that power real-world event-driven systems. Whether it’s your first time or you’ve mentored before, this guide aims to support your journey in experiencing the most of the Maintainership program.
 
 ### Code of Conduct
 
