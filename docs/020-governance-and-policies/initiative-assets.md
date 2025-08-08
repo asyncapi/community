@@ -31,9 +31,15 @@ Managed by LF.
 - Org with archived repos: https://github.com/asyncapi-archived-repos
 - Bots: https://github.com/asyncapi-bot and https://github.com/asyncapi-bot-eve used in GitHub Actions automation
 
+### Others
+
+- SonarCloud for PR scanning
+- CodeRabbit for PR scanning
+- CodeCov for PR test coverage scanning
+  
 ## Deployments
 
-- DigitalOcean: for deployment of https://github.com/asyncapi/server-api.
+- DigitalOcean: for deployment of https://github.com/asyncapi/server-api. Renewal is needed every year.
 - Netlify: for [website](https://github.com/asyncapi/website), [conference website](https://github.com/asyncapi/conference-website), and [studio](https://github.com/asyncapi/studio) deployments.
 
 ## Analytics/Stats
@@ -62,3 +68,23 @@ People we hire through Open Collective contracts or pay for a specific job to be
 - [Ash](https://github.com/aeworxet): makes sure AsyncAPI Bounty program runs smoothly, organizes 4 rounds each quarter. We pay $400 for each round. We started to manage funding through https://opencollective.com/asyncapi/projects/asyncapi-bounty-program
 - [Bami](https://github.com/iambami): hired through official contract with Open Source Collective (on our behalf) to do community marketing ($2k monthly). Managed through https://opencollective.com/asyncapi/projects/community-marketing-specialist
 - [Ace](https://github.com/AceTheCreator): makes sure we participate in different mentorship programs and also host our own. We pay $2k for each program ($1 for all the work to kick off the program, get funding, communications, and then $1k at the end once completed and the summary is published). No single Open Collective subproject for securing funds. Till now, we did dedicated projects per mentorship, but with the introduction of [cohorts](https://www.asyncapi.com/blog/2024-mentorship-program-summary#refocus-setting-our-future-intentions) maybe makes sense to maintain one project for all mentorships, with funds secured for Ace payment too.
+
+## Social Media
+
+- Buffer: we pay for it $480 once a year. Used to post in one place and send posts to all social media
+- LinkedIn: https://www.linkedin.com/company/asyncapi
+- X: https://x.com/AsyncAPISpec
+- Mastodon: https://fosstodon.org/@AsyncAPISpec
+
+## Messangers
+
+- Slack: Pro Plan for free. We don't need to renew anything.
+
+## Meetings
+
+- [Restream](https://restream.io/): Streaming to different social media channels. Free pro access. Needs renewal every year.
+- Zoom: Paid service. We approve it as part of the budget once a year.
+
+## Video
+
+- YouTube: https://www.youtube.com/@AsyncAPI
