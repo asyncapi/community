@@ -131,12 +131,10 @@
     - converter-js
     - bindings
     - enterprise-patterns
-    - raml-dt-schema-parser
     - openapi-schema-parser
     - html-template
     - markdown-template
     - nodejs-ws-template
-    - glee
     - brand
   githubID: 242119
 - name: Gerald Loeffler
@@ -162,7 +160,6 @@
     - parser-js
     - converter-js
     - modelina
-    - simulator
     - parser-api
     - EDAVisualiser
   githubID: 13396189
@@ -179,7 +176,6 @@
     - studio
     - .github
     - optimizer
-    - glee
   githubID: 32505158
 - name: Laurent Broudoux
   github: lbroudoux
@@ -241,16 +237,13 @@
   repos:
     - generator
     - asyncapi-react
-    - parser-go
     - parser-js
     - converter-js
-    - converter-go
     - studio
     - html-template
     - markdown-template
     - template-for-generator-templates
     - modelina
-    - template-for-go-projects
     - diff
     - chatbot
     - server-api
@@ -280,15 +273,6 @@
     - java-spring-cloud-stream-template
     - python-paho-template
   githubID: 3926925
-- name: Nektarios Fifes
-  github: NektariosFifes
-  linkedin: nektarios-fifes-372740220
-  slack: U01SE93Q48N
-  availableForHire: true
-  isTscMember: false
-  repos:
-    - simulator
-  githubID: 61620751
 - name: Pavel Bodiachevskii
   github: Pakisan
   slack: U0132LQU8C9
@@ -352,14 +336,10 @@
   availableForHire: false
   isTscMember: false
   repos:
-    - parser-go
     - parser-js
-    - converter-go
-    - raml-dt-schema-parser
     - openapi-schema-parser
     - avro-schema-parser
     - go-watermill-template
-    - template-for-go-projects
     - parser-api
     - server-api
   githubID: 1083296
@@ -373,7 +353,6 @@
   isTscMember: true
   repos:
     - cli
-    - glee
     - bundler
   githubID: 41781438
 - name: David Pereira
