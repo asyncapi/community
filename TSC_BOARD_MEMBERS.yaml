@@ -102,12 +102,10 @@
     - converter-js
     - bindings
     - enterprise-patterns
-    - raml-dt-schema-parser
     - openapi-schema-parser
     - html-template
     - markdown-template
     - nodejs-ws-template
-    - glee
     - brand
   githubID: 242119
 - name: Jonas Lagoni
@@ -123,7 +121,6 @@
     - parser-js
     - converter-js
     - modelina
-    - simulator
     - parser-api
     - EDAVisualiser
   githubID: 13396189
@@ -140,7 +137,6 @@
     - studio
     - .github
     - optimizer
-    - glee
   githubID: 32505158
 - name: Lukasz Gornicki
   github: derberg
@@ -179,16 +175,13 @@
   repos:
     - generator
     - asyncapi-react
-    - parser-go
     - parser-js
     - converter-js
-    - converter-go
     - studio
     - html-template
     - markdown-template
     - template-for-generator-templates
     - modelina
-    - template-for-go-projects
     - diff
     - chatbot
     - server-api
@@ -271,7 +264,6 @@
   isTscMember: true
   repos:
     - cli
-    - glee
     - bundler
   githubID: 41781438
 - name: David Pereira
