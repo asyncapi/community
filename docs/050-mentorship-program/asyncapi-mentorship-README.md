@@ -12,15 +12,14 @@ The AsyncAPI Mentorship makes it easy to sponsor and help train the next generat
 ### docs
 | Year | Term | Status | Announcement | Details |
 | ---- | ---- | ------ | ------------ | ------- |
-
-| 2024 | Sept-Jan | In Progress |       | [Sept-Jan](asyncapi-mentorship-2024-README.md) |
+| 2024 | Sept-Jan | In Progress |       | [Sept-Jan](asyncapi-mentorship-2024-README) |
 | 2024 | Sep-Mar | In Progress  |       | In Progress |
 
 ### master
 | Year | Term | Status | Announcement | Details |
 | ---- | ---- | ------ | ------------ | ------- |
-| 2023 | Jan-Nov | Completed   |       | [Jan-Nov](asyncapi-mentorship-2023-README.md) |
-| 2022 | Jan-Nov | Completed   |       | [Jan-Nov](asyncapi-mentorship-2022-README.md) |
+| 2023 | Jan-Nov | Completed   |       | [Jan-Nov](asyncapi-mentorship-2023-README) |
+| 2022 | Jan-Nov | Completed   |       | [Jan-Nov](asyncapi-mentorship-2022-README) |
 
 
 ## Program Maintainers
@@ -112,7 +111,7 @@ Each accepted AsyncAPI mentorship participant will perform all necessary additio
 - Providing Evaluation of their Mentor
 - Working diligently to complete the Project as it may be modified with the agreement of the Organization
 - Following the coding and documentation standards set out by their Organization
-- Actively participating in the Organization's community and adhering to the Organization's rules and [Code of Conduct](https://github.com/asyncapi/.github/blob/master/CODE_OF_CONDUCT.md).
+- Actively participating in the Organization's community and adhering to the Organization's rules and [Code of Conduct](https://github.com/asyncapi/.github/blob/master/CODE_OF_CONDUCT).
 - Publishing their Project code in a publicly accessible location and under an [Open Source Initiative approved license](http://www.opensource.org/licenses/alphabetical) of the Organization's choice.
 
 If AsyncAPI reasonably believes that a Participant has failed to meet the primary responsibilities, AsyncAPI may remove such Participant from the Program.
