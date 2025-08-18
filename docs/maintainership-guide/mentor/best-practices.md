@@ -44,7 +44,7 @@ Your goal as a mentor is to help contributors become independent problem-solvers
 
 ### 5. **Model Open-Source Best Practices**
 
-   Contributors often learn by watching their mentors. Model the behaviors and workflows that reflect healthy open-source engagement.
+Contributors often learn by watching their mentors. Model the behaviors and workflows that reflect healthy open-source engagement.
 
 - Promote habits like clear issue reporting, clean pull requests, and respectful code reviews.
 - Reinforce ethical practices around transparency, and collaboration.
@@ -52,7 +52,7 @@ Your goal as a mentor is to help contributors become independent problem-solvers
 
 ### 6. **Give and Receive Feedback**
 
-   Effective mentorship is a two-way street. Feedback helps contributors grow, but it also helps you grow as a mentor.
+Effective mentorship is a two-way street. Feedback helps contributors grow, but it also helps you grow as a mentor.
    
 - Provide honest, actionable, and timely feedback throughout the program.
 - Evaluate your mentee as a long-term prospect for becoming a successful open-source developer.
