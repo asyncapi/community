@@ -75,6 +75,7 @@ People we hire through Open Collective contracts or pay for a specific job to be
 - LinkedIn: https://www.linkedin.com/company/asyncapi
 - X: https://x.com/AsyncAPISpec
 - Mastodon: https://fosstodon.org/@AsyncAPISpec
+- Twitch: https://www.twitch.tv/asyncapi
 
 ## Messangers
 
