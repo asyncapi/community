@@ -6,7 +6,7 @@
 
 ## Domains
 
-Managed by LF.
+Managed by Linux Foundation
 
 - asyncapi.com
 - asyncapi.org
