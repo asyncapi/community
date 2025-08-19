@@ -56,9 +56,9 @@ For packages/libraries:
 - [NuGet](https://www.nuget.org/) (.NET world): `asyncapi` prefix is already reserved by LEGO. This needs to be solved at some point in time: https://github.com/orgs/asyncapi/discussions/1804. We have our account and https://github.com/asyncapi/saunter is published there manually. A project like https://github.com/asyncapi/net-sdk is not migrated atm.
 
 For plugins:
-- [VisualStudio Marketplace](https://marketplace.visualstudio.com/publishers/asyncapi): We have an account under which we publish https://github.com/asyncapi/vs-asyncapi-preview in automated way
+- [Visual Studio Marketplace](https://marketplace.visualstudio.com/publishers/asyncapi): We have an account under which we publish https://github.com/asyncapi/vs-asyncapi-preview automatically
 - [Open VSX Registry](https://open-vsx.org/namespace/asyncapi): We have an official account to publish https://github.com/asyncapi/vs-asyncapi-preview in automated way
-- [JetBrains](https://plugins.jetbrains.com/plugin/15673-asyncapi#): Not official account to publish https://github.com/asyncapi/jasyncapi-idea-plugin in manual way. Atm https://github.com/Pakisan takes care of it.
+- [JetBrains](https://plugins.jetbrains.com/plugin/15673-asyncapi#): No official account to publish https://github.com/asyncapi/jasyncapi-idea-plugin; published manually. Currently, https://github.com/Pakisan takes care of it.
 
 ## Amazing Humans
 
