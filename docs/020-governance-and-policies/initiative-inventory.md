@@ -77,7 +77,7 @@ People we hire through Open Collective contracts or pay for a specific job to be
 - Mastodon: https://fosstodon.org/@AsyncAPISpec
 - Twitch: https://www.twitch.tv/asyncapi
 
-## Messangers
+## Messengers
 
 - Slack: Pro Plan for free. We don't need to renew anything.
 
