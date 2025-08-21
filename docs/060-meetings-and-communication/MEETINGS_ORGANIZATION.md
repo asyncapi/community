@@ -47,20 +47,21 @@ This is what you need to do to kick it off:
 
 1. Start your meeting by opening a Zoom meeting. Make sure you are logged into Zoom with your AsyncAPI licensed account.
 
-1. Log into [Restream.io](https://app.restream.io/home) and select `Set up for OBS, Zoom, etc.` option:
+1. Log into [Restream.io](https://app.restream.io/home) and select `Encoder|RMTP (Stream from OBS,Zoom,VMix,etc.)` option:
 
-    <img src="../../assets/meetings/restream1.png" width="50%" />
+    <img src="../../assets/meetings/stream1.png" width="50%" />
 
 1. Click `Update Titles` card:
 
-    <img src="../../assets/meetings/restream2.png" width="50%" />
+    <img src="../../assets/meetings/stream2.png" width="50%" />
 
 1. Provide title and description:
 
     - Title for the live stream that corresponds with the meeting you just started,
     - Meeting description must be provided even if the field is empty; otherwise, the old one from other streams will be used.
+    - Add a thumbnail for the stream as platforms like Youtube require one.
 
-    <img src="../../assets/meetings/restream3.png" width="50%" />
+    <img src="../../assets/meetings/stream3.png" width="50%" />
 
 1. In Zoom, click the `Live Transcript` button to start transcribing the meeting:
 
