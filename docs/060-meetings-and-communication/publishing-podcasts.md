@@ -3,12 +3,10 @@ title: Publishing meetings as podcasts
 weight: 40
 ---
 
+# FAQ 
 
-This document covers how to publish recorded AsyncAPI meetings as podcasts.
-
-# FAQ
-
-## How do I publish broadcasted meetings as podcasts?
+## Publishing recorded meetings as podcasts on AsyncAPI
+This document covers FAQs on publishing recorded AsyncAPI meetings as podcasts. It is intended to guide any AsyncAPI member who has the rights/access to stream and record meetings; on how to publish the recorded meetings as podcasts. For more information on streaming and recording meetings, check the [Meetings-Organization](https://www.asyncapi.com/docs/community/060-meetings-and-communication/MEETINGS_ORGANIZATION) document.
 
 ### Why do we need this feature?
 
@@ -19,15 +17,24 @@ This document covers how to publish recorded AsyncAPI meetings as podcasts.
 
 ### Who can upload the videos?
 
-- The workflow can only be triggered by a person with write access to the `master` branch of the `asyncapi/community` repository.
+- Anyone with write access to the `asyncapi/community` repository’s `master` branch.
 
 ### What is needed?
 
-- The YouTube video ID is needed to trigger the workflow.
+- The YouTube video ID.
 
 ### What is YouTube video ID?
+>> **What is YouTube video ID?**
+The video ID is an 11-character alphanumeric string that uniquely identifies a YouTube video.
+ID is usually the last part of the URL after `v=` or separated by a forward slash (`/`):
+- https://www.youtube.com/watch?v=VIDEO_ID
+- https://www.youtu.be/VIDEO_ID
+- https://www.youtube.com/shorts/VIDEO_ID
+- https://www.youtube.com/embed/VIDEO_ID
+You may also find URLs with a video in a playlist: `https://www.youtube.com/watch?v=VIDEO_ID&list=PLAYLIST_ID`
+Here, video ID is located between `?v=` and `&list=` URL parameters.
+**This workflow accepts only the YouTube *video ID*, not a full URL or playlist. You need to extract the `VIDEO_ID` and provide it as an input.**
 
-- A YouTube video ID is a unique combination of characters that identifies a specific video on the YouTube platform. It's used in the URL of the video to direct users to the exact video they want to watch. The video ID is typically a sequence of letters, numbers, and special characters that generally comes after the "v=" parameter in the URL.
 - [More examples](#list-of-different-types-of-youtube-links) of video ID are given below: ⬇️
 
 #### How to find YouTube ID?
@@ -57,20 +64,14 @@ Here the video ID is the word/entity after `https://www.youtube.com/watch?v=`, i
 
 ### Step-by-step procedure
 
-Here is an example with a procedure on how to use this workflow:
+1. Open the Upload Episode from YouTube To Spotify for Podcasters actions workflow in the `<repo name>` repository
+2. Click on the `Run Workflow` button.
+3. Provide the YouTube ID in the box.
+4. Click on `Run workflow` button. 
+5. Wait for the workflow to finish (It may take some time to upload the video).
 
-1. Go to the `Actions` section on GitHub.
-2. Scroll down the menu on the left-hand side.
-3. Click on the `Upload Episode from YouTube To Spotify for Podcasters` option.
-4. Click on the `Run Workflow` button.
-5. Provide the YouTube ID in the box.
-6. Click on `Run workflow` button. 
-7. Wait for the workflow to finish. (Depending on video size, it may take some time to upload, so please have patience. Thank you.) .
-8. A few moments later....Hurray! Your episode is now uploaded successfully!
-
-You can also modify description and other information for uploaded podcast directly in Spotify:
-
-1. Go to https://podcasters.spotify.com/.
+(Optional) You can modify the description and other information for the uploaded podcast directly in Spotify:
+1. Go to https://creators.spotify.com/.
 2. Login using AsyncAPI account.
-2. Go to `Episodes` section. There, you will see your latest upload.
-3. Perform edits and save them.
+3. Go to the 'Episodes' section to see your latest upload.
+4. Perform edits and save them.
