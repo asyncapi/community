@@ -22,9 +22,7 @@ By becoming an AMP contributor (sponsored or volunteer), you can:
 1. **Sponsored Contributors**: Selected contributors receive a stipend for their participation in the program.
 
 2. **Volunteer Contributors**: 
-Volunteers receive the same mentorship and project experience as sponsored contributors, but do not receive a stipend.
-
-    - This track is ideal if you:
+Volunteers receive the same mentorship and project experience as sponsored contributors, but do not receive a stipend. This track is ideal if you:
 
     - Want to learn and contribute without financial compensation
 
