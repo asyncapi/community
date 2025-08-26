@@ -752,8 +752,10 @@
     - website
     - community
   githubID: 105683440
-- github: Adi-204
+- name: Adi Boghawala
+  github: Adi-204
+  twitter: AdiBoghawala
   isTscMember: false
   repos:
     - generator
-  twitter: AdiBoghawala
+  githubID: 114283933
