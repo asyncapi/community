@@ -591,6 +591,16 @@
     - website
     - conference-website
   githubID: 90895835
+- name: Adi Boghawala
+  github: Adi-204
+  twitter: AdiBoghawala
+  linkedin: adi-boghawala
+  slack: U0867GV384D
+  availableForHire: true
+  isTscMember: true
+  repos:
+    - generator
+  githubID: 114283933
 - name: Daniel Kocot
   img: https://avatars.githubusercontent.com/u/466609?v=4
   bio: >-
