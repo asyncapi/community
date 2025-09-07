@@ -23,12 +23,11 @@ This document covers FAQs on publishing recorded AsyncAPI meetings as podcasts. 
 
 - The YouTube video ID.
 
-### What is YouTube video ID?
->> **What is YouTube video ID?**
+### What is a YouTube video ID?
 The video ID is an 11-character alphanumeric string that uniquely identifies a YouTube video.
 ID is usually the last part of the URL after `v=` or separated by a forward slash (`/`):
 - https://www.youtube.com/watch?v=VIDEO_ID
-- https://www.youtu.be/VIDEO_ID
+- https://youtu.be/VIDEO_ID
 - https://www.youtube.com/shorts/VIDEO_ID
 - https://www.youtube.com/embed/VIDEO_ID
 You may also find URLs with a video in a playlist: `https://www.youtube.com/watch?v=VIDEO_ID&list=PLAYLIST_ID`
