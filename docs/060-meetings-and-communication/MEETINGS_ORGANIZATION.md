@@ -128,7 +128,7 @@ This is what you need to do to kick it off:
 
 1. Make sure you do not create a new event, but select the one you already created on YouTube, with closed captions on:
 
-    <img src="../../assets/meetings/restream7.png" width="40%" alt="Restream: Create event />
+    <img src="../../assets/meetings/restream7.png" width="40%" alt="Restream: Create event" />
 
 1. You are ready to `Go Live`
 
