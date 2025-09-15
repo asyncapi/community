@@ -6,7 +6,7 @@ weight: 90
 This section outlines key terms and phrases used throughout the AsyncAPI Mentorship Program (AMP) documentation. Understanding these definitions will help you navigate the AMP more effectively.
 
 - **AMP**
-    The Abbreviation for the term AsyncAPI Maintainership Program.
+    The abbreviation for the term AsyncAPI Maintainership Program.
 
 - **Program Organizers**  
     The team responsible for organizing, managing, and overseeing the execution of the AMP.
