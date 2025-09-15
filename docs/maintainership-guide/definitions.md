@@ -12,7 +12,7 @@ This section outlines key terms and phrases used throughout the AsyncAPI Mentors
     The team responsible for organising, managing, and overseeing the execution of the AMP.
 
 - **Mentors**  
-    Members of the AsyncAPI community who guide, support, and evaluate mentees throughout the AMO.
+    Members of the AsyncAPI community who guide, support, and evaluate mentees throughout the AMP.
 
 - **AsyncAPI Mentee (Contributor)**  
     An individual who applies to and is accepted into the AMP to contribute to a selected project.
