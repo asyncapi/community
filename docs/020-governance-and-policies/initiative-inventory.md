@@ -20,7 +20,7 @@ Managed by Linux Foundation
     - info@asyncapi.io (used for contact with partners/sponsors and for security reports)
     - press@asyncapi.io (not sure what the status is, never accessed it, old email)
     - bot@asyncapi.io and alias bot+eve@asyncapi.io are used for two AsyncAPI GitHub bot accounts
-- Mailjet: used for emailing TSC members to remind them they did not vote yet
+- Mailjet: used for emailing TSC members to remind them they have not voted yet.
 - Mailchimp:
   - owned by Fran
   - used for [newsletter](https://www.asyncapi.com/en/newsletter) and a separate mailing list for [TSC notifications](https://www.asyncapi.com/community/tsc)
