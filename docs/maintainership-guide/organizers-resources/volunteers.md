@@ -9,7 +9,7 @@ Volunteers play a vital role in extending this effort. Whether you're passionate
 
 ## Roles Volunteers Can Play
 
-As a volunteer in the AMP you may contribute in one or more of the following capacities: 
+As a volunteer in the AMP, you may contribute in one or more of the following capacities: 
 
 - **Program Coordination Support**  
   Work closely with program organizers to help manage timelines, send reminders, and assist in guiding contributors through program processes and Slack discussions.
