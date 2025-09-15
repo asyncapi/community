@@ -17,7 +17,7 @@ To be eligible, contributors must meet all evaluation criteria and submit the re
 
 Mentors receive a flat stipend of **$500**, which is paid **after the completion of the program**, once they have:
 
-- Completed both midterm and final evaluations for their assigned contributor
+- Completed both the midterm and final evaluations for their assigned contributor
 
 - Actively supported their mentee throughout the program
 
