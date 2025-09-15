@@ -41,4 +41,4 @@ Rooted in values of inclusion, collaboration, and growth, this program ensures a
 - Celebrates **all forms of contribution** including code, documentation, design, community, and more.
 - Enforces a zero-tolerance policy for **Code of Conduct violations or misconduct**.
 
-**Creating an empowering open source environment where contributors of all experience levels can grow into maintainers is at heart of the AsyncAPI Maintainership Program.** These principles reflect the experience we strive to create within the program, and the contributor culture we are building across the AsyncAPI ecosystem: one that is rooted in continuous learning, inclusivity, and long-term sustainability.
+**Creating an empowering open source environment where contributors of all experience levels can grow into maintainers is at the heart of the AsyncAPI Maintainership Program.** These principles reflect the experience we strive to create within the program, and the contributor culture we are building across the AsyncAPI ecosystem: one that is rooted in continuous learning, inclusivity, and long-term sustainability.
