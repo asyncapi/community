@@ -5,7 +5,7 @@ weight: 60
 
 Evaluations occur twice during the program duration: at the **midpoint** of the program and the **end** of the program after you submit your final work. Evaluation periods vary for different projects and are determined based on project complexity. For a standard 12-week project, your first evaluation will be at the end of the 6th week, and the final evaluation will be after the 12th week of the contributing period. 
 
-The evaluations are opportunities for both mentors and contributors to evaluate each other and also the program organizers performance. 
+The evaluations provide opportunities for mentors, contributors, and program organizers to assess each other's performance. 
 
 The pass or fail decision from an evaluation should not come as a surprise. You and your mentor will already be communicating, and you should be discussing:
 - Your project progress
