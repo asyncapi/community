@@ -5,7 +5,7 @@ weight: 100
 
 The AsyncAPI Mentorship Program (AMP) is committed to fostering a respectful, inclusive, and harassment-free environment for everyone, regardless of gender identity, age, race, ethnicity, religion, disability, sexual orientation, technical experience, or background.
 
-By participating in AMP, whether as a contributor, mentor, or organizer— you agree to uphold this Code of Conduct across all program platforms, including GitHub, Slack, virtual meetings, and events.
+By participating in AMP, whether as a contributor, mentor, or organizer, you agree to uphold this Code of Conduct across all program platforms, including GitHub, Slack, virtual meetings, and events.
 
 ---
 
