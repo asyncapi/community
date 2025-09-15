@@ -70,7 +70,7 @@ A well-scoped project is only the beginning, maintaining balance and momentum du
 
    - It’s okay to step back if life gets hectic.
 
-   - Let fellow mentors or admins know if you’re overwhelmed, burnout helps no one.
+   - Let fellow mentors or admins know if you’re overwhelmed; burnout helps no one.
 
 - **It’s Okay to Fail a Contributor**
 
