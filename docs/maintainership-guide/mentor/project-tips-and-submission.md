@@ -7,7 +7,7 @@ Being a mentor in the AsyncAPI Maintainership Program (AMP) is incredibly reward
 
 ## 1. Before Submission: Designing a Strong Project Idea
 
-Submitting a Maintainership Program project idea is different from proposing a typical mentorship task in programs like Google Summer of Code. AMP only accepts ideas **explicitly** designed to guide contributors toward long-term maintainership not general one-off assignments.
+Submitting a Maintainership Program project idea is different from proposing a typical mentorship task in programs like Google Summer of Code. AMP only accepts ideas **explicitly** designed to guide contributors toward long-term maintainership, not general one-off assignments.
 
 A strong project idea should:
 
