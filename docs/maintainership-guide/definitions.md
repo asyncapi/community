@@ -9,7 +9,7 @@ This section outlines key terms and phrases used throughout the AsyncAPI Mentors
     The abbreviation for the term AsyncAPI Maintainership Program.
 
 - **Program Organizers**  
-    The team responsible for organizing, managing, and overseeing the execution of the AMP.
+    The team responsible for organising, managing, and overseeing the execution of the AMP.
 
 - **Mentors**  
     Members of the AsyncAPI community who guide, support, and evaluate mentees throughout the AMO.
