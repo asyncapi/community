@@ -17,7 +17,7 @@ The pass or fail decision from an evaluation should not come as a surprise. You 
 
 ## How Evaluations Work
 
-Evaluations are a survey that both the mentor and the contributor fill out during the evaluation period. Program organizers have these evaluation questions for both the contributor and the mentor in advance saved in a **Google Form**.  
+Evaluations are a survey that both the mentor and the contributor fill out during the evaluation period. Program organizers have these evaluation questions for both the contributor and the mentor in advance, saved in a **Google Form**.  
 
 The form takes roughly **10–15 minutes** to fill out and includes questions related to:
 
