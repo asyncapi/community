@@ -14,6 +14,6 @@ _"Working on this project under Niktarios’ mentorship has been an incredible j
 
 _"Thank you for providing such excellent mentorship during the program. I learned a lot from you and truly appreciated your guidance. I hope you continue offering the same support to future contributors. "_ - Ansh Goyal
 
-_"Thank you for giving me to opportunity, and that my background does not define me contributing to OSS."_ - Olumide
+_"Thank you for giving me the opportunity, and that my background does not define me, contributing to OSS."_ - Olumide
 
 _"After completing my mentorship, I became a maintainer of the CLI! I've since created many issues to support newcomers, and the project has now reached over 200+ stars. Thank you for your support—I’ve learned so much from you and gained a deeper understanding of how different kinds of open source projects work."_ - Aayush Saini
