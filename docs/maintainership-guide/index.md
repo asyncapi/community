@@ -5,7 +5,7 @@ weight: 5
 
 ## The AsyncAPI Maintainership Organizer Guide
 
-**Welcome to the AsyncAPI Maintainership Program Guide! This is a community-driven resource that captures everything we've learned from organizing, mentoring, collaborating, and building with contributors across the globe all wrapped into one handy playbook for aspiring maintainers.**
+**Welcome to the AsyncAPI Maintainership Program Guide! This is a community-driven resource that captures everything we've learned from organizing, mentoring, collaborating, and building with contributors across the globe, all wrapped into one handy playbook for aspiring maintainers.**
 
 Whether you're new to open source or ready to level up, this guide walks you through the principles, practices, and expectations of being a successful participant in the AsyncAPI Maintainership Program.
 
