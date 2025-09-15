@@ -20,7 +20,7 @@ To ensure a positive and productive experience for all, participants are expecte
   Be patient with contributors who are still learning. Provide constructive and actionable feedback.
 
 - **Communicate with clarity and care**  
-  Use inclusive language. Avoid jargon, or language that could be misunderstood.
+  Use inclusive language. Avoid jargon or language that could be misunderstood.
 
 - **Honour your commitments**  
   Respect timelines, be responsive to communications, and inform others if you’re unable to meet expectations.
