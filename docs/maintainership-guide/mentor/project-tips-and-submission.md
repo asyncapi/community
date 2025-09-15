@@ -74,7 +74,7 @@ A well-scoped project is only the beginning, maintaining balance and momentum du
 
 - **It’s Okay to Fail a Contributor**
 
-   - If despite your best efforts the pairing doesn’t work:
+   - If, despite your best efforts, the pairing doesn’t work:
 
    - They disappear or stop communicating.
 
