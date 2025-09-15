@@ -42,7 +42,7 @@ AMP is a launchpad. Many alumni have gone on to secure internships, full-time ro
 
 - **Engage with the community**: Join discussions, participate in bonding activities, and be active on GitHub, Slack, and sync calls.
 
-- **Work in the open**: Publish your code under an OSI-approved open source license.
+- **Work in the open**: Publish your code under an OSI-approved open-source license.
 
 - **Follow standards**: Adhere to AsyncAPI coding, contribution, and documentation guidelines.
 

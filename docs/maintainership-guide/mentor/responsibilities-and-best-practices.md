@@ -3,7 +3,7 @@ title: Mentor Responsibilities & Best Practices
 weight: 60
 ---
 
-At AsyncAPI, mentorship is one of the most effective ways to teach, upskill, and empower contributors in open source. Mentors are the foundation of this program; they are not just technical experts, but also community leaders who embody the spirit of open collaboration. By offering meaningful guidance, you're not just empowering contributors; you're also growing as a leader and setting the tone for future community members.
+At AsyncAPI, mentorship is one of the most effective ways to teach, upskill, and empower contributors in open-source. Mentors are the foundation of this program; they are not just technical experts, but also community leaders who embody the spirit of open collaboration. By offering meaningful guidance, you're not just empowering contributors; you're also growing as a leader and setting the tone for future community members.
 
 When a contributor is assigned to you, your role is to create an experience that is both supportive and transformative. To help you thrive in this role and get the most out of the program, here are the key responsibilities and essential best practices.
 
@@ -30,9 +30,9 @@ Reliability builds trust. Being consistently available, even for quick check-ins
 Your goal as a mentor is to help contributors become independent problem-solvers. Give them the space to grow by gradually shifting from instruction to guidance.
 
 - **Guide rather than instruct**. Encourage independent thinking while being available for support.  
-- Mentor contributors on both technical skills and open source best practices (e.g., writing good issues and clean pull requests).  
+- Mentor contributors on both technical skills and open-source best practices (e.g., writing good issues and clean pull requests).  
 - **Model open-source best practices** by promoting clear issue reporting, clean pull requests, and respectful code reviews.  
-- Encourage long-term involvement in the open source ecosystem beyond the program.  
+- Encourage long-term involvement in the open-source ecosystem beyond the program.  
 - Reinforce ethical practices around transparency and collaboration.  
 
 ## 4. Evaluation & Feedback

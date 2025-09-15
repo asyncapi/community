@@ -4,7 +4,7 @@ description: This overview page outlines how to be a sponsor/partner in the main
 weight: 80
 ---
 
-The AsyncAPI Maintainership Program is actively seeking mission-aligned partners who are passionate about growing the next generation of open source maintainers and ensuring the long-term sustainability of key AsyncAPI projects.
+The AsyncAPI Maintainership Program is actively seeking mission-aligned partners who are passionate about growing the next generation of open-source maintainers and ensuring the long-term sustainability of key AsyncAPI projects.
 
 ## How you can support us:
 
@@ -45,7 +45,7 @@ Sponsorship isn’t just about giving — it’s about growing together. Here's 
 **Social Impact:**
 
 - Demonstrate your commitment to diversity, equity, and inclusion in tech.
-- Actively support a more accessible and sustainable open source ecosystem.
+- Actively support a more accessible and sustainable open-source ecosystem.
 
 **Talent Pipeline Access:**
 

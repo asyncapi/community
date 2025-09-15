@@ -16,4 +16,4 @@ _"Thank you for providing such excellent mentorship during the program. I learne
 
 _"Thank you for giving me the opportunity, and that my background does not define me, contributing to OSS."_ - Olumide
 
-_"After completing my mentorship, I became a maintainer of the CLI! I've since created many issues to support newcomers, and the project has now reached over 200+ stars. Thank you for your support—I’ve learned so much from you and gained a deeper understanding of how different kinds of open source projects work."_ - Aayush Saini
+_"After completing my mentorship, I became a maintainer of the CLI! I've since created many issues to support newcomers, and the project has now reached over 200+ stars. Thank you for your support—I’ve learned so much from you and gained a deeper understanding of how different kinds of open-source projects work."_ - Aayush Saini

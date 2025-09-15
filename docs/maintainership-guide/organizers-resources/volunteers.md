@@ -5,7 +5,7 @@ weight: 120
 
 The AsyncAPI Maintainership Program (AMP) is coordinated by a small team of two core organizers who manage everything from securing sponsorships and handling budgets to onboarding mentors, supporting contributors, and ensuring the program runs smoothly.
 
-Volunteers play a vital role in extending this effort. Whether you're passionate about open source, community building, mentorship, or just looking for a meaningful way to give back, AMP has a place for you.
+Volunteers play a vital role in extending this effort. Whether you're passionate about open-source, community building, mentorship, or just looking for a meaningful way to give back, AMP has a place for you.
 
 ## Roles Volunteers Can Play
 
@@ -23,8 +23,8 @@ As a volunteer in the AMP, you may contribute in one or more of the following ca
 - **Technical Support & Review**  
   Answer contributor questions about community tools (e.g., GitHub, CI/CD workflows), code quality, pull request etiquette, and help review contributions or proposals when needed.
 
-- **Open Source Culture Guidance**  
-  Share knowledge on open source best practices, AsyncAPI norms, writing good commit messages, and navigating community roles and expectations.
+- **Open-Source Culture Guidance**  
+  Share knowledge on open-source best practices, AsyncAPI norms, writing good commit messages, and navigating community roles and expectations.
 
 - **Event Support**  
   Assist in running program-wide calls such as onboarding sessions, mid-term check-ins, and final presentations. Help keep sessions on track and ensure everyone feels welcome and heard.
@@ -36,7 +36,7 @@ We welcome volunteers from all backgrounds, especially:
 
 - Former AMP contributors or mentors
 - Active AsyncAPI community members and maintainers
-- Experienced open source contributors
+- Experienced open-source contributors
 - Anyone passionate about mentorship, documentation, and community-driven growth
 
 ## How to Get Involved

@@ -5,7 +5,7 @@ weight: 100
 
 ## What is the AsyncAPI Maintainership Program (AMP)?
 
-The AsyncAPI Maintainership Program (AMP) is a mentorship initiative piloted by the AsyncAPI Initiative that supports contributors in becoming long-term maintainers and leaders within the AsyncAPI ecosystem. It’s designed to provide hands-on experience, mentorship, and community support to help contributors grow their skills and make a meaningful impact in open source.
+The AsyncAPI Maintainership Program (AMP) is a mentorship initiative piloted by the AsyncAPI Initiative that supports contributors in becoming long-term maintainers and leaders within the AsyncAPI ecosystem. It’s designed to provide hands-on experience, mentorship, and community support to help contributors grow their skills and make a meaningful impact in open-source.
 
 ## How long does the program last?
 
@@ -17,7 +17,7 @@ The timeline may vary slightly based on project complexity and mentor availabili
 
 We welcome participants from all over the world, especially those passionate about opensource. You can apply if you are:
 
-- Passionate about open source, APIs, or community collaboration
+- Passionate about open-source, APIs, or community collaboration
 - Interested in growing as a contributor and potentially becoming a maintainer
 
 ## Do mentees receive a stipend?

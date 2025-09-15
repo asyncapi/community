@@ -40,7 +40,7 @@ The success of the AsyncAPI Maintainership Program depends heavily on the though
 
 ## Eligibility
 
-AsyncAPI mentors are experienced contributors who actively shape the community and embody its values. They are trusted maintainers, open source advocates, and approachable collaborators.
+AsyncAPI mentors are experienced contributors who actively shape the community and embody its values. They are trusted maintainers, open-source advocates, and approachable collaborators.
 
 To be eligible for the program, mentors must:
 
