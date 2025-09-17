@@ -1,4 +1,5 @@
 name: Verify Member
+description: 'Action to verify whether the person is TSC Member or not'
 outputs:
   isTSCMember:
     description: 'Check whether the person is TSCMember or not'
@@ -21,11 +22,13 @@ runs:
     - name: Verify TSC Member
       id: verify_member
       uses: actions/github-script@v6
+      env:
+        COMMENTER_NAME: ${{ inputs.authorName }}
       with:
         script: |
           const yaml = require('js-yaml');
           const fs = require('fs');
-          const commenterName = '${{ inputs.authorName }}';
+          const commenterName = process.env.COMMENTER_NAME;
           let isTSCMember = false;
           try {
             // Load YAML file

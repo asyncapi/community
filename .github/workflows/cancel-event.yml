@@ -27,7 +27,10 @@ jobs:
         working-directory: ./.github/workflows/create-event-helpers
       - name: Remove Google Calendar entry
         uses: actions/github-script@v4
+        env:
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+          ISSUE_CLOSED_AT: ${{ github.event.issue.closed_at }}
         with:
           script: |
             const { deleteEvent } = require('./.github/workflows/create-event-helpers/calendar/index.js');
-            deleteEvent('${{ github.event.issue.number }}', '${{ github.event.issue.closed_at }}');
+            deleteEvent(process.env.ISSUE_NUMBER, process.env.ISSUE_CLOSED_AT);
