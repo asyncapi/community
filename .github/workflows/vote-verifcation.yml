@@ -19,46 +19,53 @@ jobs:
       - name: Checking the person authenticity.
         if: (github.event.comment.body == '/vote') || (github.event.comment.body == '/cancel-vote')
         uses: actions/github-script@v6
+        env:
+          COMMENT_BODY: ${{ github.event.comment.body }}
+          ACTOR: ${{ github.actor }}
         with:
           github-token: ${{ secrets.GH_TOKEN_BOT_EVE }}
           script : |
                const isTSCMember = ${{ steps.verify_member.outputs.isTSCMember}}
                   if(!isTSCMember) {
-                   const commentText = `Hi @${{ github.actor }}, since you are not a [TSC Member](https://www.asyncapi.com/community/tsc), you cannot start or stop voting. Please [read more about voting process](https://github.com/asyncapi/community/blob/master/voting.md)`;
-                   console.log(`User ❌ @${{ github.actor }} is not a TSC Member`);
+                   const commentText = `Hi @${process.env.ACTOR}, since you are not a [TSC Member](https://www.asyncapi.com/community/tsc), you cannot start or stop voting. Please [read more about voting process](https://github.com/asyncapi/community/blob/master/voting.md)`;
+                   console.log(`User ❌ @${process.env.ACTOR} is not a TSC Member`);
                    github.rest.issues.createComment({
                      issue_number: context.issue.number,
                      owner: context.repo.owner,
                      repo: context.repo.repo,
                     body: commentText
                   });
-               } else if('${{github.actor}}' != 'git-vote[bot]') {
-                 console.log(`User ✅ @${{ github.actor }} is a TSC Member`);
+               } else if(process.env.ACTOR != 'git-vote[bot]') {
+                 console.log(`User ✅ @${process.env.ACTOR} is a TSC Member`);
                } 
 
       - name: Add the label
         run: |
          if [ "${{steps.verify_member.outputs.isTSCMember}}" == "true" ]; then
-          if [ "${{ github.event.comment.body }}" == "/vote" ]; then
+          if [ "$COMMENT_BODY" == "/vote" ]; then
             if [ "${{ github.event_name }}" != "pull_request" ]; then
-              gh issue edit ${{ github.event.issue.number }} --add-label "vote"
+              gh issue edit "$ISSUE_NUMBER" --add-label "vote"
             else
-              gh pr edit ${{ github.event.issue.number }} --add-label "vote"
+              gh pr edit "$ISSUE_NUMBER" --add-label "vote"
             fi
           fi
          fi
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN_BOT_EVE }}
+          COMMENT_BODY: ${{ github.event.comment.body }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
       - name: Remove the label
         run: |
          if [ "${{steps.verify_member.outputs.isTSCMember}}" == "true" ]; then
-          if [ "${{ github.event.comment.body }}" == "/cancel-vote" ]; then
+          if [ "$COMMENT_BODY" == "/cancel-vote" ]; then
             if [ "${{ github.event_name }}" != "pull_request" ]; then
-              gh issue edit ${{ github.event.issue.number }} --remove-label "vote"
+              gh issue edit "$ISSUE_NUMBER" --remove-label "vote"
             else
-              gh pr edit ${{ github.event.issue.number }} --remove-label "vote"
+              gh pr edit "$ISSUE_NUMBER" --remove-label "vote"
             fi
           fi
          fi
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN_BOT_EVE }}
+          COMMENT_BODY: ${{ github.event.comment.body }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
