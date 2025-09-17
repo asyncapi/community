@@ -1,3 +1,8 @@
+---
+title: List Of People and Assets AsyncAPI Depends On
+weight: 25
+---
+
 ## Payment/Donations
 
 - Open Collective and multiple sub-projects: https://opencollective.com/asyncapi
