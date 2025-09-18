@@ -121,7 +121,7 @@ jobs:
             const setupZoom = require('./.github/workflows/create-event-helpers/zoom/index.js');
             setupZoom('${{ inputs.date }}', '${{ inputs.time }}', '${{ inputs.host }}', '${{ inputs.alternative_host }}');
       - name: Create issue with meeting details
-        uses: JasonEtco/create-an-issue@v2
+        uses: JasonEtco/create-an-issue@1b14a70e4d8dc185e5cc76d3bec9eab20257b2c5 # version v2 https://github.com/JasonEtco/create-an-issue/tree/v2/
         id: create-issue
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
@@ -148,7 +148,7 @@ jobs:
             const { addEvent } = require('./.github/workflows/create-event-helpers/calendar/index.js');
             addEvent('${{ steps.zoom.outputs.meetingUrl }}', '${{ inputs.date }}', '${{ inputs.time }}', '${{ steps.create-issue.outputs.number }}');
       - name: Publish information about meeting to Twitter
-        uses: m1ner79/Github-Twittction@v1.0.1
+        uses: m1ner79/Github-Twittction@6269f2c6ace92b904304ca33a18aebd5e5ae9ee7 # version v1.0.1 https://github.com/m1ner79/Github-Twittction/tree/v1.0.1/
         with:
           twitter_status: "New meeting scheduled 💪\n\nName: ${{ inputs.meeting_name }}\n\nCheck what is it about and how to connect 👇🏼 https://github.com/asyncapi/community/issues/${{ steps.create-issue.outputs.number }}"
           twitter_consumer_key: ${{ secrets.TWITTER_CONSUMER_KEY }}
