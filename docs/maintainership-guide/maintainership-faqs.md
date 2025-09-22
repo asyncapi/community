@@ -73,4 +73,4 @@ Absolutely! We encourage volunteer participation from contributors who are eager
 
 ## Have more questions?
 
-Reach out to us on Slack in the `#mentorships` channel or check our [Maintainership Guide](./index.md) for detailed information about timelines, expectations, and how to apply.
+Reach out to us on Slack in the `#mentorships` channel or check our [Maintainership Guide](./index) for detailed information about timelines, expectations, and how to apply.

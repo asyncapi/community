@@ -13,7 +13,7 @@ Whether you're new to open-source or ready to level up, this guide walks you thr
 
 ## Introduction to Organizer Guide
 
-Are you ready to grow as an opensource contributor and give back to the ecosystem?
+Are you ready to grow as an open-source contributor and give back to the ecosystem?
 
 Each cycle, maintainers/mentors drive AsyncAPI projects forward by mentoring contributors, defining meaningful work, and contributing to API standards and tooling that power real-world event-driven systems. Whether it’s your first time or you’ve mentored before, this guide aims to support your journey in experiencing most of the Maintainership program.
 
