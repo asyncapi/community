@@ -19,12 +19,12 @@ Managed by Linux Foundation
 ## Email
 
 - Google Workspace:
-  - owned by Fran
-  - connected domain: asyncapi.io
+  - paid by Fran (he expenses it through Open Collective after paying)
+  - connected domains: asyncapi.com and asyncapi.io (just there temporarily so we don't lose any emails). Each email below has its corresponding `@asyncapi.io` alias too.
   - used email addresses:
-    - info@asyncapi.io (used for contact with partners/sponsors and for security reports)
-    - press@asyncapi.io (not sure what the status is, never accessed it, old email)
-    - bot@asyncapi.io and alias bot+eve@asyncapi.io are used for two AsyncAPI GitHub bot accounts
+    - info@asyncapi.com (used for contact with partners/sponsors and for security reports)
+    - press@asyncapi.com (not sure what the status is, never accessed it, old email)
+    - bot@asyncapi.com and alias bot+eve@asyncapi.com are used for two AsyncAPI GitHub bot accounts
 - Mailjet: used for emailing TSC members to remind them they have not voted yet.
 - Mailchimp:
   - owned by Fran
@@ -70,8 +70,7 @@ For plugins:
 People we hire through Open Collective contracts or pay for a specific job to be done in one of our official programs. All costs below are always planned in the budget and approved by TSC. For clarity and better budget planning goal is to have dedicated subprojects in Open Collective platform to secure funding more easily.
 
 - [Thulie](https://github.com/thulieblack): hired through official contract with Open Source Collective (on our behalf) to do community management ($2.5k monthly). Managed through https://opencollective.com/asyncapi/projects/community-manager-budget
-- [Ash](https://github.com/aeworxet): makes sure AsyncAPI Bounty program runs smoothly, organizes 4 rounds each quarter. We pay $400 for each round. We started to manage funding through https://opencollective.com/asyncapi/projects/asyncapi-bounty-program
-- [Bami](https://github.com/iambami): hired through official contract with Open Source Collective (on our behalf) to do community marketing ($2k monthly). Managed through https://opencollective.com/asyncapi/projects/community-marketing-specialist
+- [Ash](https://github.com/aeworxet): makes sure AsyncAPI Bounty program runs smoothly, organizes 4 rounds/year, one each quarter. We pay $400 for each round. We started to manage funding through https://opencollective.com/asyncapi/projects/asyncapi-bounty-program
 - [Ace](https://github.com/AceTheCreator): ensures we participate in different mentorship programs and also host our own. We pay $2k for each program ($1k for all the work to kick off the program, get funding, and communications; and $1k at the end once completed and the summary is published). There is no single Open Collective subproject for securing funds. Until now, we have created dedicated projects per mentorship, but with the introduction of [cohorts](https://www.asyncapi.com/blog/2024-mentorship-program-summary#refocus-setting-our-future-intentions), it may make sense to maintain one project for all mentorships, with funds secured for Ace’s payment too.
 
 ## Social Media
@@ -89,7 +88,7 @@ People we hire through Open Collective contracts or pay for a specific job to be
 ## Meetings
 
 - [Restream](https://restream.io/): Streaming to different social media channels. Free pro access. Needs renewal every year.
-- Zoom: Paid service. We approve it as part of the budget once a year.
+- Zoom: Paid service. We approve it as part of the budget once a year. Paid by Fran (he expenses it through Open Collective after paying).
 
 ## Video
 
