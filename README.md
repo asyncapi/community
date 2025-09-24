@@ -30,7 +30,7 @@ Find all the resources you need to start contributing to our organization.
 
 ## Community Governance and Charter
 
-Our community is steered by a transparent governance board. You can learn more about our  **[Community Governance](./docs/020-governance-and-policies/GOVERNANCE.md)** and the **[AsyncAPI Charter](./CHARTER.md)**, which outlines the decision-making process, structure, responsibilities, and procedures for contributions and oversight of the AsyncAPI open project.
+Our community is steered by a transparent governance board. You can learn more about our  **[Community Governance](./020-governance-and-policies/CHARTER.)** and the **[AsyncAPI Charter](./CHARTER.md)**, which outlines the decision-making process, structure, responsibilities, and procedures for contributions and oversight of the AsyncAPI open project.
 
 
 ## AsyncAPI Technical Steering Committee (TSC) 
