@@ -33,13 +33,13 @@ Follow these steps to request your payment:
    
 2. Click the **Actions** button
 
-![Open Collective Actions Tab](https://github.com/asyncapi/community/blob/master/assets/open-collective-action.png)
+![Open Collective Actions Tab](../../../assets/open-collective-action.png)
 
 3. Select **Submit Expense**
 
 4. Toggle to **Invoice** mode
 
-![Open Collective Actions Invoice Toggle](https://github.com/asyncapi/community/blob/master/assets/open-collective-invoice.png)
+![Open Collective Actions Invoice Toggle](../../../assets/open-collective-invoice.png)
 
 5. Fill in the required information for payment and submit your request
 
