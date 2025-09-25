@@ -36,7 +36,6 @@ Contrary to popular belief, **contributions are not limited to code**. At AsyncA
 |  📢  | Talks           | Participate in AsyncAPI's conferences as a presenter|
 |  🤔 | Ideas & Planning           | Join our community to share your suggestions to grow AsyncAPI |
 |  💡 | Examples          | Provide links to examples of AsyncAPI being used in projects |
-|  💡 | Examples          | Provide links to examples of AsyncAPI being used in projects |
 
 ### Before You Start Contributing
 - If you are joining AsyncAPI through [Slack](https://asyncapi.com/slack-invite) or an event, take your time to explore the [AsyncAPI website](https://www.asyncapi.com/).  
