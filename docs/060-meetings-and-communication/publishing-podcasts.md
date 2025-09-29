@@ -23,42 +23,50 @@ This document covers FAQs on publishing recorded AsyncAPI meetings as podcasts. 
 
 - The YouTube video ID.
 
-### What is a YouTube video ID?
+
+<Remember>
+
+**What is YouTube video ID?**
+
 The video ID is an 11-character alphanumeric string that uniquely identifies a YouTube video.
+
 ID is usually the last part of the URL after `v=` or separated by a forward slash (`/`):
+
 - https://www.youtube.com/watch?v=VIDEO_ID
-- https://youtu.be/VIDEO_ID
+- https://www.youtu.be/VIDEO_ID
 - https://www.youtube.com/shorts/VIDEO_ID
 - https://www.youtube.com/embed/VIDEO_ID
-You may also find URLs with a video in a playlist: `https://www.youtube.com/watch?v=VIDEO_ID&list=PLAYLIST_ID`
-Here, video ID is located between `?v=` and `&list=` URL parameters.
-**This workflow accepts only the YouTube *video ID*, not a full URL or playlist. You need to extract the `VIDEO_ID` and provide it as an input.**
 
-- [More examples](#list-of-different-types-of-youtube-links) of video ID are given below: ⬇️
+You may also find URLs with a video in a playlist: `https://www.youtube.com/watch?v=VIDEO_ID&list=PLAYLIST_ID`
+
+Here, video ID is located between `?v=` and `&list=` URL parameters.
+
+**This workflow accepts only the YouTube *video ID*, not a full URL or playlist. You need to extract the `VIDEO_ID` and provide it as an input.**
+</Remember>
 
 #### How to find YouTube ID?
 
-Let's take this video link, for example: https://www.youtube.com/watch?v=3rg_7hIb9PQ.
+Let's take this video link, for example: <https://www.youtube.com/watch?v=3rg_7hIb9PQ>.
 
-Here the video ID is the word/entity after `https://www.youtube.com/watch?v=`, i.e., `3rg_7hIb9PQ`
+Here the video ID is the part after `https://www.youtube.com/watch?v=`, i.e., `3rg_7hIb9PQ`
 
 
 ### List of different types of YouTube links
 
 - `https://www.youtube.com/watch?v=VIDEO_ID`
-  - Here, it can be https://www.youtube.com/watch?v=3rg_7hIb9PQ
+  - Here, it can be <https://www.youtube.com/watch?v=3rg_7hIb9PQ>
 - `https://youtu.be/VIDEO_ID`
-  - Here, it can be https://www.youtu.be/3rg_7hIb9PQ
+  - Here, it can be <https://youtu.be/3rg_7hIb9PQ>
 - `https://www.youtube.com/embed/VIDEO_ID`
-  - Here, it can be https://www.youtube.com/embed/3rg_7hIb9PQ
+  - Here, it can be <https://www.youtube.com/embed/3rg_7hIb9PQ>
 - `https://www.youtube.com/playlist?list=PLAYLIST_ID`
-  - Here, it can be https://www.youtube.com/playlist?list=PLbi1gRlP7piiaD67o1F4EOPoZztg2r8l6
+  - Here, it can be <https://www.youtube.com/playlist?list=PLbi1gRlP7piiaD67o1F4EOPoZztg2r8l6>
 - `https://www.youtube.com/shorts/VIDEO_ID`
-  - Here, it can be https://www.youtube.com/shorts/3rg_7hIb9PQ
+  - Here, it can be <https://www.youtube.com/shorts/3rg_7hIb9PQ>
 - `https://www.youtube.com/watch?v=VIDEO_ID&list=PLAYLIST_ID`
-  - Here, it can be https://www.youtube.com/watch?v=deLUAobdVpw&list=PLbi1gRlP7piiaD67o1F4EOPoZztg2r8l6
+  - Here, it can be <https://www.youtube.com/watch?v=deLUAobdVpw&list=PLbi1gRlP7piiaD67o1F4EOPoZztg2r8l6>
 - `https://youtube.com/shorts/VIDEO_ID?feature=share`
-  - Here, it can be https://youtube.com/shorts/U5jUr8XAF_M?feature=share
+  - Here, it can be <https://youtube.com/shorts/U5jUr8XAF_M?feature=share>
 
 
 ### Step-by-step procedure
