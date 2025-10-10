@@ -1,6 +1,6 @@
 ---
 title: Support and Escalation Path
-weight: 80
+weight: 130
 ---
 
 Mentorship is a rewarding but often demanding journey. At AsyncAPI, we understand that challenges can arise, whether it's dealing with unresponsive contributors, managing conflicting schedules, or navigating tough feedback moments. That’s why we’ve built a support system to help you handle these situations with clarity and care.

@@ -1,6 +1,6 @@
 ---
 title: Check In Process
-weight: 70
+weight: 230
 ---
 
 Evaluations are a vital part of the AsyncAPI Mentorship Program (AMP) for both contributors and mentors. Missing an evaluation can jeopardize your participation and impact stipend eligibility. To ensure a smooth and timely evaluation process, we’ve established a structured check-in system.

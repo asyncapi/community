@@ -1,6 +1,6 @@
 ---
 title: Code of Conduct
-weight: 100
+weight: 140
 ---
 
 The AsyncAPI Mentorship Program (AMP) is committed to fostering a respectful, inclusive, and harassment-free environment for everyone, regardless of gender identity, age, race, ethnicity, religion, disability, sexual orientation, technical experience, or background.

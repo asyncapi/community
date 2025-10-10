@@ -1,6 +1,6 @@
 ---
 title: Stipend Eligibility
-weight: 70
+weight: 200
 ---
 
 >_AMP participants may receive stipends from AsyncAPI at AsyncAPI's sole discretion; these stipends are not adjusted for cost of living. All participants will receive equal stipend amounts during program participation._

@@ -1,6 +1,6 @@
 ---
 title: Definitions
-weight: 90
+weight: 40
 ---
 
 This section outlines key terms and phrases used throughout the AsyncAPI Mentorship Program (AMP) documentation. Understanding these definitions will help you navigate the AMP more effectively.

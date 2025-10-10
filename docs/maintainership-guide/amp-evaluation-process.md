@@ -1,6 +1,6 @@
 ---
 title: Evaluation Process
-weight: 60
+weight: 240
 ---
 
 Evaluations occur twice during the program duration: at the **midpoint** of the program and the **end** of the program after you submit your final work. Evaluation periods vary for different projects and are determined based on project complexity. For a standard 12-week project, your first evaluation will be at the end of the 6th week, and the final evaluation will be after the 12th week of the contributing period. 

@@ -1,6 +1,6 @@
 ---
 title: AsyncAPI Maintainership Program FAQs
-weight: 100
+weight: 50
 ---
 
 ## What is the AsyncAPI Maintainership Program (AMP)?

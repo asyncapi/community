@@ -1,6 +1,6 @@
 ---
 title: Communications
-weight: 110
+weight: 150
 ---
 
 # Communication Channels

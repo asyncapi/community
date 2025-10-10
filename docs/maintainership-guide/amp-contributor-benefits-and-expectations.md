@@ -1,6 +1,6 @@
 ---
 title: Benefits & Expectations
-weight: 90
+weight: 80
 ---
 
 The AsyncAPI Maintainership Program (AMP) is more than just mentorship and a stipend, it’s a shared journey of learning, contribution, and community building. While AMP offers you world-class guidance and career-changing opportunities, it also relies on your dedication, collaboration, and accountability to succeed.

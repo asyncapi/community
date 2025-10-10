@@ -1,6 +1,6 @@
 ---
 title: Mentor Responsibilities & Best Practices
-weight: 60
+weight: 110
 ---
 
 At AsyncAPI, mentorship is one of the most effective ways to teach, upskill, and empower contributors in open-source. Mentors are the foundation of this program; they are not just technical experts, but also community leaders who embody the spirit of open collaboration. By offering meaningful guidance, you're not just empowering contributors; you're also growing as a leader and setting the tone for future community members.

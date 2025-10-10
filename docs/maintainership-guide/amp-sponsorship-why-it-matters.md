@@ -1,7 +1,7 @@
 ---
 title: AsyncAPI Maintainership Program Sponsorship
 description: Overview of why the Maintainership Program needs sponsorship and how it sustains impact.
-weight: 90
+weight: 170
 ---
 
 At AsyncAPI, we believe that access to open-source mentorship should be a right, not a privilege. Since launching the program in 2022, we've created pathways for contributors to grow into maintainers, technical leaders, and community advocates. We’re not just teaching skills, we’re building the next generation of open-source leadership.

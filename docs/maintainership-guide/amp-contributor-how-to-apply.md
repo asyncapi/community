@@ -1,6 +1,6 @@
 ---
 title: How to Apply
-weight: 50
+weight: 60
 ---
 
 Applying to the AsyncAPI Maintainership Program (AMP) is simple, but before you get started, we recommend reviewing the [program timeline](../timeline-and-schedule) to ensure you’re aware of all key dates and deadlines.

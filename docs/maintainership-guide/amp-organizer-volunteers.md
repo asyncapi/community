@@ -1,6 +1,6 @@
 ---
 title: Interested in Volunteering? 
-weight: 120
+weight: 160
 ---
 
 The AsyncAPI Maintainership Program (AMP) is coordinated by a small team of two core organizers who manage everything from securing sponsorships and handling budgets to onboarding mentors, supporting contributors, and ensuring the program runs smoothly.

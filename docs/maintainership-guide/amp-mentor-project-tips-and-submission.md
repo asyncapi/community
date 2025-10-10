@@ -1,6 +1,6 @@
 ---
 title: Project Tips and Submission Guide
-weight: 90
+weight: 120
 ---
 
 Being a mentor in the AsyncAPI Maintainership Program (AMP) is incredibly rewarding, but it comes with both responsibilities and opportunities. This guide will walk you through every stage, from designing and submitting a project idea to selecting the right contributor to running a successful mentorship experience.

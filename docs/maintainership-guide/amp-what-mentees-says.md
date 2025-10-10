@@ -1,6 +1,6 @@
 ---
 title: What our Mentees Say
-weight: 110
+weight: 90
 ---
 
 The AsyncAPI Maintainership Program has empowered developers from around the world to grow as contributors, and gain real-world experience. Here's what some of our past mentees have to say:

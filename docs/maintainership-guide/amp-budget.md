@@ -1,7 +1,7 @@
 ---
 title: AsyncAPI Maintainership Program Budgeting and Cost Breakdown
 description: This overview page outlines the AsyncAPI Maintainership Program Budget and Cost Breakdown
-weight: 30
+weight: 190
 ---
 
 Piloting an in-house mentorship program, such as the AsyncAPI Maintainership Program, involves thoughtful financial planning. Thanks to generous donations through our [Open Collective](https://opencollective.com/asyncapi), the AsyncAPI Initiative has been able to allocate a fixed portion of its annual funds to support this program.
