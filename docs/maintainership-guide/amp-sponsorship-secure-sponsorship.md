@@ -54,7 +54,7 @@ Sponsorship isn’t just about giving — it’s about growing together. Here's 
 
 ## Ready to Get Involved?
 
- **Email us:** community@asyncapi.io
+**Email us:** community@asyncapi.io
 
 **Sponsor via Open Collective:** Visit our AsyncAPI Open Collective and select the Maintainership Program fund.
 

@@ -26,15 +26,15 @@ But the numbers only tell part of the story. There’s [Maya](https://www.linked
 
 By sponsoring the AsyncAPI Maintainership Program, you’re investing in open-source infrastructure, mentorship, and impact at scale:
 
-   - **Expanded Opportunities**: Each project slot represents a fully funded contributor opportunity. Sponsorship directly increases the number of contributors we can support per cohort.
+- **Expanded Opportunities**: Each project slot represents a fully funded contributor opportunity. Sponsorship directly increases the number of contributors we can support per cohort.
 
-   - **Mentor Support**: Your funding enables us to offer honoraria to mentors, acknowledging their vital work and incentivizing sustainable mentorship.
+- **Mentor Support**: Your funding enables us to offer honoraria to mentors, acknowledging their vital work and incentivizing sustainable mentorship.
 
-   - **Scalability & Stability**: Critical open-source projects benefit from the consistent contributions of maintainers who are passionate, trained, and compensated.
+- **Scalability & Stability**: Critical open-source projects benefit from the consistent contributions of maintainers who are passionate, trained, and compensated.
 
-   - **Operations & Infrastructure**: Sponsorship supports coordination, onboarding resources, platform tooling, and post-program recognition.
+- **Operations & Infrastructure**: Sponsorship supports coordination, onboarding resources, platform tooling, and post-program recognition.
 
-   - **Global & Inclusive Participation**: With your support, we can reach underrepresented and underserved contributors across the globe, breaking down financial and geographic barriers.
+- **Global & Inclusive Participation**: With your support, we can reach underrepresented and underserved contributors across the globe, breaking down financial and geographic barriers.
 
 Your sponsorship helps maintain a program that’s inclusive, sustainable, and high-impact—for contributors, mentors, and the broader open-source ecosystem.
 
