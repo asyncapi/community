@@ -57,7 +57,7 @@ Managed by Linux Foundation
 - Netlify: Our additional open source plan gives basic stats too
 - [LFX Insights](https://lfx.linuxfoundation.org/tools/insights/): Lots of GitHub-stats about the org. We can also manage some of the info.
 
-## Package Managers (TBD)
+## Package Managers
 
 For packages/libraries:
 - [npm](https://www.npmjs.com/) (JS and TS world): we own `@asyncapi` scope. Publishing is automated, and deprecation is manually done by https://github.com/derberg
