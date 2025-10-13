@@ -23,8 +23,12 @@ Managed by Linux Foundation
   - connected domains: asyncapi.com and asyncapi.io (just there temporarily so we don't lose any emails). Each email below has its corresponding `@asyncapi.io` alias too.
   - used email addresses:
     - info@asyncapi.com (used for contact with partners/sponsors and for security reports)
-    - press@asyncapi.com (not sure what the status is, never accessed it, old email)
+    - press@asyncapi.com (not monitored, references have been removed so we can delete this email in a few months)
     - bot@asyncapi.com and alias bot+eve@asyncapi.com are used for two AsyncAPI GitHub bot accounts
+    - conduct@asyncapi.com (used for getting in touch with the Code of Conduct Committee)
+    - security@asyncapi.com (used for reporting security issues)
+    - thulie@asyncapi.com (personal email for Thulie)
+    - hugo@asyncapi.com (personal email for Hugo)
 - Mailjet: used for emailing TSC members to remind them they have not voted yet.
 - Mailchimp:
   - owned by Fran
