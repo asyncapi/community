@@ -159,7 +159,6 @@
     - nodejs-ws-template
     - java-spring-template
     - .github
-    - vs-asyncapi-preview
     - template-for-generator-templates
     - community
     - diff
@@ -508,16 +507,10 @@
     expertise with executive vision, having worked closely with CXOs on
     strategy, delivery assurance, and organizational agility. He is widely
     recognized for his contributions to API governance, platform engineering,
-    and contract-driven development. He has spoken at several conferences
-    including APIDays (New York, Paris), Developer Week Sunnyvale, NordicAPIs
-    Platform Summit, GoTo Copenhagen, API Specification Conference (#ASC2022),
-    API World, SeleniumConf, Agile2021, Agile India, TestingUY 2021, SREConf,
-    PyCon Singapore, RubyConf India. He actively contributes to several
-    open-source projects including Specmatic and Perfiz. His areas of interest
-    include distributed systems, AI-native products and exploring how AI can be
-    leveraged to rethink software delivery and next-gen developer experience.
-  company: Specmatic and Polarizer Technologies
-  title: Co-founder and CTO at Specmatic, Founder, and CEO at Polarizer Technologies
+    and contract-driven development. His areas of interest include distributed
+    systems, AI native products, AI augmented and agentic software delivery.
+  company: Polarizer Technologies
+  title: Founder, and CEO at Polarizer Technologies
   img: >-
     https://raw.githubusercontent.com/harikrishnan83/harikrishnan83/master/HariKrishnan-profile.jpg
   contributions:
@@ -561,6 +554,14 @@
         month: August
       link: >-
         https://conferences.gotopia.tech/goto-serverless-bengaluru-2025/sessions/3845/reliable-aws-lambda-data-pipelines-with-asyncapi-specification
+    - type: talk
+      title: >-
+        AsyncAPI 2.6 to 3.0: Migrating Safely with No-Code Backward
+        Compatibility Checks
+      date:
+        year: 2025
+        month: October
+      link: https://www.apidays.global/events/india
 - name: Charles d'Avernas
   github: cdavernas
   linkedin: charles-d-avernas-40836a13
