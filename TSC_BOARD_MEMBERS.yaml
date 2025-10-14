@@ -159,7 +159,6 @@
     - nodejs-ws-template
     - java-spring-template
     - .github
-    - vs-asyncapi-preview
     - template-for-generator-templates
     - community
     - diff
