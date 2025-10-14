@@ -524,3 +524,11 @@
           year: 2024
           month: "October"
         link: "https://www.youtube.com/watch?v=I5eplxVQrhI"
+  - name: "Zbigniew Malcherczyk"
+    github: "ferror"
+    githubID: 17534504
+    linkedin: "http://linkedin.com/in/zbigniew-malcherczyk/"
+    country: "🇵🇱"
+    company: "TranferGo"
+    img: "https://avatars.githubusercontent.com/u/17534504?v=4"
+    contributions:
