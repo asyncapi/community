@@ -29,7 +29,7 @@ Our [open governance model](https://github.com/asyncapi/.github/blob/master/CHAR
 - GitHub action that validates modification in VOTERS file on PR level
 - Mechanism to collect more details about TSC members (social accounts, hire availability, etc.)
 
-Learn more: https://github.com/asyncapi/.github/issues/210
+Learn more: [https://github.com/asyncapi/.github/issues/210](https://github.com/asyncapi/.github/issues/210)
 
 - 🎯 **Outcome:** Automated system for maintaining and validating TSC member lists across repositories.
 - 🛠️ **Skills Required:** JavaScript/TypeScript, GitHub Actions, Node.js.
@@ -48,7 +48,7 @@ We need automation tests to run on the PR level which checks the overall build a
 - No tests means nothing forces us to write clearer and testable small functions
 - Soon website maintenance/contribution will become hard as more addition of code will make duplication and inconsistency inside the codebase
 
-Learn more: https://github.com/asyncapi/website/issues/1090
+Learn more: [https://github.com/asyncapi/website/issues/1090](https://github.com/asyncapi/website/issues/1090)
 
 - 🎯 **Outcome:** Comprehensive UI testing framework and refactored codebase for better maintainability.
 - 🛠️ **Skills Required:** JavaScript/TypeScript, Testing frameworks, React, Next.js.
@@ -66,7 +66,7 @@ AsyncAPI-Preview + Spectral for VS Code form a perfect combo in terms of UX/DX f
 - Spectral for VS Code provides inline and listed linting error for common and custom mistakes
 - Quick/autofixes for linting errors using VS Code's CodeActionProvider API
 
-Learn more: https://github.com/asyncapi/vs-asyncapi-preview/issues/160
+Learn more: [https://github.com/asyncapi/vs-asyncapi-preview/issues/160](https://github.com/asyncapi/vs-asyncapi-preview/issues/160)
 
 - 🎯 **Outcome:** Auto-fix capability for standard Spectral linting errors in AsyncAPI documents.
 - 🛠️ **Skills Required:** TypeScript/JavaScript, VS Code Extensions, Spectral rules.
@@ -79,7 +79,7 @@ Learn more: https://github.com/asyncapi/vs-asyncapi-preview/issues/160
 
 Create an endpoint `help/{command}` to return instructions of given command to the user. For example, `help/generate` should return available parameters such as available templates etc. The endpoint should be done in a similar way as in our main CLI, so the main help endpoint should return all available endpoints and particular ones like `help/generate` should return details about given command.
 
-Learn more: https://github.com/asyncapi/server-api/issues/144
+Learn more: [https://github.com/asyncapi/server-api/issues/144](https://github.com/asyncapi/server-api/issues/144)
 
 - 🎯 **Outcome:** Help endpoint system similar to AsyncAPI CLI for better API discoverability.
 - 🛠️ **Skills Required:** JavaScript/TypeScript, Node.js, API development.

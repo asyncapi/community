@@ -5,7 +5,7 @@ weight: 120
 
 # Google Summer of Code - Getting Started
 
-### Introduction
+## Introduction
 
 Google Summer of Code (GSoC) is an annual program sponsored by Google that offers stipends to contributors for working on open-source projects during the summer. Contributors gain real-world software development experience by working with mentors from participating organizations. The goal is to encourage developers to contribute to open-source projects and improve their coding skills. If you want to develop open-source software, this program is for you! 
 
