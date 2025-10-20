@@ -3,8 +3,13 @@ title: AsyncAPI GSoC Ideas Page 2025
 weight: 190
 ---
 
+> **Program Status: In-progress**
+
 # AsyncAPI Ideas Page: Google Summer of Code 2025
+
 Welcome to the **AsyncAPI Ideas Page** with our proposed projects for Google Summer of Code (GSoC) 2025! If you are an interested contributor, please don't hesitate to contact our mentors directly to discuss project ideas.
+
+> Note: Projects with checkboxes are project that made it to the final.
 
 ## 1) [Enhancing Performance and Reliability of AsyncAPI CLI](https://github.com/asyncapi/cli/issues/1657)
 Improve the AsyncAPI CLI by optimizing performance, enhancing test reliability, and introducing long-requested features such as publishing and syncing AsyncAPI files with remote repositories.

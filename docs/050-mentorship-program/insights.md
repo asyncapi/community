@@ -30,7 +30,7 @@ Our mentorship programs demonstrate strong and improving retention rates, with *
 
 | Program | Year | Total Mentees | Active Contributors | Retention Rate |
 |---------|------|---------------|-------------------|----------------|
-| **GSoC(ongoing)** | 2025 | 6 | 6 | **100%** 🏆 |
+| **GSoC(ongoing)** | 2025 | 6 | 6 | **100%** |
 | **AsyncAPI Mentorship** | 2024 | 9 | 5 | 55.6% |
 | **AsyncAPI Mentorship** | 2023 | 13 | 6 | 46.2% |
 | **GSoC** | 2024 | 8 | 3 | 37.5% |
@@ -69,12 +69,12 @@ These individuals started as mentees and are now guiding the next generation of 
 
 | Name | Mentee Year(s) | Became Mentor | Currently Active | Impact |
 |------|---------------|---------------|------------------|--------|
-| **[Akshat Nema](https://github.com/akshatnema)** | 2022 | 2023 | ✅ Yes | Mentoring since 2023 (3 years) |
-| **[Aishat Muibudeen](https://github.com/Mayaleeeee)** | 2022, 2023 | 2024 | ✅ Yes | Mentoring since 2024 (2 years) |
-| **[Sambhav Gupta](https://github.com/sambhavgupta0705)** | 2023 | 2024 | ✅ Yes | Mentoring since 2024 (2 years) |
-| **[Aayush Saini](https://github.com/AayushSaini101)** | 2024 | 2025 | ✅ Yes | Mentoring since 2025 (1 year) |
-| **[Ashmit Jagtap](https://github.com/ashmit-coder)** | GSoC 2024 | GSoC 2025 | ✅ Yes | Mentoring since 2025 (1 year) |
-| **[Ashmit JaiSarita Guptap](https://github.com/devilkiller-ag)** | GSoC 2024 | GSoC 2025 | ✅ Yes | Mentoring since 2025 (1 year) |
+| **[Akshat Nema](https://github.com/akshatnema)** | 2022 | 2023 | ✅ | Mentoring since 2023 (3 years) |
+| **[Aishat Muibudeen](https://github.com/Mayaleeeee)** | 2022, 2023 | 2024 | ✅ | Mentoring since 2024 (2 years) |
+| **[Sambhav Gupta](https://github.com/sambhavgupta0705)** | 2023 | 2024 | ✅  | Mentoring since 2024 (2 years) |
+| **[Aayush Saini](https://github.com/AayushSaini101)** | 2024 | 2025 | ✅ | Mentoring since 2025 (1 year) |
+| **[Ashmit Jagtap](https://github.com/ashmit-coder)** | GSoC 2024 | GSoC 2025 | ✅ | Mentoring since 2025 (1 year) |
+| **[Ashmit JaiSarita Guptap](https://github.com/devilkiller-ag)** | GSoC 2024 | GSoC 2025 | ✅ | Mentoring since 2025 (1 year) |
 
 
 ## Key Insights
@@ -135,7 +135,7 @@ These individuals started as mentees and are now guiding the next generation of 
 </details>
 
 <details>
-<summary><strong>GSoC 2025</strong> (6/6 active - 100%) 🎯</summary>
+<summary><strong>GSoC 2025</strong> (6/6 active - 100%)</summary>
 
 - [Adi-204](https://github.com/Adi-204)
 - [TenzDelek](https://github.com/TenzDelek)
