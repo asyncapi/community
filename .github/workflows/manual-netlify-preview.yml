@@ -1,0 +1,64 @@
+name: Docs Preview (Netlify)
+
+on:
+  pull_request:
+    paths:
+      - 'docs/**'
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout community PR
+        uses: actions/checkout@v5
+
+      - name: Checkout website repo
+        uses: actions/checkout@v5
+        with:
+          repository: asyncapi/website
+          path: website
+          fetch-depth: 1
+
+      - name: Sync docs into website
+        run: |
+          rm -rf website/markdown/docs/community/*
+          cp -R docs/* website/markdown/docs/community/
+
+      - name: Setup Node
+        uses: actions/setup-node@v6
+        with:
+          node-version: '20'
+
+      - name: Install deps & Netlify CLI & jq
+        run: |
+          npm ci
+          npm i -g netlify-cli
+          sudo apt-get update && sudo apt-get install -y jq
+
+      - name: Build website
+        working-directory: website
+        run: npm run build
+
+      - name: Deploy draft preview to Netlify
+        id: deploy
+        working-directory: website
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+        run: |
+          # Deploy the output that `npm run build` produced
+          DEPLOY_JSON=$(netlify deploy --dir=".netlify/build/publish" --message="community PR #${{ github.event.number }}" --draft --json)
+          echo "$DEPLOY_JSON"
+          echo "url=$(echo "$DEPLOY_JSON" | jq -r '.deploy_url')" >> $GITHUB_OUTPUT
+
+      - name: Comment preview URL on PR
+        uses: thollander/actions-comment-pull-request@24bffb9b452ba05a4f3f77933840a6a841d1b32b #v3.0.1 release https://github.com/thollander/actions-comment-pull-request/releases/tag/v3.0.1
+        with:
+          message: |
+            🚀 **Docs preview deployed**
+            → ${{ steps.deploy.outputs.url }}
