@@ -5,10 +5,6 @@ on:
     paths:
       - 'docs/**'
 
-permissions:
-  contents: read
-  pull-requests: write
-
 jobs:
   preview:
     runs-on: ubuntu-latest
@@ -59,6 +55,7 @@ jobs:
       - name: Comment preview URL on PR
         uses: thollander/actions-comment-pull-request@24bffb9b452ba05a4f3f77933840a6a841d1b32b #v3.0.1 release https://github.com/thollander/actions-comment-pull-request/releases/tag/v3.0.1
         with:
+          github-token: ${{ secrets.GH_TOKEN }}
           message: |
             🚀 **Docs preview deployed**
             → ${{ steps.deploy.outputs.url }}
