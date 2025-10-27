@@ -24,6 +24,7 @@ jobs:
         run: |
           rm -rf website/markdown/docs/community/*
           cp -R docs/* website/markdown/docs/community/
+          rm website/markdown/docs/community/README.md
 
       - name: Setup Node
         uses: actions/setup-node@v6
