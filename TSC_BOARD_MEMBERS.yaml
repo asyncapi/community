@@ -602,6 +602,14 @@
   repos:
     - generator
   githubID: 114283933
+- name: Ruchi Pakhle
+  github: Ruchip16
+  twitter: Ruchicodess
+  availableForHire: true
+  isTscMember: true
+  repos:
+    - vs-asyncapi-preview
+  githubID: 72685035
 - name: Daniel Kocot
   img: https://avatars.githubusercontent.com/u/466609?v=4
   bio: >-
