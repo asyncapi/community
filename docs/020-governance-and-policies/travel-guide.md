@@ -42,13 +42,13 @@ The most money we can pay for one person's travel costs is based on where the tr
 
 > These amounts can be changed depending on how many people need reimbursement for given event.
 
-We cannot pay for travels in advance. We can reimburse you only through official process over our [Open Collective](https://opencollective.com/asyncapi) profile. You will have to submit invoices related to travel and accomodation.
+We cannot pay for travels in advance. We can reimburse you only through official process over our [Open Collective](https://opencollective.com/asyncapi) profile. You will have to submit invoices related to travel and accommodation.
 
 ### Rules for Each Event
 
 * Budget Announcement: We will announce how much money is available for each event. This depends on our total budget and support from community members whose travel is paid for by their own companies.
 * How to Ask for Funding:
-    * We will create a special GitHub issue in the `asyncapi/community` repository for each event, at least three months before the event.
-    * To ask for money, please write clearly in that GitHub issue.
-    * If you cannot write publicly for work reasons, you can contact the Chairperson of the Conference Coordination Working Group directly.
+  * We will create a special GitHub issue in the `asyncapi/community` repository for each event, at least three months before the event.
+  * To ask for money, please write clearly in that GitHub issue.
+  * If you cannot write publicly for work reasons, you can contact the Chairperson of the Conference Coordination Working Group directly.
 * How We Decide When There Are Too Many People: If more people want funding than we have money for, and the priority list above doesn't help us choose, we will use a [randomizer](https://www.random.org/lists/). We will put all names into the randomizer during Community Working Group meeting. The first person (or people) picked will get the funding, depending on how much money is left.
