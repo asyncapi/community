@@ -39,7 +39,7 @@ jobs:
         working-directory: website
         run: |
           npm ci
-          npm i netlify-cli@23.9.5
+          npm i -g netlify-cli@23.9.5
           npm run build
 
       - name: Deploy draft preview to Netlify
