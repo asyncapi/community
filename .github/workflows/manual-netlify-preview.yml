@@ -1,7 +1,7 @@
 name: Docs Preview (Netlify)
 
 on:
-  pull_request:
+  pull_request_target:
     paths:
       - 'docs/**'
 
@@ -12,6 +12,8 @@ jobs:
     steps:
       - name: Checkout community PR
         uses: actions/checkout@v5
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
 
       - name: Checkout website repo
         uses: actions/checkout@v5
