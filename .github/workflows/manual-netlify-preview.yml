@@ -35,11 +35,27 @@ jobs:
         run: |
           sudo apt-get update && sudo apt-get install -y jq
 
+      - name: Install Netlify CLI
+        run: npm i -g netlify-cli@23.9.5
+
+      - name: Authenticate & link Netlify (non-interactive)
+        working-directory: website
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+        run: |
+          set -euo pipefail
+          # Authenticate using token (no browser)
+          netlify login --auth "$NETLIFY_AUTH_TOKEN"
+          # Link the site so later commands don't need flags
+          netlify link --id "$NETLIFY_SITE_ID"
+          # Show status for debugging (does not print the token)
+          netlify status
+
       - name: Install deps and build website
         working-directory: website
         run: |
           npm ci
-          npm i -g netlify-cli@23.9.5
           npm run build
 
       - name: Deploy draft preview to Netlify
@@ -55,10 +71,18 @@ jobs:
             echo "Build output directory $BUILD_DIR not found"
             exit 1
           fi
-          # Deploy the output that `npm run build` produced
-          DEPLOY_JSON=$(netlify deploy --dir="$BUILD_DIR" --message="community PR #${{ github.event.number }}" --draft --json)
+
+          # Deploy using explicit non-interactive flags as well (belt & suspenders).
+          DEPLOY_JSON=$(netlify deploy \
+            --auth "$NETLIFY_AUTH_TOKEN" \
+            --site "$NETLIFY_SITE_ID" \
+            --dir "$BUILD_DIR" \
+            --message "community PR #${{ github.event.number }}" \
+            --draft \
+            --json)
+
           echo "$DEPLOY_JSON"
-          echo "url=$(echo "$DEPLOY_JSON" | jq -r '.deploy_url')" >> $GITHUB_OUTPUT
+          echo "url=$(echo "$DEPLOY_JSON" | jq -r '.deploy_url')" >> "$GITHUB_OUTPUT"
 
       - name: Comment preview URL on PR
         if: success()
