@@ -38,27 +38,12 @@ jobs:
       - name: Install Netlify CLI
         run: npm i -g netlify-cli@23.9.5
 
-      - name: Authenticate & link Netlify (non-interactive)
-        working-directory: website
-        env:
-          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-        run: |
-          set -euo pipefail
-          # Authenticate using token (no browser)
-          netlify login --auth "$NETLIFY_AUTH_TOKEN"
-          # Link the site so later commands don't need flags
-          netlify link --id "$NETLIFY_SITE_ID"
-          # Show status for debugging (does not print the token)
-          netlify status
-
-      - name: Install deps and build website
+      - name: Install deps
         working-directory: website
         run: |
           npm ci
-          npm run build
 
-      - name: Deploy draft preview to Netlify
+      - name: Build and deploy draft preview to Netlify
         id: deploy
         working-directory: website
         env:
@@ -66,18 +51,11 @@ jobs:
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
         run: |
           set -e
-          BUILD_DIR="out"
-          if [[ ! -d "$BUILD_DIR" ]]; then
-            echo "Build output directory $BUILD_DIR not found"
-            exit 1
-          fi
-
-          # Deploy using explicit non-interactive flags as well (belt & suspenders).
+          # Build and deploy built files to Netlify
           DEPLOY_JSON=$(netlify deploy \
             --auth "$NETLIFY_AUTH_TOKEN" \
             --site "$NETLIFY_SITE_ID" \
-            --dir "$BUILD_DIR" \
-            --message "community PR #${{ github.event.number }}" \
+            --message "community repo PR #${{ github.event.number }}" \
             --draft \
             --json)
 
