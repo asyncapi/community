@@ -18,7 +18,7 @@ The `_redirects` file is a plain text file that defines redirect rules for the A
 
 For the AsyncAPI website, the `_redirects` file is located at:
 
-```
+```text
 public/_redirects
 ```
 
@@ -29,7 +29,7 @@ Netlify reads the `_redirects` file **top to bottom**, and applies the **first m
 
 Each redirect rule must be written on a single line, with space-separated values:
 
-```
+```text
 /short-path   https://destination.url   status
 ```
 
@@ -40,7 +40,7 @@ Each redirect rule must be written on a single line, with space-separated values
 
 #### Examples
 
-```
+```text
 /slack-invite   https://asyncapi.com/slack   302
 /modelina       /tools/modelina              301
 /github         https://github.com/asyncapi  301
@@ -59,7 +59,7 @@ Navigate to the `public/_redirects` file in the AsyncAPI website repository.
 Add a new redirect rule on a separate line.  
 You may include a comment above the rule for clarity:
 
-```
+```text
 # Permanent redirect to the main Studio app
 /studio   https://studio.asyncapi.com/   301
 ```
