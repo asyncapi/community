@@ -6,7 +6,7 @@ weight: 10
 
 ## Introduction
 
-Short URLs make it easier for users to access commonly shared AsyncAPI resources (e.g., `asyncapi.com/slack` instead of long invite links). These short links are powered by Netlify server-side redirects using the `_redirects` file, ensuring fast, reliable, and CDN-level redirection.
+Short URLs make it easier for users to access commonly shared AsyncAPI resources (e.g., `asyncapi.com/slack` instead of long invite links). To avoid conflicts with existing routes (like `/docs`, `/community`, etc.), all short URLs **must use the `/s/` path prefix**. These short links are powered by Netlify server-side redirects using the `_redirects` file, ensuring fast, reliable, and CDN-level redirection.
 
 > The `_redirects` file already exists in the AsyncAPI website repository under `public/_redirects`.
 
@@ -25,12 +25,13 @@ public/_redirects
 ### How Redirects Are Processed
 
 Netlify reads the `_redirects` file **top to bottom**, and applies the **first matching rule**. Because of this, **the order of rules matters**.
+
 ## Defining a Short URL Rule
 
-Each redirect rule must be written on a single line, with space-separated values:
+Each short URL **must begin with `/s/`** to ensure there is no conflict with existing site paths. Write each redirect rule on a single line, with space-separated values:
 
 ```text
-/short-path   https://destination.url   status
+/s/short-path   https://destination.url   status
 ```
 
 ### Which Status Code to Use?
@@ -61,7 +62,7 @@ You may include a comment above the rule for clarity:
 
 ```text
 # Permanent redirect to the main Studio app
-/studio   https://studio.asyncapi.com/   301
+/s/studio   https://studio.asyncapi.com/   301
 ```
 
 ### Step 3: Commit and create a Pull Request
@@ -83,4 +84,4 @@ This ensures reviewers understand the context and purpose of the redirect.
 
 ---
 
-By following this guide, you help maintain consistency and improve navigation for the AsyncAPI community through clean, memorable short URLs.
+By following this guide, you help maintain consistency and improve navigation for the AsyncAPI community through clean, memorable short URLs using the `/s/` path.
