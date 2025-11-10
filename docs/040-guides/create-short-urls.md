@@ -42,9 +42,9 @@ Each short URL **must begin with `/s/`** to ensure there is no conflict with exi
 #### Examples
 
 ```text
-/slack-invite   https://asyncapi.com/slack   302
-/modelina       /tools/modelina              301
-/github         https://github.com/asyncapi  301
+/s/slack-invite   https://asyncapi.com/slack   302
+/s/modelina       /tools/modelina              301
+/s/github         https://github.com/asyncapi  301
 ```
 
 ## Steps to Add a New Short URL
