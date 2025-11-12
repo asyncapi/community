@@ -10,7 +10,7 @@ This document explains the rules, priorities, and costs we cover using the confe
 We use the following priority list to decide who gets travel money. This list is for people who already have a visa or have a clear plan to get one in time.
 
 1. People Hired by AsyncAPI (Contracted Staff): These people are the highest priority. They receive a larger budget covering travel, visa, and other costs. The budget is flexible, but they must agree on the required amount with the available funds.
-2. People Who Have Not Received Funding Before: The people who never received travel funding are higher in priority over people who have received it in the past.
+2. People Who Have Not Received Funding Before: The people who have never received travel funding are given higher priority over people who have received it in the past.
 3. People with Key Event Jobs: People who agree to help with important duties at the event:
     - Master of Ceremony (MC): Up to two people are needed for this job.
     - API Standards Booth Lead: Up to two people are needed to manage the [API Standards booth](https://groups.io/g/api-standards).
@@ -40,9 +40,9 @@ The maximum we can pay for one person's travel depends on the destination.
 | Within Asia | $500 |
 | Between Continents | $1200 |
 
-> These amounts can be changed depending on how many people need reimbursement for given event.
+> These amounts can be changed depending on how many people need reimbursement for the given event.
 
-We cannot pay for travels in advance. We can reimburse you only through official process over our [Open Collective](https://opencollective.com/asyncapi) profile. You will have to submit invoices related to travel and accommodation.
+We cannot pay for travel in advance. We can reimburse you only through the official process over our [Open Collective](https://opencollective.com/asyncapi) profile. You will have to submit invoices related to travel and accommodation.
 
 ### Rules for Each Event
 
