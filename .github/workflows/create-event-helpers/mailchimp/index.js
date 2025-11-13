@@ -9,10 +9,25 @@ const { listEvents } = require('../calendar/index.js');
  */
 module.exports = async () => {
 
-    const events = await listEvents();
-    if (!events.length) return core.info('No events scheduled for next week so no email will be sent');
-    core.info(`Formatted list of events: ${ JSON.stringify(events, null, 4) }`)
+    // ---------------- SAFE CALENDER FETCH ----------------------------------------------------------
+    let events = [];
+    try {
+        events = await listEvents();
+    } catch (err) {
+        core.error(`Failed fetching events from Google Calendar API: ${err}`);
+        events = [];
+    }
+    // Ensure events is an array
+    if (!Array.isArray(events)) {
+        core.warning(`Warning: Calendar returned invalid data. Using empty list instead.`);
+        events = [];
+    }
 
+    // If no events, exit gracefully
+    if (events.length === 0) {
+        return core.info('No events scheduled for next week, skipping newsletter.');
+    }
+// ------------------------------------------------------------------------------------------------
     let newCampaign;
 
     mailchimp.setConfig({
@@ -66,7 +81,7 @@ module.exports = async () => {
         //next day 11:00
         const scheduleDate = new Date(Date.parse(new Date(Date.now()).toISOString()) + 1 * 24 * 60 * 60 * 1000);
         scheduleDate.setUTCHours(11);
-        scheduleDate.setUTCMinutes(00);
+        scheduleDate.setUTCMinutes(0);
 
 
         await mailchimp.campaigns.schedule(newCampaign.id, {
