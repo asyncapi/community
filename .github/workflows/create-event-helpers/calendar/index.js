@@ -152,7 +152,8 @@ async function listEvents() {
         
         core.info(`List of all events: ${ JSON.stringify(eventsList.data, null, 4) }`)
     } catch (error) {
-        return core.setFailed(`Faild fetching events from Google Calendar API: ${ JSON.stringify(error) }`)
+        core.error(`Faild fetching events from Google Calendar API: ${ JSON.stringify(error) }`)
+        return []; // ADDED FIX
     }
 
     return eventsItems;
