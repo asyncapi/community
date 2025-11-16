@@ -71,4 +71,4 @@ jobs:
           github-token: ${{ secrets.GH_TOKEN }}
           message: |
             🚀 **Docs preview deployed**
-            → ${{ steps.deploy.outputs.url }}
+            → ${{ steps.deploy.outputs.url }}/docs/community
