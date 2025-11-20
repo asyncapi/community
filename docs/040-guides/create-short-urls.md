@@ -33,7 +33,7 @@ Where `status` can have one of the following values:
 - 301: Permanent - for links that remain unchanged.
 - 302: Temporary - for links that may change in the future.
 
-#### Examples
+### Examples
 
 ```text
 /s/slack-invite   https://asyncapi.com/slack   302
