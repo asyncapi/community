@@ -127,6 +127,7 @@
     - spec
     - spec-json-schemas
     - asyncapi-react
+    - parser-js
     - extensions-catalog
     - converter-js
     - bindings
@@ -157,7 +158,6 @@
   repos:
     - spec-json-schemas
     - generator
-    - parser-js
     - converter-js
     - modelina
     - parser-api
@@ -335,9 +335,7 @@
   availableForHire: false
   isTscMember: false
   repos:
-    - parser-js
     - openapi-schema-parser
-    - avro-schema-parser
     - go-watermill-template
     - parser-api
     - server-api
@@ -384,16 +382,6 @@
   repos:
     - java-template
   githubID: 45017928
-- name: Tom Jefferson
-  github: JEFFLUFC
-  linkedin: t-jefferson
-  slack: U02FPPCEH6H
-  availableForHire: false
-  company: IBM
-  isTscMember: false
-  repos:
-    - java-template
-  githubID: 54025356
 - name: Lewis Relph
   github: lewis-relph
   availableForHire: false
