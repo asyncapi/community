@@ -233,17 +233,56 @@ module.exports = async ({ github, context, botCommentURL }) => {
         console.log("No valid example member found in voteDetails.");
       }
 
+      // Merge newly discovered TSC members into the updated list
       if (updatedTSCMembers.length > 0) {
-        try {
-          updatedVoteDetails = updatedVoteDetails.concat(...updatedTSCMembers);
-          await writeFile(
-            voteTrackingFile,
-            JSON.stringify(updatedVoteDetails, null, 2)
-          );
-        } catch (writeError) {
-          console.error("Error wile writing file:", writeError);
-        }
+        updatedVoteDetails = updatedVoteDetails.concat(...updatedTSCMembers);
       }
+
+      // Build a set of current TSC member github handles (lowercase) so we can remove former members
+      const currentTscSet = new Set(tscMembers.map((m) => (m.github || "").toLowerCase()));
+
+      // Normalize entries: ensure required keys exist and have sensible defaults
+      const today = new Date().toISOString().split("T")[0];
+      updatedVoteDetails = updatedVoteDetails.map((entry) => {
+        const e = { ...entry };
+        // Ensure name exists
+        e.name = e.name || "";
+        // Normalize counts to numbers
+        e.agreeCount = Number.isFinite(e.agreeCount) ? e.agreeCount : 0;
+        e.disagreeCount = Number.isFinite(e.disagreeCount) ? e.disagreeCount : 0;
+        e.abstainCount = Number.isFinite(e.abstainCount) ? e.abstainCount : 0;
+        e.notParticipatingCount = Number.isFinite(e.notParticipatingCount)
+          ? e.notParticipatingCount
+          : 0;
+        // Normalize participation flags/dates
+        if (!e.lastParticipatedVoteTime || typeof e.lastParticipatedVoteTime !== "string") {
+          e.lastParticipatedVoteTime = null;
+        }
+        if (e.isVotedInLast3Months === "Member has not participated in all previous voting process.") {
+          e.isVotedInLast3Months = false;
+        }
+        if (typeof e.isVotedInLast3Months !== "boolean") {
+          e.isVotedInLast3Months = Boolean(e.isVotedInLast3Months);
+        }
+        if (!e.lastVoteClosedTime) e.lastVoteClosedTime = today;
+        if (!e.firstVoteClosedTime) e.firstVoteClosedTime = today;
+        return e;
+      });
+
+      // Filter out entries that are no longer TSC members
+      updatedVoteDetails = updatedVoteDetails.filter((entry) =>
+        currentTscSet.has((entry.name || "").toLowerCase())
+      );
+
+      try {
+        await writeFile(
+          voteTrackingFile,
+          JSON.stringify(updatedVoteDetails, null, 2)
+        );
+      } catch (writeError) {
+        console.error("Error while writing file:", writeError);
+      }
+
       return updatedVoteDetails;
     }
     // Method to fetch information from the comment when workflow triggered manually
