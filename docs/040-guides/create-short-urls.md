@@ -48,7 +48,7 @@ Where `status` can have one of the following values:
 2. Add a new redirect rule on a separate line.  You may include a comment above the rule for clarity. For example:
     ```text
     # Permanent redirect to the main Studio app
-    /s/studio   https://studio.asyncapi.com/   301
+    /s/asyncapiv2 https://raw.githubusercontent.com/asyncapi/asyncapi/2.0.0/examples/2.0.0/streetlights.yml 301
     ```
 
 3. Commit and create a Pull Request
