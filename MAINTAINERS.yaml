@@ -245,7 +245,6 @@
     - modelina
     - diff
     - chatbot
-    - server-api
     - EDAVisualiser
     - problem
   githubID: 20404945
@@ -338,7 +337,6 @@
     - openapi-schema-parser
     - go-watermill-template
     - parser-api
-    - server-api
   githubID: 1083296
 - name: Souvik De
   github: Souvikns
@@ -352,17 +350,6 @@
     - cli
     - bundler
   githubID: 41781438
-- name: David Pereira
-  github: BOLT04
-  twitter: BOLT2938
-  slack: U02EC8BT0TX
-  linkedin: josé-david-pereira-13ba5315a
-  availableForHire: false
-  company: Create IT
-  isTscMember: true
-  repos:
-    - server-api
-  githubID: 18630253
 - name: Daniel Raper
   github: dan-r
   slack: U02FP8WBFQE
