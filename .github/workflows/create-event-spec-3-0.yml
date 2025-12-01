@@ -31,6 +31,7 @@ jobs:
       GH_TOKEN: ${{ secrets.GH_TOKEN }}
       ZOOM_ACCOUNT_ID: ${{ secrets.ZOOM_ACCOUNT_ID }}
       ZOOM_TOKEN: ${{ secrets.ZOOM_TOKEN }}
+      ZOOM_CLIENT_ID: ${{ secrets.ZOOM_CLIENT_ID }}
       STREAM_URL: ${{ secrets.STREAM_URL }}
       STREAM_KEY: ${{ secrets.STREAM_KEY }}
       CALENDAR_ID: ${{ secrets.CALENDAR_ID }}
