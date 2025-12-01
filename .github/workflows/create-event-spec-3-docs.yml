@@ -31,6 +31,7 @@ jobs:
       ZOOM_ACCOUNT_ID: ${{ secrets.ZOOM_ACCOUNT_ID }}
       ZOOM_TOKEN: ${{ secrets.ZOOM_TOKEN }}
       STREAM_URL: ${{ secrets.STREAM_URL }}
+      ZOOM_CLIENT_ID: ${{ secrets.ZOOM_CLIENT_ID }}
       STREAM_KEY: ${{ secrets.STREAM_KEY }}
       CALENDAR_ID: ${{ secrets.CALENDAR_ID }}
       CALENDAR_SERVICE_ACCOUNT: ${{ secrets.CALENDAR_SERVICE_ACCOUNT }}
