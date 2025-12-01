@@ -54,6 +54,8 @@ on:
         required: true
       ZOOM_TOKEN:
         required: true
+      ZOOM_CLIENT_ID:
+        required: true
       STREAM_URL:
         required: true
       STREAM_KEY:
