@@ -22,7 +22,7 @@ module.exports = async(date, time, host, cohost) => {
             method: 'POST',
             body: params,
             headers: {
-                Authorization: `Basic ${ process.env.ZOOM_TOKEN }`
+                Authorization: `Basic ${process.env.ZOOM_CLIENT_ID}:${ process.env.ZOOM_TOKEN }`
             },
         });
         token = (await tokenCreationResponse.json()).access_token;
@@ -52,9 +52,8 @@ module.exports = async(date, time, host, cohost) => {
         method: 'POST',
 
         headers: {
-            'User-Agent': 'Zoom-api-Jwt-Request',
-            'content-type': 'application/json',
-            Authorization: `bearer ${ token }`
+            'Content-Type': 'application/json',
+            Authorization: `Bearer ${ token }`
         },
 
         body: zoomSettings
