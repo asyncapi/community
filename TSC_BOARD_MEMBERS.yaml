@@ -70,6 +70,7 @@
   isTscMember: true
   repos:
     - studio
+    - .github
     - cli
   githubID: 100484401
 - name: Dale Lane
@@ -135,7 +136,6 @@
   repos:
     - spec-json-schemas
     - studio
-    - .github
     - optimizer
   githubID: 32505158
 - name: Lukasz Gornicki
@@ -373,6 +373,7 @@
   isTscMember: true
   repos:
     - generator
+    - .github
   githubID: 40742916
 - name: Jeremy Whitlock
   github: whitlockjc
