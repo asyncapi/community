@@ -43,25 +43,14 @@ Where `status` can have one of the following values:
 
 ## Steps to Add a New Short URL
 
-1. Navigate to the [`public/_redirects` file](https://github.com/asyncapi/website/blob/master/public/_redirects) in the AsyncAPI website repository.
+1. Navigate to the [`public/_redirects` file](https://github.com/asyncapi/website/blob/master/public/_redirects) in the AsyncAPI website repository ([local setup guide](https://github.com/asyncapi/website?tab=readme-ov-file#run-locally)).
 
-2. Add a new redirect rule on a separate line.  You may include a comment above the rule for clarity. For example:
+2. Add a new redirect rule on a separate line. You may include a comment above the rule for clarity. For example:
     ```text
     # Permanent redirect to the main Studio app
     /s/asyncapiv2 https://raw.githubusercontent.com/asyncapi/asyncapi/2.0.0/examples/2.0.0/streetlights.yml 301
     ```
 
-3. Commit and create a Pull Request
-
-    1. Commit the updated `_redirects` file to your branch.
-    2. Push your changes to GitHub.
-    3. Raise a Pull Request.
-    4. Deploy Preview will be generated for the PR use it to validate your redirect.
-
-4. Document the change in the PR. In your PR description, add context to ensure reviewers understand the purpose of the redirect:
-
-    - The added short URL path
-    - Destination URL
-    - The purpose of the short link
+3. Raise a PR with a clear description of the changes ([contribution guide](https://github.com/asyncapi/website/blob/master/CONTRIBUTING.md)).
 
 ---
