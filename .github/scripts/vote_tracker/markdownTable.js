@@ -18,7 +18,8 @@ function renderVoteIcon(value) {
     Abstain: "👀",
     "Not participated": "🔕",
   };
-  return `<span style="position: relative; cursor: pointer;" title="${value}">${icons[value] || value}</span>`;
+ return `${icons[value] || value}`;
+
 }
 
 /**
@@ -47,7 +48,7 @@ function renderHeaderCell(key, titles, orgName, repoName) {
   }
 
   const tooltip = titles[key] || key;
-  return `<span style="position: relative; cursor: pointer;" title="${tooltip}">${key}</span>`;
+  return `${key}`;
 }
 
 /**
