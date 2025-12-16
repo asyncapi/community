@@ -192,7 +192,7 @@ In case a Bounty Issue gets an assignee before the End Of Life and, during its t
 
 Bounty Issue that reached End Of Life gets the historical text label `bounty/eol`, the reward for this Bounty Issue gets excluded from the budget allocated for the corresponding calendar month round of the Bounty Program, and this Bounty Issue becomes a regular GitHub issue, which can be submitted again as a Bounty Issue Candidate.
 
-A dropped Bounty Issue can not be assigned again to the same Bounty Program Participant who dropped it in the next calendar month rounds of the Bounty Program.
+A dropped Bounty Issue cannot be assigned again to the same Bounty Program Participant who dropped it in the next calendar month rounds of the Bounty Program.
 
 
 ## Additional Conditions
