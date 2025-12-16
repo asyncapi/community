@@ -214,7 +214,7 @@ GitHub label `bounty` has hex code `#0E8A16`.
 
 ## Claiming The Reward
 
-Claiming the reward for the completed Bounty Issue is done via the submission of an invoice at the dedicated [AsyncAPI Bounty Program 2025 page on Open Collective](https://opencollective.com/asyncapi/projects/asyncapi-bounty-program) (button '`ACTIONS`', dropdown option '`Submit expense`').
+Claiming the reward for the completed Bounty Issue is done via the submission of an invoice at the dedicated [AsyncAPI Bounty Program page on Open Collective](https://opencollective.com/asyncapi/projects/asyncapi-bounty-program) (button '`ACTIONS`', dropdown option '`Submit expense`').
 
 **Before the submission of the invoice, the Bounty Program Participant MUST ensure that the account they will use for the payout is VERIFIED by their financial institution, fully operational, and able to receive payments.**
 
