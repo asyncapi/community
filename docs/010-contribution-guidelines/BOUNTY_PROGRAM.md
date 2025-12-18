@@ -24,19 +24,19 @@ Anyone may implement this specification of the software development process with
 
 Since 2026, the budget of the Bounty Program is twenty-one thousand four hundred US dollars and 00 cents (USD 21,400.00) per calendar year, detailed as follows:
 
-- One thousand six hundred US dollars and 00 cents (USD 1,600.00) per one calendar month round (USD 19,200.00 per twelve calendar month rounds).
+- One thousand six hundred US dollars and 00 cents (USD 1,600.00) per one calendar-month round (USD 19,200.00 per twelve calendar-month rounds).
 
   - The reward for completion of a Bounty Issue of Complexity Level `Medium` is two hundred US dollars and 00 cents (USD 200.00).
 
   - The reward for completion of a Bounty Issue of Complexity Level `Advanced` is four hundred US dollars and 00 cents (USD 400.00).
 
-  The approximate maximum number of Bounty Issues per calendar month round ranges from four to eight (from (4 * 400) to (8 * 200)).
+  The approximate maximum number of Bounty Issues per calendar-month round ranges from four to eight (from (4 * 400) to (8 * 200)).
 
 - Bounty Program Coordination:
 
-  - One hundred fifty US dollars and 00 cents (USD 150.00) per one calendar month round (USD 1,800.00 per twelve calendar month rounds).
+  - One hundred fifty US dollars and 00 cents (USD 150.00) per one calendar-month round (USD 1,800.00 per twelve calendar-month rounds).
 
-- Open Collective's Fiscal Host, 'Open Source Collective,' commission for fund transfers: USD 400.00 for all payouts per twelve calendar month rounds (approximate; the exact commission per transfer depends on the method chosen and the beneficiary's location and cannot be precisely calculated in advance).
+- Open Collective's Fiscal Host, 'Open Source Collective,' commission for fund transfers: USD 400.00 for all payouts per twelve calendar-month rounds (approximate; the exact commission per transfer depends on the method chosen and the beneficiary's location and cannot be precisely calculated in advance).
 
 
 ## Prioritization Of Participants
@@ -70,7 +70,7 @@ Due to the asynchronous nature of the AsyncAPI Initiative itself and thus its Bo
 
 ## Bounty Issue's Submission
 
-GitHub issues for participation in the upcoming calendar month round of the Bounty Program that are candidates to become Bounty Issues, and are agreed upon for participation in the Bounty Program by all active Maintainers of the given repository, are submitted during the second full (seven-day) calendar week of the month after the call for such submission, in the comments of the dedicated [AsyncAPI GitHub Organization's Discussion](https://github.com/orgs/asyncapi/discussions), by an AsyncAPI Maintainer who will be responsible for the resolution of the given Bounty Issue from the AsyncAPI's side, containing the following five fields:
+GitHub issues for participation in the upcoming calendar-month round of the Bounty Program that are candidates to become Bounty Issues, and are agreed upon for participation in the Bounty Program by all active Maintainers of the given repository, are submitted during the second full (seven-day) calendar week of the month after the call for such submission, in the comments of the dedicated [AsyncAPI GitHub Organization's Discussion](https://github.com/orgs/asyncapi/discussions), by an AsyncAPI Maintainer who will be responsible for the resolution of the given Bounty Issue from the AsyncAPI's side, containing the following five fields:
 
 1. Number: `cli#361`
 
@@ -82,21 +82,21 @@ GitHub issues for participation in the upcoming calendar month round of the Boun
 
 5. Type: `Coding` | `DevOps` | `Docs` | `Design`
 
-Submitted GitHub issues undergo public pre-moderation by the AsyncAPI Community to ensure adherence to the values of the AsyncAPI Initiative. In case a GitHub issue does not pass pre-moderation, it is not accepted for participation in the upcoming calendar month round of the Bounty Program.
+Submitted GitHub issues undergo public pre-moderation by the AsyncAPI Community to ensure adherence to the values of the AsyncAPI Initiative. In case a GitHub issue does not pass pre-moderation, it is not accepted for participation in the upcoming calendar-month round of the Bounty Program.
 
 In case documentation must be provided together with the solution requested in the Bounty Issue, such requirement should be explicitly stated in the Scope.
 
 In case two Bounty Issues are inextricably linked and cannot be completed separately from each other, such connection must be explicitly stated in the Scope.
 
-In case the total reward for all submitted Bounty Issues exceeds the budget allocated for the upcoming calendar month round of the Bounty Program, a full list of submitted Bounty Issues undergoes randomization using the randomization service provided by [random.org](https://random.org). Inextricably linked Bounty Issues, in this case, get joined into one generic issue (e.g., `cli#361-cli#38`) for the sake of randomization. After randomization, the resulting randomized list is crawled from the beginning until the total reward for the Bounty Issues reaches the amount of the budget allocated for the upcoming calendar month round of the Bounty Program.
+In case the total reward for all submitted Bounty Issues exceeds the budget allocated for the upcoming calendar-month round of the Bounty Program, a full list of submitted Bounty Issues undergoes randomization using the randomization service provided by [random.org](https://random.org). Inextricably linked Bounty Issues, in this case, get joined into one generic issue (e.g., `cli#361-cli#38`) for the sake of randomization. After randomization, the resulting randomized list is crawled from the beginning until the total reward for the Bounty Issues reaches the amount of the budget allocated for the upcoming calendar-month round of the Bounty Program.
 
-In case the reward for the last Bounty Issue in the resulted randomized list generates an excess of the budget, this and all following issues until the end of the resulted randomized list are excluded from participation in the upcoming calendar month round of the Bounty Program. Such Bounty Issues are allowed to be submitted during the submission of Bounty Issues for the next calendar month round of the Bounty Program.
+In case the reward for the last Bounty Issue in the resulted randomized list generates an excess of the budget, this and all following issues until the end of the resulted randomized list are excluded from participation in the upcoming calendar-month round of the Bounty Program. Such Bounty Issues are allowed to be submitted during the submission of Bounty Issues for the next calendar-month round of the Bounty Program.
 
 All GitHub issues selected as Bounty Issues get labels on GitHub:
 
 - GitHub label `bounty`
 
-- text label indicating calendar month round of the Bounty Program in which Bounty Issue participates (e.g., `bounty/2026-03`)
+- text label indicating calendar-month round of the Bounty Program in which Bounty Issue participates (e.g., `bounty/2026-03`)
 
 - text labels `bounty/medium` | `bounty/advanced` according to the Complexity Level of the Bounty Issue
 
@@ -110,7 +110,7 @@ This project view is also visible to non-logged-in/non-GitHub users.
 
 The start date in the Bounty Program is counted from Monday of the next week when assignment of the Bounty Issue on GitHub happened.
 
-In case the Bounty Issue on GitHub was assigned during the third or fourth full (seven-day) calendar week of the month, the start date in the Bounty Program is counted from the first Monday of the new calendar month round.
+In case the Bounty Issue on GitHub was assigned during the third or fourth full (seven-day) calendar week of the month, the start date in the Bounty Program is counted from the first Monday of the new calendar-month round.
 
 For Bounty Issues of Complexity Level `Medium`:
 
@@ -178,7 +178,7 @@ To avoid half-merges, unmet dependencies on the completion of other (inextricabl
 
 ## Bounty Issue's End Of Life
 
-GitHub issue participates in the Bounty Program and is considered a Bounty Issue starting from the second of addition of the GitHub label `bounty` according to GitHub's timestamp until the Bounty Issue's End Of Life, which starts after the last second of the last day of the calendar month round of the Bounty Program it was introduced in, inclusive.
+GitHub issue participates in the Bounty Program and is considered a Bounty Issue starting from the second of addition of the GitHub label `bounty` according to GitHub's timestamp until the Bounty Issue's End Of Life, which starts after the last second of the last day of the calendar-month round of the Bounty Program it was introduced in, inclusive.
 
 In case a Bounty Issue gets an assignee before the End Of Life and continues to have an assignee after the End Of Life, it continues to be a Bounty Issue until completion.
 
@@ -190,9 +190,9 @@ In case a Bounty Issue gets an assignee before the End Of Life and does not get 
 
 In case a Bounty Issue gets an assignee before the End Of Life and, during its technical resolution, it becomes clear that this Bounty Issue cannot be completed due to unpredicted [force majeure](https://iccwbo.org/wp-content/uploads/sites/3/2020/03/icc-forcemajeure-hardship-clauses-march2020.pdf) and/or circumstances that could not be foreseen and/or that are beyond the control of both the Bounty Program Participant and the AsyncAPI Maintainer, it gets the historical text label `bounty/canceled` and is considered the one that reached End Of Life.
 
-Bounty Issue that reached End Of Life gets the historical text label `bounty/eol`, the reward for this Bounty Issue gets excluded from the budget allocated for the corresponding calendar month round of the Bounty Program, and this Bounty Issue becomes a regular GitHub issue, which can be submitted again as a Bounty Issue Candidate.
+Bounty Issue that reached End Of Life gets the historical text label `bounty/eol`, the reward for this Bounty Issue gets excluded from the budget allocated for the corresponding calendar-month round of the Bounty Program, and this Bounty Issue becomes a regular GitHub issue, which can be submitted again as a Bounty Issue Candidate.
 
-A dropped Bounty Issue cannot be assigned again to the same Bounty Program Participant who dropped it in the next calendar month rounds of the Bounty Program.
+A dropped Bounty Issue cannot be assigned again to the same Bounty Program Participant who dropped it in the next calendar-month rounds of the Bounty Program.
 
 
 ## Additional Conditions
