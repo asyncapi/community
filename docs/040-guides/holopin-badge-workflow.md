@@ -76,49 +76,41 @@ The automatically replicated `holopin.yml` file contains:
 
 Once submitted, the `@holopin-bot` responds to the user `@johndoe` with a unique URL to claim the `contributor-badge` badge within their Holopin profile. After claiming, the badge appears on the Holopin profile and can also be [displayed in their GitHub profile](https://blog.holopin.io/posts/github-readme-tutorial).
 
-### Best Practices
-
-- **Be specific:** Use the appropriate badge type for the contribution
-- **Timely recognition:** Issue badges soon after contributions are merged or completed
-- **Consistent criteria:** Establish clear criteria for each badge type in your repository
-- **Document usage:** Consider adding badge criteria to your repository's CONTRIBUTING.md or README.md
-
 ## Getting New Badges
 
 If you need new badge types created for the AsyncAPI organization:
 
 1. Contact **@thulieblack** or **@derberg** to request new badge designs
-2. Once created, they will add the new badge to the central `holopin.yml` file in the `.github` repository
-3. All repositories with the `get-global-holopin` topic will automatically receive the updated configuration
+2. Once created, new badge id(s) will be added to the main `holopin.yml` file in the `.github` repository
+3. The updated configuration will be populated to all repositories with the `get-global-holopin` topic
 
 ## Additional Resources
 
-- **Holopin GitHub Integration Documentation:** [https://docs.holopin.io/integrations/github](https://docs.holopin.io/integrations/github)
-- **Holopin Issuing Rewards Guide:** [https://docs.holopin.io/issuing-rewards/regular-badges](https://docs.holopin.io/issuing-rewards/regular-badges)
-- **AsyncAPI `.github` Repository:** [https://github.com/asyncapi/.github/blob/master/README.md](https://github.com/asyncapi/.github/blob/master/README.md)
-- **AsyncAPI Holopin Configuration:** [https://github.com/asyncapi/.github/blob/master/.github/holopin.yml](https://github.com/asyncapi/.github/blob/master/.github/holopin.yml)
+- [Holopin GitHub Integration Documentation](https://docs.holopin.io/integrations/github)
+- [Holopin Issuing Rewards Guide](https://docs.holopin.io/issuing-rewards/regular-badges)
+- [AsyncAPI Holopin Configuration](https://github.com/asyncapi/.github/blob/master/.github/holopin.yml)
 
 ## Troubleshooting
 
 ### Bot Not Responding
 
+- Make sure you're commenting in an Issue or Pull Request (not a discussion)
 - Ensure you've added the `get-global-holopin` topic to your repository
 - Verify the `holopin.yml` file exists in your `.github` directory (it should be automatically created)
-- Verify you're a member of the Holopin organization
 - Check that your GitHub account is linked to your Holopin account
-- Make sure you're commenting in an Issue or Pull Request (not a discussion)
+- Verify you're a member of the Holopin organization
 
 ### Badge Not Issued
 
-- Verify the sticker alias exists in the `holopin.yml` file (check the [central configuration](https://github.com/asyncapi/.github/blob/master/.github/holopin.yml))
-- Check that the username is correct (include the `@` symbol)
+- Verify the sticker alias exists in the `holopin.yml` file (check the [main configuration](https://github.com/asyncapi/.github/blob/master/.github/holopin.yml))
+- Check that the username is correct (starts with the `@` symbol)
 - Ensure the bot has access to the repository
 - Confirm the `get-global-holopin` topic is present on your repository
 
 ### Need Help?
 
 If you encounter issues or need assistance:
-- Contact **@thulieblack** or **@derberg** on GitHub
+- Open an issue in a relevant AsyncAPI repository (for example, `asyncapi/community`) and mention **@thulieblack** or **@derberg** in the description so they’re notified
 - Reach out in the [AsyncAPI Slack](https://asyncapi.com/slack-invite) community
 - Check the [Holopin support documentation](https://docs.holopin.io)
 
