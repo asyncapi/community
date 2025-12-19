@@ -27,7 +27,7 @@ Repository maintainers must be members of the AsyncAPI Holopin organization to i
 
 **To get added to the organization:**
 1. Open a Holopin account
-2. Contact one of the following administrators to request access: Ask them to add you to the AsyncAPI Holopin organization so you can start issuing badges.
+2. Contact one of the following administrators to request membership in the AsyncAPI Holopin organization:
 
     - **@thulieblack** (GitHub)
     - **@derberg** (GitHub)
