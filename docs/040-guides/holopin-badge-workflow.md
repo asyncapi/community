@@ -16,34 +16,42 @@ weight: 30
 
 At a glance, you need to: (1) create a Holopin account, (2) join the AsyncAPI Holopin org, and (3) link your GitHub account.
 
-### 1) Create a Holopin Account
-- Visit [holopin.io](https://holopin.io) and create an account
-- Complete your profile setup
+### Create a Holopin Account
 
-### 2) Join the AsyncAPI Holopin Organization
-- Maintainership access to issue badges requires org membership
-- Request access by messaging **@thulieblack** or **@derberg** on GitHub to be added to the AsyncAPI Holopin org
+1. Visit [holopin.io](https://holopin.io) and create an account
+2. Complete your profile setup
 
-### 3) Link Your GitHub Account
-- Go to your [Holopin Account Settings](https://holopin.io/account)
-- Link your Holopin account to your GitHub profile so `@holopin-bot` can work in your repos
+### Join the AsyncAPI Holopin Organization
+
+Repository maintainers must be members of the AsyncAPI Holopin organization to issue badges.
+
+**To get added to the organization:**
+1. Open a Holopin account
+2. Contact one of the following administrators to request access: Ask them to add you to the AsyncAPI Holopin organization so you can start issuing badges.
+
+    - **@thulieblack** (GitHub)
+    - **@derberg** (GitHub)
+
+### Link Your GitHub Account
+
+1. Go to your [Holopin Account Settings](https://holopin.io/account)
+2. Link your Holopin account to your GitHub profile
+3. This enables the `@holopin-bot` to work in your repositories
 
 ## Setting Up the Badge Workflow
 
 ### Add the Repository Topic
 
-To enable Holopin badges in your repository, you don't need to create a `holopin.yml` file manually. Simply add the `get-global-holopin` topic to your repository, and the configuration file will be automatically replicated from the [AsyncAPI `.github` repository](https://github.com/asyncapi/.github).
-
 **Steps to add the topic:**
 
 1. Navigate to your repository on GitHub
-2. Click on the gear icon (⚙️) next to the "About" section, or click on the topics area
+2. Click on the gear icon next to the "About" section, or click on the topics area
 3. In the topics field, add `get-global-holopin`
 4. Press Enter or click outside the field to save
 
-The `holopin.yml` file will be automatically created in your repository's `.github` directory with all the necessary configuration.
+The `holopin.yml` file will be automatically created in your repository's `.github` directory with all the necessary configuration replicated from the [AsyncAPI `.github` repository](https://github.com/asyncapi/.github).
 
-> **Note:** For more information about this automation, see the [AsyncAPI `.github` repository README](https://github.com/asyncapi/.github/blob/master/README.md).
+> **Note:** For more information about this automation, see the [`replicate_holopin_file` job](https://github.com/asyncapi/.github/blob/master/.github/workflows/global-replicator.yml#L271) within the global replicator workflow.
 
 ### Understanding the Configuration
 
@@ -53,51 +61,20 @@ The automatically replicated `holopin.yml` file contains:
 - **Default sticker:** The default badge that will be issued if no alias is specified
 - **Available stickers:** A list of all badge types with their IDs and aliases
 
-### Available Badge Types
-
-The AsyncAPI organization has the following badges available:
-
-- **contributor-badge** - For general contributions
-- **maintainer-badge** - For repository maintainers
-- **triager-badge** - For issue triagers
-- **ambassador-badge** - For AsyncAPI ambassadors
-- **leader-badge** - For community leaders
-- **speaker-badge** - For speakers at events
-- **volunteer-badge** - For volunteers
-- **mentor-badge** - For mentors
-- **champion-badge** - For champions
-- **bronze-badge** - Bronze tier recognition
-- **silver-badge** - Silver tier recognition
-- **gold-badge** - Gold tier recognition
-- **platinum-badge** - Platinum tier recognition
-- **diamond-badge** - Diamond tier recognition
-
-## Issuing Badges
-
-Once you've added the `get-global-holopin` topic to your repository and the `holopin.yml` file has been automatically created, you can issue badges to contributors.
-
-### How to Issue a Badge
+## How to Issue a Badge
 
 1. Navigate to any **Issue** or **Pull Request** in your repository
 2. Add a comment with the following format:
 
 ```
+// Format
 @holopin-bot @username sticker-alias
-```
 
-**Example:**
-```
+// Example
 @holopin-bot @johndoe contributor-badge
 ```
 
-This will issue the `contributor-badge` to the user `@johndoe`.
-
-### What Happens Next
-
-1. The `@holopin-bot` will process your comment
-2. The bot will respond with a unique claim URL for the recipient
-3. The recipient can click the link to claim their badge on their Holopin profile
-4. The badge will appear on their Holopin profile and can be displayed on their GitHub profile
+Once submitted, the `@holopin-bot` responds to the user `@johndoe` with a unique URL to claim the `contributor-badge` badge within their Holopin profile. After claiming, the badge appears on the Holopin profile and can also be [displayed in their GitHub profile](https://blog.holopin.io/posts/github-readme-tutorial).
 
 ### Best Practices
 
