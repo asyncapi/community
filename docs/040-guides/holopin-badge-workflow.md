@@ -6,37 +6,27 @@ weight: 30
 
 ## Introduction
 
-Holopin badges (also called stickers) are digital badges that maintainers can issue to recognize and reward contributors for their work. This guide explains how to set up the Holopin badge workflow for your repository and how to issue badges to contributors.
+**Holopin badges** (stickers) are digital rewards maintainers give to recognize contributors. This guide is for repositories **inside the AsyncAPI GitHub organization** and shows, in order:
 
-> **Reference:** See the [AsyncAPI's `holopin.yml` configuration](https://github.com/asyncapi/.github/blob/master/.github/holopin.yml) for a complete example.
+- **Enable**: Add the `get-global-holopin` topic so the shared Holopin setup auto-applies (no manual `holopin.yml` needed).
+- **Issue**: Use the `@holopin-bot @username sticker-alias` comment to send badges.
+- **Support**: Who to contact if you need new badges or help.
 
 ## Prerequisites
 
-Before you can issue Holopin badges, you need to complete the following prerequisites:
+At a glance, you need to: (1) create a Holopin account, (2) join the AsyncAPI Holopin org, and (3) link your GitHub account.
 
-### Create a Holopin Account
-
+### 1) Create a Holopin Account
 - Visit [holopin.io](https://holopin.io) and create an account
 - Complete your profile setup
 
-### Join the Holopin Organization
+### 2) Join the AsyncAPI Holopin Organization
+- Maintainership access to issue badges requires org membership
+- Request access by messaging **@thulieblack** or **@derberg** on GitHub to be added to the AsyncAPI Holopin org
 
-Repository maintainers must be members of the AsyncAPI Holopin organization to issue badges.
-
-**To get added to the organization:**
-- Open a Holopin account
-- Contact one of the following administrators to request access:
-  Ask them to add you to the AsyncAPI Holopin organization so you can start issuing badges.
-  
-  - **@thulieblack** (GitHub)
-  - **@derberg** (GitHub)
-
-
-### Link GitHub Account
-
+### 3) Link Your GitHub Account
 - Go to your [Holopin Account Settings](https://holopin.io/account)
-- Link your Holopin account to your GitHub profile
-- This enables the `@holopin-bot` to work in your repositories
+- Link your Holopin account to your GitHub profile so `@holopin-bot` can work in your repos
 
 ## Setting Up the Badge Workflow
 
