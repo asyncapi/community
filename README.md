@@ -11,7 +11,7 @@ Join us in shaping the future of how you work with Event-Driven Architectures.
 
 We set annual community goals that guide our growth and initiatives every year. Join us as we enhance maintainers' support, simplify onboarding, and establish structured community initiatives and programs. 
 
-**[More details »](docs/030-project-vision-strategy-goals/2025_Community_Goals.md)**
+**[More details »](docs/030-project-vision-strategy-goals/2026_Community_Goals.md)**
 
 
 ## Community Documentation & Onboarding
