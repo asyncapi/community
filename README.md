@@ -11,7 +11,7 @@ Join us in shaping the future of how you work with Event-Driven Architectures.
 
 We set annual community goals that guide our growth and initiatives every year. Join us as we enhance maintainers' support, simplify onboarding, and establish structured community initiatives and programs. 
 
-**[More details »](./annual-goals)**
+**[More details »](https://github.com/orgs/asyncapi/discussions/948)**
 
 
 ## Community Documentation & Onboarding
@@ -24,13 +24,13 @@ Find all the resources you need to start contributing to our organization.
 
 2. Read the [Contribution Guide](docs/010-contribution-guidelines/contribution-flow.md) and learn how to contribute effectively.
 
-3. Explore the [Community Contribution Onboarding Docs](docs/onboarding-guide), a step-by-step guide for new contributors.
+3. Explore the [Community Contribution Onboarding Docs](https://www.asyncapi.com/docs/community), a step-by-step guide for new contributors.
 
-4. Follow the [AsyncAPI Style Guide](docs/styleguide) to ensure consistency across all docs.
+4. Follow the [AsyncAPI Style Guide](https://www.asyncapi.com/docs/community/011-styleguide/aboutguide) to ensure consistency across all docs.
 
 ## Community Governance and Charter
 
-Our community is steered by a transparent governance board. You can learn more about our  **[Community Governance](./020-governance-and-policies/CHARTER.)** and the **[AsyncAPI Charter](./CHARTER.md)**, which outlines the decision-making process, structure, responsibilities, and procedures for contributions and oversight of the AsyncAPI open project.
+Our community is steered by a transparent governance board. You can learn more about our  **[Community Governance](https://www.asyncapi.com/docs/community/020-governance-and-policies/governance)** and the **[AsyncAPI Charter](https://www.asyncapi.com/docs/community/020-governance-and-policies/charter)**, which outlines the decision-making process, structure, responsibilities, and procedures for contributions and oversight of the AsyncAPI open project.
 
 
 ## AsyncAPI Technical Steering Committee (TSC) 
