@@ -6,15 +6,21 @@ weight: 30
 
 ## Introduction
 
-**Holopin badges** (stickers) are digital rewards maintainers give to recognize contributors. This guide is for repositories **inside the AsyncAPI GitHub organization** and shows, in order:
+**Holopin badges** (stickers) are digital rewards to recognize contributors. By following this guide, you'll learn how to:
 
-- **Enable**: Add the `get-global-holopin` topic so the shared Holopin setup auto-applies (no manual `holopin.yml` needed).
-- **Issue**: Use the `@holopin-bot @username sticker-alias` comment to send badges.
-- **Support**: Who to contact if you need new badges or help.
+1. Enable Holopin badges for repositories within the AsyncAPI Github organization.
+2. Issue Holopin badges to contributors.
+3. Request new badges or get support.
 
 ## Prerequisites
 
-At a glance, you need to: (1) create a Holopin account, (2) join the AsyncAPI Holopin org, and (3) link your GitHub account.
+Before proceeding with the guide, make sure to:
+
+1. Create a Holopin account.
+2. Join the AsyncAPI Holopin organization to issue badges
+3. Link your GitHub account.
+
+Find more information about each of the steps below in the section.
 
 ### Create a Holopin Account
 
@@ -26,13 +32,15 @@ At a glance, you need to: (1) create a Holopin account, (2) join the AsyncAPI Ho
 Repository maintainers must be members of the AsyncAPI Holopin organization to issue badges.
 
 **To get added to the organization:**
-1. Open a Holopin account
-2. Contact one of the following administrators to request membership in the AsyncAPI Holopin organization:
+
+1. Contact one of the following administrators to request membership in the AsyncAPI Holopin organization:
 
     - **@thulieblack** (GitHub)
     - **@derberg** (GitHub)
 
 ### Link Your GitHub Account
+
+If you created your Holopin account using "Sign up with GitHub", your accounts are already linked. Otherwise:
 
 1. Go to your [Holopin Account Settings](https://holopin.io/account)
 2. Link your Holopin account to your GitHub profile
@@ -52,14 +60,6 @@ Repository maintainers must be members of the AsyncAPI Holopin organization to i
 The `holopin.yml` file will be automatically created in your repository's `.github` directory with all the necessary configuration replicated from the [AsyncAPI `.github` repository](https://github.com/asyncapi/.github).
 
 > **Note:** For more information about this automation, see the [`replicate_holopin_file` job](https://github.com/asyncapi/.github/blob/master/.github/workflows/global-replicator.yml#L271) within the global replicator workflow.
-
-### Understanding the Configuration
-
-The automatically replicated `holopin.yml` file contains:
-
-- **Organization:** `asyncapi` (the Holopin organization name)
-- **Default sticker:** The default badge that will be issued if no alias is specified
-- **Available stickers:** A list of all badge types with their IDs and aliases
 
 ## How to Issue a Badge
 
