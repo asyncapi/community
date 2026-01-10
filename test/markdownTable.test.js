@@ -31,9 +31,10 @@ describe('renderHeaderCell', () => {
     expect(result).toContain("[Voting]");
   });
 
-  it('returns span with tooltip for normal keys', () => {
+  it('returns plain header text for normal keys', () => {
     const result = renderHeaderCell("name", titles, "org", "repo");
-    expect(result).toContain("name");
+    expect(result).toBe("name");
+    expect(result).not.toContain("<span");
   });
 });
 
