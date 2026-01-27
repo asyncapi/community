@@ -30,7 +30,7 @@ jobs:
       meeting_desc: ${{ github.event.inputs.desc }}
       meeting_banner: ${{ github.event.inputs.meeting_banner }}
       host: lpgornicki@gmail.com
-      alternative_host: "muibudeenaishat@gmail.com,devlopergene@gmail.com,sibanda.thulie@gmail.com,oluwabamikemi@gmail.com"
+      alternative_host: "muibudeenaishat@gmail.com,devlopergene@gmail.com,sibanda.thulie@gmail.com,oluwabamikemi@gmail.com,prince.rajpoot.20@gmail.com"
       issue_template_path: .github/workflows/create-event-helpers/issues_templates/ad-hoc.md
       create_zoom: true
     secrets:
