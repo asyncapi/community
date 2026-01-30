@@ -750,11 +750,13 @@
   github: amparosancho
   isTscMember: false
   repos:
+    - spec-json-schemas
     - bindings
   githubID: 214812239
 - name: Florian Gramß
   github: gramss
   isTscMember: false
   repos:
+    - spec-json-schemas
     - bindings
   githubID: 6034322
