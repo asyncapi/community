@@ -134,8 +134,8 @@ module.exports = async ({ github, context, botCommentURL }) => {
 
     const markdownTable = await jsonToMarkdownTable(updatedVoteDetails, orgName, repoName);
     try {
-      await writeFile("TSC_VOTING_OVERVIEW.md", markdownTable);
-      console.log("Markdown table has been written to TSC_VOTING_OVERVIEW.md");
+      await writeFile("docs/020-governance-and-policies/TSC_VOTING_OVERVIEW.md", markdownTable);
+      console.log("Markdown table has been written to docs/020-governance-and-policies/TSC_VOTING_OVERVIEW.md");
     } catch (writeError) {
       console.error("Error writing to TSC_VOTING_OVERVIEW.md:", writeError);
       throw writeError;
