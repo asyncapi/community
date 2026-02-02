@@ -29,7 +29,7 @@ This project focuses on ensuring the long-term sustainability of the AsyncAPI Co
 - 👩🏿‍🏫 **Mentor(s):** [Azeez Elegbede](https://github.com/AceTheCreator) | [Tenz Delek](http://github.com/TenzDelek)
 - ⏳ **Length:** 350 Hours
 
-## 3) [AsyncAPI Website Maintainership - From Contributor to Maintainer](https://github.com/asyncapi/generator/issues/1360) 
+## 3) [AsyncAPI Website Maintainership - From Contributor to Maintainer](https://github.com/asyncapi/website/issues/5052) 
 This initiative is designed to guide contributors on a hands-on journey from being an active contributor to becoming a maintainer of the AsyncAPI Website. The project currently requires additional maintainers to help manage its growing scale, with over 130 open issues and 100+ open pull requests.
 
 The goal of this project is not just to write code, but to expose contributors to the full scope of maintainership responsibilities, including decision-making, project stewardship, and long-term sustainability.
@@ -40,7 +40,7 @@ The goal of this project is not just to write code, but to expose contributors t
 - 👩🏿‍🏫 **Mentor(s):** [Prince Rajpoot](https://github.com/princerajpoot20) | [Vishvamsinh Vaghela](https://github.com/vishvamsinh28)
 - ⏳ **Length:** 350 Hours
 
-## 4) [Improving the AsyncAPI React Component ](https://github.com/asyncapi/conference-website/issues/551) 
+## 4) [Improving the AsyncAPI React Component ](https://github.com/asyncapi/asyncapi-react/issues/1214) 
 
 As the component evolves, it faces challenges around extensibility, maintainability, and long-term ownership, particularly as new features, integrations, and specification updates are introduced. This initiative aims to strengthen the component’s technical foundation while preparing a contributor for long-term maintainership.
 
@@ -50,7 +50,7 @@ As the component evolves, it faces challenges around extensibility, maintainabil
 - 👩🏿‍🏫 **Mentor(s):** [Azeez Elegbede](https://github.com/AceTheCreator)
 - ⏳ **Length:** 350 Hours
 
-## 5) [AsyncAPI CLI Maintainership - Performance, Stability & Sustainability](https://github.com/asyncapi/vs-asyncapi-preview/issues/253)
+## 5) [AsyncAPI CLI Maintainership - Performance, Stability & Sustainability](https://github.com/asyncapi/cli/issues/1991)
 This initiative is designed to guide contributors on a hands-on journey from being an active contributor to becoming a maintainer of the AsyncAPI CLI. Participants will gain real-world experience with maintainership responsibilities that go far beyond writing code, focusing instead on long-term project health, performance, and sustainability.
 
 - 🎯 **Outcome:** A faster, more reliable, and maintainable AsyncAPI CLI with a contributor prepared for long-term maintainership
