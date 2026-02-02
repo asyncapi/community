@@ -7,12 +7,12 @@ weight: 190
 
 # AsyncAPI Ideas Page: Google Summer of Code 2026
 
-Welcome to the **AsyncAPI Ideas Page** with our proposed projects for Google Summer of Code (GSoC) 2026! If you are an interested contributor, please don't hesitate to contact our mentors directly to discuss project ideas.
+Welcome to the **AsyncAPI Ideas Page** with our proposed projects for Google Summer of Code (GSoC) 2026! If you are interested in contributing, please don't hesitate to contact our mentors directly to discuss project ideas.
 
-<!-- > Note: Projects with checkboxes are project that made it to the final. -->
+<!-- > Note: Projects with checkboxes are projects that made it to the final. -->
 
-## 1) [AsyncAPI Generator Maintainership - Hands-on Open Source Experience](https://github.com/asyncapi/generator/issues/1860)
-This initiative aims to guide you on a journey from being a contributor to becoming a maintainer of the project. You'll gain insight into the responsibilities of a maintainer, involving tasks beyond mere coding.
+## 1) [AsyncAPI Generator Maintainership - Hands on Open Source Experience](https://github.com/asyncapi/generator/issues/1860)
+This initiative aims to guide you on a journey from contributor to maintainer of the project. You'll gain insight into the responsibilities of a maintainer, involving tasks beyond mere coding.
 
 - 🎯 **Outcome:** Taking responsibility for the AsyncAPI Generator's project future and continuous improvement
 - 🛠️ **Skills Required:** JavaScript, Docker, Testing (Jest or similar), AsyncAPI knowledge, AsyncAPI Template Development, CI/CD, Technical Documentation
@@ -24,13 +24,13 @@ This initiative aims to guide you on a journey from being a contributor to becom
 This project focuses on ensuring the long-term sustainability of the AsyncAPI Conference website by improving its technical foundation and onboarding a new maintainer through a hands-on GSoC experience.
 
 - 🎯 **Outcome:** A well-maintained, scalable AsyncAPI Conference website with a clearly onboarded long-term maintainer
-- 🛠️ **Skills Required:** Javascript/Typescript, Next.js, Web Performance, Accessibility
+- 🛠️ **Skills Required:** JavaScript/TypeScript, Next.js, Web Performance, Accessibility
 - 🧩 **Difficulty:** Hard
 - 👩🏿‍🏫 **Mentor(s):** [Azeez Elegbede](https://github.com/AceTheCreator) | [Tenz Delek](http://github.com/TenzDelek)
 - ⏳ **Length:** 350 Hours
 
 ## 3) [AsyncAPI Website Maintainership - From Contributor to Maintainer](https://github.com/asyncapi/website/issues/5052) 
-This initiative is designed to guide contributors on a hands-on journey from being an active contributor to becoming a maintainer of the AsyncAPI Website. The project currently requires additional maintainers to help manage its growing scale, with over 130 open issues and 100+ open pull requests.
+This initiative is designed to guide contributors on a hands-on journey from active contributor to maintainer of the AsyncAPI Website. The project currently requires additional maintainers to help manage its growing scale, with over 130 open issues and 100+ open pull requests.
 
 The goal of this project is not just to write code, but to expose contributors to the full scope of maintainership responsibilities, including decision-making, project stewardship, and long-term sustainability.
 
@@ -65,7 +65,7 @@ This initiative is designed to guide contributors on a hands-on journey from bei
 
 ## FAQ
 
-1. **How active are previous GSoC contributors in AsyncAPI?** AsyncAPI participated in Google Summer of Code (GSoC) for the fourth time in 2025, a significant milestone that speaks to our commitment to nurturing the next generation of open-source contributors. Many contributors from that cohort remain actively involved in the community while some ended up as project maintainers, including:
+1. **How active are previous GSoC contributors in AsyncAPI?** AsyncAPI participated in Google Summer of Code (GSoC) for the fourth time in 2025, a significant milestone that speaks to our commitment to nurturing the next generation of open-source contributors. Many contributors from that cohort remain actively involved in the community, while some ended up as project maintainers, including:
 
    - **[Adi Boghawala](https://github.com/Adi-204)**: Now a maintainer of the [AsyncAPI Generator](https://github.com/asyncapi/generator) repository
    - **[Ruchi Pakhle](https://github.com/Ruchip16)**: Currently maintaining and advocating for the [AsyncAPI VsCode Extension](https://github.com/asyncapi/vs-asyncapi-preview)
@@ -76,7 +76,7 @@ This initiative is designed to guide contributors on a hands-on journey from bei
 
 
 2. **Is using ChatGPT for GSoC project proposals allowed?**
-  We advise against using ChatGPT or similar AI tools for your GSoC project proposals with AsyncAPI. If you choose to use such tools, we require that you fully disclose this in your application.
+  We advise against using ChatGPT or similar AI tools for your AsyncAPI GSoC project proposals. If you choose to use such tools, we require that you fully disclose this in your application.
 
 3. **Where is the AsyncAPI source code located?**
    You can find all AsyncAPI source code on GitHub under our organization: [https://github.com/asyncapi](https://github.com/asyncapi).
