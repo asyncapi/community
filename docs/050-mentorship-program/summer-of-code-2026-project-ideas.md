@@ -1,6 +1,6 @@
 ---
 title: AsyncAPI GSoC Ideas Page 2026
-weight: 190
+weight: 200
 ---
 
 > **Program Status: Application Phase**
