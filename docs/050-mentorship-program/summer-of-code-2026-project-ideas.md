@@ -11,7 +11,7 @@ Welcome to the **AsyncAPI Ideas Page** with our proposed projects for Google Sum
 
 <!-- > Note: Projects with checkboxes are project that made it to the final. -->
 
-## 1) [AsyncAPI Generator Maintainership - A complete hands-on open source experience](https://github.com/asyncapi/generator/issues/1860)
+## 1) [AsyncAPI Generator Maintainership - Hands-on Open Source Experience](https://github.com/asyncapi/generator/issues/1860)
 This initiative aims to guide you on a journey from being a contributor to becoming a maintainer of the project. You'll gain insight into the responsibilities of a maintainer, involving tasks beyond mere coding.
 
 - 🎯 **Outcome:** Taking responsibility for the AsyncAPI Generator's project future and continuous improvement
@@ -56,7 +56,7 @@ This initiative is designed to guide contributors on a hands-on journey from bei
 - 🎯 **Outcome:** A faster, more reliable, and maintainable AsyncAPI CLI with a contributor prepared for long-term maintainership
 - 🛠️ **Skills Required:** JavaScript, TypeScript, Node.js, Performance Optimization, Testing Tooling, Dependency Management, API Design
 - 🧩 **Difficulty:** Hard
-- 👩🏿‍🏫 **Mentor(s):** [Aayush Saini](https://github.com/AayushSaini101) | [Ashish Padhy](https://github.com/Shurtu-gal) |[Souvik De](https://github.com/Souvikns)
+- 👩🏿‍🏫 **Mentor(s):** [Aayush Saini](https://github.com/AayushSaini101) | [Ashish Padhy](https://github.com/Shurtu-gal) | [Souvik De](https://github.com/Souvikns)
 - ⏳ **Length:** 350 Hours
 
 ## Contact AsyncAPI Mentors
