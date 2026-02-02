@@ -40,7 +40,7 @@ The goal of this project is not just to write code, but to expose contributors t
 - 👩🏿‍🏫 **Mentor(s):** [Prince Rajpoot](https://github.com/princerajpoot20) | [Vishvamsinh Vaghela](https://github.com/vishvamsinh28)
 - ⏳ **Length:** 350 Hours
 
-## 4) [Improving the AsyncAPI React Component ](https://github.com/asyncapi/asyncapi-react/issues/1214) 
+## 4) [Improving the AsyncAPI React Component](https://github.com/asyncapi/asyncapi-react/issues/1214) 
 
 As the component evolves, it faces challenges around extensibility, maintainability, and long-term ownership, particularly as new features, integrations, and specification updates are introduced. This initiative aims to strengthen the component’s technical foundation while preparing a contributor for long-term maintainership.
 
