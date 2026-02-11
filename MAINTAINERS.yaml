@@ -175,7 +175,6 @@
   repos:
     - spec-json-schemas
     - studio
-    - optimizer
   githubID: 32505158
 - name: Laurent Broudoux
   github: lbroudoux
