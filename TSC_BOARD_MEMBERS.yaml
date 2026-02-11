@@ -495,16 +495,6 @@
   repos:
     - website
   githubID: 108233235
-- name: Ashmit Jagtap
-  github: ashmit-coder
-  linkedin: ashmit-jagtap
-  twitter: AshmitJagtap
-  slack: U06RA7GDHU1
-  availableForHire: true
-  isTscMember: true
-  repos:
-    - conference-website
-  githubID: 69006513
 - name: Hari Krishnan
   github: harikrishnan83
   twitter: harikrishnan83
@@ -609,7 +599,6 @@
   isTscMember: true
   repos:
     - website
-    - conference-website
   githubID: 90895835
 - name: Adi Boghawala
   github: Adi-204
