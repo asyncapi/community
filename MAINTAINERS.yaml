@@ -739,7 +739,10 @@
   githubID: 6034322
 - name: TenzDelek
   github: TenzDelek
-  isTscMember: false
+  linkedin: tenzdelek
+  slack: U06SWFWLLQG
+  availableForHire: true
+  isTscMember: true
   repos:
     - conference-website
   githubID: 122612557
