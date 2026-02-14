@@ -31,10 +31,10 @@ describe('renderHeaderCell', () => {
     expect(result).toContain("[Voting]");
   });
 
-  it('returns span with tooltip for normal keys', () => {
+  it('returns plain header text for normal keys', () => {
     const result = renderHeaderCell("name", titles, "org", "repo");
-    expect(result).toContain("title=\"GitHub user name\"");
-    expect(result).toContain("<span");
+    expect(result).toBe("name");
+    expect(result).not.toContain("<span");
   });
 });
 
@@ -106,7 +106,7 @@ describe('jsonToMarkdownTable', () => {
 
   it('generates full markdown table string', async () => {
     const result = await jsonToMarkdownTable(data, "org", "repo");
-    expect(result).toContain('<span style="position: relative; cursor: pointer;" title="GitHub user name">name</span>');
+    expect(result).toContain(`---\ntitle: TSC Voting Overview`);
     expect(result).toContain("[octocat](https://github.com/octocat)");
     expect(result).toContain("agreeCount");
   });
