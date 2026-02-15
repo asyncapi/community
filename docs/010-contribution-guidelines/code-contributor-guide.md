@@ -26,7 +26,8 @@ Welcome to the AsyncAPI community! We're excited to have you here. Think of Asyn
 
 ## Submit Your First Pull Request (PR)  
 
-Once you've made and committed your changes (following the Git Workflow guide), you need to create a Pull Request (PR) to propose merging your work into the official AsyncAPI repository. Make sure to use the [conventional commit style](../010-contribution-guidelines/conventional-commits) while creating PRs and follow these steps:  
+Once you've made and committed your changes (following the Git Workflow guide), you need to create a Pull Request (PR) to propose merging your work into the official AsyncAPI repository. Make sure to use the [conventional commit style](../community/
+010-contribution-guidelines/conventional-commits) while creating PRs and follow these steps:  
 
 ### Create a Pull Request (PR)
 

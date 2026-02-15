@@ -98,7 +98,8 @@ To become a TSC member, you must be a project maintainer within the AsyncAPI Ini
 You can become a maintainer by either:
 1. Initiating a new repository or project and becoming its maintainer.
 2. Donating to an existing repository or project and continuing to maintain it.
-3. Supporting and committing to existing projects and being invited by other maintainers to join them as a maintainer. For more information, refer to [Become a maintainer in an existing project](../010-contribution-guidelines/Become-maintainer-in-existing-project).
+3. Supporting and committing to existing projects and being invited by other maintainers to join them as a maintainer. For more information, refer to [Become a maintainer in an existing project](../community/
+010-contribution-guidelines/Become-maintainer-in-existing-project).
 
 There's no invitation flow to join the TSC; it's something that you are allowed to do as a maintainer by default, as described in the [charter signed with the Linux Foundation when AsyncAPI joined the foundation](CHARTER). Instead, there is an automation flow in place that adds a new maintainer to the [`community/MAINTAINERS.yaml`](https://github.com/asyncapi/community/blob/master/MAINTAINERS.yaml) list every time the [CODEOWNERS][code-owners] file is updated in any project. And the only thing you need to do is to find your name in the `MAINTAINERS.yaml` list and change `isTscMember` from `false` to `true` along with updating other missing information like, for example, your `slack` ID.
 

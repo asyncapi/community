@@ -22,7 +22,8 @@ Find all the resources you need to start contributing to our organization.
 
 1. Follow the [Code of Conduct](CODE_OF_CONDUCT.md) and help keep the community inclusive and respectful.
 
-2. Read the [Contribution Guide](docs/010-contribution-guidelines/contribution-flow.md) and learn how to contribute effectively.
+2. Read the [Contribution Guide](docs/community/
+010-contribution-guidelines/contribution-flow.md) and learn how to contribute effectively.
 
 3. Explore the [Community Contribution Onboarding Docs](docs/000-onboarding/docs-onboarding-checklist.md), a step-by-step guide for new contributors.
 
