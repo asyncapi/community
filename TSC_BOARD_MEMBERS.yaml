@@ -618,6 +618,15 @@
   repos:
     - vs-asyncapi-preview
   githubID: 72685035
+- name: TenzDelek
+  github: TenzDelek
+  linkedin: tenzdelek
+  slack: U06SWFWLLQG
+  availableForHire: true
+  isTscMember: true
+  repos:
+    - conference-website
+  githubID: 122612557
 - name: Daniel Kocot
   img: https://avatars.githubusercontent.com/u/466609?v=4
   bio: >-
