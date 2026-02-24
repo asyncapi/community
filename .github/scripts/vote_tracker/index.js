@@ -1,62 +1,96 @@
 const path = require("path");
-const { fetchCommentInformation } = require("./github");
+const { fetchClosedVoteIssues, fetchVoteClosedComment } = require("./github");
 const { parseVoteClosedComment, parseLatestVotes } = require("./parser");
-const { findValidTemplateMember, findNewMembers, processVoteDetails } = require("./tracker");
-const { loadYaml, readVoteTrackingFile, writeVoteTrackingFile, writeMarkdownFile } = require("./files");
+const { buildVoteDetails, findInactiveMembers } = require("./tracker");
+const {
+  loadYaml,
+  writeVoteTrackingFile,
+  writeMarkdownFile,
+  setIsTscMemberFalse,
+  addToEmeritus,
+} = require("./files");
 const { jsonToMarkdownTable } = require("./markdownTable");
 
 const VOTE_TRACKING_FILE = path.join("voteTrackingFile.json");
 const TSC_BOARD_MEMBERS_FILE = "TSC_BOARD_MEMBERS.yaml";
+const MAINTAINERS_FILE = "MAINTAINERS.yaml";
+const EMERITUS_FILE = "Emeritus.yaml";
 const MARKDOWN_OUTPUT_FILE = "docs/020-governance-and-policies/TSC_VOTING_OVERVIEW.md";
 
-module.exports = async ({ github, context, botCommentURL }) => {
+/**
+ * Full-refresh vote tracker.
+ *
+ * Fetches every issue/PR labelled "gitvote/closed", parses the "Vote closed"
+ * comment on each one, then rebuilds the voteTrackingFile.json and
+ * TSC_VOTING_OVERVIEW.md from scratch using only the current TSC members.
+ *
+ * Members inactive for the last 3 consecutive voting rounds are automatically
+ * moved to emeritus: isTscMember is set to false in both MAINTAINERS.yaml and
+ * TSC_BOARD_MEMBERS.yaml, and their github handle is appended to Emeritus.yaml.
+ *
+ * Called from the vote-tracker GitHub Actions workflow with:
+ *   await script({ github, context });
+ *
+ * Called locally via run-local.js with:
+ *   await script({ github, orgName, repoName });
+ */
+module.exports = async ({ github, context, orgName: orgOverride, repoName: repoOverride }) => {
   try {
-    let message, eventNumber, eventTitle, orgName, repoName;
+    const orgName = orgOverride || context.repo.owner;
+    const repoName = repoOverride || context.repo.repo;
 
-    if (botCommentURL) {
-      const ctx = await fetchCommentInformation(github, botCommentURL);
-      message = ctx.messageBody;
-      eventNumber = ctx.eventNumber;
-      eventTitle = ctx.eventTitle;
-      orgName = ctx.orgName;
-      repoName = ctx.repoName;
-    } else {
-      message = context.payload.comment.body;
-      eventNumber = context.issue.number;
-      eventTitle = context.payload.issue.title;
-      orgName = context.repo.owner;
-      repoName = context.repo.repo;
-    }
-
-    // Parse votes from the bot comment
-    const votingRows = parseVoteClosedComment(message);
-    const latestVotes = parseLatestVotes(votingRows);
-    console.log("content of latestVotes:", JSON.stringify(latestVotes, null, 2));
-
-    // Load TSC membership list and existing vote records
+    // 1. Load current TSC membership
     const tscBoardMembersInformation = await loadYaml(TSC_BOARD_MEMBERS_FILE);
     const tscMembers = tscBoardMembersInformation.filter((e) => e.isTscMember);
-    let voteDetails = await readVoteTrackingFile(VOTE_TRACKING_FILE);
-    console.log("content of voteDetails:", JSON.stringify(voteDetails, null, 2));
+    console.log(`Found ${tscMembers.length} current TSC members`);
 
-    // Add tracking records for any TSC members not yet in the file
-    const templateMember = findValidTemplateMember(voteDetails);
-    if (templateMember) {
-      const newMembers = findNewMembers(voteDetails, tscMembers, templateMember);
-      if (newMembers.length > 0) {
-        voteDetails = [...voteDetails, ...newMembers];
-        await writeVoteTrackingFile(VOTE_TRACKING_FILE, voteDetails);
+    // 2. Fetch all issues/PRs that had a completed vote
+    const closedVoteIssues = await fetchClosedVoteIssues(github, orgName, repoName);
+    console.log(`Found ${closedVoteIssues.length} issues/PRs with label gitvote/closed`);
+
+    // 3. For each issue, find its "Vote closed" comment and parse the binding votes
+    const votingRounds = [];
+    for (const issue of closedVoteIssues) {
+      const comment = await fetchVoteClosedComment(github, orgName, repoName, issue.number);
+      if (!comment) {
+        console.log(`No "Vote closed" comment found for issue #${issue.number} — skipping`);
+        continue;
       }
-    } else {
-      console.log("No valid template member found in voteDetails.");
+
+      const votingRows = parseVoteClosedComment(comment.body);
+      const votes = parseLatestVotes(votingRows);
+      votingRounds.push({
+        issueNumber: issue.number,
+        issueTitle: issue.title,
+        voteClosedAt: comment.createdAt.split("T")[0],
+        votes,
+      });
+      console.log(`Parsed ${votes.length} votes for issue #${issue.number}: ${issue.title}`);
     }
 
-    // Apply the latest votes to all member records
-    const updatedVoteDetails = processVoteDetails(voteDetails, latestVotes, eventTitle, eventNumber);
-    await writeVoteTrackingFile(VOTE_TRACKING_FILE, updatedVoteDetails);
+    // 4. Build fresh vote details for current TSC members only
+    let voteDetails = buildVoteDetails(tscMembers, votingRounds);
 
-    // Generate and write the markdown overview table
-    const markdownTable = await jsonToMarkdownTable(updatedVoteDetails, orgName, repoName);
+    // 5. Detect members inactive for the last 3 consecutive rounds and move them to emeritus
+    const inactiveMembers = findInactiveMembers(voteDetails);
+    if (inactiveMembers.length > 0) {
+      const handles = inactiveMembers.map((m) => m.name);
+      console.log(`Moving to emeritus (inactive for last 3 votes): ${handles.join(", ")}`);
+
+      // Set isTscMember: false in both source-of-truth and the generated file
+      await setIsTscMemberFalse(MAINTAINERS_FILE, handles);
+      await setIsTscMemberFalse(TSC_BOARD_MEMBERS_FILE, handles);
+      await addToEmeritus(EMERITUS_FILE, handles);
+
+      // Exclude them from the tracking table going forward
+      const inactiveSet = new Set(handles.map((h) => h.toLowerCase()));
+      voteDetails = voteDetails.filter((v) => !inactiveSet.has(v.name.toLowerCase()));
+    }
+
+    // 6. Write updated vote tracking file and markdown table
+    await writeVoteTrackingFile(VOTE_TRACKING_FILE, voteDetails);
+
+    const markdownTable = await jsonToMarkdownTable(voteDetails, orgName, repoName);
     await writeMarkdownFile(MARKDOWN_OUTPUT_FILE, markdownTable);
     console.log("Markdown table has been written to", MARKDOWN_OUTPUT_FILE);
   } catch (error) {

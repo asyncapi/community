@@ -1,31 +1,30 @@
 #!/usr/bin/env node
 /**
- * Local runner for the vote_tracker workflow.
+ * Local runner for the vote_tracker full-refresh workflow.
  *
  * Run from the repository root so that relative file paths
  * (voteTrackingFile.json, TSC_BOARD_MEMBERS.yaml, docs/…) resolve correctly.
  *
  * Usage:
- *   GITHUB_TOKEN=ghp_xxx node .github/scripts/vote_tracker/run-local.js <botCommentURL>
+ *   GITHUB_TOKEN=ghp_xxx node .github/scripts/vote_tracker/run-local.js [owner] [repo]
  *
- * Example:
- *   GITHUB_TOKEN=ghp_xxx node .github/scripts/vote_tracker/run-local.js \
- *     "https://github.com/asyncapi/community/issues/2221#issuecomment-2585230063"
+ * Defaults to asyncapi/community when owner/repo are omitted.
+ *
+ * Examples:
+ *   GITHUB_TOKEN=ghp_xxx node .github/scripts/vote_tracker/run-local.js
+ *   GITHUB_TOKEN=ghp_xxx node .github/scripts/vote_tracker/run-local.js asyncapi community
  *
  * The script will:
- *   1. Fetch the bot comment body and issue title from the GitHub API
- *   2. Update voteTrackingFile.json with the latest votes
- *   3. Regenerate docs/020-governance-and-policies/TSC_VOTING_OVERVIEW.md
+ *   1. Fetch all issues/PRs labelled "gitvote/closed" from GitHub
+ *   2. Parse the "Vote closed" comment on each
+ *   3. Rebuild voteTrackingFile.json with current TSC members only
+ *   4. Regenerate docs/020-governance-and-policies/TSC_VOTING_OVERVIEW.md
  */
 
 const { Octokit } = require("@octokit/rest");
 const runVoteTracker = require("./index");
 
-const botCommentURL = process.argv[2];
-if (!botCommentURL) {
-  console.error("Usage: GITHUB_TOKEN=<token> node .github/scripts/vote_tracker/run-local.js <botCommentURL>");
-  process.exit(1);
-}
+const [orgName = "asyncapi", repoName = "community"] = process.argv.slice(2);
 
 const token = process.env.GITHUB_TOKEN;
 if (!token) {
@@ -35,7 +34,7 @@ if (!token) {
 
 const octokit = new Octokit({ auth: token });
 
-// Shape matches what actions/github-script provides to index.js
+// Shape matches what index.js expects when called outside GitHub Actions
 const github = {
   request: (route, opts) => octokit.request(route, opts),
   rest: {
@@ -45,7 +44,9 @@ const github = {
   },
 };
 
-runVoteTracker({ github, context: null, botCommentURL })
+console.log(`Running full vote tracker refresh for ${orgName}/${repoName} …`);
+
+runVoteTracker({ github, context: null, orgName, repoName })
   .then(() => console.log("Done!"))
   .catch((err) => {
     console.error(err);

@@ -1,245 +1,257 @@
-const {
-  findValidTemplateMember,
-  buildNewMemberRecord,
-  findNewMembers,
-  applyVoteToRecord,
-  processVoteDetails,
-} = require("../.github/scripts/vote_tracker/tracker");
+const { buildVoteDetails, findInactiveMembers } = require("../.github/scripts/vote_tracker/tracker");
 
 // ---------------------------------------------------------------------------
 // Fixtures
 // ---------------------------------------------------------------------------
 
-const TEMPLATE_MEMBER = {
-  name: "existingUser",
-  "Proposal A$$100": "In favor",
-  lastParticipatedVoteTime: "2026-01-07",
-  isVotedInLast3Months: true,
-  lastVoteClosedTime: "2026-01-14",
-  firstVoteClosedTime: "2024-04-12",
-  agreeCount: 3,
-  disagreeCount: 0,
-  abstainCount: 1,
-  notParticipatingCount: 1,
-};
+const TSC_MEMBERS = [
+  { github: "alice" },
+  { github: "bob" },
+  { github: "carol" },
+];
 
-const VOTE_DETAILS = [
-  TEMPLATE_MEMBER,
+const VOTING_ROUNDS = [
   {
-    name: "anotherUser",
-    "Proposal A$$100": "Not participated",
-    lastParticipatedVoteTime: "Member has not participated in all previous voting process.",
-    isVotedInLast3Months: "Member has not participated in all previous voting process.",
-    lastVoteClosedTime: "2026-01-14",
-    firstVoteClosedTime: "2024-04-12",
-    agreeCount: 0,
-    disagreeCount: 0,
-    abstainCount: 0,
-    notParticipatingCount: 1,
+    issueNumber: 100,
+    issueTitle: "Proposal Alpha",
+    voteClosedAt: "2025-06-01",
+    votes: [
+      { user: "alice", vote: "In favor",  timestamp: "2025-06-01 10:00:00.0 +00:00:00" },
+      { user: "bob",   vote: "Against",   timestamp: "2025-06-01 11:00:00.0 +00:00:00" },
+      // carol did not vote
+    ],
+  },
+  {
+    issueNumber: 200,
+    issueTitle: "Proposal Beta",
+    voteClosedAt: "2025-09-01",
+    votes: [
+      { user: "alice", vote: "Abstain",  timestamp: "2025-09-01 09:00:00.0 +00:00:00" },
+      { user: "carol", vote: "In favor", timestamp: "2025-09-01 14:00:00.0 +00:00:00" },
+      // bob did not vote
+    ],
   },
 ];
 
 // ---------------------------------------------------------------------------
-// findValidTemplateMember
+// buildVoteDetails
 // ---------------------------------------------------------------------------
 
-describe("findValidTemplateMember", () => {
-  it("returns the first record that has all required statistical keys", () => {
-    const result = findValidTemplateMember(VOTE_DETAILS);
-    expect(result.name).toBe("existingUser");
-  });
-
-  it("returns undefined when no record has all required keys", () => {
-    const incomplete = [{ name: "partial", agreeCount: 0 }];
-    expect(findValidTemplateMember(incomplete)).toBeUndefined();
-  });
-});
-
-// ---------------------------------------------------------------------------
-// buildNewMemberRecord
-// ---------------------------------------------------------------------------
-
-describe("buildNewMemberRecord", () => {
-  const newTscMember = { github: "brandNewUser" };
-  let record;
+describe("buildVoteDetails", () => {
+  let result;
 
   beforeEach(() => {
-    record = buildNewMemberRecord(newTscMember, TEMPLATE_MEMBER);
+    result = buildVoteDetails(TSC_MEMBERS, VOTING_ROUNDS);
   });
 
-  it("sets name from the github handle", () => {
-    expect(record.name).toBe("brandNewUser");
+  it("produces exactly one record per TSC member", () => {
+    expect(result).toHaveLength(3);
+    expect(result.map((r) => r.name)).toEqual(["alice", "bob", "carol"]);
   });
 
-  it("sets lastParticipatedVoteTime and isVotedInLast3Months to the placeholder string", () => {
-    expect(record.lastParticipatedVoteTime).toBe(
-      "Member has not participated in all previous voting process."
-    );
-    expect(record.isVotedInLast3Months).toBe(
-      "Member has not participated in all previous voting process."
-    );
-  });
-
-  it("sets all count fields to 0", () => {
-    expect(record.agreeCount).toBe(0);
-    expect(record.disagreeCount).toBe(0);
-    expect(record.abstainCount).toBe(0);
-    expect(record.notParticipatingCount).toBe(0);
-  });
-
-  it("carries over firstVoteClosedTime from the template", () => {
-    expect(record.firstVoteClosedTime).toBe(TEMPLATE_MEMBER.firstVoteClosedTime);
-  });
-
-  it("defaults past vote columns to 'Not participated'", () => {
-    expect(record["Proposal A$$100"]).toBe("Not participated");
-  });
-
-  it("sets lastVoteClosedTime to today", () => {
-    const today = new Date().toISOString().split("T")[0];
-    expect(record.lastVoteClosedTime).toBe(today);
-  });
-});
-
-// ---------------------------------------------------------------------------
-// findNewMembers
-// ---------------------------------------------------------------------------
-
-describe("findNewMembers", () => {
-  const tscMembers = [
-    { github: "existingUser" },   // already tracked — should be skipped
-    { github: "brandNewUser" },   // not yet tracked — should be added
-    { github: "AnotherUser" },    // case-insensitive match for "anotherUser"
-  ];
-
-  it("only returns records for members not yet in voteDetails", () => {
-    const newMembers = findNewMembers(VOTE_DETAILS, tscMembers, TEMPLATE_MEMBER);
-    expect(newMembers).toHaveLength(1);
-    expect(newMembers[0].name).toBe("brandNewUser");
-  });
-
-  it("does case-insensitive comparison", () => {
-    const tsc = [{ github: "EXISTINGUSER" }];
-    const newMembers = findNewMembers(VOTE_DETAILS, tsc, TEMPLATE_MEMBER);
-    expect(newMembers).toHaveLength(0);
-  });
-
-  it("returns an empty array when all TSC members are already tracked", () => {
-    const tsc = [{ github: "existingUser" }, { github: "anotherUser" }];
-    expect(findNewMembers(VOTE_DETAILS, tsc, TEMPLATE_MEMBER)).toHaveLength(0);
-  });
-});
-
-// ---------------------------------------------------------------------------
-// applyVoteToRecord
-// ---------------------------------------------------------------------------
-
-describe("applyVoteToRecord", () => {
-  const EVENT_TITLE = "Budget 2026";
-  const EVENT_NUMBER = 2221;
-  const VOTE_KEY = `${EVENT_TITLE}$$${EVENT_NUMBER}`;
-
-  const baseRecord = {
-    name: "existingUser",
-    "Proposal A$$100": "In favor",
-    lastParticipatedVoteTime: "2026-01-07",
-    isVotedInLast3Months: true,
-    lastVoteClosedTime: "2026-01-14",
-    firstVoteClosedTime: "2024-04-12",
-    agreeCount: 3,
-    disagreeCount: 0,
-    abstainCount: 1,
-    notParticipatingCount: 1,
-  };
-
-  it("inserts the new vote key directly after 'name'", () => {
-    const userVote = { user: "existingUser", vote: "In favor", timestamp: "2026-01-20 10:00:00.0 +00:00:00" };
-    const result = applyVoteToRecord(baseRecord, userVote, EVENT_TITLE, EVENT_NUMBER);
-    const keys = Object.keys(result);
+  it("inserts vote columns in chronological (oldest-first) order after name", () => {
+    const alice = result.find((r) => r.name === "alice");
+    const keys = Object.keys(alice);
     expect(keys[0]).toBe("name");
-    expect(keys[1]).toBe(VOTE_KEY);
+    expect(keys[1]).toBe("Proposal Alpha$$100");
+    expect(keys[2]).toBe("Proposal Beta$$200");
   });
 
-  it("increments agreeCount for 'In favor'", () => {
-    const userVote = { user: "existingUser", vote: "In favor", timestamp: "2026-01-20 10:00:00.0 +00:00:00" };
-    const result = applyVoteToRecord(baseRecord, userVote, EVENT_TITLE, EVENT_NUMBER);
-    expect(result[VOTE_KEY]).toBe("In favor");
-    expect(result.agreeCount).toBe(baseRecord.agreeCount + 1);
-    expect(result.disagreeCount).toBe(baseRecord.disagreeCount);
-    expect(result.abstainCount).toBe(baseRecord.abstainCount);
+  it("records the correct vote choice for each member and round", () => {
+    const alice = result.find((r) => r.name === "alice");
+    expect(alice["Proposal Alpha$$100"]).toBe("In favor");
+    expect(alice["Proposal Beta$$200"]).toBe("Abstain");
+
+    const bob = result.find((r) => r.name === "bob");
+    expect(bob["Proposal Alpha$$100"]).toBe("Against");
+    expect(bob["Proposal Beta$$200"]).toBe("Not participated");
+
+    const carol = result.find((r) => r.name === "carol");
+    expect(carol["Proposal Alpha$$100"]).toBe("Not participated");
+    expect(carol["Proposal Beta$$200"]).toBe("In favor");
   });
 
-  it("increments disagreeCount for 'Against'", () => {
-    const userVote = { user: "existingUser", vote: "Against", timestamp: "2026-01-20 10:00:00.0 +00:00:00" };
-    const result = applyVoteToRecord(baseRecord, userVote, EVENT_TITLE, EVENT_NUMBER);
-    expect(result[VOTE_KEY]).toBe("Against");
-    expect(result.disagreeCount).toBe(baseRecord.disagreeCount + 1);
+  it("increments agreeCount, disagreeCount, abstainCount correctly", () => {
+    const alice = result.find((r) => r.name === "alice");
+    expect(alice.agreeCount).toBe(1);
+    expect(alice.disagreeCount).toBe(0);
+    expect(alice.abstainCount).toBe(1);
+
+    const bob = result.find((r) => r.name === "bob");
+    expect(bob.agreeCount).toBe(0);
+    expect(bob.disagreeCount).toBe(1);
+    expect(bob.abstainCount).toBe(0);
   });
 
-  it("increments abstainCount for 'Abstain'", () => {
-    const userVote = { user: "existingUser", vote: "Abstain", timestamp: "2026-01-20 10:00:00.0 +00:00:00" };
-    const result = applyVoteToRecord(baseRecord, userVote, EVENT_TITLE, EVENT_NUMBER);
-    expect(result[VOTE_KEY]).toBe("Abstain");
-    expect(result.abstainCount).toBe(baseRecord.abstainCount + 1);
+  it("increments notParticipatingCount for missed rounds", () => {
+    const carol = result.find((r) => r.name === "carol");
+    expect(carol.notParticipatingCount).toBe(1);
+
+    const bob = result.find((r) => r.name === "bob");
+    expect(bob.notParticipatingCount).toBe(1);
   });
 
-  it("updates lastParticipatedVoteTime to the date part of the timestamp", () => {
-    const userVote = { user: "existingUser", vote: "In favor", timestamp: "2026-01-20 10:00:00.0 +00:00:00" };
-    const result = applyVoteToRecord(baseRecord, userVote, EVENT_TITLE, EVENT_NUMBER);
-    expect(result.lastParticipatedVoteTime).toBe("2026-01-20");
+  it("sets lastParticipatedVoteTime to the date part of the most recent vote timestamp", () => {
+    const alice = result.find((r) => r.name === "alice");
+    expect(alice.lastParticipatedVoteTime).toBe("2025-09-01");
+
+    const bob = result.find((r) => r.name === "bob");
+    expect(bob.lastParticipatedVoteTime).toBe("2025-06-01");
   });
 
-  it("records 'Not participated' and increments notParticipatingCount when user did not vote", () => {
-    const result = applyVoteToRecord(baseRecord, undefined, EVENT_TITLE, EVENT_NUMBER);
-    expect(result[VOTE_KEY]).toBe("Not participated");
-    expect(result.notParticipatingCount).toBe(baseRecord.notParticipatingCount + 1);
-    expect(result.agreeCount).toBe(baseRecord.agreeCount);
+  it("sets lastVoteClosedTime to the most recent round's close date", () => {
+    result.forEach((r) => {
+      expect(r.lastVoteClosedTime).toBe("2025-09-01");
+    });
   });
 
-  it("updates lastVoteClosedTime to today", () => {
-    const today = new Date().toISOString().split("T")[0];
-    const result = applyVoteToRecord(baseRecord, undefined, EVENT_TITLE, EVENT_NUMBER);
-    expect(result.lastVoteClosedTime).toBe(today);
+  it("sets firstVoteClosedTime to the oldest round's close date", () => {
+    result.forEach((r) => {
+      expect(r.firstVoteClosedTime).toBe("2025-06-01");
+    });
   });
 
-  it("does not mutate the original voteInfo object", () => {
-    const snapshot = JSON.stringify(baseRecord);
-    applyVoteToRecord(baseRecord, undefined, EVENT_TITLE, EVENT_NUMBER);
-    expect(JSON.stringify(baseRecord)).toBe(snapshot);
-  });
-});
-
-// ---------------------------------------------------------------------------
-// processVoteDetails
-// ---------------------------------------------------------------------------
-
-describe("processVoteDetails", () => {
-  const latestVotes = [
-    { user: "existingUser", vote: "In favor", timestamp: "2026-01-20 10:00:00.0 +00:00:00", isVotedInLast3Months: true },
-    // anotherUser is absent → "Not participated"
-  ];
-
-  it("applies votes to every member in voteDetails", () => {
-    const result = processVoteDetails(VOTE_DETAILS, latestVotes, "Budget 2026", 2221);
-    expect(result).toHaveLength(VOTE_DETAILS.length);
-  });
-
-  it("marks participating members with their vote choice", () => {
-    const result = processVoteDetails(VOTE_DETAILS, latestVotes, "Budget 2026", 2221);
-    const voter = result.find((r) => r.name === "existingUser");
-    expect(voter["Budget 2026$$2221"]).toBe("In favor");
-  });
-
-  it("marks absent members as 'Not participated'", () => {
-    const result = processVoteDetails(VOTE_DETAILS, latestVotes, "Budget 2026", 2221);
-    const absent = result.find((r) => r.name === "anotherUser");
-    expect(absent["Budget 2026$$2221"]).toBe("Not participated");
+  it("uses the never-voted placeholder string for members who missed all rounds", () => {
+    const neverVoted = buildVoteDetails([{ github: "ghost" }], VOTING_ROUNDS);
+    const ghost = neverVoted[0];
+    expect(ghost.lastParticipatedVoteTime).toBe(
+      "Member has not participated in all previous voting process."
+    );
+    expect(ghost.isVotedInLast3Months).toBe(
+      "Member has not participated in all previous voting process."
+    );
+    expect(ghost.agreeCount).toBe(0);
+    expect(ghost.notParticipatingCount).toBe(2);
   });
 
   it("does case-insensitive username matching", () => {
-    const votes = [{ user: "EXISTINGUSER", vote: "Abstain", timestamp: "2026-01-20 10:00:00.0 +00:00:00", isVotedInLast3Months: true }];
-    const result = processVoteDetails(VOTE_DETAILS, votes, "Budget 2026", 2221);
-    const voter = result.find((r) => r.name === "existingUser");
-    expect(voter["Budget 2026$$2221"]).toBe("Abstain");
+    const members = [{ github: "Alice" }];
+    const rounds = [
+      {
+        issueNumber: 1,
+        issueTitle: "Test",
+        voteClosedAt: "2025-01-01",
+        votes: [{ user: "ALICE", vote: "In favor", timestamp: "2025-01-01 10:00:00.0 +00:00:00" }],
+      },
+    ];
+    const out = buildVoteDetails(members, rounds);
+    expect(out[0]["Test$$1"]).toBe("In favor");
+  });
+
+  it("returns an empty array when there are no TSC members", () => {
+    expect(buildVoteDetails([], VOTING_ROUNDS)).toEqual([]);
+  });
+
+  it("produces records with null dates and zero counts when there are no voting rounds", () => {
+    const out = buildVoteDetails(TSC_MEMBERS, []);
+    out.forEach((r) => {
+      expect(r.firstVoteClosedTime).toBeNull();
+      expect(r.lastVoteClosedTime).toBeNull();
+      expect(r.agreeCount).toBe(0);
+    });
+  });
+
+  it("excludes departed members — only current tscMembers appear in output", () => {
+    const subset = [{ github: "alice" }];
+    const out = buildVoteDetails(subset, VOTING_ROUNDS);
+    expect(out).toHaveLength(1);
+    expect(out[0].name).toBe("alice");
+  });
+});
+
+// ---------------------------------------------------------------------------
+// findInactiveMembers
+// ---------------------------------------------------------------------------
+
+describe("findInactiveMembers", () => {
+  // Build a dataset where carol missed ALL rounds, bob missed the last two,
+  // and alice participated in every round.
+  const members = [{ github: "alice" }, { github: "bob" }, { github: "carol" }];
+  const rounds = [
+    {
+      issueNumber: 1, issueTitle: "Round 1", voteClosedAt: "2025-01-01",
+      votes: [
+        { user: "alice", vote: "In favor", timestamp: "2025-01-01 10:00:00.0 +00:00:00" },
+        { user: "bob",   vote: "In favor", timestamp: "2025-01-01 11:00:00.0 +00:00:00" },
+      ],
+    },
+    {
+      issueNumber: 2, issueTitle: "Round 2", voteClosedAt: "2025-04-01",
+      votes: [
+        { user: "alice", vote: "In favor", timestamp: "2025-04-01 10:00:00.0 +00:00:00" },
+      ],
+    },
+    {
+      issueNumber: 3, issueTitle: "Round 3", voteClosedAt: "2025-07-01",
+      votes: [
+        { user: "alice", vote: "In favor", timestamp: "2025-07-01 10:00:00.0 +00:00:00" },
+      ],
+    },
+  ];
+
+  let voteDetails;
+  beforeEach(() => {
+    voteDetails = buildVoteDetails(members, rounds);
+  });
+
+  it("returns members who missed all of the last N rounds", () => {
+    const inactive = findInactiveMembers(voteDetails, 3);
+    expect(inactive.map((m) => m.name)).toContain("carol");
+  });
+
+  it("does not flag members who participated in at least one of the last N rounds", () => {
+    const inactive = findInactiveMembers(voteDetails, 3);
+    const names = inactive.map((m) => m.name);
+    expect(names).not.toContain("alice");
+    expect(names).not.toContain("bob"); // bob voted in round 1, missed rounds 2+3 — only 2 misses, not 3
+  });
+
+  it("returns an empty array when fewer rounds exist than the threshold", () => {
+    const only2Rounds = buildVoteDetails(members, rounds.slice(0, 2));
+    expect(findInactiveMembers(only2Rounds, 3)).toEqual([]);
+  });
+
+  it("returns an empty array when voteDetails is empty", () => {
+    expect(findInactiveMembers([], 3)).toEqual([]);
+  });
+
+  it("respects a custom lastNRounds threshold", () => {
+    // With threshold=2, bob (missed rounds 2 and 3) should be flagged
+    const inactive = findInactiveMembers(voteDetails, 2);
+    const names = inactive.map((m) => m.name);
+    expect(names).toContain("bob");
+    expect(names).toContain("carol");
+    expect(names).not.toContain("alice");
+  });
+
+  it("returns an empty array when all members are active", () => {
+    const activeRounds = [
+      {
+        issueNumber: 1, issueTitle: "R", voteClosedAt: "2025-01-01",
+        votes: [
+          { user: "alice", vote: "In favor", timestamp: "2025-01-01 10:00:00.0 +00:00:00" },
+          { user: "bob",   vote: "In favor", timestamp: "2025-01-01 10:00:00.0 +00:00:00" },
+          { user: "carol", vote: "In favor", timestamp: "2025-01-01 10:00:00.0 +00:00:00" },
+        ],
+      },
+      {
+        issueNumber: 2, issueTitle: "R2", voteClosedAt: "2025-04-01",
+        votes: [
+          { user: "alice", vote: "In favor", timestamp: "2025-04-01 10:00:00.0 +00:00:00" },
+          { user: "bob",   vote: "In favor", timestamp: "2025-04-01 10:00:00.0 +00:00:00" },
+          { user: "carol", vote: "In favor", timestamp: "2025-04-01 10:00:00.0 +00:00:00" },
+        ],
+      },
+      {
+        issueNumber: 3, issueTitle: "R3", voteClosedAt: "2025-07-01",
+        votes: [
+          { user: "alice", vote: "In favor", timestamp: "2025-07-01 10:00:00.0 +00:00:00" },
+          { user: "bob",   vote: "In favor", timestamp: "2025-07-01 10:00:00.0 +00:00:00" },
+          { user: "carol", vote: "In favor", timestamp: "2025-07-01 10:00:00.0 +00:00:00" },
+        ],
+      },
+    ];
+    const details = buildVoteDetails(members, activeRounds);
+    expect(findInactiveMembers(details, 3)).toEqual([]);
   });
 });

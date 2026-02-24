@@ -1,69 +1,133 @@
-const { fetchCommentInformation } = require("../.github/scripts/vote_tracker/github");
+const { fetchClosedVoteIssues, fetchVoteClosedComment } = require("../.github/scripts/vote_tracker/github");
 
-const BOT_COMMENT_URL =
-  "https://github.com/asyncapi/community/issues/2221#issuecomment-2585230063";
+// ---------------------------------------------------------------------------
+// Helpers
+// ---------------------------------------------------------------------------
 
-// Minimal github mock that matches the shape used by actions/github-script
-function makeMockGithub({ commentBody = "Vote closed body", issueTitle = "Budget 2026" } = {}) {
+function makeGithub(pages) {
+  // pages: array of arrays — each outer element is one page of results
+  let call = 0;
   return {
-    request: jest.fn().mockResolvedValue({ data: { body: commentBody } }),
-    rest: {
-      issues: {
-        get: jest.fn().mockResolvedValue({ data: { title: issueTitle } }),
-      },
-    },
+    request: jest.fn(async () => ({ data: pages[call++] ?? [] })),
   };
 }
 
-describe("fetchCommentInformation", () => {
-  it("parses owner, repo, eventNumber and commentId from the URL", async () => {
-    const github = makeMockGithub();
-    const result = await fetchCommentInformation(github, BOT_COMMENT_URL);
+// ---------------------------------------------------------------------------
+// fetchClosedVoteIssues
+// ---------------------------------------------------------------------------
 
-    expect(result.orgName).toBe("asyncapi");
-    expect(result.repoName).toBe("community");
-    expect(result.eventNumber).toBe("2221");
-    expect(result.commentId).toBe("2585230063");
-  });
+describe("fetchClosedVoteIssues", () => {
+  const ISSUES = [
+    { number: 100, title: "Proposal Alpha" },
+    { number: 200, title: "Proposal Beta" },
+    { number: 50,  title: "Proposal Gamma" },   // higher number comes last after sort
+  ];
 
-  it("calls the comments endpoint with correct parameters", async () => {
-    const github = makeMockGithub();
-    await fetchCommentInformation(github, BOT_COMMENT_URL);
+  it("calls the issues endpoint with the gitvote/closed label and state=all", async () => {
+    const github = makeGithub([[...ISSUES], []]);
+    await fetchClosedVoteIssues(github, "org", "repo");
 
     expect(github.request).toHaveBeenCalledWith(
-      "GET /repos/{owner}/{repo}/issues/comments/{comment_id}",
-      { owner: "asyncapi", repo: "community", comment_id: "2585230063" }
+      "GET /repos/{owner}/{repo}/issues",
+      expect.objectContaining({
+        owner: "org",
+        repo: "repo",
+        labels: "gitvote/closed",
+        state: "all",
+      })
     );
   });
 
-  it("calls the issues endpoint with the correct issue number", async () => {
-    const github = makeMockGithub();
-    await fetchCommentInformation(github, BOT_COMMENT_URL);
+  it("returns issues sorted by number ascending (oldest first)", async () => {
+    const github = makeGithub([[...ISSUES], []]);
+    const result = await fetchClosedVoteIssues(github, "org", "repo");
 
-    expect(github.rest.issues.get).toHaveBeenCalledWith({
-      owner: "asyncapi",
-      repo: "community",
-      issue_number: "2221",
-    });
+    expect(result.map((i) => i.number)).toEqual([50, 100, 200]);
   });
 
-  it("returns the comment body as messageBody", async () => {
-    const github = makeMockGithub({ commentBody: "Vote closed\n| @user | In favor |..." });
-    const result = await fetchCommentInformation(github, BOT_COMMENT_URL);
-    expect(result.messageBody).toBe("Vote closed\n| @user | In favor |...");
+  it("returns only number and title fields", async () => {
+    const github = makeGithub([[{ number: 1, title: "T", extra: "ignored" }], []]);
+    const result = await fetchClosedVoteIssues(github, "org", "repo");
+    expect(result[0]).toEqual({ number: 1, title: "T" });
   });
 
-  it("returns the issue title as eventTitle", async () => {
-    const github = makeMockGithub({ issueTitle: "My Proposal Title" });
-    const result = await fetchCommentInformation(github, BOT_COMMENT_URL);
-    expect(result.eventTitle).toBe("My Proposal Title");
+  it("paginates until the API returns an empty page", async () => {
+    // First page full (100 items), second page partial, third empty
+    const page1 = Array.from({ length: 100 }, (_, i) => ({ number: i + 1, title: `Issue ${i + 1}` }));
+    const page2 = [{ number: 101, title: "Issue 101" }];
+    const github = makeGithub([page1, page2, []]);
+
+    const result = await fetchClosedVoteIssues(github, "org", "repo");
+    expect(result).toHaveLength(101);
+    expect(github.request).toHaveBeenCalledTimes(2); // stops after page2 length < 100
   });
 
-  it("propagates errors from the GitHub API", async () => {
-    const github = {
-      request: jest.fn().mockRejectedValue(new Error("API error")),
-      rest: { issues: { get: jest.fn() } },
-    };
-    await expect(fetchCommentInformation(github, BOT_COMMENT_URL)).rejects.toThrow("API error");
+  it("returns an empty array when there are no matching issues", async () => {
+    const github = makeGithub([[]]);
+    const result = await fetchClosedVoteIssues(github, "org", "repo");
+    expect(result).toEqual([]);
+  });
+});
+
+// ---------------------------------------------------------------------------
+// fetchVoteClosedComment
+// ---------------------------------------------------------------------------
+
+const VOTE_CLOSED_BODY = `Vote closed
+
+### Binding votes (2)
+
+| Voter | Vote | Date |
+| @alice | In favor | 2026-01-07 10:00:00.0 +00:00:00 |
+| @bob   | Abstain  | 2026-01-08 11:00:00.0 +00:00:00 |
+
+<details><summary>Non-binding</summary></details>`;
+
+const OTHER_COMMENT = { body: "Just a regular comment", created_at: "2026-01-05T09:00:00Z", user: { login: "human" } };
+const VOTE_COMMENT  = { body: VOTE_CLOSED_BODY, created_at: "2026-01-10T12:00:00Z", user: { login: "git-vote[bot]" } };
+
+describe("fetchVoteClosedComment", () => {
+  it("returns null when no Vote closed comment exists", async () => {
+    const github = makeGithub([[OTHER_COMMENT], []]);
+    const result = await fetchVoteClosedComment(github, "org", "repo", 123);
+    expect(result).toBeNull();
+  });
+
+  it("returns the comment body and createdAt when found", async () => {
+    const github = makeGithub([[OTHER_COMMENT, VOTE_COMMENT], []]);
+    const result = await fetchVoteClosedComment(github, "org", "repo", 123);
+
+    expect(result).not.toBeNull();
+    expect(result.body).toBe(VOTE_CLOSED_BODY);
+    expect(result.createdAt).toBe("2026-01-10T12:00:00Z");
+  });
+
+  it("calls the comments endpoint with the correct issue number", async () => {
+    const github = makeGithub([[VOTE_COMMENT], []]);
+    await fetchVoteClosedComment(github, "org", "repo", 999);
+
+    expect(github.request).toHaveBeenCalledWith(
+      "GET /repos/{owner}/{repo}/issues/{issue_number}/comments",
+      expect.objectContaining({ issue_number: 999 })
+    );
+  });
+
+  it("returns the LAST Vote closed comment when multiple exist on one issue", async () => {
+    const firstClose  = { body: VOTE_CLOSED_BODY, created_at: "2026-01-10T12:00:00Z", user: { login: "git-vote[bot]" } };
+    const secondClose = { body: VOTE_CLOSED_BODY, created_at: "2026-02-10T12:00:00Z", user: { login: "git-vote[bot]" } };
+    const github = makeGithub([[firstClose, OTHER_COMMENT, secondClose], []]);
+
+    const result = await fetchVoteClosedComment(github, "org", "repo", 123);
+    expect(result.createdAt).toBe("2026-02-10T12:00:00Z");
+  });
+
+  it("paginates when comments span multiple pages", async () => {
+    const page1 = Array.from({ length: 100 }, () => OTHER_COMMENT);
+    const page2 = [VOTE_COMMENT];
+    const github = makeGithub([page1, page2, []]);
+
+    const result = await fetchVoteClosedComment(github, "org", "repo", 123);
+    expect(result).not.toBeNull();
+    expect(github.request).toHaveBeenCalledTimes(2);
   });
 });
