@@ -103,6 +103,9 @@ function findInactiveMembers(voteDetails, lastNRounds = 3) {
 
   const lastNKeys = allVoteKeys.slice(-lastNRounds);
   return voteDetails.filter((member) =>
+    // Skip members who have never voted at all — they may be newly added to TSC
+    // and haven't had the opportunity to participate yet.
+    member.lastParticipatedVoteTime !== NEVER_VOTED_PLACEHOLDER &&
     lastNKeys.every((key) => member[key] === "Not participated")
   );
 }

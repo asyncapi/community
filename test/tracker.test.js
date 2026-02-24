@@ -164,10 +164,19 @@ describe("buildVoteDetails", () => {
 // ---------------------------------------------------------------------------
 
 describe("findInactiveMembers", () => {
-  // Build a dataset where carol missed ALL rounds, bob missed the last two,
-  // and alice participated in every round.
+  // Round 0: alice, bob, and carol all vote (establishes their participation history).
+  // Rounds 1-3: alice keeps voting; bob drops out after round 1; carol drops out after round 0.
+  // dave is added as a member who has never voted in any round (simulates a new TSC member).
   const members = [{ github: "alice" }, { github: "bob" }, { github: "carol" }];
   const rounds = [
+    {
+      issueNumber: 0, issueTitle: "Round 0", voteClosedAt: "2024-10-01",
+      votes: [
+        { user: "alice", vote: "In favor", timestamp: "2024-10-01 10:00:00.0 +00:00:00" },
+        { user: "bob",   vote: "In favor", timestamp: "2024-10-01 11:00:00.0 +00:00:00" },
+        { user: "carol", vote: "In favor", timestamp: "2024-10-01 12:00:00.0 +00:00:00" },
+      ],
+    },
     {
       issueNumber: 1, issueTitle: "Round 1", voteClosedAt: "2025-01-01",
       votes: [
@@ -194,7 +203,8 @@ describe("findInactiveMembers", () => {
     voteDetails = buildVoteDetails(members, rounds);
   });
 
-  it("returns members who missed all of the last N rounds", () => {
+  it("flags members who have voted before but missed all of the last N rounds", () => {
+    // carol voted in round 0 then went silent — genuinely inactive
     const inactive = findInactiveMembers(voteDetails, 3);
     expect(inactive.map((m) => m.name)).toContain("carol");
   });
@@ -203,7 +213,14 @@ describe("findInactiveMembers", () => {
     const inactive = findInactiveMembers(voteDetails, 3);
     const names = inactive.map((m) => m.name);
     expect(names).not.toContain("alice");
-    expect(names).not.toContain("bob"); // bob voted in round 1, missed rounds 2+3 — only 2 misses, not 3
+    expect(names).not.toContain("bob"); // voted in rounds 0+1, missed rounds 2+3 — only 2 misses, not 3
+  });
+
+  it("does not flag members who have never voted (potential new TSC members)", () => {
+    const membersWithNew = [...members, { github: "dave" }];
+    const details = buildVoteDetails(membersWithNew, rounds);
+    const inactive = findInactiveMembers(details, 3);
+    expect(inactive.map((m) => m.name)).not.toContain("dave");
   });
 
   it("returns an empty array when fewer rounds exist than the threshold", () => {
@@ -216,7 +233,8 @@ describe("findInactiveMembers", () => {
   });
 
   it("respects a custom lastNRounds threshold", () => {
-    // With threshold=2, bob (missed rounds 2 and 3) should be flagged
+    // With threshold=2, bob (voted in rounds 0+1, missed rounds 2+3) should be flagged
+    // carol (voted in round 0, missed rounds 1+2+3) should also be flagged
     const inactive = findInactiveMembers(voteDetails, 2);
     const names = inactive.map((m) => m.name);
     expect(names).toContain("bob");
