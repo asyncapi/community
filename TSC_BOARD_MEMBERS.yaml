@@ -136,7 +136,6 @@
   repos:
     - spec-json-schemas
     - studio
-    - optimizer
   githubID: 32505158
 - name: Lukasz Gornicki
   github: derberg
@@ -476,17 +475,6 @@
     - conference-website
     - community
   githubID: 66913810
-- name: Ashmit JaiSarita Gupta
-  github: devilkiller-ag
-  linkedin: jaisarita
-  twitter: jaisarita
-  slack: U062LA14E58
-  availableForHire: true
-  isTscMember: true
-  repos:
-    - website
-    - modelina
-  githubID: 43639341
 - name: Sambhav Gupta
   github: sambhavgupta0705
   linkedin: sambhavgupta0705
@@ -507,16 +495,6 @@
   repos:
     - website
   githubID: 108233235
-- name: Ashmit Jagtap
-  github: ashmit-coder
-  linkedin: ashmit-jagtap
-  twitter: AshmitJagtap
-  slack: U06RA7GDHU1
-  availableForHire: true
-  isTscMember: true
-  repos:
-    - conference-website
-  githubID: 69006513
 - name: Hari Krishnan
   github: harikrishnan83
   twitter: harikrishnan83
@@ -621,7 +599,6 @@
   isTscMember: true
   repos:
     - website
-    - conference-website
   githubID: 90895835
 - name: Adi Boghawala
   github: Adi-204
@@ -641,6 +618,15 @@
   repos:
     - vs-asyncapi-preview
   githubID: 72685035
+- name: TenzDelek
+  github: TenzDelek
+  linkedin: tenzdelek
+  slack: U06SWFWLLQG
+  availableForHire: true
+  isTscMember: true
+  repos:
+    - conference-website
+  githubID: 122612557
 - name: Daniel Kocot
   img: https://avatars.githubusercontent.com/u/466609?v=4
   bio: >-

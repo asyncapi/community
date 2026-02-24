@@ -175,7 +175,6 @@
   repos:
     - spec-json-schemas
     - studio
-    - optimizer
   githubID: 32505158
 - name: Laurent Broudoux
   github: lbroudoux
@@ -509,17 +508,6 @@
     - conference-website
     - community
   githubID: 66913810
-- name: Ashmit JaiSarita Gupta
-  github: devilkiller-ag
-  linkedin: jaisarita
-  twitter: jaisarita
-  slack: U062LA14E58
-  availableForHire: true
-  isTscMember: true
-  repos:
-    - website
-    - modelina
-  githubID: 43639341
 - name: Sambhav Gupta
   github: sambhavgupta0705
   linkedin: sambhavgupta0705
@@ -662,16 +650,6 @@
   repos:
     - kotlin-asyncapi
   githubID: 758568
-- name: Ashmit Jagtap
-  github: ashmit-coder
-  linkedin: ashmit-jagtap
-  twitter: AshmitJagtap
-  slack: U06RA7GDHU1
-  availableForHire: true
-  isTscMember: true
-  repos:
-    - conference-website
-  githubID: 69006513
 - name: HariKrishnan
   github: harikrishnan83
   twitter: harikrishnan83
@@ -710,7 +688,6 @@
   isTscMember: true
   repos:
     - website
-    - conference-website
   githubID: 90895835
 - name: Antonio
   github: bandantonio
@@ -746,3 +723,26 @@
   repos:
     - vs-asyncapi-preview
   githubID: 72685035
+- name: amparosancho
+  github: amparosancho
+  isTscMember: false
+  repos:
+    - spec-json-schemas
+    - bindings
+  githubID: 214812239
+- name: Florian Gramß
+  github: gramss
+  isTscMember: false
+  repos:
+    - spec-json-schemas
+    - bindings
+  githubID: 6034322
+- name: TenzDelek
+  github: TenzDelek
+  linkedin: tenzdelek
+  slack: U06SWFWLLQG
+  availableForHire: true
+  isTscMember: true
+  repos:
+    - conference-website
+  githubID: 122612557
