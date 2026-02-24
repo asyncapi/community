@@ -6,13 +6,7 @@
  * (voteTrackingFile.json, TSC_BOARD_MEMBERS.yaml, docs/…) resolve correctly.
  *
  * Usage:
- *   GITHUB_TOKEN=ghp_xxx node .github/scripts/vote_tracker/run-local.js [owner] [repo]
- *
- * Defaults to asyncapi/community when owner/repo are omitted.
- *
- * Examples:
  *   GITHUB_TOKEN=ghp_xxx node .github/scripts/vote_tracker/run-local.js
- *   GITHUB_TOKEN=ghp_xxx node .github/scripts/vote_tracker/run-local.js asyncapi community
  *
  * The script will:
  *   1. Fetch all issues/PRs labelled "gitvote/closed" from GitHub
@@ -24,7 +18,8 @@
 const { Octokit } = require("@octokit/rest");
 const runVoteTracker = require("./index");
 
-const [orgName = "asyncapi", repoName = "community"] = process.argv.slice(2);
+const orgName = "asyncapi";
+const repoName = "community";
 
 const token = process.env.GITHUB_TOKEN;
 if (!token) {
