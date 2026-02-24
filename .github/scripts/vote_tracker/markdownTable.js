@@ -174,7 +174,7 @@ async function jsonToMarkdownTable(data, orgName, repoName) {
   const titles = {
     name: "GitHub user name",
     lastParticipatedVoteTime: "Last time the TSC member participated in a vote",
-    hasVotedInLast3Months: "Flag indicating if TSC member voted in last 3 months",
+    isVotedInLast3Months: "Flag indicating if TSC member voted in last 3 months",
     lastVoteClosedTime: "Date when last vote was closed",
     agreeCount: "Number of times TSC member agreed in a vote",
     disagreeCount: "Number of times TSC member did not agree in a vote",

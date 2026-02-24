@@ -73,15 +73,30 @@ describe("fetchClosedVoteIssues", () => {
 // fetchVoteClosedComment
 // ---------------------------------------------------------------------------
 
-const VOTE_CLOSED_BODY = `Vote closed
+// Real bot comment format as produced by git-vote[bot]
+// Verified against: https://github.com/asyncapi/community/issues/1227#issuecomment-2167463252
+const VOTE_CLOSED_BODY = `
+## Vote closed
+
+The vote **passed**! 🎉
+
+\`100%\` of the users with binding vote were in favor (passing threshold: \`51%\`).
+
+### Summary
+
+|        In favor        |        Against        |       Abstain        |        Not voted        |
+| :--------------------: | :-------------------: | :------------------: | :---------------------: |
+| 2 | 0 | 0 | 0 |
+
 
 ### Binding votes (2)
-
-| Voter | Vote | Date |
+| User | Vote  | Timestamp |
+| ---- | :---: | :-------: |
 | @alice | In favor | 2026-01-07 10:00:00.0 +00:00:00 |
 | @bob   | Abstain  | 2026-01-08 11:00:00.0 +00:00:00 |
-
-<details><summary>Non-binding</summary></details>`;
+<details>
+      <summary><h3>Non-binding votes (0)</h3></summary>
+</details>`;
 
 const OTHER_COMMENT = { body: "Just a regular comment", created_at: "2026-01-05T09:00:00Z", user: { login: "human" } };
 const VOTE_COMMENT  = { body: VOTE_CLOSED_BODY, created_at: "2026-01-10T12:00:00Z", user: { login: "git-vote[bot]" } };

@@ -1,23 +1,34 @@
 const { parseVoteClosedComment, parseLatestVotes } = require("../.github/scripts/vote_tracker/parser");
 
-// Minimal bot comment format as produced by git-vote[bot]
-// See: https://github.com/asyncapi/community/issues/1227#issuecomment-2167463252
+// Real bot comment format as produced by git-vote[bot]
+// Verified against: https://github.com/asyncapi/community/issues/1227#issuecomment-2167463252
+// Usernames and timestamps taken from real workflow logs.
 const SAMPLE_COMMENT = `
-Vote closed
+## Vote closed
+
+The vote **passed**! 🎉
+
+\`75%\` of the users with binding vote were in favor (passing threshold: \`51%\`).
+
+### Summary
+
+|        In favor        |        Against        |       Abstain        |        Not voted        |
+| :--------------------: | :-------------------: | :------------------: | :---------------------: |
+| 2 | 0 | 1 | 0 |
+
 
 ### Binding votes (3)
-
-| Voter | Vote | Date |
-| --- | --- | --- |
+| User | Vote  | Timestamp |
+| ---- | :---: | :-------: |
 | @derberg | In favor | 2026-01-07 12:07:21.0 +00:00:00 |
 | @dalelane | Abstain | 2026-01-08 13:09:00.0 +00:00:00 |
 | @cdavernas | In favor | 2026-01-08 09:10:25.0 +00:00:00 |
-
 <details>
-<summary>Non-binding votes (1)</summary>
+      <summary><h3>Non-binding votes (1)</h3></summary>
 
-| Voter | Vote | Date |
-| --- | --- | --- |
+
+| User | Vote  | Timestamp |
+| ---- | :---: | :-------: |
 | @someone | In favor | 2026-01-08 14:00:00.0 +00:00:00 |
 </details>
 `;
