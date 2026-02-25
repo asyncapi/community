@@ -97,7 +97,7 @@ describe("parseLatestVotes", () => {
   it("sets isVotedInLast3Months to true for all parsed votes", () => {
     const rows = parseVoteClosedComment(SAMPLE_COMMENT);
     const votes = parseLatestVotes(rows);
-    votes.forEach((v) => expect(v.isVotedInLast3Months).toBe(true));
+    votes.forEach((v) => { expect(v.isVotedInLast3Months).toBe(true); });
   });
 
   it("returns an empty array for empty input", () => {
