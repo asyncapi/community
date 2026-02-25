@@ -44,8 +44,10 @@ async function loadYaml(filePath) {
  * @returns {boolean}
  */
 function hasRelevantFlag(member) {
-  return (
-    member.isTscMember || member.isBoardMember || member.isBoardChair || false
+  if (!member || typeof member !== "object") return false;
+
+  return Boolean(
+    member.isTscMember || member.isBoardMember || member.isBoardChair,
   );
 }
 
