@@ -129,7 +129,13 @@ async function addToEmeritus(filePath, githubHandles) {
   const existingSet = new Set(
     (emeritus.emeritus_tsc || []).map((h) => h.toLowerCase())
   );
-  const toAdd = githubHandles.filter((h) => !existingSet.has(h.toLowerCase()));
+  const seenLower = new Map();
+  for (const h of githubHandles) {
+    const lower = h.toLowerCase();
+    if (!seenLower.has(lower)) seenLower.set(lower, h);
+  }
+  const uniqueIncoming = [...seenLower.values()];
+  const toAdd = uniqueIncoming.filter((h) => !existingSet.has(h.toLowerCase()));
   if (toAdd.length === 0) return;
 
   emeritus.emeritus_tsc = [...(emeritus.emeritus_tsc || []), ...toAdd];
