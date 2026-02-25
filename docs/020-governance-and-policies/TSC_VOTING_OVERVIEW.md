@@ -67,13 +67,13 @@ A TSC member is automatically moved to emeritus only when they have missed **at 
 | [Pakisan](https://github.com/Pakisan) | 👍 | 👍 | 🔕 | 👍 | 👍 | 👍 | 👍 | 🔕 | 👍 | 👍 | 👍 | 🔕 | 2025-12-03 | true | 2026-01-14 | 9 | 0 | 0 | 3 |
 | [princerajpoot20](https://github.com/princerajpoot20) | 👍 | 👍 | 👍 | 🔕 | 👀 | 🔕 | 👍 | 👀 | 👍 | 👍 | 👍 | 👍 | 2026-01-11 | true | 2026-01-14 | 8 | 0 | 2 | 2 |
 | [rcoppen](https://github.com/rcoppen) | 🔕 | 🔕 | 🔕 | 👍 | 👀 | 👀 | 🔕 | 👀 | 👍 | 👍 | 👀 | 👀 | 2026-01-08 | true | 2026-01-14 | 3 | 0 | 5 | 4 |
-| [Ruchip16](https://github.com/Ruchip16) | - | - | - | - | - | - | - | - | - | - | 🔕 | 🔕 | Member has not participated in all previous voting process. | Member has not participated in all previous voting process. | 2026-01-14 | 0 | 0 | 0 | 2 |
+| [Ruchip16](https://github.com/Ruchip16) | - | - | - | - | - | - | - | - | - | - | 🔕 | 🔕 | Member has not participated in all previous voting processes. | Member has not participated in all previous voting processes. | 2026-01-14 | 0 | 0 | 0 | 2 |
 | [sambhavgupta0705](https://github.com/sambhavgupta0705) | 👍 | 👍 | 🔕 | 👍 | 👍 | 👍 | 👍 | 🔕 | 👍 | 👍 | 🔕 | 🔕 | 2025-07-21 | false | 2026-01-14 | 8 | 0 | 0 | 4 |
 | [Samridhi-98](https://github.com/Samridhi-98) | 👍 | 🔕 | 🔕 | 👍 | 👍 | 👍 | 🔕 | 🔕 | 👍 | 👍 | 👍 | 👍 | 2026-01-14 | true | 2026-01-14 | 8 | 0 | 0 | 4 |
 | [Shurtu-gal](https://github.com/Shurtu-gal) | 👍 | 👍 | 👍 | 👍 | 👍 | 👍 | 👍 | 👍 | 👍 | 👍 | 👍 | 👍 | 2026-01-07 | true | 2026-01-14 | 12 | 0 | 0 | 0 |
 | [Souvikns](https://github.com/Souvikns) | 👍 | 🔕 | 👍 | 👍 | 👍 | 👍 | 👍 | 👍 | 👍 | 🔕 | 🔕 | 👍 | 2026-01-08 | true | 2026-01-14 | 9 | 0 | 0 | 3 |
 | [Tenischev](https://github.com/Tenischev) | 🔕 | 🔕 | 🔕 | 👍 | 👀 | 👍 | 👍 | 🔕 | 🔕 | 🔕 | 👀 | 🔕 | 2025-12-03 | true | 2026-01-14 | 3 | 0 | 2 | 7 |
-| [TenzDelek](https://github.com/TenzDelek) | - | - | - | - | - | - | - | - | - | - | - | - | Member has not participated in all previous voting process. | Member has not participated in all previous voting process. | 2026-01-14 | 0 | 0 | 0 | 0 |
+| [TenzDelek](https://github.com/TenzDelek) | - | - | - | - | - | - | - | - | - | - | - | - | Member has not participated in all previous voting processes. | Member has not participated in all previous voting processes. | 2026-01-14 | 0 | 0 | 0 | 0 |
 | [theschles](https://github.com/theschles) | 👍 | 🔕 | 🔕 | 👍 | 👎 | 🔕 | 🔕 | 🔕 | 👀 | 👀 | 🔕 | 🔕 | 2025-07-09 | false | 2026-01-14 | 2 | 1 | 2 | 7 |
 | [thulieblack](https://github.com/thulieblack) | 👍 | 👍 | 👍 | 👍 | 👍 | 👍 | 👍 | 👀 | 👍 | 👍 | 👍 | 👍 | 2026-01-13 | true | 2026-01-14 | 11 | 0 | 1 | 0 |
 | [TRohit20](https://github.com/TRohit20) | - | - | - | - | - | - | 👍 | 👍 | 👍 | 👍 | 👍 | 👍 | 2026-01-14 | true | 2026-01-14 | 6 | 0 | 0 | 0 |
