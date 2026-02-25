@@ -1,4 +1,4 @@
-const { buildVoteDetails, findInactiveMembers } = require("../.github/scripts/vote_tracker/tracker");
+const { buildVoteDetails, findInactiveMembers, NOT_A_MEMBER_YET } = require("../.github/scripts/vote_tracker/tracker");
 
 // ---------------------------------------------------------------------------
 // Fixtures
@@ -160,6 +160,68 @@ describe("buildVoteDetails", () => {
 });
 
 // ---------------------------------------------------------------------------
+// buildVoteDetails – tscMemberSince guard
+// ---------------------------------------------------------------------------
+
+describe("buildVoteDetails – tscMemberSince guard", () => {
+  const members = [
+    { github: "alice" },
+    { github: "bob", tscMemberSince: "2025-07-01" },
+  ];
+  const rounds = [
+    {
+      issueNumber: 100,
+      issueTitle: "Early Vote",
+      voteClosedAt: "2025-06-01",
+      votes: [
+        { user: "alice", vote: "In favor", timestamp: "2025-06-01 10:00:00.0 +00:00:00" },
+        // bob is not a member yet
+      ],
+    },
+    {
+      issueNumber: 200,
+      issueTitle: "Later Vote",
+      voteClosedAt: "2025-09-01",
+      votes: [
+        { user: "alice", vote: "Against", timestamp: "2025-09-01 10:00:00.0 +00:00:00" },
+        // bob did not vote
+      ],
+    },
+  ];
+
+  let result;
+  beforeEach(() => {
+    result = buildVoteDetails(members, rounds);
+  });
+
+  it("marks rounds before tscMemberSince as NOT_A_MEMBER_YET", () => {
+    const bob = result.find((r) => r.name === "bob");
+    expect(bob["Early Vote$$100"]).toBe(NOT_A_MEMBER_YET);
+  });
+
+  it("does not count pre-membership rounds in agree/disagree/abstain metrics", () => {
+    const bob = result.find((r) => r.name === "bob");
+    expect(bob.agreeCount).toBe(0);
+    expect(bob.disagreeCount).toBe(0);
+    expect(bob.abstainCount).toBe(0);
+    // notParticipatingCount is 1 from the post-membership round 200 (bob didn't vote)
+    expect(bob.notParticipatingCount).toBe(1);
+  });
+
+  it("marks missed post-membership rounds as 'Not participated'", () => {
+    const bob = result.find((r) => r.name === "bob");
+    expect(bob["Later Vote$$200"]).toBe("Not participated");
+    expect(bob.notParticipatingCount).toBe(1);
+  });
+
+  it("applies no restriction for members without tscMemberSince", () => {
+    const alice = result.find((r) => r.name === "alice");
+    expect(alice["Early Vote$$100"]).toBe("In favor");
+    expect(alice["Later Vote$$200"]).toBe("Against");
+  });
+});
+
+// ---------------------------------------------------------------------------
 // findInactiveMembers
 // ---------------------------------------------------------------------------
 
@@ -271,5 +333,48 @@ describe("findInactiveMembers", () => {
     ];
     const details = buildVoteDetails(members, activeRounds);
     expect(findInactiveMembers(details, 3)).toEqual([]);
+  });
+
+  it("does not flag a member whose last-N rounds contain 'Not a member yet' entries", () => {
+    // frank joined 2025-02-01 — rounds 0 and 1 are pre-membership ("Not a member yet")
+    // he voted in round 2, then missed round 3 ("Not participated")
+    // with threshold=3, last-3 keys are rounds 1/2/3: "Not a member yet", "In favor", "Not participated"
+    // NOT all three are "Not participated" → frank should NOT be flagged
+    const membersWithFrank = [...members, { github: "frank", tscMemberSince: "2025-02-01" }];
+    const frankRounds = [
+      {
+        issueNumber: 0, issueTitle: "Round 0", voteClosedAt: "2024-10-01",
+        votes: [
+          { user: "alice", vote: "In favor", timestamp: "2024-10-01 10:00:00.0 +00:00:00" },
+          { user: "bob",   vote: "In favor", timestamp: "2024-10-01 11:00:00.0 +00:00:00" },
+          { user: "carol", vote: "In favor", timestamp: "2024-10-01 12:00:00.0 +00:00:00" },
+        ],
+      },
+      {
+        issueNumber: 1, issueTitle: "Round 1", voteClosedAt: "2025-01-01",
+        votes: [
+          { user: "alice", vote: "In favor", timestamp: "2025-01-01 10:00:00.0 +00:00:00" },
+          { user: "bob",   vote: "In favor", timestamp: "2025-01-01 11:00:00.0 +00:00:00" },
+          // frank is not a member yet
+        ],
+      },
+      {
+        issueNumber: 2, issueTitle: "Round 2", voteClosedAt: "2025-04-01",
+        votes: [
+          { user: "alice", vote: "In favor", timestamp: "2025-04-01 10:00:00.0 +00:00:00" },
+          { user: "frank", vote: "In favor", timestamp: "2025-04-01 12:00:00.0 +00:00:00" },
+        ],
+      },
+      {
+        issueNumber: 3, issueTitle: "Round 3", voteClosedAt: "2025-07-01",
+        votes: [
+          { user: "alice", vote: "In favor", timestamp: "2025-07-01 10:00:00.0 +00:00:00" },
+          // frank missed round 3
+        ],
+      },
+    ];
+    const details = buildVoteDetails(membersWithFrank, frankRounds);
+    const inactive = findInactiveMembers(details, 3);
+    expect(inactive.map((m) => m.name)).not.toContain("frank");
   });
 });

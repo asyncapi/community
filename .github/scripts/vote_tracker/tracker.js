@@ -1,13 +1,15 @@
 const { isVotingWithinLastThreeMonths } = require("./utils");
 
 const NEVER_VOTED_PLACEHOLDER = "Member has not participated in all previous voting process.";
+const NOT_A_MEMBER_YET = "Not a member yet";
 
 /**
  * Builds a complete, fresh vote tracking dataset for the current set of TSC
  * members based on all historical voting rounds.
  *
  * Members who are no longer in tscMembers are automatically excluded.
- * Members who are newly added get "Not participated" for rounds they missed.
+ * Members who are newly added get "Not a member yet" for rounds that closed before
+ * their tscMemberSince date, and "Not participated" for post-membership rounds they missed.
  *
  * Each returned record has the form:
  *   {
@@ -24,7 +26,7 @@ const NEVER_VOTED_PLACEHOLDER = "Member has not participated in all previous vot
  *     notParticipatingCount,
  *   }
  *
- * @param {{ github: string }[]} tscMembers - Current TSC members from the YAML file
+ * @param {{ github: string, tscMemberSince?: string }[]} tscMembers - Current TSC members from the YAML file
  * @param {{
  *   issueNumber: number|string,
  *   issueTitle: string,
@@ -53,10 +55,17 @@ function buildVoteDetails(tscMembers, votingRounds) {
     for (const round of votingRounds) {
       const { issueNumber, issueTitle, voteClosedAt, votes } = round;
       const voteKey = `${issueTitle}$$${issueNumber}`;
-      const userVote = votes.find((v) => v.user.toLowerCase() === lowerName);
 
       lastVoteClosedTime = voteClosedAt;
 
+      // If the vote closed before this member joined TSC, mark it as pre-membership
+      // and skip all participation metrics — this avoids misleading "Not participated" entries.
+      if (member.tscMemberSince && voteClosedAt < member.tscMemberSince) {
+        record[voteKey] = NOT_A_MEMBER_YET;
+        continue;
+      }
+
+      const userVote = votes.find((v) => v.user.toLowerCase() === lowerName);
       if (userVote) {
         record[voteKey] = userVote.vote;
         lastParticipatedVoteTime = userVote.timestamp.toString().split(" ")[0];
@@ -110,4 +119,4 @@ function findInactiveMembers(voteDetails, lastNRounds = 3) {
   );
 }
 
-module.exports = { buildVoteDetails, findInactiveMembers };
+module.exports = { buildVoteDetails, findInactiveMembers, NOT_A_MEMBER_YET };

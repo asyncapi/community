@@ -17,6 +17,7 @@ function renderVoteIcon(value) {
     Against: "👎",
     Abstain: "👀",
     "Not participated": "🔕",
+    "Not a member yet": "-",
   };
   return icons[value] || value;
 }

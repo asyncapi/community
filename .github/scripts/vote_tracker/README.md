@@ -16,6 +16,22 @@ Triggers:
 - Automatically when a comment is created by `git-vote[bot]` containing `Vote closed`
 - Manually via **Actions → Vote Tracker → Run workflow**
 
+## Maintaining TSC membership dates
+
+Every TSC member in [`MAINTAINERS.yaml`](../../../MAINTAINERS.yaml) (or
+[`AMBASSADORS_MEMBERS.yaml`](../../../AMBASSADORS_MEMBERS.yaml) for ambassador-track members)
+must have a `tscMemberSince` field set to the ISO date (`YYYY-MM-DD`) when they joined the TSC.
+
+```yaml
+isTscMember: true
+tscMemberSince: "2025-06-02"
+```
+
+Vote rounds that closed before a member's `tscMemberSince` date are shown as
+`-` ("Not a member yet") in the voting overview instead of "Not participated". Without this date
+the member appears to have missed all pre-membership votes, which is misleading and can also
+incorrectly trigger the inactivity check.
+
 ## Running the tests
 
 ```bash
