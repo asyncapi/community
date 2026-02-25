@@ -1,6 +1,6 @@
-const path = require('path');
-const yaml = require('js-yaml');
-const { readFile, writeFile } = require('fs/promises');
+const path = require("path");
+const yaml = require("js-yaml");
+const { readFile, writeFile } = require("fs/promises");
 
 /**
  * @typedef {Object} Member
@@ -10,9 +10,17 @@ const { readFile, writeFile } = require('fs/promises');
  * @property {boolean} [isBoardChair]
  */
 
-const MAINTAINERS_YAML_PATH = path.resolve(__dirname, '..', 'MAINTAINERS.yaml');
-const AMBASSADORS_JSON_PATH = path.resolve(__dirname, '..', 'AMBASSADORS_MEMBERS.yaml');
-const OUTPUT_YAML_PATH = path.resolve(__dirname, '..', 'TSC_BOARD_MEMBERS.yaml');
+const MAINTAINERS_YAML_PATH = path.resolve(__dirname, "..", "MAINTAINERS.yaml");
+const AMBASSADORS_JSON_PATH = path.resolve(
+  __dirname,
+  "..",
+  "AMBASSADORS_MEMBERS.yaml",
+);
+const OUTPUT_YAML_PATH = path.resolve(
+  __dirname,
+  "..",
+  "TSC_BOARD_MEMBERS.yaml",
+);
 
 /**
  * Reads and parses a YAML file from the given path.
@@ -20,8 +28,14 @@ const OUTPUT_YAML_PATH = path.resolve(__dirname, '..', 'TSC_BOARD_MEMBERS.yaml')
  * @returns {Promise<Member[]>}
  */
 async function loadYaml(filePath) {
-  const raw = await readFile(filePath, 'utf-8');
-  return yaml.load(raw);
+  try {
+    const raw = await readFile(filePath, "utf-8");
+    return yaml.load(raw);
+  } catch (error) {
+    console.error(`Failed to load YAML file: ${filePath}`);
+    console.error(error.message);
+    return [];
+  }
 }
 
 /**
@@ -30,7 +44,9 @@ async function loadYaml(filePath) {
  * @returns {boolean}
  */
 function hasRelevantFlag(member) {
-  return member.isTscMember || member.isBoardMember || member.isBoardChair || false;
+  return (
+    member.isTscMember || member.isBoardMember || member.isBoardChair || false
+  );
 }
 
 /**
@@ -66,9 +82,11 @@ async function generateTSCBoardMembersList() {
 
     // Step 3: Write final list
     const yamlData = yaml.dump(filteredMembers);
-    await writeFile(OUTPUT_YAML_PATH, yamlData, 'utf-8');
+    await writeFile(OUTPUT_YAML_PATH, yamlData, "utf-8");
 
-    console.info(`✅ Generated ${filteredMembers.length} filtered TSC/Board members`);
+    console.info(
+      `✅ Generated ${filteredMembers.length} filtered TSC/Board members`,
+    );
   } catch (err) {
     throw new Error(`❌ Failed to generate TSC members list: ${err}`);
   }
