@@ -122,10 +122,10 @@ describe("buildVoteDetails", () => {
     const neverVoted = buildVoteDetails([{ github: "ghost" }], VOTING_ROUNDS);
     const ghost = neverVoted[0];
     expect(ghost.lastParticipatedVoteTime).toBe(
-      "Member has not participated in all previous voting process."
+      "Member has not participated in all previous voting processes."
     );
     expect(ghost.isVotedInLast3Months).toBe(
-      "Member has not participated in all previous voting process."
+      "Member has not participated in all previous voting processes."
     );
     expect(ghost.agreeCount).toBe(0);
     expect(ghost.notParticipatingCount).toBe(2);
