@@ -44,7 +44,7 @@ function buildVoteDetails(tscMembers, votingRounds) {
 
     let lastParticipatedVoteTime = null;
     let lastVoteClosedTime = null;
-    let firstEligibleVoteClosedTime = null;
+    let firstEligibleVoteTime = null;
     let agreeCount = 0;
     let disagreeCount = 0;
     let abstainCount = 0;
@@ -67,8 +67,8 @@ function buildVoteDetails(tscMembers, votingRounds) {
       }
 
       // Track the close date of the first vote this member was eligible for.
-      if (!firstEligibleVoteClosedTime) {
-        firstEligibleVoteClosedTime = voteClosedAt;
+      if (!firstEligibleVoteTime) {
+        firstEligibleVoteTime = voteClosedAt;
       }
 
       const userVote = votes.find((v) => v.user.toLowerCase() === lowerName);
@@ -91,7 +91,7 @@ function buildVoteDetails(tscMembers, votingRounds) {
       : NEVER_VOTED_PLACEHOLDER;
     record.lastVoteClosedTime = lastVoteClosedTime;
     record.firstVoteClosedTime = firstVoteClosedTime;
-    record.firstEligibleVoteClosedTime = firstEligibleVoteClosedTime;
+    record.firstEligibleVoteTime = firstEligibleVoteTime;
     record.agreeCount = agreeCount;
     record.disagreeCount = disagreeCount;
     record.abstainCount = abstainCount;
@@ -136,9 +136,9 @@ function findInactiveMembers(voteDetails, voteDates, lastNRounds = 2) {
     // once 3+ months have elapsed since their first eligible vote, giving new
     // members a grace period before automatic removal kicks in.
     if (member.lastParticipatedVoteTime === NEVER_VOTED_PLACEHOLDER) {
-      if (!member.firstEligibleVoteClosedTime || !member.lastVoteClosedTime) continue;
+      if (!member.firstEligibleVoteTime || !member.lastVoteClosedTime) continue;
 
-      const firstEligible = new Date(member.firstEligibleVoteClosedTime);
+      const firstEligible = new Date(member.firstEligibleVoteTime);
       const lastClosed = new Date(member.lastVoteClosedTime);
       const threeMonthsAfterFirstEligible = new Date(firstEligible);
       threeMonthsAfterFirstEligible.setMonth(threeMonthsAfterFirstEligible.getMonth() + 3);
@@ -148,7 +148,7 @@ function findInactiveMembers(voteDetails, voteDates, lastNRounds = 2) {
       const spanMs = lastClosed - firstEligible;
       const spanMonths = (spanMs / (1000 * 60 * 60 * 24 * 30.44)).toFixed(1);
       const _inactivityReason =
-        `Never voted — first became eligible on ${member.firstEligibleVoteClosedTime} ` +
+        `Never voted — first became eligible on ${member.firstEligibleVoteTime} ` +
         `but has not cast any vote across ${spanMonths} months`;
       inactive.push({ ...member, _inactivityReason });
       continue;

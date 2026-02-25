@@ -5,7 +5,7 @@
   twitter: maya_ux_ui
   availableForHire: true
   isTscMember: true
-  tscMemberSince: "2023-07-13"
+  tscMemberSince: '2023-07-13'
   repos:
     - website
     - conference-website
@@ -18,7 +18,7 @@
   twitter: aayushmau5
   availableForHire: false
   isTscMember: true
-  tscMemberSince: "2023-07-05"
+  tscMemberSince: '2023-07-05'
   repos:
     - diff
   githubID: 54525741
@@ -29,7 +29,7 @@
   twitter: Aayush__Saini_
   availableForHire: true
   isTscMember: true
-  tscMemberSince: "2025-01-13"
+  tscMemberSince: '2025-01-13'
   repos:
     - cli
   githubID: 60972989
@@ -40,7 +40,7 @@
   github: imabp
   availableForHire: false
   isTscMember: true
-  tscMemberSince: "2023-07-05"
+  tscMemberSince: '2023-07-05'
   repos:
     - problem
   githubID: 53480076
@@ -51,7 +51,7 @@
   twitter: AksNema
   availableForHire: true
   isTscMember: true
-  tscMemberSince: "2023-07-05"
+  tscMemberSince: '2023-07-05'
   repos:
     - website
   githubID: 76521428
@@ -62,7 +62,7 @@
   twitter: thisisanshg
   availableForHire: true
   isTscMember: true
-  tscMemberSince: "2024-05-29"
+  tscMemberSince: '2024-05-29'
   repos:
     - website
   githubID: 94157520
@@ -82,7 +82,7 @@
   twitter: Shurtu_Gal
   availableForHire: true
   isTscMember: true
-  tscMemberSince: "2024-01-26"
+  tscMemberSince: '2024-01-26'
   repos:
     - studio
     - .github
@@ -107,7 +107,7 @@
   twitter: dalelane
   availableForHire: false
   isTscMember: true
-  tscMemberSince: "2023-07-05"
+  tscMemberSince: '2023-07-05'
   company: IBM
   repos:
     - spec
@@ -131,7 +131,7 @@
   availableForHire: false
   linkedin: fmvilas
   isTscMember: true
-  tscMemberSince: "2023-07-05"
+  tscMemberSince: '2023-07-05'
   isBoardMember: true
   repos:
     - spec
@@ -165,7 +165,7 @@
   company: EventStack
   availableForHire: false
   isTscMember: true
-  tscMemberSince: "2023-07-05"
+  tscMemberSince: '2023-07-05'
   repos:
     - spec-json-schemas
     - generator
@@ -182,7 +182,7 @@
   availableForHire: false
   company: Postman
   isTscMember: true
-  tscMemberSince: "2023-07-05"
+  tscMemberSince: '2023-07-05'
   repos:
     - spec-json-schemas
     - studio
@@ -217,7 +217,7 @@
   twitter: derberq
   availableForHire: true
   isTscMember: true
-  tscMemberSince: "2023-07-05"
+  tscMemberSince: '2023-07-05'
   repos:
     - spec
     - website
@@ -244,7 +244,7 @@
   slack: U01EB02BP7A
   company: Travelping GmbH
   isTscMember: true
-  tscMemberSince: "2023-07-05"
+  tscMemberSince: '2023-07-05'
   repos:
     - generator
     - asyncapi-react
@@ -267,7 +267,7 @@
   slack: U01RWDD69PZ
   availableForHire: false
   isTscMember: true
-  tscMemberSince: "2023-07-05"
+  tscMemberSince: '2023-07-05'
   repos:
     - asyncapi-react
     - conference-website
@@ -290,7 +290,7 @@
   twitter: pbodiachevskii
   availableForHire: false
   isTscMember: true
-  tscMemberSince: "2023-07-05"
+  tscMemberSince: '2023-07-05'
   repos:
     - spec-json-schemas
     - tck
@@ -303,7 +303,7 @@
   twitter: philschlesinger
   availableForHire: false
   isTscMember: true
-  tscMemberSince: "2023-07-05"
+  tscMemberSince: '2023-07-05'
   repos:
     - jasyncapi-idea-plugin
   githubID: 901430
@@ -314,7 +314,7 @@
   twitter: iamPrince_2003
   availableForHire: true
   isTscMember: true
-  tscMemberSince: "2023-11-30"
+  tscMemberSince: '2023-11-30'
   repos:
     - website
     - studio
@@ -326,7 +326,7 @@
   availableForHire: false
   company: IBM
   isTscMember: true
-  tscMemberSince: "2023-07-05"
+  tscMemberSince: '2023-07-05'
   repos:
     - spec-json-schemas
     - bindings
@@ -339,7 +339,7 @@
   company: Apideck
   availableForHire: false
   isTscMember: true
-  tscMemberSince: "2024-01-26"
+  tscMemberSince: '2024-01-26'
   repos:
     - studio
     - cli
@@ -365,7 +365,7 @@
   company: Xane AI
   availableForHire: false
   isTscMember: true
-  tscMemberSince: "2023-07-05"
+  tscMemberSince: '2023-07-05'
   repos:
     - cli
     - bundler
@@ -376,7 +376,7 @@
   linkedin: danielr
   availableForHire: false
   isTscMember: true
-  tscMemberSince: "2023-07-05"
+  tscMemberSince: '2023-07-05'
   repos:
     - java-template
   githubID: 1384852
@@ -405,7 +405,7 @@
   availableForHire: true
   slack: U011D1DAU6S
   isTscMember: true
-  tscMemberSince: "2023-07-05"
+  tscMemberSince: '2023-07-05'
   repos:
     - java-spring-template
   githubID: 4137916
@@ -416,7 +416,7 @@
   availableForHire: false
   company: ThoughtWorks
   isTscMember: true
-  tscMemberSince: "2023-07-05"
+  tscMemberSince: '2023-07-05'
   repos:
     - modelina
   githubID: 54466041
@@ -427,7 +427,7 @@
   availableForHire: false
   company: SNGULAR
   isTscMember: true
-  tscMemberSince: "2023-07-05"
+  tscMemberSince: '2023-07-05'
   repos:
     - vs-asyncapi-preview
   githubID: 1246876
@@ -438,7 +438,7 @@
   twitter: njericodes
   availableForHire: true
   isTscMember: true
-  tscMemberSince: "2023-07-05"
+  tscMemberSince: '2023-07-05'
   repos:
     - generator
     - .github
@@ -451,7 +451,7 @@
   availableForHire: false
   company: Google
   isTscMember: true
-  tscMemberSince: "2023-07-05"
+  tscMemberSince: '2023-07-05'
   repos:
     - spec-json-schemas
     - bindings
@@ -476,7 +476,7 @@
   availableForHire: false
   company: The LEGO Group
   isTscMember: true
-  tscMemberSince: "2023-07-05"
+  tscMemberSince: '2023-07-05'
   repos:
     - spec-json-schemas
     - bindings
@@ -488,7 +488,7 @@
   availableForHire: false
   company: Sportradar
   isTscMember: true
-  tscMemberSince: "2023-07-05"
+  tscMemberSince: '2023-07-05'
   repos:
     - modelina
   githubID: 1437394
@@ -497,8 +497,8 @@
   slack: U03AC4G51H8
   availableForHire: false
   company: mtrail GmbH
-  isTscMember: true
-  tscMemberSince: "2023-04-18"
+  isTscMember: false
+  tscMemberSince: '2023-04-18'
   repos:
     - spec
     - spec-json-schemas
@@ -531,7 +531,7 @@
   availableForHire: false
   company: AsyncAPI Initiative
   isTscMember: true
-  tscMemberSince: "2023-07-05"
+  tscMemberSince: '2023-07-05'
   isBoardMember: true
   repos:
     - website
@@ -545,7 +545,7 @@
   slack: U04630DU3N3
   availableForHire: true
   isTscMember: true
-  tscMemberSince: "2024-02-06"
+  tscMemberSince: '2024-02-06'
   repos:
     - website
   githubID: 81870866
@@ -565,7 +565,7 @@
   twitter: TRRohit20
   availableForHire: true
   isTscMember: true
-  tscMemberSince: "2025-02-17"
+  tscMemberSince: '2025-02-17'
   repos:
     - website
   githubID: 108233235
@@ -689,7 +689,7 @@
   slack: U067JPY0UH5
   availableForHire: false
   isTscMember: true
-  tscMemberSince: "2025-01-21"
+  tscMemberSince: '2025-01-21'
   repos:
     - jasyncapi
   githubID: 126087
@@ -699,7 +699,7 @@
   slack: U02MRF09BL1
   availableForHire: false
   isTscMember: true
-  tscMemberSince: "2025-03-25"
+  tscMemberSince: '2025-03-25'
   repos:
     - net-sdk
   githubID: 16137162
@@ -709,7 +709,7 @@
   linkedin: jean-baptiste-bianchi-aa42b914
   slack: U08K91GKK8T
   isTscMember: true
-  tscMemberSince: "2025-03-25"
+  tscMemberSince: '2025-03-25'
   availableForHire: false
   repos:
     - net-sdk
@@ -721,7 +721,7 @@
   slack: U05FM7WRKU4
   availableForHire: true
   isTscMember: true
-  tscMemberSince: "2025-03-25"
+  tscMemberSince: '2025-03-25'
   repos:
     - website
   githubID: 90895835
@@ -748,7 +748,7 @@
   slack: U0867GV384D
   availableForHire: true
   isTscMember: true
-  tscMemberSince: "2025-08-27"
+  tscMemberSince: '2025-08-27'
   repos:
     - generator
   githubID: 114283933
@@ -757,7 +757,7 @@
   twitter: Ruchicodess
   availableForHire: true
   isTscMember: true
-  tscMemberSince: "2025-11-04"
+  tscMemberSince: '2025-11-04'
   repos:
     - vs-asyncapi-preview
   githubID: 72685035
@@ -781,7 +781,7 @@
   slack: U06SWFWLLQG
   availableForHire: true
   isTscMember: true
-  tscMemberSince: "2026-02-17"
+  tscMemberSince: '2026-02-17'
   repos:
     - conference-website
   githubID: 122612557

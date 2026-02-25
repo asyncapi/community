@@ -111,10 +111,10 @@ describe("buildVoteDetails", () => {
     });
   });
 
-  it("sets firstEligibleVoteClosedTime to the close date of the first vote the member was eligible for", () => {
+  it("sets firstEligibleVoteTime to the close date of the first vote the member was eligible for", () => {
     // all three members in TSC_MEMBERS have no tscMemberSince, so eligible from round 1
     result.forEach((r) => {
-      expect(r.firstEligibleVoteClosedTime).toBe("2025-06-01");
+      expect(r.firstEligibleVoteTime).toBe("2025-06-01");
     });
   });
 
@@ -227,15 +227,15 @@ describe("buildVoteDetails – tscMemberSince guard", () => {
     expect(alice["Later Vote$$200"]).toBe("Against");
   });
 
-  it("sets firstEligibleVoteClosedTime to the first post-membership round's close date", () => {
+  it("sets firstEligibleVoteTime to the first post-membership round's close date", () => {
     const bob = result.find((r) => r.name === "bob");
     // bob joined 2025-07-01, so "Early Vote" (2025-06-01) is pre-membership
     // first eligible round is "Later Vote" (2025-09-01)
-    expect(bob.firstEligibleVoteClosedTime).toBe("2025-09-01");
+    expect(bob.firstEligibleVoteTime).toBe("2025-09-01");
 
     const alice = result.find((r) => r.name === "alice");
     // alice has no tscMemberSince, so eligible from the very first round
-    expect(alice.firstEligibleVoteClosedTime).toBe("2025-06-01");
+    expect(alice.firstEligibleVoteTime).toBe("2025-06-01");
   });
 });
 

@@ -328,13 +328,7 @@
     - vs-asyncapi-preview
   githubID: 1246876
   twitter: ivangsa
-  bio: >-
-    Java Architect with a deep understanding of Java, Spring-Boot, Spring-Cloud
-    technologies, specializing in Domain-Driven Design (DDD) and Event-Driven
-    Architectures creating Software Easy to Understand. Building ZenWave 360º.
-    ZenWave 360º is a set of tools built on the foundations of Domain Driven
-    Design and API-First principles for Event-Driven Architectures, to help you
-    create software easy to understand. https://www.zenwave360.io/
+  bio: Java Architect with a deep understanding of Java, Spring-Boot, Spring-Cloud technologies, specializing in Domain-Driven Design (DDD) and Event-Driven Architectures creating Software Easy to Understand. Building ZenWave 360º. ZenWave 360º is a set of tools built on the foundations of Domain Driven Design and API-First principles for Event-Driven Architectures, to help you create software easy to understand. https://www.zenwave360.io/
   title: Java Architect. Speaker. Building ZenWave 360°.
   img: https://avatars.githubusercontent.com/u/1246876?v=4
   contributions:
@@ -349,8 +343,7 @@
       date:
         year: 2024
         month: '2022'
-      link: >-
-        https://www.zenwave360.io/zenwave-sdk/plugins/asyncapi-spring-cloud-streams3/
+      link: https://www.zenwave360.io/zenwave-sdk/plugins/asyncapi-spring-cloud-streams3/
     - type: article
       title: API-First with AsyncAPI
       date:
@@ -382,9 +375,7 @@
         month: October
       link: https://www.youtube.com/watch?v=-uHONzz-a6U
     - type: presentation
-      title: >-
-        Code Generation For Enterprise Integration Patterns w/ AsyncAPI &
-        ZenWave SDK
+      title: Code Generation For Enterprise Integration Patterns w/ AsyncAPI & ZenWave SDK
       date:
         year: 2023
         month: October
@@ -396,14 +387,11 @@
         month: October
       link: https://www.youtube.com/watch?v=q5vt2TLGoaQ
     - type: article
-      title: >-
-        Transactional OutBox With AsyncAPI, SpringModulith and ZenWaveSDK (full
-        project and tutorial)
+      title: Transactional OutBox With AsyncAPI, SpringModulith and ZenWaveSDK (full project and tutorial)
       date:
         year: 2025
         month: April
-      link: >-
-        https://www.zenwave360.io/posts/TransactionalOutBoxWithAsyncAPIAndSpringModulith/
+      link: https://www.zenwave360.io/posts/TransactionalOutBoxWithAsyncAPIAndSpringModulith/
     - type: talk
       title: Arquitecturas Event-Driven y Monolitos Modulares con AsyncAPI
       date:
@@ -415,8 +403,7 @@
       date:
         year: 2025
         month: May
-      link: >-
-        https://2025.springio.net/sessions/event-driven-architectures-with-spring-modulith-and-asyncapi/
+      link: https://2025.springio.net/sessions/event-driven-architectures-with-spring-modulith-and-asyncapi/
     - type: article
       title: ZenWave AsyncAPI Generator
       date:
@@ -428,8 +415,7 @@
       date:
         year: 2026
         month: Jan
-      link: >-
-        https://www.zenwave360.io/docs/examples/eda-examples/asyncapi-shopping-cart/
+      link: https://www.zenwave360.io/docs/examples/eda-examples/asyncapi-shopping-cart/
 - name: Florence Njeri
   github: Florence-Njeri
   linkedin: florencenjeri
@@ -483,7 +469,7 @@
   slack: U03AC4G51H8
   availableForHire: false
   company: mtrail GmbH
-  isTscMember: true
+  isTscMember: false
   tscMemberSince: '2023-04-18'
   repos:
     - spec
@@ -540,22 +526,10 @@
     - jasyncapi
   githubID: 126087
   country: 🇮🇳
-  bio: >-
-    Hari Krishnan has over two decades of experience in building high-performing
-    teams, designing scalable systems, and driving technical strategy for large
-    enterprises and high-growth startups across industries like finance,
-    telecom, logistics, and retail. As Founder and CEO of Polarizer Technologies
-    he has led enterprise-wide initiatives in architecture, developer
-    experience, test automation and AI adoption. He combines deep technical
-    expertise with executive vision, having worked closely with CXOs on
-    strategy, delivery assurance, and organizational agility. He is widely
-    recognized for his contributions to API governance, platform engineering,
-    and contract-driven development. His areas of interest include distributed
-    systems, AI native products, AI augmented and agentic software delivery.
+  bio: Hari Krishnan has over two decades of experience in building high-performing teams, designing scalable systems, and driving technical strategy for large enterprises and high-growth startups across industries like finance, telecom, logistics, and retail. As Founder and CEO of Polarizer Technologies he has led enterprise-wide initiatives in architecture, developer experience, test automation and AI adoption. He combines deep technical expertise with executive vision, having worked closely with CXOs on strategy, delivery assurance, and organizational agility. He is widely recognized for his contributions to API governance, platform engineering, and contract-driven development. His areas of interest include distributed systems, AI native products, AI augmented and agentic software delivery.
   company: Polarizer Technologies
   title: Founder, and CEO at Polarizer Technologies
-  img: >-
-    https://raw.githubusercontent.com/harikrishnan83/harikrishnan83/master/HariKrishnan-profile.jpg
+  img: https://raw.githubusercontent.com/harikrishnan83/harikrishnan83/master/HariKrishnan-profile.jpg
   contributions:
     - type: talk
       title: Kafka and JMS Mocking with AsyncAPI
@@ -564,14 +538,11 @@
         month: November
       link: https://www.youtube.com/watch?v=9yRf75p_kTU
     - type: talk
-      title: >-
-        Unshackling Your System Under Test: Shift-Left Testing Through
-        Dependency Isolation (Kafka Mocks with AsyncAPI specification)
+      title: 'Unshackling Your System Under Test: Shift-Left Testing Through Dependency Isolation (Kafka Mocks with AsyncAPI specification)'
       date:
         year: 2024
         month: June
-      link: >-
-        https://confengine.com/conferences/selenium-conf-2024/proposal/20021/unshackling-your-system-under-test-shift-left-testing-through-dependency-isolation
+      link: https://confengine.com/conferences/selenium-conf-2024/proposal/20021/unshackling-your-system-under-test-shift-left-testing-through-dependency-isolation
     - type: talk
       title: Using API spec as an Executable Contract To Mock and Test Microservices
       date:
@@ -595,12 +566,9 @@
       date:
         year: 2025
         month: August
-      link: >-
-        https://conferences.gotopia.tech/goto-serverless-bengaluru-2025/sessions/3845/reliable-aws-lambda-data-pipelines-with-asyncapi-specification
+      link: https://conferences.gotopia.tech/goto-serverless-bengaluru-2025/sessions/3845/reliable-aws-lambda-data-pipelines-with-asyncapi-specification
     - type: talk
-      title: >-
-        AsyncAPI 2.6 to 3.0: Migrating Safely with No-Code Backward
-        Compatibility Checks
+      title: 'AsyncAPI 2.6 to 3.0: Migrating Safely with No-Code Backward Compatibility Checks'
       date:
         year: 2025
         month: October
@@ -669,14 +637,7 @@
   githubID: 122612557
 - name: Daniel Kocot
   img: https://avatars.githubusercontent.com/u/466609?v=4
-  bio: >-
-    Daniel joined the team at adorsys GmbH & Co. KG as Principal Integration
-    Architect in January 2026. He has been dedicated to integration-related
-    topics for almost 10 years. Initially focusing on gateways and the early
-    days of APIOps, he later shifted his focus to methodologies, strategy, and
-    enterprise architecture. In his daily work with his customers, he attaches
-    particular importance to ensuring that interfaces are not only understood as
-    technical tools.
+  bio: Daniel joined the team at adorsys GmbH & Co. KG as Principal Integration Architect in January 2026. He has been dedicated to integration-related topics for almost 10 years. Initially focusing on gateways and the early days of APIOps, he later shifted his focus to methodologies, strategy, and enterprise architecture. In his daily work with his customers, he attaches particular importance to ensuring that interfaces are not only understood as technical tools.
   title: Principal Integration Architect
   github: danielkocot
   githubID: 466609
@@ -693,15 +654,13 @@
       date:
         year: 2021
         month: September
-      link: >-
-        https://blog.codecentric.de/en/2021/09/asyncapi-documentation-event-message-driven-architectures/?hmsr=joyk.com&utm_source=joyk.com&utm_medium=referral
+      link: https://blog.codecentric.de/en/2021/09/asyncapi-documentation-event-message-driven-architectures/?hmsr=joyk.com&utm_source=joyk.com&utm_medium=referral
     - type: article
       title: AsyncAPI specification updates
       date:
         year: 2022
         month: February
-      link: >-
-        https://blog.codecentric.de/en/2022/02/asyncapi-version-2-3-0-specification-updates/
+      link: https://blog.codecentric.de/en/2022/02/asyncapi-version-2-3-0-specification-updates/
     - type: presentation
       title: AsyncAPI 101
       date:
@@ -716,14 +675,7 @@
       link: https://www.youtube.com/watch?v=_wTcV63jrnU
 - name: Hugo Guerrero
   img: https://avatars.githubusercontent.com/u/1001939?v=4
-  bio: >-
-    Hugo Guerrero is a developer advocate with over 20 years of hands-on
-    experience in software development. He’s worked across the stack as a
-    developer, consultant, architect, and software factory manager. Hugo is a
-    strong advocate for event-driven systems and actively contributes to open
-    source communities, including AsyncAPI. He maintains the Microcks Docker
-    Desktop Extension and regularly shares practical insights on APIs,
-    distributed systems, and developer tooling.
+  bio: Hugo Guerrero is a developer advocate with over 20 years of hands-on experience in software development. He’s worked across the stack as a developer, consultant, architect, and software factory manager. Hugo is a strong advocate for event-driven systems and actively contributes to open source communities, including AsyncAPI. He maintains the Microcks Docker Desktop Extension and regularly shares practical insights on APIs, distributed systems, and developer tooling.
   github: hguerrero
   githubID: 1001939
   slack: U01H9D8J4H1
@@ -741,27 +693,21 @@
       date:
         year: 2021
         month: July
-      link: >-
-        https://www.confluent.io/events/kafka-summit-apac-2021/speed-up-kafka-delivery-with-asyncapi-and-microcks/
+      link: https://www.confluent.io/events/kafka-summit-apac-2021/speed-up-kafka-delivery-with-asyncapi-and-microcks/
     - type: presentation
       title: Automated Apache Kafka Mocking and Testing with AsyncAPI
       date:
         year: 2021
         month: September
-      link: >-
-        https://www.confluent.io/events/kafka-summit-americas-2021/automated-apache-kafka-mocking-and-testing-with-asyncapi/
+      link: https://www.confluent.io/events/kafka-summit-americas-2021/automated-apache-kafka-mocking-and-testing-with-asyncapi/
     - type: presentation
-      title: >-
-        Event-driven APIs & Schema governance for Apache Kafka, Apidays LIVE
-        Hong Kong
+      title: Event-driven APIs & Schema governance for Apache Kafka, Apidays LIVE Hong Kong
       date:
         year: 2021
         month: August
       link: https://www.youtube.com/watch?v=rwlHJkgaRdw
     - type: presentation
-      title: >-
-        Event-driven APIs & Schema governance for Apache Kafka, API
-        Specification Conference
+      title: Event-driven APIs & Schema governance for Apache Kafka, API Specification Conference
       date:
         year: 2021
         month: August
@@ -781,14 +727,7 @@
   country: 🇮🇳
   isTscMember: true
   tscMemberSince: '2025-05-28'
-  bio: >-
-    Naresh is an internationally recognised Technology & Product Development
-    Expert. Over the last 25 years, he has played a key role in streamlining the
-    product engineering culture at many unicorns and fortune 500 companies.
-    Naresh is the Founder, CEO of several companies - Xnsio, ConfEngine and
-    Specmatic. Naresh is also the local organiser of API Days India. In 2004,
-    Naresh started the Agile movement in India. More details:
-    https://nareshjain.com
+  bio: 'Naresh is an internationally recognised Technology & Product Development Expert. Over the last 25 years, he has played a key role in streamlining the product engineering culture at many unicorns and fortune 500 companies. Naresh is the Founder, CEO of several companies - Xnsio, ConfEngine and Specmatic. Naresh is also the local organiser of API Days India. In 2004, Naresh started the Agile movement in India. More details: https://nareshjain.com'
   company: Specmatic, Xnsio, ConfEngine
   title: Founder, CEO at Specmatic, Xnsio and ConfEngine
   img: https://avatars.githubusercontent.com/u/38799?v=4

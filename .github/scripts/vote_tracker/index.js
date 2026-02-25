@@ -108,6 +108,19 @@ module.exports = async ({ github, context, orgName: orgOverride, repoName: repoO
     const markdownTable = await jsonToMarkdownTable(voteDetails, orgName, repoName);
     await writeMarkdownFile(MARKDOWN_OUTPUT_FILE, markdownTable);
     console.log("Markdown table has been written to", MARKDOWN_OUTPUT_FILE);
+
+    // 8. Print a final summary so the outcome is easy to spot at the end of the log
+    console.log("\n========== VOTE TRACKER RUN SUMMARY ==========");
+    if (inactiveMembers.length === 0) {
+      console.log("No TSC members moved to emeritus this run.");
+    } else {
+      console.log(`${inactiveMembers.length} TSC member(s) moved to emeritus:`);
+      for (const member of inactiveMembers) {
+        console.log(`\n  Member : ${member.name}`);
+        console.log(`  Reason : ${member._inactivityReason}`);
+      }
+    }
+    console.log("===============================================\n");
   } catch (error) {
     console.error("Error while running the vote_tracker workflow:", error);
   }
