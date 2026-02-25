@@ -15,10 +15,12 @@ const {
 const MAINTAINERS_YAML = `- name: Alice Smith
   github: alice
   isTscMember: true
+  tscMemberSince: '2023-01-01'
   githubID: 1
 - name: Bob Jones
   github: bob
   isTscMember: true
+  tscMemberSince: '2023-06-15'
   githubID: 2
 - name: Carol White
   github: carol
@@ -99,6 +101,18 @@ describe("setIsTscMemberFalse", () => {
     expect(bob.isTscMember).toBe(false);
   });
 
+  it("removes tscMemberSince when setting isTscMember to false", async () => {
+    readFile.mockResolvedValue(MAINTAINERS_YAML);
+
+    await setIsTscMemberFalse("MAINTAINERS.yaml", ["bob"]);
+
+    const written = writeFile.mock.calls[0][1];
+    const parsed = yaml.load(written);
+
+    const bob = parsed.find((m) => m.github === "bob");
+    expect(bob.tscMemberSince).toBeUndefined();
+  });
+
   it("leaves other members unchanged", async () => {
     readFile.mockResolvedValue(MAINTAINERS_YAML);
 
@@ -109,6 +123,7 @@ describe("setIsTscMemberFalse", () => {
 
     const alice = parsed.find((m) => m.github === "alice");
     expect(alice.isTscMember).toBe(true);
+    expect(alice.tscMemberSince).toBe("2023-01-01");
   });
 
   it("is case-insensitive when matching github handles", async () => {

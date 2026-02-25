@@ -101,7 +101,8 @@ async function setIsTscMemberFalse(filePath, githubHandles) {
 
   const updated = members.map((member) => {
     if (member.github && lowerHandles.has(member.github.toLowerCase())) {
-      return { ...member, isTscMember: false };
+      const { tscMemberSince, ...rest } = member;
+      return { ...rest, isTscMember: false };
     }
     return member;
   });
