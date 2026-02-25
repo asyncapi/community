@@ -31,10 +31,15 @@ describe('renderHeaderCell', () => {
     expect(result).toContain("[Voting]");
   });
 
-  it('returns plain header text for normal keys', () => {
+  it('returns the human-readable title for normal keys when present in the titles map', () => {
     const result = renderHeaderCell("name", titles, "org", "repo");
-    expect(result).toBe("name");
+    expect(result).toBe("GitHub user name");
     expect(result).not.toContain("<span");
+  });
+
+  it('returns the raw key when no title mapping exists', () => {
+    const result = renderHeaderCell("unknownField", titles, "org", "repo");
+    expect(result).toBe("unknownField");
   });
 });
 
@@ -108,7 +113,7 @@ describe('jsonToMarkdownTable', () => {
     const result = await jsonToMarkdownTable(data, "org", "repo");
     expect(result).toContain(`---\ntitle: TSC Voting Overview`);
     expect(result).toContain("[octocat](https://github.com/octocat)");
-    expect(result).toContain("agreeCount");
+    expect(result).toContain("In favor");
   });
 
   it('returns empty string for empty input', async () => {
