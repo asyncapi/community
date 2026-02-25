@@ -198,7 +198,8 @@ async function jsonToMarkdownTable(data, orgName, repoName) {
   voteKeyList.forEach((k, i) => {
     const label = `#${i + 1}`;
     keyRemap[k] = label;
-    const [title, issueNumber] = k.split("$$");
+    const [rawTitle, issueNumber] = k.split("$$");
+    const title = rawTitle.replace(/\r?\n/g, " ").replace(/\|/g, "\\|");
     legendRows.push({ label, title, issueNumber });
   });
 
