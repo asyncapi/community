@@ -95,28 +95,79 @@ function buildVoteDetails(tscMembers, votingRounds) {
 }
 
 /**
- * Returns members who have not participated in any of the last N voting rounds.
- * If fewer than N rounds exist in the data, returns an empty array — not enough
- * history to make a reliable determination.
+ * Returns members who are inactive per the charter rule:
+ * "does not participate in TSC votes within any three-month period."
+ *
+ * A member is considered inactive when ALL of these are true:
+ *   1. They have voted at least once (not a brand-new TSC member).
+ *   2. Their most recent `lastNRounds` votes are all "Not participated".
+ *   3. Those consecutive missed votes span at least 3 calendar months
+ *      (from the close date of the oldest miss to the close date of the newest).
+ *
+ * The 3-month span guard prevents a burst of votes in a short window from
+ * accidentally triggering removal.
+ *
+ * Each returned member is enriched with a `_inactivityReason` string suitable
+ * for audit logging.
  *
  * @param {Object[]} voteDetails - Output of buildVoteDetails
- * @param {number} lastNRounds - How many consecutive non-participations trigger removal (default 3)
- * @returns {Object[]} Subset of voteDetails whose members missed all of the last N rounds
+ * @param {Map<string, string>} voteDates - Map from voteKey ("Title$$N") to ISO close date ("YYYY-MM-DD")
+ * @param {number} lastNRounds - Minimum consecutive missed votes required (default 2)
+ * @returns {Object[]} Subset of voteDetails whose members meet the inactivity criteria
  */
-function findInactiveMembers(voteDetails, lastNRounds = 3) {
+function findInactiveMembers(voteDetails, voteDates, lastNRounds = 2) {
   if (!voteDetails || voteDetails.length === 0) return [];
 
   // Vote-round columns are identified by the '$$' separator in their key
   const allVoteKeys = Object.keys(voteDetails[0]).filter((k) => k.includes("$$"));
   if (allVoteKeys.length < lastNRounds) return [];
 
-  const lastNKeys = allVoteKeys.slice(-lastNRounds);
-  return voteDetails.filter((member) =>
-    // Skip members who have never voted at all — they may be newly added to TSC
+  const inactive = [];
+
+  for (const member of voteDetails) {
+    // Skip members who have never voted — they may be newly added to TSC
     // and haven't had the opportunity to participate yet.
-    member.lastParticipatedVoteTime !== NEVER_VOTED_PLACEHOLDER &&
-    lastNKeys.every((key) => member[key] === "Not participated")
-  );
+    if (member.lastParticipatedVoteTime === NEVER_VOTED_PLACEHOLDER) continue;
+
+    // Collect trailing consecutive "Not participated" entries (oldest first)
+    const trailingMisses = [];
+    for (let i = allVoteKeys.length - 1; i >= 0; i--) {
+      if (member[allVoteKeys[i]] === "Not participated") {
+        trailingMisses.unshift(allVoteKeys[i]);
+      } else {
+        break;
+      }
+    }
+
+    if (trailingMisses.length < lastNRounds) continue;
+
+    // Charter rule: the consecutive missed votes must span at least 3 calendar months
+    const oldestKey = trailingMisses[0];
+    const newestKey = trailingMisses[trailingMisses.length - 1];
+    const oldestDate = new Date(voteDates.get(oldestKey));
+    const newestDate = new Date(voteDates.get(newestKey));
+
+    const threeMonthsAfterOldest = new Date(oldestDate);
+    threeMonthsAfterOldest.setMonth(threeMonthsAfterOldest.getMonth() + 3);
+
+    if (newestDate < threeMonthsAfterOldest) continue;
+
+    // Build a human-readable reason for audit logging
+    const spanMs = newestDate - oldestDate;
+    const spanMonths = (spanMs / (1000 * 60 * 60 * 24 * 30.44)).toFixed(1);
+    const missedList = trailingMisses
+      .map((k) => `      - "${k.split("$$")[0]}" (closed ${voteDates.get(k)})`)
+      .join("\n");
+    const _inactivityReason =
+      `${trailingMisses.length} consecutive missed vote(s) spanning ${spanMonths} months ` +
+      `(charter: no participation within any 3-month period)\n` +
+      `    Last participated: ${member.lastParticipatedVoteTime}\n` +
+      `    Missed votes:\n${missedList}`;
+
+    inactive.push({ ...member, _inactivityReason });
+  }
+
+  return inactive;
 }
 
 module.exports = { buildVoteDetails, findInactiveMembers, NOT_A_MEMBER_YET };

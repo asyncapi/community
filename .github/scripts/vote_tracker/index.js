@@ -68,14 +68,26 @@ module.exports = async ({ github, context, orgName: orgOverride, repoName: repoO
       console.log(`Parsed ${votes.length} votes for issue #${issue.number}: ${issue.title}`);
     }
 
+    // Sort oldest-first so table columns appear in chronological order
+    votingRounds.sort((a, b) => a.voteClosedAt.localeCompare(b.voteClosedAt));
+
+    // Build a lookup map from voteKey ("Title$$N") → close date, needed by findInactiveMembers
+    const voteDates = new Map(
+      votingRounds.map((r) => [`${r.issueTitle}$$${r.issueNumber}`, r.voteClosedAt])
+    );
+
     // 4. Build fresh vote details for current TSC members only
     let voteDetails = buildVoteDetails(tscMembers, votingRounds);
 
-    // 5. Detect members inactive for the last 3 consecutive rounds and move them to emeritus
-    const inactiveMembers = findInactiveMembers(voteDetails);
+    // 5. Detect members inactive per the charter rule (no participation in any 3-month period)
+    //    and move them to emeritus
+    const inactiveMembers = findInactiveMembers(voteDetails, voteDates);
     if (inactiveMembers.length > 0) {
       const handles = inactiveMembers.map((m) => m.name);
-      console.log(`Moving to emeritus (inactive for last 3 votes): ${handles.join(", ")}`);
+      console.log(`Moving ${inactiveMembers.length} TSC member(s) to emeritus due to inactivity:`);
+      for (const member of inactiveMembers) {
+        console.log(`  → ${member.name}: ${member._inactivityReason}`);
+      }
 
       // Set isTscMember: false in both source-of-truth and the generated file
       await setIsTscMemberFalse(MAINTAINERS_FILE, handles);
@@ -87,7 +99,10 @@ module.exports = async ({ github, context, orgName: orgOverride, repoName: repoO
       voteDetails = voteDetails.filter((v) => !inactiveSet.has(v.name.toLowerCase()));
     }
 
-    // 6. Write updated vote tracking file and markdown table
+    // 6. Sort rows alphabetically by member name before writing output
+    voteDetails.sort((a, b) => a.name.localeCompare(b.name, undefined, { sensitivity: "base" }));
+
+    // 7. Write updated vote tracking file and markdown table
     await writeVoteTrackingFile(VOTE_TRACKING_FILE, voteDetails);
 
     const markdownTable = await jsonToMarkdownTable(voteDetails, orgName, repoName);

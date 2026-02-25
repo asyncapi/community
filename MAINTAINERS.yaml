@@ -497,7 +497,8 @@
   slack: U03AC4G51H8
   availableForHire: false
   company: mtrail GmbH
-  isTscMember: false
+  isTscMember: true
+  tscMemberSince: "2023-04-18"
   repos:
     - spec
     - spec-json-schemas

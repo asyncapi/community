@@ -247,9 +247,9 @@ describe("findInactiveMembers", () => {
       ],
     },
     {
-      issueNumber: 2, issueTitle: "Round 2", voteClosedAt: "2025-04-01",
+      issueNumber: 2, issueTitle: "Round 2", voteClosedAt: "2025-05-01",
       votes: [
-        { user: "alice", vote: "In favor", timestamp: "2025-04-01 10:00:00.0 +00:00:00" },
+        { user: "alice", vote: "In favor", timestamp: "2025-05-01 10:00:00.0 +00:00:00" },
       ],
     },
     {
@@ -260,46 +260,61 @@ describe("findInactiveMembers", () => {
     },
   ];
 
+  // bob  misses rounds 2-3: 2025-05-01 → 2025-07-01 = 2 months  (below 3-month threshold)
+  // carol misses rounds 1-3: 2025-01-01 → 2025-07-01 = 6 months (above 3-month threshold)
+
   let voteDetails;
+  let voteDates;
   beforeEach(() => {
     voteDetails = buildVoteDetails(members, rounds);
+    voteDates = new Map(rounds.map((r) => [`${r.issueTitle}$$${r.issueNumber}`, r.voteClosedAt]));
   });
 
-  it("flags members who have voted before but missed all of the last N rounds", () => {
-    // carol voted in round 0 then went silent — genuinely inactive
-    const inactive = findInactiveMembers(voteDetails, 3);
+  it("flags members who have voted before but missed consecutive votes spanning 3+ months", () => {
+    // carol voted in round 0 then went silent — 3 consecutive misses spanning 6 months
+    const inactive = findInactiveMembers(voteDetails, voteDates, 3);
     expect(inactive.map((m) => m.name)).toContain("carol");
   });
 
-  it("does not flag members who participated in at least one of the last N rounds", () => {
-    const inactive = findInactiveMembers(voteDetails, 3);
+  it("attaches _inactivityReason to each flagged member", () => {
+    const inactive = findInactiveMembers(voteDetails, voteDates, 3);
+    const carol = inactive.find((m) => m.name === "carol");
+    expect(carol._inactivityReason).toContain("3 consecutive missed vote(s)");
+    expect(carol._inactivityReason).toContain("Last participated: 2024-10-01");
+    expect(carol._inactivityReason).toContain("Round 1");
+  });
+
+  it("does not flag members whose consecutive misses span less than 3 months", () => {
+    // bob missed rounds 2+3 (2025-05-01 → 2025-07-01 = 2 months) — below the 3-month threshold
+    const inactive = findInactiveMembers(voteDetails, voteDates, 3);
     const names = inactive.map((m) => m.name);
     expect(names).not.toContain("alice");
-    expect(names).not.toContain("bob"); // voted in rounds 0+1, missed rounds 2+3 — only 2 misses, not 3
+    expect(names).not.toContain("bob");
   });
 
   it("does not flag members who have never voted (potential new TSC members)", () => {
     const membersWithNew = [...members, { github: "dave" }];
     const details = buildVoteDetails(membersWithNew, rounds);
-    const inactive = findInactiveMembers(details, 3);
+    const inactive = findInactiveMembers(details, voteDates, 2);
     expect(inactive.map((m) => m.name)).not.toContain("dave");
   });
 
   it("returns an empty array when fewer rounds exist than the threshold", () => {
     const only2Rounds = buildVoteDetails(members, rounds.slice(0, 2));
-    expect(findInactiveMembers(only2Rounds, 3)).toEqual([]);
+    const only2Dates = new Map(rounds.slice(0, 2).map((r) => [`${r.issueTitle}$$${r.issueNumber}`, r.voteClosedAt]));
+    expect(findInactiveMembers(only2Rounds, only2Dates, 3)).toEqual([]);
   });
 
   it("returns an empty array when voteDetails is empty", () => {
-    expect(findInactiveMembers([], 3)).toEqual([]);
+    expect(findInactiveMembers([], new Map(), 3)).toEqual([]);
   });
 
-  it("respects a custom lastNRounds threshold", () => {
-    // With threshold=2, bob (voted in rounds 0+1, missed rounds 2+3) should be flagged
-    // carol (voted in round 0, missed rounds 1+2+3) should also be flagged
-    const inactive = findInactiveMembers(voteDetails, 2);
+  it("enforces the 3-month span check even when the consecutive-miss count meets the threshold", () => {
+    // bob has 2 consecutive misses (rounds 2-3) spanning only 2 months — span too short
+    // carol has 3 consecutive misses spanning 6 months — flagged even at threshold=2
+    const inactive = findInactiveMembers(voteDetails, voteDates, 2);
     const names = inactive.map((m) => m.name);
-    expect(names).toContain("bob");
+    expect(names).not.toContain("bob");   // count ≥ threshold but span < 3 months
     expect(names).toContain("carol");
     expect(names).not.toContain("alice");
   });
@@ -331,8 +346,9 @@ describe("findInactiveMembers", () => {
         ],
       },
     ];
+    const activeDates = new Map(activeRounds.map((r) => [`${r.issueTitle}$$${r.issueNumber}`, r.voteClosedAt]));
     const details = buildVoteDetails(members, activeRounds);
-    expect(findInactiveMembers(details, 3)).toEqual([]);
+    expect(findInactiveMembers(details, activeDates, 3)).toEqual([]);
   });
 
   it("does not flag a member whose last-N rounds contain 'Not a member yet' entries", () => {
@@ -373,8 +389,9 @@ describe("findInactiveMembers", () => {
         ],
       },
     ];
+    const frankDates = new Map(frankRounds.map((r) => [`${r.issueTitle}$$${r.issueNumber}`, r.voteClosedAt]));
     const details = buildVoteDetails(membersWithFrank, frankRounds);
-    const inactive = findInactiveMembers(details, 3);
+    const inactive = findInactiveMembers(details, frankDates, 3);
     expect(inactive.map((m) => m.name)).not.toContain("frank");
   });
 });
