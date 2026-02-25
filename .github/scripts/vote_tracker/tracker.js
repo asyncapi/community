@@ -1,6 +1,6 @@
 const { isVotingWithinLastThreeMonths } = require("./utils");
 
-const NEVER_VOTED_PLACEHOLDER = "Member has not participated in all previous voting process.";
+const NEVER_VOTED_PLACEHOLDER = "Member has not participated in all previous voting processes.";
 const NOT_A_MEMBER_YET = "Not a member yet";
 
 /**
