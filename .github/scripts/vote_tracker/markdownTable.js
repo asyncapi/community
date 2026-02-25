@@ -86,7 +86,7 @@ function generateMarkdownHeader(keys, titles, orgName, repoName) {
  * // Returns:
  * // "| [user1](https://github.com/user1) | <span style=\"position: relative; cursor: pointer;\" title=\"In favor\">👍</span> |"
  */
-function generateMarkdownRows(data, keys) {
+function generateMarkdownRows(data, keys, voteKeys = null) {
   if (!data || data.length === 0) {
     console.error("No data provided to generateMarkdownRows.");
     return "";
@@ -101,7 +101,7 @@ function generateMarkdownRows(data, keys) {
       if (key === "name") {
         return `[${row[key]}](https://github.com/${row[key]})`;
       }
-      if (key.includes("$$")) {
+      if (voteKeys ? voteKeys.has(key) : key.includes("$$")) {
         return renderVoteIcon(row[key]);
       }
       return row[key];
@@ -190,7 +190,37 @@ async function jsonToMarkdownTable(data, orgName, repoName) {
   // * Filtering it ensures that `normalizeTableData` only processes relevant keys, maintaining a consistent table structure and avoiding unnecessary columns.
 
   const keys = Object.keys(data[0]).filter(k => k !== "firstVoteClosedTime");
-  const normalizedData = normalizeTableData(data, keys);
+
+  // Build a numbered legend for vote columns (keys containing "$$")
+  const voteKeyList = keys.filter(k => k.includes("$$"));
+  const keyRemap = {};
+  const legendRows = [];
+  voteKeyList.forEach((k, i) => {
+    const label = `#${i + 1}`;
+    keyRemap[k] = label;
+    const [title, issueNumber] = k.split("$$");
+    legendRows.push({ label, title, issueNumber });
+  });
+
+  // Remap keys and data to use short labels
+  const remappedKeys = keys.map(k => keyRemap[k] || k);
+  const remappedData = data.map(row => {
+    const newRow = {};
+    Object.keys(row).forEach(k => {
+      newRow[keyRemap[k] || k] = row[k];
+    });
+    return newRow;
+  });
+  const voteKeySet = new Set(Object.values(keyRemap));
+
+  const normalizedData = normalizeTableData(remappedData, remappedKeys);
+
+  const legendTable = legendRows.length > 0
+    ? "## Vote index\n\n| # | Vote |\n| --- | --- |\n" +
+      legendRows.map(({ label, title, issueNumber }) =>
+        `| ${label} | [${title}](https://github.com/${orgName}/${repoName}/issues/${issueNumber}) |`
+      ).join("\n") + "\n\n"
+    : "";
 
   let markdown = `---
 title: TSC Voting Overview
@@ -214,10 +244,10 @@ weight: 40
 **Inactivity removal rule ([AsyncAPI charter](https://github.com/asyncapi/community/blob/master/docs/020-governance-and-policies/CHARTER.md)):**
 A TSC member is automatically moved to emeritus only when they have missed **at least 2 consecutive votes whose close dates are 3 or more calendar months apart**. This means a member can show \`isVotedInLast3Months: false\` and still remain active — for example, if their recent missed votes all happened within a short window (less than 3 months between the first and last missed vote).
 
-`;
+${legendTable}`;
 
-  markdown += generateMarkdownHeader(keys, titles, orgName, repoName) + "\n";
-  markdown += generateMarkdownRows(normalizedData, keys);
+  markdown += generateMarkdownHeader(remappedKeys, titles, orgName, repoName) + "\n";
+  markdown += generateMarkdownRows(normalizedData, remappedKeys, voteKeySet);
 
   return markdown;
 }
