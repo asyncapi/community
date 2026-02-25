@@ -44,6 +44,7 @@ function buildVoteDetails(tscMembers, votingRounds) {
 
     let lastParticipatedVoteTime = null;
     let lastVoteClosedTime = null;
+    let firstEligibleVoteClosedTime = null;
     let agreeCount = 0;
     let disagreeCount = 0;
     let abstainCount = 0;
@@ -63,6 +64,11 @@ function buildVoteDetails(tscMembers, votingRounds) {
       if (member.tscMemberSince && voteClosedAt < member.tscMemberSince) {
         record[voteKey] = NOT_A_MEMBER_YET;
         continue;
+      }
+
+      // Track the close date of the first vote this member was eligible for.
+      if (!firstEligibleVoteClosedTime) {
+        firstEligibleVoteClosedTime = voteClosedAt;
       }
 
       const userVote = votes.find((v) => v.user.toLowerCase() === lowerName);
@@ -85,6 +91,7 @@ function buildVoteDetails(tscMembers, votingRounds) {
       : NEVER_VOTED_PLACEHOLDER;
     record.lastVoteClosedTime = lastVoteClosedTime;
     record.firstVoteClosedTime = firstVoteClosedTime;
+    record.firstEligibleVoteClosedTime = firstEligibleVoteClosedTime;
     record.agreeCount = agreeCount;
     record.disagreeCount = disagreeCount;
     record.abstainCount = abstainCount;
@@ -125,9 +132,27 @@ function findInactiveMembers(voteDetails, voteDates, lastNRounds = 2) {
   const inactive = [];
 
   for (const member of voteDetails) {
-    // Skip members who have never voted — they may be newly added to TSC
-    // and haven't had the opportunity to participate yet.
-    if (member.lastParticipatedVoteTime === NEVER_VOTED_PLACEHOLDER) continue;
+    // Members who have never cast any vote are handled separately: flag them only
+    // once 3+ months have elapsed since their first eligible vote, giving new
+    // members a grace period before automatic removal kicks in.
+    if (member.lastParticipatedVoteTime === NEVER_VOTED_PLACEHOLDER) {
+      if (!member.firstEligibleVoteClosedTime || !member.lastVoteClosedTime) continue;
+
+      const firstEligible = new Date(member.firstEligibleVoteClosedTime);
+      const lastClosed = new Date(member.lastVoteClosedTime);
+      const threeMonthsAfterFirstEligible = new Date(firstEligible);
+      threeMonthsAfterFirstEligible.setMonth(threeMonthsAfterFirstEligible.getMonth() + 3);
+
+      if (lastClosed < threeMonthsAfterFirstEligible) continue;
+
+      const spanMs = lastClosed - firstEligible;
+      const spanMonths = (spanMs / (1000 * 60 * 60 * 24 * 30.44)).toFixed(1);
+      const _inactivityReason =
+        `Never voted — first became eligible on ${member.firstEligibleVoteClosedTime} ` +
+        `but has not cast any vote across ${spanMonths} months`;
+      inactive.push({ ...member, _inactivityReason });
+      continue;
+    }
 
     // Collect trailing consecutive "Not participated" entries (oldest first)
     const trailingMisses = [];

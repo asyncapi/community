@@ -189,7 +189,7 @@ async function jsonToMarkdownTable(data, orgName, repoName) {
   // * Including it would clutter the table with information that does not contribute to the reader’s understanding of voting outcomes or participation.
   // * Filtering it ensures that `normalizeTableData` only processes relevant keys, maintaining a consistent table structure and avoiding unnecessary columns.
 
-  const keys = Object.keys(data[0]).filter(k => k !== "firstVoteClosedTime");
+  const keys = Object.keys(data[0]).filter(k => k !== "firstVoteClosedTime" && k !== "firstEligibleVoteClosedTime");
 
   // Build a numbered legend for vote columns (keys containing "$$")
   const voteKeyList = keys.filter(k => k.includes("$$"));

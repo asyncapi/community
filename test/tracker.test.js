@@ -111,6 +111,13 @@ describe("buildVoteDetails", () => {
     });
   });
 
+  it("sets firstEligibleVoteClosedTime to the close date of the first vote the member was eligible for", () => {
+    // all three members in TSC_MEMBERS have no tscMemberSince, so eligible from round 1
+    result.forEach((r) => {
+      expect(r.firstEligibleVoteClosedTime).toBe("2025-06-01");
+    });
+  });
+
   it("uses the never-voted placeholder string for members who missed all rounds", () => {
     const neverVoted = buildVoteDetails([{ github: "ghost" }], VOTING_ROUNDS);
     const ghost = neverVoted[0];
@@ -219,6 +226,17 @@ describe("buildVoteDetails – tscMemberSince guard", () => {
     expect(alice["Early Vote$$100"]).toBe("In favor");
     expect(alice["Later Vote$$200"]).toBe("Against");
   });
+
+  it("sets firstEligibleVoteClosedTime to the first post-membership round's close date", () => {
+    const bob = result.find((r) => r.name === "bob");
+    // bob joined 2025-07-01, so "Early Vote" (2025-06-01) is pre-membership
+    // first eligible round is "Later Vote" (2025-09-01)
+    expect(bob.firstEligibleVoteClosedTime).toBe("2025-09-01");
+
+    const alice = result.find((r) => r.name === "alice");
+    // alice has no tscMemberSince, so eligible from the very first round
+    expect(alice.firstEligibleVoteClosedTime).toBe("2025-06-01");
+  });
 });
 
 // ---------------------------------------------------------------------------
@@ -292,11 +310,24 @@ describe("findInactiveMembers", () => {
     expect(names).not.toContain("bob");
   });
 
-  it("does not flag members who have never voted (potential new TSC members)", () => {
-    const membersWithNew = [...members, { github: "dave" }];
-    const details = buildVoteDetails(membersWithNew, rounds);
+  it("does not flag a never-voted member whose first eligible vote is less than 3 months before the last vote", () => {
+    // eve joined just before round 3 (2025-07-01) — her first eligible vote is round 3,
+    // which is also the last vote, so 0 months have elapsed → grace period still active
+    const membersWithEve = [...members, { github: "eve", tscMemberSince: "2025-06-15" }];
+    const details = buildVoteDetails(membersWithEve, rounds);
     const inactive = findInactiveMembers(details, voteDates, 2);
-    expect(inactive.map((m) => m.name)).not.toContain("dave");
+    expect(inactive.map((m) => m.name)).not.toContain("eve");
+  });
+
+  it("flags a never-voted member whose first eligible vote is 3+ months before the last vote", () => {
+    // dave has no tscMemberSince — eligible from round 0 (2024-10-01).
+    // last vote closes 2025-07-01 = 9 months later → should be flagged
+    const membersWithDave = [...members, { github: "dave" }];
+    const details = buildVoteDetails(membersWithDave, rounds);
+    const inactive = findInactiveMembers(details, voteDates, 2);
+    const dave = inactive.find((m) => m.name === "dave");
+    expect(dave).toBeDefined();
+    expect(dave._inactivityReason).toContain("Never voted");
   });
 
   it("returns an empty array when fewer rounds exist than the threshold", () => {
