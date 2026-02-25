@@ -61,6 +61,7 @@ async function fetchVoteClosedComment(github, owner, repo, issueNumber) {
 
     // Collect all matching comments on this page; keep the last one
     for (const comment of response.data) {
+      if (!comment.body) continue;
       if (
         comment.body.includes("Vote closed") &&
         comment.body.includes("Binding votes")
