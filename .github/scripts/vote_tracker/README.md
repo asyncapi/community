@@ -6,7 +6,7 @@ it fetches all GitHub issues and PRs labelled `gitvote/closed`, parses each one'
 comment, and rebuilds the tracking table from scratch using only the current TSC members.
 
 Members who are no longer in TSC are automatically excluded from the table.
-Members inactive in the last 3 consecutive voting rounds are moved to emeritus automatically.
+Members who have not voted within any span of 3 or more calendar months are moved to emeritus automatically. By default (`tracker.js` sets `lastNRounds = 2` and `index.js` calls `findInactiveMembers` without parameters), the check requires at least 2 consecutive missed votes whose close dates are 3 or more calendar months apart.
 
 ## How it runs in production
 
