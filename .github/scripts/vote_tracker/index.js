@@ -123,5 +123,6 @@ module.exports = async ({ github, context, orgName: orgOverride, repoName: repoO
     console.log("===============================================\n");
   } catch (error) {
     console.error("Error while running the vote_tracker workflow:", error);
+    throw error;
   }
 };
