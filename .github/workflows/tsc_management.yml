@@ -250,13 +250,21 @@ jobs:
           git checkout -b update-emeritus-${{ github.run_id }}
 
       - name: Commit and push
+        id: commit_and_push
         run: |
-          git add .
-          git commit -m "Update Emeritus.yaml"
-          git remote set-url origin https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/asyncapi/community.git
-          git push origin update-emeritus-${{ github.run_id }}
+          git add Emeritus.yaml
+          if ! git diff --cached --quiet; then
+            git commit -m "Update Emeritus.yaml"
+            git remote set-url origin https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/asyncapi/community.git
+            git push origin update-emeritus-${{ github.run_id }}
+            echo "pushed=true" >> $GITHUB_OUTPUT
+          else
+            echo "No updates to Emeritus.yaml; skipping commit/push."
+            echo "pushed=false" >> $GITHUB_OUTPUT
+          fi
 
       - name: Create PR
+        if: steps.commit_and_push.outputs.pushed == 'true'
         run: |
           gh pr create --title "docs(community): update latest emeritus list" --body "Updated Emeritus list is available and this PR introduces changes with latest information about Emeritus" --head update-emeritus-${{ github.run_id }}
 

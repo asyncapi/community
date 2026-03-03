@@ -81,6 +81,14 @@
           true,
           false
         ]
+      },
+      "tscMemberSince": {
+        "type": "string",
+        "format": "date",
+        "description": "The date when the maintainer joined the technical steering committee, in YYYY-MM-DD format",
+        "examples": [
+          "2023-07-13"
+        ]
       }
     },
     "required": [

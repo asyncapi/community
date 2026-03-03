@@ -1,295 +1,128 @@
-const yaml = require("js-yaml");
-const { readFile, writeFile } = require("fs").promises;
 const path = require("path");
-const { isVotingWithinLastThreeMonths } = require("./utils");
-const jsonToMarkdownTable = require("./markdownTable.js");
-module.exports = async ({ github, context, botCommentURL }) => {
+const { fetchClosedVoteIssues, fetchVoteClosedComment } = require("./github");
+const { parseVoteClosedComment, parseLatestVotes } = require("./parser");
+const { buildVoteDetails, findInactiveMembers } = require("./tracker");
+const {
+  loadYaml,
+  writeVoteTrackingFile,
+  writeMarkdownFile,
+  setIsTscMemberFalse,
+  addToEmeritus,
+} = require("./files");
+const { jsonToMarkdownTable } = require("./markdownTable");
+
+const VOTE_TRACKING_FILE = path.join("voteTrackingFile.json");
+const TSC_BOARD_MEMBERS_FILE = "TSC_BOARD_MEMBERS.yaml";
+const MAINTAINERS_FILE = "MAINTAINERS.yaml";
+const EMERITUS_FILE = "Emeritus.yaml";
+const MARKDOWN_OUTPUT_FILE = "docs/020-governance-and-policies/TSC_VOTING_OVERVIEW.md";
+
+/**
+ * Full-refresh vote tracker.
+ *
+ * Fetches every issue/PR labelled "gitvote/closed", parses the "Vote closed"
+ * comment on each one, then rebuilds the voteTrackingFile.json and
+ * TSC_VOTING_OVERVIEW.md from scratch using only the current TSC members.
+ *
+ * Members inactive for the last 3 consecutive voting rounds are automatically
+ * moved to emeritus: isTscMember is set to false in both MAINTAINERS.yaml and
+ * TSC_BOARD_MEMBERS.yaml, and their github handle is appended to Emeritus.yaml.
+ *
+ * Called from the vote-tracker GitHub Actions workflow with:
+ *   await script({ github, context });
+ *
+ * Called locally via run-local.js with:
+ *   await script({ github, orgName, repoName });
+ */
+module.exports = async ({ github, context, orgName: orgOverride, repoName: repoOverride }) => {
   try {
-    let message, eventNumber, eventTitle, orgName, repoName;
-    if (botCommentURL) {
-      const voteCommentContext = await fetchCommentInformation();
-      message = voteCommentContext.messageBody;
-      eventNumber = voteCommentContext.eventNumber;
-      eventTitle = voteCommentContext.eventTitle;
-      orgName = voteCommentContext.orgName;
-      repoName = voteCommentContext.repoName;
-    } else {
-      // Extract necessary details from the context when triggered by issue_comment
-      message = context.payload.comment.body;
-      eventNumber = context.issue.number;
-      eventTitle = context.payload.issue.title;
-      orgName = context.repo.owner;
-      repoName = context.repo.repo;
-    }
+    const orgName = orgOverride || context.repo.owner;
+    const repoName = repoOverride || context.repo.repo;
 
-    // Path to the vote tracking file
-    const voteTrackingFile = path.join("voteTrackingFile.json");
+    // 1. Load current TSC membership
+    const tscBoardMembersInformation = await loadYaml(TSC_BOARD_MEMBERS_FILE);
+    const tscMembers = tscBoardMembersInformation.filter((e) => e.isTscMember);
+    console.log(`Found ${tscMembers.length} current TSC members`);
 
-    // Parse the vote-closed comment created by git-vote[bot]
-    const votingRows = await parseVoteClosedComment();
+    // 2. Fetch all issues/PRs that had a completed vote
+    const closedVoteIssues = await fetchClosedVoteIssues(github, orgName, repoName);
+    console.log(`Found ${closedVoteIssues.length} issues/PRs with label gitvote/closed`);
 
-    // Example table vote comment that is parsed here https://github.com/asyncapi/community/issues/1227#issuecomment-2167463252
-    const latestVotes = votingRows.map((row) => {
-      //skipping first element as parsing is based on split, so table where column starts with | will have first element of created array empty
-      const [, user, vote, timestamp] = row.split("|").map((col) => col.trim());
-      return {
-        user: user.replace("@", ""),
-        vote,
-        timestamp,
-        isVotedInLast3Months: true,
-      };
-    });
-
-    console.log(
-      "content of latestVotes:",
-      JSON.stringify(latestVotes, null, 2)
-    );
-
-    let tscBoardMembersInformation;
-    try {
-      const tscBoardMembersInfo = await readFile("TSC_BOARD_MEMBERS.yaml", "utf8");
-      tscBoardMembersInformation = yaml.load(tscBoardMembersInfo);
-    } catch (readError) {
-      console.error("Error reading TSC_BOARD_MEMBERS.yaml:", readError);
-      throw readError;
-    }
-
-    // Update the TSC Members
-    const voteDetails = await updateVoteTrackingFile();
-    console.log(
-      "content of voteDetails:",
-      JSON.stringify(voteDetails, null, 2)
-    );
-
-    const updatedVoteDetails = [];
-
-    // Process each vote detail to update voting information
-    voteDetails.forEach((voteInfo) => {
-      const userVote = latestVotes.find(
-        (vote) => vote.user.toLowerCase() === voteInfo.name.toLowerCase()
-      );
-
-      console.log("content of userVote:", JSON.stringify(userVote, null, 2));
-
-      let currentTime;
-      if (userVote && userVote.timestamp) {
-        currentTime = userVote.timestamp.toString().split(" ")[0];
-      }
-      const userInfo = latestVotes.find(
-        (vote) => vote.user.toLowerCase() === voteInfo.name.toLowerCase()
-      );
-
-      console.log("content of userInfo:", JSON.stringify(userInfo, null, 2));
-
-      const voteChoice = userInfo ? userInfo.vote : "Not participated";
-
-      console.log(
-        "content of voteChoice:",
-        JSON.stringify(voteChoice, null, 2)
-      );
-
-      voteInfo.lastVoteClosedTime = new Date().toISOString().split("T")[0];
-
-      console.log("content of voteInfo:", JSON.stringify(voteInfo, null, 2));
-
-      if (userInfo) {
-        voteInfo.isVotedInLast3Months = isVotingWithinLastThreeMonths(voteInfo);
-        voteInfo.lastParticipatedVoteTime = currentTime;
-        voteInfo[
-          voteChoice === "In favor"
-            ? "agreeCount"
-            : voteChoice === "Against"
-              ? "disagreeCount"
-              : "abstainCount"
-        ]++;
-      } else {
-        voteInfo.notParticipatingCount++;
-        if (!isVotingWithinLastThreeMonths(voteInfo)) {
-          voteInfo.isVotedInLast3Months = false;
-        }
+    // 3. For each issue, find its "Vote closed" comment and parse the binding votes
+    const votingRounds = [];
+    for (const issue of closedVoteIssues) {
+      const comment = await fetchVoteClosedComment(github, orgName, repoName, issue.number);
+      if (!comment) {
+        console.log(`No "Vote closed" comment found for issue #${issue.number} — skipping`);
+        continue;
       }
 
-      // Update vote information with the issue title and number
-      let updatedVoteInfo = {};
-      Object.keys(voteInfo).forEach((key) => {
-        if (key === "name") {
-          updatedVoteInfo["name"] = voteInfo.name;
-          updatedVoteInfo[eventTitle + "$$" + eventNumber] = voteChoice;
-        } else {
-          updatedVoteInfo[key] = voteInfo[key];
-        }
+      const votingRows = parseVoteClosedComment(comment.body);
+      const votes = parseLatestVotes(votingRows);
+      votingRounds.push({
+        issueNumber: issue.number,
+        issueTitle: issue.title,
+        voteClosedAt: comment.createdAt.split("T")[0],
+        votes,
       });
-      updatedVoteDetails.push(updatedVoteInfo);
-    });
-
-    try {
-      await writeFile(
-        voteTrackingFile,
-        JSON.stringify(updatedVoteDetails, null, 2)
-      );
-    } catch (writeError) {
-      console.error("Error writing to voteTrackingFile.json:", writeError);
-      throw writeError;
+      console.log(`Parsed ${votes.length} votes for issue #${issue.number}: ${issue.title}`);
     }
 
-    const markdownTable = await jsonToMarkdownTable(updatedVoteDetails, orgName, repoName);
-    try {
-      await writeFile("docs/020-governance-and-policies/TSC_VOTING_OVERVIEW.md", markdownTable);
-      console.log("Markdown table has been written to docs/020-governance-and-policies/TSC_VOTING_OVERVIEW.md");
-    } catch (writeError) {
-      console.error("Error writing to TSC_VOTING_OVERVIEW.md:", writeError);
-      throw writeError;
-    }
+    // Sort oldest-first so table columns appear in chronological order
+    votingRounds.sort((a, b) => a.voteClosedAt.localeCompare(b.voteClosedAt));
 
+    // Build a lookup map from voteKey ("Title$$N") → close date, needed by findInactiveMembers
+    const voteDates = new Map(
+      votingRounds.map((r) => [`${r.issueTitle}$$${r.issueNumber}`, r.voteClosedAt])
+    );
 
-    // Parse the vote-closed comment created by git-vote[bot]
-    // No need to look for "Vote closed" as this is already validated by the workflow that runs this code
-    async function parseVoteClosedComment() {
-      const bindingVotesSectionMatch = message.match(
-        /Binding votes \(\d+\)[\s\S]*?(?=(<details>|$))/
-      );
-      const bindingVotesSection = bindingVotesSectionMatch
-        ? bindingVotesSectionMatch[0]
-        : "";
-      return bindingVotesSection.match(/\| @\w+.*?\|.*?\|.*?\|/g) || [];
-    }
+    // 4. Build fresh vote details for current TSC members only
+    let voteDetails = buildVoteDetails(tscMembers, votingRounds);
 
-    // Function to update the voteTrackingFile with updated TSC Members
-    async function updateVoteTrackingFile() {
-      const tscMembers = tscBoardMembersInformation.filter(
-        (entry) => entry.isTscMember
-      );
-      let voteDetails = [];
-      try {
-        voteDetails = JSON.parse(await readFile(voteTrackingFile, "utf8"));
-      } catch (readError) {
-        console.error("Error reading voteTrackingFile.json:", readError);
-        throw readError;
-      }
-      let updatedVoteDetails = [...voteDetails];
-      const updatedTSCMembers = [];
-      const requiredKeys = [
-        "name",
-        "lastParticipatedVoteTime",
-        "isVotedInLast3Months",
-        "lastVoteClosedTime",
-        "agreeCount",
-        "disagreeCount",
-        "abstainCount",
-        "notParticipatingCount",
-      ];
-      // Function to check if an object has all required keys
-      const isValidExampleMember = (member) => {
-        return requiredKeys.every((key) => member.hasOwnProperty(key));
-      };
-      // Find the first valid example member
-      const validExampleMember = voteDetails.find(isValidExampleMember);
-
-      if (validExampleMember) {
-        tscMembers.forEach((member) => {
-          const existingMember = voteDetails.find(
-            (voteInfo) =>
-              voteInfo.name.toLowerCase() === member.github.toLowerCase()
-          );
-          if (!existingMember) {
-            // Create a new member by copying the structure of the valid example member
-            const newMember = {};
-
-            // Copy the keys from the valid example member to the new member with default values
-            Object.keys(validExampleMember).forEach((key) => {
-              switch (key) {
-                case "name":
-                  newMember[key] = member.github;
-                  break;
-                case "lastParticipatedVoteTime":
-                  newMember[key] =
-                    "Member has not participated in all previous voting process.";
-                  break;
-                case "isVotedInLast3Months":
-                  newMember[key] =
-                    "Member has not participated in all previous voting process.";
-                  break;
-                case "lastVoteClosedTime":
-                  newMember[key] = new Date().toISOString().split("T")[0];
-                  break;
-                case "firstVoteClosedTime":
-                  newMember[key] = validExampleMember["firstVoteClosedTime"]; // This is used to determine when the first vote closed so that we can determine the duration between two votes easily
-                  break;
-                case "agreeCount":
-                case "disagreeCount":
-                case "abstainCount":
-                case "notParticipatingCount":
-                  newMember[key] = 0;
-                  break;
-                default:
-                  newMember[key] = "Not participated";
-              }
-            });
-
-            updatedTSCMembers.push(newMember);
-          }
-        });
-      } else {
-        console.log("No valid example member found in voteDetails.");
+    // 5. Detect members inactive per the charter rule (no participation in any 3-month period)
+    //    and move them to emeritus
+    const inactiveMembers = findInactiveMembers(voteDetails, voteDates);
+    if (inactiveMembers.length > 0) {
+      const handles = inactiveMembers.map((m) => m.name);
+      console.log(`Moving ${inactiveMembers.length} TSC member(s) to emeritus due to inactivity:`);
+      for (const member of inactiveMembers) {
+        console.log(`  → ${member.name}: ${member._inactivityReason}`);
       }
 
-      if (updatedTSCMembers.length > 0) {
-        try {
-          updatedVoteDetails = updatedVoteDetails.concat(...updatedTSCMembers);
-          await writeFile(
-            voteTrackingFile,
-            JSON.stringify(updatedVoteDetails, null, 2)
-          );
-        } catch (writeError) {
-          console.error("Error wile writing file:", writeError);
-        }
-      }
-      return updatedVoteDetails;
+      // Set isTscMember: false in both source-of-truth and the generated file
+      await setIsTscMemberFalse(MAINTAINERS_FILE, handles);
+      await setIsTscMemberFalse(TSC_BOARD_MEMBERS_FILE, handles);
+      await addToEmeritus(EMERITUS_FILE, handles);
+
+      // Exclude them from the tracking table going forward
+      const inactiveSet = new Set(handles.map((h) => h.toLowerCase()));
+      voteDetails = voteDetails.filter((v) => !inactiveSet.has(v.name.toLowerCase()));
     }
-    // Method to fetch information from the comment when workflow triggered manually
-    async function fetchCommentInformation() {
-      const urlParts = botCommentURL.split("/");
-      const eventNumber = urlParts[urlParts.length - 1].split("#")[0];
-      const commentId = urlParts[urlParts.length - 1]
-        .split("#")[1]
-        .replace("issuecomment-", "");
-      const [owner, repo] = urlParts.slice(3, 5);
-      let orgName = owner;
-      let repoName = repo;
-      let messageBody = "";
-      let eventTitle = "";
 
-      try {
-        const messageResponse = await github.request(
-          "GET /repos/{owner}/{repo}/issues/comments/{comment_id}",
-          {
-            owner: owner,
-            repo: repo,
-            comment_id: commentId,
-          }
-        );
-        messageBody = messageResponse.data.body;
+    // 6. Sort rows alphabetically by member name before writing output
+    voteDetails.sort((a, b) => a.name.localeCompare(b.name, undefined, { sensitivity: "base" }));
 
-        const issueResponse = await github.rest.issues.get({
-          owner,
-          repo,
-          issue_number: eventNumber,
-        });
-        eventTitle = issueResponse.data.title;
-      } catch (error) {
-        console.error(error);
+    // 7. Write updated vote tracking file and markdown table
+    await writeVoteTrackingFile(VOTE_TRACKING_FILE, voteDetails);
+
+    const markdownTable = await jsonToMarkdownTable(voteDetails, orgName, repoName);
+    await writeMarkdownFile(MARKDOWN_OUTPUT_FILE, markdownTable);
+    console.log("Markdown table has been written to", MARKDOWN_OUTPUT_FILE);
+
+    // 8. Print a final summary so the outcome is easy to spot at the end of the log
+    console.log("\n========== VOTE TRACKER RUN SUMMARY ==========");
+    if (inactiveMembers.length === 0) {
+      console.log("No TSC members moved to emeritus this run.");
+    } else {
+      console.log(`${inactiveMembers.length} TSC member(s) moved to emeritus:`);
+      for (const member of inactiveMembers) {
+        console.log(`\n  Member : ${member.name}`);
+        console.log(`  Reason : ${member._inactivityReason}`);
       }
-
-      return {
-        orgName,
-        repoName,
-        eventNumber,
-        commentId,
-        messageBody,
-        eventTitle,
-      };
     }
+    console.log("===============================================\n");
   } catch (error) {
     console.error("Error while running the vote_tracker workflow:", error);
+    throw error;
   }
 };
