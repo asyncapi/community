@@ -7,9 +7,9 @@ The document defines the process for appointing, evaluating, and renewing indivi
 
 The goal of this policy is to ensure transparency, accountability, and measurable impact from funded roles within the project. 
 
-** Volunteer roles and maintainership are not governed by this policy.
+> Volunteer roles and maintainership are not governed by this policy.
 
-##  Appointment
+## Appointment
 Paid initiative or program lead roles may be created when the Governance Board identifies a need for dedicated leadership to achieve specific strategic objectives.
 
 Each role must have:
@@ -96,10 +96,9 @@ Appointments are **not automatically renewed**. Following the annual evaluation,
 - Conclude the engagement
 
 The decision should be documented and communicated transparently.
-​
+
 ## Conflict of Interest
 Members involved in the selection or renewal process must disclose any conflicts of interest and recuse themselves when appropriate.
 
 ## Amendments
 This policy may be amended by the Governance Board as the project's needs evolve.
-
