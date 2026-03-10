@@ -1,9 +1,10 @@
 ---
-title: Program and Initiative Lead Policy
+title: Program Lead Policy
 weight: 26
 ---
 
-The document defines the process for appointing, evaluating, and renewing individuals who are compensated to lead specific initiatives or programs at AsyncAPI.
+The document defines the process for appointing, evaluating, and renewing individuals who are compensated to lead a specific initiative or program at AsyncAPI.
+
 The goal of this policy is to ensure transparency, accountability, and measurable impact from funded roles within the project. 
 
 ** Volunteer roles and maintainership are not governed by this policy.
