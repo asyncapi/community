@@ -11,7 +11,7 @@ jobs:
   upload_episode:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Create episode.json file
         run: |
           # Get the video ID from the workflow_dispatch input.
@@ -25,11 +25,11 @@ jobs:
 
           # Verify the content was written successfully
           cat episode.json
-      - name: Upload Episode from YouTube To Anchor.Fm
-        uses: Schrodinger-Hat/youtube-to-anchorfm@b02b82f809d24db88472a78c51ffa627f46a6dc3 #commit related to https://github.com/Schrodinger-Hat/youtube-to-anchorfm/commit/b02b82f809d24db88472a78c51ffa627f46a6dc3 || The latest commit which refers to v2.4.0 of the action
+      - name: Upload Episode from YouTube To Spotify for Podcasters
+        uses: Schroedinger-Hat/youtube-to-spotify@97346df423b2c37e6334b5cae17dbbe14434d8a9 # v2.6.0
         env:
-          ANCHOR_EMAIL: ${{ secrets.ANCHOR_EMAIL }}
-          ANCHOR_PASSWORD: ${{ secrets.ANCHOR_PASSWORD }}
+          SPOTIFY_EMAIL: ${{ secrets.ANCHOR_EMAIL }}
+          SPOTIFY_PASSWORD: ${{ secrets.ANCHOR_PASSWORD }}
           EPISODE_PATH: /github/workspace
           URL_IN_DESCRIPTION: true
           LOAD_THUMBNAIL: true
