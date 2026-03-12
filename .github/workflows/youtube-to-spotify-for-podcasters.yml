@@ -26,7 +26,7 @@ jobs:
           # Verify the content was written successfully
           cat episode.json
       - name: Upload Episode from YouTube To Spotify for Podcasters
-        uses: Schroedinger-Hat/youtube-to-spotify@v2.6.0 # updated from Schrodinger-Hat/youtube-to-anchorfm v2.4.0 to Schroedinger-Hat/youtube-to-spotify v2.6.0
+        uses: Schroedinger-Hat/youtube-to-spotify@97346df423b2c37e6334b5cae17dbbe14434d8a9 # v2.6.0
         env:
           SPOTIFY_EMAIL: ${{ secrets.ANCHOR_EMAIL }}
           SPOTIFY_PASSWORD: ${{ secrets.ANCHOR_PASSWORD }}
