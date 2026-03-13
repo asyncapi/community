@@ -11,7 +11,7 @@ jobs:
   upload_episode:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
       - name: Create episode.json file
         run: |
           # Get the video ID from the workflow_dispatch input.
@@ -26,7 +26,8 @@ jobs:
           # Verify the content was written successfully
           cat episode.json
       - name: Upload Episode from YouTube To Spotify for Podcasters
-        uses: Schroedinger-Hat/youtube-to-spotify@97346df423b2c37e6334b5cae17dbbe14434d8a9 # v2.6.0
+        # Pinned to v2.5.0 due to npm "Missing script: start" error in v2.6.0
+        uses: Schroedinger-Hat/youtube-to-spotify@601d281daadd2c210649aed350520a58cfad35eb # v2.5.0
         env:
           SPOTIFY_EMAIL: ${{ secrets.ANCHOR_EMAIL }}
           SPOTIFY_PASSWORD: ${{ secrets.ANCHOR_PASSWORD }}
