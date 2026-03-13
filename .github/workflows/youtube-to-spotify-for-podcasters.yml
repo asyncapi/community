@@ -26,6 +26,7 @@ jobs:
           # Verify the content was written successfully
           cat episode.json
       - name: Upload Episode from YouTube To Spotify for Podcasters
+        # Pinned to v2.5.0 due to npm "Missing script: start" error in v2.6.0
         uses: Schroedinger-Hat/youtube-to-spotify@601d281daadd2c210649aed350520a58cfad35eb # v2.5.0
         env:
           SPOTIFY_EMAIL: ${{ secrets.ANCHOR_EMAIL }}
