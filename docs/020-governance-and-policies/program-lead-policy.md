@@ -20,7 +20,7 @@ Each role must have:
 - Defined duration
 - Approved budget
 
-Tenures are typically for **twelve calendar months**.
+Tenures are typically for **twelve calendar months** from appointment date.
 
 ## Selection Process
 When a role is opened, the Governance Board must conduct a selection process that includes:
@@ -84,7 +84,7 @@ At the end of the Tenure, the lead must submit an **annual report** summarizing:
 - Recommendations for the future
 
 ## Review Process
-The Governance Board conducts a performance and objectives review every **first week of each sixth month**. Reviews assess:
+The Governance Board conducts a performance and objectives review **every six months in the first week.**. Reviews assess:
 
 - Completion of agreed objectives
 - Quality and consistency of reporting
