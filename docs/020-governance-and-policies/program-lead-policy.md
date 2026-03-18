@@ -3,9 +3,10 @@ title: Program Lead Policy
 weight: 26
 ---
 
-The document defines the process for appointing, evaluating, and renewing individuals who are compensated to lead a specific initiative or program at AsyncAPI.
+The document defines the process for appointing, evaluating, and renewing individuals whom we hire through Open Collective contracts or pay for a specific job to be done in one of our official programs at AsyncAPI. You can learn more [about them in the list of people and assets in the AsyncAPI doc](https://www.asyncapi.com/docs/community/020-governance-and-policies/initiative-inventory#amazing-humans).
 
-The goal of this policy is to ensure transparency, accountability, and measurable impact from funded roles within the project. 
+The goal of this policy is to ensure alignment, transparency, accountability, and measurable impact from funded roles within the project. 
+
 
 > Volunteer roles and maintainership are not governed by this policy.
 
@@ -19,7 +20,7 @@ Each role must have:
 - Defined duration
 - Approved budget
 
-Tenures are typically for **one year**, then reviewed for renewals after that.
+Tenures are typically for **twelve calendar months**.
 
 ## Selection Process
 When a role is opened, the Governance Board must conduct a selection process that includes:
@@ -29,18 +30,23 @@ When a role is opened, the Governance Board must conduct a selection process tha
 3. Evaluating candidates using predefined criteria.
 4. Selecting the candidate through the Governance Board's decision.
 
+### Eligibility
+- Priority is given to members of the AsyncAPI Technical Steering Committee (TSC) and Maintainers.
+- Individuals with unresolved Code of Conduct violations or conduct issues are not eligible.
+
+
 ### Evaluation Criteria
 Candidates may be evaluated using a scoring framework such as:
 
 | Criteria | Points |
 | :--- | :--- |
-| Member of the Technical Steering Committee | +10 |
-| Relevant experience performing similar work | +10 |
-| Contributions to AsyncAPI| +5 points per year |
-| Prior leadership or community involvement | +5 |
-| Conduct issues | Disqualifying |
+| Member of the Technical Steering Committee | 30% |
+| Relevant experience performing similar work | 20% |
+| Past contributions to AsyncAPI (code, documentation, community leadership)| 30% |
+| Prior leadership or community involvement (Experience leading teams, initiatives, or communities) | 10% |
+| Communication & collaboration ability (Ability to work with contributors and maintainers) | 10% |
 
-Individuals with unresolved Code of Conduct violations are not eligible.
+The final score is **out of 100**. Selection decisions should be guided by this weighted score alongside Governance Board discussion.
 
 ## Responsibilities
 Initiative and Program Leads are responsible for:
@@ -77,10 +83,8 @@ At the end of the Tenure, the lead must submit an **annual report** summarizing:
 - Lessons learned
 - Recommendations for the future
 
-## Evaluation
-The Governance Board conducts regular and annual performance evaluations prior to any renewal decision.
-
-Evaluation considers:
+## Review Process
+The Governance Board conducts a performance and objectives review every **first week of each sixth month**. Reviews assess:
 
 - Completion of agreed objectives
 - Quality and consistency of reporting
@@ -88,14 +92,18 @@ Evaluation considers:
 - Collaboration with maintainers and contributors
 - Alignment with project values, community goals, and conduct standards
 
-## Renewal
-Appointments are **not automatically renewed**. Following the annual evaluation, the Governance Board may decide to:
+The Governance Board is entitled to perform any additional reviews at any time.
+
+## Evaluation and Renewal
+Appointments are **not automatically renewed**. Renewal and appointment review begin **three months before the end of the tenure**. Final performance reviews and compensation adjustments are conducted **two to one month before the end of the tenure**.
+
+Following this, the Governance Board may decide to:
 
 - Renew the appointment for another term.
 - Renew with revised scope or expectations.
 - Conclude the engagement
 
-The decision should be documented and communicated transparently.
+All decisions must be documented and communicated transparently.
 
 ## Conflict of Interest
 Members involved in the selection or renewal process must disclose any conflicts of interest and recuse themselves when appropriate.
