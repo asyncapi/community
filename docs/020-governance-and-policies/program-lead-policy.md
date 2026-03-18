@@ -84,9 +84,9 @@ At the end of the Tenure, the lead must submit an **annual report** summarizing:
 - Recommendations for the future
 
 ## Review Process
-The Governance Board conducts a performance and objectives review **every six months in the first week.**. Reviews assess:
+The Governance Board conducts a performance and objectives review **in the first week of every six months**. Reviews assess:
 
-- Completion of agreed objectives
+- Progress of agreed objectives
 - Quality and consistency of reporting
 - Impact on the project or community
 - Collaboration with maintainers and contributors
