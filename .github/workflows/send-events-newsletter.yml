@@ -22,13 +22,14 @@ jobs:
       - name: Install deps
         run: npm install
         working-directory: ./.github/workflows/create-event-helpers
-      - name: Send email with MailChimp
-        uses: actions/github-script@v4
+      - name: Send email with Kit.com
+        uses: actions/github-script@v6
         env:
           CALENDAR_ID: ${{ secrets.CALENDAR_ID }}
           CALENDAR_SERVICE_ACCOUNT: ${{ secrets.CALENDAR_SERVICE_ACCOUNT }}
-          MAILCHIMP_API_KEY: ${{ secrets.MAILCHIMP_API_KEY }}
+          KIT_API_KEY: ${{ secrets.KIT_API_KEY }}
+          KIT_MEETINGS_TAG_ID: ${{ secrets.KIT_MEETINGS_TAG_ID }}
         with:
           script: |
-            const sendEmail = require('./.github/workflows/create-event-helpers/mailchimp/index.js');
+            const sendEmail = require('./.github/workflows/create-event-helpers/kit/index.js');
             sendEmail();
