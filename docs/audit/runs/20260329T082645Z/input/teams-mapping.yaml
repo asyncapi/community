@@ -1,0 +1,9 @@
+# Map GitHub team slugs (as in CODEOWNERS: @asyncapi/team-name) to member logins.
+# Update manually or extend the sync script later. Keys must match repo.teams[] entries.
+# Example:
+# teams:
+#   "asyncapi/code_of_conduct":
+#     members:
+#       - username1
+
+teams: {}

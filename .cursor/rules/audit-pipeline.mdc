@@ -1,0 +1,16 @@
+---
+description: AsyncAPI org repo audit — raw data, rules engine, run snapshots
+globs:
+  - docs/audit/**
+  - scripts/audit-*.mjs
+  - scripts/lib/parse-codeowners.mjs
+  - spec/audit/**
+---
+
+# Audit pipeline
+
+- **Global editable sources:** `docs/audit/raw-data.json`, `docs/audit/teams-mapping.yaml`, `docs/audit/rules/*.yaml`.
+- **Do not hand-edit** `docs/audit/runs/*/input/**` after a run; those are **frozen snapshots**. Change globals and re-run.
+- **Scripts:** `npm run audit:fetch`, `npm run audit:run` (optional `--max-repos N`).
+- **Outputs per run:** `runs/<id>/output/summary.md`, `emeritus-candidates.md`, `full-report.json`.
+- **Spec Kit:** see `spec/audit/constitution.md` and https://github.com/github/spec-kit

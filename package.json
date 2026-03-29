@@ -3,13 +3,15 @@
   "description": "Repository to access AsyncAPI community assets & configs",
   "scripts": {
     "test": "jest",
-    "generate:board": "node scripts/tsc-board-member.js"
+    "generate:board": "node scripts/tsc-board-member.js",
+    "audit:fetch": "node scripts/audit-fetch-raw.mjs",
+    "audit:run": "node scripts/audit-rule-engine.mjs"
   },
   "dependencies": {
-    "js-yaml": "^4.1.0"
+    "js-yaml": "^4.1.0",
+    "@octokit/rest": "^21.0.0"
   },
   "devDependencies": {
-    "@octokit/rest": "^21.0.0",
     "jest": "^29.7.0"
   }
 }

@@ -1,0 +1,276 @@
+{
+  "run_id": "20260329T082645Z",
+  "engine_version": "1.0.0",
+  "generated_at": "2026-03-29T08:26:45.702Z",
+  "window_months": 12,
+  "since_day": "2025-03-29",
+  "aggregation": {
+    "mode": "profile",
+    "profile": "balanced",
+    "k_of_n": {
+      "enabled": false,
+      "k": 2,
+      "n": 5
+    }
+  },
+  "repos": [
+    {
+      "full_name": "asyncapi/.github",
+      "html_url": "https://github.com/asyncapi/.github",
+      "default_branch": "master",
+      "pushed_at": "2026-03-10T13:27:57Z",
+      "maintainers": [
+        {
+          "login": "Florence-Njeri",
+          "role": "maintainer",
+          "overall_pass": true,
+          "aggregation_detail": "balanced: 3/3 rules passed",
+          "rule_results": [
+            {
+              "id": "commits_in_window",
+              "kind": "commit_activity",
+              "enabled": true,
+              "pass": true,
+              "reasoning": "Commit activity on or after 2025-03-29 (latest: 2025-12-08T16:54:26Z).",
+              "evidence": {
+                "sha": "10de35a177629f2aa594f89c3a1de682aa39304d",
+                "date": "2025-12-08T16:54:26Z"
+              }
+            },
+            {
+              "id": "merged_prs",
+              "kind": "merged_pr_author",
+              "enabled": true,
+              "pass": true,
+              "reasoning": "Found 1 merged PR(s) authored by @Florence-Njeri after 2025-03-29 (excluding bot policy is author-scoped).",
+              "evidence": {
+                "search_query": "repo:asyncapi/.github type:pr is:merged author:Florence-Njeri merged:>2025-03-29",
+                "total_count": 1
+              }
+            },
+            {
+              "id": "pr_reviews",
+              "kind": "pr_review",
+              "enabled": true,
+              "pass": true,
+              "reasoning": "Found 2 merged PR(s) with review by @Florence-Njeri after 2025-03-29.",
+              "evidence": {
+                "search_query": "repo:asyncapi/.github type:pr is:merged reviewed-by:Florence-Njeri merged:>2025-03-29",
+                "total_count": 2
+              }
+            }
+          ]
+        },
+        {
+          "login": "Shurtu-gal",
+          "role": "maintainer",
+          "overall_pass": true,
+          "aggregation_detail": "balanced: 3/3 rules passed",
+          "rule_results": [
+            {
+              "id": "commits_in_window",
+              "kind": "commit_activity",
+              "enabled": true,
+              "pass": true,
+              "reasoning": "Commit activity on or after 2025-03-29 (latest: 2025-12-04T16:28:50Z).",
+              "evidence": {
+                "sha": "932d8e2f9ee388bc8d2d8e315ebb000729a73df4",
+                "date": "2025-12-04T16:28:50Z"
+              }
+            },
+            {
+              "id": "merged_prs",
+              "kind": "merged_pr_author",
+              "enabled": true,
+              "pass": true,
+              "reasoning": "Found 4 merged PR(s) authored by @Shurtu-gal after 2025-03-29 (excluding bot policy is author-scoped).",
+              "evidence": {
+                "search_query": "repo:asyncapi/.github type:pr is:merged author:Shurtu-gal merged:>2025-03-29",
+                "total_count": 4
+              }
+            },
+            {
+              "id": "pr_reviews",
+              "kind": "pr_review",
+              "enabled": true,
+              "pass": true,
+              "reasoning": "Found 6 merged PR(s) with review by @Shurtu-gal after 2025-03-29.",
+              "evidence": {
+                "search_query": "repo:asyncapi/.github type:pr is:merged reviewed-by:Shurtu-gal merged:>2025-03-29",
+                "total_count": 6
+              }
+            }
+          ]
+        },
+        {
+          "login": "derberg",
+          "role": "maintainer",
+          "overall_pass": true,
+          "aggregation_detail": "balanced: 3/3 rules passed",
+          "rule_results": [
+            {
+              "id": "commits_in_window",
+              "kind": "commit_activity",
+              "enabled": true,
+              "pass": true,
+              "reasoning": "Commit activity on or after 2025-03-29 (latest: 2025-12-17T11:52:34Z).",
+              "evidence": {
+                "sha": "f74e69511a8632d20efb8f0bbde9bf120bbc52c2",
+                "date": "2025-12-17T11:52:34Z"
+              }
+            },
+            {
+              "id": "merged_prs",
+              "kind": "merged_pr_author",
+              "enabled": true,
+              "pass": true,
+              "reasoning": "Found 7 merged PR(s) authored by @derberg after 2025-03-29 (excluding bot policy is author-scoped).",
+              "evidence": {
+                "search_query": "repo:asyncapi/.github type:pr is:merged author:derberg merged:>2025-03-29",
+                "total_count": 7
+              }
+            },
+            {
+              "id": "pr_reviews",
+              "kind": "pr_review",
+              "enabled": true,
+              "pass": true,
+              "reasoning": "Found 16 merged PR(s) with review by @derberg after 2025-03-29.",
+              "evidence": {
+                "search_query": "repo:asyncapi/.github type:pr is:merged reviewed-by:derberg merged:>2025-03-29",
+                "total_count": 16
+              }
+            }
+          ]
+        }
+      ],
+      "triagers": []
+    },
+    {
+      "full_name": "asyncapi/asyncapi-react",
+      "html_url": "https://github.com/asyncapi/asyncapi-react",
+      "default_branch": "master",
+      "pushed_at": "2026-03-27T19:53:19Z",
+      "maintainers": [
+        {
+          "login": "AceTheCreator",
+          "role": "maintainer",
+          "overall_pass": true,
+          "aggregation_detail": "balanced: 3/3 rules passed",
+          "rule_results": [
+            {
+              "id": "commits_in_window",
+              "kind": "commit_activity",
+              "enabled": true,
+              "pass": true,
+              "reasoning": "Commit activity on or after 2025-03-29 (latest: 2026-02-11T18:33:10Z).",
+              "evidence": {
+                "sha": "374fb4ef370a1b347a61562220366ba3a49bd328",
+                "date": "2026-02-11T18:33:10Z"
+              }
+            },
+            {
+              "id": "merged_prs",
+              "kind": "merged_pr_author",
+              "enabled": true,
+              "pass": true,
+              "reasoning": "Found 7 merged PR(s) authored by @AceTheCreator after 2025-03-29 (excluding bot policy is author-scoped).",
+              "evidence": {
+                "search_query": "repo:asyncapi/asyncapi-react type:pr is:merged author:AceTheCreator merged:>2025-03-29",
+                "total_count": 7
+              }
+            },
+            {
+              "id": "pr_reviews",
+              "kind": "pr_review",
+              "enabled": true,
+              "pass": true,
+              "reasoning": "Found 6 merged PR(s) with review by @AceTheCreator after 2025-03-29.",
+              "evidence": {
+                "search_query": "repo:asyncapi/asyncapi-react type:pr is:merged reviewed-by:AceTheCreator merged:>2025-03-29",
+                "total_count": 6
+              }
+            }
+          ]
+        },
+        {
+          "login": "fmvilas",
+          "role": "maintainer",
+          "overall_pass": true,
+          "aggregation_detail": "balanced: 1/3 rules passed",
+          "rule_results": [
+            {
+              "id": "commits_in_window",
+              "kind": "commit_activity",
+              "enabled": true,
+              "pass": false,
+              "reasoning": "No commits authored by @fmvilas in asyncapi-react since 2025-03-29.",
+              "evidence": {}
+            },
+            {
+              "id": "merged_prs",
+              "kind": "merged_pr_author",
+              "enabled": true,
+              "pass": false,
+              "reasoning": "No merged PRs by @fmvilas in asyncapi/asyncapi-react after 2025-03-29.",
+              "evidence": {
+                "search_query": "repo:asyncapi/asyncapi-react type:pr is:merged author:fmvilas merged:>2025-03-29",
+                "total_count": 0
+              }
+            },
+            {
+              "id": "pr_reviews",
+              "kind": "pr_review",
+              "enabled": true,
+              "pass": true,
+              "reasoning": "Found 7 merged PR(s) with review by @fmvilas after 2025-03-29.",
+              "evidence": {
+                "search_query": "repo:asyncapi/asyncapi-react type:pr is:merged reviewed-by:fmvilas merged:>2025-03-29",
+                "total_count": 7
+              }
+            }
+          ]
+        },
+        {
+          "login": "magicmatatjahu",
+          "role": "maintainer",
+          "overall_pass": false,
+          "aggregation_detail": "balanced: 0/3 rules passed",
+          "rule_results": [
+            {
+              "id": "commits_in_window",
+              "kind": "commit_activity",
+              "enabled": true,
+              "pass": false,
+              "reasoning": "No commits authored by @magicmatatjahu in asyncapi-react since 2025-03-29.",
+              "evidence": {}
+            },
+            {
+              "id": "merged_prs",
+              "kind": "merged_pr_author",
+              "enabled": true,
+              "pass": false,
+              "reasoning": "No merged PRs by @magicmatatjahu in asyncapi/asyncapi-react after 2025-03-29.",
+              "evidence": {
+                "search_query": "repo:asyncapi/asyncapi-react type:pr is:merged author:magicmatatjahu merged:>2025-03-29",
+                "total_count": 0
+              }
+            },
+            {
+              "id": "pr_reviews",
+              "kind": "pr_review",
+              "enabled": true,
+              "pass": false,
+              "reasoning": "No merged PR reviews by @magicmatatjahu in asyncapi/asyncapi-react after 2025-03-29.",
+              "evidence": {
+                "search_query": "repo:asyncapi/asyncapi-react type:pr is:merged reviewed-by:magicmatatjahu merged:>2025-03-29",
+                "total_count": 0
+              }
+            }
+          ]
+        }
+      ],
+      "triagers": []
+    }
+  ]
+}
