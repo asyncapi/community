@@ -2,6 +2,8 @@
 
 This directory holds **global** inputs for the audit pipeline and **per-run** results under `runs/`.
 
+**Full command reference (flags, use cases, outputs):** [USAGE.md](USAGE.md).
+
 ## Quick start
 
 1. **Token:** create a GitHub PAT with `public_repo` (and `read:org` if you later sync team members via API).

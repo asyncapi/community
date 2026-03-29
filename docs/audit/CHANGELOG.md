@@ -1,5 +1,9 @@
 # Audit pipeline changelog
 
+## 1.0.2
+
+- Documentation: added [`docs/audit/USAGE.md`](USAGE.md) (operator guide for commands and flags). No engine change.
+
 ## 1.0.1
 
 - Search API: pace requests (~2.2s) and retry on `403` rate limit.
