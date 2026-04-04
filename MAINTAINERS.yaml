@@ -182,8 +182,7 @@
   slack: U01RVRD1TCL
   availableForHire: false
   company: Postman
-  isTscMember: true
-  tscMemberSince: '2023-07-05'
+  isTscMember: false
   repos:
     - spec-json-schemas
     - studio
@@ -376,8 +375,7 @@
   slack: U02FP8WBFQE
   linkedin: danielr
   availableForHire: false
-  isTscMember: true
-  tscMemberSince: '2023-07-05'
+  isTscMember: false
   repos:
     - java-template
   githubID: 1384852
@@ -476,8 +474,7 @@
   slack: U04C58GB8TF
   availableForHire: false
   company: The LEGO Group
-  isTscMember: true
-  tscMemberSince: '2023-07-05'
+  isTscMember: false
   repos:
     - spec-json-schemas
     - bindings
@@ -544,8 +541,7 @@
   twitter: sambhavgupta75
   slack: U04630DU3N3
   availableForHire: true
-  isTscMember: true
-  tscMemberSince: '2024-02-06'
+  isTscMember: false
   repos:
     - website
   githubID: 81870866
@@ -756,8 +752,7 @@
   github: Ruchip16
   twitter: Ruchicodess
   availableForHire: true
-  isTscMember: true
-  tscMemberSince: '2025-11-04'
+  isTscMember: false
   repos:
     - vs-asyncapi-preview
   githubID: 72685035
