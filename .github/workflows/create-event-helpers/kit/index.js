@@ -10,7 +10,7 @@ module.exports = async () => {
     const KIT_BASE = 'https://api.kit.com/v4';
     const MEETINGS_TAG_ID = Number(process.env.KIT_MEETINGS_TAG_ID);
 
-    // Schedule for next day at 11:00 UTC (same timing as previous Mailchimp version)
+    // Schedule for next day at 11:00 UTC
     const sendAt = new Date(Date.now() + 24 * 60 * 60 * 1000);
     sendAt.setUTCHours(11, 0, 0, 0);
 
