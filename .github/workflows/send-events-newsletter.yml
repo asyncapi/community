@@ -4,8 +4,6 @@ on:
   schedule:
     # Runs "At 00:00 on Sunday." (see https://crontab.guru)
     - cron: '00 00 * * 0'
-  # Manual runs (e.g. fork testing): Actions → this workflow → Run workflow → pick branch.
-  workflow_dispatch:
 
 jobs:
 
