@@ -8,7 +8,19 @@ module.exports = async () => {
     core.info(`Events: ${JSON.stringify(events, null, 2)}`);
 
     const KIT_BASE = 'https://api.kit.com/v4';
+
+    if (!process.env.KIT_API_KEY) {
+        return core.setFailed('KIT_API_KEY environment variable is not set');
+    }
+    if (!process.env.KIT_MEETINGS_TAG_ID) {
+        return core.setFailed('KIT_MEETINGS_TAG_ID environment variable is not set');
+    }
+
     const MEETINGS_TAG_ID = Number(process.env.KIT_MEETINGS_TAG_ID);
+
+    if (Number.isNaN(MEETINGS_TAG_ID)) {
+        return core.setFailed('KIT_MEETINGS_TAG_ID must be a valid number');
+    }
 
     // Schedule for next day at 11:00 UTC
     const sendAt = new Date(Date.now() + 24 * 60 * 60 * 1000);

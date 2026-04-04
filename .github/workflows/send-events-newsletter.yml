@@ -23,7 +23,7 @@ jobs:
         run: npm install
         working-directory: ./.github/workflows/create-event-helpers
       - name: Send email with Kit.com
-        uses: actions/github-script@v6
+        uses: actions/github-script@v7
         env:
           CALENDAR_ID: ${{ secrets.CALENDAR_ID }}
           CALENDAR_SERVICE_ACCOUNT: ${{ secrets.CALENDAR_SERVICE_ACCOUNT }}
