@@ -27,7 +27,7 @@ module.exports = (list) => {
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>AsyncAPI Meetings This Week</title>
+        <title>AsyncAPI meetings scheduled for this week.</title>
         
     <style type="text/css">
 		p{
@@ -385,7 +385,7 @@ module.exports = (list) => {
                         
                         <td class="mcnTextContent" style="padding-top: 0;padding-right: 18px;padding-bottom: 9px;padding-left: 18px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;word-break: break-word;color: #202020;font-family: Helvetica;font-size: 16px;line-height: 150%;text-align: left;" valign="top">
                         
-                            Hey AsyncAPI community member,<br>
+                            Hey {{ subscriber.first_name | strip | default: "there" }},<br>
 <br>
 I'm excited to share with you what meetings have been planned at AsyncAPI for this week:
                         </td>
