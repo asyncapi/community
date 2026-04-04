@@ -2,24 +2,8 @@ const core = require('@actions/core');
 const htmlContent = require('./htmlContent.js');
 const { listEvents } = require('../calendar/index.js');
 
-/** Same shape as listEvents(): { title, issueId, date }. Only used when KIT_TEST_MODE=true. */
-const KIT_TEST_EVENTS = [
-    {
-        title: 'Test meeting (Kit integration only)',
-        issueId: '99999',
-        date: new Date(Date.now() + 2 * 24 * 60 * 60 * 1000).toUTCString(),
-    },
-];
-
 module.exports = async () => {
-    let events;
-    if (process.env.KIT_TEST_MODE === 'true') {
-        core.info('KIT_TEST_MODE: skipping Calendar API; using hardcoded KIT_TEST_EVENTS');
-        events = KIT_TEST_EVENTS;
-    } else {
-        const { listEvents } = require('../calendar/index.js');
-        events = await listEvents();
-    }
+    const events = await listEvents();
     if (!events.length) return core.info('No events scheduled for next week so no email will be sent');
     core.info(`Events: ${JSON.stringify(events, null, 2)}`);
 

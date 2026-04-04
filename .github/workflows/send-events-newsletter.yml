@@ -27,7 +27,6 @@ jobs:
       - name: Send email with Kit.com
         uses: actions/github-script@v6
         env:
-          KIT_TEST_MODE: 'true'
           CALENDAR_ID: ${{ secrets.CALENDAR_ID }}
           CALENDAR_SERVICE_ACCOUNT: ${{ secrets.CALENDAR_SERVICE_ACCOUNT }}
           KIT_API_KEY: ${{ secrets.KIT_API_KEY }}
