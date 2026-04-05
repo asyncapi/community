@@ -1,5 +1,4 @@
 ---
----
 title: Where to Contribute
 weight: 20
 ---
