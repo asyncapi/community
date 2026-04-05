@@ -1,8 +1,7 @@
 ---
+---
 title: Where to Contribute
-weight: 10
+weight: 20
 ---
 
-🚧 This document is under construction.
-
-Please be patient as we work on it. Thank you. 🫶
+This content has been moved to the Contributing Guide.

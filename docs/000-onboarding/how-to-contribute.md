@@ -1,8 +1,16 @@
 ---
-title: How to Contribute
-weight: 20
+title: Contributing Guide
+weight: 10
 ---
 
-🚧 This document is under construction.
+# Contributing Guide
 
+## How to Contribute
+
+🚧 This section is under construction.  
+Please be patient as we work on it. Thank you. 🫶
+
+## Where to Contribute
+
+🚧 This section is under construction.  
 Please be patient as we work on it. Thank you. 🫶
