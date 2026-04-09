@@ -33,7 +33,7 @@ Contribute to the development of tools that power the AsyncAPI ecosystem:
 
 👉 You can contribute by:
 
-* Commenting on or raising labeled `feature`, `enhancement`, or `good first issue`  
+* Commenting on or raising issues labeled `feature`, `enhancement`, or `good first issue`  
 * Making the frontend of the website more accessible   
 * Planning the designs for the website   
 * Doing unit tests 
@@ -53,9 +53,9 @@ Support and grow the AsyncAPI community beyond code:
 * [AsyncAPI Slack](https://asyncapi.com/slack-invite)  
 * Join community meetings
 
-Check out the [Before You Start Contributing](https://www.asyncapi.com/docs/community/010-contribution-guidelines/contribution-flow) section for more information.
+### How to Contribute
 
-### **How to Contribute**
+Not sure where to start? Here are some tips:
 
 Not sure where to start? Here are some tips: 
 
