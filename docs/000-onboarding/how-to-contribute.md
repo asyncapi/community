@@ -18,7 +18,7 @@ Help improve the learning experience for others by contributing to documentation
 
 👉 You can contribute using:
 
-* The AsyncAPI [website](https://github.com/asyncapi/website) and [community](https://github.com/asyncapi/community) repository  
+* The AsyncAPI [website](https://github.com/asyncapi/website) and [community](https://github.com/asyncapi/community) repositories  
 * Documentation-related issues labeled `good first issue` or `docs`
 
 ### Core Projects
@@ -50,15 +50,17 @@ Support and grow the AsyncAPI community beyond code:
 👉 You can contribute using:
 
 * GitHub Discussions  
-* AsyncAPI Slack  
-* Community meetings and working groups
+* [AsyncAPI Slack](https://asyncapi.com/slack-invite)  
+* Join community meetings
+
+Check out the [Before You Start Contributing](https://www.asyncapi.com/docs/community/010-contribution-guidelines/contribution-flow) section for more information.
 
 ### **How to Contribute**
 
-Not sure where to start? Here are some tips 
+Not sure where to start? Here are some tips: 
 
-* If you enjoy writing → start with **Documentation**  
-* If you enjoy coding → explore **Core Projects**  
-* If you enjoy helping others → join **Community & Ecosystem** efforts
+* If you enjoy writing, start with **Documentation**  
+* If you enjoy coding, explore **Core Projects**  
+* If you enjoy helping others, join **Community & Ecosystem** efforts
 
-No matter your background, there’s a place for you to contribute 💛
+Check out the [Types of Contributions](https://www.asyncapi.com/docs/community/010-contribution-guidelines/contribution-flow) section for more ideas.
