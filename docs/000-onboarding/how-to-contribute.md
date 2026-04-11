@@ -57,8 +57,6 @@ Support and grow the AsyncAPI community beyond code:
 
 Not sure where to start? Here are some tips:
 
-Not sure where to start? Here are some tips: 
-
 * If you enjoy writing, start with **Documentation**  
 * If you enjoy coding, explore **Core Projects**  
 * If you enjoy helping others, join **Community & Ecosystem** efforts
