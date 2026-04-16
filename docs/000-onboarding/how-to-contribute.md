@@ -36,7 +36,7 @@ Contribute to the development of tools that power the AsyncAPI ecosystem:
 * Commenting on or raising issues labeled `feature`, `enhancement`, or `good first issue`  
 * Making the frontend of the website more accessible   
 * Planning the designs for the website   
-* Doing unit tests 
+* Writing unit tests 
 
 ### Community & Ecosystem
 
