@@ -1,8 +1,10 @@
-# AsyncAPI org repository audit (maintainer activity)
+# AsyncAPI org repository audit (maintainer activity + repo activity)
 
-This directory holds **global** inputs for the audit pipeline and **per-run** results under `runs/`.
+This directory holds **global** inputs for the audit pipeline, **per-run** maintainer results under `runs/`, and optional **repo-level** Search summaries under `repo-activity-runs/`.
 
 **Full command reference (flags, use cases, outputs):** [USAGE.md](USAGE.md).
+
+**GitHub Statistics vs LFX Insights (data types, examples, channelization):** [INSIGHTS_DATA_REFERENCE.md](INSIGHTS_DATA_REFERENCE.md).
 
 ## Quick start
 
@@ -26,7 +28,15 @@ This directory holds **global** inputs for the audit pipeline and **per-run** re
 
    Optional: `npm run audit:run -- --max-repos 5` to limit repos (faster, for testing).
 
-Outputs go to `docs/audit/runs/<run-id>/`:
+5. **Optional — repo-level activity** (issues/PRs per repo, human vs bot using `deny_pr_authors`):
+
+   ```bash
+   npm run audit:repo-activity
+   ```
+
+   Writes `docs/audit/repo-activity-runs/<run-id>/` (see [USAGE.md](USAGE.md)).
+
+Maintainer outputs go to `docs/audit/runs/<run-id>/`:
 
 - `input/` — **snapshot** of `raw-data.json`, `teams-mapping.yaml`, and the rules file used (reproducible after you edit globals).
 - `output/` — `full-report.json`, `full-report.md`, `summary.md`, `summary.json`, `emeritus-candidates.md`.

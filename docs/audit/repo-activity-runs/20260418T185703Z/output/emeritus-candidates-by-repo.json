@@ -1,0 +1,309 @@
+{
+  "generated_at": "2026-04-19T04:35:09.500Z",
+  "maintainer_run_id": "20260329T084806Z",
+  "repo_activity_run_id": "20260418T185703Z",
+  "since_day": "2025-04-18",
+  "window_months": 12,
+  "source_file": "docs/audit/runs/20260329T084806Z/output/emeritus-candidates.md",
+  "repos": [
+    {
+      "full_name": "asyncapi/asyncapi-react",
+      "emeritus_candidates": [
+        "magicmatatjahu"
+      ],
+      "emeritus_candidate_count": 1
+    },
+    {
+      "full_name": "asyncapi/avro-schema-parser",
+      "emeritus_candidates": [
+        "M3lkior"
+      ],
+      "emeritus_candidate_count": 1
+    },
+    {
+      "full_name": "asyncapi/bindings",
+      "emeritus_candidates": [
+        "CameronRushton",
+        "dalelane",
+        "damaru-inc",
+        "GeraldLoeffler",
+        "GreenRover",
+        "iancooper",
+        "lbroudoux",
+        "mboss37",
+        "rcoppen",
+        "SrfHead",
+        "VisualBean",
+        "whitlockjc"
+      ],
+      "emeritus_candidate_count": 12
+    },
+    {
+      "full_name": "asyncapi/brand",
+      "emeritus_candidates": [
+        "fmvilas",
+        "mayaleeeee"
+      ],
+      "emeritus_candidate_count": 2
+    },
+    {
+      "full_name": "asyncapi/chatbot",
+      "emeritus_candidates": [
+        "AceTheCreator",
+        "derberg",
+        "magicmatatjahu"
+      ],
+      "emeritus_candidate_count": 3
+    },
+    {
+      "full_name": "asyncapi/community",
+      "emeritus_candidates": [
+        "Mayaleeeee"
+      ],
+      "emeritus_candidate_count": 1
+    },
+    {
+      "full_name": "asyncapi/converter-js",
+      "emeritus_candidates": [
+        "magicmatatjahu"
+      ],
+      "emeritus_candidate_count": 1
+    },
+    {
+      "full_name": "asyncapi/diff",
+      "emeritus_candidates": [
+        "aayushmau5",
+        "derberg",
+        "magicmatatjahu"
+      ],
+      "emeritus_candidate_count": 3
+    },
+    {
+      "full_name": "asyncapi/dotnet-rabbitmq-template",
+      "emeritus_candidates": [
+        "connil"
+      ],
+      "emeritus_candidate_count": 1
+    },
+    {
+      "full_name": "asyncapi/EDAVisualiser",
+      "emeritus_candidates": [
+        "jonaslagoni",
+        "magicmatatjahu"
+      ],
+      "emeritus_candidate_count": 2
+    },
+    {
+      "full_name": "asyncapi/enterprise-patterns",
+      "emeritus_candidates": [
+        "derberg",
+        "fmvilas"
+      ],
+      "emeritus_candidate_count": 2
+    },
+    {
+      "full_name": "asyncapi/extensions-catalog",
+      "emeritus_candidates": [
+        "derberg",
+        "fmvilas"
+      ],
+      "emeritus_candidate_count": 2
+    },
+    {
+      "full_name": "asyncapi/generator",
+      "emeritus_candidates": [
+        "jonaslagoni"
+      ],
+      "emeritus_candidate_count": 1
+    },
+    {
+      "full_name": "asyncapi/go-watermill-template",
+      "emeritus_candidates": [
+        "anandsunderraman",
+        "smoya"
+      ],
+      "emeritus_candidate_count": 2
+    },
+    {
+      "full_name": "asyncapi/html-template",
+      "emeritus_candidates": [
+        "fmvilas"
+      ],
+      "emeritus_candidate_count": 1
+    },
+    {
+      "full_name": "asyncapi/jasyncapi",
+      "emeritus_candidates": [
+        "harikrishnan83"
+      ],
+      "emeritus_candidate_count": 1
+    },
+    {
+      "full_name": "asyncapi/jasyncapi-idea-plugin",
+      "emeritus_candidates": [
+        "theschles"
+      ],
+      "emeritus_candidate_count": 1
+    },
+    {
+      "full_name": "asyncapi/java-spring-cloud-stream-template",
+      "emeritus_candidates": [
+        "damaru-inc"
+      ],
+      "emeritus_candidate_count": 1
+    },
+    {
+      "full_name": "asyncapi/java-spring-template",
+      "emeritus_candidates": [
+        "derberg",
+        "Tenischev"
+      ],
+      "emeritus_candidate_count": 2
+    },
+    {
+      "full_name": "asyncapi/java-template",
+      "emeritus_candidates": [
+        "AGurlhosur",
+        "dan-r",
+        "KieranM1999",
+        "lewis-relph"
+      ],
+      "emeritus_candidate_count": 4
+    },
+    {
+      "full_name": "asyncapi/learning-paths",
+      "emeritus_candidates": [
+        "alequetzalli",
+        "Barbanio"
+      ],
+      "emeritus_candidate_count": 2
+    },
+    {
+      "full_name": "asyncapi/markdown-template",
+      "emeritus_candidates": [
+        "fmvilas"
+      ],
+      "emeritus_candidate_count": 1
+    },
+    {
+      "full_name": "asyncapi/modelina",
+      "emeritus_candidates": [
+        "akkshitgupta",
+        "artur-ciocanu",
+        "devilkiller-ag",
+        "ferror",
+        "kennethaasan",
+        "leigh-johnson",
+        "magicmatatjahu",
+        "Samridhi-98"
+      ],
+      "emeritus_candidate_count": 8
+    },
+    {
+      "full_name": "asyncapi/net-sdk",
+      "emeritus_candidates": [
+        "jbbianchi"
+      ],
+      "emeritus_candidate_count": 1
+    },
+    {
+      "full_name": "asyncapi/nodejs-template",
+      "emeritus_candidates": [
+        "derberg",
+        "kaushik-rishi"
+      ],
+      "emeritus_candidate_count": 2
+    },
+    {
+      "full_name": "asyncapi/nodejs-ws-template",
+      "emeritus_candidates": [
+        "derberg",
+        "fmvilas"
+      ],
+      "emeritus_candidate_count": 2
+    },
+    {
+      "full_name": "asyncapi/parser-api",
+      "emeritus_candidates": [
+        "jonaslagoni",
+        "smoya"
+      ],
+      "emeritus_candidate_count": 2
+    },
+    {
+      "full_name": "asyncapi/php-template",
+      "emeritus_candidates": [
+        "emilianozublena"
+      ],
+      "emeritus_candidate_count": 1
+    },
+    {
+      "full_name": "asyncapi/problem",
+      "emeritus_candidates": [
+        "imabp",
+        "magicmatatjahu"
+      ],
+      "emeritus_candidate_count": 2
+    },
+    {
+      "full_name": "asyncapi/python-paho-template",
+      "emeritus_candidates": [
+        "CameronRushton",
+        "damaru-inc"
+      ],
+      "emeritus_candidate_count": 2
+    },
+    {
+      "full_name": "asyncapi/spec-json-schemas",
+      "emeritus_candidates": [
+        "amparosancho",
+        "CameronRushton",
+        "char0n",
+        "dalelane",
+        "damaru-inc",
+        "dpwdec",
+        "GeraldLoeffler",
+        "gramss",
+        "GreenRover",
+        "iancooper",
+        "KhudaDad414",
+        "lbroudoux",
+        "mboss37",
+        "rcoppen",
+        "SrfHead",
+        "VisualBean",
+        "whitlockjc"
+      ],
+      "emeritus_candidate_count": 17
+    },
+    {
+      "full_name": "asyncapi/studio",
+      "emeritus_candidates": [
+        "KhudaDad414"
+      ],
+      "emeritus_candidate_count": 1
+    },
+    {
+      "full_name": "asyncapi/tck",
+      "emeritus_candidates": [
+        "Pakisan"
+      ],
+      "emeritus_candidate_count": 1
+    },
+    {
+      "full_name": "asyncapi/template-for-generator-templates",
+      "emeritus_candidates": [
+        "derberg",
+        "magicmatatjahu"
+      ],
+      "emeritus_candidate_count": 2
+    },
+    {
+      "full_name": "asyncapi/training",
+      "emeritus_candidates": [
+        "alequetzalli"
+      ],
+      "emeritus_candidate_count": 1
+    }
+  ]
+}

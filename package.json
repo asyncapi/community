@@ -5,7 +5,9 @@
     "test": "jest",
     "generate:board": "node scripts/tsc-board-member.js",
     "audit:fetch": "node scripts/audit-fetch-raw.mjs",
-    "audit:run": "node scripts/audit-rule-engine.mjs"
+    "audit:run": "node scripts/audit-rule-engine.mjs",
+    "audit:repo-activity": "node scripts/audit-repo-activity.mjs",
+    "audit:merge-maintainer-activity": "node scripts/audit-merge-maintainer-repo-activity.mjs"
   },
   "dependencies": {
     "js-yaml": "^4.1.0",

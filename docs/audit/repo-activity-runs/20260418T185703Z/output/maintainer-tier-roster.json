@@ -1,0 +1,796 @@
+{
+  "generated_at": "2026-04-19T04:35:09.500Z",
+  "maintainer_run_id": "20260329T084806Z",
+  "repo_activity_run_id": "20260418T185703Z",
+  "since_day": "2025-04-18",
+  "window_months": 12,
+  "sort": {
+    "primary": "active_maintainer_count_asc",
+    "secondary": "full_name"
+  },
+  "repos": [
+    {
+      "full_name": "asyncapi/brand",
+      "active_maintainers": [],
+      "inactive_maintainers": [
+        "fmvilas",
+        "mayaleeeee"
+      ],
+      "active_triagers": [],
+      "inactive_triagers": [],
+      "active_maintainer_count": 0,
+      "inactive_maintainer_count": 2,
+      "active_triager_count": 0,
+      "inactive_triager_count": 0
+    },
+    {
+      "full_name": "asyncapi/chatbot",
+      "active_maintainers": [],
+      "inactive_maintainers": [
+        "AceTheCreator",
+        "derberg",
+        "magicmatatjahu"
+      ],
+      "active_triagers": [],
+      "inactive_triagers": [],
+      "active_maintainer_count": 0,
+      "inactive_maintainer_count": 3,
+      "active_triager_count": 0,
+      "inactive_triager_count": 0
+    },
+    {
+      "full_name": "asyncapi/diff",
+      "active_maintainers": [],
+      "inactive_maintainers": [
+        "aayushmau5",
+        "derberg",
+        "magicmatatjahu"
+      ],
+      "active_triagers": [],
+      "inactive_triagers": [],
+      "active_maintainer_count": 0,
+      "inactive_maintainer_count": 3,
+      "active_triager_count": 0,
+      "inactive_triager_count": 0
+    },
+    {
+      "full_name": "asyncapi/EDAVisualiser",
+      "active_maintainers": [],
+      "inactive_maintainers": [
+        "jonaslagoni",
+        "magicmatatjahu"
+      ],
+      "active_triagers": [],
+      "inactive_triagers": [],
+      "active_maintainer_count": 0,
+      "inactive_maintainer_count": 2,
+      "active_triager_count": 0,
+      "inactive_triager_count": 0
+    },
+    {
+      "full_name": "asyncapi/enterprise-patterns",
+      "active_maintainers": [],
+      "inactive_maintainers": [
+        "derberg",
+        "fmvilas"
+      ],
+      "active_triagers": [],
+      "inactive_triagers": [],
+      "active_maintainer_count": 0,
+      "inactive_maintainer_count": 2,
+      "active_triager_count": 0,
+      "inactive_triager_count": 0
+    },
+    {
+      "full_name": "asyncapi/extensions-catalog",
+      "active_maintainers": [],
+      "inactive_maintainers": [
+        "derberg",
+        "fmvilas"
+      ],
+      "active_triagers": [],
+      "inactive_triagers": [],
+      "active_maintainer_count": 0,
+      "inactive_maintainer_count": 2,
+      "active_triager_count": 0,
+      "inactive_triager_count": 0
+    },
+    {
+      "full_name": "asyncapi/go-watermill-template",
+      "active_maintainers": [],
+      "inactive_maintainers": [
+        "anandsunderraman",
+        "smoya"
+      ],
+      "active_triagers": [],
+      "inactive_triagers": [],
+      "active_maintainer_count": 0,
+      "inactive_maintainer_count": 2,
+      "active_triager_count": 0,
+      "inactive_triager_count": 0
+    },
+    {
+      "full_name": "asyncapi/java-spring-template",
+      "active_maintainers": [],
+      "inactive_maintainers": [
+        "Tenischev",
+        "derberg"
+      ],
+      "active_triagers": [],
+      "inactive_triagers": [],
+      "active_maintainer_count": 0,
+      "inactive_maintainer_count": 2,
+      "active_triager_count": 0,
+      "inactive_triager_count": 0
+    },
+    {
+      "full_name": "asyncapi/learning-paths",
+      "active_maintainers": [],
+      "inactive_maintainers": [
+        "Barbanio",
+        "alequetzalli"
+      ],
+      "active_triagers": [],
+      "inactive_triagers": [],
+      "active_maintainer_count": 0,
+      "inactive_maintainer_count": 2,
+      "active_triager_count": 0,
+      "inactive_triager_count": 0
+    },
+    {
+      "full_name": "asyncapi/nodejs-template",
+      "active_maintainers": [],
+      "inactive_maintainers": [
+        "derberg",
+        "kaushik-rishi"
+      ],
+      "active_triagers": [],
+      "inactive_triagers": [],
+      "active_maintainer_count": 0,
+      "inactive_maintainer_count": 2,
+      "active_triager_count": 0,
+      "inactive_triager_count": 0
+    },
+    {
+      "full_name": "asyncapi/nodejs-ws-template",
+      "active_maintainers": [],
+      "inactive_maintainers": [
+        "derberg",
+        "fmvilas"
+      ],
+      "active_triagers": [],
+      "inactive_triagers": [],
+      "active_maintainer_count": 0,
+      "inactive_maintainer_count": 2,
+      "active_triager_count": 0,
+      "inactive_triager_count": 0
+    },
+    {
+      "full_name": "asyncapi/parser-api",
+      "active_maintainers": [],
+      "inactive_maintainers": [
+        "jonaslagoni",
+        "smoya"
+      ],
+      "active_triagers": [],
+      "inactive_triagers": [],
+      "active_maintainer_count": 0,
+      "inactive_maintainer_count": 2,
+      "active_triager_count": 0,
+      "inactive_triager_count": 0
+    },
+    {
+      "full_name": "asyncapi/php-template",
+      "active_maintainers": [],
+      "inactive_maintainers": [
+        "emilianozublena"
+      ],
+      "active_triagers": [],
+      "inactive_triagers": [],
+      "active_maintainer_count": 0,
+      "inactive_maintainer_count": 1,
+      "active_triager_count": 0,
+      "inactive_triager_count": 0
+    },
+    {
+      "full_name": "asyncapi/problem",
+      "active_maintainers": [],
+      "inactive_maintainers": [
+        "imabp",
+        "magicmatatjahu"
+      ],
+      "active_triagers": [],
+      "inactive_triagers": [],
+      "active_maintainer_count": 0,
+      "inactive_maintainer_count": 2,
+      "active_triager_count": 0,
+      "inactive_triager_count": 0
+    },
+    {
+      "full_name": "asyncapi/python-paho-template",
+      "active_maintainers": [],
+      "inactive_maintainers": [
+        "CameronRushton",
+        "damaru-inc"
+      ],
+      "active_triagers": [],
+      "inactive_triagers": [],
+      "active_maintainer_count": 0,
+      "inactive_maintainer_count": 2,
+      "active_triager_count": 0,
+      "inactive_triager_count": 0
+    },
+    {
+      "full_name": "asyncapi/tck",
+      "active_maintainers": [],
+      "inactive_maintainers": [
+        "Pakisan"
+      ],
+      "active_triagers": [],
+      "inactive_triagers": [],
+      "active_maintainer_count": 0,
+      "inactive_maintainer_count": 1,
+      "active_triager_count": 0,
+      "inactive_triager_count": 0
+    },
+    {
+      "full_name": "asyncapi/template-for-generator-templates",
+      "active_maintainers": [],
+      "inactive_maintainers": [
+        "derberg",
+        "magicmatatjahu"
+      ],
+      "active_triagers": [],
+      "inactive_triagers": [],
+      "active_maintainer_count": 0,
+      "inactive_maintainer_count": 2,
+      "active_triager_count": 0,
+      "inactive_triager_count": 0
+    },
+    {
+      "full_name": "asyncapi/training",
+      "active_maintainers": [],
+      "inactive_maintainers": [
+        "alequetzalli"
+      ],
+      "active_triagers": [],
+      "inactive_triagers": [],
+      "active_maintainer_count": 0,
+      "inactive_maintainer_count": 1,
+      "active_triager_count": 0,
+      "inactive_triager_count": 0
+    },
+    {
+      "full_name": "asyncapi/avro-schema-parser",
+      "active_maintainers": [
+        "dalelane"
+      ],
+      "inactive_maintainers": [
+        "M3lkior"
+      ],
+      "active_triagers": [],
+      "inactive_triagers": [],
+      "active_maintainer_count": 1,
+      "inactive_maintainer_count": 1,
+      "active_triager_count": 0,
+      "inactive_triager_count": 0
+    },
+    {
+      "full_name": "asyncapi/dotnet-rabbitmq-template",
+      "active_maintainers": [
+        "mr-nuno"
+      ],
+      "inactive_maintainers": [
+        "connil"
+      ],
+      "active_triagers": [],
+      "inactive_triagers": [],
+      "active_maintainer_count": 1,
+      "inactive_maintainer_count": 1,
+      "active_triager_count": 0,
+      "inactive_triager_count": 0
+    },
+    {
+      "full_name": "asyncapi/jasyncapi",
+      "active_maintainers": [
+        "pakisan"
+      ],
+      "inactive_maintainers": [
+        "harikrishnan83"
+      ],
+      "active_triagers": [],
+      "inactive_triagers": [],
+      "active_maintainer_count": 1,
+      "inactive_maintainer_count": 1,
+      "active_triager_count": 0,
+      "inactive_triager_count": 0
+    },
+    {
+      "full_name": "asyncapi/java-spring-cloud-stream-template",
+      "active_maintainers": [
+        "CameronRushton"
+      ],
+      "inactive_maintainers": [
+        "damaru-inc"
+      ],
+      "active_triagers": [],
+      "inactive_triagers": [],
+      "active_maintainer_count": 1,
+      "inactive_maintainer_count": 1,
+      "active_triager_count": 0,
+      "inactive_triager_count": 0
+    },
+    {
+      "full_name": "asyncapi/java-template",
+      "active_maintainers": [
+        "dalelane"
+      ],
+      "inactive_maintainers": [
+        "AGurlhosur",
+        "KieranM1999",
+        "dan-r",
+        "lewis-relph"
+      ],
+      "active_triagers": [],
+      "inactive_triagers": [],
+      "active_maintainer_count": 1,
+      "inactive_maintainer_count": 4,
+      "active_triager_count": 0,
+      "inactive_triager_count": 0
+    },
+    {
+      "full_name": "asyncapi/modelina",
+      "active_maintainers": [
+        "jonaslagoni"
+      ],
+      "inactive_maintainers": [
+        "Samridhi-98",
+        "akkshitgupta",
+        "artur-ciocanu",
+        "devilkiller-ag",
+        "ferror",
+        "kennethaasan",
+        "leigh-johnson",
+        "magicmatatjahu"
+      ],
+      "active_triagers": [],
+      "inactive_triagers": [],
+      "active_maintainer_count": 1,
+      "inactive_maintainer_count": 8,
+      "active_triager_count": 0,
+      "inactive_triager_count": 0
+    },
+    {
+      "full_name": "asyncapi/net-sdk",
+      "active_maintainers": [
+        "cdavernas"
+      ],
+      "inactive_maintainers": [
+        "jbbianchi"
+      ],
+      "active_triagers": [],
+      "inactive_triagers": [],
+      "active_maintainer_count": 1,
+      "inactive_maintainer_count": 1,
+      "active_triager_count": 0,
+      "inactive_triager_count": 0
+    },
+    {
+      "full_name": "asyncapi/optimizer",
+      "active_maintainers": [
+        "aeworxet"
+      ],
+      "inactive_maintainers": [],
+      "active_triagers": [],
+      "inactive_triagers": [],
+      "active_maintainer_count": 1,
+      "inactive_maintainer_count": 0,
+      "active_triager_count": 0,
+      "inactive_triager_count": 0
+    },
+    {
+      "full_name": "asyncapi/asyncapi-react",
+      "active_maintainers": [
+        "AceTheCreator",
+        "fmvilas"
+      ],
+      "inactive_maintainers": [
+        "magicmatatjahu"
+      ],
+      "active_triagers": [],
+      "inactive_triagers": [],
+      "active_maintainer_count": 2,
+      "inactive_maintainer_count": 1,
+      "active_triager_count": 0,
+      "inactive_triager_count": 0
+    },
+    {
+      "full_name": "asyncapi/bundler",
+      "active_maintainers": [
+        "Souvikns",
+        "aeworxet"
+      ],
+      "inactive_maintainers": [],
+      "active_triagers": [],
+      "inactive_triagers": [],
+      "active_maintainer_count": 2,
+      "inactive_maintainer_count": 0,
+      "active_triager_count": 0,
+      "inactive_triager_count": 0
+    },
+    {
+      "full_name": "asyncapi/converter-js",
+      "active_maintainers": [
+        "fmvilas",
+        "jonaslagoni"
+      ],
+      "inactive_maintainers": [
+        "magicmatatjahu"
+      ],
+      "active_triagers": [],
+      "inactive_triagers": [],
+      "active_maintainer_count": 2,
+      "inactive_maintainer_count": 1,
+      "active_triager_count": 0,
+      "inactive_triager_count": 0
+    },
+    {
+      "full_name": "asyncapi/html-template",
+      "active_maintainers": [
+        "derberg",
+        "magicmatatjahu"
+      ],
+      "inactive_maintainers": [
+        "fmvilas"
+      ],
+      "active_triagers": [],
+      "inactive_triagers": [],
+      "active_maintainer_count": 2,
+      "inactive_maintainer_count": 1,
+      "active_triager_count": 0,
+      "inactive_triager_count": 0
+    },
+    {
+      "full_name": "asyncapi/jasyncapi-idea-plugin",
+      "active_maintainers": [
+        "Pakisan",
+        "philCryoport"
+      ],
+      "inactive_maintainers": [
+        "theschles"
+      ],
+      "active_triagers": [
+        "philCryoport"
+      ],
+      "inactive_triagers": [
+        "doctocat",
+        "example",
+        "global-owner1",
+        "global-owner2",
+        "js-owner",
+        "octocat",
+        "theschles"
+      ],
+      "active_maintainer_count": 2,
+      "inactive_maintainer_count": 1,
+      "active_triager_count": 1,
+      "inactive_triager_count": 7
+    },
+    {
+      "full_name": "asyncapi/kotlin-asyncapi",
+      "active_maintainers": [
+        "gimlet2",
+        "lorenzsimon"
+      ],
+      "inactive_maintainers": [],
+      "active_triagers": [],
+      "inactive_triagers": [],
+      "active_maintainer_count": 2,
+      "inactive_maintainer_count": 0,
+      "active_triager_count": 0,
+      "inactive_triager_count": 0
+    },
+    {
+      "full_name": "asyncapi/markdown-template",
+      "active_maintainers": [
+        "derberg",
+        "magicmatatjahu"
+      ],
+      "inactive_maintainers": [
+        "fmvilas"
+      ],
+      "active_triagers": [],
+      "inactive_triagers": [],
+      "active_maintainer_count": 2,
+      "inactive_maintainer_count": 1,
+      "active_triager_count": 0,
+      "inactive_triager_count": 0
+    },
+    {
+      "full_name": "asyncapi/parser-js",
+      "active_maintainers": [
+        "fmvilas",
+        "magicmatatjahu"
+      ],
+      "inactive_maintainers": [],
+      "active_triagers": [],
+      "inactive_triagers": [],
+      "active_maintainer_count": 2,
+      "inactive_maintainer_count": 0,
+      "active_triager_count": 0,
+      "inactive_triager_count": 0
+    },
+    {
+      "full_name": "asyncapi/protobuf-schema-parser",
+      "active_maintainers": [
+        "GreenRover",
+        "nathanaelweber"
+      ],
+      "inactive_maintainers": [],
+      "active_triagers": [],
+      "inactive_triagers": [],
+      "active_maintainer_count": 2,
+      "inactive_maintainer_count": 0,
+      "active_triager_count": 0,
+      "inactive_triager_count": 0
+    },
+    {
+      "full_name": "asyncapi/saunter",
+      "active_maintainers": [
+        "m-wild",
+        "yurvon-screamo"
+      ],
+      "inactive_maintainers": [],
+      "active_triagers": [],
+      "inactive_triagers": [],
+      "active_maintainer_count": 2,
+      "inactive_maintainer_count": 0,
+      "active_triager_count": 0,
+      "inactive_triager_count": 0
+    },
+    {
+      "full_name": "asyncapi/vs-asyncapi-preview",
+      "active_maintainers": [
+        "Ruchip16",
+        "ivangsa"
+      ],
+      "inactive_maintainers": [],
+      "active_triagers": [],
+      "inactive_triagers": [],
+      "active_maintainer_count": 2,
+      "inactive_maintainer_count": 0,
+      "active_triager_count": 0,
+      "inactive_triager_count": 0
+    },
+    {
+      "full_name": "asyncapi/.github",
+      "active_maintainers": [
+        "Florence-Njeri",
+        "Shurtu-gal",
+        "derberg"
+      ],
+      "inactive_maintainers": [],
+      "active_triagers": [],
+      "inactive_triagers": [],
+      "active_maintainer_count": 3,
+      "inactive_maintainer_count": 0,
+      "active_triager_count": 0,
+      "inactive_triager_count": 0
+    },
+    {
+      "full_name": "asyncapi/openapi-schema-parser",
+      "active_maintainers": [
+        "AayushSaini101",
+        "fmvilas",
+        "smoya"
+      ],
+      "inactive_maintainers": [],
+      "active_triagers": [],
+      "inactive_triagers": [],
+      "active_maintainer_count": 3,
+      "inactive_maintainer_count": 0,
+      "active_triager_count": 0,
+      "inactive_triager_count": 0
+    },
+    {
+      "full_name": "asyncapi/cli",
+      "active_maintainers": [
+        "AayushSaini101",
+        "Amzani",
+        "Shurtu-gal",
+        "Souvikns"
+      ],
+      "inactive_maintainers": [],
+      "active_triagers": [],
+      "inactive_triagers": [],
+      "active_maintainer_count": 4,
+      "inactive_maintainer_count": 0,
+      "active_triager_count": 0,
+      "inactive_triager_count": 0
+    },
+    {
+      "full_name": "asyncapi/community",
+      "active_maintainers": [
+        "AceTheCreator",
+        "bandantonio",
+        "derberg",
+        "thulieblack"
+      ],
+      "inactive_maintainers": [
+        "Mayaleeeee"
+      ],
+      "active_triagers": [
+        "CBID2"
+      ],
+      "inactive_triagers": [],
+      "active_maintainer_count": 4,
+      "inactive_maintainer_count": 1,
+      "active_triager_count": 1,
+      "inactive_triager_count": 0
+    },
+    {
+      "full_name": "asyncapi/conference-website",
+      "active_maintainers": [
+        "AceTheCreator",
+        "Mayaleeeee",
+        "TenzDelek",
+        "thulieblack"
+      ],
+      "inactive_maintainers": [],
+      "active_triagers": [],
+      "inactive_triagers": [],
+      "active_maintainer_count": 4,
+      "inactive_maintainer_count": 0,
+      "active_triager_count": 0,
+      "inactive_triager_count": 0
+    },
+    {
+      "full_name": "asyncapi/generator",
+      "active_maintainers": [
+        "Adi-204",
+        "Florence-Njeri",
+        "derberg",
+        "magicmatatjahu"
+      ],
+      "inactive_maintainers": [
+        "jonaslagoni"
+      ],
+      "active_triagers": [
+        "Adi-204",
+        "Florence-Njeri"
+      ],
+      "inactive_triagers": [],
+      "active_maintainer_count": 4,
+      "inactive_maintainer_count": 1,
+      "active_triager_count": 2,
+      "inactive_triager_count": 0
+    },
+    {
+      "full_name": "asyncapi/spec-json-schemas",
+      "active_maintainers": [
+        "derberg",
+        "fmvilas",
+        "jonaslagoni",
+        "pakisan"
+      ],
+      "inactive_maintainers": [
+        "CameronRushton",
+        "GeraldLoeffler",
+        "GreenRover",
+        "KhudaDad414",
+        "SrfHead",
+        "VisualBean",
+        "amparosancho",
+        "char0n",
+        "dalelane",
+        "damaru-inc",
+        "dpwdec",
+        "gramss",
+        "iancooper",
+        "lbroudoux",
+        "mboss37",
+        "rcoppen",
+        "whitlockjc"
+      ],
+      "active_triagers": [],
+      "inactive_triagers": [],
+      "active_maintainer_count": 4,
+      "inactive_maintainer_count": 17,
+      "active_triager_count": 0,
+      "inactive_triager_count": 0
+    },
+    {
+      "full_name": "asyncapi/studio",
+      "active_maintainers": [
+        "Amzani",
+        "Shurtu-gal",
+        "magicmatatjahu",
+        "princerajpoot20"
+      ],
+      "inactive_maintainers": [
+        "KhudaDad414"
+      ],
+      "active_triagers": [],
+      "inactive_triagers": [],
+      "active_maintainer_count": 4,
+      "inactive_maintainer_count": 1,
+      "active_triager_count": 0,
+      "inactive_triager_count": 0
+    },
+    {
+      "full_name": "asyncapi/spec",
+      "active_maintainers": [
+        "GreenRover",
+        "char0n",
+        "dalelane",
+        "derberg",
+        "fmvilas"
+      ],
+      "inactive_maintainers": [],
+      "active_triagers": [],
+      "inactive_triagers": [],
+      "active_maintainer_count": 5,
+      "inactive_maintainer_count": 0,
+      "active_triager_count": 0,
+      "inactive_triager_count": 0
+    },
+    {
+      "full_name": "asyncapi/bindings",
+      "active_maintainers": [
+        "amparosancho",
+        "char0n",
+        "derberg",
+        "dpwdec",
+        "fmvilas",
+        "gramss"
+      ],
+      "inactive_maintainers": [
+        "CameronRushton",
+        "GeraldLoeffler",
+        "GreenRover",
+        "SrfHead",
+        "VisualBean",
+        "dalelane",
+        "damaru-inc",
+        "iancooper",
+        "lbroudoux",
+        "mboss37",
+        "rcoppen",
+        "whitlockjc"
+      ],
+      "active_triagers": [],
+      "inactive_triagers": [],
+      "active_maintainer_count": 6,
+      "inactive_maintainer_count": 12,
+      "active_triager_count": 0,
+      "inactive_triager_count": 0
+    },
+    {
+      "full_name": "asyncapi/website",
+      "active_maintainers": [
+        "TRohit20",
+        "akshatnema",
+        "anshgoyalevil",
+        "bandantonio",
+        "derberg",
+        "mayaleeeee",
+        "princerajpoot20",
+        "sambhavgupta0705",
+        "thulieblack"
+      ],
+      "inactive_maintainers": [],
+      "active_triagers": [
+        "CBID2",
+        "bandantonio",
+        "vishvamsinh28"
+      ],
+      "inactive_triagers": [
+        "devilkiller-ag"
+      ],
+      "active_maintainer_count": 9,
+      "inactive_maintainer_count": 0,
+      "active_triager_count": 3,
+      "inactive_triager_count": 1
+    }
+  ]
+}

@@ -10,6 +10,7 @@ This guide is for **operators** who need to run the AsyncAPI org maintainer-acti
 
 1. **Fetch** lists every non-archived `asyncapi/*` repository and downloads each repo’s `CODEOWNERS` (from common paths). It writes a JSON snapshot: **`docs/audit/raw-data.json`** (unless you override `--out`).
 2. **Run** reads that snapshot plus your **rules** and **team mapping**, calls the GitHub API to evaluate **activity rules** per maintainer and triager (per repo), and writes a **new folder** under **`docs/audit/runs/<run-id>/`** with frozen inputs and reports.
+3. **Repo activity** (optional) uses the same `raw-data.json` and **`window_months` / `bots.deny_pr_authors`** from your rules YAML to collect **per-repository** Search counts (issues/PRs opened and merged, human vs bot, closed issues, closed unmerged PRs). Outputs go to **`docs/audit/repo-activity-runs/<run-id>/`**. **`bots.deny_reviewers`** does not affect these counts (v1 has no review metrics).
 
 There is **no on-disk activity cache**: every `audit:run` recomputes activity from GitHub for the configured time window. If you change rules or `window_months`, run the engine again.
 
@@ -81,11 +82,14 @@ flowchart LR
 |--------|---------|
 | `npm run audit:fetch` | `node scripts/audit-fetch-raw.mjs` |
 | `npm run audit:run` | `node scripts/audit-rule-engine.mjs` |
+| `npm run audit:repo-activity` | `node scripts/audit-repo-activity.mjs` |
+| `npm run audit:merge-maintainer-activity` | `node scripts/audit-merge-maintainer-repo-activity.mjs` |
 
 Pass engine or fetch arguments **after** `--` so npm forwards them:
 
 ```bash
 npm run audit:run -- --max-repos 5 --rules docs/audit/rules/my-experiment.yaml
+npm run audit:repo-activity -- --max-repos 3
 ```
 
 ---
@@ -169,6 +173,88 @@ npm run audit:run -- --raw /path/to/raw-data.json --teams /path/to/teams-mapping
 
 ---
 
+## Step 3: Repo-level activity (`audit-repo-activity.mjs`)
+
+Use this for **org / consolidation** views: how busy each repo is in the window, with **human** counts excluding **`bots.deny_pr_authors`** (same list as maintainer auditing). Counts come from the **GitHub Search API** (paced like the rule engine).
+
+### Environment
+
+| Variable | Required | Purpose |
+|----------|----------|---------|
+| `GITHUB_TOKEN` | **Yes** | Search API. |
+
+### Flags
+
+| Flag | Argument | Default | Meaning |
+|------|----------|---------|---------|
+| `--rules` | file path | `docs/audit/rules/default.yaml` | **`window_months`** and **`bots`** (only `deny_pr_authors` affects human vs bot splits). |
+| `--raw` | file path | `docs/audit/raw-data.json` | Repo list (same as maintainer audit). |
+| `--max-repos` | integer | no limit | First **N** repos only (testing). |
+
+### Metrics (per repo)
+
+| Field | Meaning |
+|-------|--------|
+| `issues_opened_total` / `issues_opened_human` | Issues **created** in window; human = excludes `-author:` for each `deny_pr_authors` entry. |
+| `prs_opened_total` / `prs_opened_human` | PRs **created** in window. |
+| `prs_merged_total` / `prs_merged_human` | PRs **merged** in window (`merged:>=since_day`). |
+| `prs_merged_by_bot_author` | Map of **merged** PR count **authored** by each denied bot login. |
+| `issues_closed` | Issues **closed** in window. |
+| `prs_closed_not_merged` | PRs **closed** without merge in window (`is:closed is:unmerged`). |
+| `_errors` | Optional: Search **422** or other captured errors per metric. |
+
+Raw JSON records **`window.since_day`** and **`generated_at`** (fetch time), not per-item timestamps.
+
+### Example
+
+```bash
+export GITHUB_TOKEN=ghp_...
+npm run audit:repo-activity
+```
+
+### Outputs
+
+**`docs/audit/repo-activity-runs/<run-id>/`**
+
+| Path | Purpose |
+|------|--------|
+| `input/manifest.json` | `audit_kind: repo_activity`, `repo_activity_version`, `since_day`, `window_months`, `bots`, paths. |
+| `input/raw-data.json`, `input/rules.yaml` | Snapshots used. |
+| `output/repo-activity-raw.json` | Full report. |
+| `output/repo-activity-summary.json` | Compact `repos[]` + metrics. |
+| `output/repo-activity-summary.md` | Table sorted by **human merged PRs** (ascending). |
+
+**Duration:** ~10 Search calls per repo (plus pacing). Full org can take **tens of minutes**.
+
+### Merge maintainer summary + repo activity
+
+After you have **`runs/<id>/output/summary.json`** and **`repo-activity-runs/<id>/output/repo-activity-summary.json`**, you can combine them (same **`full_name`** per repo) into reports sorted by **active maintainer count**:
+
+```bash
+npm run audit:merge-maintainer-activity -- \
+  --maintainer-summary docs/audit/runs/20260329T084806Z/output/summary.json \
+  --repo-activity-summary docs/audit/repo-activity-runs/20260418T185703Z/output/repo-activity-summary.json
+```
+
+Optional: `--out-dir <dir>` (default: directory of the repo-activity summary). Optional: `--emeritus-candidates <emeritus-candidates.md>` (default: `emeritus-candidates.md` in the same folder as `summary.json`).
+
+**Writes next to the repo-activity summary (unless `--out-dir` is set).** See **`analysis-reports-index.md`** in that folder for the full list. Highlights:
+
+| File | Purpose |
+|------|--------|
+| `analysis-reports-index.md` | Catalog of every generated merge report. |
+| `at-risk-scorecard.md` / `.json` | Heuristic **risk rank** (coverage + traffic + bot share + emeritus count); JSON includes `at_risk_parts` breakdown. |
+| `emeritus-candidates-by-repo.md` / `.json` | **One row per repo**: all emeritus candidate logins (grouped from `emeritus-candidates.md`). |
+| `maintainer-tier-roster.md` / `.json` | Repos ordered **0 → N** active maintainers; columns: active list, **inactive maintainers** (audit “emeritus risk”), active / inactive triagers. |
+| `active-maintainer-distribution.md` / `.json` | **Count of repos** per active-maintainer tier (0, 1, 2, …). |
+| `critical-repos-analysis.md` / `.json` | Same risk sort as merge + **full activity** + bot-merge **%** (spreadsheet-friendly JSON). |
+| `merged-repo-activity-by-maintainer-count.json` | Full merge: lists, counts, triagers, `metrics`. |
+| `merged-repo-activity-by-maintainer-count.md` | Activity table + maintainer counts + login appendix. |
+| `repo-maintenance-load.md` | `prs_merged_human / active_maintainer_count` (descending). |
+| `consolidation-signals.json` | Repos with **zero** active maintainers; **high bot-authored merge share** (heuristic). |
+
+---
+
 ## When to use what
 
 | Goal | What to do |
@@ -178,10 +264,12 @@ npm run audit:run -- --raw /path/to/raw-data.json --teams /path/to/teams-mapping
 | **Different time window or rules** | Copy/edit a YAML file under `docs/audit/rules/`, pass `--rules`. |
 | **Latest CODEOWNERS** | Run `npm run audit:fetch` again before `audit:run` (the engine reads whatever file `--raw` points to at run time). |
 | **Rule or aggregation change** | Edit the rules YAML and run `audit:run` again. No cache to clear—each run is a full API evaluation for that window. |
+| **Repo-level issue/PR activity (S1 / consolidation)** | After `audit:fetch`, run `npm run audit:repo-activity` (same `window_months` / bots if you use `default.yaml`). |
+| **Merge maintainer health + repo traffic** | Run `audit:merge-maintainer-activity` with paths to `summary.json` and `repo-activity-summary.json`. |
 
 ---
 
-## Outputs per run
+## Outputs per run (maintainer audit)
 
 After `npm run audit:run`, a new directory appears:
 

@@ -1,0 +1,152 @@
+{
+  "generated_at": "2026-04-19T04:35:09.500Z",
+  "description": "Heuristic flags: repos with no active maintainers; repos where ≥80% of merged PRs in window are authored by deny-listed bots (merged count ≥ 10).",
+  "repos_zero_active_maintainers": [
+    "asyncapi/brand",
+    "asyncapi/chatbot",
+    "asyncapi/diff",
+    "asyncapi/EDAVisualiser",
+    "asyncapi/enterprise-patterns",
+    "asyncapi/extensions-catalog",
+    "asyncapi/go-watermill-template",
+    "asyncapi/java-spring-template",
+    "asyncapi/learning-paths",
+    "asyncapi/nodejs-template",
+    "asyncapi/nodejs-ws-template",
+    "asyncapi/parser-api",
+    "asyncapi/php-template",
+    "asyncapi/problem",
+    "asyncapi/python-paho-template",
+    "asyncapi/tck",
+    "asyncapi/template-for-generator-templates",
+    "asyncapi/training"
+  ],
+  "repos_high_bot_merge_share": [
+    {
+      "full_name": "asyncapi/avro-schema-parser",
+      "prs_merged_total": 16,
+      "prs_merged_human": 1,
+      "bot_merged_sum": 15,
+      "active_maintainer_count": 1
+    },
+    {
+      "full_name": "asyncapi/brand",
+      "prs_merged_total": 10,
+      "prs_merged_human": 0,
+      "bot_merged_sum": 10,
+      "active_maintainer_count": 0
+    },
+    {
+      "full_name": "asyncapi/chatbot",
+      "prs_merged_total": 10,
+      "prs_merged_human": 0,
+      "bot_merged_sum": 10,
+      "active_maintainer_count": 0
+    },
+    {
+      "full_name": "asyncapi/diff",
+      "prs_merged_total": 15,
+      "prs_merged_human": 0,
+      "bot_merged_sum": 15,
+      "active_maintainer_count": 0
+    },
+    {
+      "full_name": "asyncapi/EDAVisualiser",
+      "prs_merged_total": 11,
+      "prs_merged_human": 0,
+      "bot_merged_sum": 11,
+      "active_maintainer_count": 0
+    },
+    {
+      "full_name": "asyncapi/enterprise-patterns",
+      "prs_merged_total": 11,
+      "prs_merged_human": 0,
+      "bot_merged_sum": 11,
+      "active_maintainer_count": 0
+    },
+    {
+      "full_name": "asyncapi/go-watermill-template",
+      "prs_merged_total": 46,
+      "prs_merged_human": 0,
+      "bot_merged_sum": 46,
+      "active_maintainer_count": 0
+    },
+    {
+      "full_name": "asyncapi/java-template",
+      "prs_merged_total": 12,
+      "prs_merged_human": 1,
+      "bot_merged_sum": 11,
+      "active_maintainer_count": 1
+    },
+    {
+      "full_name": "asyncapi/learning-paths",
+      "prs_merged_total": 11,
+      "prs_merged_human": 0,
+      "bot_merged_sum": 11,
+      "active_maintainer_count": 0
+    },
+    {
+      "full_name": "asyncapi/net-sdk",
+      "prs_merged_total": 11,
+      "prs_merged_human": 0,
+      "bot_merged_sum": 11,
+      "active_maintainer_count": 1
+    },
+    {
+      "full_name": "asyncapi/nodejs-ws-template",
+      "prs_merged_total": 17,
+      "prs_merged_human": 3,
+      "bot_merged_sum": 14,
+      "active_maintainer_count": 0
+    },
+    {
+      "full_name": "asyncapi/optimizer",
+      "prs_merged_total": 18,
+      "prs_merged_human": 3,
+      "bot_merged_sum": 15,
+      "active_maintainer_count": 1
+    },
+    {
+      "full_name": "asyncapi/parser-api",
+      "prs_merged_total": 11,
+      "prs_merged_human": 0,
+      "bot_merged_sum": 11,
+      "active_maintainer_count": 0
+    },
+    {
+      "full_name": "asyncapi/php-template",
+      "prs_merged_total": 13,
+      "prs_merged_human": 1,
+      "bot_merged_sum": 12,
+      "active_maintainer_count": 0
+    },
+    {
+      "full_name": "asyncapi/problem",
+      "prs_merged_total": 14,
+      "prs_merged_human": 0,
+      "bot_merged_sum": 14,
+      "active_maintainer_count": 0
+    },
+    {
+      "full_name": "asyncapi/protobuf-schema-parser",
+      "prs_merged_total": 17,
+      "prs_merged_human": 1,
+      "bot_merged_sum": 16,
+      "active_maintainer_count": 2
+    },
+    {
+      "full_name": "asyncapi/template-for-generator-templates",
+      "prs_merged_total": 17,
+      "prs_merged_human": 0,
+      "bot_merged_sum": 17,
+      "active_maintainer_count": 0
+    },
+    {
+      "full_name": "asyncapi/training",
+      "prs_merged_total": 11,
+      "prs_merged_human": 0,
+      "bot_merged_sum": 11,
+      "active_maintainer_count": 0
+    }
+  ]
+}
