@@ -1,9 +1,10 @@
 {
-  "generated_at": "2026-04-19T04:35:09.500Z",
+  "generated_at": "2026-04-19T04:46:09.522Z",
   "maintainer_run_id": "20260329T084806Z",
   "repo_activity_run_id": "20260418T185703Z",
   "since_day": "2025-04-18",
   "window_months": 12,
+  "analysis_activity_basis": "Issue/PR opened and merged figures in analysis reports and scoring use human-only counts (deny_pr_authors excluded). Bot-authored activity is not scored.",
   "sort": {
     "primary": "active_maintainer_count_asc",
     "secondary": "prs_merged_human_asc",

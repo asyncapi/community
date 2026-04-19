@@ -1,9 +1,10 @@
 {
-  "generated_at": "2026-04-19T04:35:09.500Z",
+  "generated_at": "2026-04-19T04:46:09.522Z",
   "maintainer_run_id": "20260329T084806Z",
   "repo_activity_run_id": "20260418T185703Z",
   "since_day": "2025-04-18",
   "window_months": 12,
+  "analysis_activity_basis": "Issue/PR opened and merged figures in analysis reports and scoring use human-only counts (deny_pr_authors excluded). Bot-authored activity is not scored.",
   "sort": {
     "primary": "active_maintainer_count_asc",
     "secondary": "prs_merged_human_asc",
@@ -23,17 +24,9 @@
       ],
       "active_triagers": [],
       "inactive_triagers": [],
-      "issues_opened_total": 5,
       "issues_opened_human": 5,
-      "prs_opened_total": 13,
       "prs_opened_human": 3,
-      "prs_merged_total": 10,
       "prs_merged_human": 0,
-      "prs_merged_by_bot_author": {
-        "asyncapi-bot": 10
-      },
-      "prs_merged_bot_sum": 10,
-      "prs_merged_bot_pct": 100,
       "issues_closed": 5,
       "prs_closed_not_merged": 1
     },
@@ -51,17 +44,9 @@
       ],
       "active_triagers": [],
       "inactive_triagers": [],
-      "issues_opened_total": 1,
       "issues_opened_human": 1,
-      "prs_opened_total": 12,
       "prs_opened_human": 1,
-      "prs_merged_total": 10,
       "prs_merged_human": 0,
-      "prs_merged_by_bot_author": {
-        "asyncapi-bot": 10
-      },
-      "prs_merged_bot_sum": 10,
-      "prs_merged_bot_pct": 100,
       "issues_closed": 4,
       "prs_closed_not_merged": 3
     },
@@ -79,17 +64,9 @@
       ],
       "active_triagers": [],
       "inactive_triagers": [],
-      "issues_opened_total": 2,
       "issues_opened_human": 2,
-      "prs_opened_total": 15,
       "prs_opened_human": 0,
-      "prs_merged_total": 15,
       "prs_merged_human": 0,
-      "prs_merged_by_bot_author": {
-        "asyncapi-bot": 15
-      },
-      "prs_merged_bot_sum": 15,
-      "prs_merged_bot_pct": 100,
       "issues_closed": 4,
       "prs_closed_not_merged": 0
     },
@@ -106,17 +83,9 @@
       ],
       "active_triagers": [],
       "inactive_triagers": [],
-      "issues_opened_total": 1,
       "issues_opened_human": 1,
-      "prs_opened_total": 12,
       "prs_opened_human": 0,
-      "prs_merged_total": 11,
       "prs_merged_human": 0,
-      "prs_merged_by_bot_author": {
-        "asyncapi-bot": 11
-      },
-      "prs_merged_bot_sum": 11,
-      "prs_merged_bot_pct": 100,
       "issues_closed": 5,
       "prs_closed_not_merged": 2
     },
@@ -133,17 +102,9 @@
       ],
       "active_triagers": [],
       "inactive_triagers": [],
-      "issues_opened_total": 0,
       "issues_opened_human": 0,
-      "prs_opened_total": 11,
       "prs_opened_human": 0,
-      "prs_merged_total": 11,
       "prs_merged_human": 0,
-      "prs_merged_by_bot_author": {
-        "asyncapi-bot": 11
-      },
-      "prs_merged_bot_sum": 11,
-      "prs_merged_bot_pct": 100,
       "issues_closed": 0,
       "prs_closed_not_merged": 0
     },
@@ -160,17 +121,9 @@
       ],
       "active_triagers": [],
       "inactive_triagers": [],
-      "issues_opened_total": 0,
       "issues_opened_human": 0,
-      "prs_opened_total": 48,
       "prs_opened_human": 2,
-      "prs_merged_total": 46,
       "prs_merged_human": 0,
-      "prs_merged_by_bot_author": {
-        "asyncapi-bot": 46
-      },
-      "prs_merged_bot_sum": 46,
-      "prs_merged_bot_pct": 100,
       "issues_closed": 1,
       "prs_closed_not_merged": 2
     },
@@ -187,17 +140,9 @@
       ],
       "active_triagers": [],
       "inactive_triagers": [],
-      "issues_opened_total": 0,
       "issues_opened_human": 0,
-      "prs_opened_total": 11,
       "prs_opened_human": 0,
-      "prs_merged_total": 11,
       "prs_merged_human": 0,
-      "prs_merged_by_bot_author": {
-        "asyncapi-bot": 11
-      },
-      "prs_merged_bot_sum": 11,
-      "prs_merged_bot_pct": 100,
       "issues_closed": 0,
       "prs_closed_not_merged": 0
     },
@@ -214,17 +159,9 @@
       ],
       "active_triagers": [],
       "inactive_triagers": [],
-      "issues_opened_total": 0,
       "issues_opened_human": 0,
-      "prs_opened_total": 13,
       "prs_opened_human": 2,
-      "prs_merged_total": 11,
       "prs_merged_human": 0,
-      "prs_merged_by_bot_author": {
-        "asyncapi-bot": 11
-      },
-      "prs_merged_bot_sum": 11,
-      "prs_merged_bot_pct": 100,
       "issues_closed": 0,
       "prs_closed_not_merged": 1
     },
@@ -241,17 +178,9 @@
       ],
       "active_triagers": [],
       "inactive_triagers": [],
-      "issues_opened_total": 0,
       "issues_opened_human": 0,
-      "prs_opened_total": 14,
       "prs_opened_human": 0,
-      "prs_merged_total": 14,
       "prs_merged_human": 0,
-      "prs_merged_by_bot_author": {
-        "asyncapi-bot": 14
-      },
-      "prs_merged_bot_sum": 14,
-      "prs_merged_bot_pct": 100,
       "issues_closed": 0,
       "prs_closed_not_merged": 0
     },
@@ -268,17 +197,9 @@
       ],
       "active_triagers": [],
       "inactive_triagers": [],
-      "issues_opened_total": 0,
       "issues_opened_human": 0,
-      "prs_opened_total": 13,
       "prs_opened_human": 7,
-      "prs_merged_total": 6,
       "prs_merged_human": 0,
-      "prs_merged_by_bot_author": {
-        "asyncapi-bot": 6
-      },
-      "prs_merged_bot_sum": 6,
-      "prs_merged_bot_pct": 100,
       "issues_closed": 5,
       "prs_closed_not_merged": 4
     },
@@ -295,17 +216,9 @@
       ],
       "active_triagers": [],
       "inactive_triagers": [],
-      "issues_opened_total": 0,
       "issues_opened_human": 0,
-      "prs_opened_total": 17,
       "prs_opened_human": 0,
-      "prs_merged_total": 17,
       "prs_merged_human": 0,
-      "prs_merged_by_bot_author": {
-        "asyncapi-bot": 17
-      },
-      "prs_merged_bot_sum": 17,
-      "prs_merged_bot_pct": 100,
       "issues_closed": 2,
       "prs_closed_not_merged": 0
     },
@@ -321,17 +234,9 @@
       ],
       "active_triagers": [],
       "inactive_triagers": [],
-      "issues_opened_total": 3,
       "issues_opened_human": 3,
-      "prs_opened_total": 12,
       "prs_opened_human": 1,
-      "prs_merged_total": 11,
       "prs_merged_human": 0,
-      "prs_merged_by_bot_author": {
-        "asyncapi-bot": 11
-      },
-      "prs_merged_bot_sum": 11,
-      "prs_merged_bot_pct": 100,
       "issues_closed": 2,
       "prs_closed_not_merged": 0
     },
@@ -347,17 +252,9 @@
       ],
       "active_triagers": [],
       "inactive_triagers": [],
-      "issues_opened_total": 0,
       "issues_opened_human": 0,
-      "prs_opened_total": 13,
       "prs_opened_human": 1,
-      "prs_merged_total": 13,
       "prs_merged_human": 1,
-      "prs_merged_by_bot_author": {
-        "asyncapi-bot": 12
-      },
-      "prs_merged_bot_sum": 12,
-      "prs_merged_bot_pct": 92.31,
       "issues_closed": 0,
       "prs_closed_not_merged": 0
     },
@@ -374,17 +271,9 @@
       ],
       "active_triagers": [],
       "inactive_triagers": [],
-      "issues_opened_total": 0,
       "issues_opened_human": 0,
-      "prs_opened_total": 12,
       "prs_opened_human": 3,
-      "prs_merged_total": 12,
       "prs_merged_human": 3,
-      "prs_merged_by_bot_author": {
-        "asyncapi-bot": 9
-      },
-      "prs_merged_bot_sum": 9,
-      "prs_merged_bot_pct": 75,
       "issues_closed": 0,
       "prs_closed_not_merged": 0
     },
@@ -401,17 +290,9 @@
       ],
       "active_triagers": [],
       "inactive_triagers": [],
-      "issues_opened_total": 1,
       "issues_opened_human": 1,
-      "prs_opened_total": 39,
       "prs_opened_human": 24,
-      "prs_merged_total": 17,
       "prs_merged_human": 3,
-      "prs_merged_by_bot_author": {
-        "asyncapi-bot": 14
-      },
-      "prs_merged_bot_sum": 14,
-      "prs_merged_bot_pct": 82.35,
       "issues_closed": 1,
       "prs_closed_not_merged": 9
     },
@@ -427,17 +308,9 @@
       ],
       "active_triagers": [],
       "inactive_triagers": [],
-      "issues_opened_total": 0,
       "issues_opened_human": 0,
-      "prs_opened_total": 17,
       "prs_opened_human": 7,
-      "prs_merged_total": 14,
       "prs_merged_human": 4,
-      "prs_merged_by_bot_author": {
-        "asyncapi-bot": 10
-      },
-      "prs_merged_bot_sum": 10,
-      "prs_merged_bot_pct": 71.43,
       "issues_closed": 1,
       "prs_closed_not_merged": 4
     },
@@ -454,17 +327,9 @@
       ],
       "active_triagers": [],
       "inactive_triagers": [],
-      "issues_opened_total": 3,
       "issues_opened_human": 3,
-      "prs_opened_total": 39,
       "prs_opened_human": 23,
-      "prs_merged_total": 34,
       "prs_merged_human": 18,
-      "prs_merged_by_bot_author": {
-        "asyncapi-bot": 16
-      },
-      "prs_merged_bot_sum": 16,
-      "prs_merged_bot_pct": 47.06,
       "issues_closed": 0,
       "prs_closed_not_merged": 1
     },
@@ -481,17 +346,9 @@
       ],
       "active_triagers": [],
       "inactive_triagers": [],
-      "issues_opened_total": 1,
       "issues_opened_human": 1,
-      "prs_opened_total": 38,
       "prs_opened_human": 22,
-      "prs_merged_total": 32,
       "prs_merged_human": 18,
-      "prs_merged_by_bot_author": {
-        "asyncapi-bot": 14
-      },
-      "prs_merged_bot_sum": 14,
-      "prs_merged_bot_pct": 43.75,
       "issues_closed": 7,
       "prs_closed_not_merged": 2
     },
@@ -509,17 +366,9 @@
       ],
       "active_triagers": [],
       "inactive_triagers": [],
-      "issues_opened_total": 3,
       "issues_opened_human": 3,
-      "prs_opened_total": 12,
       "prs_opened_human": 1,
-      "prs_merged_total": 11,
       "prs_merged_human": 0,
-      "prs_merged_by_bot_author": {
-        "asyncapi-bot": 11
-      },
-      "prs_merged_bot_sum": 11,
-      "prs_merged_bot_pct": 100,
       "issues_closed": 2,
       "prs_closed_not_merged": 1
     },
@@ -537,17 +386,9 @@
       ],
       "active_triagers": [],
       "inactive_triagers": [],
-      "issues_opened_total": 2,
       "issues_opened_human": 2,
-      "prs_opened_total": 16,
       "prs_opened_human": 1,
-      "prs_merged_total": 16,
       "prs_merged_human": 1,
-      "prs_merged_by_bot_author": {
-        "asyncapi-bot": 15
-      },
-      "prs_merged_bot_sum": 15,
-      "prs_merged_bot_pct": 93.75,
       "issues_closed": 11,
       "prs_closed_not_merged": 1
     },
@@ -565,17 +406,9 @@
       ],
       "active_triagers": [],
       "inactive_triagers": [],
-      "issues_opened_total": 0,
       "issues_opened_human": 0,
-      "prs_opened_total": 5,
       "prs_opened_human": 1,
-      "prs_merged_total": 5,
       "prs_merged_human": 1,
-      "prs_merged_by_bot_author": {
-        "asyncapi-bot": 4
-      },
-      "prs_merged_bot_sum": 4,
-      "prs_merged_bot_pct": 80,
       "issues_closed": 2,
       "prs_closed_not_merged": 1
     },
@@ -596,17 +429,9 @@
       ],
       "active_triagers": [],
       "inactive_triagers": [],
-      "issues_opened_total": 0,
       "issues_opened_human": 0,
-      "prs_opened_total": 14,
       "prs_opened_human": 1,
-      "prs_merged_total": 12,
       "prs_merged_human": 1,
-      "prs_merged_by_bot_author": {
-        "asyncapi-bot": 11
-      },
-      "prs_merged_bot_sum": 11,
-      "prs_merged_bot_pct": 91.67,
       "issues_closed": 5,
       "prs_closed_not_merged": 2
     },
@@ -622,17 +447,9 @@
       "inactive_maintainers": [],
       "active_triagers": [],
       "inactive_triagers": [],
-      "issues_opened_total": 0,
       "issues_opened_human": 0,
-      "prs_opened_total": 19,
       "prs_opened_human": 4,
-      "prs_merged_total": 18,
       "prs_merged_human": 3,
-      "prs_merged_by_bot_author": {
-        "asyncapi-bot": 15
-      },
-      "prs_merged_bot_sum": 15,
-      "prs_merged_bot_pct": 83.33,
       "issues_closed": 0,
       "prs_closed_not_merged": 0
     },
@@ -650,17 +467,9 @@
       ],
       "active_triagers": [],
       "inactive_triagers": [],
-      "issues_opened_total": 1,
       "issues_opened_human": 1,
-      "prs_opened_total": 15,
       "prs_opened_human": 4,
-      "prs_merged_total": 16,
       "prs_merged_human": 5,
-      "prs_merged_by_bot_author": {
-        "asyncapi-bot": 11
-      },
-      "prs_merged_bot_sum": 11,
-      "prs_merged_bot_pct": 68.75,
       "issues_closed": 2,
       "prs_closed_not_merged": 0
     },
@@ -678,17 +487,9 @@
       ],
       "active_triagers": [],
       "inactive_triagers": [],
-      "issues_opened_total": 0,
       "issues_opened_human": 0,
-      "prs_opened_total": 21,
       "prs_opened_human": 8,
-      "prs_merged_total": 17,
       "prs_merged_human": 5,
-      "prs_merged_by_bot_author": {
-        "asyncapi-bot": 12
-      },
-      "prs_merged_bot_sum": 12,
-      "prs_merged_bot_pct": 70.59,
       "issues_closed": 14,
       "prs_closed_not_merged": 5
     },
@@ -713,17 +514,9 @@
       ],
       "active_triagers": [],
       "inactive_triagers": [],
-      "issues_opened_total": 40,
       "issues_opened_human": 39,
-      "prs_opened_total": 245,
       "prs_opened_human": 185,
-      "prs_merged_total": 187,
       "prs_merged_human": 127,
-      "prs_merged_by_bot_author": {
-        "asyncapi-bot": 60
-      },
-      "prs_merged_bot_sum": 60,
-      "prs_merged_bot_pct": 32.09,
       "issues_closed": 49,
       "prs_closed_not_merged": 45
     },
@@ -740,17 +533,9 @@
       "inactive_maintainers": [],
       "active_triagers": [],
       "inactive_triagers": [],
-      "issues_opened_total": 0,
       "issues_opened_human": 0,
-      "prs_opened_total": 17,
       "prs_opened_human": 1,
-      "prs_merged_total": 17,
       "prs_merged_human": 1,
-      "prs_merged_by_bot_author": {
-        "asyncapi-bot": 16
-      },
-      "prs_merged_bot_sum": 16,
-      "prs_merged_bot_pct": 94.12,
       "issues_closed": 0,
       "prs_closed_not_merged": 0
     },
@@ -767,17 +552,9 @@
       "inactive_maintainers": [],
       "active_triagers": [],
       "inactive_triagers": [],
-      "issues_opened_total": 1,
       "issues_opened_human": 1,
-      "prs_opened_total": 21,
       "prs_opened_human": 6,
-      "prs_merged_total": 20,
       "prs_merged_human": 5,
-      "prs_merged_by_bot_author": {
-        "asyncapi-bot": 15
-      },
-      "prs_merged_bot_sum": 15,
-      "prs_merged_bot_pct": 75,
       "issues_closed": 0,
       "prs_closed_not_merged": 0
     },
@@ -794,17 +571,9 @@
       "inactive_maintainers": [],
       "active_triagers": [],
       "inactive_triagers": [],
-      "issues_opened_total": 1,
       "issues_opened_human": 1,
-      "prs_opened_total": 14,
       "prs_opened_human": 12,
-      "prs_merged_total": 9,
       "prs_merged_human": 8,
-      "prs_merged_by_bot_author": {
-        "asyncapi-bot": 1
-      },
-      "prs_merged_bot_sum": 1,
-      "prs_merged_bot_pct": 11.11,
       "issues_closed": 1,
       "prs_closed_not_merged": 3
     },
@@ -821,17 +590,9 @@
       "inactive_maintainers": [],
       "active_triagers": [],
       "inactive_triagers": [],
-      "issues_opened_total": 11,
       "issues_opened_human": 11,
-      "prs_opened_total": 43,
       "prs_opened_human": 33,
-      "prs_merged_total": 20,
       "prs_merged_human": 11,
-      "prs_merged_by_bot_author": {
-        "asyncapi-bot": 9
-      },
-      "prs_merged_bot_sum": 9,
-      "prs_merged_bot_pct": 45,
       "issues_closed": 20,
       "prs_closed_not_merged": 18
     },
@@ -850,17 +611,9 @@
       ],
       "active_triagers": [],
       "inactive_triagers": [],
-      "issues_opened_total": 0,
       "issues_opened_human": 0,
-      "prs_opened_total": 33,
       "prs_opened_human": 16,
-      "prs_merged_total": 31,
       "prs_merged_human": 13,
-      "prs_merged_by_bot_author": {
-        "asyncapi-bot": 18
-      },
-      "prs_merged_bot_sum": 18,
-      "prs_merged_bot_pct": 58.06,
       "issues_closed": 4,
       "prs_closed_not_merged": 1
     },
@@ -877,17 +630,9 @@
       "inactive_maintainers": [],
       "active_triagers": [],
       "inactive_triagers": [],
-      "issues_opened_total": 6,
       "issues_opened_human": 6,
-      "prs_opened_total": 43,
       "prs_opened_human": 16,
-      "prs_merged_total": 40,
       "prs_merged_human": 13,
-      "prs_merged_by_bot_author": {
-        "asyncapi-bot": 27
-      },
-      "prs_merged_bot_sum": 27,
-      "prs_merged_bot_pct": 67.5,
       "issues_closed": 22,
       "prs_closed_not_merged": 6
     },
@@ -906,17 +651,9 @@
       ],
       "active_triagers": [],
       "inactive_triagers": [],
-      "issues_opened_total": 1,
       "issues_opened_human": 1,
-      "prs_opened_total": 41,
       "prs_opened_human": 26,
-      "prs_merged_total": 36,
       "prs_merged_human": 22,
-      "prs_merged_by_bot_author": {
-        "asyncapi-bot": 14
-      },
-      "prs_merged_bot_sum": 14,
-      "prs_merged_bot_pct": 38.89,
       "issues_closed": 0,
       "prs_closed_not_merged": 2
     },
@@ -935,17 +672,9 @@
       ],
       "active_triagers": [],
       "inactive_triagers": [],
-      "issues_opened_total": 10,
       "issues_opened_human": 9,
-      "prs_opened_total": 71,
       "prs_opened_human": 40,
-      "prs_merged_total": 62,
       "prs_merged_human": 32,
-      "prs_merged_by_bot_author": {
-        "asyncapi-bot": 30
-      },
-      "prs_merged_bot_sum": 30,
-      "prs_merged_bot_pct": 48.39,
       "issues_closed": 12,
       "prs_closed_not_merged": 4
     },
@@ -964,17 +693,9 @@
       ],
       "active_triagers": [],
       "inactive_triagers": [],
-      "issues_opened_total": 27,
       "issues_opened_human": 27,
-      "prs_opened_total": 82,
       "prs_opened_human": 59,
-      "prs_merged_total": 59,
       "prs_merged_human": 36,
-      "prs_merged_by_bot_author": {
-        "asyncapi-bot": 23
-      },
-      "prs_merged_bot_sum": 23,
-      "prs_merged_bot_pct": 38.98,
       "issues_closed": 31,
       "prs_closed_not_merged": 14
     },
@@ -1003,17 +724,9 @@
         "octocat",
         "theschles"
       ],
-      "issues_opened_total": 14,
       "issues_opened_human": 14,
-      "prs_opened_total": 81,
       "prs_opened_human": 70,
-      "prs_merged_total": 80,
       "prs_merged_human": 69,
-      "prs_merged_by_bot_author": {
-        "asyncapi-bot": 11
-      },
-      "prs_merged_bot_sum": 11,
-      "prs_merged_bot_pct": 13.75,
       "issues_closed": 14,
       "prs_closed_not_merged": 1
     },
@@ -1030,17 +743,9 @@
       "inactive_maintainers": [],
       "active_triagers": [],
       "inactive_triagers": [],
-      "issues_opened_total": 2,
       "issues_opened_human": 2,
-      "prs_opened_total": 156,
       "prs_opened_human": 145,
-      "prs_merged_total": 139,
       "prs_merged_human": 128,
-      "prs_merged_by_bot_author": {
-        "asyncapi-bot": 11
-      },
-      "prs_merged_bot_sum": 11,
-      "prs_merged_bot_pct": 7.91,
       "issues_closed": 1,
       "prs_closed_not_merged": 15
     },
@@ -1058,17 +763,9 @@
       "inactive_maintainers": [],
       "active_triagers": [],
       "inactive_triagers": [],
-      "issues_opened_total": 1,
       "issues_opened_human": 1,
-      "prs_opened_total": 39,
       "prs_opened_human": 24,
-      "prs_merged_total": 35,
       "prs_merged_human": 20,
-      "prs_merged_by_bot_author": {
-        "asyncapi-bot": 15
-      },
-      "prs_merged_bot_sum": 15,
-      "prs_merged_bot_pct": 42.86,
       "issues_closed": 0,
       "prs_closed_not_merged": 0
     },
@@ -1086,17 +783,9 @@
       "inactive_maintainers": [],
       "active_triagers": [],
       "inactive_triagers": [],
-      "issues_opened_total": 17,
       "issues_opened_human": 17,
-      "prs_opened_total": 38,
       "prs_opened_human": 38,
-      "prs_merged_total": 27,
       "prs_merged_human": 27,
-      "prs_merged_by_bot_author": {
-        "asyncapi-bot": 0
-      },
-      "prs_merged_bot_sum": 0,
-      "prs_merged_bot_pct": 0,
       "issues_closed": 19,
       "prs_closed_not_merged": 8
     },
@@ -1133,17 +822,9 @@
       ],
       "active_triagers": [],
       "inactive_triagers": [],
-      "issues_opened_total": 6,
       "issues_opened_human": 6,
-      "prs_opened_total": 48,
       "prs_opened_human": 30,
-      "prs_merged_total": 37,
       "prs_merged_human": 19,
-      "prs_merged_by_bot_author": {
-        "asyncapi-bot": 18
-      },
-      "prs_merged_bot_sum": 18,
-      "prs_merged_bot_pct": 48.65,
       "issues_closed": 1,
       "prs_closed_not_merged": 7
     },
@@ -1164,17 +845,9 @@
       ],
       "active_triagers": [],
       "inactive_triagers": [],
-      "issues_opened_total": 30,
       "issues_opened_human": 30,
-      "prs_opened_total": 79,
       "prs_opened_human": 41,
-      "prs_merged_total": 65,
       "prs_merged_human": 27,
-      "prs_merged_by_bot_author": {
-        "asyncapi-bot": 38
-      },
-      "prs_merged_bot_sum": 38,
-      "prs_merged_bot_pct": 58.46,
       "issues_closed": 28,
       "prs_closed_not_merged": 5
     },
@@ -1193,17 +866,9 @@
       "inactive_maintainers": [],
       "active_triagers": [],
       "inactive_triagers": [],
-      "issues_opened_total": 80,
       "issues_opened_human": 80,
-      "prs_opened_total": 265,
       "prs_opened_human": 221,
-      "prs_merged_total": 146,
       "prs_merged_human": 102,
-      "prs_merged_by_bot_author": {
-        "asyncapi-bot": 44
-      },
-      "prs_merged_bot_sum": 44,
-      "prs_merged_bot_pct": 30.14,
       "issues_closed": 60,
       "prs_closed_not_merged": 69
     },
@@ -1222,17 +887,9 @@
       "inactive_maintainers": [],
       "active_triagers": [],
       "inactive_triagers": [],
-      "issues_opened_total": 87,
       "issues_opened_human": 87,
-      "prs_opened_total": 181,
       "prs_opened_human": 170,
-      "prs_merged_total": 124,
       "prs_merged_human": 113,
-      "prs_merged_by_bot_author": {
-        "asyncapi-bot": 11
-      },
-      "prs_merged_bot_sum": 11,
-      "prs_merged_bot_pct": 8.87,
       "issues_closed": 92,
       "prs_closed_not_merged": 68
     },
@@ -1255,17 +912,9 @@
         "CBID2"
       ],
       "inactive_triagers": [],
-      "issues_opened_total": 128,
       "issues_opened_human": 60,
-      "prs_opened_total": 270,
       "prs_opened_human": 130,
-      "prs_merged_total": 255,
       "prs_merged_human": 116,
-      "prs_merged_by_bot_author": {
-        "asyncapi-bot": 139
-      },
-      "prs_merged_bot_sum": 139,
-      "prs_merged_bot_pct": 54.51,
       "issues_closed": 139,
       "prs_closed_not_merged": 24
     },
@@ -1289,17 +938,9 @@
         "Florence-Njeri"
       ],
       "inactive_triagers": [],
-      "issues_opened_total": 223,
       "issues_opened_human": 223,
-      "prs_opened_total": 318,
       "prs_opened_human": 272,
-      "prs_merged_total": 212,
       "prs_merged_human": 178,
-      "prs_merged_by_bot_author": {
-        "asyncapi-bot": 34
-      },
-      "prs_merged_bot_sum": 34,
-      "prs_merged_bot_pct": 16.04,
       "issues_closed": 196,
       "prs_closed_not_merged": 98
     },
@@ -1319,17 +960,9 @@
       "inactive_maintainers": [],
       "active_triagers": [],
       "inactive_triagers": [],
-      "issues_opened_total": 34,
       "issues_opened_human": 34,
-      "prs_opened_total": 54,
       "prs_opened_human": 45,
-      "prs_merged_total": 28,
       "prs_merged_human": 19,
-      "prs_merged_by_bot_author": {
-        "asyncapi-bot": 9
-      },
-      "prs_merged_bot_sum": 9,
-      "prs_merged_bot_pct": 32.14,
       "issues_closed": 27,
       "prs_closed_not_merged": 23
     },
@@ -1363,17 +996,9 @@
       ],
       "active_triagers": [],
       "inactive_triagers": [],
-      "issues_opened_total": 9,
       "issues_opened_human": 9,
-      "prs_opened_total": 13,
       "prs_opened_human": 3,
-      "prs_merged_total": 13,
       "prs_merged_human": 3,
-      "prs_merged_by_bot_author": {
-        "asyncapi-bot": 10
-      },
-      "prs_merged_bot_sum": 10,
-      "prs_merged_bot_pct": 76.92,
       "issues_closed": 9,
       "prs_closed_not_merged": 1
     },
@@ -1403,17 +1028,9 @@
       "inactive_triagers": [
         "devilkiller-ag"
       ],
-      "issues_opened_total": 377,
       "issues_opened_human": 377,
-      "prs_opened_total": 908,
       "prs_opened_human": 515,
-      "prs_merged_total": 560,
       "prs_merged_human": 207,
-      "prs_merged_by_bot_author": {
-        "asyncapi-bot": 353
-      },
-      "prs_merged_bot_sum": 353,
-      "prs_merged_bot_pct": 63.04,
       "issues_closed": 328,
       "prs_closed_not_merged": 317
     }

@@ -2,7 +2,7 @@
 
 - Source: `docs/audit/runs/20260329T084806Z/output/emeritus-candidates.md`
 - Maintainer run: `20260329T084806Z`
-- Generated: 2026-04-19T04:35:09.500Z
+- Generated: 2026-04-19T04:46:09.522Z
 - Second column lists all **emeritus candidates** for that repo (unique logins, sorted).
 
 | Repository | Emeritus candidates |

@@ -54,11 +54,9 @@ function parseEmeritusCandidatesMd(mdPath) {
   return map;
 }
 
-function botMergedSum(metrics) {
-  const b = metrics?.prs_merged_by_bot_author;
-  if (!b || typeof b !== 'object') return 0;
-  return Object.values(b).reduce((s, v) => s + (v || 0), 0);
-}
+/** Analysis treats deny-listed bot PR/issue authors as non-signal (automation / version bumps). */
+const ANALYSIS_ACTIVITY_NOTE =
+  'Issue/PR opened and merged figures in analysis reports and scoring use human-only counts (deny_pr_authors excluded). Bot-authored activity is not scored.';
 
 /**
  * Heuristic at-risk score (higher = triage first). See at-risk-scorecard.md header.
@@ -80,15 +78,6 @@ function computeAtRiskScore(r, emeritusCount) {
     score += 12;
   }
 
-  const t = x.prs_merged_total;
-  const bot = botMergedSum(x);
-  if (typeof t === 'number' && t > 0) {
-    const botPct = (bot / t) * 100;
-    const pts = Math.min(35, Math.round(botPct * 0.35));
-    parts.bot_merge_weighted = pts;
-    score += pts;
-  }
-
   const inc = r.inactive_maintainer_count || 0;
   const incPts = Math.min(16, inc * 2);
   if (incPts > 0) {
@@ -96,26 +85,19 @@ function computeAtRiskScore(r, emeritusCount) {
     score += incPts;
   }
 
-  const pmh = x.prs_merged_human;
-  const pmt = x.prs_merged_total;
-  if (pmh === 0 && typeof pmt === 'number' && pmt >= 5) {
-    parts.no_human_merged_prs = 14;
-    score += 14;
-  }
-
   if (r.active_triager_count === 0 && am <= 1) {
     parts.no_triagers_thin_maintainers = 8;
     score += 8;
   }
 
-  const po = x.prs_opened_total;
-  if (typeof po === 'number' && po >= 40 && am <= 1) {
-    parts.high_pr_volume_thin_coverage = 10;
+  const poh = x.prs_opened_human;
+  if (typeof poh === 'number' && poh >= 40 && am <= 1) {
+    parts.high_human_pr_open_volume_thin_coverage = 10;
     score += 10;
   }
 
-  const io = x.issues_opened_human ?? x.issues_opened_total;
-  if (typeof io === 'number' && io >= 25 && am === 0) {
+  const ioh = x.issues_opened_human;
+  if (typeof ioh === 'number' && ioh >= 25 && am === 0) {
     parts.issue_volume_no_active_maintainers = 10;
     score += 10;
   }
@@ -203,20 +185,17 @@ function writeCriticalReposMd(rows, meta) {
   md += `- Repo activity run: \`${meta.repo_activity_run_id}\`\n`;
   md += `- Window: since **${meta.since_day}** (${meta.window_months} months)\n`;
   md += `- Sort: **active maintainer count ↑**, then **human merged PRs ↑** (stressed / under-covered repos rise to the top).\n`;
-  md += `- **Bot merged** = merged PRs authored by \`deny_pr_authors\` bots; **bot %** = bot / total merged (if total > 0).\n\n`;
+  md += `- **Human-only traffic:** issues/PRs opened and PRs merged exclude \`deny_pr_authors\` bots (automation treated as non-signal here). Raw totals remain in \`repo-activity-*.json\` from \`audit:repo-activity\`.\n\n`;
 
   md +=
-    '| Repository | Act M | Inact M | Act T | Inact T | Issues O t/h | PRs O t/h | Merged t/h | Bot merged | Bot % | Issues closed | PRs closed unmerged |\n';
+    '| Repository | Act M | Inact M | Act T | Inact T | Issues opened (human) | PRs opened (human) | PRs merged (human) | Issues closed | PRs closed unmerged |\n';
   md +=
-    '|------------|-------|---------|-------|---------|--------------|-----------|------------|------------|-------|---------------|---------------------|\n';
+    '|------------|-------|---------|-------|---------|------------------------|-------------------|-------------------|---------------|---------------------|\n';
 
   const sorted = [...rows].sort(sortCritical);
   for (const r of sorted) {
     const x = r.metrics || {};
-    const t = x.prs_merged_total;
-    const bot = botMergedSum(x);
-    const pct = typeof t === 'number' && t > 0 ? `${Math.round((bot / t) * 100)}%` : '—';
-    md += `| ${r.full_name} | ${r.active_maintainer_count} | ${r.inactive_maintainer_count} | ${r.active_triager_count} | ${r.inactive_triager_count} | ${x.issues_opened_total ?? '—'} / ${x.issues_opened_human ?? '—'} | ${x.prs_opened_total ?? '—'} / ${x.prs_opened_human ?? '—'} | ${x.prs_merged_total ?? '—'} / ${x.prs_merged_human ?? '—'} | ${bot} | ${pct} | ${x.issues_closed ?? '—'} | ${x.prs_closed_not_merged ?? '—'} |\n`;
+    md += `| ${r.full_name} | ${r.active_maintainer_count} | ${r.inactive_maintainer_count} | ${r.active_triager_count} | ${r.inactive_triager_count} | ${x.issues_opened_human ?? '—'} | ${x.prs_opened_human ?? '—'} | ${x.prs_merged_human ?? '—'} | ${x.issues_closed ?? '—'} | ${x.prs_closed_not_merged ?? '—'} |\n`;
   }
   return md;
 }
@@ -227,24 +206,19 @@ function writeMergedMd(rows, meta) {
   md += `- Repo activity run: \`${meta.repo_activity_run_id}\`\n`;
   md += `- Generated: ${meta.generated_at}\n`;
   md += `- Repo activity window: since **${meta.since_day}** (${meta.window_months} months)\n`;
-  md += `- Sorted by **active maintainer count** (ascending), then **human merged PRs** (ascending).\n\n`;
+  md += `- Sorted by **active maintainer count** (ascending), then **human merged PRs** (ascending).\n`;
+  md += `- **Human-only** issue/PR opened and PR merged counts (bots excluded). See \`repo-activity-raw.json\` for totals including bots.\n\n`;
 
   md +=
-    '| Repository | Active M | Inactive M | Issues O (t/h) | PRs O (t/h) | PRs merged (t/h) | Issues closed | PRs closed unmerged |\n';
+    '| Repository | Active M | Inactive M | Issues opened (human) | PRs opened (human) | PRs merged (human) | Issues closed | PRs closed unmerged |\n';
   md +=
-    '|------------|----------|------------|----------------|-------------|------------------|---------------|---------------------|\n';
+    '|------------|----------|------------|----------------------|-------------------|-------------------|---------------|---------------------|\n';
 
   for (const r of rows) {
     const x = r.metrics || {};
-    const iot = x.issues_opened_total ?? '—';
-    const ioh = x.issues_opened_human ?? '—';
-    const pot = x.prs_opened_total ?? '—';
-    const poh = x.prs_opened_human ?? '—';
-    const pmt = x.prs_merged_total ?? '—';
-    const pmh = x.prs_merged_human ?? '—';
     const ic = x.issues_closed ?? '—';
     const pc = x.prs_closed_not_merged ?? '—';
-    md += `| ${r.full_name} | ${r.active_maintainer_count} | ${r.inactive_maintainer_count} | ${iot} / ${ioh} | ${pot} / ${poh} | ${pmt} / ${pmh} | ${ic} | ${pc} |\n`;
+    md += `| ${r.full_name} | ${r.active_maintainer_count} | ${r.inactive_maintainer_count} | ${x.issues_opened_human ?? '—'} | ${x.prs_opened_human ?? '—'} | ${x.prs_merged_human ?? '—'} | ${ic} | ${pc} |\n`;
   }
 
   md += '\n## Active maintainers (login list)\n\n';
@@ -290,7 +264,8 @@ function writeAnalysisIndex(paths, meta) {
   let md = `# Analysis reports index\n\n`;
   md += `- Maintainer run: \`${meta.maintainer_run_id}\`\n`;
   md += `- Repo activity run: \`${meta.repo_activity_run_id}\`\n`;
-  md += `- Generated: ${meta.generated_at}\n\n`;
+  md += `- Generated: ${meta.generated_at}\n`;
+  md += `- **Activity basis:** ${ANALYSIS_ACTIVITY_NOTE}\n\n`;
   md += '| File | Purpose |\n';
   md += '|------|--------|\n';
   for (const { file, purpose } of paths) {
@@ -327,40 +302,34 @@ function writeAtRiskScorecardMd(rows, meta, emeritusUsed) {
   md += `| No active maintainers | +55 |\n`;
   md += `| Exactly one active maintainer | +30 |\n`;
   md += `| Exactly two active maintainers | +12 |\n`;
-  md += `| Bot merge share (deny-listed PR authors) | up to +35 (≈35% of percentage points) |\n`;
   md += `| Inactive maintainer count | +2 each, max +16 |\n`;
-  md += `| Zero human-merged PRs with ≥5 total merges in window | +14 |\n`;
   md += `| No active triagers and ≤1 active maintainer | +8 |\n`;
-  md += `| ≥40 PRs opened and ≤1 active maintainer | +10 |\n`;
-  md += `| ≥25 human issues opened (or total if human missing) and 0 active maintainers | +10 |\n`;
+  md += `| ≥40 **human** PRs opened and ≤1 active maintainer | +10 |\n`;
+  md += `| ≥25 **human** issues opened and 0 active maintainers | +10 |\n`;
   if (emeritusUsed) {
     md += `| Each emeritus candidate row in \`emeritus-candidates.md\` | +2, max +12 |\n`;
   }
-  md += `\n`;
+  md += `\n*(Bot-authored PRs/issues are excluded from traffic signals and do not add points.)*\n\n`;
 
   md +=
-    '| Rank | Score | Repository | Act M | Bot % | Merged h/t | Emeritus # | Contributors to score |\n';
+    '| Rank | Score | Repository | Act M | PRs merged (human) | Emeritus # | Contributors to score |\n';
   md +=
-    '|-----:|------:|------------|------:|------:|-----------:|-----------:|----------------------|\n';
+    '|-----:|------:|------------|------:|---------------------:|-----------:|----------------------|\n';
 
   for (let i = 0; i < rows.length; i++) {
     const r = rows[i];
     const x = r.metrics || {};
-    const t = x.prs_merged_total;
-    const bot = botMergedSum(x);
-    const pctStr = typeof t === 'number' && t > 0 ? `${Math.round((bot / t) * 100)}%` : '—';
     const factors = Object.entries(r.at_risk_parts || {})
       .map(([k, v]) => `${k} +${v}`)
       .join(', ');
-    md += `| ${i + 1} | ${r.at_risk_score} | ${r.full_name} | ${r.active_maintainer_count} | ${pctStr} | ${x.prs_merged_human ?? '—'} / ${x.prs_merged_total ?? '—'} | ${r.emeritus_candidate_count} | ${factors || '—'} |\n`;
+    md += `| ${i + 1} | ${r.at_risk_score} | ${r.full_name} | ${r.active_maintainer_count} | ${x.prs_merged_human ?? '—'} | ${r.emeritus_candidate_count} | ${factors || '—'} |\n`;
   }
   return md;
 }
 
+/** Human-only activity for analysis JSON (bot totals omitted). */
 function buildCriticalReposJsonRow(r) {
   const x = r.metrics || {};
-  const t = x.prs_merged_total;
-  const bot = botMergedSum(x);
   return {
     full_name: r.full_name,
     active_maintainer_count: r.active_maintainer_count,
@@ -371,16 +340,9 @@ function buildCriticalReposJsonRow(r) {
     inactive_maintainers: r.inactive_maintainers,
     active_triagers: r.active_triagers,
     inactive_triagers: r.inactive_triagers,
-    issues_opened_total: x.issues_opened_total ?? null,
     issues_opened_human: x.issues_opened_human ?? null,
-    prs_opened_total: x.prs_opened_total ?? null,
     prs_opened_human: x.prs_opened_human ?? null,
-    prs_merged_total: x.prs_merged_total ?? null,
     prs_merged_human: x.prs_merged_human ?? null,
-    prs_merged_by_bot_author: x.prs_merged_by_bot_author ?? {},
-    prs_merged_bot_sum: bot,
-    prs_merged_bot_pct:
-      typeof t === 'number' && t > 0 ? Math.round((bot / t) * 10000) / 100 : null,
     issues_closed: x.issues_closed ?? null,
     prs_closed_not_merged: x.prs_closed_not_merged ?? null,
   };
@@ -466,6 +428,7 @@ function main() {
 
   const payload = {
     ...meta,
+    analysis_activity_basis: ANALYSIS_ACTIVITY_NOTE,
     sort: {
       primary: 'active_maintainer_count_asc',
       secondary: 'prs_merged_human_asc',
@@ -494,6 +457,7 @@ function main() {
 
   const criticalJson = {
     ...meta,
+    analysis_activity_basis: ANALYSIS_ACTIVITY_NOTE,
     sort: payload.sort,
     repos: forMergedSort.map(buildCriticalReposJsonRow),
   };
@@ -534,6 +498,7 @@ function main() {
       {
         ...meta,
         emeritus_candidates_source: emeritusMap ? path.relative(REPO_ROOT, emeritusPath) || emeritusPath : null,
+        analysis_activity_basis: ANALYSIS_ACTIVITY_NOTE,
         scoring:
           'Higher at_risk_score suggests earlier human review. See at-risk-scorecard.md for factor weights.',
         repos: atRiskRows.map((r) => ({
@@ -566,19 +531,6 @@ function main() {
   }
 
   const zeroActive = mergedRepos.filter((r) => r.active_maintainer_count === 0).map((r) => r.full_name);
-  const highBotShare = mergedRepos
-    .filter((r) => {
-      const t = r.metrics?.prs_merged_total;
-      const botSum = botMergedSum(r.metrics);
-      return typeof t === 'number' && t >= 10 && botSum / t >= 0.8;
-    })
-    .map((r) => ({
-      full_name: r.full_name,
-      prs_merged_total: r.metrics.prs_merged_total,
-      prs_merged_human: r.metrics.prs_merged_human,
-      bot_merged_sum: botMergedSum(r.metrics),
-      active_maintainer_count: r.active_maintainer_count,
-    }));
 
   fs.writeFileSync(
     signalsPath,
@@ -586,9 +538,9 @@ function main() {
       {
         generated_at: generatedAt,
         description:
-          'Heuristic flags: repos with no active maintainers; repos where ≥80% of merged PRs in window are authored by deny-listed bots (merged count ≥ 10).',
+          'Heuristic flags: repos with no active maintainers. Bot-authored merges are treated as non-signal in merge analysis; repos_high_bot_merge_share is no longer populated (use raw repo-activity JSON if you need bot totals).',
         repos_zero_active_maintainers: zeroActive,
-        repos_high_bot_merge_share: highBotShare,
+        repos_high_bot_merge_share: [],
       },
       null,
       2,
@@ -597,8 +549,8 @@ function main() {
 
   const indexEntries = [
     { file: 'analysis-reports-index.md', purpose: 'This list.' },
-    { file: 'at-risk-scorecard.md', purpose: 'Heuristic ranked risk + score factor breakdown.' },
-    { file: 'at-risk-scorecard.json', purpose: 'Same + flat metrics for tooling.' },
+    { file: 'at-risk-scorecard.md', purpose: 'Heuristic ranked risk (human-only traffic; no bot merge scoring).' },
+    { file: 'at-risk-scorecard.json', purpose: 'Same + human-only activity fields for tooling.' },
     {
       file: 'emeritus-candidates-by-repo.md',
       purpose: 'One row per repo; all emeritus candidate logins (from emeritus-candidates.md).',
@@ -611,12 +563,12 @@ function main() {
     { file: 'maintainer-tier-roster.json', purpose: 'Same as roster, machine-readable.' },
     { file: 'active-maintainer-distribution.md', purpose: 'How many repos have 0, 1, 2, … active maintainers.' },
     { file: 'active-maintainer-distribution.json', purpose: 'Distribution JSON (`tiers`, `by_count`).' },
-    { file: 'critical-repos-analysis.md', purpose: 'Coverage counts + full activity + bot merge %; sort for risk triage.' },
-    { file: 'critical-repos-analysis.json', purpose: 'Flat rows for spreadsheets / scripts.' },
-    { file: 'merged-repo-activity-by-maintainer-count.md', purpose: 'Activity-only table + maintainer count columns.' },
-    { file: 'merged-repo-activity-by-maintainer-count.json', purpose: 'Full merge including `metrics`.' },
+    { file: 'critical-repos-analysis.md', purpose: 'Coverage + human-only issue/PR activity; sort for risk triage.' },
+    { file: 'critical-repos-analysis.json', purpose: 'Flat rows (human-only traffic fields; full metrics still in merged JSON).' },
+    { file: 'merged-repo-activity-by-maintainer-count.md', purpose: 'Human-only activity columns + maintainer counts (raw metrics in JSON).' },
+    { file: 'merged-repo-activity-by-maintainer-count.json', purpose: 'Full merge including raw `metrics` from repo-activity run.' },
     { file: 'repo-maintenance-load.md', purpose: 'Human merged PRs per active maintainer.' },
-    { file: 'consolidation-signals.json', purpose: 'Zero-active list; high bot-merge-share heuristic.' },
+    { file: 'consolidation-signals.json', purpose: 'Zero-active maintainer list (bot merge heuristic removed from analysis).' },
   ];
   fs.writeFileSync(indexMdPath, writeAnalysisIndex(indexEntries, meta));
 

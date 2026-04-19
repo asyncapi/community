@@ -1,52 +1,57 @@
 {
-  "generated_at": "2026-04-19T04:35:09.500Z",
+  "generated_at": "2026-04-19T04:46:09.522Z",
   "maintainer_run_id": "20260329T084806Z",
   "repo_activity_run_id": "20260418T185703Z",
   "since_day": "2025-04-18",
   "window_months": 12,
   "emeritus_candidates_source": "docs/audit/runs/20260329T084806Z/output/emeritus-candidates.md",
+  "analysis_activity_basis": "Issue/PR opened and merged figures in analysis reports and scoring use human-only counts (deny_pr_authors excluded). Bot-authored activity is not scored.",
   "scoring": "Higher at_risk_score suggests earlier human review. See at-risk-scorecard.md for factor weights.",
   "repos": [
     {
-      "full_name": "asyncapi/go-watermill-template",
-      "active_maintainer_count": 0,
-      "inactive_maintainer_count": 2,
+      "full_name": "asyncapi/modelina",
+      "active_maintainer_count": 1,
+      "inactive_maintainer_count": 8,
       "active_triager_count": 0,
       "inactive_triager_count": 0,
-      "active_maintainers": [],
+      "active_maintainers": [
+        "jonaslagoni"
+      ],
       "inactive_maintainers": [
-        "anandsunderraman",
-        "smoya"
+        "Samridhi-98",
+        "akkshitgupta",
+        "artur-ciocanu",
+        "devilkiller-ag",
+        "ferror",
+        "kennethaasan",
+        "leigh-johnson",
+        "magicmatatjahu"
       ],
       "active_triagers": [],
       "inactive_triagers": [],
-      "issues_opened_total": 0,
-      "issues_opened_human": 0,
-      "prs_opened_total": 48,
-      "prs_opened_human": 2,
-      "prs_merged_total": 46,
-      "prs_merged_human": 0,
-      "prs_merged_by_bot_author": {
-        "asyncapi-bot": 46
-      },
-      "prs_merged_bot_sum": 46,
-      "prs_merged_bot_pct": 100,
-      "issues_closed": 1,
-      "prs_closed_not_merged": 2,
-      "at_risk_score": 130,
+      "issues_opened_human": 39,
+      "prs_opened_human": 185,
+      "prs_merged_human": 127,
+      "issues_closed": 49,
+      "prs_closed_not_merged": 45,
+      "at_risk_score": 76,
       "at_risk_parts": {
-        "no_active_maintainers": 55,
-        "bot_merge_weighted": 35,
-        "inactive_maintainer_bench": 4,
-        "no_human_merged_prs": 14,
+        "single_active_maintainer": 30,
+        "inactive_maintainer_bench": 16,
         "no_triagers_thin_maintainers": 8,
-        "high_pr_volume_thin_coverage": 10,
-        "emeritus_candidates_named": 4
+        "high_human_pr_open_volume_thin_coverage": 10,
+        "emeritus_candidates_named": 12
       },
-      "emeritus_candidate_count": 2,
+      "emeritus_candidate_count": 8,
       "emeritus_candidates": [
-        "anandsunderraman",
-        "smoya"
+        "akkshitgupta",
+        "artur-ciocanu",
+        "devilkiller-ag",
+        "ferror",
+        "kennethaasan",
+        "leigh-johnson",
+        "magicmatatjahu",
+        "Samridhi-98"
       ]
     },
     {
@@ -63,25 +68,15 @@
       ],
       "active_triagers": [],
       "inactive_triagers": [],
-      "issues_opened_total": 1,
       "issues_opened_human": 1,
-      "prs_opened_total": 12,
       "prs_opened_human": 1,
-      "prs_merged_total": 10,
       "prs_merged_human": 0,
-      "prs_merged_by_bot_author": {
-        "asyncapi-bot": 10
-      },
-      "prs_merged_bot_sum": 10,
-      "prs_merged_bot_pct": 100,
       "issues_closed": 4,
       "prs_closed_not_merged": 3,
-      "at_risk_score": 124,
+      "at_risk_score": 75,
       "at_risk_parts": {
         "no_active_maintainers": 55,
-        "bot_merge_weighted": 35,
         "inactive_maintainer_bench": 6,
-        "no_human_merged_prs": 14,
         "no_triagers_thin_maintainers": 8,
         "emeritus_candidates_named": 6
       },
@@ -106,25 +101,15 @@
       ],
       "active_triagers": [],
       "inactive_triagers": [],
-      "issues_opened_total": 2,
       "issues_opened_human": 2,
-      "prs_opened_total": 15,
       "prs_opened_human": 0,
-      "prs_merged_total": 15,
       "prs_merged_human": 0,
-      "prs_merged_by_bot_author": {
-        "asyncapi-bot": 15
-      },
-      "prs_merged_bot_sum": 15,
-      "prs_merged_bot_pct": 100,
       "issues_closed": 4,
       "prs_closed_not_merged": 0,
-      "at_risk_score": 124,
+      "at_risk_score": 75,
       "at_risk_parts": {
         "no_active_maintainers": 55,
-        "bot_merge_weighted": 35,
         "inactive_maintainer_bench": 6,
-        "no_human_merged_prs": 14,
         "no_triagers_thin_maintainers": 8,
         "emeritus_candidates_named": 6
       },
@@ -148,25 +133,15 @@
       ],
       "active_triagers": [],
       "inactive_triagers": [],
-      "issues_opened_total": 5,
       "issues_opened_human": 5,
-      "prs_opened_total": 13,
       "prs_opened_human": 3,
-      "prs_merged_total": 10,
       "prs_merged_human": 0,
-      "prs_merged_by_bot_author": {
-        "asyncapi-bot": 10
-      },
-      "prs_merged_bot_sum": 10,
-      "prs_merged_bot_pct": 100,
       "issues_closed": 5,
       "prs_closed_not_merged": 1,
-      "at_risk_score": 120,
+      "at_risk_score": 71,
       "at_risk_parts": {
         "no_active_maintainers": 55,
-        "bot_merge_weighted": 35,
         "inactive_maintainer_bench": 4,
-        "no_human_merged_prs": 14,
         "no_triagers_thin_maintainers": 8,
         "emeritus_candidates_named": 4
       },
@@ -189,25 +164,15 @@
       ],
       "active_triagers": [],
       "inactive_triagers": [],
-      "issues_opened_total": 1,
       "issues_opened_human": 1,
-      "prs_opened_total": 12,
       "prs_opened_human": 0,
-      "prs_merged_total": 11,
       "prs_merged_human": 0,
-      "prs_merged_by_bot_author": {
-        "asyncapi-bot": 11
-      },
-      "prs_merged_bot_sum": 11,
-      "prs_merged_bot_pct": 100,
       "issues_closed": 5,
       "prs_closed_not_merged": 2,
-      "at_risk_score": 120,
+      "at_risk_score": 71,
       "at_risk_parts": {
         "no_active_maintainers": 55,
-        "bot_merge_weighted": 35,
         "inactive_maintainer_bench": 4,
-        "no_human_merged_prs": 14,
         "no_triagers_thin_maintainers": 8,
         "emeritus_candidates_named": 4
       },
@@ -230,25 +195,15 @@
       ],
       "active_triagers": [],
       "inactive_triagers": [],
-      "issues_opened_total": 0,
       "issues_opened_human": 0,
-      "prs_opened_total": 11,
       "prs_opened_human": 0,
-      "prs_merged_total": 11,
       "prs_merged_human": 0,
-      "prs_merged_by_bot_author": {
-        "asyncapi-bot": 11
-      },
-      "prs_merged_bot_sum": 11,
-      "prs_merged_bot_pct": 100,
       "issues_closed": 0,
       "prs_closed_not_merged": 0,
-      "at_risk_score": 120,
+      "at_risk_score": 71,
       "at_risk_parts": {
         "no_active_maintainers": 55,
-        "bot_merge_weighted": 35,
         "inactive_maintainer_bench": 4,
-        "no_human_merged_prs": 14,
         "no_triagers_thin_maintainers": 8,
         "emeritus_candidates_named": 4
       },
@@ -256,6 +211,99 @@
       "emeritus_candidates": [
         "derberg",
         "fmvilas"
+      ]
+    },
+    {
+      "full_name": "asyncapi/extensions-catalog",
+      "active_maintainer_count": 0,
+      "inactive_maintainer_count": 2,
+      "active_triager_count": 0,
+      "inactive_triager_count": 0,
+      "active_maintainers": [],
+      "inactive_maintainers": [
+        "derberg",
+        "fmvilas"
+      ],
+      "active_triagers": [],
+      "inactive_triagers": [],
+      "issues_opened_human": 0,
+      "prs_opened_human": 3,
+      "prs_merged_human": 3,
+      "issues_closed": 0,
+      "prs_closed_not_merged": 0,
+      "at_risk_score": 71,
+      "at_risk_parts": {
+        "no_active_maintainers": 55,
+        "inactive_maintainer_bench": 4,
+        "no_triagers_thin_maintainers": 8,
+        "emeritus_candidates_named": 4
+      },
+      "emeritus_candidate_count": 2,
+      "emeritus_candidates": [
+        "derberg",
+        "fmvilas"
+      ]
+    },
+    {
+      "full_name": "asyncapi/go-watermill-template",
+      "active_maintainer_count": 0,
+      "inactive_maintainer_count": 2,
+      "active_triager_count": 0,
+      "inactive_triager_count": 0,
+      "active_maintainers": [],
+      "inactive_maintainers": [
+        "anandsunderraman",
+        "smoya"
+      ],
+      "active_triagers": [],
+      "inactive_triagers": [],
+      "issues_opened_human": 0,
+      "prs_opened_human": 2,
+      "prs_merged_human": 0,
+      "issues_closed": 1,
+      "prs_closed_not_merged": 2,
+      "at_risk_score": 71,
+      "at_risk_parts": {
+        "no_active_maintainers": 55,
+        "inactive_maintainer_bench": 4,
+        "no_triagers_thin_maintainers": 8,
+        "emeritus_candidates_named": 4
+      },
+      "emeritus_candidate_count": 2,
+      "emeritus_candidates": [
+        "anandsunderraman",
+        "smoya"
+      ]
+    },
+    {
+      "full_name": "asyncapi/java-spring-template",
+      "active_maintainer_count": 0,
+      "inactive_maintainer_count": 2,
+      "active_triager_count": 0,
+      "inactive_triager_count": 0,
+      "active_maintainers": [],
+      "inactive_maintainers": [
+        "Tenischev",
+        "derberg"
+      ],
+      "active_triagers": [],
+      "inactive_triagers": [],
+      "issues_opened_human": 3,
+      "prs_opened_human": 23,
+      "prs_merged_human": 18,
+      "issues_closed": 0,
+      "prs_closed_not_merged": 1,
+      "at_risk_score": 71,
+      "at_risk_parts": {
+        "no_active_maintainers": 55,
+        "inactive_maintainer_bench": 4,
+        "no_triagers_thin_maintainers": 8,
+        "emeritus_candidates_named": 4
+      },
+      "emeritus_candidate_count": 2,
+      "emeritus_candidates": [
+        "derberg",
+        "Tenischev"
       ]
     },
     {
@@ -271,25 +319,15 @@
       ],
       "active_triagers": [],
       "inactive_triagers": [],
-      "issues_opened_total": 0,
       "issues_opened_human": 0,
-      "prs_opened_total": 11,
       "prs_opened_human": 0,
-      "prs_merged_total": 11,
       "prs_merged_human": 0,
-      "prs_merged_by_bot_author": {
-        "asyncapi-bot": 11
-      },
-      "prs_merged_bot_sum": 11,
-      "prs_merged_bot_pct": 100,
       "issues_closed": 0,
       "prs_closed_not_merged": 0,
-      "at_risk_score": 120,
+      "at_risk_score": 71,
       "at_risk_parts": {
         "no_active_maintainers": 55,
-        "bot_merge_weighted": 35,
         "inactive_maintainer_bench": 4,
-        "no_human_merged_prs": 14,
         "no_triagers_thin_maintainers": 8,
         "emeritus_candidates_named": 4
       },
@@ -297,6 +335,68 @@
       "emeritus_candidates": [
         "alequetzalli",
         "Barbanio"
+      ]
+    },
+    {
+      "full_name": "asyncapi/nodejs-template",
+      "active_maintainer_count": 0,
+      "inactive_maintainer_count": 2,
+      "active_triager_count": 0,
+      "inactive_triager_count": 0,
+      "active_maintainers": [],
+      "inactive_maintainers": [
+        "derberg",
+        "kaushik-rishi"
+      ],
+      "active_triagers": [],
+      "inactive_triagers": [],
+      "issues_opened_human": 1,
+      "prs_opened_human": 22,
+      "prs_merged_human": 18,
+      "issues_closed": 7,
+      "prs_closed_not_merged": 2,
+      "at_risk_score": 71,
+      "at_risk_parts": {
+        "no_active_maintainers": 55,
+        "inactive_maintainer_bench": 4,
+        "no_triagers_thin_maintainers": 8,
+        "emeritus_candidates_named": 4
+      },
+      "emeritus_candidate_count": 2,
+      "emeritus_candidates": [
+        "derberg",
+        "kaushik-rishi"
+      ]
+    },
+    {
+      "full_name": "asyncapi/nodejs-ws-template",
+      "active_maintainer_count": 0,
+      "inactive_maintainer_count": 2,
+      "active_triager_count": 0,
+      "inactive_triager_count": 0,
+      "active_maintainers": [],
+      "inactive_maintainers": [
+        "derberg",
+        "fmvilas"
+      ],
+      "active_triagers": [],
+      "inactive_triagers": [],
+      "issues_opened_human": 1,
+      "prs_opened_human": 24,
+      "prs_merged_human": 3,
+      "issues_closed": 1,
+      "prs_closed_not_merged": 9,
+      "at_risk_score": 71,
+      "at_risk_parts": {
+        "no_active_maintainers": 55,
+        "inactive_maintainer_bench": 4,
+        "no_triagers_thin_maintainers": 8,
+        "emeritus_candidates_named": 4
+      },
+      "emeritus_candidate_count": 2,
+      "emeritus_candidates": [
+        "derberg",
+        "fmvilas"
       ]
     },
     {
@@ -312,25 +412,15 @@
       ],
       "active_triagers": [],
       "inactive_triagers": [],
-      "issues_opened_total": 0,
       "issues_opened_human": 0,
-      "prs_opened_total": 13,
       "prs_opened_human": 2,
-      "prs_merged_total": 11,
       "prs_merged_human": 0,
-      "prs_merged_by_bot_author": {
-        "asyncapi-bot": 11
-      },
-      "prs_merged_bot_sum": 11,
-      "prs_merged_bot_pct": 100,
       "issues_closed": 0,
       "prs_closed_not_merged": 1,
-      "at_risk_score": 120,
+      "at_risk_score": 71,
       "at_risk_parts": {
         "no_active_maintainers": 55,
-        "bot_merge_weighted": 35,
         "inactive_maintainer_bench": 4,
-        "no_human_merged_prs": 14,
         "no_triagers_thin_maintainers": 8,
         "emeritus_candidates_named": 4
       },
@@ -353,25 +443,15 @@
       ],
       "active_triagers": [],
       "inactive_triagers": [],
-      "issues_opened_total": 0,
       "issues_opened_human": 0,
-      "prs_opened_total": 14,
       "prs_opened_human": 0,
-      "prs_merged_total": 14,
       "prs_merged_human": 0,
-      "prs_merged_by_bot_author": {
-        "asyncapi-bot": 14
-      },
-      "prs_merged_bot_sum": 14,
-      "prs_merged_bot_pct": 100,
       "issues_closed": 0,
       "prs_closed_not_merged": 0,
-      "at_risk_score": 120,
+      "at_risk_score": 71,
       "at_risk_parts": {
         "no_active_maintainers": 55,
-        "bot_merge_weighted": 35,
         "inactive_maintainer_bench": 4,
-        "no_human_merged_prs": 14,
         "no_triagers_thin_maintainers": 8,
         "emeritus_candidates_named": 4
       },
@@ -394,25 +474,15 @@
       ],
       "active_triagers": [],
       "inactive_triagers": [],
-      "issues_opened_total": 0,
       "issues_opened_human": 0,
-      "prs_opened_total": 13,
       "prs_opened_human": 7,
-      "prs_merged_total": 6,
       "prs_merged_human": 0,
-      "prs_merged_by_bot_author": {
-        "asyncapi-bot": 6
-      },
-      "prs_merged_bot_sum": 6,
-      "prs_merged_bot_pct": 100,
       "issues_closed": 5,
       "prs_closed_not_merged": 4,
-      "at_risk_score": 120,
+      "at_risk_score": 71,
       "at_risk_parts": {
         "no_active_maintainers": 55,
-        "bot_merge_weighted": 35,
         "inactive_maintainer_bench": 4,
-        "no_human_merged_prs": 14,
         "no_triagers_thin_maintainers": 8,
         "emeritus_candidates_named": 4
       },
@@ -435,25 +505,15 @@
       ],
       "active_triagers": [],
       "inactive_triagers": [],
-      "issues_opened_total": 0,
       "issues_opened_human": 0,
-      "prs_opened_total": 17,
       "prs_opened_human": 0,
-      "prs_merged_total": 17,
       "prs_merged_human": 0,
-      "prs_merged_by_bot_author": {
-        "asyncapi-bot": 17
-      },
-      "prs_merged_bot_sum": 17,
-      "prs_merged_bot_pct": 100,
       "issues_closed": 2,
       "prs_closed_not_merged": 0,
-      "at_risk_score": 120,
+      "at_risk_score": 71,
       "at_risk_parts": {
         "no_active_maintainers": 55,
-        "bot_merge_weighted": 35,
         "inactive_maintainer_bench": 4,
-        "no_human_merged_prs": 14,
         "no_triagers_thin_maintainers": 8,
         "emeritus_candidates_named": 4
       },
@@ -461,85 +521,6 @@
       "emeritus_candidates": [
         "derberg",
         "magicmatatjahu"
-      ]
-    },
-    {
-      "full_name": "asyncapi/training",
-      "active_maintainer_count": 0,
-      "inactive_maintainer_count": 1,
-      "active_triager_count": 0,
-      "inactive_triager_count": 0,
-      "active_maintainers": [],
-      "inactive_maintainers": [
-        "alequetzalli"
-      ],
-      "active_triagers": [],
-      "inactive_triagers": [],
-      "issues_opened_total": 3,
-      "issues_opened_human": 3,
-      "prs_opened_total": 12,
-      "prs_opened_human": 1,
-      "prs_merged_total": 11,
-      "prs_merged_human": 0,
-      "prs_merged_by_bot_author": {
-        "asyncapi-bot": 11
-      },
-      "prs_merged_bot_sum": 11,
-      "prs_merged_bot_pct": 100,
-      "issues_closed": 2,
-      "prs_closed_not_merged": 0,
-      "at_risk_score": 116,
-      "at_risk_parts": {
-        "no_active_maintainers": 55,
-        "bot_merge_weighted": 35,
-        "inactive_maintainer_bench": 2,
-        "no_human_merged_prs": 14,
-        "no_triagers_thin_maintainers": 8,
-        "emeritus_candidates_named": 2
-      },
-      "emeritus_candidate_count": 1,
-      "emeritus_candidates": [
-        "alequetzalli"
-      ]
-    },
-    {
-      "full_name": "asyncapi/nodejs-ws-template",
-      "active_maintainer_count": 0,
-      "inactive_maintainer_count": 2,
-      "active_triager_count": 0,
-      "inactive_triager_count": 0,
-      "active_maintainers": [],
-      "inactive_maintainers": [
-        "derberg",
-        "fmvilas"
-      ],
-      "active_triagers": [],
-      "inactive_triagers": [],
-      "issues_opened_total": 1,
-      "issues_opened_human": 1,
-      "prs_opened_total": 39,
-      "prs_opened_human": 24,
-      "prs_merged_total": 17,
-      "prs_merged_human": 3,
-      "prs_merged_by_bot_author": {
-        "asyncapi-bot": 14
-      },
-      "prs_merged_bot_sum": 14,
-      "prs_merged_bot_pct": 82.35,
-      "issues_closed": 1,
-      "prs_closed_not_merged": 9,
-      "at_risk_score": 100,
-      "at_risk_parts": {
-        "no_active_maintainers": 55,
-        "bot_merge_weighted": 29,
-        "inactive_maintainer_bench": 4,
-        "no_triagers_thin_maintainers": 8,
-        "emeritus_candidates_named": 4
-      },
-      "emeritus_candidate_count": 2,
-      "emeritus_candidates": [
-        "derberg",
-        "fmvilas"
       ]
     },
     {
@@ -554,23 +535,14 @@
       ],
       "active_triagers": [],
       "inactive_triagers": [],
-      "issues_opened_total": 0,
       "issues_opened_human": 0,
-      "prs_opened_total": 13,
       "prs_opened_human": 1,
-      "prs_merged_total": 13,
       "prs_merged_human": 1,
-      "prs_merged_by_bot_author": {
-        "asyncapi-bot": 12
-      },
-      "prs_merged_bot_sum": 12,
-      "prs_merged_bot_pct": 92.31,
       "issues_closed": 0,
       "prs_closed_not_merged": 0,
-      "at_risk_score": 99,
+      "at_risk_score": 67,
       "at_risk_parts": {
         "no_active_maintainers": 55,
-        "bot_merge_weighted": 32,
         "inactive_maintainer_bench": 2,
         "no_triagers_thin_maintainers": 8,
         "emeritus_candidates_named": 2
@@ -578,46 +550,6 @@
       "emeritus_candidate_count": 1,
       "emeritus_candidates": [
         "emilianozublena"
-      ]
-    },
-    {
-      "full_name": "asyncapi/extensions-catalog",
-      "active_maintainer_count": 0,
-      "inactive_maintainer_count": 2,
-      "active_triager_count": 0,
-      "inactive_triager_count": 0,
-      "active_maintainers": [],
-      "inactive_maintainers": [
-        "derberg",
-        "fmvilas"
-      ],
-      "active_triagers": [],
-      "inactive_triagers": [],
-      "issues_opened_total": 0,
-      "issues_opened_human": 0,
-      "prs_opened_total": 12,
-      "prs_opened_human": 3,
-      "prs_merged_total": 12,
-      "prs_merged_human": 3,
-      "prs_merged_by_bot_author": {
-        "asyncapi-bot": 9
-      },
-      "prs_merged_bot_sum": 9,
-      "prs_merged_bot_pct": 75,
-      "issues_closed": 0,
-      "prs_closed_not_merged": 0,
-      "at_risk_score": 97,
-      "at_risk_parts": {
-        "no_active_maintainers": 55,
-        "bot_merge_weighted": 26,
-        "inactive_maintainer_bench": 4,
-        "no_triagers_thin_maintainers": 8,
-        "emeritus_candidates_named": 4
-      },
-      "emeritus_candidate_count": 2,
-      "emeritus_candidates": [
-        "derberg",
-        "fmvilas"
       ]
     },
     {
@@ -632,23 +564,14 @@
       ],
       "active_triagers": [],
       "inactive_triagers": [],
-      "issues_opened_total": 0,
       "issues_opened_human": 0,
-      "prs_opened_total": 17,
       "prs_opened_human": 7,
-      "prs_merged_total": 14,
       "prs_merged_human": 4,
-      "prs_merged_by_bot_author": {
-        "asyncapi-bot": 10
-      },
-      "prs_merged_bot_sum": 10,
-      "prs_merged_bot_pct": 71.43,
       "issues_closed": 1,
       "prs_closed_not_merged": 4,
-      "at_risk_score": 92,
+      "at_risk_score": 67,
       "at_risk_parts": {
         "no_active_maintainers": 55,
-        "bot_merge_weighted": 25,
         "inactive_maintainer_bench": 2,
         "no_triagers_thin_maintainers": 8,
         "emeritus_candidates_named": 2
@@ -659,139 +582,32 @@
       ]
     },
     {
-      "full_name": "asyncapi/net-sdk",
-      "active_maintainer_count": 1,
+      "full_name": "asyncapi/training",
+      "active_maintainer_count": 0,
       "inactive_maintainer_count": 1,
       "active_triager_count": 0,
       "inactive_triager_count": 0,
-      "active_maintainers": [
-        "cdavernas"
-      ],
+      "active_maintainers": [],
       "inactive_maintainers": [
-        "jbbianchi"
+        "alequetzalli"
       ],
       "active_triagers": [],
       "inactive_triagers": [],
-      "issues_opened_total": 3,
       "issues_opened_human": 3,
-      "prs_opened_total": 12,
       "prs_opened_human": 1,
-      "prs_merged_total": 11,
       "prs_merged_human": 0,
-      "prs_merged_by_bot_author": {
-        "asyncapi-bot": 11
-      },
-      "prs_merged_bot_sum": 11,
-      "prs_merged_bot_pct": 100,
       "issues_closed": 2,
-      "prs_closed_not_merged": 1,
-      "at_risk_score": 91,
+      "prs_closed_not_merged": 0,
+      "at_risk_score": 67,
       "at_risk_parts": {
-        "single_active_maintainer": 30,
-        "bot_merge_weighted": 35,
+        "no_active_maintainers": 55,
         "inactive_maintainer_bench": 2,
-        "no_human_merged_prs": 14,
         "no_triagers_thin_maintainers": 8,
         "emeritus_candidates_named": 2
       },
       "emeritus_candidate_count": 1,
       "emeritus_candidates": [
-        "jbbianchi"
-      ]
-    },
-    {
-      "full_name": "asyncapi/java-spring-template",
-      "active_maintainer_count": 0,
-      "inactive_maintainer_count": 2,
-      "active_triager_count": 0,
-      "inactive_triager_count": 0,
-      "active_maintainers": [],
-      "inactive_maintainers": [
-        "Tenischev",
-        "derberg"
-      ],
-      "active_triagers": [],
-      "inactive_triagers": [],
-      "issues_opened_total": 3,
-      "issues_opened_human": 3,
-      "prs_opened_total": 39,
-      "prs_opened_human": 23,
-      "prs_merged_total": 34,
-      "prs_merged_human": 18,
-      "prs_merged_by_bot_author": {
-        "asyncapi-bot": 16
-      },
-      "prs_merged_bot_sum": 16,
-      "prs_merged_bot_pct": 47.06,
-      "issues_closed": 0,
-      "prs_closed_not_merged": 1,
-      "at_risk_score": 87,
-      "at_risk_parts": {
-        "no_active_maintainers": 55,
-        "bot_merge_weighted": 16,
-        "inactive_maintainer_bench": 4,
-        "no_triagers_thin_maintainers": 8,
-        "emeritus_candidates_named": 4
-      },
-      "emeritus_candidate_count": 2,
-      "emeritus_candidates": [
-        "derberg",
-        "Tenischev"
-      ]
-    },
-    {
-      "full_name": "asyncapi/modelina",
-      "active_maintainer_count": 1,
-      "inactive_maintainer_count": 8,
-      "active_triager_count": 0,
-      "inactive_triager_count": 0,
-      "active_maintainers": [
-        "jonaslagoni"
-      ],
-      "inactive_maintainers": [
-        "Samridhi-98",
-        "akkshitgupta",
-        "artur-ciocanu",
-        "devilkiller-ag",
-        "ferror",
-        "kennethaasan",
-        "leigh-johnson",
-        "magicmatatjahu"
-      ],
-      "active_triagers": [],
-      "inactive_triagers": [],
-      "issues_opened_total": 40,
-      "issues_opened_human": 39,
-      "prs_opened_total": 245,
-      "prs_opened_human": 185,
-      "prs_merged_total": 187,
-      "prs_merged_human": 127,
-      "prs_merged_by_bot_author": {
-        "asyncapi-bot": 60
-      },
-      "prs_merged_bot_sum": 60,
-      "prs_merged_bot_pct": 32.09,
-      "issues_closed": 49,
-      "prs_closed_not_merged": 45,
-      "at_risk_score": 87,
-      "at_risk_parts": {
-        "single_active_maintainer": 30,
-        "bot_merge_weighted": 11,
-        "inactive_maintainer_bench": 16,
-        "no_triagers_thin_maintainers": 8,
-        "high_pr_volume_thin_coverage": 10,
-        "emeritus_candidates_named": 12
-      },
-      "emeritus_candidate_count": 8,
-      "emeritus_candidates": [
-        "akkshitgupta",
-        "artur-ciocanu",
-        "devilkiller-ag",
-        "ferror",
-        "kennethaasan",
-        "leigh-johnson",
-        "magicmatatjahu",
-        "Samridhi-98"
+        "alequetzalli"
       ]
     },
     {
@@ -811,23 +627,14 @@
       ],
       "active_triagers": [],
       "inactive_triagers": [],
-      "issues_opened_total": 0,
       "issues_opened_human": 0,
-      "prs_opened_total": 14,
       "prs_opened_human": 1,
-      "prs_merged_total": 12,
       "prs_merged_human": 1,
-      "prs_merged_by_bot_author": {
-        "asyncapi-bot": 11
-      },
-      "prs_merged_bot_sum": 11,
-      "prs_merged_bot_pct": 91.67,
       "issues_closed": 5,
       "prs_closed_not_merged": 2,
-      "at_risk_score": 86,
+      "at_risk_score": 54,
       "at_risk_parts": {
         "single_active_maintainer": 30,
-        "bot_merge_weighted": 32,
         "inactive_maintainer_bench": 8,
         "no_triagers_thin_maintainers": 8,
         "emeritus_candidates_named": 8
@@ -838,46 +645,6 @@
         "dan-r",
         "KieranM1999",
         "lewis-relph"
-      ]
-    },
-    {
-      "full_name": "asyncapi/nodejs-template",
-      "active_maintainer_count": 0,
-      "inactive_maintainer_count": 2,
-      "active_triager_count": 0,
-      "inactive_triager_count": 0,
-      "active_maintainers": [],
-      "inactive_maintainers": [
-        "derberg",
-        "kaushik-rishi"
-      ],
-      "active_triagers": [],
-      "inactive_triagers": [],
-      "issues_opened_total": 1,
-      "issues_opened_human": 1,
-      "prs_opened_total": 38,
-      "prs_opened_human": 22,
-      "prs_merged_total": 32,
-      "prs_merged_human": 18,
-      "prs_merged_by_bot_author": {
-        "asyncapi-bot": 14
-      },
-      "prs_merged_bot_sum": 14,
-      "prs_merged_bot_pct": 43.75,
-      "issues_closed": 7,
-      "prs_closed_not_merged": 2,
-      "at_risk_score": 86,
-      "at_risk_parts": {
-        "no_active_maintainers": 55,
-        "bot_merge_weighted": 15,
-        "inactive_maintainer_bench": 4,
-        "no_triagers_thin_maintainers": 8,
-        "emeritus_candidates_named": 4
-      },
-      "emeritus_candidate_count": 2,
-      "emeritus_candidates": [
-        "derberg",
-        "kaushik-rishi"
       ]
     },
     {
@@ -894,23 +661,14 @@
       ],
       "active_triagers": [],
       "inactive_triagers": [],
-      "issues_opened_total": 2,
       "issues_opened_human": 2,
-      "prs_opened_total": 16,
       "prs_opened_human": 1,
-      "prs_merged_total": 16,
       "prs_merged_human": 1,
-      "prs_merged_by_bot_author": {
-        "asyncapi-bot": 15
-      },
-      "prs_merged_bot_sum": 15,
-      "prs_merged_bot_pct": 93.75,
       "issues_closed": 11,
       "prs_closed_not_merged": 1,
-      "at_risk_score": 75,
+      "at_risk_score": 42,
       "at_risk_parts": {
         "single_active_maintainer": 30,
-        "bot_merge_weighted": 33,
         "inactive_maintainer_bench": 2,
         "no_triagers_thin_maintainers": 8,
         "emeritus_candidates_named": 2
@@ -934,23 +692,14 @@
       ],
       "active_triagers": [],
       "inactive_triagers": [],
-      "issues_opened_total": 0,
       "issues_opened_human": 0,
-      "prs_opened_total": 5,
       "prs_opened_human": 1,
-      "prs_merged_total": 5,
       "prs_merged_human": 1,
-      "prs_merged_by_bot_author": {
-        "asyncapi-bot": 4
-      },
-      "prs_merged_bot_sum": 4,
-      "prs_merged_bot_pct": 80,
       "issues_closed": 2,
       "prs_closed_not_merged": 1,
-      "at_risk_score": 70,
+      "at_risk_score": 42,
       "at_risk_parts": {
         "single_active_maintainer": 30,
-        "bot_merge_weighted": 28,
         "inactive_maintainer_bench": 2,
         "no_triagers_thin_maintainers": 8,
         "emeritus_candidates_named": 2
@@ -958,6 +707,37 @@
       "emeritus_candidate_count": 1,
       "emeritus_candidates": [
         "connil"
+      ]
+    },
+    {
+      "full_name": "asyncapi/jasyncapi",
+      "active_maintainer_count": 1,
+      "inactive_maintainer_count": 1,
+      "active_triager_count": 0,
+      "inactive_triager_count": 0,
+      "active_maintainers": [
+        "pakisan"
+      ],
+      "inactive_maintainers": [
+        "harikrishnan83"
+      ],
+      "active_triagers": [],
+      "inactive_triagers": [],
+      "issues_opened_human": 1,
+      "prs_opened_human": 4,
+      "prs_merged_human": 5,
+      "issues_closed": 2,
+      "prs_closed_not_merged": 0,
+      "at_risk_score": 42,
+      "at_risk_parts": {
+        "single_active_maintainer": 30,
+        "inactive_maintainer_bench": 2,
+        "no_triagers_thin_maintainers": 8,
+        "emeritus_candidates_named": 2
+      },
+      "emeritus_candidate_count": 1,
+      "emeritus_candidates": [
+        "harikrishnan83"
       ]
     },
     {
@@ -974,23 +754,14 @@
       ],
       "active_triagers": [],
       "inactive_triagers": [],
-      "issues_opened_total": 0,
       "issues_opened_human": 0,
-      "prs_opened_total": 21,
       "prs_opened_human": 8,
-      "prs_merged_total": 17,
       "prs_merged_human": 5,
-      "prs_merged_by_bot_author": {
-        "asyncapi-bot": 12
-      },
-      "prs_merged_bot_sum": 12,
-      "prs_merged_bot_pct": 70.59,
       "issues_closed": 14,
       "prs_closed_not_merged": 5,
-      "at_risk_score": 67,
+      "at_risk_score": 42,
       "at_risk_parts": {
         "single_active_maintainer": 30,
-        "bot_merge_weighted": 25,
         "inactive_maintainer_bench": 2,
         "no_triagers_thin_maintainers": 8,
         "emeritus_candidates_named": 2
@@ -998,6 +769,37 @@
       "emeritus_candidate_count": 1,
       "emeritus_candidates": [
         "damaru-inc"
+      ]
+    },
+    {
+      "full_name": "asyncapi/net-sdk",
+      "active_maintainer_count": 1,
+      "inactive_maintainer_count": 1,
+      "active_triager_count": 0,
+      "inactive_triager_count": 0,
+      "active_maintainers": [
+        "cdavernas"
+      ],
+      "inactive_maintainers": [
+        "jbbianchi"
+      ],
+      "active_triagers": [],
+      "inactive_triagers": [],
+      "issues_opened_human": 3,
+      "prs_opened_human": 1,
+      "prs_merged_human": 0,
+      "issues_closed": 2,
+      "prs_closed_not_merged": 1,
+      "at_risk_score": 42,
+      "at_risk_parts": {
+        "single_active_maintainer": 30,
+        "inactive_maintainer_bench": 2,
+        "no_triagers_thin_maintainers": 8,
+        "emeritus_candidates_named": 2
+      },
+      "emeritus_candidate_count": 1,
+      "emeritus_candidates": [
+        "jbbianchi"
       ]
     },
     {
@@ -1012,67 +814,18 @@
       "inactive_maintainers": [],
       "active_triagers": [],
       "inactive_triagers": [],
-      "issues_opened_total": 0,
       "issues_opened_human": 0,
-      "prs_opened_total": 19,
       "prs_opened_human": 4,
-      "prs_merged_total": 18,
       "prs_merged_human": 3,
-      "prs_merged_by_bot_author": {
-        "asyncapi-bot": 15
-      },
-      "prs_merged_bot_sum": 15,
-      "prs_merged_bot_pct": 83.33,
       "issues_closed": 0,
       "prs_closed_not_merged": 0,
-      "at_risk_score": 67,
+      "at_risk_score": 38,
       "at_risk_parts": {
         "single_active_maintainer": 30,
-        "bot_merge_weighted": 29,
         "no_triagers_thin_maintainers": 8
       },
       "emeritus_candidate_count": 0,
       "emeritus_candidates": []
-    },
-    {
-      "full_name": "asyncapi/jasyncapi",
-      "active_maintainer_count": 1,
-      "inactive_maintainer_count": 1,
-      "active_triager_count": 0,
-      "inactive_triager_count": 0,
-      "active_maintainers": [
-        "pakisan"
-      ],
-      "inactive_maintainers": [
-        "harikrishnan83"
-      ],
-      "active_triagers": [],
-      "inactive_triagers": [],
-      "issues_opened_total": 1,
-      "issues_opened_human": 1,
-      "prs_opened_total": 15,
-      "prs_opened_human": 4,
-      "prs_merged_total": 16,
-      "prs_merged_human": 5,
-      "prs_merged_by_bot_author": {
-        "asyncapi-bot": 11
-      },
-      "prs_merged_bot_sum": 11,
-      "prs_merged_bot_pct": 68.75,
-      "issues_closed": 2,
-      "prs_closed_not_merged": 0,
-      "at_risk_score": 66,
-      "at_risk_parts": {
-        "single_active_maintainer": 30,
-        "bot_merge_weighted": 24,
-        "inactive_maintainer_bench": 2,
-        "no_triagers_thin_maintainers": 8,
-        "emeritus_candidates_named": 2
-      },
-      "emeritus_candidate_count": 1,
-      "emeritus_candidates": [
-        "harikrishnan83"
-      ]
     },
     {
       "full_name": "asyncapi/bindings",
@@ -1104,22 +857,13 @@
       ],
       "active_triagers": [],
       "inactive_triagers": [],
-      "issues_opened_total": 9,
       "issues_opened_human": 9,
-      "prs_opened_total": 13,
       "prs_opened_human": 3,
-      "prs_merged_total": 13,
       "prs_merged_human": 3,
-      "prs_merged_by_bot_author": {
-        "asyncapi-bot": 10
-      },
-      "prs_merged_bot_sum": 10,
-      "prs_merged_bot_pct": 76.92,
       "issues_closed": 9,
       "prs_closed_not_merged": 1,
-      "at_risk_score": 55,
+      "at_risk_score": 28,
       "at_risk_parts": {
-        "bot_merge_weighted": 27,
         "inactive_maintainer_bench": 16,
         "emeritus_candidates_named": 12
       },
@@ -1138,40 +882,6 @@
         "VisualBean",
         "whitlockjc"
       ]
-    },
-    {
-      "full_name": "asyncapi/protobuf-schema-parser",
-      "active_maintainer_count": 2,
-      "inactive_maintainer_count": 0,
-      "active_triager_count": 0,
-      "inactive_triager_count": 0,
-      "active_maintainers": [
-        "GreenRover",
-        "nathanaelweber"
-      ],
-      "inactive_maintainers": [],
-      "active_triagers": [],
-      "inactive_triagers": [],
-      "issues_opened_total": 0,
-      "issues_opened_human": 0,
-      "prs_opened_total": 17,
-      "prs_opened_human": 1,
-      "prs_merged_total": 17,
-      "prs_merged_human": 1,
-      "prs_merged_by_bot_author": {
-        "asyncapi-bot": 16
-      },
-      "prs_merged_bot_sum": 16,
-      "prs_merged_bot_pct": 94.12,
-      "issues_closed": 0,
-      "prs_closed_not_merged": 0,
-      "at_risk_score": 45,
-      "at_risk_parts": {
-        "two_active_maintainers": 12,
-        "bot_merge_weighted": 33
-      },
-      "emeritus_candidate_count": 0,
-      "emeritus_candidates": []
     },
     {
       "full_name": "asyncapi/spec-json-schemas",
@@ -1206,22 +916,13 @@
       ],
       "active_triagers": [],
       "inactive_triagers": [],
-      "issues_opened_total": 6,
       "issues_opened_human": 6,
-      "prs_opened_total": 48,
       "prs_opened_human": 30,
-      "prs_merged_total": 37,
       "prs_merged_human": 19,
-      "prs_merged_by_bot_author": {
-        "asyncapi-bot": 18
-      },
-      "prs_merged_bot_sum": 18,
-      "prs_merged_bot_pct": 48.65,
       "issues_closed": 1,
       "prs_closed_not_merged": 7,
-      "at_risk_score": 45,
+      "at_risk_score": 28,
       "at_risk_parts": {
-        "bot_merge_weighted": 17,
         "inactive_maintainer_bench": 16,
         "emeritus_candidates_named": 12
       },
@@ -1247,38 +948,35 @@
       ]
     },
     {
-      "full_name": "asyncapi/bundler",
+      "full_name": "asyncapi/asyncapi-react",
       "active_maintainer_count": 2,
-      "inactive_maintainer_count": 0,
+      "inactive_maintainer_count": 1,
       "active_triager_count": 0,
       "inactive_triager_count": 0,
       "active_maintainers": [
-        "Souvikns",
-        "aeworxet"
+        "AceTheCreator",
+        "fmvilas"
       ],
-      "inactive_maintainers": [],
+      "inactive_maintainers": [
+        "magicmatatjahu"
+      ],
       "active_triagers": [],
       "inactive_triagers": [],
-      "issues_opened_total": 1,
-      "issues_opened_human": 1,
-      "prs_opened_total": 21,
-      "prs_opened_human": 6,
-      "prs_merged_total": 20,
-      "prs_merged_human": 5,
-      "prs_merged_by_bot_author": {
-        "asyncapi-bot": 15
-      },
-      "prs_merged_bot_sum": 15,
-      "prs_merged_bot_pct": 75,
-      "issues_closed": 0,
-      "prs_closed_not_merged": 0,
-      "at_risk_score": 38,
+      "issues_opened_human": 27,
+      "prs_opened_human": 59,
+      "prs_merged_human": 36,
+      "issues_closed": 31,
+      "prs_closed_not_merged": 14,
+      "at_risk_score": 16,
       "at_risk_parts": {
         "two_active_maintainers": 12,
-        "bot_merge_weighted": 26
+        "inactive_maintainer_bench": 2,
+        "emeritus_candidates_named": 2
       },
-      "emeritus_candidate_count": 0,
-      "emeritus_candidates": []
+      "emeritus_candidate_count": 1,
+      "emeritus_candidates": [
+        "magicmatatjahu"
+      ]
     },
     {
       "full_name": "asyncapi/converter-js",
@@ -1295,23 +993,14 @@
       ],
       "active_triagers": [],
       "inactive_triagers": [],
-      "issues_opened_total": 0,
       "issues_opened_human": 0,
-      "prs_opened_total": 33,
       "prs_opened_human": 16,
-      "prs_merged_total": 31,
       "prs_merged_human": 13,
-      "prs_merged_by_bot_author": {
-        "asyncapi-bot": 18
-      },
-      "prs_merged_bot_sum": 18,
-      "prs_merged_bot_pct": 58.06,
       "issues_closed": 4,
       "prs_closed_not_merged": 1,
-      "at_risk_score": 36,
+      "at_risk_score": 16,
       "at_risk_parts": {
         "two_active_maintainers": 12,
-        "bot_merge_weighted": 20,
         "inactive_maintainer_bench": 2,
         "emeritus_candidates_named": 2
       },
@@ -1319,40 +1008,6 @@
       "emeritus_candidates": [
         "magicmatatjahu"
       ]
-    },
-    {
-      "full_name": "asyncapi/vs-asyncapi-preview",
-      "active_maintainer_count": 2,
-      "inactive_maintainer_count": 0,
-      "active_triager_count": 0,
-      "inactive_triager_count": 0,
-      "active_maintainers": [
-        "Ruchip16",
-        "ivangsa"
-      ],
-      "inactive_maintainers": [],
-      "active_triagers": [],
-      "inactive_triagers": [],
-      "issues_opened_total": 6,
-      "issues_opened_human": 6,
-      "prs_opened_total": 43,
-      "prs_opened_human": 16,
-      "prs_merged_total": 40,
-      "prs_merged_human": 13,
-      "prs_merged_by_bot_author": {
-        "asyncapi-bot": 27
-      },
-      "prs_merged_bot_sum": 27,
-      "prs_merged_bot_pct": 67.5,
-      "issues_closed": 22,
-      "prs_closed_not_merged": 6,
-      "at_risk_score": 36,
-      "at_risk_parts": {
-        "two_active_maintainers": 12,
-        "bot_merge_weighted": 24
-      },
-      "emeritus_candidate_count": 0,
-      "emeritus_candidates": []
     },
     {
       "full_name": "asyncapi/html-template",
@@ -1369,23 +1024,14 @@
       ],
       "active_triagers": [],
       "inactive_triagers": [],
-      "issues_opened_total": 10,
       "issues_opened_human": 9,
-      "prs_opened_total": 71,
       "prs_opened_human": 40,
-      "prs_merged_total": 62,
       "prs_merged_human": 32,
-      "prs_merged_by_bot_author": {
-        "asyncapi-bot": 30
-      },
-      "prs_merged_bot_sum": 30,
-      "prs_merged_bot_pct": 48.39,
       "issues_closed": 12,
       "prs_closed_not_merged": 4,
-      "at_risk_score": 33,
+      "at_risk_score": 16,
       "at_risk_parts": {
         "two_active_maintainers": 12,
-        "bot_merge_weighted": 17,
         "inactive_maintainer_bench": 2,
         "emeritus_candidates_named": 2
       },
@@ -1395,43 +1041,44 @@
       ]
     },
     {
-      "full_name": "asyncapi/asyncapi-react",
+      "full_name": "asyncapi/jasyncapi-idea-plugin",
       "active_maintainer_count": 2,
       "inactive_maintainer_count": 1,
-      "active_triager_count": 0,
-      "inactive_triager_count": 0,
+      "active_triager_count": 1,
+      "inactive_triager_count": 7,
       "active_maintainers": [
-        "AceTheCreator",
-        "fmvilas"
+        "Pakisan",
+        "philCryoport"
       ],
       "inactive_maintainers": [
-        "magicmatatjahu"
+        "theschles"
       ],
-      "active_triagers": [],
-      "inactive_triagers": [],
-      "issues_opened_total": 27,
-      "issues_opened_human": 27,
-      "prs_opened_total": 82,
-      "prs_opened_human": 59,
-      "prs_merged_total": 59,
-      "prs_merged_human": 36,
-      "prs_merged_by_bot_author": {
-        "asyncapi-bot": 23
-      },
-      "prs_merged_bot_sum": 23,
-      "prs_merged_bot_pct": 38.98,
-      "issues_closed": 31,
-      "prs_closed_not_merged": 14,
-      "at_risk_score": 30,
+      "active_triagers": [
+        "philCryoport"
+      ],
+      "inactive_triagers": [
+        "doctocat",
+        "example",
+        "global-owner1",
+        "global-owner2",
+        "js-owner",
+        "octocat",
+        "theschles"
+      ],
+      "issues_opened_human": 14,
+      "prs_opened_human": 70,
+      "prs_merged_human": 69,
+      "issues_closed": 14,
+      "prs_closed_not_merged": 1,
+      "at_risk_score": 16,
       "at_risk_parts": {
         "two_active_maintainers": 12,
-        "bot_merge_weighted": 14,
         "inactive_maintainer_bench": 2,
         "emeritus_candidates_named": 2
       },
       "emeritus_candidate_count": 1,
       "emeritus_candidates": [
-        "magicmatatjahu"
+        "theschles"
       ]
     },
     {
@@ -1449,23 +1096,14 @@
       ],
       "active_triagers": [],
       "inactive_triagers": [],
-      "issues_opened_total": 1,
       "issues_opened_human": 1,
-      "prs_opened_total": 41,
       "prs_opened_human": 26,
-      "prs_merged_total": 36,
       "prs_merged_human": 22,
-      "prs_merged_by_bot_author": {
-        "asyncapi-bot": 14
-      },
-      "prs_merged_bot_sum": 14,
-      "prs_merged_bot_pct": 38.89,
       "issues_closed": 0,
       "prs_closed_not_merged": 2,
-      "at_risk_score": 30,
+      "at_risk_score": 16,
       "at_risk_parts": {
         "two_active_maintainers": 12,
-        "bot_merge_weighted": 14,
         "inactive_maintainer_bench": 2,
         "emeritus_candidates_named": 2
       },
@@ -1473,6 +1111,56 @@
       "emeritus_candidates": [
         "fmvilas"
       ]
+    },
+    {
+      "full_name": "asyncapi/bundler",
+      "active_maintainer_count": 2,
+      "inactive_maintainer_count": 0,
+      "active_triager_count": 0,
+      "inactive_triager_count": 0,
+      "active_maintainers": [
+        "Souvikns",
+        "aeworxet"
+      ],
+      "inactive_maintainers": [],
+      "active_triagers": [],
+      "inactive_triagers": [],
+      "issues_opened_human": 1,
+      "prs_opened_human": 6,
+      "prs_merged_human": 5,
+      "issues_closed": 0,
+      "prs_closed_not_merged": 0,
+      "at_risk_score": 12,
+      "at_risk_parts": {
+        "two_active_maintainers": 12
+      },
+      "emeritus_candidate_count": 0,
+      "emeritus_candidates": []
+    },
+    {
+      "full_name": "asyncapi/kotlin-asyncapi",
+      "active_maintainer_count": 2,
+      "inactive_maintainer_count": 0,
+      "active_triager_count": 0,
+      "inactive_triager_count": 0,
+      "active_maintainers": [
+        "gimlet2",
+        "lorenzsimon"
+      ],
+      "inactive_maintainers": [],
+      "active_triagers": [],
+      "inactive_triagers": [],
+      "issues_opened_human": 2,
+      "prs_opened_human": 145,
+      "prs_merged_human": 128,
+      "issues_closed": 1,
+      "prs_closed_not_merged": 15,
+      "at_risk_score": 12,
+      "at_risk_parts": {
+        "two_active_maintainers": 12
+      },
+      "emeritus_candidate_count": 0,
+      "emeritus_candidates": []
     },
     {
       "full_name": "asyncapi/parser-js",
@@ -1487,67 +1175,92 @@
       "inactive_maintainers": [],
       "active_triagers": [],
       "inactive_triagers": [],
-      "issues_opened_total": 11,
       "issues_opened_human": 11,
-      "prs_opened_total": 43,
       "prs_opened_human": 33,
-      "prs_merged_total": 20,
       "prs_merged_human": 11,
-      "prs_merged_by_bot_author": {
-        "asyncapi-bot": 9
-      },
-      "prs_merged_bot_sum": 9,
-      "prs_merged_bot_pct": 45,
       "issues_closed": 20,
       "prs_closed_not_merged": 18,
-      "at_risk_score": 28,
+      "at_risk_score": 12,
       "at_risk_parts": {
-        "two_active_maintainers": 12,
-        "bot_merge_weighted": 16
+        "two_active_maintainers": 12
       },
       "emeritus_candidate_count": 0,
       "emeritus_candidates": []
     },
     {
-      "full_name": "asyncapi/studio",
-      "active_maintainer_count": 4,
-      "inactive_maintainer_count": 1,
+      "full_name": "asyncapi/protobuf-schema-parser",
+      "active_maintainer_count": 2,
+      "inactive_maintainer_count": 0,
       "active_triager_count": 0,
       "inactive_triager_count": 0,
       "active_maintainers": [
-        "Amzani",
-        "Shurtu-gal",
-        "magicmatatjahu",
-        "princerajpoot20"
+        "GreenRover",
+        "nathanaelweber"
       ],
-      "inactive_maintainers": [
-        "KhudaDad414"
-      ],
+      "inactive_maintainers": [],
       "active_triagers": [],
       "inactive_triagers": [],
-      "issues_opened_total": 30,
-      "issues_opened_human": 30,
-      "prs_opened_total": 79,
-      "prs_opened_human": 41,
-      "prs_merged_total": 65,
-      "prs_merged_human": 27,
-      "prs_merged_by_bot_author": {
-        "asyncapi-bot": 38
-      },
-      "prs_merged_bot_sum": 38,
-      "prs_merged_bot_pct": 58.46,
-      "issues_closed": 28,
-      "prs_closed_not_merged": 5,
-      "at_risk_score": 24,
+      "issues_opened_human": 0,
+      "prs_opened_human": 1,
+      "prs_merged_human": 1,
+      "issues_closed": 0,
+      "prs_closed_not_merged": 0,
+      "at_risk_score": 12,
       "at_risk_parts": {
-        "bot_merge_weighted": 20,
-        "inactive_maintainer_bench": 2,
-        "emeritus_candidates_named": 2
+        "two_active_maintainers": 12
       },
-      "emeritus_candidate_count": 1,
-      "emeritus_candidates": [
-        "KhudaDad414"
-      ]
+      "emeritus_candidate_count": 0,
+      "emeritus_candidates": []
+    },
+    {
+      "full_name": "asyncapi/saunter",
+      "active_maintainer_count": 2,
+      "inactive_maintainer_count": 0,
+      "active_triager_count": 0,
+      "inactive_triager_count": 0,
+      "active_maintainers": [
+        "m-wild",
+        "yurvon-screamo"
+      ],
+      "inactive_maintainers": [],
+      "active_triagers": [],
+      "inactive_triagers": [],
+      "issues_opened_human": 1,
+      "prs_opened_human": 12,
+      "prs_merged_human": 8,
+      "issues_closed": 1,
+      "prs_closed_not_merged": 3,
+      "at_risk_score": 12,
+      "at_risk_parts": {
+        "two_active_maintainers": 12
+      },
+      "emeritus_candidate_count": 0,
+      "emeritus_candidates": []
+    },
+    {
+      "full_name": "asyncapi/vs-asyncapi-preview",
+      "active_maintainer_count": 2,
+      "inactive_maintainer_count": 0,
+      "active_triager_count": 0,
+      "inactive_triager_count": 0,
+      "active_maintainers": [
+        "Ruchip16",
+        "ivangsa"
+      ],
+      "inactive_maintainers": [],
+      "active_triagers": [],
+      "inactive_triagers": [],
+      "issues_opened_human": 6,
+      "prs_opened_human": 16,
+      "prs_merged_human": 13,
+      "issues_closed": 22,
+      "prs_closed_not_merged": 6,
+      "at_risk_score": 12,
+      "at_risk_parts": {
+        "two_active_maintainers": 12
+      },
+      "emeritus_candidate_count": 0,
+      "emeritus_candidates": []
     },
     {
       "full_name": "asyncapi/community",
@@ -1568,22 +1281,13 @@
         "CBID2"
       ],
       "inactive_triagers": [],
-      "issues_opened_total": 128,
       "issues_opened_human": 60,
-      "prs_opened_total": 270,
       "prs_opened_human": 130,
-      "prs_merged_total": 255,
       "prs_merged_human": 116,
-      "prs_merged_by_bot_author": {
-        "asyncapi-bot": 139
-      },
-      "prs_merged_bot_sum": 139,
-      "prs_merged_bot_pct": 54.51,
       "issues_closed": 139,
       "prs_closed_not_merged": 24,
-      "at_risk_score": 23,
+      "at_risk_score": 4,
       "at_risk_parts": {
-        "bot_merge_weighted": 19,
         "inactive_maintainer_bench": 2,
         "emeritus_candidates_named": 2
       },
@@ -1591,6 +1295,197 @@
       "emeritus_candidates": [
         "Mayaleeeee"
       ]
+    },
+    {
+      "full_name": "asyncapi/generator",
+      "active_maintainer_count": 4,
+      "inactive_maintainer_count": 1,
+      "active_triager_count": 2,
+      "inactive_triager_count": 0,
+      "active_maintainers": [
+        "Adi-204",
+        "Florence-Njeri",
+        "derberg",
+        "magicmatatjahu"
+      ],
+      "inactive_maintainers": [
+        "jonaslagoni"
+      ],
+      "active_triagers": [
+        "Adi-204",
+        "Florence-Njeri"
+      ],
+      "inactive_triagers": [],
+      "issues_opened_human": 223,
+      "prs_opened_human": 272,
+      "prs_merged_human": 178,
+      "issues_closed": 196,
+      "prs_closed_not_merged": 98,
+      "at_risk_score": 4,
+      "at_risk_parts": {
+        "inactive_maintainer_bench": 2,
+        "emeritus_candidates_named": 2
+      },
+      "emeritus_candidate_count": 1,
+      "emeritus_candidates": [
+        "jonaslagoni"
+      ]
+    },
+    {
+      "full_name": "asyncapi/studio",
+      "active_maintainer_count": 4,
+      "inactive_maintainer_count": 1,
+      "active_triager_count": 0,
+      "inactive_triager_count": 0,
+      "active_maintainers": [
+        "Amzani",
+        "Shurtu-gal",
+        "magicmatatjahu",
+        "princerajpoot20"
+      ],
+      "inactive_maintainers": [
+        "KhudaDad414"
+      ],
+      "active_triagers": [],
+      "inactive_triagers": [],
+      "issues_opened_human": 30,
+      "prs_opened_human": 41,
+      "prs_merged_human": 27,
+      "issues_closed": 28,
+      "prs_closed_not_merged": 5,
+      "at_risk_score": 4,
+      "at_risk_parts": {
+        "inactive_maintainer_bench": 2,
+        "emeritus_candidates_named": 2
+      },
+      "emeritus_candidate_count": 1,
+      "emeritus_candidates": [
+        "KhudaDad414"
+      ]
+    },
+    {
+      "full_name": "asyncapi/.github",
+      "active_maintainer_count": 3,
+      "inactive_maintainer_count": 0,
+      "active_triager_count": 0,
+      "inactive_triager_count": 0,
+      "active_maintainers": [
+        "Florence-Njeri",
+        "Shurtu-gal",
+        "derberg"
+      ],
+      "inactive_maintainers": [],
+      "active_triagers": [],
+      "inactive_triagers": [],
+      "issues_opened_human": 17,
+      "prs_opened_human": 38,
+      "prs_merged_human": 27,
+      "issues_closed": 19,
+      "prs_closed_not_merged": 8,
+      "at_risk_score": 0,
+      "at_risk_parts": {},
+      "emeritus_candidate_count": 0,
+      "emeritus_candidates": []
+    },
+    {
+      "full_name": "asyncapi/cli",
+      "active_maintainer_count": 4,
+      "inactive_maintainer_count": 0,
+      "active_triager_count": 0,
+      "inactive_triager_count": 0,
+      "active_maintainers": [
+        "AayushSaini101",
+        "Amzani",
+        "Shurtu-gal",
+        "Souvikns"
+      ],
+      "inactive_maintainers": [],
+      "active_triagers": [],
+      "inactive_triagers": [],
+      "issues_opened_human": 80,
+      "prs_opened_human": 221,
+      "prs_merged_human": 102,
+      "issues_closed": 60,
+      "prs_closed_not_merged": 69,
+      "at_risk_score": 0,
+      "at_risk_parts": {},
+      "emeritus_candidate_count": 0,
+      "emeritus_candidates": []
+    },
+    {
+      "full_name": "asyncapi/conference-website",
+      "active_maintainer_count": 4,
+      "inactive_maintainer_count": 0,
+      "active_triager_count": 0,
+      "inactive_triager_count": 0,
+      "active_maintainers": [
+        "AceTheCreator",
+        "Mayaleeeee",
+        "TenzDelek",
+        "thulieblack"
+      ],
+      "inactive_maintainers": [],
+      "active_triagers": [],
+      "inactive_triagers": [],
+      "issues_opened_human": 87,
+      "prs_opened_human": 170,
+      "prs_merged_human": 113,
+      "issues_closed": 92,
+      "prs_closed_not_merged": 68,
+      "at_risk_score": 0,
+      "at_risk_parts": {},
+      "emeritus_candidate_count": 0,
+      "emeritus_candidates": []
+    },
+    {
+      "full_name": "asyncapi/openapi-schema-parser",
+      "active_maintainer_count": 3,
+      "inactive_maintainer_count": 0,
+      "active_triager_count": 0,
+      "inactive_triager_count": 0,
+      "active_maintainers": [
+        "AayushSaini101",
+        "fmvilas",
+        "smoya"
+      ],
+      "inactive_maintainers": [],
+      "active_triagers": [],
+      "inactive_triagers": [],
+      "issues_opened_human": 1,
+      "prs_opened_human": 24,
+      "prs_merged_human": 20,
+      "issues_closed": 0,
+      "prs_closed_not_merged": 0,
+      "at_risk_score": 0,
+      "at_risk_parts": {},
+      "emeritus_candidate_count": 0,
+      "emeritus_candidates": []
+    },
+    {
+      "full_name": "asyncapi/spec",
+      "active_maintainer_count": 5,
+      "inactive_maintainer_count": 0,
+      "active_triager_count": 0,
+      "inactive_triager_count": 0,
+      "active_maintainers": [
+        "GreenRover",
+        "char0n",
+        "dalelane",
+        "derberg",
+        "fmvilas"
+      ],
+      "inactive_maintainers": [],
+      "active_triagers": [],
+      "inactive_triagers": [],
+      "issues_opened_human": 34,
+      "prs_opened_human": 45,
+      "prs_merged_human": 19,
+      "issues_closed": 27,
+      "prs_closed_not_merged": 23,
+      "at_risk_score": 0,
+      "at_risk_parts": {},
+      "emeritus_candidate_count": 0,
+      "emeritus_candidates": []
     },
     {
       "full_name": "asyncapi/website",
@@ -1618,359 +1513,13 @@
       "inactive_triagers": [
         "devilkiller-ag"
       ],
-      "issues_opened_total": 377,
       "issues_opened_human": 377,
-      "prs_opened_total": 908,
       "prs_opened_human": 515,
-      "prs_merged_total": 560,
       "prs_merged_human": 207,
-      "prs_merged_by_bot_author": {
-        "asyncapi-bot": 353
-      },
-      "prs_merged_bot_sum": 353,
-      "prs_merged_bot_pct": 63.04,
       "issues_closed": 328,
       "prs_closed_not_merged": 317,
-      "at_risk_score": 22,
-      "at_risk_parts": {
-        "bot_merge_weighted": 22
-      },
-      "emeritus_candidate_count": 0,
-      "emeritus_candidates": []
-    },
-    {
-      "full_name": "asyncapi/jasyncapi-idea-plugin",
-      "active_maintainer_count": 2,
-      "inactive_maintainer_count": 1,
-      "active_triager_count": 1,
-      "inactive_triager_count": 7,
-      "active_maintainers": [
-        "Pakisan",
-        "philCryoport"
-      ],
-      "inactive_maintainers": [
-        "theschles"
-      ],
-      "active_triagers": [
-        "philCryoport"
-      ],
-      "inactive_triagers": [
-        "doctocat",
-        "example",
-        "global-owner1",
-        "global-owner2",
-        "js-owner",
-        "octocat",
-        "theschles"
-      ],
-      "issues_opened_total": 14,
-      "issues_opened_human": 14,
-      "prs_opened_total": 81,
-      "prs_opened_human": 70,
-      "prs_merged_total": 80,
-      "prs_merged_human": 69,
-      "prs_merged_by_bot_author": {
-        "asyncapi-bot": 11
-      },
-      "prs_merged_bot_sum": 11,
-      "prs_merged_bot_pct": 13.75,
-      "issues_closed": 14,
-      "prs_closed_not_merged": 1,
-      "at_risk_score": 21,
-      "at_risk_parts": {
-        "two_active_maintainers": 12,
-        "bot_merge_weighted": 5,
-        "inactive_maintainer_bench": 2,
-        "emeritus_candidates_named": 2
-      },
-      "emeritus_candidate_count": 1,
-      "emeritus_candidates": [
-        "theschles"
-      ]
-    },
-    {
-      "full_name": "asyncapi/saunter",
-      "active_maintainer_count": 2,
-      "inactive_maintainer_count": 0,
-      "active_triager_count": 0,
-      "inactive_triager_count": 0,
-      "active_maintainers": [
-        "m-wild",
-        "yurvon-screamo"
-      ],
-      "inactive_maintainers": [],
-      "active_triagers": [],
-      "inactive_triagers": [],
-      "issues_opened_total": 1,
-      "issues_opened_human": 1,
-      "prs_opened_total": 14,
-      "prs_opened_human": 12,
-      "prs_merged_total": 9,
-      "prs_merged_human": 8,
-      "prs_merged_by_bot_author": {
-        "asyncapi-bot": 1
-      },
-      "prs_merged_bot_sum": 1,
-      "prs_merged_bot_pct": 11.11,
-      "issues_closed": 1,
-      "prs_closed_not_merged": 3,
-      "at_risk_score": 16,
-      "at_risk_parts": {
-        "two_active_maintainers": 12,
-        "bot_merge_weighted": 4
-      },
-      "emeritus_candidate_count": 0,
-      "emeritus_candidates": []
-    },
-    {
-      "full_name": "asyncapi/kotlin-asyncapi",
-      "active_maintainer_count": 2,
-      "inactive_maintainer_count": 0,
-      "active_triager_count": 0,
-      "inactive_triager_count": 0,
-      "active_maintainers": [
-        "gimlet2",
-        "lorenzsimon"
-      ],
-      "inactive_maintainers": [],
-      "active_triagers": [],
-      "inactive_triagers": [],
-      "issues_opened_total": 2,
-      "issues_opened_human": 2,
-      "prs_opened_total": 156,
-      "prs_opened_human": 145,
-      "prs_merged_total": 139,
-      "prs_merged_human": 128,
-      "prs_merged_by_bot_author": {
-        "asyncapi-bot": 11
-      },
-      "prs_merged_bot_sum": 11,
-      "prs_merged_bot_pct": 7.91,
-      "issues_closed": 1,
-      "prs_closed_not_merged": 15,
-      "at_risk_score": 15,
-      "at_risk_parts": {
-        "two_active_maintainers": 12,
-        "bot_merge_weighted": 3
-      },
-      "emeritus_candidate_count": 0,
-      "emeritus_candidates": []
-    },
-    {
-      "full_name": "asyncapi/openapi-schema-parser",
-      "active_maintainer_count": 3,
-      "inactive_maintainer_count": 0,
-      "active_triager_count": 0,
-      "inactive_triager_count": 0,
-      "active_maintainers": [
-        "AayushSaini101",
-        "fmvilas",
-        "smoya"
-      ],
-      "inactive_maintainers": [],
-      "active_triagers": [],
-      "inactive_triagers": [],
-      "issues_opened_total": 1,
-      "issues_opened_human": 1,
-      "prs_opened_total": 39,
-      "prs_opened_human": 24,
-      "prs_merged_total": 35,
-      "prs_merged_human": 20,
-      "prs_merged_by_bot_author": {
-        "asyncapi-bot": 15
-      },
-      "prs_merged_bot_sum": 15,
-      "prs_merged_bot_pct": 42.86,
-      "issues_closed": 0,
-      "prs_closed_not_merged": 0,
-      "at_risk_score": 15,
-      "at_risk_parts": {
-        "bot_merge_weighted": 15
-      },
-      "emeritus_candidate_count": 0,
-      "emeritus_candidates": []
-    },
-    {
-      "full_name": "asyncapi/cli",
-      "active_maintainer_count": 4,
-      "inactive_maintainer_count": 0,
-      "active_triager_count": 0,
-      "inactive_triager_count": 0,
-      "active_maintainers": [
-        "AayushSaini101",
-        "Amzani",
-        "Shurtu-gal",
-        "Souvikns"
-      ],
-      "inactive_maintainers": [],
-      "active_triagers": [],
-      "inactive_triagers": [],
-      "issues_opened_total": 80,
-      "issues_opened_human": 80,
-      "prs_opened_total": 265,
-      "prs_opened_human": 221,
-      "prs_merged_total": 146,
-      "prs_merged_human": 102,
-      "prs_merged_by_bot_author": {
-        "asyncapi-bot": 44
-      },
-      "prs_merged_bot_sum": 44,
-      "prs_merged_bot_pct": 30.14,
-      "issues_closed": 60,
-      "prs_closed_not_merged": 69,
-      "at_risk_score": 11,
-      "at_risk_parts": {
-        "bot_merge_weighted": 11
-      },
-      "emeritus_candidate_count": 0,
-      "emeritus_candidates": []
-    },
-    {
-      "full_name": "asyncapi/spec",
-      "active_maintainer_count": 5,
-      "inactive_maintainer_count": 0,
-      "active_triager_count": 0,
-      "inactive_triager_count": 0,
-      "active_maintainers": [
-        "GreenRover",
-        "char0n",
-        "dalelane",
-        "derberg",
-        "fmvilas"
-      ],
-      "inactive_maintainers": [],
-      "active_triagers": [],
-      "inactive_triagers": [],
-      "issues_opened_total": 34,
-      "issues_opened_human": 34,
-      "prs_opened_total": 54,
-      "prs_opened_human": 45,
-      "prs_merged_total": 28,
-      "prs_merged_human": 19,
-      "prs_merged_by_bot_author": {
-        "asyncapi-bot": 9
-      },
-      "prs_merged_bot_sum": 9,
-      "prs_merged_bot_pct": 32.14,
-      "issues_closed": 27,
-      "prs_closed_not_merged": 23,
-      "at_risk_score": 11,
-      "at_risk_parts": {
-        "bot_merge_weighted": 11
-      },
-      "emeritus_candidate_count": 0,
-      "emeritus_candidates": []
-    },
-    {
-      "full_name": "asyncapi/generator",
-      "active_maintainer_count": 4,
-      "inactive_maintainer_count": 1,
-      "active_triager_count": 2,
-      "inactive_triager_count": 0,
-      "active_maintainers": [
-        "Adi-204",
-        "Florence-Njeri",
-        "derberg",
-        "magicmatatjahu"
-      ],
-      "inactive_maintainers": [
-        "jonaslagoni"
-      ],
-      "active_triagers": [
-        "Adi-204",
-        "Florence-Njeri"
-      ],
-      "inactive_triagers": [],
-      "issues_opened_total": 223,
-      "issues_opened_human": 223,
-      "prs_opened_total": 318,
-      "prs_opened_human": 272,
-      "prs_merged_total": 212,
-      "prs_merged_human": 178,
-      "prs_merged_by_bot_author": {
-        "asyncapi-bot": 34
-      },
-      "prs_merged_bot_sum": 34,
-      "prs_merged_bot_pct": 16.04,
-      "issues_closed": 196,
-      "prs_closed_not_merged": 98,
-      "at_risk_score": 10,
-      "at_risk_parts": {
-        "bot_merge_weighted": 6,
-        "inactive_maintainer_bench": 2,
-        "emeritus_candidates_named": 2
-      },
-      "emeritus_candidate_count": 1,
-      "emeritus_candidates": [
-        "jonaslagoni"
-      ]
-    },
-    {
-      "full_name": "asyncapi/conference-website",
-      "active_maintainer_count": 4,
-      "inactive_maintainer_count": 0,
-      "active_triager_count": 0,
-      "inactive_triager_count": 0,
-      "active_maintainers": [
-        "AceTheCreator",
-        "Mayaleeeee",
-        "TenzDelek",
-        "thulieblack"
-      ],
-      "inactive_maintainers": [],
-      "active_triagers": [],
-      "inactive_triagers": [],
-      "issues_opened_total": 87,
-      "issues_opened_human": 87,
-      "prs_opened_total": 181,
-      "prs_opened_human": 170,
-      "prs_merged_total": 124,
-      "prs_merged_human": 113,
-      "prs_merged_by_bot_author": {
-        "asyncapi-bot": 11
-      },
-      "prs_merged_bot_sum": 11,
-      "prs_merged_bot_pct": 8.87,
-      "issues_closed": 92,
-      "prs_closed_not_merged": 68,
-      "at_risk_score": 3,
-      "at_risk_parts": {
-        "bot_merge_weighted": 3
-      },
-      "emeritus_candidate_count": 0,
-      "emeritus_candidates": []
-    },
-    {
-      "full_name": "asyncapi/.github",
-      "active_maintainer_count": 3,
-      "inactive_maintainer_count": 0,
-      "active_triager_count": 0,
-      "inactive_triager_count": 0,
-      "active_maintainers": [
-        "Florence-Njeri",
-        "Shurtu-gal",
-        "derberg"
-      ],
-      "inactive_maintainers": [],
-      "active_triagers": [],
-      "inactive_triagers": [],
-      "issues_opened_total": 17,
-      "issues_opened_human": 17,
-      "prs_opened_total": 38,
-      "prs_opened_human": 38,
-      "prs_merged_total": 27,
-      "prs_merged_human": 27,
-      "prs_merged_by_bot_author": {
-        "asyncapi-bot": 0
-      },
-      "prs_merged_bot_sum": 0,
-      "prs_merged_bot_pct": 0,
-      "issues_closed": 19,
-      "prs_closed_not_merged": 8,
       "at_risk_score": 0,
-      "at_risk_parts": {
-        "bot_merge_weighted": 0
-      },
+      "at_risk_parts": {},
       "emeritus_candidate_count": 0,
       "emeritus_candidates": []
     }

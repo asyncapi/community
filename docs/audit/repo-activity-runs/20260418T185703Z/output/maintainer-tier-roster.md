@@ -1,7 +1,7 @@
 # Maintainer tier roster (by active maintainer count)
 
 - Maintainer run: `20260329T084806Z`
-- Generated: 2026-04-19T04:35:09.500Z
+- Generated: 2026-04-19T04:46:09.522Z
 - Order: **0** active maintainers first, then **1**, **2**, … (name within tier).
 - **Inactive maintainers** = flagged inactive by the maintainer audit (emeritus / coverage risk), not necessarily TSC emeritus.
 

@@ -243,15 +243,15 @@ Optional: `--out-dir <dir>` (default: directory of the repo-activity summary). O
 | File | Purpose |
 |------|--------|
 | `analysis-reports-index.md` | Catalog of every generated merge report. |
-| `at-risk-scorecard.md` / `.json` | Heuristic **risk rank** (coverage + traffic + bot share + emeritus count); JSON includes `at_risk_parts` breakdown. |
+| `at-risk-scorecard.md` / `.json` | Heuristic **risk rank** (coverage + **human-only** traffic + emeritus count; bot merges not scored). JSON includes `at_risk_parts` and `analysis_activity_basis`. |
 | `emeritus-candidates-by-repo.md` / `.json` | **One row per repo**: all emeritus candidate logins (grouped from `emeritus-candidates.md`). |
 | `maintainer-tier-roster.md` / `.json` | Repos ordered **0 → N** active maintainers; columns: active list, **inactive maintainers** (audit “emeritus risk”), active / inactive triagers. |
 | `active-maintainer-distribution.md` / `.json` | **Count of repos** per active-maintainer tier (0, 1, 2, …). |
-| `critical-repos-analysis.md` / `.json` | Same risk sort as merge + **full activity** + bot-merge **%** (spreadsheet-friendly JSON). |
+| `critical-repos-analysis.md` / `.json` | Coverage + **human-only** issue/PR activity (spreadsheet-friendly JSON; raw totals remain in `merged` / `repo-activity` JSON). |
 | `merged-repo-activity-by-maintainer-count.json` | Full merge: lists, counts, triagers, `metrics`. |
 | `merged-repo-activity-by-maintainer-count.md` | Activity table + maintainer counts + login appendix. |
 | `repo-maintenance-load.md` | `prs_merged_human / active_maintainer_count` (descending). |
-| `consolidation-signals.json` | Repos with **zero** active maintainers; **high bot-authored merge share** (heuristic). |
+| `consolidation-signals.json` | Repos with **zero** active maintainers (`repos_high_bot_merge_share` is always empty; bots treated as non-signal in merge analysis). |
 
 ---
 

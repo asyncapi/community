@@ -4,7 +4,7 @@
 
 - **Repo-level activity audit:** `npm run audit:repo-activity` (`scripts/audit-repo-activity.mjs`). Uses `raw-data.json` and the same `window_months` / `bots.deny_pr_authors` as maintainer rules; outputs under `docs/audit/repo-activity-runs/<run-id>/` (`manifest.audit_kind: repo_activity`, `repo_activity_version: 1.0.0`).
 - **Shared Search pacing:** `scripts/lib/audit-search-pace.mjs` (`paceSearchApi`, `searchCount`, `searchCountOr422`); `audit-rule-engine.mjs` imports it (behaviour unchanged).
-- **Merge reports:** `npm run audit:merge-maintainer-activity` (`scripts/audit-merge-maintainer-repo-activity.mjs`) joins `runs/.../summary.json` with `repo-activity-runs/.../repo-activity-summary.json`: **at-risk scorecard**, **emeritus-candidates-by-repo** (grouped from `emeritus-candidates.md`), tier roster, active-maintainer distribution, critical-repos analysis, load, consolidation signals, and `analysis-reports-index.md`. Optional `--emeritus-candidates`. Documented in [USAGE.md](USAGE.md).
+- **Merge reports:** `npm run audit:merge-maintainer-activity` (`scripts/audit-merge-maintainer-repo-activity.mjs`) joins `runs/.../summary.json` with `repo-activity-runs/.../repo-activity-summary.json`: **at-risk scorecard**, **emeritus-candidates-by-repo** (grouped from `emeritus-candidates.md`), tier roster, active-maintainer distribution, critical-repos analysis, load, consolidation signals, and `analysis-reports-index.md`. Optional `--emeritus-candidates`. **Merge analysis** uses **human-only** issue/PR metrics for scoring and Markdown tables (deny-listed bots treated as non-signal); raw totals remain in `merged-repo-activity-by-maintainer-count.json` `metrics` and in `repo-activity-*.json`. Documented in [USAGE.md](USAGE.md).
 
 ## 1.0.4
 
