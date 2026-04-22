@@ -786,6 +786,7 @@
   slack: U07M2JLLWF7
   availableForHire: true
   isTscMember: true
+  tscMemberSince: '2026-04-22'
   repos:
     - asyncapi-react
   githubID: 96487647
