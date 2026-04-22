@@ -782,7 +782,10 @@
   githubID: 122612557
 - name: Mohammed Mehdi
   github: catosaurusrex2003
-  isTscMember: false
+  linkedin: mohammed-mehdi-a5833b229
+  slack: U07M2JLLWF7
+  availableForHire: true
+  isTscMember: true
   repos:
     - asyncapi-react
   githubID: 96487647
