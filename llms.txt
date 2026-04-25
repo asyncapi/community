@@ -1,0 +1,38 @@
+# AsyncAPI Community
+
+> AsyncAPI is an open-source initiative that seeks to improve the current state of Event-Driven Architectures (EDAs). Our mission is to make working with EDAs as easy as working with REST APIs.
+
+This repository contains community governance, contribution guidelines, and operational assets for the AsyncAPI Initiative.
+
+## Key Documents
+
+- [README](https://github.com/asyncapi/community/blob/master/README.md): Overview of the community and how to get started.
+- [CONTRIBUTING](https://github.com/asyncapi/community/blob/master/CONTRIBUTING.md): How pull requests are reviewed and merged.
+- [CODE_OF_CONDUCT](https://github.com/asyncapi/community/blob/master/CODE_OF_CONDUCT.md): Community standards and expected behavior.
+- [CODEOWNERS](https://github.com/asyncapi/community/blob/master/CODEOWNERS): Who maintains which parts of this repository.
+
+## Governance
+
+- [Governance](https://github.com/asyncapi/community/blob/master/docs/020-governance-and-policies/GOVERNANCE.md): How the Governance Board and TSC operate.
+- [Charter](https://github.com/asyncapi/community/blob/master/docs/020-governance-and-policies/CHARTER.md): The formal charter of the AsyncAPI Initiative.
+- [TSC Membership](https://github.com/asyncapi/community/blob/master/docs/020-governance-and-policies/TSC_MEMBERSHIP.md): Requirements and responsibilities for TSC members.
+- [Voting](https://github.com/asyncapi/community/blob/master/docs/020-governance-and-policies/voting.md): How TSC voting works.
+- [MAINTAINERS.yaml](https://github.com/asyncapi/community/blob/master/MAINTAINERS.yaml): Current list of maintainers across all AsyncAPI repos.
+- [TSC_BOARD_MEMBERS.yaml](https://github.com/asyncapi/community/blob/master/TSC_BOARD_MEMBERS.yaml): Current TSC board members.
+
+## Contributing
+
+- [Contribution Flow](https://github.com/asyncapi/community/blob/master/docs/010-contribution-guidelines/contribution-flow.md): Step-by-step guide for making contributions.
+- [Git Workflow](https://github.com/asyncapi/community/blob/master/docs/010-contribution-guidelines/git-workflow.md): How to fork, branch, and submit pull requests.
+- [Conventional Commits](https://github.com/asyncapi/community/blob/master/docs/010-contribution-guidelines/conventional-commits.md): Required commit message format.
+- [Style Guide](https://github.com/asyncapi/community/blob/master/docs/011-styleguide/aboutguide.md): Writing and formatting standards for documentation.
+
+## Community Programs
+
+- [Ambassador Program](https://github.com/asyncapi/community/blob/master/docs/020-governance-and-policies/AMBASSADOR_PROGRAM.md): How to become an AsyncAPI Ambassador.
+- [Mentorship](https://github.com/asyncapi/community/blob/master/docs/050-mentorship-program): Information about LFX and GSoC mentorship.
+- [Onboarding](https://github.com/asyncapi/community/blob/master/docs/000-onboarding): Guides for new contributors.
+
+## AI Contributions
+
+- [AI Contributing](https://github.com/asyncapi/community/blob/master/AI_CONTRIBUTING.md): Guidelines for submitting AI-assisted contributions.
