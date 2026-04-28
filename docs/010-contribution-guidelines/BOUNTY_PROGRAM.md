@@ -1,6 +1,6 @@
 ---
 title: AsyncAPI Bounty Program
-weight: 160
+weight: 170
 ---
 
 # AsyncAPI Bounty Program
