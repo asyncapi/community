@@ -32,6 +32,7 @@
   isTscMember: true
   tscMemberSince: '2025-01-13'
   repos:
+    - parser-js
     - openapi-schema-parser
     - cli
   githubID: 60972989
