@@ -128,9 +128,9 @@
   is_archived: false
   action_on_destroy: archive
 
-- name: 17_bounty
-  topic: All about the AsyncAPI Bounty Program discussions.
-  purpose: This is the place where we discuss everything related to the Bounty Program.
+- name: 17_microgrant
+  topic: All about the AsyncAPI Microgrant Program discussions.
+  purpose: This is the place where we discuss everything related to the Microgrant Program.
   is_private: false
   is_archived: false
   action_on_destroy: archive
