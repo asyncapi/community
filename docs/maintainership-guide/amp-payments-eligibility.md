@@ -5,10 +5,10 @@ weight: 200
 
 > _Stipends are only available during funded cohorts. Whether a cohort is funded or volunteer-based is announced before applications open each year._
 
-The AMP provides stipends to recognize the time, effort, and impact of contributors and mentors who fulfill program requirements and demonstrate commitment throughout the program. **Stipends are only disbursed in years where a budget has been allocated to the program.** In volunteer cohorts, no financial compensation is provided, participation is entirely community-driven.
+The AMP provides stipends to recognize the time, effort, and impact of contributors and mentors who fulfill program requirements and demonstrate commitment throughout the program. **Stipends are only disbursed in years where a budget has been allocated to the program.** In volunteer cohorts, no financial compensation is provided; participation is entirely community-driven.
 
 > _AMP participants may receive stipends from AsyncAPI at AsyncAPI's sole discretion; these stipends are not adjusted for cost of living. All participants will receive equal stipend amounts during program participation._
- d
+
 ## Eligibility for Stipends
 
 The following eligibility criteria apply to **funded cohorts only**. If you are participating in a volunteer cohort, these requirements still reflect the standard of commitment expected, but no stipend evaluation will occur.

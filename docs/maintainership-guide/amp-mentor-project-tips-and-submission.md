@@ -11,13 +11,13 @@ Submitting a Maintainership Program project idea is different from proposing a t
 
 A strong project idea should:
 
-- **Support maintainership goals**: Design the project to help contributors take on responsibilities similar to a maintainer, triaging issues, reviewing PRs, leading discussions, owning releases, or driving adoption.
+- **Support maintainership goals:** Design the project to help contributors take on responsibilities similar to a maintainer, triaging issues, reviewing PRs, leading discussions, owning releases, or driving adoption.
 
-- **Focus on mentorship**: Include a clear, achievable timeline with room for learning and iteration. Offer both technical and non-technical growth opportunities (e.g., writing docs, community engagement).
+- **Focus on mentorship:** Include a clear, achievable timeline with room for learning and iteration. Offer both technical and non-technical growth opportunities (e.g., writing docs, community engagement).
 
-- **Have clear milestones**: Replace vague goals like “become a maintainer” with 3–5 specific phases such as onboarding, triaging, managing a repo, or leading a release cycle.
+- **Have clear milestones:** Replace vague goals like “become a maintainer” with 3–5 specific phases such as onboarding, triaging, managing a repo, or leading a release cycle.
 
-- **Align with AsyncAPI community goals**: Whether through tooling, documentation, or community-building, ensure the project advances the initiative’s mission.
+- **Align with AsyncAPI community goals:** Whether through tooling, documentation, or community-building, ensure the project advances the initiative’s mission.
 
 Your role at this stage:
 
@@ -43,15 +43,15 @@ Your role at this stage:
 
 Once your project idea is accepted, finding the right contributor is crucial.
 
-- **One Idea, One Contributor**: Each project is for one dedicated contributor (exceptions allowed for certain documentation projects). No team-based technical projects.
+- **One Idea, One Contributor:** Each project is for one dedicated contributor (exceptions allowed for certain documentation projects). No team-based technical projects.
 
-- **Prioritize interest & alignment**: Look for applicants with genuine passion, curiosity, and alignment with the project purpose.
+- **Prioritize interest & alignment:** Look for applicants with genuine passion, curiosity, and alignment with the project purpose.
 
-- **Talk before you accept**: A short chat via Slack or a call can reveal motivation, communication style, and fit.
+- **Talk before you accept:** A short chat via Slack or a call can reveal motivation, communication style, and fit.
 
-- **Request a contribution**: Ask promising candidates for a small, relevant contribution to check skills and familiarity with the stack.
+- **Request a contribution:** Ask promising candidates for a small, relevant contribution to check skills and familiarity with the stack.
 
-- **Stick to the plan**: Once accepted, the project scope cannot be changed.
+- **Stick to the plan:** Once accepted, the project scope cannot be changed.
 
 ## 4. Running a Successful Project
 

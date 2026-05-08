@@ -22,7 +22,7 @@ We welcome participants from all over the world, especially those passionate abo
 
 ## Do mentees receive a stipend?
 
-It depends on the cohort. In a **funded cohort**, selected mentees receive a stipend for completing their project. In a **volunteer cohort**, no stipend is provided, participation is purely community-driven.
+It depends on the cohort. In a **funded cohort**, selected mentees receive a stipend for completing their project. In a **volunteer cohort**, no stipend is provided; participation is purely community-driven.
 
 The cohort type is always announced before applications open, so you'll know upfront what to expect.
 
