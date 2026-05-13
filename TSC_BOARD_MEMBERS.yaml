@@ -109,7 +109,6 @@
   repos:
     - spec
     - spec-json-schemas
-    - parser-js
     - extensions-catalog
     - converter-js
     - bindings
@@ -232,6 +231,7 @@
   tscMemberSince: '2023-11-30'
   repos:
     - website
+    - parser-js
     - studio
   githubID: 44585452
 - name: Richard Coppen
@@ -588,6 +588,16 @@
   repos:
     - conference-website
   githubID: 122612557
+- name: Mohammed Mehdi
+  github: catosaurusrex2003
+  linkedin: mohammed-mehdi-a5833b229
+  slack: U07M2JLLWF7
+  availableForHire: true
+  isTscMember: true
+  tscMemberSince: '2026-04-22'
+  repos:
+    - asyncapi-react
+  githubID: 96487647
 - name: Daniel Kocot
   img: https://avatars.githubusercontent.com/u/466609?v=4
   bio: >-
