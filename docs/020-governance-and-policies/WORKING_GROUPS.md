@@ -16,6 +16,8 @@ To form a Working Group, all of the following prerequisites must be met:
 - There must be at least one to two of its members appointed as its **chairperson** (though we recommend having two chairs).
 - Have clearly defined goals that are easily accessible to everyone on the internet, as this helps maintain alignment within the group.
 
+The Technical Steering Committee (TSC) will need to vote and approve the creation of any Working Group.
+
 ### The Chairperson Role
 
 We recommend that a Working Group have at least two chairs, as this dual-chair structure ensures the group stays active if one chair is unavailable to lead on the responsibilities. The chairperson is selected by the group's members. Volunteers can serve as chairpersons, or the group can elect one. The chairperson can also resign if they feel they can't fulfil their duties anymore. In this case, the group must elect a new chairperson if there is no other chairperson.
@@ -37,7 +39,7 @@ The group's name, members, goals, and other relevant information must be added t
 
 ### Decision Making
 
-A Working Group has no authority or power over the roadmap of the projects they may impact. It's up to the repositories' maintainers (code owners) to approve or reject the pull requests.  Therefore, it's advisable to either have maintainers of the impacted projects in the Working Group or to ensure everyone agrees on the roadmaps for the different repositories/projects.
+A Working Group does not have authority over the roadmap of the projects they may impact. It's up to the repositories' maintainers (code owners) to approve or reject pull requests proposed by the Working Group.  To ensure alignment, it is recommended to include maintainers of the affected projects in the Working Group or to establish consensus on the roadmaps for the relevant repositories and projects.
 
 A Working Group must discuss ideas and solutions in public and communicate, through official channels, all relevant discussions and implementations it wishes to suggest to others.
 
