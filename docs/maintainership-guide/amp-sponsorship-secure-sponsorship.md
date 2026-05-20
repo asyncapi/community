@@ -29,7 +29,7 @@ Every contribution, big or small, directly supports contributor stipends and men
 
 ## Key Benefits for Sponsors
 
-Sponsorship isn’t just about giving — it’s about growing together. Here's what you gain by partnering with us:
+Sponsorship isn’t just about giving, it’s about growing together. Here's what you gain by partnering with us:
 
 **Brand Visibility:**
 
