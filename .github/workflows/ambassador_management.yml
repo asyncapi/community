@@ -14,13 +14,13 @@ jobs:
 
     steps:
       - name: Checkout base commit
-        uses: actions/checkout@v4
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
         with:
           ref: ${{ github.event.pull_request.base.sha }}
           path: community-main
 
       - name: Checkout head commit
-        uses: actions/checkout@v4
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
         with:
           ref: ${{ github.event.pull_request.head.sha }}
           path: community
@@ -202,7 +202,7 @@ jobs:
       GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
     steps:
       - name: Check out code
-        uses: actions/checkout@v4
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
 
       - name: Install js-yaml
         run: npm install js-yaml@4.1.0
@@ -288,7 +288,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Report workflow run status to Slack
-        uses: rtCamp/action-slack-notify@v2
+        uses: rtCamp/action-slack-notify@e31e87e03dd19038e411e38ae27cbad084a90661 # v2.3.3
         env:
           SLACK_WEBHOOK: ${{secrets.SLACK_CI_FAIL_NOTIFY}}
           SLACK_TITLE: '🚨 Ambassador Management Workflow failed 🚨'
