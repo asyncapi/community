@@ -89,7 +89,7 @@ jobs:
         run: npm install js-yaml@4 --no-save
 
       - name: Run script updating MAINTAINERS.yaml
-        uses: actions/github-script@v7
+        uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
         env:
           GH_TOKEN: ${{ github.token }}
           MAINTAINERS_FILE_PATH: "${{ github.workspace }}/MAINTAINERS.yaml"

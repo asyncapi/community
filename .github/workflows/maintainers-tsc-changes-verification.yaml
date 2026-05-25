@@ -31,7 +31,7 @@ jobs:
 
       - name: Verify changes in MAINTAINERS.yaml
         id: verify-changes
-        uses: actions/github-script@v6
+        uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
         with:
           github-token: ${{ secrets.GH_TOKEN }}
           script: |
@@ -121,7 +121,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Comment and close the PR if there are any critical changes done by human
-        uses: actions/github-script@v6
+        uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
         with:
           github-token: ${{ secrets.GH_TOKEN }}
           script: |
@@ -157,7 +157,7 @@ jobs:
     steps:
       - name: Comment on PR if TSC member is removed by asyncapi-bot
         if: steps.verify-changes-if-tsc-if-maintainers.outputs.removedTscMembers != ''
-        uses: actions/github-script@v6
+        uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
         with:
           github-token: ${{ secrets.GH_TOKEN }}
           script: |

@@ -31,7 +31,7 @@ jobs:
         run: npm install js-yaml@4.1.0
       - name: Compare files
         id: compare-files
-        uses: actions/github-script@v6
+        uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
         with:
           script: |
             const fs = require("fs");
@@ -90,7 +90,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Invite new maintainers to the organization
-        uses: actions/github-script@v6
+        uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
         with:
           github-token: ${{ secrets.GH_TOKEN_ORG_ADMIN }}
           script: |
@@ -107,7 +107,7 @@ jobs:
             }
 
       - name: Add new maintainers to the team
-        uses: actions/github-script@v6
+        uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
         with:
           github-token: ${{ secrets.GH_TOKEN_ORG_ADMIN }}
           script: |
@@ -133,7 +133,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Display welcome message for new maintainers
-        uses: actions/github-script@v6
+        uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
         with:
           github-token: ${{ secrets.GH_TOKEN }}
           script: |
@@ -159,7 +159,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Remove maintainers from the organization
-        uses: actions/github-script@v6
+        uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
         with:
           github-token: ${{ secrets.GH_TOKEN_ORG_ADMIN }}
           script: |
@@ -190,7 +190,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Display goodbye message to removed maintainers
-        uses: actions/github-script@v6
+        uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
         with:
           github-token: ${{ secrets.GH_TOKEN }}
           script: |

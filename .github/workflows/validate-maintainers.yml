@@ -20,7 +20,7 @@ jobs:
       - name: Install dependencies
         run: npm install js-yaml@4.1.0
       - name: Validate list with schema
-        uses: actions/github-script@v4
+        uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.04
         with:
           script: |
             const Ajv = require("ajv");
@@ -53,7 +53,7 @@ jobs:
       - name: Install dependencies
         run: npm install js-yaml@4.1.0
       - name: Calculate
-        uses: actions/github-script@v4
+        uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.04
         with:
           script: |
             const fs = require('fs');

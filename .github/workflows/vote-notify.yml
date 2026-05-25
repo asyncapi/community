@@ -39,7 +39,7 @@ jobs:
 
       # List all the open issues with the label "vote open"
       - name: List current open issues
-        uses: actions/github-script@v7
+        uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
         id: list
         with:
           script: |
@@ -78,7 +78,7 @@ jobs:
         shell: bash
 
       - name: Notify TSC Members
-        uses: actions/github-script@v7
+        uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
         id: notify
         env:
           MAILJET_API_KEY: ${{ secrets.MAILJET_PUBLIC_KEY}}

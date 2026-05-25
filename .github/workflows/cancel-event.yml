@@ -24,7 +24,7 @@ jobs:
         run: npm install
         working-directory: ./.github/workflows/create-event-helpers
       - name: Remove Google Calendar entry
-        uses: actions/github-script@v4
+        uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.04
         env:
           ISSUE_NUMBER: ${{ github.event.issue.number }}
           ISSUE_CLOSED_AT: ${{ github.event.issue.closed_at }}

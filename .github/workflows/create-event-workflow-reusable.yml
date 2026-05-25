@@ -84,7 +84,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Validate inputs
-        uses: actions/github-script@v6
+        uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
         with:
           script: |
             const time = '${{inputs.time}}'
@@ -112,7 +112,7 @@ jobs:
         working-directory: ./.github/workflows/create-event-helpers
       - if: inputs.create_zoom == true
         name: Create zoom meeting
-        uses: actions/github-script@v6
+        uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
         id: zoom
         env:
           MEETING_NAME: ${{ inputs.meeting_name }}
@@ -136,7 +136,7 @@ jobs:
         with:
           filename: ${{ inputs.issue_template_path }}
       - name: Create Google Calendar entry
-        uses: actions/github-script@v4
+        uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.04
         env:
           MEETING_NAME: ${{ inputs.meeting_name }}
           MEETING_NAME_SUFFIX: ${{ inputs.meeting_name_suffix }}
