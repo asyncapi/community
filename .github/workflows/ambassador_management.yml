@@ -1,16 +1,20 @@
 name: Ambassador Management Workflow
 
-on:
-  pull_request_target:
+on: # zizmor: ignore[dangerous-triggers]
+  pull_request_target: # Using pull_request_target since this workflow needs to run with write permissions to the repository to manage organization membership and teams
     types: [closed]
     paths:
       - 'AMBASSADORS_MEMBERS.yaml'
+
+permissions: {}  # at workflow level to deny all permissions by default
 
 jobs:
   detect_ambassador_changes:
     if: github.event.pull_request.merged
     name: Update Ambassadors Members
     runs-on: ubuntu-latest
+    permissions:
+      contents: read # only needs to read permissions to compare the files
 
     steps:
       - name: Checkout base commit
@@ -18,12 +22,14 @@ jobs:
         with:
           ref: ${{ github.event.pull_request.base.sha }}
           path: community-main
+          persist-credentials: false
 
       - name: Checkout head commit
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
         with:
           ref: ${{ github.event.pull_request.head.sha }}
           path: community
+          persist-credentials: false
 
       - name: Install js-yaml
         run: npm install js-yaml@4.1.0
@@ -67,12 +73,16 @@ jobs:
             core.info(fs.realpathSync('./community/AMBASSADORS_MEMBERS.yaml'));
 
       - name: Debug newAmbassadors output
+        env:
+          NEW_AMBASSADORS: ${{ steps.compare-files.outputs.newAmbassadors }}
         run: |
-          echo "newAmbassadors = ${{ steps.compare-files.outputs.newAmbassadors }}"
+          echo "newAmbassadors = $NEW_AMBASSADORS"
 
       - name: Debug removedAmbassadors output
+        env:
+          REMOVED_AMBASSADORS: ${{ steps.compare-files.outputs.removedAmbassadors }}
         run: |
-          echo "removedAmbassadors = ${{ steps.compare-files.outputs.removedAmbassadors }}"
+          echo "removedAmbassadors = $REMOVED_AMBASSADORS"
 
     outputs:
       newAmbassadors: ${{ steps.compare-files.outputs.newAmbassadors }}
@@ -85,10 +95,12 @@ jobs:
     steps:
       - name: Invite new ambassadors to the organization
         uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
+        env:
+          NEW_AMBASSADORS: ${{ needs.detect_ambassador_changes.outputs.newAmbassadors }}
         with:
           github-token: ${{ secrets.GH_TOKEN_ORG_ADMIN }}
           script: |
-            const newAmbassadors = '${{ needs.detect_ambassador_changes.outputs.newAmbassadors }}'.split(',');
+            const newAmbassadors = process.env.NEW_AMBASSADORS.split(',');
             for (const ambassador of newAmbassadors) {
               try {
                 await github.request('PUT /orgs/{org}/memberships/{username}', {
@@ -102,10 +114,12 @@ jobs:
 
       - name: Add new ambassadors to the team
         uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
+        env:
+          NEW_AMBASSADORS: ${{ needs.detect_ambassador_changes.outputs.newAmbassadors }}
         with:
           github-token: ${{ secrets.GH_TOKEN_ORG_ADMIN }}
           script: |
-            const newAmbassadors = '${{ needs.detect_ambassador_changes.outputs.newAmbassadors }}'.split(',');
+            const newAmbassadors = process.env.NEW_AMBASSADORS.split(',');
             for (const ambassador of newAmbassadors) {
               try {
                 await github.request('PUT /orgs/{org}/teams/{team_slug}/memberships/{username}', {
@@ -125,13 +139,15 @@ jobs:
     needs: add_ambassador
     if: needs.add_ambassador.outputs.newAmbassadors != ''
     runs-on: ubuntu-latest
+    env:
+      NEW_AMBASSADORS: ${{ needs.add_ambassador.outputs.newAmbassadors }}
     steps:
       - name: Display welcome message for new ambassadors
         uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
         with:
           github-token: ${{ secrets.GH_TOKEN }}
           script: |
-            const newAmbassadors = "${{ needs.add_ambassador.outputs.newAmbassadors }}".split(",");
+            const newAmbassadors = process.env.NEW_AMBASSADORS.split(",");
             console.log(`New ambassadors: ${newAmbassadors}`);
             const welcomeMessage = newAmbassadors.map((ambassador) => `@${ambassador.trim().replace(/^@/, '')} We invited you to join the AsyncAPI organization, and you are added to the team that lists all Ambassadors.\n
 
@@ -145,13 +161,15 @@ jobs:
     needs: detect_ambassador_changes
     if: needs.detect_ambassador_changes.outputs.removedAmbassadors != ''
     runs-on: ubuntu-latest
+    env:
+      REMOVED_AMBASSADORS: ${{ needs.detect_ambassador_changes.outputs.removedAmbassadors }}
     steps:
       - name: Remove ambassadors from the organization
         uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
         with:
           github-token: ${{ secrets.GH_TOKEN_ORG_ADMIN }}
           script: |
-            const removedAmbassadors = '${{ needs.detect_ambassador_changes.outputs.removedAmbassadors }}'.split(',');
+            const removedAmbassadors = process.env.REMOVED_AMBASSADORS.split(',');
             for (const ambassador of removedAmbassadors) {
               try {
                 await github.request('DELETE /orgs/{org}/memberships/{username}', {
@@ -175,13 +193,15 @@ jobs:
     needs: remove_ambassador
     if: needs.remove_ambassador.outputs.removedAmbassadors != ''
     runs-on: ubuntu-latest
+    env:
+      REMOVED_AMBASSADORS: ${{ needs.detect_ambassador_changes.outputs.removedAmbassadors }}
     steps:
       - name: Display goodbye message to removed ambassadors
         uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
         with:
           github-token: ${{ secrets.GH_TOKEN }}
           script: |
-              const removedAmbassadors = "${{ needs.remove_ambassador.outputs.removedAmbassadors }}".split(",");
+              const removedAmbassadors = process.env.REMOVED_AMBASSADORS.split(",");
 
               // Goodbye message to removed ambassadors
               const combinedMessages = removedAmbassadors.map((ambassador) => {
@@ -203,12 +223,16 @@ jobs:
     steps:
       - name: Check out code
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          persist-credentials: false
 
       - name: Install js-yaml
         run: npm install js-yaml@4.1.0
 
       - name: Add Former Ambassador to Emeritus.yaml and print
         uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
+        env:
+          REMOVED_AMBASSADORS: ${{ needs.remove_ambassador.outputs.removedAmbassadors }}
         with:
           script: |
             const fs = require('fs');
@@ -221,8 +245,7 @@ jobs:
             const content = fs.readFileSync(path, 'utf8').trim(); // remove any trailing whitespaces
 
             // Parse the removedAmbassadors comma-separated string to an array
-            const removedAmbassadors = '${{ needs.remove_ambassador.outputs.removedAmbassadors }}'
-              .split(',')
+            const removedAmbassadors = process.env.REMOVED_AMBASSADORS.split(',')
               .map((ambassador) => ambassador.trim())
               .filter(Boolean);
 
