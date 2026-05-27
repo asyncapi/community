@@ -16,7 +16,7 @@ We've also created a dedicated [**Open Collective page**](https://opencollective
 
 ## Budget Overview
 
-Each year, before a new cohort is announced, the Initiative evaluates its finances to determine whether a funded cohort is feasible. If a budget is available, it is allocated to the program. If not, the cohort runs as a volunteer edition.
+Each year, before a new cohort is announced, the Initiative evaluates its finances to determine whether a funded cohort is feasible. If a budget is available, it is allocated to the program. If not, the cohort runs in a volunteer mode.
 
 > _There is no guaranteed annual budget for the Maintainership Program. Budget availability depends entirely on the Initiative's financial position for that year._
 
