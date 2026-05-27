@@ -9,7 +9,7 @@ The AsyncAPI Maintainership Program features a two-step contributor application 
 
 During this phase, contributor applications are reviewed collaboratively by program organizers and mentors to ensure alignment with project needs and contributor readiness.
 
-- **General Screening:** 
+- **General Screening**: 
     Program organizers conduct an initial review to filter out applications that fall into the following categories:
   - Applications that **do not follow** the required template
   - Submissions that **rely heavily** or **vaguely** on **AI-generated** content
