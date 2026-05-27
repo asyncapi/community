@@ -39,7 +39,7 @@ Below is a detailed breakdown of the AsyncAPI Maintainership Program timeline. E
 - Selected mentors are notified and attend a short onboarding session to align expectations.
 - Selected mentors list tasks for contributors to work on during the program.
 
-**Contributor Application Period — [May 10 - May 30]:**
+**Contributor Application Period — [May 10 - May 30]**
 
 - Contributors submit applications, selecting one or more project(s) of interest.
 - Program organizers begin reviewing contributor applications.
