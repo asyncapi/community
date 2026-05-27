@@ -13,10 +13,10 @@ Slack is the main platform for real-time communication during the program. Once 
 
 Key channels include:
 
-- **#mentorships:** Program-wide updates, announcements, and shared resources.
-- **#maintainership-[year]-cohort:** Dedicated support channel for contributors to ask questions and seek guidance.
-- **#maintainership-[year]-mentors:** Mentor-only space for coordination, shared tips, and updates.
-- **Direct Messages (DMs):** For private, one-on-one conversations with mentors, mentees, or program organizers.
+- **#mentorships**: Program-wide updates, announcements, and shared resources.
+- **#maintainership-[year]-cohort**: Dedicated support channel for contributors to ask questions and seek guidance.
+- **#maintainership-[year]-mentors**: Mentor-only space for coordination, shared tips, and updates.
+- **Direct Messages (DMs)**: For private, one-on-one conversations with mentors, mentees, or program organizers.
 
  _Please stay responsive to messages and maintain timely communication._
 
