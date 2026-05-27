@@ -73,6 +73,9 @@ on:
 
 jobs:
   setup-meeting:
+    permissions:
+      contents: read
+      issues: write
     env:
       ZOOM_ACCOUNT_ID: ${{ secrets.ZOOM_ACCOUNT_ID }}
       ZOOM_TOKEN: ${{ secrets.ZOOM_TOKEN }}
@@ -85,15 +88,18 @@ jobs:
     steps:
       - name: Validate inputs
         uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
+        env:
+          TIME: ${{ inputs.time }}
+          DATE: ${{ inputs.date }}
         with:
           script: |
-            const time = '${{inputs.time}}'
+            const time = '${TIME}';
             const [HH, MM] = time.split(':')
             if(Number(HH) > 23 || Number(HH) < 0 || !(Number(MM) === 0 || Number(MM) === 30)){
               core.setFailed(`${time} is an invalid input. Time should be in UTC time zone in "HH:MM"(MM can be 00 or 30), like: 08:30 or 16:00. No PM or AM versions.`);
             }
             // Validate if the event is in the future
-            const eventDate = new Date('${{ inputs.date }}T${{ inputs.time }}:00Z');
+            const eventDate = new Date(`${DATE}T${TIME}:00Z`);
             const currentDate = new Date();
             if (eventDate <= currentDate) {
               let errorMessage = `The event cannot be scheduled in the past. You attempted to schedule the event on ${eventDate.toLocaleString()}, but the current date and time is ${currentDate.toLocaleString()}. Please specify a future date and time for the event.`;
@@ -101,6 +107,8 @@ jobs:
             }
       - name: Checkout repository
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          persist-credentials: false
       - name: Setup Node.js
         uses: actions/setup-node@48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e # v6.4.0
         with:
@@ -115,11 +123,14 @@ jobs:
         uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
         id: zoom
         env:
-          MEETING_NAME: ${{ inputs.meeting_name }}
+          DATE: ${{ inputs.date }}
+          TIME: ${{ inputs.time }}
+          HOST: ${{ inputs.host }}
+          ALTERNATIVE_HOST: ${{ inputs.alternative_host }}
         with:
           script: |
             const setupZoom = require('./.github/workflows/create-event-helpers/zoom/index.js');
-            setupZoom('${{ inputs.date }}', '${{ inputs.time }}', '${{ inputs.host }}', '${{ inputs.alternative_host }}');
+            setupZoom('${DATE}', '${TIME}', '${HOST}', '${ALTERNATIVE_HOST}');
       - name: Create issue with meeting details
         uses: JasonEtco/create-an-issue@1b14a70e4d8dc185e5cc76d3bec9eab20257b2c5 # version v2 https://github.com/JasonEtco/create-an-issue/tree/v2/
         id: create-issue
@@ -136,17 +147,21 @@ jobs:
         with:
           filename: ${{ inputs.issue_template_path }}
       - name: Create Google Calendar entry
-        uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.04
+        uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
         env:
           MEETING_NAME: ${{ inputs.meeting_name }}
           MEETING_NAME_SUFFIX: ${{ inputs.meeting_name_suffix }}
           MEETING_DESC: ${{ inputs.meeting_desc }}
           MEETING_BANNER: ${{ inputs.meeting_banner }}
           GUEST: ${{ inputs.guest }}
+          MEETING_URL: ${{ steps.zoom.outputs.meetingUrl }}
+          DATE: ${{ inputs.date }}
+          TIME: ${{ inputs.time }}
+          ISSUE_NUMBER: ${{ steps.create-issue.outputs.number }}
         with:
           script: |
             const { addEvent } = require('./.github/workflows/create-event-helpers/calendar/index.js');
-            addEvent('${{ steps.zoom.outputs.meetingUrl }}', '${{ inputs.date }}', '${{ inputs.time }}', '${{ steps.create-issue.outputs.number }}');
+            addEvent('$MEETING_URL', '$DATE', '$TIME', '$ISSUE_NUMBER');
       - name: Publish information about meeting to Twitter
         uses: m1ner79/Github-Twittction@6269f2c6ace92b904304ca33a18aebd5e5ae9ee7 # version v1.0.1 https://github.com/m1ner79/Github-Twittction/tree/v1.0.1/
         with:
