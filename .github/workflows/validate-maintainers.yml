@@ -6,6 +6,8 @@ on:
     paths:
       - 'MAINTAINERS.yaml'
 
+permissions: {}
+
 jobs:
   # Make sure that changes in the MAINTAINERS.yaml file do not break the schema
   # Until we have MAINTAINERS.yaml updates automated, we need to ensure we are not breaking things
@@ -20,7 +22,7 @@ jobs:
       - name: Install dependencies
         run: npm install js-yaml@4.1.0
       - name: Validate list with schema
-        uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.04
+        uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
         with:
           script: |
             const Ajv = require("ajv");
@@ -53,7 +55,7 @@ jobs:
       - name: Install dependencies
         run: npm install js-yaml@4.1.0
       - name: Calculate
-        uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.04
+        uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
         with:
           script: |
             const fs = require('fs');
