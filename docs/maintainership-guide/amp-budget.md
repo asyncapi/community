@@ -6,9 +6,9 @@ weight: 190
 
 Piloting an in-house mentorship program like the AsyncAPI Maintainership Program involves thoughtful financial planning. The program is designed to run in two modes depending on the Initiative's yearly financial standing: 
 
-- **Funded Cohort:** Where the AsyncAPI Initiative allocates a portion of its annual budget to support the program.
+- **Funded Cohort**: Where the AsyncAPI Initiative allocates a portion of its annual budget to support the program.
 
-- **Volunteer Cohort:** Where the program runs entirely on community goodwill with no stipends or honorariums.
+- **Volunteer Cohort**: Where the program runs entirely on community goodwill with no stipends or honorariums.
 
 Thanks to generous donations through our [Open Collective](https://opencollective.com/asyncapi), a funded cohort *may* be possible in a given year — but it is not guaranteed. Whether there's a budget or not, the program runs.
 

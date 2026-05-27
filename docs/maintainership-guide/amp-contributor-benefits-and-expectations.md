@@ -28,27 +28,27 @@ AMP is a launchpad. Many alumni have gone on to secure internships, full-time ro
 
 ### Communication
 
-- **Be responsive:** Check in with your mentor regularly and communicate early if you’re stuck or unavailable.
+- **Be responsive**: Check in with your mentor regularly and communicate early if you’re stuck or unavailable.
 
-- **Attend meetings:** Join scheduled calls on time and respect your mentor’s time.
+- **Attend meetings**: Join scheduled calls on time and respect your mentor’s time.
 
-- **Ask questions:** Curiosity shows engagement; there are no “dumb” questions.
+- **Ask questions**: Curiosity shows engagement; there are no “dumb” questions.
 
-- **Give updates:** Share progress weekly or bi-weekly, even if it’s small.
+- **Give updates**: Share progress weekly or bi-weekly, even if it’s small.
 
-- **Be respectful:** Treat everyone with empathy, patience, and kindness.
+- **Be respectful**: Treat everyone with empathy, patience, and kindness.
 
 ### Collaboration
 
-- **Engage with the community:** Join discussions, participate in bonding activities, and be active on GitHub, Slack, and sync calls.
+- **Engage with the community**: Join discussions, participate in bonding activities, and be active on GitHub, Slack, and sync calls.
 
-- **Work in the open:** Publish your code under an OSI-approved open-source license.
+- **Work in the open**: Publish your code under an OSI-approved open-source license.
 
-- **Follow standards:** Adhere to AsyncAPI coding, contribution, and documentation guidelines.
+- **Follow standards**: Adhere to AsyncAPI coding, contribution, and documentation guidelines.
 
-- **Be open to feedback:** Use constructive criticism to improve.
+- **Be open to feedback**: Use constructive criticism to improve.
 
-- **Support others:** Offer help and celebrate fellow contributors’ wins.
+- **Support others**: Offer help and celebrate fellow contributors’ wins.
 
 ### Commitment
 
