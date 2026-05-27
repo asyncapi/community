@@ -16,7 +16,7 @@ During this phase, contributor applications are reviewed collaboratively by prog
   - Applicants with **no prior** open-source contribution history
   - Proposals that are **misaligned** or **unrelated** to any project idea
 
-- **Mentor Review:**
+- **Mentor Review**:
     Applications that pass the initial screening are forwarded to the appropriate mentors. Mentors assess each submission based on its alignment with the project’s scope, clarity, feasibility, and the applicant’s relevant experience.
 
 - **Shortlisting Candidates:** 
