@@ -24,7 +24,7 @@ Here's the general timeline for each yearly cohort:
 
 Below is a detailed breakdown of the AsyncAPI Maintainership Program timeline. Each phase is carefully designed to ensure transparency, fairness, and a high-impact learning experience for everyone involved.
 
-**Program Announcement Period — [February 1]:**
+**Program Announcement Period — [February 1]**
 
 - Program coordinators publish official program details, including goals, structure, and participation guidelines.
 - Program coordinators begin volunteer outreach.
