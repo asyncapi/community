@@ -1,25 +1,16 @@
-/**
- * This code is centrally managed in https://github.com/asyncapi/.github/
- * Don't make changes to this file in this repo as they will be overwritten with changes made to the same file in above mentioned repo
- */
+module.exports = (list) => {
 
-/**
- * Escape HTML special characters to prevent XSS
- */
-function escapeHtml(text) {
-    if (!text) return '';
-    return text
-        .replace(/&/g, '&amp;')
-        .replace(/</g, '&lt;')
-        .replace(/>/g, '&gt;')
-        .replace(/"/g, '&quot;')
-        .replace(/'/g, '&#039;');
-}
+	const meetingsList = (events) => {
 
-module.exports = (link, title) => {
-    // Sanitize inputs to prevent XSS
-    const safeLink = escapeHtml(link);
-    const safeTitle = escapeHtml(title);
+        const communityIssuesUrl = 'https://github.com/asyncapi/community/issues/';
+        let bulletPoints = ''
+
+        for (const item of events) {
+            bulletPoints += `<li><strong>${ item.title }</strong> on ${ item.date}. <br>See more details on meeting agenda and connection details in <a href="${ communityIssuesUrl }${ item.issueId }" style="color:#007c89;font-weight:normal;text-decoration:underline" target="_blank">this GitHub issue</a></li>`
+        }
+
+        return bulletPoints;
+    }
 
     return `<!doctype html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
@@ -36,7 +27,7 @@ module.exports = (link, title) => {
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>*|MC:SUBJECT|*</title>
+        <title>AsyncAPI meetings scheduled for this week.</title>
         
     <style type="text/css">
 		p{
@@ -365,9 +356,6 @@ module.exports = (link, title) => {
 
 }</style></head>
     <body style="background:#FFFFFF none no-repeat center/cover;height: 100%;margin: 0;padding: 0;width: 100%;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;background-color: #FFFFFF;background-image: none;background-repeat: no-repeat;background-position: center;background-size: cover;">
-        <!--*|IF:MC_PREVIEW_TEXT|*-->
-        <!--[if !gte mso 9]><!----><span class="mcnPreviewText" style="display:none; font-size:0px; line-height:0px; max-height:0px; max-width:0px; opacity:0; overflow:hidden; visibility:hidden; mso-hide:all;">*|MC_PREVIEW_TEXT|*</span><!--<![endif]-->
-        <!--*|END:IF|*-->
         <center>
             <table align="center" border="0" cellpadding="0" cellspacing="0" height="100%" width="100%" id="bodyTable" style="background:#FFFFFF none no-repeat center/cover;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;height: 100%;margin: 0;padding: 0;width: 100%;background-color: #FFFFFF;background-image: none;background-repeat: no-repeat;background-position: center;background-size: cover;">
                 <tr>
@@ -397,13 +385,9 @@ module.exports = (link, title) => {
                         
                         <td class="mcnTextContent" style="padding-top: 0;padding-right: 18px;padding-bottom: 9px;padding-left: 18px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;word-break: break-word;color: #202020;font-family: Helvetica;font-size: 16px;line-height: 150%;text-align: left;" valign="top">
                         
-                            Hey *|FNAME|*,<br>
+                            Hey {{ subscriber.first_name | strip | default: "there" }},<br>
 <br>
-There is a new topic at AsyncAPI Initiative that requires Technical Steering Committee attention. 
-<br>
-Please have a look if it is just something you need to be aware of, or maybe your vote is needed.
-<br>
-Topic: <a href="${ safeLink }" style="color:#007c89;font-weight:normal;text-decoration:underline" target="_blank">${ safeTitle }</a>.
+I'm excited to share with you what meetings have been planned at AsyncAPI for this week:
                         </td>
                     </tr>
                 </tbody></table>
@@ -422,6 +406,18 @@ Topic: <a href="${ safeLink }" style="color:#007c89;font-weight:normal;text-deco
                             </tr>
                             <tr>
                                 <td valign="top" id="templateBody" style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;border-top: 0;border-bottom: 0;">
+                                <table style="max-width:100%;min-width:100%;border-collapse:collapse" class="m_-6916184742052453734mcnTextContentContainer" width="100%" cellspacing="0" cellpadding="0" border="0" align="left">
+                                <tbody><tr>
+            
+                                    <td class="m_-6916184742052453734mcnTextContent" style="padding-top:0;padding-right:18px;padding-bottom:9px;padding-left:18px;word-break:break-word;color:#202020;font-family:Helvetica;font-size:16px;line-height:150%;text-align:left" valign="top">
+            
+                                        <ul>
+                                        ${ meetingsList(list) }
+            </ul>
+            
+                                    </td>
+                                </tr>
+                            </tbody></table>
                                 <table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnTextBlock" style="min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
 
     <tbody class="mcnTextBlockOuter">
@@ -441,7 +437,7 @@ Topic: <a href="${ safeLink }" style="color:#007c89;font-weight:normal;text-deco
                         <td valign="top" class="mcnTextContent" style="padding-top: 0;padding-right: 18px;padding-bottom: 9px;padding-left: 18px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;word-break: break-word;color: #202020;font-family: Helvetica;font-size: 16px;line-height: 150%;text-align: left;">
                         
                             Cheers,<br>
-AsyncAPI Initiative
+<span style="color:#696969">AsyncAPI Initiative</span>
                         </td>
                     </tr>
                 </tbody></table>
@@ -476,8 +472,7 @@ AsyncAPI Initiative
                         
                         <td valign="top" class="mcnTextContent" style="padding-top: 0;padding-right: 18px;padding-bottom: 9px;padding-left: 18px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;word-break: break-word;color: #202020;font-family: Helvetica;font-size: 12px;line-height: 150%;text-align: left;">
                         
-                            Want to change how you receive these emails?<br>
-You can <a href="*|UPDATE_PROFILE|*" style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: #202020;font-weight: normal;text-decoration: underline;">update your preferences</a> or <a href="*|UNSUB|*" style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: #202020;font-weight: normal;text-decoration: underline;">unsubscribe from this list</a>.<br>
+                            You are receiving this email because you are subscribed to AsyncAPI meetings notifications.<br>
 &nbsp;
                         </td>
                     </tr>
