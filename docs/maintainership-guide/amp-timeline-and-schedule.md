@@ -64,7 +64,7 @@ Below is a detailed breakdown of the AsyncAPI Maintainership Program timeline. E
 - Organizers review feedback to identify any blockers, support needs, or adjustments.
 - Contributors at risk of not completing the program are **flagged** for additional support.
 
-**Final Evaluations — [October 6 – 17]:**
+**Final Evaluations — [October 6 – 17]**
 
 - Mentors evaluate mentee contributions, growth, and engagement.
 - Mentees evaluate the relationship, contribution, and impact of their mentor.
