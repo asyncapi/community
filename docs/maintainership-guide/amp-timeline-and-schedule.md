@@ -57,7 +57,7 @@ Below is a detailed breakdown of the AsyncAPI Maintainership Program timeline. E
 - Mentors and mentees align on weekly plans, goals, and expectations.
 - Cohort-wide welcome call and orientation hosted by program organizers.
 
-**Midterm Evaluations — [August 12 – 22]:**
+**Midterm Evaluations — [August 12 – 22]**
 
 - Mentors and mentees complete mid-program evaluation forms.
 - Program organizers host check-in calls with each team to assess progress and identify blockers.
