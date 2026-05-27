@@ -24,8 +24,8 @@ Key channels include:
 
 GitHub is the primary platform for managing and tracking project work.
 
-- **Repositories:** Each project will have a dedicated GitHub repository for code, issues, and pull requests.
-- **GitHub Discussions:** Used by program organizers to share updates, request feedback, announce planning decisions, and collect project ideas.
+- **Repositories**: Each project will have a dedicated GitHub repository for code, issues, and pull requests.
+- **GitHub Discussions**: Used by program organizers to share updates, request feedback, announce planning decisions, and collect project ideas.
 
 _Contributors must follow contribution guidelines and use clear, descriptive messages._
 
