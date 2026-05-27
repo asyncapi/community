@@ -51,7 +51,7 @@ Below is a detailed breakdown of the AsyncAPI Maintainership Program timeline. E
 - Mentors' task lists and requirements are shared with selected contributors.
 - Public announcement of selected mentees.
 
-**Program Kickoff — [June 15]:**
+**Program Kickoff — [June 15]**
 
 - Mentees are added to project Slack channels and introduced to mentors and fellow cohort members.
 - Mentors and mentees align on weekly plans, goals, and expectations.
