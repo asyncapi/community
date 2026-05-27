@@ -44,7 +44,7 @@ Below is a detailed breakdown of the AsyncAPI Maintainership Program timeline. E
 - Contributors submit applications, selecting one or more project(s) of interest.
 - Program organizers begin reviewing contributor applications.
 
-**Contributor Selection Period — [June 1 - 12]:**
+**Contributor Selection Period — [June 1 - 12]**
 
 - Contributors receive an email confirming the status of their application.
 - Rejection emails are sent to applicants who aren't selected.
