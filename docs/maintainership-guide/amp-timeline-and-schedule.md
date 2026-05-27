@@ -78,7 +78,7 @@ Below is a detailed breakdown of the AsyncAPI Maintainership Program timeline. E
 - Guidance on next steps: maintainership invitations, community roles, etc.
 - A public blog post and social media highlights celebrate the cohort's achievements.
 
-**Post-Program Pathways — [Late October onwards]:**
+**Post-Program Pathways — [Late October onwards]**
 
 - Mentees are invited to stay involved: join working groups, continue contributing, or co-mentor the next cohort.
 - Resources for maintainership, open-source leadership, and speaking opportunities at AsyncAPI global conferences are shared.
