@@ -72,7 +72,7 @@ Below is a detailed breakdown of the AsyncAPI Maintainership Program timeline. E
 - Mentors and mentees participate in final feedback sessions with program organizers.
 - Final project submissions are reviewed by program organizers.
 
-**Recognition — [October 24]:**
+**Recognition — [October 24]**
 
 - Successful mentees are recognized with digital certificates, community spotlight features, and letters of recommendation.
 - Guidance on next steps: maintainership invitations, community roles, etc.
