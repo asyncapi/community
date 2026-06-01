@@ -12,7 +12,7 @@ on:
       meeting_banner:
         description: 'Meeting banner(image) URL'
         required: false
-
+permissions: {}  # write permissions are defined in the create-event-workflow-reusable.yml workflow
 jobs:
   setup-community-meeting:
     uses: ./.github/workflows/create-event-workflow-reusable.yml

@@ -1,29 +1,35 @@
 name: Maintainer Management Workflow
 
-on:
-  pull_request_target:
+on: # zizmor: ignore[dangerous-triggers] -- intentional, gated by merged==true, reads MAINTAINERS.yaml as data only
+  pull_request_target: 
     types: [closed]
     paths: 
       - 'MAINTAINERS.yaml'
 
+permissions: {}
+
 jobs:
   detect_maintainer_changes:
+    permissions: 
+      contents: read # needs read permissions to be able to read the content of the MAINTAINERS.yaml file
     if: github.event.pull_request.merged 
     runs-on: ubuntu-latest
     steps: 
       - name: Checkout main branch 
-        uses: actions/checkout@v3
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
         with:
           ref: master
           path: community-main
+          persist-credentials: false
       - name: List of directory
         run: ls -la
       - name: Checkout one commit before last one
-        uses: actions/checkout@v3
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
         with:
           fetch-depth: 2
           ref: master
           path: community
+          persist-credentials: false
       - name: List of directory 
         run: ls -la
       - run: cd community && git checkout HEAD^
@@ -31,7 +37,7 @@ jobs:
         run: npm install js-yaml@4.1.0
       - name: Compare files
         id: compare-files
-        uses: actions/github-script@v6
+        uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
         with:
           script: |
             const fs = require("fs");
@@ -72,12 +78,16 @@ jobs:
             core.info(fs.realpathSync('./community/MAINTAINERS.yaml'));
 
       - name: Debug newMaintainers output
+        env:
+          NEW_MAINTAINERS: ${{ steps.compare-files.outputs.newMaintainers }}
         run: |
-          echo "newMaintainers = ${{ steps.compare-files.outputs.newMaintainers }}"
+          echo "newMaintainers = $NEW_MAINTAINERS"
 
       - name: Debug removedMaintainers output
+        env:
+          REMOVED_MAINTAINERS: ${{ steps.compare-files.outputs.removedMaintainers }}
         run: |
-          echo "removedMaintainers = ${{ steps.compare-files.outputs.removedMaintainers }}"
+          echo "removedMaintainers = $REMOVED_MAINTAINERS"
 
     outputs:
       newMaintainers: ${{ steps.compare-files.outputs.newMaintainers }}
@@ -85,16 +95,19 @@ jobs:
       removedTscMembers: ${{ steps.compare-files.outputs.removedTscMembers }}
 
   add_maintainer:
+    permissions: {} # uses GH_TOKEN_ORG_ADMIN with admin permissions to the organization, so no need to set permissions at the job level
     needs: detect_maintainer_changes
     if: needs.detect_maintainer_changes.outputs.newMaintainers != ''
     runs-on: ubuntu-latest
     steps:
       - name: Invite new maintainers to the organization
-        uses: actions/github-script@v6
+        uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
+        env:
+          NEW_MAINTAINERS: ${{ needs.detect_maintainer_changes.outputs.newMaintainers }}
         with:
           github-token: ${{ secrets.GH_TOKEN_ORG_ADMIN }}
           script: |
-            const newMaintainers = '${{ needs.detect_maintainer_changes.outputs.newMaintainers }}'.split(',');
+            const newMaintainers = process.env.NEW_MAINTAINERS.split(',');
             for (const maintainer of newMaintainers) {
               try {
                 await github.request('PUT /orgs/{org}/memberships/{username}', {
@@ -107,11 +120,13 @@ jobs:
             }
 
       - name: Add new maintainers to the team
-        uses: actions/github-script@v6
+        uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
+        env:
+          NEW_MAINTAINERS: ${{ needs.detect_maintainer_changes.outputs.newMaintainers }}
         with:
           github-token: ${{ secrets.GH_TOKEN_ORG_ADMIN }}
           script: |
-            const newMaintainers = '${{ needs.detect_maintainer_changes.outputs.newMaintainers }}'.split(',');
+            const newMaintainers = process.env.NEW_MAINTAINERS.split(',');
             for (const maintainer of newMaintainers) {
               try {
                 await github.request('PUT /orgs/{org}/teams/{team_slug}/memberships/{username}', {
@@ -128,16 +143,20 @@ jobs:
       newMaintainers: ${{needs.detect_maintainer_changes.outputs.newMaintainers }}
 
   display_message:
+    permissions: 
+      pull_requests: write # posts comment on PR with new maintainers welcome message and information about becoming TSC member
     needs: add_maintainer
     if: needs.add_maintainer.outputs.newMaintainers != ''
     runs-on: ubuntu-latest
     steps:
       - name: Display welcome message for new maintainers
-        uses: actions/github-script@v6
+        uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
+        env:
+          NEW_MAINTAINERS: ${{ needs.add_maintainer.outputs.newMaintainers }}
         with:
           github-token: ${{ secrets.GH_TOKEN }}
           script: |
-            const newMaintainers = "${{ needs.add_maintainer.outputs.newMaintainers }}".split(",");
+            const newMaintainers = process.env.NEW_MAINTAINERS.split(",");
             console.log(`New maintainers: ${newMaintainers}`);
             const welcomeMessage = newMaintainers.map((maintainer) => `@${maintainer.trim().replace(/^@/, '')} We invited you to join the AsyncAPI organization, and you are added to the team that lists all Maintainers.\n
             
@@ -154,16 +173,19 @@ jobs:
             return github.rest.issues.createComment({ owner, repo, issue_number, body: welcomeMessage });
 
   remove_maintainer:
+    permissions: {} # uses GH_TOKEN_ORG_ADMIN with admin permissions to the organization, so no need to set permissions at the job level
     needs: detect_maintainer_changes
     if: needs.detect_maintainer_changes.outputs.removedMaintainers != ''
     runs-on: ubuntu-latest
     steps:
       - name: Remove maintainers from the organization
-        uses: actions/github-script@v6
+        uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
+        env:
+          REMOVED_MAINTAINERS: ${{ needs.detect_maintainer_changes.outputs.removedMaintainers }}
         with:
           github-token: ${{ secrets.GH_TOKEN_ORG_ADMIN }}
           script: |
-            const removedMaintainers = '${{ needs.detect_maintainer_changes.outputs.removedMaintainers }}'.split(',');
+            const removedMaintainers = process.env.REMOVED_MAINTAINERS.split(',');
             for (const maintainer of removedMaintainers) {
               try {
                 await github.request('DELETE /orgs/{org}/memberships/{username}', {
@@ -185,17 +207,20 @@ jobs:
       removedTscMembers: ${{ needs.detect_maintainer_changes.outputs.removedTscMembers }}
 
   remove_maintainer_goodbye:
+    permissions: 
+      issues: write # needs write permissions to be able to add a comment to the issue when maintainer is removed and to read the issue details
     needs: remove_maintainer
     if: needs.remove_maintainer.outputs.removedMaintainers != ''
     runs-on: ubuntu-latest
     steps:
       - name: Display goodbye message to removed maintainers
-        uses: actions/github-script@v6
+        uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
+        env:
+          REMOVED_MAINTAINERS: ${{ needs.remove_maintainer.outputs.removedMaintainers }}
         with:
           github-token: ${{ secrets.GH_TOKEN }}
           script: |
-              const removedMaintainers = "${{ needs.remove_maintainer.outputs.removedMaintainers }}".split(",");
-
+              const removedMaintainers = process.env.REMOVED_MAINTAINERS.split(",");
               // Goodbye message to removed maintainers
               const combinedMessages = removedMaintainers.map((maintainer) => {
                 return `@${maintainer.trim().replace(/^@/, '')} We would like to express our gratitude for your contributions as a maintainer of AsyncAPI Initiative. Your efforts have been immensely valuable to us, and we truly appreciate your dedication. Thank you once again, and we wish you all the best in your future endeavors!\n\n`;
@@ -208,12 +233,13 @@ jobs:
               }
 
   notify_slack_on_failure:
+    permissions: {} # no permissions needed as this job only sends a notification to Slack in case of failure in any of the previous jobs, and it is gated by always() condition
     if: always() && (needs.detect_maintainer_changes.result == 'failure' || needs.add_maintainer.result == 'failure' || needs.display_message.result == 'failure' || needs.remove_maintainer.result == 'failure' || needs.remove_maintainer_goodbye.result == 'failure')
     needs: [detect_maintainer_changes, add_maintainer, display_message, remove_maintainer, remove_maintainer_goodbye]
     runs-on: ubuntu-latest
     steps:
     - name: Report workflow run status to Slack
-      uses: rtCamp/action-slack-notify@v2
+      uses: rtCamp/action-slack-notify@e31e87e03dd19038e411e38ae27cbad084a90661 # v2.3.3
       env:
         SLACK_WEBHOOK: ${{secrets.SLACK_CI_FAIL_NOTIFY}}
         SLACK_TITLE: 🚨 Maintainer Management Workflow failed 🚨

@@ -16,6 +16,9 @@ on:
       meeting_banner:
         description: 'Meeting banner(image) URL'
         required: false
+
+permissions: {}  # write permissions are defined in the create-event-workflow-reusable.yml workflow
+
 jobs:
   setup-lets-talk-about-contrib-stream:
     uses: ./.github/workflows/create-event-workflow-reusable.yml
