@@ -318,6 +318,7 @@
     - website
     - parser-js
     - studio
+    - openapi-schema-parser
   githubID: 44585452
 - name: Richard Coppen
   github: rcoppen
