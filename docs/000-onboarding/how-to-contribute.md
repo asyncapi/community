@@ -47,13 +47,13 @@ Support and grow the AsyncAPI community beyond code:
 * Helping triage issues  
 * Participating in working groups or initiatives
 
-👉 You can contribute using:
+👉 You can contribute by:
 
-* GitHub Discussions  
-* [AsyncAPI Slack](https://asyncapi.com/slack-invite)  
-* Join community meetings
+* Participating in GitHub Discussions in the AsyncAPI repository you're interested in 
+* Joining the [AsyncAPI Slack](https://asyncapi.com/slack-invite)  
+* [Joining the community](https://github.com/asyncapi/community) and attending [our meetings](https://calendar.google.com/calendar/u/0?cid=Y19xOXRzZWlnbG9tZHNqNm5qdWh2YnB0czExY0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t)
 
-### How to Contribute
+## How to Contribute
 
 Not sure where to start? Here are some tips:
 
