@@ -353,7 +353,6 @@
   availableForHire: false
   isTscMember: false
   repos:
-    - openapi-schema-parser
     - go-watermill-template
     - parser-api
   githubID: 1083296
