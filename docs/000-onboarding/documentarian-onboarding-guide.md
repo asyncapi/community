@@ -1,15 +1,15 @@
 ---
-title: Documentarian Onboarding Guide
+title: Technical Writer Onboarding Guide
 weight: 30
 ---
 
-Welcome to the AsyncAPI Documentarian Onboarding Guide!
+Welcome to the AsyncAPI Technical Writer Onboarding Guide!
 
-This document aims to provide comprehensive guidelines about everything you need to know to begin your journey as a documentarian within the AsyncAPI ecosystem. 
+This document aims to provide comprehensive guidelines about everything you need to know to begin your journey as a technical writer within the AsyncAPI ecosystem. 
 
-## What Does a Documentarian Do?
+## What Does a Technical Writer Do?
 
-In the community, documentarians collaborate with other documentarians, Subject Matter Experts (SME), designers, engineers, and core maintainers in doing the following:
+In the community, technical writers collaborate with other technical writers, Subject Matter Experts (SME), designers, engineers, and core maintainers in doing the following:
 
 * Create quality, easy-to-use, clear, and accurate documentation for all audience levels.  
 * Collaborate with other contributors to propose, create, and maintain documentation.  
