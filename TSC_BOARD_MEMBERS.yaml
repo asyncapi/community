@@ -113,7 +113,6 @@
     - converter-js
     - bindings
     - enterprise-patterns
-    - openapi-schema-parser
     - html-template
     - markdown-template
     - nodejs-ws-template
@@ -233,6 +232,7 @@
     - website
     - parser-js
     - studio
+    - openapi-schema-parser
   githubID: 44585452
 - name: Richard Coppen
   github: rcoppen
