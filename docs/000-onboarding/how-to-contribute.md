@@ -19,7 +19,7 @@ Help improve the learning experience for others by contributing to documentation
 👉 You can contribute using:
 
 * The AsyncAPI [website](https://github.com/asyncapi/website) and [community](https://github.com/asyncapi/community) repositories  
-* Documentation-related issues labeled `good first issue` or `docs`
+* Documentation-related issues labelled `good first issue` or `docs`
 
 ### Core Projects
 
