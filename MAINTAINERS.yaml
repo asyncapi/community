@@ -137,10 +137,14 @@
   repos:
     - spec
     - spec-json-schemas
+    - extensions-catalog
+    - converter-js
     - bindings
+    - enterprise-patterns
     - html-template
     - markdown-template
     - nodejs-ws-template
+    - brand
   githubID: 242119
 - name: Gerald Loeffler
   github: GeraldLoeffler
