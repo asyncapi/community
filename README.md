@@ -24,7 +24,7 @@ Find all the resources you need to start contributing to our organization.
 
 2. Read the [Contribution Guide](docs/010-contribution-guidelines/contribution-flow.md) and learn how to contribute effectively.
 
-3. Explore the [Community Contribution Onboarding Docs](docs/000-onboarding/docs-onboarding-checklist.md), a step-by-step guide for new contributors.
+3. Explore the [Contributing Guide](docs/000-onboarding/how-to-contribute.md), a guide on where and how to contribute for new contributors.
 
 4. Follow the [AsyncAPI Style Guide](docs/011-styleguide/aboutguide.md) to ensure consistency across all docs.
 
