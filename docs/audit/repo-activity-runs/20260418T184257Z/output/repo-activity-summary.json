@@ -1,0 +1,56 @@
+{
+  "run_id": "20260418T184257Z",
+  "generated_at": "2026-04-18T18:42:57.139Z",
+  "since_day": "2025-04-18",
+  "window_months": 12,
+  "repos": [
+    {
+      "full_name": "asyncapi/.github",
+      "metrics": {
+        "issues_opened_total": 17,
+        "issues_opened_human": 17,
+        "prs_opened_total": 38,
+        "prs_opened_human": 38,
+        "prs_merged_total": 27,
+        "prs_merged_human": 27,
+        "prs_merged_by_bot_author": {
+          "asyncapi-bot": 0
+        },
+        "issues_closed": 19,
+        "prs_closed_not_merged": 8
+      }
+    },
+    {
+      "full_name": "asyncapi/asyncapi-react",
+      "metrics": {
+        "issues_opened_total": 27,
+        "issues_opened_human": 27,
+        "prs_opened_total": 82,
+        "prs_opened_human": 59,
+        "prs_merged_total": 59,
+        "prs_merged_human": 36,
+        "prs_merged_by_bot_author": {
+          "asyncapi-bot": 23
+        },
+        "issues_closed": 31,
+        "prs_closed_not_merged": 14
+      }
+    },
+    {
+      "full_name": "asyncapi/avro-schema-parser",
+      "metrics": {
+        "issues_opened_total": 2,
+        "issues_opened_human": 2,
+        "prs_opened_total": 16,
+        "prs_opened_human": 1,
+        "prs_merged_total": 16,
+        "prs_merged_human": 1,
+        "prs_merged_by_bot_author": {
+          "asyncapi-bot": 15
+        },
+        "issues_closed": 11,
+        "prs_closed_not_merged": 1
+      }
+    }
+  ]
+}

@@ -1,0 +1,1422 @@
+{
+  "generated_at": "2026-04-19T04:46:09.522Z",
+  "maintainer_run_id": "20260329T084806Z",
+  "repo_activity_run_id": "20260418T185703Z",
+  "since_day": "2025-04-18",
+  "window_months": 12,
+  "analysis_activity_basis": "Issue/PR opened and merged figures in analysis reports and scoring use human-only counts (deny_pr_authors excluded). Bot-authored activity is not scored.",
+  "sort": {
+    "primary": "active_maintainer_count_asc",
+    "secondary": "prs_merged_human_asc",
+    "tertiary": "full_name"
+  },
+  "repos": [
+    {
+      "full_name": "asyncapi/brand",
+      "active_maintainers": [],
+      "inactive_maintainers": [
+        "fmvilas",
+        "mayaleeeee"
+      ],
+      "active_triagers": [],
+      "inactive_triagers": [],
+      "active_maintainer_count": 0,
+      "inactive_maintainer_count": 2,
+      "active_triager_count": 0,
+      "inactive_triager_count": 0,
+      "metrics": {
+        "issues_opened_total": 5,
+        "issues_opened_human": 5,
+        "prs_opened_total": 13,
+        "prs_opened_human": 3,
+        "prs_merged_total": 10,
+        "prs_merged_human": 0,
+        "prs_merged_by_bot_author": {
+          "asyncapi-bot": 10
+        },
+        "issues_closed": 5,
+        "prs_closed_not_merged": 1
+      }
+    },
+    {
+      "full_name": "asyncapi/chatbot",
+      "active_maintainers": [],
+      "inactive_maintainers": [
+        "AceTheCreator",
+        "derberg",
+        "magicmatatjahu"
+      ],
+      "active_triagers": [],
+      "inactive_triagers": [],
+      "active_maintainer_count": 0,
+      "inactive_maintainer_count": 3,
+      "active_triager_count": 0,
+      "inactive_triager_count": 0,
+      "metrics": {
+        "issues_opened_total": 1,
+        "issues_opened_human": 1,
+        "prs_opened_total": 12,
+        "prs_opened_human": 1,
+        "prs_merged_total": 10,
+        "prs_merged_human": 0,
+        "prs_merged_by_bot_author": {
+          "asyncapi-bot": 10
+        },
+        "issues_closed": 4,
+        "prs_closed_not_merged": 3
+      }
+    },
+    {
+      "full_name": "asyncapi/diff",
+      "active_maintainers": [],
+      "inactive_maintainers": [
+        "aayushmau5",
+        "derberg",
+        "magicmatatjahu"
+      ],
+      "active_triagers": [],
+      "inactive_triagers": [],
+      "active_maintainer_count": 0,
+      "inactive_maintainer_count": 3,
+      "active_triager_count": 0,
+      "inactive_triager_count": 0,
+      "metrics": {
+        "issues_opened_total": 2,
+        "issues_opened_human": 2,
+        "prs_opened_total": 15,
+        "prs_opened_human": 0,
+        "prs_merged_total": 15,
+        "prs_merged_human": 0,
+        "prs_merged_by_bot_author": {
+          "asyncapi-bot": 15
+        },
+        "issues_closed": 4,
+        "prs_closed_not_merged": 0
+      }
+    },
+    {
+      "full_name": "asyncapi/EDAVisualiser",
+      "active_maintainers": [],
+      "inactive_maintainers": [
+        "jonaslagoni",
+        "magicmatatjahu"
+      ],
+      "active_triagers": [],
+      "inactive_triagers": [],
+      "active_maintainer_count": 0,
+      "inactive_maintainer_count": 2,
+      "active_triager_count": 0,
+      "inactive_triager_count": 0,
+      "metrics": {
+        "issues_opened_total": 1,
+        "issues_opened_human": 1,
+        "prs_opened_total": 12,
+        "prs_opened_human": 0,
+        "prs_merged_total": 11,
+        "prs_merged_human": 0,
+        "prs_merged_by_bot_author": {
+          "asyncapi-bot": 11
+        },
+        "issues_closed": 5,
+        "prs_closed_not_merged": 2
+      }
+    },
+    {
+      "full_name": "asyncapi/enterprise-patterns",
+      "active_maintainers": [],
+      "inactive_maintainers": [
+        "derberg",
+        "fmvilas"
+      ],
+      "active_triagers": [],
+      "inactive_triagers": [],
+      "active_maintainer_count": 0,
+      "inactive_maintainer_count": 2,
+      "active_triager_count": 0,
+      "inactive_triager_count": 0,
+      "metrics": {
+        "issues_opened_total": 0,
+        "issues_opened_human": 0,
+        "prs_opened_total": 11,
+        "prs_opened_human": 0,
+        "prs_merged_total": 11,
+        "prs_merged_human": 0,
+        "prs_merged_by_bot_author": {
+          "asyncapi-bot": 11
+        },
+        "issues_closed": 0,
+        "prs_closed_not_merged": 0
+      }
+    },
+    {
+      "full_name": "asyncapi/go-watermill-template",
+      "active_maintainers": [],
+      "inactive_maintainers": [
+        "anandsunderraman",
+        "smoya"
+      ],
+      "active_triagers": [],
+      "inactive_triagers": [],
+      "active_maintainer_count": 0,
+      "inactive_maintainer_count": 2,
+      "active_triager_count": 0,
+      "inactive_triager_count": 0,
+      "metrics": {
+        "issues_opened_total": 0,
+        "issues_opened_human": 0,
+        "prs_opened_total": 48,
+        "prs_opened_human": 2,
+        "prs_merged_total": 46,
+        "prs_merged_human": 0,
+        "prs_merged_by_bot_author": {
+          "asyncapi-bot": 46
+        },
+        "issues_closed": 1,
+        "prs_closed_not_merged": 2
+      }
+    },
+    {
+      "full_name": "asyncapi/learning-paths",
+      "active_maintainers": [],
+      "inactive_maintainers": [
+        "Barbanio",
+        "alequetzalli"
+      ],
+      "active_triagers": [],
+      "inactive_triagers": [],
+      "active_maintainer_count": 0,
+      "inactive_maintainer_count": 2,
+      "active_triager_count": 0,
+      "inactive_triager_count": 0,
+      "metrics": {
+        "issues_opened_total": 0,
+        "issues_opened_human": 0,
+        "prs_opened_total": 11,
+        "prs_opened_human": 0,
+        "prs_merged_total": 11,
+        "prs_merged_human": 0,
+        "prs_merged_by_bot_author": {
+          "asyncapi-bot": 11
+        },
+        "issues_closed": 0,
+        "prs_closed_not_merged": 0
+      }
+    },
+    {
+      "full_name": "asyncapi/parser-api",
+      "active_maintainers": [],
+      "inactive_maintainers": [
+        "jonaslagoni",
+        "smoya"
+      ],
+      "active_triagers": [],
+      "inactive_triagers": [],
+      "active_maintainer_count": 0,
+      "inactive_maintainer_count": 2,
+      "active_triager_count": 0,
+      "inactive_triager_count": 0,
+      "metrics": {
+        "issues_opened_total": 0,
+        "issues_opened_human": 0,
+        "prs_opened_total": 13,
+        "prs_opened_human": 2,
+        "prs_merged_total": 11,
+        "prs_merged_human": 0,
+        "prs_merged_by_bot_author": {
+          "asyncapi-bot": 11
+        },
+        "issues_closed": 0,
+        "prs_closed_not_merged": 1
+      }
+    },
+    {
+      "full_name": "asyncapi/problem",
+      "active_maintainers": [],
+      "inactive_maintainers": [
+        "imabp",
+        "magicmatatjahu"
+      ],
+      "active_triagers": [],
+      "inactive_triagers": [],
+      "active_maintainer_count": 0,
+      "inactive_maintainer_count": 2,
+      "active_triager_count": 0,
+      "inactive_triager_count": 0,
+      "metrics": {
+        "issues_opened_total": 0,
+        "issues_opened_human": 0,
+        "prs_opened_total": 14,
+        "prs_opened_human": 0,
+        "prs_merged_total": 14,
+        "prs_merged_human": 0,
+        "prs_merged_by_bot_author": {
+          "asyncapi-bot": 14
+        },
+        "issues_closed": 0,
+        "prs_closed_not_merged": 0
+      }
+    },
+    {
+      "full_name": "asyncapi/python-paho-template",
+      "active_maintainers": [],
+      "inactive_maintainers": [
+        "CameronRushton",
+        "damaru-inc"
+      ],
+      "active_triagers": [],
+      "inactive_triagers": [],
+      "active_maintainer_count": 0,
+      "inactive_maintainer_count": 2,
+      "active_triager_count": 0,
+      "inactive_triager_count": 0,
+      "metrics": {
+        "issues_opened_total": 0,
+        "issues_opened_human": 0,
+        "prs_opened_total": 13,
+        "prs_opened_human": 7,
+        "prs_merged_total": 6,
+        "prs_merged_human": 0,
+        "prs_merged_by_bot_author": {
+          "asyncapi-bot": 6
+        },
+        "issues_closed": 5,
+        "prs_closed_not_merged": 4
+      }
+    },
+    {
+      "full_name": "asyncapi/template-for-generator-templates",
+      "active_maintainers": [],
+      "inactive_maintainers": [
+        "derberg",
+        "magicmatatjahu"
+      ],
+      "active_triagers": [],
+      "inactive_triagers": [],
+      "active_maintainer_count": 0,
+      "inactive_maintainer_count": 2,
+      "active_triager_count": 0,
+      "inactive_triager_count": 0,
+      "metrics": {
+        "issues_opened_total": 0,
+        "issues_opened_human": 0,
+        "prs_opened_total": 17,
+        "prs_opened_human": 0,
+        "prs_merged_total": 17,
+        "prs_merged_human": 0,
+        "prs_merged_by_bot_author": {
+          "asyncapi-bot": 17
+        },
+        "issues_closed": 2,
+        "prs_closed_not_merged": 0
+      }
+    },
+    {
+      "full_name": "asyncapi/training",
+      "active_maintainers": [],
+      "inactive_maintainers": [
+        "alequetzalli"
+      ],
+      "active_triagers": [],
+      "inactive_triagers": [],
+      "active_maintainer_count": 0,
+      "inactive_maintainer_count": 1,
+      "active_triager_count": 0,
+      "inactive_triager_count": 0,
+      "metrics": {
+        "issues_opened_total": 3,
+        "issues_opened_human": 3,
+        "prs_opened_total": 12,
+        "prs_opened_human": 1,
+        "prs_merged_total": 11,
+        "prs_merged_human": 0,
+        "prs_merged_by_bot_author": {
+          "asyncapi-bot": 11
+        },
+        "issues_closed": 2,
+        "prs_closed_not_merged": 0
+      }
+    },
+    {
+      "full_name": "asyncapi/php-template",
+      "active_maintainers": [],
+      "inactive_maintainers": [
+        "emilianozublena"
+      ],
+      "active_triagers": [],
+      "inactive_triagers": [],
+      "active_maintainer_count": 0,
+      "inactive_maintainer_count": 1,
+      "active_triager_count": 0,
+      "inactive_triager_count": 0,
+      "metrics": {
+        "issues_opened_total": 0,
+        "issues_opened_human": 0,
+        "prs_opened_total": 13,
+        "prs_opened_human": 1,
+        "prs_merged_total": 13,
+        "prs_merged_human": 1,
+        "prs_merged_by_bot_author": {
+          "asyncapi-bot": 12
+        },
+        "issues_closed": 0,
+        "prs_closed_not_merged": 0
+      }
+    },
+    {
+      "full_name": "asyncapi/extensions-catalog",
+      "active_maintainers": [],
+      "inactive_maintainers": [
+        "derberg",
+        "fmvilas"
+      ],
+      "active_triagers": [],
+      "inactive_triagers": [],
+      "active_maintainer_count": 0,
+      "inactive_maintainer_count": 2,
+      "active_triager_count": 0,
+      "inactive_triager_count": 0,
+      "metrics": {
+        "issues_opened_total": 0,
+        "issues_opened_human": 0,
+        "prs_opened_total": 12,
+        "prs_opened_human": 3,
+        "prs_merged_total": 12,
+        "prs_merged_human": 3,
+        "prs_merged_by_bot_author": {
+          "asyncapi-bot": 9
+        },
+        "issues_closed": 0,
+        "prs_closed_not_merged": 0
+      }
+    },
+    {
+      "full_name": "asyncapi/nodejs-ws-template",
+      "active_maintainers": [],
+      "inactive_maintainers": [
+        "derberg",
+        "fmvilas"
+      ],
+      "active_triagers": [],
+      "inactive_triagers": [],
+      "active_maintainer_count": 0,
+      "inactive_maintainer_count": 2,
+      "active_triager_count": 0,
+      "inactive_triager_count": 0,
+      "metrics": {
+        "issues_opened_total": 1,
+        "issues_opened_human": 1,
+        "prs_opened_total": 39,
+        "prs_opened_human": 24,
+        "prs_merged_total": 17,
+        "prs_merged_human": 3,
+        "prs_merged_by_bot_author": {
+          "asyncapi-bot": 14
+        },
+        "issues_closed": 1,
+        "prs_closed_not_merged": 9
+      }
+    },
+    {
+      "full_name": "asyncapi/tck",
+      "active_maintainers": [],
+      "inactive_maintainers": [
+        "Pakisan"
+      ],
+      "active_triagers": [],
+      "inactive_triagers": [],
+      "active_maintainer_count": 0,
+      "inactive_maintainer_count": 1,
+      "active_triager_count": 0,
+      "inactive_triager_count": 0,
+      "metrics": {
+        "issues_opened_total": 0,
+        "issues_opened_human": 0,
+        "prs_opened_total": 17,
+        "prs_opened_human": 7,
+        "prs_merged_total": 14,
+        "prs_merged_human": 4,
+        "prs_merged_by_bot_author": {
+          "asyncapi-bot": 10
+        },
+        "issues_closed": 1,
+        "prs_closed_not_merged": 4
+      }
+    },
+    {
+      "full_name": "asyncapi/java-spring-template",
+      "active_maintainers": [],
+      "inactive_maintainers": [
+        "Tenischev",
+        "derberg"
+      ],
+      "active_triagers": [],
+      "inactive_triagers": [],
+      "active_maintainer_count": 0,
+      "inactive_maintainer_count": 2,
+      "active_triager_count": 0,
+      "inactive_triager_count": 0,
+      "metrics": {
+        "issues_opened_total": 3,
+        "issues_opened_human": 3,
+        "prs_opened_total": 39,
+        "prs_opened_human": 23,
+        "prs_merged_total": 34,
+        "prs_merged_human": 18,
+        "prs_merged_by_bot_author": {
+          "asyncapi-bot": 16
+        },
+        "issues_closed": 0,
+        "prs_closed_not_merged": 1
+      }
+    },
+    {
+      "full_name": "asyncapi/nodejs-template",
+      "active_maintainers": [],
+      "inactive_maintainers": [
+        "derberg",
+        "kaushik-rishi"
+      ],
+      "active_triagers": [],
+      "inactive_triagers": [],
+      "active_maintainer_count": 0,
+      "inactive_maintainer_count": 2,
+      "active_triager_count": 0,
+      "inactive_triager_count": 0,
+      "metrics": {
+        "issues_opened_total": 1,
+        "issues_opened_human": 1,
+        "prs_opened_total": 38,
+        "prs_opened_human": 22,
+        "prs_merged_total": 32,
+        "prs_merged_human": 18,
+        "prs_merged_by_bot_author": {
+          "asyncapi-bot": 14
+        },
+        "issues_closed": 7,
+        "prs_closed_not_merged": 2
+      }
+    },
+    {
+      "full_name": "asyncapi/net-sdk",
+      "active_maintainers": [
+        "cdavernas"
+      ],
+      "inactive_maintainers": [
+        "jbbianchi"
+      ],
+      "active_triagers": [],
+      "inactive_triagers": [],
+      "active_maintainer_count": 1,
+      "inactive_maintainer_count": 1,
+      "active_triager_count": 0,
+      "inactive_triager_count": 0,
+      "metrics": {
+        "issues_opened_total": 3,
+        "issues_opened_human": 3,
+        "prs_opened_total": 12,
+        "prs_opened_human": 1,
+        "prs_merged_total": 11,
+        "prs_merged_human": 0,
+        "prs_merged_by_bot_author": {
+          "asyncapi-bot": 11
+        },
+        "issues_closed": 2,
+        "prs_closed_not_merged": 1
+      }
+    },
+    {
+      "full_name": "asyncapi/avro-schema-parser",
+      "active_maintainers": [
+        "dalelane"
+      ],
+      "inactive_maintainers": [
+        "M3lkior"
+      ],
+      "active_triagers": [],
+      "inactive_triagers": [],
+      "active_maintainer_count": 1,
+      "inactive_maintainer_count": 1,
+      "active_triager_count": 0,
+      "inactive_triager_count": 0,
+      "metrics": {
+        "issues_opened_total": 2,
+        "issues_opened_human": 2,
+        "prs_opened_total": 16,
+        "prs_opened_human": 1,
+        "prs_merged_total": 16,
+        "prs_merged_human": 1,
+        "prs_merged_by_bot_author": {
+          "asyncapi-bot": 15
+        },
+        "issues_closed": 11,
+        "prs_closed_not_merged": 1
+      }
+    },
+    {
+      "full_name": "asyncapi/dotnet-rabbitmq-template",
+      "active_maintainers": [
+        "mr-nuno"
+      ],
+      "inactive_maintainers": [
+        "connil"
+      ],
+      "active_triagers": [],
+      "inactive_triagers": [],
+      "active_maintainer_count": 1,
+      "inactive_maintainer_count": 1,
+      "active_triager_count": 0,
+      "inactive_triager_count": 0,
+      "metrics": {
+        "issues_opened_total": 0,
+        "issues_opened_human": 0,
+        "prs_opened_total": 5,
+        "prs_opened_human": 1,
+        "prs_merged_total": 5,
+        "prs_merged_human": 1,
+        "prs_merged_by_bot_author": {
+          "asyncapi-bot": 4
+        },
+        "issues_closed": 2,
+        "prs_closed_not_merged": 1
+      }
+    },
+    {
+      "full_name": "asyncapi/java-template",
+      "active_maintainers": [
+        "dalelane"
+      ],
+      "inactive_maintainers": [
+        "AGurlhosur",
+        "KieranM1999",
+        "dan-r",
+        "lewis-relph"
+      ],
+      "active_triagers": [],
+      "inactive_triagers": [],
+      "active_maintainer_count": 1,
+      "inactive_maintainer_count": 4,
+      "active_triager_count": 0,
+      "inactive_triager_count": 0,
+      "metrics": {
+        "issues_opened_total": 0,
+        "issues_opened_human": 0,
+        "prs_opened_total": 14,
+        "prs_opened_human": 1,
+        "prs_merged_total": 12,
+        "prs_merged_human": 1,
+        "prs_merged_by_bot_author": {
+          "asyncapi-bot": 11
+        },
+        "issues_closed": 5,
+        "prs_closed_not_merged": 2
+      }
+    },
+    {
+      "full_name": "asyncapi/optimizer",
+      "active_maintainers": [
+        "aeworxet"
+      ],
+      "inactive_maintainers": [],
+      "active_triagers": [],
+      "inactive_triagers": [],
+      "active_maintainer_count": 1,
+      "inactive_maintainer_count": 0,
+      "active_triager_count": 0,
+      "inactive_triager_count": 0,
+      "metrics": {
+        "issues_opened_total": 0,
+        "issues_opened_human": 0,
+        "prs_opened_total": 19,
+        "prs_opened_human": 4,
+        "prs_merged_total": 18,
+        "prs_merged_human": 3,
+        "prs_merged_by_bot_author": {
+          "asyncapi-bot": 15
+        },
+        "issues_closed": 0,
+        "prs_closed_not_merged": 0
+      }
+    },
+    {
+      "full_name": "asyncapi/jasyncapi",
+      "active_maintainers": [
+        "pakisan"
+      ],
+      "inactive_maintainers": [
+        "harikrishnan83"
+      ],
+      "active_triagers": [],
+      "inactive_triagers": [],
+      "active_maintainer_count": 1,
+      "inactive_maintainer_count": 1,
+      "active_triager_count": 0,
+      "inactive_triager_count": 0,
+      "metrics": {
+        "issues_opened_total": 1,
+        "issues_opened_human": 1,
+        "prs_opened_total": 15,
+        "prs_opened_human": 4,
+        "prs_merged_total": 16,
+        "prs_merged_human": 5,
+        "prs_merged_by_bot_author": {
+          "asyncapi-bot": 11
+        },
+        "issues_closed": 2,
+        "prs_closed_not_merged": 0
+      }
+    },
+    {
+      "full_name": "asyncapi/java-spring-cloud-stream-template",
+      "active_maintainers": [
+        "CameronRushton"
+      ],
+      "inactive_maintainers": [
+        "damaru-inc"
+      ],
+      "active_triagers": [],
+      "inactive_triagers": [],
+      "active_maintainer_count": 1,
+      "inactive_maintainer_count": 1,
+      "active_triager_count": 0,
+      "inactive_triager_count": 0,
+      "metrics": {
+        "issues_opened_total": 0,
+        "issues_opened_human": 0,
+        "prs_opened_total": 21,
+        "prs_opened_human": 8,
+        "prs_merged_total": 17,
+        "prs_merged_human": 5,
+        "prs_merged_by_bot_author": {
+          "asyncapi-bot": 12
+        },
+        "issues_closed": 14,
+        "prs_closed_not_merged": 5
+      }
+    },
+    {
+      "full_name": "asyncapi/modelina",
+      "active_maintainers": [
+        "jonaslagoni"
+      ],
+      "inactive_maintainers": [
+        "Samridhi-98",
+        "akkshitgupta",
+        "artur-ciocanu",
+        "devilkiller-ag",
+        "ferror",
+        "kennethaasan",
+        "leigh-johnson",
+        "magicmatatjahu"
+      ],
+      "active_triagers": [],
+      "inactive_triagers": [],
+      "active_maintainer_count": 1,
+      "inactive_maintainer_count": 8,
+      "active_triager_count": 0,
+      "inactive_triager_count": 0,
+      "metrics": {
+        "issues_opened_total": 40,
+        "issues_opened_human": 39,
+        "prs_opened_total": 245,
+        "prs_opened_human": 185,
+        "prs_merged_total": 187,
+        "prs_merged_human": 127,
+        "prs_merged_by_bot_author": {
+          "asyncapi-bot": 60
+        },
+        "issues_closed": 49,
+        "prs_closed_not_merged": 45
+      }
+    },
+    {
+      "full_name": "asyncapi/protobuf-schema-parser",
+      "active_maintainers": [
+        "GreenRover",
+        "nathanaelweber"
+      ],
+      "inactive_maintainers": [],
+      "active_triagers": [],
+      "inactive_triagers": [],
+      "active_maintainer_count": 2,
+      "inactive_maintainer_count": 0,
+      "active_triager_count": 0,
+      "inactive_triager_count": 0,
+      "metrics": {
+        "issues_opened_total": 0,
+        "issues_opened_human": 0,
+        "prs_opened_total": 17,
+        "prs_opened_human": 1,
+        "prs_merged_total": 17,
+        "prs_merged_human": 1,
+        "prs_merged_by_bot_author": {
+          "asyncapi-bot": 16
+        },
+        "issues_closed": 0,
+        "prs_closed_not_merged": 0
+      }
+    },
+    {
+      "full_name": "asyncapi/bundler",
+      "active_maintainers": [
+        "Souvikns",
+        "aeworxet"
+      ],
+      "inactive_maintainers": [],
+      "active_triagers": [],
+      "inactive_triagers": [],
+      "active_maintainer_count": 2,
+      "inactive_maintainer_count": 0,
+      "active_triager_count": 0,
+      "inactive_triager_count": 0,
+      "metrics": {
+        "issues_opened_total": 1,
+        "issues_opened_human": 1,
+        "prs_opened_total": 21,
+        "prs_opened_human": 6,
+        "prs_merged_total": 20,
+        "prs_merged_human": 5,
+        "prs_merged_by_bot_author": {
+          "asyncapi-bot": 15
+        },
+        "issues_closed": 0,
+        "prs_closed_not_merged": 0
+      }
+    },
+    {
+      "full_name": "asyncapi/saunter",
+      "active_maintainers": [
+        "m-wild",
+        "yurvon-screamo"
+      ],
+      "inactive_maintainers": [],
+      "active_triagers": [],
+      "inactive_triagers": [],
+      "active_maintainer_count": 2,
+      "inactive_maintainer_count": 0,
+      "active_triager_count": 0,
+      "inactive_triager_count": 0,
+      "metrics": {
+        "issues_opened_total": 1,
+        "issues_opened_human": 1,
+        "prs_opened_total": 14,
+        "prs_opened_human": 12,
+        "prs_merged_total": 9,
+        "prs_merged_human": 8,
+        "prs_merged_by_bot_author": {
+          "asyncapi-bot": 1
+        },
+        "issues_closed": 1,
+        "prs_closed_not_merged": 3
+      }
+    },
+    {
+      "full_name": "asyncapi/parser-js",
+      "active_maintainers": [
+        "fmvilas",
+        "magicmatatjahu"
+      ],
+      "inactive_maintainers": [],
+      "active_triagers": [],
+      "inactive_triagers": [],
+      "active_maintainer_count": 2,
+      "inactive_maintainer_count": 0,
+      "active_triager_count": 0,
+      "inactive_triager_count": 0,
+      "metrics": {
+        "issues_opened_total": 11,
+        "issues_opened_human": 11,
+        "prs_opened_total": 43,
+        "prs_opened_human": 33,
+        "prs_merged_total": 20,
+        "prs_merged_human": 11,
+        "prs_merged_by_bot_author": {
+          "asyncapi-bot": 9
+        },
+        "issues_closed": 20,
+        "prs_closed_not_merged": 18
+      }
+    },
+    {
+      "full_name": "asyncapi/converter-js",
+      "active_maintainers": [
+        "fmvilas",
+        "jonaslagoni"
+      ],
+      "inactive_maintainers": [
+        "magicmatatjahu"
+      ],
+      "active_triagers": [],
+      "inactive_triagers": [],
+      "active_maintainer_count": 2,
+      "inactive_maintainer_count": 1,
+      "active_triager_count": 0,
+      "inactive_triager_count": 0,
+      "metrics": {
+        "issues_opened_total": 0,
+        "issues_opened_human": 0,
+        "prs_opened_total": 33,
+        "prs_opened_human": 16,
+        "prs_merged_total": 31,
+        "prs_merged_human": 13,
+        "prs_merged_by_bot_author": {
+          "asyncapi-bot": 18
+        },
+        "issues_closed": 4,
+        "prs_closed_not_merged": 1
+      }
+    },
+    {
+      "full_name": "asyncapi/vs-asyncapi-preview",
+      "active_maintainers": [
+        "Ruchip16",
+        "ivangsa"
+      ],
+      "inactive_maintainers": [],
+      "active_triagers": [],
+      "inactive_triagers": [],
+      "active_maintainer_count": 2,
+      "inactive_maintainer_count": 0,
+      "active_triager_count": 0,
+      "inactive_triager_count": 0,
+      "metrics": {
+        "issues_opened_total": 6,
+        "issues_opened_human": 6,
+        "prs_opened_total": 43,
+        "prs_opened_human": 16,
+        "prs_merged_total": 40,
+        "prs_merged_human": 13,
+        "prs_merged_by_bot_author": {
+          "asyncapi-bot": 27
+        },
+        "issues_closed": 22,
+        "prs_closed_not_merged": 6
+      }
+    },
+    {
+      "full_name": "asyncapi/markdown-template",
+      "active_maintainers": [
+        "derberg",
+        "magicmatatjahu"
+      ],
+      "inactive_maintainers": [
+        "fmvilas"
+      ],
+      "active_triagers": [],
+      "inactive_triagers": [],
+      "active_maintainer_count": 2,
+      "inactive_maintainer_count": 1,
+      "active_triager_count": 0,
+      "inactive_triager_count": 0,
+      "metrics": {
+        "issues_opened_total": 1,
+        "issues_opened_human": 1,
+        "prs_opened_total": 41,
+        "prs_opened_human": 26,
+        "prs_merged_total": 36,
+        "prs_merged_human": 22,
+        "prs_merged_by_bot_author": {
+          "asyncapi-bot": 14
+        },
+        "issues_closed": 0,
+        "prs_closed_not_merged": 2
+      }
+    },
+    {
+      "full_name": "asyncapi/html-template",
+      "active_maintainers": [
+        "derberg",
+        "magicmatatjahu"
+      ],
+      "inactive_maintainers": [
+        "fmvilas"
+      ],
+      "active_triagers": [],
+      "inactive_triagers": [],
+      "active_maintainer_count": 2,
+      "inactive_maintainer_count": 1,
+      "active_triager_count": 0,
+      "inactive_triager_count": 0,
+      "metrics": {
+        "issues_opened_total": 10,
+        "issues_opened_human": 9,
+        "prs_opened_total": 71,
+        "prs_opened_human": 40,
+        "prs_merged_total": 62,
+        "prs_merged_human": 32,
+        "prs_merged_by_bot_author": {
+          "asyncapi-bot": 30
+        },
+        "issues_closed": 12,
+        "prs_closed_not_merged": 4
+      }
+    },
+    {
+      "full_name": "asyncapi/asyncapi-react",
+      "active_maintainers": [
+        "AceTheCreator",
+        "fmvilas"
+      ],
+      "inactive_maintainers": [
+        "magicmatatjahu"
+      ],
+      "active_triagers": [],
+      "inactive_triagers": [],
+      "active_maintainer_count": 2,
+      "inactive_maintainer_count": 1,
+      "active_triager_count": 0,
+      "inactive_triager_count": 0,
+      "metrics": {
+        "issues_opened_total": 27,
+        "issues_opened_human": 27,
+        "prs_opened_total": 82,
+        "prs_opened_human": 59,
+        "prs_merged_total": 59,
+        "prs_merged_human": 36,
+        "prs_merged_by_bot_author": {
+          "asyncapi-bot": 23
+        },
+        "issues_closed": 31,
+        "prs_closed_not_merged": 14
+      }
+    },
+    {
+      "full_name": "asyncapi/jasyncapi-idea-plugin",
+      "active_maintainers": [
+        "Pakisan",
+        "philCryoport"
+      ],
+      "inactive_maintainers": [
+        "theschles"
+      ],
+      "active_triagers": [
+        "philCryoport"
+      ],
+      "inactive_triagers": [
+        "doctocat",
+        "example",
+        "global-owner1",
+        "global-owner2",
+        "js-owner",
+        "octocat",
+        "theschles"
+      ],
+      "active_maintainer_count": 2,
+      "inactive_maintainer_count": 1,
+      "active_triager_count": 1,
+      "inactive_triager_count": 7,
+      "metrics": {
+        "issues_opened_total": 14,
+        "issues_opened_human": 14,
+        "prs_opened_total": 81,
+        "prs_opened_human": 70,
+        "prs_merged_total": 80,
+        "prs_merged_human": 69,
+        "prs_merged_by_bot_author": {
+          "asyncapi-bot": 11
+        },
+        "issues_closed": 14,
+        "prs_closed_not_merged": 1
+      }
+    },
+    {
+      "full_name": "asyncapi/kotlin-asyncapi",
+      "active_maintainers": [
+        "gimlet2",
+        "lorenzsimon"
+      ],
+      "inactive_maintainers": [],
+      "active_triagers": [],
+      "inactive_triagers": [],
+      "active_maintainer_count": 2,
+      "inactive_maintainer_count": 0,
+      "active_triager_count": 0,
+      "inactive_triager_count": 0,
+      "metrics": {
+        "issues_opened_total": 2,
+        "issues_opened_human": 2,
+        "prs_opened_total": 156,
+        "prs_opened_human": 145,
+        "prs_merged_total": 139,
+        "prs_merged_human": 128,
+        "prs_merged_by_bot_author": {
+          "asyncapi-bot": 11
+        },
+        "issues_closed": 1,
+        "prs_closed_not_merged": 15
+      }
+    },
+    {
+      "full_name": "asyncapi/openapi-schema-parser",
+      "active_maintainers": [
+        "AayushSaini101",
+        "fmvilas",
+        "smoya"
+      ],
+      "inactive_maintainers": [],
+      "active_triagers": [],
+      "inactive_triagers": [],
+      "active_maintainer_count": 3,
+      "inactive_maintainer_count": 0,
+      "active_triager_count": 0,
+      "inactive_triager_count": 0,
+      "metrics": {
+        "issues_opened_total": 1,
+        "issues_opened_human": 1,
+        "prs_opened_total": 39,
+        "prs_opened_human": 24,
+        "prs_merged_total": 35,
+        "prs_merged_human": 20,
+        "prs_merged_by_bot_author": {
+          "asyncapi-bot": 15
+        },
+        "issues_closed": 0,
+        "prs_closed_not_merged": 0
+      }
+    },
+    {
+      "full_name": "asyncapi/.github",
+      "active_maintainers": [
+        "Florence-Njeri",
+        "Shurtu-gal",
+        "derberg"
+      ],
+      "inactive_maintainers": [],
+      "active_triagers": [],
+      "inactive_triagers": [],
+      "active_maintainer_count": 3,
+      "inactive_maintainer_count": 0,
+      "active_triager_count": 0,
+      "inactive_triager_count": 0,
+      "metrics": {
+        "issues_opened_total": 17,
+        "issues_opened_human": 17,
+        "prs_opened_total": 38,
+        "prs_opened_human": 38,
+        "prs_merged_total": 27,
+        "prs_merged_human": 27,
+        "prs_merged_by_bot_author": {
+          "asyncapi-bot": 0
+        },
+        "issues_closed": 19,
+        "prs_closed_not_merged": 8
+      }
+    },
+    {
+      "full_name": "asyncapi/spec-json-schemas",
+      "active_maintainers": [
+        "derberg",
+        "fmvilas",
+        "jonaslagoni",
+        "pakisan"
+      ],
+      "inactive_maintainers": [
+        "CameronRushton",
+        "GeraldLoeffler",
+        "GreenRover",
+        "KhudaDad414",
+        "SrfHead",
+        "VisualBean",
+        "amparosancho",
+        "char0n",
+        "dalelane",
+        "damaru-inc",
+        "dpwdec",
+        "gramss",
+        "iancooper",
+        "lbroudoux",
+        "mboss37",
+        "rcoppen",
+        "whitlockjc"
+      ],
+      "active_triagers": [],
+      "inactive_triagers": [],
+      "active_maintainer_count": 4,
+      "inactive_maintainer_count": 17,
+      "active_triager_count": 0,
+      "inactive_triager_count": 0,
+      "metrics": {
+        "issues_opened_total": 6,
+        "issues_opened_human": 6,
+        "prs_opened_total": 48,
+        "prs_opened_human": 30,
+        "prs_merged_total": 37,
+        "prs_merged_human": 19,
+        "prs_merged_by_bot_author": {
+          "asyncapi-bot": 18
+        },
+        "issues_closed": 1,
+        "prs_closed_not_merged": 7
+      }
+    },
+    {
+      "full_name": "asyncapi/studio",
+      "active_maintainers": [
+        "Amzani",
+        "Shurtu-gal",
+        "magicmatatjahu",
+        "princerajpoot20"
+      ],
+      "inactive_maintainers": [
+        "KhudaDad414"
+      ],
+      "active_triagers": [],
+      "inactive_triagers": [],
+      "active_maintainer_count": 4,
+      "inactive_maintainer_count": 1,
+      "active_triager_count": 0,
+      "inactive_triager_count": 0,
+      "metrics": {
+        "issues_opened_total": 30,
+        "issues_opened_human": 30,
+        "prs_opened_total": 79,
+        "prs_opened_human": 41,
+        "prs_merged_total": 65,
+        "prs_merged_human": 27,
+        "prs_merged_by_bot_author": {
+          "asyncapi-bot": 38
+        },
+        "issues_closed": 28,
+        "prs_closed_not_merged": 5
+      }
+    },
+    {
+      "full_name": "asyncapi/cli",
+      "active_maintainers": [
+        "AayushSaini101",
+        "Amzani",
+        "Shurtu-gal",
+        "Souvikns"
+      ],
+      "inactive_maintainers": [],
+      "active_triagers": [],
+      "inactive_triagers": [],
+      "active_maintainer_count": 4,
+      "inactive_maintainer_count": 0,
+      "active_triager_count": 0,
+      "inactive_triager_count": 0,
+      "metrics": {
+        "issues_opened_total": 80,
+        "issues_opened_human": 80,
+        "prs_opened_total": 265,
+        "prs_opened_human": 221,
+        "prs_merged_total": 146,
+        "prs_merged_human": 102,
+        "prs_merged_by_bot_author": {
+          "asyncapi-bot": 44
+        },
+        "issues_closed": 60,
+        "prs_closed_not_merged": 69
+      }
+    },
+    {
+      "full_name": "asyncapi/conference-website",
+      "active_maintainers": [
+        "AceTheCreator",
+        "Mayaleeeee",
+        "TenzDelek",
+        "thulieblack"
+      ],
+      "inactive_maintainers": [],
+      "active_triagers": [],
+      "inactive_triagers": [],
+      "active_maintainer_count": 4,
+      "inactive_maintainer_count": 0,
+      "active_triager_count": 0,
+      "inactive_triager_count": 0,
+      "metrics": {
+        "issues_opened_total": 87,
+        "issues_opened_human": 87,
+        "prs_opened_total": 181,
+        "prs_opened_human": 170,
+        "prs_merged_total": 124,
+        "prs_merged_human": 113,
+        "prs_merged_by_bot_author": {
+          "asyncapi-bot": 11
+        },
+        "issues_closed": 92,
+        "prs_closed_not_merged": 68
+      }
+    },
+    {
+      "full_name": "asyncapi/community",
+      "active_maintainers": [
+        "AceTheCreator",
+        "bandantonio",
+        "derberg",
+        "thulieblack"
+      ],
+      "inactive_maintainers": [
+        "Mayaleeeee"
+      ],
+      "active_triagers": [
+        "CBID2"
+      ],
+      "inactive_triagers": [],
+      "active_maintainer_count": 4,
+      "inactive_maintainer_count": 1,
+      "active_triager_count": 1,
+      "inactive_triager_count": 0,
+      "metrics": {
+        "issues_opened_total": 128,
+        "issues_opened_human": 60,
+        "prs_opened_total": 270,
+        "prs_opened_human": 130,
+        "prs_merged_total": 255,
+        "prs_merged_human": 116,
+        "prs_merged_by_bot_author": {
+          "asyncapi-bot": 139
+        },
+        "issues_closed": 139,
+        "prs_closed_not_merged": 24
+      }
+    },
+    {
+      "full_name": "asyncapi/generator",
+      "active_maintainers": [
+        "Adi-204",
+        "Florence-Njeri",
+        "derberg",
+        "magicmatatjahu"
+      ],
+      "inactive_maintainers": [
+        "jonaslagoni"
+      ],
+      "active_triagers": [
+        "Adi-204",
+        "Florence-Njeri"
+      ],
+      "inactive_triagers": [],
+      "active_maintainer_count": 4,
+      "inactive_maintainer_count": 1,
+      "active_triager_count": 2,
+      "inactive_triager_count": 0,
+      "metrics": {
+        "issues_opened_total": 223,
+        "issues_opened_human": 223,
+        "prs_opened_total": 318,
+        "prs_opened_human": 272,
+        "prs_merged_total": 212,
+        "prs_merged_human": 178,
+        "prs_merged_by_bot_author": {
+          "asyncapi-bot": 34
+        },
+        "issues_closed": 196,
+        "prs_closed_not_merged": 98
+      }
+    },
+    {
+      "full_name": "asyncapi/spec",
+      "active_maintainers": [
+        "GreenRover",
+        "char0n",
+        "dalelane",
+        "derberg",
+        "fmvilas"
+      ],
+      "inactive_maintainers": [],
+      "active_triagers": [],
+      "inactive_triagers": [],
+      "active_maintainer_count": 5,
+      "inactive_maintainer_count": 0,
+      "active_triager_count": 0,
+      "inactive_triager_count": 0,
+      "metrics": {
+        "issues_opened_total": 34,
+        "issues_opened_human": 34,
+        "prs_opened_total": 54,
+        "prs_opened_human": 45,
+        "prs_merged_total": 28,
+        "prs_merged_human": 19,
+        "prs_merged_by_bot_author": {
+          "asyncapi-bot": 9
+        },
+        "issues_closed": 27,
+        "prs_closed_not_merged": 23
+      }
+    },
+    {
+      "full_name": "asyncapi/bindings",
+      "active_maintainers": [
+        "amparosancho",
+        "char0n",
+        "derberg",
+        "dpwdec",
+        "fmvilas",
+        "gramss"
+      ],
+      "inactive_maintainers": [
+        "CameronRushton",
+        "GeraldLoeffler",
+        "GreenRover",
+        "SrfHead",
+        "VisualBean",
+        "dalelane",
+        "damaru-inc",
+        "iancooper",
+        "lbroudoux",
+        "mboss37",
+        "rcoppen",
+        "whitlockjc"
+      ],
+      "active_triagers": [],
+      "inactive_triagers": [],
+      "active_maintainer_count": 6,
+      "inactive_maintainer_count": 12,
+      "active_triager_count": 0,
+      "inactive_triager_count": 0,
+      "metrics": {
+        "issues_opened_total": 9,
+        "issues_opened_human": 9,
+        "prs_opened_total": 13,
+        "prs_opened_human": 3,
+        "prs_merged_total": 13,
+        "prs_merged_human": 3,
+        "prs_merged_by_bot_author": {
+          "asyncapi-bot": 10
+        },
+        "issues_closed": 9,
+        "prs_closed_not_merged": 1
+      }
+    },
+    {
+      "full_name": "asyncapi/website",
+      "active_maintainers": [
+        "TRohit20",
+        "akshatnema",
+        "anshgoyalevil",
+        "bandantonio",
+        "derberg",
+        "mayaleeeee",
+        "princerajpoot20",
+        "sambhavgupta0705",
+        "thulieblack"
+      ],
+      "inactive_maintainers": [],
+      "active_triagers": [
+        "CBID2",
+        "bandantonio",
+        "vishvamsinh28"
+      ],
+      "inactive_triagers": [
+        "devilkiller-ag"
+      ],
+      "active_maintainer_count": 9,
+      "inactive_maintainer_count": 0,
+      "active_triager_count": 3,
+      "inactive_triager_count": 1,
+      "metrics": {
+        "issues_opened_total": 377,
+        "issues_opened_human": 377,
+        "prs_opened_total": 908,
+        "prs_opened_human": 515,
+        "prs_merged_total": 560,
+        "prs_merged_human": 207,
+        "prs_merged_by_bot_author": {
+          "asyncapi-bot": 353
+        },
+        "issues_closed": 328,
+        "prs_closed_not_merged": 317
+      }
+    }
+  ]
+}
