@@ -316,6 +316,7 @@
     - parser-js
     - studio
     - openapi-schema-parser
+    - optimizer
   githubID: 44585452
 - name: Richard Coppen
   github: rcoppen
@@ -548,7 +549,6 @@
   availableForHire: false
   isTscMember: false
   repos:
-    - optimizer
     - bundler
   githubID: 16149591
 - name: Rohit T
