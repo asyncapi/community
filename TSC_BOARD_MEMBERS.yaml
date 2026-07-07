@@ -232,6 +232,7 @@
     - studio
     - openapi-schema-parser
     - optimizer
+    - bundler
   githubID: 44585452
 - name: Richard Coppen
   github: rcoppen
