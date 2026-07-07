@@ -317,6 +317,7 @@
     - studio
     - openapi-schema-parser
     - optimizer
+    - bundler
   githubID: 44585452
 - name: Richard Coppen
   github: rcoppen
@@ -543,14 +544,6 @@
   repos:
     - website
   githubID: 81870866
-- name: Viacheslav Turovskyi
-  github: aeworxet
-  slack: U01G3U01SVC
-  availableForHire: false
-  isTscMember: false
-  repos:
-    - bundler
-  githubID: 16149591
 - name: Rohit T
   github: TRohit20
   linkedin: rohit-t-0124a4242
