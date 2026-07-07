@@ -769,3 +769,9 @@
   repos:
     - asyncapi-react
   githubID: 96487647
+- name: aeworxet
+  github: aeworxet
+  isTscMember: false
+  repos:
+    - community
+  githubID: 16149591
