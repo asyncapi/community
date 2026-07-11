@@ -1,0 +1,18 @@
+# yaml-language-server: $schema=https://coderabbit.ai/integrations/schema.v2.json
+language: "en-US"
+early_access: false
+reviews:
+  path_instructions:
+    - path: "docs/**"
+      instructions: |
+        All the content of the `docs` folder is a source of truth for the documentation that is rendered on the website under the "Community" section: https://www.asyncapi.com/docs/community. Ensure that:
+        - The "Community" section is defined by the `_section.md` and `index.md` files located in the root of the `docs` folder. The `index.md` file should contain the content of the "Community" section's landing page, while the `_section.md` file must contain the section metadata (`title`, `weight`) that defines how this section is displayed in the website's sidebar and its order relative to other sections.
+        - Both `index.md` and `_section.md` within the same section must have the same values of the `weight` metadata parameter to ensure they maintain consistent ordering.
+        - All the nested sections are defined by their respective `_section.md` and `index.md` files in child folders of `docs` (content buckets).
+        - Each content bucket respects the following naming convention: <numeric prefix>-<descriptive-name-in-kebab-case> (e.g., `000-onboarding`, `010-contribution-guidelines`, `020-governance-and-policies`, etc). The numeric prefix is used to maintain the desired order of sections on the website and in the file system, and to allow for future additions without needing to rename existing folders.
+        - The numeric prefix of primary content buckets is assigned in increments of 10 (e.g., `000-`, `010-`, `020-`, etc.). The numeric prefix of secondary content buckets (subfolders within primary content buckets) is assigned in increments of 1 to the content bucket they belong to (e.g., `011-`, `012-`, or `021-`, `022-`, etc.).
+        - No nested folders exist beyond the content bucket folders. The current website's implementation doesn't support nested folders, so all content must be organized within the first level of folders under `docs`.
+        - Weights of files inside the content bucket folders are assigned in increments of 10 (e.g., `weight: 10`, `weight: 20`, etc.) for primary content, and in increments of 1 (e.g., `weight: 1`, `weight: 2`, etc.) for secondary content.
+        - Each document filename should be in lowercase and use hyphens to separate words (kebab-case) with no numeric prefixes (e.g. `mentoring-maintainers.md`, `add-new-asyncapi-tool-to-website.md`). Uppercase or acronym-style names are allowed only for established root policy documents (e.g., `TSC_MEMBERSHIP.md`, `CODE_OF_CONDUCT_COMMITTEE.md`) mentioned in the CHARTER.md (see docs/020-governance-and-policies/CHARTER.md).
+        - When referencing documents, the full URL to the rendered page on the website is used rather than relative paths to the source files in the repository. For example, this is an *incorrect* link to the "github-actions" document: `docs/000-onboarding/github-actions.md`. This is the **correct** link to the "github-actions" document: `https://www.asyncapi.com/docs/community/000-onboarding/github-actions`.
+        - README in the root of the repository acts as the navigation hub, so all the links to documents must point to raw Markdown files (relative paths or cross-repository), not to the website. For example, this is an **incorrect** link to the "Governance Board (GB)" document: `https://www.asyncapi.com/docs/community/020-governance-and-policies/GOVERNANCE`. This is the **correct** link to the "Governance Board (GB)" document: `docs/020-governance-and-policies/GOVERNANCE.md`.
