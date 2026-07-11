@@ -1,0 +1,25 @@
+{
+  "generated_at": "2026-04-19T04:46:09.522Z",
+  "description": "Heuristic flags: repos with no active maintainers. Bot-authored merges are treated as non-signal in merge analysis; repos_high_bot_merge_share is no longer populated (use raw repo-activity JSON if you need bot totals).",
+  "repos_zero_active_maintainers": [
+    "asyncapi/brand",
+    "asyncapi/chatbot",
+    "asyncapi/diff",
+    "asyncapi/EDAVisualiser",
+    "asyncapi/enterprise-patterns",
+    "asyncapi/extensions-catalog",
+    "asyncapi/go-watermill-template",
+    "asyncapi/java-spring-template",
+    "asyncapi/learning-paths",
+    "asyncapi/nodejs-template",
+    "asyncapi/nodejs-ws-template",
+    "asyncapi/parser-api",
+    "asyncapi/php-template",
+    "asyncapi/problem",
+    "asyncapi/python-paho-template",
+    "asyncapi/tck",
+    "asyncapi/template-for-generator-templates",
+    "asyncapi/training"
+  ],
+  "repos_high_bot_merge_share": []
+}
