@@ -50,7 +50,7 @@ Among others, the duties and responsibilities of the GB include:
 - Maintain a safe and inclusive environment for all AsyncAPI participants.
 - Sustain AsyncAPI’s economic viability, including sponsorship and funding strategies.
 - Securely manage credentials for all AsyncAPI services.
-- Overseeing Program Leads.
+- Oversee Program Leads.
 - Ensure authorized access to AsyncAPI services.
 - Conduct regular GB succession via a transparent voting process.
 - Manage funding streams (e.g., Open Collective, GitHub Sponsors).
