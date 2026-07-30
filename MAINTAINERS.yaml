@@ -35,17 +35,6 @@
     - openapi-schema-parser
     - cli
   githubID: 60972989
-- name: Abir Pal
-  linkedin: imabp
-  slack: U01S8EQ9LQ2
-  twitter: imabptweets
-  github: imabp
-  availableForHire: false
-  isTscMember: true
-  tscMemberSince: '2023-07-05'
-  repos:
-    - problem
-  githubID: 53480076
 - name: Akshat Nema
   github: akshatnema
   linkedin: akshat-nema
@@ -223,11 +212,7 @@
     - enterprise-patterns
     - html-template
     - markdown-template
-    - nodejs-template
-    - nodejs-ws-template
-    - java-spring-template
     - .github
-    - template-for-generator-templates
     - community
     - diff
     - chatbot
@@ -248,12 +233,10 @@
     - studio
     - html-template
     - markdown-template
-    - template-for-generator-templates
     - modelina
     - diff
     - chatbot
     - EDAVisualiser
-    - problem
   githubID: 20404945
 - name: Azeez Elegbede
   linkedin: acebuild
@@ -396,16 +379,6 @@
   repos:
     - java-template
   githubID: 91530893
-- name: Semen Tenishchev
-  github: Tenischev
-  linkedin: semen-tenishchev
-  availableForHire: true
-  slack: U011D1DAU6S
-  isTscMember: true
-  tscMemberSince: '2023-07-05'
-  repos:
-    - java-spring-template
-  githubID: 4137916
 - name: Samridhi Agrawal
   github: Samridhi-98
   slack: U02T2MY9W5T
@@ -595,13 +568,6 @@
   repos:
     - saunter
   githubID: 109030262
-- name: Rishi
-  github: kaushik-rishi
-  twitter: KaushikRishi07
-  isTscMember: false
-  repos:
-    - nodejs-template
-  githubID: 52498617
 - name: Akshit Gupta
   github: akkshitgupta
   twitter: akkshitgupta
@@ -647,12 +613,6 @@
   repos:
     - protobuf-schema-parser
   githubID: 40006685
-- name: Barbanio González
-  github: Barbanio
-  isTscMember: false
-  repos:
-    - learning-paths
-  githubID: 77982319
 - name: Lorenz Simon
   github: lorenzsimon
   isTscMember: false
