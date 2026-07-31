@@ -100,7 +100,6 @@
     - extensions-catalog
     - converter-js
     - bindings
-    - enterprise-patterns
     - html-template
     - markdown-template
   githubID: 242119
@@ -135,13 +134,11 @@
     - generator
     - extensions-catalog
     - bindings
-    - enterprise-patterns
     - html-template
     - markdown-template
     - .github
     - community
     - diff
-    - chatbot
   githubID: 6995927
 - name: Maciej Urbańczyk
   github: magicmatatjahu
@@ -161,7 +158,6 @@
     - markdown-template
     - modelina
     - diff
-    - chatbot
     - EDAVisualiser
   githubID: 20404945
 - name: Azeez Elegbede
@@ -175,7 +171,6 @@
   repos:
     - asyncapi-react
     - conference-website
-    - chatbot
   githubID: 40604284
 - name: Pavel Bodiachevskii
   github: Pakisan
