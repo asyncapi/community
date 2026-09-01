@@ -6,7 +6,7 @@
     "generate:board": "node scripts/tsc-board-member.js"
   },
   "dependencies": {
-    "js-yaml": "^4.1.0"
+    "js-yaml": "^4.3.1"
   },
   "devDependencies": {
     "@octokit/rest": "^21.0.0",
