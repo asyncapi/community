@@ -273,6 +273,7 @@
     - parser-js
     - studio
     - openapi-schema-parser
+    - cli
     - optimizer
     - bundler
   githubID: 44585452
