@@ -763,9 +763,10 @@
   githubID: 114283933
 - name: Ruchi Pakhle
   github: Ruchip16
+  slack: U02L0Q7JMQX
   twitter: Ruchicodess
   availableForHire: true
-  isTscMember: false
+  isTscMember: true
   repos:
     - vs-asyncapi-preview
   githubID: 72685035
