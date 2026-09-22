@@ -65,7 +65,7 @@ These badges recognize members who actively participate in, support, and grow th
 Awarded to members who engage with the community by participating in issues, discussions, events, or any other form of interaction.
 
 - **Community Leader** :
-Awarded to members who lead or coordinate major community initiatives like the Bounty Program, Ambassador Program, or Mentorship Program.
+Awarded to members who lead or coordinate major community initiatives like the Microgrant Program, Ambassador Program, or Mentorship Program.
 
 -  **Community Champion** :
 Awarded to members who consistently promote and support AsyncAPI through activities like volunteering at conferences or being long-term advocates.

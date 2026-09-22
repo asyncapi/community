@@ -35,10 +35,6 @@ labels: meeting
 <td><a href="https://www.twitch.tv/asyncapi">Watch live</a>.</td>
 </tr>
 <tr>
-<td>Twitter</td>
-<td><a href="https://twitter.com/AsyncAPISpec">Watch live</a>.</td>
-</tr>
-<tr>
 <td>LinkedIn</td>
 <td><a href="https://www.linkedin.com/company/asyncapi">Watch live</a>.</td>
 </tr>
