@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://asyncapi.org/community/audit-rules.schema.json",
+  "title": "AsyncAPI audit rules file",
+  "type": "object",
+  "required": ["version", "rules"],
+  "properties": {
+    "version": { "type": "integer" },
+    "window_months": { "type": "integer", "minimum": 1 },
+    "bots": {
+      "type": "object",
+      "properties": {
+        "deny_reviewers": { "type": "array", "items": { "type": "string" } },
+        "deny_pr_authors": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "aggregation": {
+      "type": "object",
+      "properties": {
+        "mode": { "enum": ["profile", "k_of_n", "none"] },
+        "profile": { "enum": ["strict", "balanced"] },
+        "k_of_n": {
+          "type": "object",
+          "properties": {
+            "enabled": { "type": "boolean" },
+            "k": { "type": "integer", "minimum": 1 },
+            "n": { "type": "integer", "minimum": 1 }
+          }
+        }
+      }
+    },
+    "rules": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "kind"],
+        "properties": {
+          "id": { "type": "string" },
+          "kind": {
+            "enum": [
+              "commit_activity",
+              "merged_pr_author",
+              "pr_review",
+              "issue_interaction",
+              "org_wide_activity",
+              "last_interaction_any"
+            ]
+          },
+          "enabled": { "type": "boolean" }
+        }
+      }
+    }
+  }
+}

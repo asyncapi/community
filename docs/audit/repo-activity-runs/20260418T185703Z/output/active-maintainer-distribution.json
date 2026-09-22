@@ -1,0 +1,52 @@
+{
+  "generated_at": "2026-04-19T04:46:09.522Z",
+  "maintainer_run_id": "20260329T084806Z",
+  "repo_activity_run_id": "20260418T185703Z",
+  "since_day": "2025-04-18",
+  "window_months": 12,
+  "total_repos": 48,
+  "tiers": [
+    {
+      "active_maintainer_count": 0,
+      "repo_count": 18
+    },
+    {
+      "active_maintainer_count": 1,
+      "repo_count": 8
+    },
+    {
+      "active_maintainer_count": 2,
+      "repo_count": 11
+    },
+    {
+      "active_maintainer_count": 3,
+      "repo_count": 2
+    },
+    {
+      "active_maintainer_count": 4,
+      "repo_count": 6
+    },
+    {
+      "active_maintainer_count": 5,
+      "repo_count": 1
+    },
+    {
+      "active_maintainer_count": 6,
+      "repo_count": 1
+    },
+    {
+      "active_maintainer_count": 9,
+      "repo_count": 1
+    }
+  ],
+  "by_count": {
+    "0": 18,
+    "1": 8,
+    "2": 11,
+    "3": 2,
+    "4": 6,
+    "5": 1,
+    "6": 1,
+    "9": 1
+  }
+}
