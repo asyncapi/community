@@ -1,0 +1,15 @@
+verbose = "info"
+format = "compact"
+output = "lychee-report.md"
+cache = true
+max_cache_age = "1h"
+max_retries = 4
+max_concurrency = 16
+host_concurrency = 4
+index_files = ["index.html"]        # Resolve directories to index files
+timeout = 20
+retry_wait_time = 2
+insecure = false                    # Proceed for server connections considered insecure (invalid TLS).
+require_https = false               # When links are available using HTTPS, treat HTTP links as errors.
+include_fragments = "full"
+include_verbatim = true
