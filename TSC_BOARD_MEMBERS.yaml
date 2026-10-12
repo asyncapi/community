@@ -86,6 +86,7 @@
   repos:
     - spec
     - spec-json-schemas
+    - parser-js
     - bindings
     - avro-schema-parser
     - java-template
