@@ -96,6 +96,7 @@
   repos:
     - spec
     - spec-json-schemas
+    - parser-js
     - bindings
     - avro-schema-parser
     - java-template
@@ -175,6 +176,7 @@
   company: zatsit
   isTscMember: false
   repos:
+    - parser-js
     - avro-schema-parser
   githubID: 5501911
 - name: Lukasz Gornicki
