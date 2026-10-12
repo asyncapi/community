@@ -22,6 +22,7 @@
   isTscMember: true
   tscMemberSince: '2023-07-05'
   repos:
+    - cli
     - diff
   githubID: 54525741
 - name: Aayush Saini
@@ -139,6 +140,7 @@
     - html-template
     - markdown-template
     - .github
+    - cli
     - community
     - diff
   githubID: 6995927
@@ -159,6 +161,7 @@
     - html-template
     - markdown-template
     - modelina
+    - cli
     - diff
     - EDAVisualiser
   githubID: 20404945
