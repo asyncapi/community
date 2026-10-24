@@ -13,7 +13,19 @@ reviews:
         - The numeric prefix of primary content buckets is assigned in increments of 10 (e.g., `000-`, `010-`, `020-`, etc.). Additional content buckets at the same level under `docs` use increments of 1 after the primary bucket they follow (e.g., `011-`, `012-`, or `021-`, `022-`, etc.).
         - No nested folders exist beyond the content bucket folders. The current website's implementation doesn't support nested folders, so all content must be organized within the first level of folders under `docs`.
         - Weights of files inside the content bucket folders are assigned in increments of 10 (e.g., `weight: 10`, `weight: 20`, etc.) for primary content, and in increments of 1 (e.g., `weight: 1`, `weight: 2`, etc.) for secondary content.
-        - Each document filename should be in lowercase and use hyphens to separate words (kebab-case) with no numeric prefixes (e.g. `mentoring-maintainers.md`, `add-new-asyncapi-tool-to-website.md`). Uppercase or acronym-style names are allowed only for established root policy documents (e.g., `TSC_MEMBERSHIP.md`, `CODE_OF_CONDUCT_COMMITTEE.md`) mentioned in the CHARTER.md (see docs/020-governance-and-policies/CHARTER.md).
+        - Document filenames must use lowercase kebab-case with no numeric prefixes (e.g., mentoring-maintainers.md).
+        - Exempt the following exact repository-relative paths from the filename rule:
+          - docs/README.md
+          - docs/CODE_OF_CONDUCT_COMMITTEE.md
+          - docs/020-governance-and-policies/CHARTER.md
+          - docs/020-governance-and-policies/GOVERNANCE.md
+          - docs/020-governance-and-policies/PROJECT_FUNDING.md
+          - docs/020-governance-and-policies/TSC_MEMBERSHIP.md
+          - docs/020-governance-and-policies/TSC_VOTING_OVERVIEW.md
+          - docs/020-governance-and-policies/WORKING_GROUPS.md
+        - Allow the required metadata filename _section.md in docs and its content buckets.
+        - These exceptions apply only to filenames. Continue to review file content, links, and all other applicable documentation requirements.
+        - Apply the filename rule to every other document, including new documents in docs/020-governance-and-policies/. Add an explicit exception when a new document requires a nonconforming filename.
         - When referencing documents, the full URL to the rendered page on the website is used rather than relative paths to the source files in the repository. For example, this is an *incorrect* link to the "github-actions" document: `docs/000-onboarding/github-actions.md`. This is the **correct** link to the "github-actions" document: `https://www.asyncapi.com/docs/community/000-onboarding/github-actions`.
     - path: "README.md"
       instructions: |
