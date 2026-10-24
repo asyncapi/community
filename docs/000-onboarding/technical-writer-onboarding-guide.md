@@ -28,7 +28,7 @@ Before you start contributing, complete the following onboarding tasks in order:
 - [ ] Join [the AsyncAPI Slack workspace](https://asyncapi.com/slack-invite).  
 - [ ] Add the AsyncAPI calendar found in [the AsyncAPI events page](https://www.asyncapi.com/community/events).  
 - [ ] Read and familiarize yourself with the [prerequisite knowledge topics](http://../010-contribution-guidelines/prerequisite-knowledge).  
-- [ ] Familiarize yourself with the [AsyncAPI Style Guide](http://../011-styleguide).  
+- [ ] Familiarize yourself with the [AsyncAPI Style Guide](../011-styleguide).  
 - [ ] Read all docs under the following content buckets: `Concepts`, `Tutorials`, `Reference`. (Take the time to go through each tutorial.)  
 - [ ] Set up your local environment following our instructions for the [AsyncAPI git workflow](http://../010-contribution-guidelines/git-workflow).  
 - [ ] Introduce yourself in AsyncAPI Slack in the `#01_introductions` channel and the `#13_docs` channel. From there, ask docs-related questions.  
