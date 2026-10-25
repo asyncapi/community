@@ -62,7 +62,7 @@ When someone is approved as a new maintainer, the lead maintainer ensures the fo
 
 - [ ] Invite them as a GitHub maintainer with appropriate repo permissions
 - [ ] Add them to the [MAINTAINERS.yaml](https://github.com/asyncapi/community/blob/master/MAINTAINERS.yaml) file
-- [ ] Share [the Maintainer Onboarding Guide](https://www.asyncapi.com/docs/community/onboarding-guide/maintainer-guide)
+- [ ] Share [the Maintainer Onboarding Guide](https://www.asyncapi.com/docs/community/000-onboarding/maintainer-guide)
 - [ ] Schedule a short onboarding call or Slack chat
 - [ ] Share the [TSC responsibilities and requirements](https://github.com/asyncapi/community/blob/master/docs/020-governance-and-policies/CHARTER.md#2-technical-steering-committee) from the Charter
 - [ ] Introduce them in the relevant Slack channels

@@ -39,7 +39,7 @@ The TSC is a group of maintainers and Ambassadors responsible for the maintenanc
 
 ### Want To Become a TSC Member?
 - Read the requirements and responsibilities on becoming a [TSC Member](./docs/020-governance-and-policies/TSC_MEMBERSHIP.md) or watch our [YouTube video on how to become a TSC member](https://www.youtube.com/watch?v=uG_aLF9Z1F0). 
-- Or explore if you meet the requirements of becoming an [AsyncAPI Ambassador](./docs/020-governance-and-policies/AMBASSADOR_PROGRAM.md).
+- Or explore if you meet the requirements of becoming an [AsyncAPI Ambassador](./docs/010-contribution-guidelines/AMBASSADOR_PROGRAM.md).
 
 ## Need Help? 🤝
 
