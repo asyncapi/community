@@ -1,7 +1,7 @@
 ---
 title: Add new AsyncAPI tool to website
 description: Learn how to add your tool to the AsyncAPI website using the .asyncapi-tool file.
-weight: 20
+weight: 30
 ---
 
 ## Introduction
