@@ -89,6 +89,24 @@
         "examples": [
           "2023-07-13"
         ]
+      },
+      "isBoardMember": {
+        "type": "boolean",
+        "description": "Indicates whether the maintainer is a member of the Governance Board",
+        "default": false,
+        "examples": [
+          true,
+          false
+        ]
+      },
+      "isBoardChair": {
+        "type": "boolean",
+        "description": "Indicates whether the Governance Board member is the chairperson.",
+        "default": false,
+        "examples": [
+          true,
+          false
+        ]
       }
     },
     "required": [
