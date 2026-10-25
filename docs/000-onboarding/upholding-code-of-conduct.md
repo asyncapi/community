@@ -61,5 +61,5 @@ The Code of Conduct Committee is trained to resolve conflicts fairly and ensure 
 
 
 ## Additional Resources
-- [Incident Resolution Procedures](https://www.asyncapi.com/docs/community/COC-incident-resolution-procedures)
+- [Incident Resolution Procedures](https://www.asyncapi.com/docs/community/coc-incident-resolution-procedures)
 - [Slack Etiquette Guidelines](https://www.asyncapi.com/docs/community/060-meetings-and-communication/slack-etiquette)

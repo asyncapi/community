@@ -49,7 +49,7 @@ When it comes to referring to other sections within the content being created fo
 
 ### Example of an Asset Link
 
-`![AsyncAPI Logo](../assets/asyncapi-logo.png)`
+`![Lightbulb](https://www.asyncapi.com/img/illustrations/icons/icon.svg)`
 
 ### Example of an Internal Link
 

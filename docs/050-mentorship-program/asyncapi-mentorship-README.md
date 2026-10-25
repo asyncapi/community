@@ -32,9 +32,9 @@ Our mentorship programs demonstrate strong impact with improving retention rates
 
 | Year | Term | Status | Details |
 | ---- | ---- | ------ | ------- |
-| 2024 | Sept-May | Completed | [2024 Projects](https://www.asyncapi.com/docs/community/050-mentorship-program/asyncapi-mentorship-2024-project-ideas.md) |
-| 2023 | Jan-Nov | Completed | [2023 Projects](https://www.asyncapi.com/docs/community/050-mentorship-program/asyncapi-mentorship-2023-project-ideas.md) |
-| 2022 | Jan-Nov | Completed | [2022 Projects](https://www.asyncapi.com/docs/community/050-mentorship-program/asyncapi-mentorship-2022-project-ideas.md) |
+| 2024 | Sept-May | Completed | [2024 Projects](https://www.asyncapi.com/docs/community/050-mentorship-program/asyncapi-mentorship-2024-project-ideas) |
+| 2023 | Jan-Nov | Completed | [2023 Projects](https://www.asyncapi.com/docs/community/050-mentorship-program/asyncapi-mentorship-2023-project-ideas) |
+| 2022 | Jan-Nov | Completed | [2022 Projects](https://www.asyncapi.com/docs/community/050-mentorship-program/asyncapi-mentorship-2022-project-ideas) |
 
 ## Program Leadership
 
