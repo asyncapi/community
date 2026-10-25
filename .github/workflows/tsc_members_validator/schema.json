@@ -92,7 +92,7 @@
       },
       "isBoardMember": {
         "type": "boolean",
-        "description": "Indicates whether the maintainer is a member of the Governance Board",
+        "description": "Indicates whether the TSC member is also a Governance Board member.",
         "default": false,
         "examples": [
           true,
