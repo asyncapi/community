@@ -1,0 +1,20 @@
+# Example: all rules must pass
+version: 1
+window_months: 12
+bots:
+  deny_reviewers: [asyncapi-bot-eve]
+  deny_pr_authors: [asyncapi-bot]
+aggregation:
+  mode: profile
+  profile: strict
+  k_of_n:
+    enabled: false
+    k: 2
+    n: 5
+rules:
+  - id: commits_in_window
+    kind: commit_activity
+    enabled: true
+  - id: merged_prs
+    kind: merged_pr_author
+    enabled: true

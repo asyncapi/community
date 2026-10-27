@@ -1,0 +1,25 @@
+{
+  "audit_kind": "repo_activity",
+  "repo_activity_version": "1.0.0",
+  "run_id": "20260418T184257Z",
+  "started_at": "2026-04-18T18:42:57.139Z",
+  "rules_path": "/Users/princerajpoot/GITHUB/asyncapi/Website/copy1_tools/community/docs/audit/rules/default.yaml",
+  "raw_path": "/Users/princerajpoot/GITHUB/asyncapi/Website/copy1_tools/community/docs/audit/raw-data.json",
+  "argv": [
+    "--max-repos",
+    "3"
+  ],
+  "git_sha": "8397eb7",
+  "max_repos": 3,
+  "window_months": 12,
+  "since_day": "2025-04-18",
+  "bots": {
+    "deny_pr_authors": [
+      "asyncapi-bot"
+    ],
+    "deny_reviewers": [
+      "asyncapi-bot-eve"
+    ],
+    "note": "deny_reviewers does not affect repo-activity v1 counts"
+  }
+}
