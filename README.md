@@ -11,7 +11,7 @@ Join us in shaping the future of how you work with Event-Driven Architectures.
 
 We set annual community goals that guide our growth and initiatives every year. Join us as we enhance maintainers' support, simplify onboarding, and establish structured community initiatives and programs. 
 
-**[More details »](docs/030-project-vision-strategy-goals/2026_Community_Goals.md)**
+**[More details »](docs/030-project-vision-strategy-goals/2026-community-goals.md)**
 
 
 ## Community Documentation & Onboarding
@@ -39,7 +39,7 @@ The TSC is a group of maintainers and Ambassadors responsible for the maintenanc
 
 ### Want To Become a TSC Member?
 - Read the requirements and responsibilities on becoming a [TSC Member](./docs/020-governance-and-policies/TSC_MEMBERSHIP.md) or watch our [YouTube video on how to become a TSC member](https://www.youtube.com/watch?v=uG_aLF9Z1F0). 
-- Or explore if you meet the requirements of becoming an [AsyncAPI Ambassador](./docs/020-governance-and-policies/AMBASSADOR_PROGRAM.md).
+- Or explore if you meet the requirements of becoming an [AsyncAPI Ambassador](./docs/010-contribution-guidelines/AMBASSADOR_PROGRAM.md).
 
 ## Need Help? 🤝
 
