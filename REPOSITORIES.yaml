@@ -1,0 +1,33 @@
+# Repositories in descending order of criticality.
+# A YAML sequence is used so this order is preserved when the file is parsed.
+# A community-goal issue outranks this list.
+#
+- spec
+- spec-json-schemas
+- bindings
+- parser-js
+- cli
+- generator
+- website
+- modelina
+- asyncapi-react
+- studio
+- converter-js
+- html-template
+- protobuf-schema-parser
+- community
+- .github
+- conference-website
+- net-sdk
+- jasyncapi
+- kotlin-asyncapi
+- vs-asyncapi-preview
+- markdown-template
+- java-spring-cloud-stream-template
+- java-template
+- jasyncapi-idea-plugin
+- parser-api
+- brand
+- extensions-catalog
+- EDAVisualiser
+- tck
