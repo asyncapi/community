@@ -409,17 +409,6 @@
     - spec-json-schemas
     - bindings
   githubID: 98899
-- name: Kenneth Aasan
-  github: kennethaasan
-  slack: U037S2HK4TS
-  twitter: kennethaasan
-  availableForHire: false
-  company: Sportradar
-  isTscMember: false
-  tscMemberSince: '2023-07-05'
-  repos:
-    - modelina
-  githubID: 1437394
 - name: Thulisile Sibanda
   github: thulieblack
   linkedin: v-thulisile-sibanda
