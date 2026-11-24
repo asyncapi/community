@@ -1,0 +1,868 @@
+{
+  "schema_version": 1,
+  "fetched_at": "2026-03-29T08:26:45.482Z",
+  "org": "asyncapi",
+  "repo_count": 48,
+  "repos": [
+    {
+      "name": ".github",
+      "full_name": "asyncapi/.github",
+      "default_branch": "master",
+      "html_url": "https://github.com/asyncapi/.github",
+      "pushed_at": "2026-03-10T13:27:57Z",
+      "open_issues_count": 20,
+      "codeowners_path": "CODEOWNERS",
+      "maintainers_individuals": [
+        "Florence-Njeri",
+        "Shurtu-gal",
+        "derberg"
+      ],
+      "teams": [],
+      "triagers": [],
+      "codeowners_raw": "# This file provides an overview of code owners in this repository.\n\n# Each line is a file pattern followed by one or more owners.\n# The last matching pattern has the most precedence.\n# For more details, read the following article on GitHub: https://help.github.com/articles/about-codeowners/.\n\n# The default owners are automatically added as reviewers when you open a pull request unless different owners are specified in the file.\n\n* @derberg @Florence-Njeri @Shurtu-gal @asyncapi-bot-eve\n"
+    },
+    {
+      "name": "asyncapi-react",
+      "full_name": "asyncapi/asyncapi-react",
+      "default_branch": "master",
+      "html_url": "https://github.com/asyncapi/asyncapi-react",
+      "pushed_at": "2026-03-27T19:53:19Z",
+      "open_issues_count": 35,
+      "codeowners_path": "CODEOWNERS",
+      "maintainers_individuals": [
+        "AceTheCreator",
+        "fmvilas",
+        "magicmatatjahu"
+      ],
+      "teams": [],
+      "triagers": [],
+      "codeowners_raw": "# This file provides an overview of code owners in the \"asyncapi-react\" repository.\n\n# Each line is a file pattern followed by one or more owners.\n# The last matching pattern has the most precedence.\n# For more details, read the following article on GitHub: https://help.github.com/articles/about-codeowners/.\n\n# These are the default owners for the whole content of the \"@asyncapi/asyncapi-react\" repository. The default owners are automatically added as reviewers when you open a pull request unless different owners are specified in the file.\n* @magicmatatjahu @fmvilas @asyncapi-bot-eve @AceTheCreator\n"
+    },
+    {
+      "name": "avro-schema-parser",
+      "full_name": "asyncapi/avro-schema-parser",
+      "default_branch": "master",
+      "html_url": "https://github.com/asyncapi/avro-schema-parser",
+      "pushed_at": "2026-03-10T13:35:44Z",
+      "open_issues_count": 1,
+      "codeowners_path": "CODEOWNERS",
+      "maintainers_individuals": [
+        "M3lkior",
+        "dalelane"
+      ],
+      "teams": [],
+      "triagers": [],
+      "codeowners_raw": "# This file provides an overview of code owners in this repository.\n\n# Each line is a file pattern followed by one or more owners.\n# The last matching pattern has the most precedence.\n# For more details, read the following article on GitHub: https://help.github.com/articles/about-codeowners/.\n\n# The default owners are automatically added as reviewers when you open a pull request unless different owners are specified in the file.\n* @M3lkior @dalelane @asyncapi-bot-eve\n"
+    },
+    {
+      "name": "bindings",
+      "full_name": "asyncapi/bindings",
+      "default_branch": "master",
+      "html_url": "https://github.com/asyncapi/bindings",
+      "pushed_at": "2026-03-23T14:41:58Z",
+      "open_issues_count": 13,
+      "codeowners_path": "CODEOWNERS",
+      "maintainers_individuals": [
+        "CameronRushton",
+        "GeraldLoeffler",
+        "GreenRover",
+        "SrfHead",
+        "VisualBean",
+        "amparosancho",
+        "char0n",
+        "dalelane",
+        "damaru-inc",
+        "derberg",
+        "dpwdec",
+        "fmvilas",
+        "gramss",
+        "iancooper",
+        "lbroudoux",
+        "mboss37",
+        "rcoppen",
+        "whitlockjc"
+      ],
+      "teams": [],
+      "triagers": [],
+      "codeowners_raw": "# This file provides an overview of code owners in this repository.\n\n# Each line is a file pattern followed by one or more owners.\n# The last matching pattern has the most precedence.\n# For more details, read the following article on GitHub: https://help.github.com/articles/about-codeowners/.\n\n# The default owners are automatically added as reviewers when you open a pull request unless different owners are specified in the file.\n\n* @derberg @fmvilas @dalelane @char0n @asyncapi-bot-eve @GreenRover\n\n/anypointmq/   @mboss37 @GeraldLoeffler\n/ibmmq/        @rcoppen\n/jms/          @rcoppen @SrfHead\n/kafka/        @lbroudoux @dalelane\n/googlepubsub/ @whitlockjc\n/solace/       @damaru-inc @CameronRushton\n/pulsar/       @VisualBean\n/sns/          @dpwdec @iancooper\n/sqs/          @dpwdec @iancooper\n/ros2/         @amparosancho @gramss\n"
+    },
+    {
+      "name": "brand",
+      "full_name": "asyncapi/brand",
+      "default_branch": "master",
+      "html_url": "https://github.com/asyncapi/brand",
+      "pushed_at": "2026-03-10T13:41:01Z",
+      "open_issues_count": 4,
+      "codeowners_path": "CODEOWNERS",
+      "maintainers_individuals": [
+        "fmvilas",
+        "mayaleeeee"
+      ],
+      "teams": [],
+      "triagers": [],
+      "codeowners_raw": "# This file provides an overview of code owners in this repository.\n\n# Each line is a file pattern followed by one or more owners.\n# The last matching pattern has the most precedence.\n# For more details, read the following article on GitHub: https://help.github.com/articles/about-codeowners/.\n\n# The default owners are automatically added as reviewers when you open a pull request unless different owners are specified in the file.\n* @fmvilas @mayaleeeee @asyncapi-bot-eve\n"
+    },
+    {
+      "name": "bundler",
+      "full_name": "asyncapi/bundler",
+      "default_branch": "master",
+      "html_url": "https://github.com/asyncapi/bundler",
+      "pushed_at": "2026-03-25T11:08:13Z",
+      "open_issues_count": 4,
+      "codeowners_path": "CODEOWNERS",
+      "maintainers_individuals": [
+        "Souvikns",
+        "aeworxet"
+      ],
+      "teams": [],
+      "triagers": [],
+      "codeowners_raw": "# This file provides an overview of code owners in this repository.\n\n# Each line is a file pattern followed by one or more owners.\n# The last matching pattern has the most precedence.\n# For more details, read the following article on GitHub: https://help.github.com/articles/about-codeowners/.\n\n# The default owners are automatically added as reviewers when you open a pull request unless different owners are specified in the file.\n* @Souvikns @aeworxet @asyncapi-bot-eve\n"
+    },
+    {
+      "name": "chatbot",
+      "full_name": "asyncapi/chatbot",
+      "default_branch": "master",
+      "html_url": "https://github.com/asyncapi/chatbot",
+      "pushed_at": "2026-03-10T13:38:39Z",
+      "open_issues_count": 2,
+      "codeowners_path": "CODEOWNERS",
+      "maintainers_individuals": [
+        "AceTheCreator",
+        "derberg",
+        "magicmatatjahu"
+      ],
+      "teams": [],
+      "triagers": [],
+      "codeowners_raw": "# This file provides an overview of code owners in this repository.\n\n# Each line is a file pattern followed by one or more owners.\n# The last matching pattern has the most precedence.\n# For more details, read the following article on GitHub: https://help.github.com/articles/about-codeowners/.\n\n# The default owners are automatically added as reviewers when you open a pull request unless different owners are specified in the file.\n* @AceTheCreator @magicmatatjahu @derberg @asyncapi-bot-eve\n"
+    },
+    {
+      "name": "cli",
+      "full_name": "asyncapi/cli",
+      "default_branch": "master",
+      "html_url": "https://github.com/asyncapi/cli",
+      "pushed_at": "2026-03-25T22:58:34Z",
+      "open_issues_count": 90,
+      "codeowners_path": "CODEOWNERS",
+      "maintainers_individuals": [
+        "AayushSaini101",
+        "Amzani",
+        "Shurtu-gal",
+        "Souvikns"
+      ],
+      "teams": [],
+      "triagers": [],
+      "codeowners_raw": "# This file provides an overview of code owners in this repository.\n\n# Each line is a file pattern followed by one or more owners.\n# The last matching pattern has the most precedence.\n# For more details, read the following article on GitHub: https://help.github.com/articles/about-codeowners/.\n\n# The default owners are automatically added as reviewers when you open a pull request unless different owners are specified in the file.\n* @Souvikns @Amzani @Shurtu-gal @asyncapi-bot-eve @AayushSaini101\n"
+    },
+    {
+      "name": "community",
+      "full_name": "asyncapi/community",
+      "default_branch": "master",
+      "html_url": "https://github.com/asyncapi/community",
+      "pushed_at": "2026-03-28T10:13:02Z",
+      "open_issues_count": 23,
+      "codeowners_path": "CODEOWNERS",
+      "maintainers_individuals": [
+        "bandantonio",
+        "derberg",
+        "thulieblack"
+      ],
+      "teams": [
+        "asyncapi/code_of_conduct"
+      ],
+      "triagers": [
+        "CBID2"
+      ],
+      "codeowners_raw": "# This file provides an overview of code owners in this repository.\n\n# Each line is a file pattern followed by one or more owners.\n# The last matching pattern has the most precedence.\n# For more details, read the following article on GitHub: https://help.github.com/articles/about-codeowners/.\n\n# The default owners are automatically added as reviewers when you open a pull request unless different owners are specified in the file.\n* @bandantonio @derberg @asyncapi-bot-eve @thulieblack\n\n#docTriagers: CBID2 \n\n# All ambassadors related files\nAMBASSADOR* @thulieblack\n\n# Code Of Conduct\n/code_of_conduct/ @asyncapi/code_of_conduct\nCODE_OF_CONDUCT.md @asyncapi/code_of_conduct\nslack-etiquette.md @asyncapi/code_of_conduct\n"
+    },
+    {
+      "name": "conference-website",
+      "full_name": "asyncapi/conference-website",
+      "default_branch": "master",
+      "html_url": "https://github.com/asyncapi/conference-website",
+      "pushed_at": "2026-03-27T07:38:47Z",
+      "open_issues_count": 41,
+      "codeowners_path": "CODEOWNERS",
+      "maintainers_individuals": [
+        "AceTheCreator",
+        "Mayaleeeee",
+        "TenzDelek",
+        "thulieblack"
+      ],
+      "teams": [],
+      "triagers": [],
+      "codeowners_raw": "# This file provides an overview of code owners in this repository.\n\n# Each line is a file pattern followed by one or more owners.\n# The last matching pattern has the most precedence.\n# For more details, read the following article on GitHub: https://help.github.com/articles/about-codeowners/.\n\n# The default owners are automatically added as reviewers when you open a pull request unless different owners are specified in the file.\n* @AceTheCreator @thulieblack @Mayaleeeee @TenzDelek\n\nREADME.md @AceTheCreator @thulieblack @Mayaleeeee @TenzDelek\n"
+    },
+    {
+      "name": "converter-js",
+      "full_name": "asyncapi/converter-js",
+      "default_branch": "master",
+      "html_url": "https://github.com/asyncapi/converter-js",
+      "pushed_at": "2026-03-25T23:02:59Z",
+      "open_issues_count": 2,
+      "codeowners_path": "CODEOWNERS",
+      "maintainers_individuals": [
+        "fmvilas",
+        "jonaslagoni",
+        "magicmatatjahu"
+      ],
+      "teams": [],
+      "triagers": [],
+      "codeowners_raw": "# This file provides an overview of code owners in this repository.\n\n# Each line is a file pattern followed by one or more owners.\n# The last matching pattern has the most precedence.\n# For more details, read the following article on GitHub: https://help.github.com/articles/about-codeowners/.\n\n# The default owners are automatically added as reviewers when you open a pull request unless different owners are specified in the file.\n* @fmvilas @magicmatatjahu @asyncapi-bot-eve @jonaslagoni\n\n"
+    },
+    {
+      "name": "diff",
+      "full_name": "asyncapi/diff",
+      "default_branch": "master",
+      "html_url": "https://github.com/asyncapi/diff",
+      "pushed_at": "2026-03-10T13:38:57Z",
+      "open_issues_count": 1,
+      "codeowners_path": "CODEOWNERS",
+      "maintainers_individuals": [
+        "aayushmau5",
+        "derberg",
+        "magicmatatjahu"
+      ],
+      "teams": [],
+      "triagers": [],
+      "codeowners_raw": "# This file provides an overview of code owners in this repository.\n\n# Each line is a file pattern followed by one or more owners.\n# The last matching pattern has the most precedence.\n# For more details, read the following article on GitHub: https://help.github.com/articles/about-codeowners/.\n\n# The default owners are automatically added as reviewers when you open a pull request unless different owners are specified in the file.\n* @aayushmau5 @magicmatatjahu @derberg @asyncapi-bot-eve\n"
+    },
+    {
+      "name": "dotnet-rabbitmq-template",
+      "full_name": "asyncapi/dotnet-rabbitmq-template",
+      "default_branch": "master",
+      "html_url": "https://github.com/asyncapi/dotnet-rabbitmq-template",
+      "pushed_at": "2026-03-10T13:40:43Z",
+      "open_issues_count": 0,
+      "codeowners_path": "CODEOWNERS",
+      "maintainers_individuals": [
+        "connil",
+        "mr-nuno"
+      ],
+      "teams": [],
+      "triagers": [],
+      "codeowners_raw": "# This file provides an overview of code owners in this repository.\n\n# Each line is a file pattern followed by one or more owners.\n# The last matching pattern has the most precedence.\n# For more details, read the following article on GitHub: https://help.github.com/articles/about-codeowners/.\n\n# The default owners are automatically added as reviewers when you open a pull request unless different owners are specified in the file.\n* @mr-nuno @connil @asyncapi-bot-eve"
+    },
+    {
+      "name": "EDAVisualiser",
+      "full_name": "asyncapi/EDAVisualiser",
+      "default_branch": "master",
+      "html_url": "https://github.com/asyncapi/EDAVisualiser",
+      "pushed_at": "2026-03-10T13:47:07Z",
+      "open_issues_count": 3,
+      "codeowners_path": "CODEOWNERS",
+      "maintainers_individuals": [
+        "jonaslagoni",
+        "magicmatatjahu"
+      ],
+      "teams": [],
+      "triagers": [],
+      "codeowners_raw": "# This file provides an overview of code owners in this repository.\n\n# Each line is a file pattern followed by one or more owners.\n# The last matching pattern has the most precedence.\n# For more details, read the following article on GitHub: https://help.github.com/articles/about-codeowners/.\n\n# The default owners are automatically added as reviewers when you open a pull request unless different owners are specified in the file.\n\n* @magicmatatjahu @jonaslagoni @asyncapi-bot-eve \n"
+    },
+    {
+      "name": "enterprise-patterns",
+      "full_name": "asyncapi/enterprise-patterns",
+      "default_branch": "master",
+      "html_url": "https://github.com/asyncapi/enterprise-patterns",
+      "pushed_at": "2026-03-10T13:31:30Z",
+      "open_issues_count": 0,
+      "codeowners_path": "CODEOWNERS",
+      "maintainers_individuals": [
+        "derberg",
+        "fmvilas"
+      ],
+      "teams": [],
+      "triagers": [],
+      "codeowners_raw": "# This file provides an overview of code owners in this repository.\n\n# Each line is a file pattern followed by one or more owners.\n# The last matching pattern has the most precedence.\n# For more details, read the following article on GitHub: https://help.github.com/articles/about-codeowners/.\n\n# The default owners are automatically added as reviewers when you open a pull request unless different owners are specified in the file.\n* @fmvilas @derberg @asyncapi-bot-eve\n"
+    },
+    {
+      "name": "extensions-catalog",
+      "full_name": "asyncapi/extensions-catalog",
+      "default_branch": "master",
+      "html_url": "https://github.com/asyncapi/extensions-catalog",
+      "pushed_at": "2026-02-14T12:48:57Z",
+      "open_issues_count": 1,
+      "codeowners_path": "CODEOWNERS",
+      "maintainers_individuals": [
+        "derberg",
+        "fmvilas"
+      ],
+      "teams": [],
+      "triagers": [],
+      "codeowners_raw": "# This file provides an overview of code owners in this repository.\n\n# Each line is a file pattern followed by one or more owners.\n# The last matching pattern has the most precedence.\n# For more details, read the following article on GitHub: https://help.github.com/articles/about-codeowners/.\n\n# The default owners are automatically added as reviewers when you open a pull request unless different owners are specified in the file.\n* @fmvilas @derberg @asyncapi-bot-eve\n"
+    },
+    {
+      "name": "generator",
+      "full_name": "asyncapi/generator",
+      "default_branch": "master",
+      "html_url": "https://github.com/asyncapi/generator",
+      "pushed_at": "2026-03-25T23:29:53Z",
+      "open_issues_count": 64,
+      "codeowners_path": "CODEOWNERS",
+      "maintainers_individuals": [
+        "Adi-204",
+        "Florence-Njeri",
+        "derberg",
+        "jonaslagoni",
+        "magicmatatjahu"
+      ],
+      "teams": [],
+      "triagers": [
+        "Adi-204",
+        "Florence-Njeri"
+      ],
+      "codeowners_raw": "# This file provides an overview of code owners in this repository.\n\n# Each line is a file pattern followed by one or more owners.\n# The last matching pattern has the most precedence.\n# For more details, read the following article on GitHub: https://help.github.com/articles/about-codeowners/.\n\n# The default owners are automatically added as reviewers when you open a pull request unless different owners are specified in the file.\n\n# Core Maintainers\n* @derberg @magicmatatjahu @jonaslagoni @asyncapi-bot-eve\n\n# Packages directory\n# @Adi-204 is Templates Champion\npackages/ @Adi-204 @derberg @magicmatatjahu @asyncapi-bot-eve\n\n# All .md files\n# @Florence-Njeri is Docs Champion\n*.md @Florence-Njeri @derberg @asyncapi-bot-eve\n\n# Changeset markdown files — override so Docs Champions aren't requested\n.changeset/**/*.md @derberg @magicmatatjahu @asyncapi-bot-eve\n"
+    },
+    {
+      "name": "go-watermill-template",
+      "full_name": "asyncapi/go-watermill-template",
+      "default_branch": "master",
+      "html_url": "https://github.com/asyncapi/go-watermill-template",
+      "pushed_at": "2026-03-10T13:35:07Z",
+      "open_issues_count": 1,
+      "codeowners_path": "CODEOWNERS",
+      "maintainers_individuals": [
+        "anandsunderraman",
+        "smoya"
+      ],
+      "teams": [],
+      "triagers": [],
+      "codeowners_raw": "# This file provides an overview of code owners in this repository.\n\n# Each line is a file pattern followed by one or more owners.\n# The last matching pattern has the most precedence.\n# For more details, read the following article on GitHub: https://help.github.com/articles/about-codeowners/.\n\n# The default owners are automatically added as reviewers when you open a pull request unless different owners are specified in the file.\n* @anandsunderraman @smoya @asyncapi-bot-eve\n"
+    },
+    {
+      "name": "html-template",
+      "full_name": "asyncapi/html-template",
+      "default_branch": "master",
+      "html_url": "https://github.com/asyncapi/html-template",
+      "pushed_at": "2026-03-25T22:19:39Z",
+      "open_issues_count": 7,
+      "codeowners_path": "CODEOWNERS",
+      "maintainers_individuals": [
+        "derberg",
+        "fmvilas",
+        "magicmatatjahu"
+      ],
+      "teams": [],
+      "triagers": [],
+      "codeowners_raw": "# This file provides an overview of code owners in this repository.\n\n# Each line is a file pattern followed by one or more owners.\n# The last matching pattern has the most precedence.\n# For more details, read the following article on GitHub: https://help.github.com/articles/about-codeowners/.\n\n# The default owners are automatically added as reviewers when you open a pull request unless different owners are specified in the file.\n\n* @fmvilas @derberg @magicmatatjahu @asyncapi-bot-eve"
+    },
+    {
+      "name": "jasyncapi",
+      "full_name": "asyncapi/jasyncapi",
+      "default_branch": "master",
+      "html_url": "https://github.com/asyncapi/jasyncapi",
+      "pushed_at": "2026-03-10T13:34:09Z",
+      "open_issues_count": 0,
+      "codeowners_path": "CODEOWNERS",
+      "maintainers_individuals": [
+        "harikrishnan83",
+        "pakisan"
+      ],
+      "teams": [],
+      "triagers": [],
+      "codeowners_raw": "# This file provides an overview of code owners in this repository.\n\n# Each line is a file pattern followed by one or more owners.\n# The last matching pattern has the most precedence.\n# For more details, read the following article on GitHub: https://help.github.com/articles/about-codeowners/.\n\n# The default owners are automatically added as reviewers when you open a pull request unless different owners are specified in the file.\n\n# Core Champions that does a little of everything\n\n* @pakisan @asyncapi-bot-eve @harikrishnan83\n"
+    },
+    {
+      "name": "jasyncapi-idea-plugin",
+      "full_name": "asyncapi/jasyncapi-idea-plugin",
+      "default_branch": "master",
+      "html_url": "https://github.com/asyncapi/jasyncapi-idea-plugin",
+      "pushed_at": "2026-03-13T20:44:04Z",
+      "open_issues_count": 11,
+      "codeowners_path": "CODEOWNERS",
+      "maintainers_individuals": [
+        "Pakisan",
+        "philCryoport",
+        "theschles"
+      ],
+      "teams": [],
+      "triagers": [
+        "doctocat",
+        "example",
+        "global-owner1",
+        "global-owner2",
+        "js-owner",
+        "octocat",
+        "philCryoport",
+        "theschles"
+      ],
+      "codeowners_raw": "# Borrowed from https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners#example-of-a-codeowners-file\n# This is a comment.\n# Each line is a file pattern followed by one or more owners.\n\n# These owners will be the default owners for everything in\n# the repo. Unless a later match takes precedence,\n# @global-owner1 and @global-owner2 will be requested for\n# review when someone opens a pull request.\n#\n# Note: @philCryoport and @theschles are the same human being.  @philCryoport is his work Github account; @theschles is his personal Github account.\n* @Pakisan @asyncapi-bot-eve @theschles @philCryoport\n\n# Order is important; the last matching pattern takes the most\n# precedence. When someone opens a pull request that only\n# modifies JS files, only @js-owner and not the global\n# owner(s) will be requested for a review.\n#*.js    @js-owner #This is an inline comment.\n\n# You can also use email addresses if you prefer. They'll be\n# used to look up users just like we do for commit author\n# emails.\n#*.go docs@example.com\n\n# Teams can be specified as code owners as well. Teams should\n# be identified in the format @org/team-name. Teams must have\n# explicit write access to the repository. In this example,\n# the octocats team in the octo-org organization owns all .txt files.\n#*.txt @octo-org/octocats\n\n# In this example, @doctocat owns any files in the build/logs\n# directory at the root of the repository and any of its\n# subdirectories.\n#/build/logs/ @doctocat\n\n# The `docs/*` pattern will match files like\n# `docs/getting-started.md` but not further nested files like\n# `docs/build-app/troubleshooting.md`.\n#docs/*  docs@example.com\n\n# In this example, @octocat owns any file in an apps directory\n# anywhere in your repository.\n#apps/ @octocat\n\n# In this example, @doctocat owns any file in the `/docs`\n# directory in the root of your repository and any of its\n# subdirectories.\n#/docs/ @doctocat\n\n# In this example, any change inside the `/scripts` directory\n# will require approval from @doctocat or @octocat.\n#/scripts/ @doctocat @octocat\n\n# In this example, @octocat owns any file in the `/apps`\n# directory in the root of your repository except for the `/apps/github`\n# subdirectory, as its owners are left empty.\n#/apps/ @octocat\n#/apps/github\n"
+    },
+    {
+      "name": "java-spring-cloud-stream-template",
+      "full_name": "asyncapi/java-spring-cloud-stream-template",
+      "default_branch": "master",
+      "html_url": "https://github.com/asyncapi/java-spring-cloud-stream-template",
+      "pushed_at": "2026-03-10T13:40:59Z",
+      "open_issues_count": 2,
+      "codeowners_path": "CODEOWNERS",
+      "maintainers_individuals": [
+        "CameronRushton",
+        "damaru-inc"
+      ],
+      "teams": [],
+      "triagers": [],
+      "codeowners_raw": "# This file provides an overview of code owners in the \"java-spring-cloud-stream-template\" repository.\n\n# Each line is a file pattern followed by one or more owners.\n# The last matching pattern has the most precedence.\n# For more details, read the following article on GitHub: https://help.github.com/articles/about-codeowners/.\n\n# These are the default owners for the whole content of the \"@asyncapi/java-spring-cloud-stream-template\" repository. The default owners are automatically added as reviewers when you open a pull request unless different owners are specified in the file.\n* @damaru-inc @CameronRushton @asyncapi-bot-eve\n"
+    },
+    {
+      "name": "java-spring-template",
+      "full_name": "asyncapi/java-spring-template",
+      "default_branch": "master",
+      "html_url": "https://github.com/asyncapi/java-spring-template",
+      "pushed_at": "2026-03-25T23:26:59Z",
+      "open_issues_count": 20,
+      "codeowners_path": "CODEOWNERS",
+      "maintainers_individuals": [
+        "Tenischev",
+        "derberg"
+      ],
+      "teams": [],
+      "triagers": [],
+      "codeowners_raw": "* @Tenischev @derberg @asyncapi-bot-eve\n"
+    },
+    {
+      "name": "java-template",
+      "full_name": "asyncapi/java-template",
+      "default_branch": "master",
+      "html_url": "https://github.com/asyncapi/java-template",
+      "pushed_at": "2026-03-10T13:43:45Z",
+      "open_issues_count": 1,
+      "codeowners_path": "CODEOWNERS",
+      "maintainers_individuals": [
+        "AGurlhosur",
+        "KieranM1999",
+        "dalelane",
+        "dan-r",
+        "lewis-relph"
+      ],
+      "teams": [],
+      "triagers": [],
+      "codeowners_raw": "# This file provides an overview of code owners in this repository.\n\n# Each line is a file pattern followed by one or more owners.\n# The last matching pattern has the most precedence.\n# For more details, read the following article on GitHub: https://help.github.com/articles/about-codeowners/.\n\n# The default owners are automatically added as reviewers when you open a pull request unless different owners are specified in the file.\n\n* @AGurlhosur @dalelane @dan-r @KieranM1999 @lewis-relph @asyncapi-bot-eve\n"
+    },
+    {
+      "name": "kotlin-asyncapi",
+      "full_name": "asyncapi/kotlin-asyncapi",
+      "default_branch": "master",
+      "html_url": "https://github.com/asyncapi/kotlin-asyncapi",
+      "pushed_at": "2026-03-22T15:31:36Z",
+      "open_issues_count": 6,
+      "codeowners_path": "CODEOWNERS",
+      "maintainers_individuals": [
+        "gimlet2",
+        "lorenzsimon"
+      ],
+      "teams": [],
+      "triagers": [],
+      "codeowners_raw": "# Default owners\n* @lorenzsimon @gimlet2 @asyncapi-bot-eve\n"
+    },
+    {
+      "name": "learning-paths",
+      "full_name": "asyncapi/learning-paths",
+      "default_branch": "master",
+      "html_url": "https://github.com/asyncapi/learning-paths",
+      "pushed_at": "2026-03-10T13:40:28Z",
+      "open_issues_count": 0,
+      "codeowners_path": "CODEOWNERS",
+      "maintainers_individuals": [
+        "Barbanio",
+        "alequetzalli"
+      ],
+      "teams": [],
+      "triagers": [],
+      "codeowners_raw": "# This file provides an overview of code owners in this repository.\n\n# Each line is a file pattern followed by one or more owners.\n# The last matching pattern has the most precedence.\n# For more details, read the following article on GitHub: https://help.github.com/articles/about-codeowners/.\n\n# The default owners are automatically added as reviewers when you open a pull request unless different owners are specified in the file.\n@alequetzalli @asyncapi-bot-eve @Barbanio "
+    },
+    {
+      "name": "markdown-template",
+      "full_name": "asyncapi/markdown-template",
+      "default_branch": "master",
+      "html_url": "https://github.com/asyncapi/markdown-template",
+      "pushed_at": "2026-03-25T23:34:24Z",
+      "open_issues_count": 5,
+      "codeowners_path": "CODEOWNERS",
+      "maintainers_individuals": [
+        "derberg",
+        "fmvilas",
+        "magicmatatjahu"
+      ],
+      "teams": [],
+      "triagers": [],
+      "codeowners_raw": "# This file provides an overview of code owners in this repository.\n\n# Each line is a file pattern followed by one or more owners.\n# The last matching pattern has the most precedence.\n# For more details, read the following article on GitHub: https://help.github.com/articles/about-codeowners/.\n\n# The default owners are automatically added as reviewers when you open a pull request unless different owners are specified in the file.\n\n* @derberg @magicmatatjahu @fmvilas @asyncapi-bot-eve"
+    },
+    {
+      "name": "modelina",
+      "full_name": "asyncapi/modelina",
+      "default_branch": "master",
+      "html_url": "https://github.com/asyncapi/modelina",
+      "pushed_at": "2026-03-27T17:27:48Z",
+      "open_issues_count": 39,
+      "codeowners_path": "CODEOWNERS",
+      "maintainers_individuals": [
+        "Samridhi-98",
+        "akkshitgupta",
+        "artur-ciocanu",
+        "devilkiller-ag",
+        "ferror",
+        "jonaslagoni",
+        "kennethaasan",
+        "leigh-johnson",
+        "magicmatatjahu"
+      ],
+      "teams": [],
+      "triagers": [],
+      "codeowners_raw": "# This file provides an overview of code owners in this repository.\n\n# Each line is a file pattern followed by one or more owners.\n# The last matching pattern has the most precedence.\n# For more details, read the following article on GitHub: https://help.github.com/articles/about-codeowners/.\n\n# The default owners are automatically added as reviewers when you open a pull request unless different owners are specified in the file.\n\n# Core Champions that does a little of everything\n* @magicmatatjahu @jonaslagoni @kennethaasan @asyncapi-bot-eve\n\n\n# Website Champions \n/modelina-website @devilkiller-ag\n\n# Documentation champions\n/docs\n\n# Input Champions for AsyncAPI input\n*/processors/AsyncAPIInputProcessor*.ts\n\n# Input Champions for Avro Schema input\n*/helpers/AvroToMetaModel*.ts @akkshitgupta\n*/processors/AvroSchemaInputProcessor*.ts @akkshitgupta\n\n# Input Champions for TypeScript input\n*/processors/TypeScriptInputProcessor*.ts\n\n# Input Champions for OpenAPI input\n*/processors/OpenAPIInputProcessor*.ts\n*/processors/SwaggerInputProcessor*.ts\n\n# Input Champions for JSON Schema input\n*/processors/JsonSchemaInputProcessor*.ts\n\n# Language Champions for TypeScript and it's presets\n*/generators/typescript @Samridhi-98\n\n# Language Champions for JavaScript and it's presets\n*/generators/javascript @Samridhi-98\n\n# Language Champions for Go and it's presets\n*/generators/go\n\n# Language Champions for Java and it's presets\n*/generators/java\n\n# Language Champions for C# and it's presets\n*/generators/csharp\n\n# Language Champions for Dart and it's presets\n*/generators/dart\n\n# Language Champions for Rust and its presets\n*/generators/rust @leigh-johnson\n\n# Language Champions for PHP and it's presets\n*/generators/php @ferror\n\n# Language Champions for Scala and it's presets\n*/generators/scala @artur-ciocanu"
+    },
+    {
+      "name": "net-sdk",
+      "full_name": "asyncapi/net-sdk",
+      "default_branch": "master",
+      "html_url": "https://github.com/asyncapi/net-sdk",
+      "pushed_at": "2026-03-10T13:39:16Z",
+      "open_issues_count": 2,
+      "codeowners_path": "CODEOWNERS",
+      "maintainers_individuals": [
+        "cdavernas",
+        "jbbianchi"
+      ],
+      "teams": [],
+      "triagers": [],
+      "codeowners_raw": "# This file provides an overview of code owners in this repository.\n\n# Each line is a file pattern followed by one or more owners.\n# The last matching pattern has the most precedence.\n# For more details, read the following article on GitHub: https://help.github.com/articles/about-codeowners/.\n\n# The default owners are automatically added as reviewers when you open a pull request unless different owners are specified in the file.\n\n* @cdavernas @jbbianchi @asyncapi-bot-eve\n"
+    },
+    {
+      "name": "nodejs-template",
+      "full_name": "asyncapi/nodejs-template",
+      "default_branch": "master",
+      "html_url": "https://github.com/asyncapi/nodejs-template",
+      "pushed_at": "2026-03-26T00:02:10Z",
+      "open_issues_count": 6,
+      "codeowners_path": "CODEOWNERS",
+      "maintainers_individuals": [
+        "derberg",
+        "kaushik-rishi"
+      ],
+      "teams": [],
+      "triagers": [],
+      "codeowners_raw": "# This file provides an overview of code owners in this repository.\n\n# Each line is a file pattern followed by one or more owners.\n# The last matching pattern has the most precedence.\n# For more details, read the following article on GitHub: https://help.github.com/articles/about-codeowners/.\n\n# The default owners are automatically added as reviewers when you open a pull request unless different owners are specified in the file.\n\n* @derberg @kaushik-rishi @asyncapi-bot-eve\n"
+    },
+    {
+      "name": "nodejs-ws-template",
+      "full_name": "asyncapi/nodejs-ws-template",
+      "default_branch": "master",
+      "html_url": "https://github.com/asyncapi/nodejs-ws-template",
+      "pushed_at": "2026-03-28T05:04:04Z",
+      "open_issues_count": 15,
+      "codeowners_path": "CODEOWNERS",
+      "maintainers_individuals": [
+        "derberg",
+        "fmvilas"
+      ],
+      "teams": [],
+      "triagers": [],
+      "codeowners_raw": "# This file provides an overview of code owners in this repository.\n\n# Each line is a file pattern followed by one or more owners.\n# The last matching pattern has the most precedence.\n# For more details, read the following article on GitHub: https://help.github.com/articles/about-codeowners/.\n\n# The default owners are automatically added as reviewers when you open a pull request unless different owners are specified in the file.\n* @fmvilas @derberg @asyncapi-bot-eve\n"
+    },
+    {
+      "name": "openapi-schema-parser",
+      "full_name": "asyncapi/openapi-schema-parser",
+      "default_branch": "master",
+      "html_url": "https://github.com/asyncapi/openapi-schema-parser",
+      "pushed_at": "2026-03-28T04:41:23Z",
+      "open_issues_count": 5,
+      "codeowners_path": "CODEOWNERS",
+      "maintainers_individuals": [
+        "AayushSaini101",
+        "fmvilas",
+        "smoya"
+      ],
+      "teams": [],
+      "triagers": [],
+      "codeowners_raw": "# This file provides an overview of code owners in this repository.\n\n# Each line is a file pattern followed by one or more owners.\n# The last matching pattern has the most precedence.\n# For more details, read the following article on GitHub: https://help.github.com/articles/about-codeowners/.\n\n# The default owners are automatically added as reviewers when you open a pull request unless different owners are specified in the file.\n* @fmvilas @smoya @asyncapi-bot-eve @AayushSaini101\n"
+    },
+    {
+      "name": "optimizer",
+      "full_name": "asyncapi/optimizer",
+      "default_branch": "master",
+      "html_url": "https://github.com/asyncapi/optimizer",
+      "pushed_at": "2026-03-15T21:17:50Z",
+      "open_issues_count": 4,
+      "codeowners_path": "CODEOWNERS",
+      "maintainers_individuals": [
+        "aeworxet"
+      ],
+      "teams": [],
+      "triagers": [],
+      "codeowners_raw": "# This file provides an overview of code owners in this repository.\n\n# Each line is a file pattern followed by one or more owners.\n# The last matching pattern has the most precedence.\n# For more details, read the following article on GitHub: https://help.github.com/articles/about-codeowners/.\n\n# The default owners are automatically added as reviewers when you open a pull request unless different owners are specified in the file.\n* @aeworxet @asyncapi-bot-eve\n"
+    },
+    {
+      "name": "parser-api",
+      "full_name": "asyncapi/parser-api",
+      "default_branch": "master",
+      "html_url": "https://github.com/asyncapi/parser-api",
+      "pushed_at": "2026-03-10T13:41:03Z",
+      "open_issues_count": 9,
+      "codeowners_path": "CODEOWNERS",
+      "maintainers_individuals": [
+        "jonaslagoni",
+        "smoya"
+      ],
+      "teams": [],
+      "triagers": [],
+      "codeowners_raw": "# This file provides an overview of code owners in this repository.\n\n# Each line is a file pattern followed by one or more owners.\n# The last matching pattern has the most precedence.\n# For more details, read the following article on GitHub: https://help.github.com/articles/about-codeowners/.\n\n# The default owners are automatically added as reviewers when you open a pull request unless different owners are specified in the file.\n* @jonaslagoni @smoya @asyncapi-bot-eve\n"
+    },
+    {
+      "name": "parser-js",
+      "full_name": "asyncapi/parser-js",
+      "default_branch": "master",
+      "html_url": "https://github.com/asyncapi/parser-js",
+      "pushed_at": "2026-03-10T13:29:18Z",
+      "open_issues_count": 23,
+      "codeowners_path": "CODEOWNERS",
+      "maintainers_individuals": [
+        "fmvilas",
+        "magicmatatjahu"
+      ],
+      "teams": [],
+      "triagers": [],
+      "codeowners_raw": "# This file provides an overview of code owners in this repository.\n\n# Each line is a file pattern followed by one or more owners.\n# The last matching pattern has the most precedence.\n# For more details, read the following article on GitHub: https://help.github.com/articles/about-codeowners/.\n\n# The default owners are automatically added as reviewers when you open a pull request unless different owners are specified in the file.\n* @fmvilas @magicmatatjahu @asyncapi-bot-eve\n"
+    },
+    {
+      "name": "php-template",
+      "full_name": "asyncapi/php-template",
+      "default_branch": "master",
+      "html_url": "https://github.com/asyncapi/php-template",
+      "pushed_at": "2026-02-23T15:49:01Z",
+      "open_issues_count": 2,
+      "codeowners_path": "CODEOWNERS",
+      "maintainers_individuals": [
+        "emilianozublena"
+      ],
+      "teams": [],
+      "triagers": [],
+      "codeowners_raw": "# This file provides an overview of code owners in this repository.\n\n# Each line is a file pattern followed by one or more owners.\n# The last matching pattern has the most precedence.\n# For more details, read the following article on GitHub: https://help.github.com/articles/about-codeowners/.\n\n# The default owners are automatically added as reviewers when you open a pull request unless different owners are specified in the file.\n* @emilianozublena @asyncapi-bot-eve\n"
+    },
+    {
+      "name": "problem",
+      "full_name": "asyncapi/problem",
+      "default_branch": "master",
+      "html_url": "https://github.com/asyncapi/problem",
+      "pushed_at": "2026-03-10T13:39:01Z",
+      "open_issues_count": 2,
+      "codeowners_path": "CODEOWNERS",
+      "maintainers_individuals": [
+        "imabp",
+        "magicmatatjahu"
+      ],
+      "teams": [],
+      "triagers": [],
+      "codeowners_raw": "# This file provides an overview of code owners in this repository.\n\n# Each line is a file pattern followed by one or more owners.\n# The last matching pattern has the most precedence.\n# For more details, read the following article on GitHub: https://help.github.com/articles/about-codeowners/.\n\n# The default owners are automatically added as reviewers when you open a pull request unless different owners are specified in the file.\n* @imabp @magicmatatjahu @asyncapi-bot-eve\n"
+    },
+    {
+      "name": "protobuf-schema-parser",
+      "full_name": "asyncapi/protobuf-schema-parser",
+      "default_branch": "master",
+      "html_url": "https://github.com/asyncapi/protobuf-schema-parser",
+      "pushed_at": "2026-03-10T13:44:42Z",
+      "open_issues_count": 0,
+      "codeowners_path": "CODEOWNERS",
+      "maintainers_individuals": [
+        "GreenRover",
+        "nathanaelweber"
+      ],
+      "teams": [],
+      "triagers": [],
+      "codeowners_raw": "# This file provides an overview of code owners in this repository.\n\n# Each line is a file pattern followed by one or more owners.\n# The last matching pattern has the most precedence.\n# For more details, read the following article on GitHub: https://help.github.com/articles/about-codeowners/.\n\n# The default owners are automatically added as reviewers when you open a pull request unless different owners are specified in the file.\n\n* @GreenRover @nathanaelweber @asyncapi-bot-eve"
+    },
+    {
+      "name": "python-paho-template",
+      "full_name": "asyncapi/python-paho-template",
+      "default_branch": "master",
+      "html_url": "https://github.com/asyncapi/python-paho-template",
+      "pushed_at": "2026-03-10T13:45:45Z",
+      "open_issues_count": 6,
+      "codeowners_path": "CODEOWNERS",
+      "maintainers_individuals": [
+        "CameronRushton",
+        "damaru-inc"
+      ],
+      "teams": [],
+      "triagers": [],
+      "codeowners_raw": "# This file provides an overview of code owners in the \"python-paho-template\" repository.\n\n# Each line is a file pattern followed by one or more owners.\n# The last matching pattern has the most precedence.\n# For more details, read the following article on GitHub: https://help.github.com/articles/about-codeowners/.\n\n# These are the default owners for the whole content of the \"@asyncapi/python-paho-template\" repository. The default owners are automatically added as reviewers when you open a pull request unless different owners are specified in the file.\n* @damaru-inc @CameronRushton @asyncapi-bot-eve\n"
+    },
+    {
+      "name": "saunter",
+      "full_name": "asyncapi/saunter",
+      "default_branch": "main",
+      "html_url": "https://github.com/asyncapi/saunter",
+      "pushed_at": "2026-03-28T06:59:00Z",
+      "open_issues_count": 54,
+      "codeowners_path": "CODEOWNERS",
+      "maintainers_individuals": [
+        "m-wild",
+        "yurvon-screamo"
+      ],
+      "teams": [],
+      "triagers": [],
+      "codeowners_raw": "* @m-wild @yurvon-screamo"
+    },
+    {
+      "name": "spec",
+      "full_name": "asyncapi/spec",
+      "default_branch": "master",
+      "html_url": "https://github.com/asyncapi/spec",
+      "pushed_at": "2026-03-26T07:24:57Z",
+      "open_issues_count": 34,
+      "codeowners_path": "CODEOWNERS",
+      "maintainers_individuals": [
+        "GreenRover",
+        "char0n",
+        "dalelane",
+        "derberg",
+        "fmvilas"
+      ],
+      "teams": [],
+      "triagers": [],
+      "codeowners_raw": "# This file provides an overview of code owners in this repository.\n\n# Each line is a file pattern followed by one or more owners.\n# The last matching pattern has the most precedence.\n# For more details, read the following article on GitHub: https://help.github.com/articles/about-codeowners/.\n\n# The default owners are automatically added as reviewers when you open a pull request unless different owners are specified in the file.\n* @fmvilas @derberg @dalelane @char0n @asyncapi-bot-eve @GreenRover\n"
+    },
+    {
+      "name": "spec-json-schemas",
+      "full_name": "asyncapi/spec-json-schemas",
+      "default_branch": "master",
+      "html_url": "https://github.com/asyncapi/spec-json-schemas",
+      "pushed_at": "2026-03-25T22:49:41Z",
+      "open_issues_count": 10,
+      "codeowners_path": "CODEOWNERS",
+      "maintainers_individuals": [
+        "CameronRushton",
+        "GeraldLoeffler",
+        "GreenRover",
+        "KhudaDad414",
+        "SrfHead",
+        "VisualBean",
+        "amparosancho",
+        "char0n",
+        "dalelane",
+        "damaru-inc",
+        "derberg",
+        "dpwdec",
+        "fmvilas",
+        "gramss",
+        "iancooper",
+        "jonaslagoni",
+        "lbroudoux",
+        "mboss37",
+        "pakisan",
+        "rcoppen",
+        "whitlockjc"
+      ],
+      "teams": [],
+      "triagers": [],
+      "codeowners_raw": "# This file provides an overview of code owners in this repository.\n\n# Each line is a file pattern followed by one or more owners.\n# The last matching pattern has the most precedence.\n# For more details, read the following article on GitHub: https://help.github.com/articles/about-codeowners/.\n\n# The default owners are automatically added as reviewers when you open a pull request unless different owners are specified in the file.\n\n* @fmvilas @derberg @dalelane @char0n @GreenRover @jonaslagoni @pakisan @asyncapi-bot-eve\n\n/bindings/anypointmq/   @mboss37 @GeraldLoeffler\n/bindings/ibmmq/        @rcoppen\n/bindings/jms/          @rcoppen @SrfHead\n/bindings/kafka/        @lbroudoux @dalelane\n/bindings/googlepubsub/ @whitlockjc\n/bindings/solace/       @damaru-inc @CameronRushton\n/bindings/pulsar/       @VisualBean\n/bindings/sns/          @dpwdec @iancooper\n/bindings/sqs/          @dpwdec @iancooper\n/bindings/ros2/         @gramss @amparosancho\n\n/bindings/*.json        @KhudaDad414\n"
+    },
+    {
+      "name": "studio",
+      "full_name": "asyncapi/studio",
+      "default_branch": "master",
+      "html_url": "https://github.com/asyncapi/studio",
+      "pushed_at": "2026-03-16T12:00:22Z",
+      "open_issues_count": 38,
+      "codeowners_path": "CODEOWNERS",
+      "maintainers_individuals": [
+        "Amzani",
+        "KhudaDad414",
+        "Shurtu-gal",
+        "magicmatatjahu",
+        "princerajpoot20"
+      ],
+      "teams": [],
+      "triagers": [],
+      "codeowners_raw": "# This file provides an overview of code owners in this repository.\n\n# Each line is a file pattern followed by one or more owners.\n# The last matching pattern has the most precedence.\n# For more details, read the following article on GitHub: https://help.github.com/articles/about-codeowners/.\n\n# The default owners are automatically added as reviewers when you open a pull request unless different owners are specified in the file.\n\n* @magicmatatjahu @KhudaDad414 @Amzani @Shurtu-gal @asyncapi-bot-eve\n\napps/design-system/ @KhudaDad414 @Amzani @princerajpoot20\npackages/ui/ @KhudaDad414 @Amzani @princerajpoot20\n"
+    },
+    {
+      "name": "tck",
+      "full_name": "asyncapi/tck",
+      "default_branch": "master",
+      "html_url": "https://github.com/asyncapi/tck",
+      "pushed_at": "2026-02-12T17:08:19Z",
+      "open_issues_count": 3,
+      "codeowners_path": "CODEOWNERS",
+      "maintainers_individuals": [
+        "Pakisan"
+      ],
+      "teams": [],
+      "triagers": [],
+      "codeowners_raw": "# This file provides an overview of code owners in this repository.\n\n# Each line is a file pattern followed by one or more owners.\n# The last matching pattern has the most precedence.\n# For more details, read the following article on GitHub: https://help.github.com/articles/about-codeowners/.\n\n# The default owners are automatically added as reviewers when you open a pull request unless different owners are specified in the file.\n* @Pakisan @asyncapi-bot-eve\n"
+    },
+    {
+      "name": "template-for-generator-templates",
+      "full_name": "asyncapi/template-for-generator-templates",
+      "default_branch": "master",
+      "html_url": "https://github.com/asyncapi/template-for-generator-templates",
+      "pushed_at": "2026-03-10T13:38:57Z",
+      "open_issues_count": 0,
+      "codeowners_path": "CODEOWNERS",
+      "maintainers_individuals": [
+        "derberg",
+        "magicmatatjahu"
+      ],
+      "teams": [],
+      "triagers": [],
+      "codeowners_raw": "# This file provides an overview of code owners in this repository.\n\n# Each line is a file pattern followed by one or more owners.\n# The last matching pattern has the most precedence.\n# For more details, read the following article on GitHub: https://help.github.com/articles/about-codeowners/.\n\n# The default owners are automatically added as reviewers when you open a pull request unless different owners are specified in the file.\n* @magicmatatjahu @derberg @asyncapi-bot-eve\n"
+    },
+    {
+      "name": "training",
+      "full_name": "asyncapi/training",
+      "default_branch": "master",
+      "html_url": "https://github.com/asyncapi/training",
+      "pushed_at": "2026-03-10T13:37:51Z",
+      "open_issues_count": 3,
+      "codeowners_path": "CODEOWNERS",
+      "maintainers_individuals": [
+        "alequetzalli"
+      ],
+      "teams": [],
+      "triagers": [],
+      "codeowners_raw": "# This file provides an overview of code owners in this repository.\n\n# Each line is a file pattern followed by one or more owners.\n# The last matching pattern has the most precedence.\n# For more details, read the following article on GitHub: https://help.github.com/articles/about-codeowners/.\n\n# The default owners are automatically added as reviewers when you open a pull request unless different owners are specified in the file.\n* @alequetzalli @asyncapi-bot-eve\n"
+    },
+    {
+      "name": "vs-asyncapi-preview",
+      "full_name": "asyncapi/vs-asyncapi-preview",
+      "default_branch": "master",
+      "html_url": "https://github.com/asyncapi/vs-asyncapi-preview",
+      "pushed_at": "2026-03-16T11:54:28Z",
+      "open_issues_count": 0,
+      "codeowners_path": "CODEOWNERS",
+      "maintainers_individuals": [
+        "Ruchip16",
+        "ivangsa"
+      ],
+      "teams": [],
+      "triagers": [],
+      "codeowners_raw": "# This file provides an overview of code owners in the \"asyncapi-react\" repository.\n\n# Each line is a file pattern followed by one or more owners.\n# The last matching pattern has the most precedence.\n# For more details, read the following article on GitHub: https://help.github.com/articles/about-codeowners/.\n\n# These are the default owners for the whole content of this repository. The default owners are automatically added as reviewers when you open a pull request unless different owners are specified in the file.\n* @ivangsa @asyncapi-bot-eve @Ruchip16"
+    },
+    {
+      "name": "website",
+      "full_name": "asyncapi/website",
+      "default_branch": "master",
+      "html_url": "https://github.com/asyncapi/website",
+      "pushed_at": "2026-03-29T01:06:39Z",
+      "open_issues_count": 228,
+      "codeowners_path": "CODEOWNERS",
+      "maintainers_individuals": [
+        "TRohit20",
+        "akshatnema",
+        "anshgoyalevil",
+        "bandantonio",
+        "derberg",
+        "mayaleeeee",
+        "princerajpoot20",
+        "sambhavgupta0705",
+        "thulieblack"
+      ],
+      "teams": [],
+      "triagers": [
+        "CBID2",
+        "bandantonio",
+        "devilkiller-ag",
+        "vishvamsinh28"
+      ],
+      "codeowners_raw": "# This file provides an overview of code owners in this repository.\n\n# Each line is a file pattern followed by one or more owners.\n# The last matching pattern has the most precedence.\n# For more details, read the following article on GitHub: https://help.github.com/articles/about-codeowners/.\n\n# The default owners are automatically added as reviewers when you open a pull request unless different owners are specified in the file.\n* @derberg @akshatnema @anshgoyalevil @sambhavgupta0705 @princerajpoot20 @mayaleeeee @asyncapi-bot-eve\n\n# All .md files\n*.md @thulieblack @TRohit20 @asyncapi-bot-eve @anshgoyalevil\n\nmarkdown/blog/*.md @thulieblack @TRohit20 @anshgoyalevil\nmarkdown/community/*.md @thulieblack @bandantonio @TRohit20 @anshgoyalevil\n\nREADME.md @thulieblack @derberg @akshatnema @mayaleeeee @TRohit20 @asyncapi-bot-eve @anshgoyalevil\n#docTriagers: bandantonio CBID2 \n#codeTriagers: devilkiller-ag vishvamsinh28\n"
+    }
+  ]
+}

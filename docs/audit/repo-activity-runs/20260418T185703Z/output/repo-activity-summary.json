@@ -1,0 +1,776 @@
+{
+  "run_id": "20260418T185703Z",
+  "generated_at": "2026-04-18T18:57:03.299Z",
+  "since_day": "2025-04-18",
+  "window_months": 12,
+  "repos": [
+    {
+      "full_name": "asyncapi/.github",
+      "metrics": {
+        "issues_opened_total": 17,
+        "issues_opened_human": 17,
+        "prs_opened_total": 38,
+        "prs_opened_human": 38,
+        "prs_merged_total": 27,
+        "prs_merged_human": 27,
+        "prs_merged_by_bot_author": {
+          "asyncapi-bot": 0
+        },
+        "issues_closed": 19,
+        "prs_closed_not_merged": 8
+      }
+    },
+    {
+      "full_name": "asyncapi/asyncapi-react",
+      "metrics": {
+        "issues_opened_total": 27,
+        "issues_opened_human": 27,
+        "prs_opened_total": 82,
+        "prs_opened_human": 59,
+        "prs_merged_total": 59,
+        "prs_merged_human": 36,
+        "prs_merged_by_bot_author": {
+          "asyncapi-bot": 23
+        },
+        "issues_closed": 31,
+        "prs_closed_not_merged": 14
+      }
+    },
+    {
+      "full_name": "asyncapi/avro-schema-parser",
+      "metrics": {
+        "issues_opened_total": 2,
+        "issues_opened_human": 2,
+        "prs_opened_total": 16,
+        "prs_opened_human": 1,
+        "prs_merged_total": 16,
+        "prs_merged_human": 1,
+        "prs_merged_by_bot_author": {
+          "asyncapi-bot": 15
+        },
+        "issues_closed": 11,
+        "prs_closed_not_merged": 1
+      }
+    },
+    {
+      "full_name": "asyncapi/bindings",
+      "metrics": {
+        "issues_opened_total": 9,
+        "issues_opened_human": 9,
+        "prs_opened_total": 13,
+        "prs_opened_human": 3,
+        "prs_merged_total": 13,
+        "prs_merged_human": 3,
+        "prs_merged_by_bot_author": {
+          "asyncapi-bot": 10
+        },
+        "issues_closed": 9,
+        "prs_closed_not_merged": 1
+      }
+    },
+    {
+      "full_name": "asyncapi/brand",
+      "metrics": {
+        "issues_opened_total": 5,
+        "issues_opened_human": 5,
+        "prs_opened_total": 13,
+        "prs_opened_human": 3,
+        "prs_merged_total": 10,
+        "prs_merged_human": 0,
+        "prs_merged_by_bot_author": {
+          "asyncapi-bot": 10
+        },
+        "issues_closed": 5,
+        "prs_closed_not_merged": 1
+      }
+    },
+    {
+      "full_name": "asyncapi/bundler",
+      "metrics": {
+        "issues_opened_total": 1,
+        "issues_opened_human": 1,
+        "prs_opened_total": 21,
+        "prs_opened_human": 6,
+        "prs_merged_total": 20,
+        "prs_merged_human": 5,
+        "prs_merged_by_bot_author": {
+          "asyncapi-bot": 15
+        },
+        "issues_closed": 0,
+        "prs_closed_not_merged": 0
+      }
+    },
+    {
+      "full_name": "asyncapi/chatbot",
+      "metrics": {
+        "issues_opened_total": 1,
+        "issues_opened_human": 1,
+        "prs_opened_total": 12,
+        "prs_opened_human": 1,
+        "prs_merged_total": 10,
+        "prs_merged_human": 0,
+        "prs_merged_by_bot_author": {
+          "asyncapi-bot": 10
+        },
+        "issues_closed": 4,
+        "prs_closed_not_merged": 3
+      }
+    },
+    {
+      "full_name": "asyncapi/cli",
+      "metrics": {
+        "issues_opened_total": 80,
+        "issues_opened_human": 80,
+        "prs_opened_total": 265,
+        "prs_opened_human": 221,
+        "prs_merged_total": 146,
+        "prs_merged_human": 102,
+        "prs_merged_by_bot_author": {
+          "asyncapi-bot": 44
+        },
+        "issues_closed": 60,
+        "prs_closed_not_merged": 69
+      }
+    },
+    {
+      "full_name": "asyncapi/community",
+      "metrics": {
+        "issues_opened_total": 128,
+        "issues_opened_human": 60,
+        "prs_opened_total": 270,
+        "prs_opened_human": 130,
+        "prs_merged_total": 255,
+        "prs_merged_human": 116,
+        "prs_merged_by_bot_author": {
+          "asyncapi-bot": 139
+        },
+        "issues_closed": 139,
+        "prs_closed_not_merged": 24
+      }
+    },
+    {
+      "full_name": "asyncapi/conference-website",
+      "metrics": {
+        "issues_opened_total": 87,
+        "issues_opened_human": 87,
+        "prs_opened_total": 181,
+        "prs_opened_human": 170,
+        "prs_merged_total": 124,
+        "prs_merged_human": 113,
+        "prs_merged_by_bot_author": {
+          "asyncapi-bot": 11
+        },
+        "issues_closed": 92,
+        "prs_closed_not_merged": 68
+      }
+    },
+    {
+      "full_name": "asyncapi/converter-js",
+      "metrics": {
+        "issues_opened_total": 0,
+        "issues_opened_human": 0,
+        "prs_opened_total": 33,
+        "prs_opened_human": 16,
+        "prs_merged_total": 31,
+        "prs_merged_human": 13,
+        "prs_merged_by_bot_author": {
+          "asyncapi-bot": 18
+        },
+        "issues_closed": 4,
+        "prs_closed_not_merged": 1
+      }
+    },
+    {
+      "full_name": "asyncapi/diff",
+      "metrics": {
+        "issues_opened_total": 2,
+        "issues_opened_human": 2,
+        "prs_opened_total": 15,
+        "prs_opened_human": 0,
+        "prs_merged_total": 15,
+        "prs_merged_human": 0,
+        "prs_merged_by_bot_author": {
+          "asyncapi-bot": 15
+        },
+        "issues_closed": 4,
+        "prs_closed_not_merged": 0
+      }
+    },
+    {
+      "full_name": "asyncapi/dotnet-rabbitmq-template",
+      "metrics": {
+        "issues_opened_total": 0,
+        "issues_opened_human": 0,
+        "prs_opened_total": 5,
+        "prs_opened_human": 1,
+        "prs_merged_total": 5,
+        "prs_merged_human": 1,
+        "prs_merged_by_bot_author": {
+          "asyncapi-bot": 4
+        },
+        "issues_closed": 2,
+        "prs_closed_not_merged": 1
+      }
+    },
+    {
+      "full_name": "asyncapi/EDAVisualiser",
+      "metrics": {
+        "issues_opened_total": 1,
+        "issues_opened_human": 1,
+        "prs_opened_total": 12,
+        "prs_opened_human": 0,
+        "prs_merged_total": 11,
+        "prs_merged_human": 0,
+        "prs_merged_by_bot_author": {
+          "asyncapi-bot": 11
+        },
+        "issues_closed": 5,
+        "prs_closed_not_merged": 2
+      }
+    },
+    {
+      "full_name": "asyncapi/enterprise-patterns",
+      "metrics": {
+        "issues_opened_total": 0,
+        "issues_opened_human": 0,
+        "prs_opened_total": 11,
+        "prs_opened_human": 0,
+        "prs_merged_total": 11,
+        "prs_merged_human": 0,
+        "prs_merged_by_bot_author": {
+          "asyncapi-bot": 11
+        },
+        "issues_closed": 0,
+        "prs_closed_not_merged": 0
+      }
+    },
+    {
+      "full_name": "asyncapi/extensions-catalog",
+      "metrics": {
+        "issues_opened_total": 0,
+        "issues_opened_human": 0,
+        "prs_opened_total": 12,
+        "prs_opened_human": 3,
+        "prs_merged_total": 12,
+        "prs_merged_human": 3,
+        "prs_merged_by_bot_author": {
+          "asyncapi-bot": 9
+        },
+        "issues_closed": 0,
+        "prs_closed_not_merged": 0
+      }
+    },
+    {
+      "full_name": "asyncapi/generator",
+      "metrics": {
+        "issues_opened_total": 223,
+        "issues_opened_human": 223,
+        "prs_opened_total": 318,
+        "prs_opened_human": 272,
+        "prs_merged_total": 212,
+        "prs_merged_human": 178,
+        "prs_merged_by_bot_author": {
+          "asyncapi-bot": 34
+        },
+        "issues_closed": 196,
+        "prs_closed_not_merged": 98
+      }
+    },
+    {
+      "full_name": "asyncapi/go-watermill-template",
+      "metrics": {
+        "issues_opened_total": 0,
+        "issues_opened_human": 0,
+        "prs_opened_total": 48,
+        "prs_opened_human": 2,
+        "prs_merged_total": 46,
+        "prs_merged_human": 0,
+        "prs_merged_by_bot_author": {
+          "asyncapi-bot": 46
+        },
+        "issues_closed": 1,
+        "prs_closed_not_merged": 2
+      }
+    },
+    {
+      "full_name": "asyncapi/html-template",
+      "metrics": {
+        "issues_opened_total": 10,
+        "issues_opened_human": 9,
+        "prs_opened_total": 71,
+        "prs_opened_human": 40,
+        "prs_merged_total": 62,
+        "prs_merged_human": 32,
+        "prs_merged_by_bot_author": {
+          "asyncapi-bot": 30
+        },
+        "issues_closed": 12,
+        "prs_closed_not_merged": 4
+      }
+    },
+    {
+      "full_name": "asyncapi/jasyncapi",
+      "metrics": {
+        "issues_opened_total": 1,
+        "issues_opened_human": 1,
+        "prs_opened_total": 15,
+        "prs_opened_human": 4,
+        "prs_merged_total": 16,
+        "prs_merged_human": 5,
+        "prs_merged_by_bot_author": {
+          "asyncapi-bot": 11
+        },
+        "issues_closed": 2,
+        "prs_closed_not_merged": 0
+      }
+    },
+    {
+      "full_name": "asyncapi/jasyncapi-idea-plugin",
+      "metrics": {
+        "issues_opened_total": 14,
+        "issues_opened_human": 14,
+        "prs_opened_total": 81,
+        "prs_opened_human": 70,
+        "prs_merged_total": 80,
+        "prs_merged_human": 69,
+        "prs_merged_by_bot_author": {
+          "asyncapi-bot": 11
+        },
+        "issues_closed": 14,
+        "prs_closed_not_merged": 1
+      }
+    },
+    {
+      "full_name": "asyncapi/java-spring-cloud-stream-template",
+      "metrics": {
+        "issues_opened_total": 0,
+        "issues_opened_human": 0,
+        "prs_opened_total": 21,
+        "prs_opened_human": 8,
+        "prs_merged_total": 17,
+        "prs_merged_human": 5,
+        "prs_merged_by_bot_author": {
+          "asyncapi-bot": 12
+        },
+        "issues_closed": 14,
+        "prs_closed_not_merged": 5
+      }
+    },
+    {
+      "full_name": "asyncapi/java-spring-template",
+      "metrics": {
+        "issues_opened_total": 3,
+        "issues_opened_human": 3,
+        "prs_opened_total": 39,
+        "prs_opened_human": 23,
+        "prs_merged_total": 34,
+        "prs_merged_human": 18,
+        "prs_merged_by_bot_author": {
+          "asyncapi-bot": 16
+        },
+        "issues_closed": 0,
+        "prs_closed_not_merged": 1
+      }
+    },
+    {
+      "full_name": "asyncapi/java-template",
+      "metrics": {
+        "issues_opened_total": 0,
+        "issues_opened_human": 0,
+        "prs_opened_total": 14,
+        "prs_opened_human": 1,
+        "prs_merged_total": 12,
+        "prs_merged_human": 1,
+        "prs_merged_by_bot_author": {
+          "asyncapi-bot": 11
+        },
+        "issues_closed": 5,
+        "prs_closed_not_merged": 2
+      }
+    },
+    {
+      "full_name": "asyncapi/kotlin-asyncapi",
+      "metrics": {
+        "issues_opened_total": 2,
+        "issues_opened_human": 2,
+        "prs_opened_total": 156,
+        "prs_opened_human": 145,
+        "prs_merged_total": 139,
+        "prs_merged_human": 128,
+        "prs_merged_by_bot_author": {
+          "asyncapi-bot": 11
+        },
+        "issues_closed": 1,
+        "prs_closed_not_merged": 15
+      }
+    },
+    {
+      "full_name": "asyncapi/learning-paths",
+      "metrics": {
+        "issues_opened_total": 0,
+        "issues_opened_human": 0,
+        "prs_opened_total": 11,
+        "prs_opened_human": 0,
+        "prs_merged_total": 11,
+        "prs_merged_human": 0,
+        "prs_merged_by_bot_author": {
+          "asyncapi-bot": 11
+        },
+        "issues_closed": 0,
+        "prs_closed_not_merged": 0
+      }
+    },
+    {
+      "full_name": "asyncapi/markdown-template",
+      "metrics": {
+        "issues_opened_total": 1,
+        "issues_opened_human": 1,
+        "prs_opened_total": 41,
+        "prs_opened_human": 26,
+        "prs_merged_total": 36,
+        "prs_merged_human": 22,
+        "prs_merged_by_bot_author": {
+          "asyncapi-bot": 14
+        },
+        "issues_closed": 0,
+        "prs_closed_not_merged": 2
+      }
+    },
+    {
+      "full_name": "asyncapi/modelina",
+      "metrics": {
+        "issues_opened_total": 40,
+        "issues_opened_human": 39,
+        "prs_opened_total": 245,
+        "prs_opened_human": 185,
+        "prs_merged_total": 187,
+        "prs_merged_human": 127,
+        "prs_merged_by_bot_author": {
+          "asyncapi-bot": 60
+        },
+        "issues_closed": 49,
+        "prs_closed_not_merged": 45
+      }
+    },
+    {
+      "full_name": "asyncapi/net-sdk",
+      "metrics": {
+        "issues_opened_total": 3,
+        "issues_opened_human": 3,
+        "prs_opened_total": 12,
+        "prs_opened_human": 1,
+        "prs_merged_total": 11,
+        "prs_merged_human": 0,
+        "prs_merged_by_bot_author": {
+          "asyncapi-bot": 11
+        },
+        "issues_closed": 2,
+        "prs_closed_not_merged": 1
+      }
+    },
+    {
+      "full_name": "asyncapi/nodejs-template",
+      "metrics": {
+        "issues_opened_total": 1,
+        "issues_opened_human": 1,
+        "prs_opened_total": 38,
+        "prs_opened_human": 22,
+        "prs_merged_total": 32,
+        "prs_merged_human": 18,
+        "prs_merged_by_bot_author": {
+          "asyncapi-bot": 14
+        },
+        "issues_closed": 7,
+        "prs_closed_not_merged": 2
+      }
+    },
+    {
+      "full_name": "asyncapi/nodejs-ws-template",
+      "metrics": {
+        "issues_opened_total": 1,
+        "issues_opened_human": 1,
+        "prs_opened_total": 39,
+        "prs_opened_human": 24,
+        "prs_merged_total": 17,
+        "prs_merged_human": 3,
+        "prs_merged_by_bot_author": {
+          "asyncapi-bot": 14
+        },
+        "issues_closed": 1,
+        "prs_closed_not_merged": 9
+      }
+    },
+    {
+      "full_name": "asyncapi/openapi-schema-parser",
+      "metrics": {
+        "issues_opened_total": 1,
+        "issues_opened_human": 1,
+        "prs_opened_total": 39,
+        "prs_opened_human": 24,
+        "prs_merged_total": 35,
+        "prs_merged_human": 20,
+        "prs_merged_by_bot_author": {
+          "asyncapi-bot": 15
+        },
+        "issues_closed": 0,
+        "prs_closed_not_merged": 0
+      }
+    },
+    {
+      "full_name": "asyncapi/optimizer",
+      "metrics": {
+        "issues_opened_total": 0,
+        "issues_opened_human": 0,
+        "prs_opened_total": 19,
+        "prs_opened_human": 4,
+        "prs_merged_total": 18,
+        "prs_merged_human": 3,
+        "prs_merged_by_bot_author": {
+          "asyncapi-bot": 15
+        },
+        "issues_closed": 0,
+        "prs_closed_not_merged": 0
+      }
+    },
+    {
+      "full_name": "asyncapi/parser-api",
+      "metrics": {
+        "issues_opened_total": 0,
+        "issues_opened_human": 0,
+        "prs_opened_total": 13,
+        "prs_opened_human": 2,
+        "prs_merged_total": 11,
+        "prs_merged_human": 0,
+        "prs_merged_by_bot_author": {
+          "asyncapi-bot": 11
+        },
+        "issues_closed": 0,
+        "prs_closed_not_merged": 1
+      }
+    },
+    {
+      "full_name": "asyncapi/parser-js",
+      "metrics": {
+        "issues_opened_total": 11,
+        "issues_opened_human": 11,
+        "prs_opened_total": 43,
+        "prs_opened_human": 33,
+        "prs_merged_total": 20,
+        "prs_merged_human": 11,
+        "prs_merged_by_bot_author": {
+          "asyncapi-bot": 9
+        },
+        "issues_closed": 20,
+        "prs_closed_not_merged": 18
+      }
+    },
+    {
+      "full_name": "asyncapi/php-template",
+      "metrics": {
+        "issues_opened_total": 0,
+        "issues_opened_human": 0,
+        "prs_opened_total": 13,
+        "prs_opened_human": 1,
+        "prs_merged_total": 13,
+        "prs_merged_human": 1,
+        "prs_merged_by_bot_author": {
+          "asyncapi-bot": 12
+        },
+        "issues_closed": 0,
+        "prs_closed_not_merged": 0
+      }
+    },
+    {
+      "full_name": "asyncapi/problem",
+      "metrics": {
+        "issues_opened_total": 0,
+        "issues_opened_human": 0,
+        "prs_opened_total": 14,
+        "prs_opened_human": 0,
+        "prs_merged_total": 14,
+        "prs_merged_human": 0,
+        "prs_merged_by_bot_author": {
+          "asyncapi-bot": 14
+        },
+        "issues_closed": 0,
+        "prs_closed_not_merged": 0
+      }
+    },
+    {
+      "full_name": "asyncapi/protobuf-schema-parser",
+      "metrics": {
+        "issues_opened_total": 0,
+        "issues_opened_human": 0,
+        "prs_opened_total": 17,
+        "prs_opened_human": 1,
+        "prs_merged_total": 17,
+        "prs_merged_human": 1,
+        "prs_merged_by_bot_author": {
+          "asyncapi-bot": 16
+        },
+        "issues_closed": 0,
+        "prs_closed_not_merged": 0
+      }
+    },
+    {
+      "full_name": "asyncapi/python-paho-template",
+      "metrics": {
+        "issues_opened_total": 0,
+        "issues_opened_human": 0,
+        "prs_opened_total": 13,
+        "prs_opened_human": 7,
+        "prs_merged_total": 6,
+        "prs_merged_human": 0,
+        "prs_merged_by_bot_author": {
+          "asyncapi-bot": 6
+        },
+        "issues_closed": 5,
+        "prs_closed_not_merged": 4
+      }
+    },
+    {
+      "full_name": "asyncapi/saunter",
+      "metrics": {
+        "issues_opened_total": 1,
+        "issues_opened_human": 1,
+        "prs_opened_total": 14,
+        "prs_opened_human": 12,
+        "prs_merged_total": 9,
+        "prs_merged_human": 8,
+        "prs_merged_by_bot_author": {
+          "asyncapi-bot": 1
+        },
+        "issues_closed": 1,
+        "prs_closed_not_merged": 3
+      }
+    },
+    {
+      "full_name": "asyncapi/spec",
+      "metrics": {
+        "issues_opened_total": 34,
+        "issues_opened_human": 34,
+        "prs_opened_total": 54,
+        "prs_opened_human": 45,
+        "prs_merged_total": 28,
+        "prs_merged_human": 19,
+        "prs_merged_by_bot_author": {
+          "asyncapi-bot": 9
+        },
+        "issues_closed": 27,
+        "prs_closed_not_merged": 23
+      }
+    },
+    {
+      "full_name": "asyncapi/spec-json-schemas",
+      "metrics": {
+        "issues_opened_total": 6,
+        "issues_opened_human": 6,
+        "prs_opened_total": 48,
+        "prs_opened_human": 30,
+        "prs_merged_total": 37,
+        "prs_merged_human": 19,
+        "prs_merged_by_bot_author": {
+          "asyncapi-bot": 18
+        },
+        "issues_closed": 1,
+        "prs_closed_not_merged": 7
+      }
+    },
+    {
+      "full_name": "asyncapi/studio",
+      "metrics": {
+        "issues_opened_total": 30,
+        "issues_opened_human": 30,
+        "prs_opened_total": 79,
+        "prs_opened_human": 41,
+        "prs_merged_total": 65,
+        "prs_merged_human": 27,
+        "prs_merged_by_bot_author": {
+          "asyncapi-bot": 38
+        },
+        "issues_closed": 28,
+        "prs_closed_not_merged": 5
+      }
+    },
+    {
+      "full_name": "asyncapi/tck",
+      "metrics": {
+        "issues_opened_total": 0,
+        "issues_opened_human": 0,
+        "prs_opened_total": 17,
+        "prs_opened_human": 7,
+        "prs_merged_total": 14,
+        "prs_merged_human": 4,
+        "prs_merged_by_bot_author": {
+          "asyncapi-bot": 10
+        },
+        "issues_closed": 1,
+        "prs_closed_not_merged": 4
+      }
+    },
+    {
+      "full_name": "asyncapi/template-for-generator-templates",
+      "metrics": {
+        "issues_opened_total": 0,
+        "issues_opened_human": 0,
+        "prs_opened_total": 17,
+        "prs_opened_human": 0,
+        "prs_merged_total": 17,
+        "prs_merged_human": 0,
+        "prs_merged_by_bot_author": {
+          "asyncapi-bot": 17
+        },
+        "issues_closed": 2,
+        "prs_closed_not_merged": 0
+      }
+    },
+    {
+      "full_name": "asyncapi/training",
+      "metrics": {
+        "issues_opened_total": 3,
+        "issues_opened_human": 3,
+        "prs_opened_total": 12,
+        "prs_opened_human": 1,
+        "prs_merged_total": 11,
+        "prs_merged_human": 0,
+        "prs_merged_by_bot_author": {
+          "asyncapi-bot": 11
+        },
+        "issues_closed": 2,
+        "prs_closed_not_merged": 0
+      }
+    },
+    {
+      "full_name": "asyncapi/vs-asyncapi-preview",
+      "metrics": {
+        "issues_opened_total": 6,
+        "issues_opened_human": 6,
+        "prs_opened_total": 43,
+        "prs_opened_human": 16,
+        "prs_merged_total": 40,
+        "prs_merged_human": 13,
+        "prs_merged_by_bot_author": {
+          "asyncapi-bot": 27
+        },
+        "issues_closed": 22,
+        "prs_closed_not_merged": 6
+      }
+    },
+    {
+      "full_name": "asyncapi/website",
+      "metrics": {
+        "issues_opened_total": 377,
+        "issues_opened_human": 377,
+        "prs_opened_total": 908,
+        "prs_opened_human": 515,
+        "prs_merged_total": 560,
+        "prs_merged_human": 207,
+        "prs_merged_by_bot_author": {
+          "asyncapi-bot": 353
+        },
+        "issues_closed": 328,
+        "prs_closed_not_merged": 317
+      }
+    }
+  ]
+}
