@@ -86,7 +86,7 @@ jobs:
         run: |
           git add .
           git commit -m "docs(community): update latest community docs"
-          git push "https://${GH_TOKEN}@github.com/asyncapi/website"
+          git push "https://x-access-token:${GH_TOKEN}@github.com/asyncapi/website"
       - name: Create PR
         working-directory: ./website
         env:
