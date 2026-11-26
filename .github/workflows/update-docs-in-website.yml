@@ -8,33 +8,38 @@ on:
     paths:
       - 'docs/**/*.md'
 
+permissions:
+  contents: read
+
 jobs:
   Make-PR:
     name: Make PR on website repository with updated latest Community documentation
     runs-on: ubuntu-latest
-    env:
-      GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
     steps:
       - name: Checkout Current repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           path: community
+          persist-credentials: false
       - name: Checkout Another repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           repository: asyncapi/website
           path: website
-          token: ${{ env.GITHUB_TOKEN }}
+          token: ${{ secrets.GH_TOKEN }}
+          ref: master
+          persist-credentials: false
       - name: Config git
         run: |
-          git config --global user.name asyncapi-bot
-          git config --global user.email info@asyncapi.io
+          cd website
+          git config user.name asyncapi-bot
+          git config user.email info@asyncapi.io
       - name: Create branch
         working-directory: ./website
         run: |
           git checkout -b update-community-docs-${{ github.sha }}
       - name: Update edit-page-config.json
-        uses: actions/github-script@v4
+        uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd # v9.0.0
         with:
           script: |
                 const fs = require('fs').promises;
@@ -76,11 +81,15 @@ jobs:
           mv ../community/docs/* ./markdown/docs/community/
       - name: Commit and push
         working-directory: ./website
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
           git add .
           git commit -m "docs(community): update latest community docs"
-          git push https://${{ env.GITHUB_TOKEN }}@github.com/asyncapi/website
+          git push "https://x-access-token:${GH_TOKEN}@github.com/asyncapi/website"
       - name: Create PR
         working-directory: ./website
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
           gh pr create --title "docs(community): update latest community documentation" --body "Updated community documentation is available and this PR introduces update to community folder on the website" --head "update-community-docs-${{ github.sha }}"
