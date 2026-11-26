@@ -52,8 +52,10 @@ jobs:
 
           # Skip stale runs: if this artifact's commit no longer matches the PR head,
           # a newer build is in flight and will post the real preview.
-          CURRENT_HEAD=$(gh api "repos/${REPO}/pulls/${PR}" --jq .head.sha)
-          if [ "$CURRENT_HEAD" != "$WORKFLOW_RUN_HEAD_SHA" ]; then
+          if ! CURRENT_HEAD=$(gh api "repos/${REPO}/pulls/${PR}" --jq .head.sha 2>/dev/null); then
+            echo "stale=true" >> "$GITHUB_OUTPUT"
+            echo "Skipping deploy: PR #${PR} is no longer available"
+          elif [ "$CURRENT_HEAD" != "$WORKFLOW_RUN_HEAD_SHA" ]; then
             echo "stale=true" >> "$GITHUB_OUTPUT"
             echo "Skipping stale deploy: artifact head $WORKFLOW_RUN_HEAD_SHA, PR head $CURRENT_HEAD"
           fi
@@ -84,14 +86,10 @@ jobs:
           PR_NUMBER: ${{ steps.pr.outputs.number }}
         run: |
           set -euo pipefail
-          # Prefer the static export; only fall back to .next when it's absent.
-          if [ -d "site/out" ]; then
-            DEPLOY_DIR="site/out"
-          elif [ -d "site/.next" ]; then
-            DEPLOY_DIR="site/.next"
-          else
-            echo "No deployable directory found (expected site/out or site/.next)"; exit 1
+          if [ ! -d "site/out" ]; then
+            echo "No deployable static export found (expected site/out)"; exit 1
           fi
+          DEPLOY_DIR="site/out"
 
           # SECURITY: keep --no-build. Do not remove it.
           # Without it, `netlify deploy` runs a build here, on this runner, with
